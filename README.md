@@ -4,7 +4,7 @@
 
 <h1 align="center">Naruto OS</h1>
 
-<p align="center">我为 Mac 做了一个《火影忍者 Online》启动器，国服和巴西服都能从这里进入。</p>
+<p align="center">我为 Mac 做了一个《火影忍者 Online》启动器，支持国服和巴西服务器。</p>
 
 <p align="center">
   <a href="https://github.com/qiuyuehu/NarutoOS/releases/latest"><strong>下载 macOS 版</strong></a> ·
