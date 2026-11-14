@@ -1,0 +1,119 @@
+{
+  "id": "naruto-ninja-target-15-zh-CN-v1",
+  "rootId": "11015321",
+  "ninjaInfo": {
+    "class": "NinjaInfoCFG",
+    "rows": {
+      "11015321": {
+        "name": {
+          "source": "Hagoromo Otsutsuki",
+          "translation": "大筒木羽衣"
+        },
+        "title": {
+          "source": "[Jovem]",
+          "translation": "【青年】"
+        }
+      }
+    }
+  },
+  "skills": {
+    "class": "SkillCFG",
+    "rows": {
+      "21015321": {
+        "name": {
+          "source": "Esfera da Busca da Verdade: Combo",
+          "translation": "求道玉·连击"
+        },
+        "desc": {
+          "source": "Ataca um inimigo aleatório, causando dano e <font color=\"#4dc831\">Supressão de Imunidade a Status negativos</font> até o fim da rodada e com chance de causar <font color=\"#4dc831\">Voo</font> e <font color=\"#4dc831\">Imobilidade</font>. Esta habilidade ignora <font color=\"#4dc831\">Provocação</font> e <font color=\"#4dc831\">Proteção</font> e, inimigos derrotados por ela, não podem ser revividos.",
+          "translation": "攻击1名随机敌人，造成伤害和持续至回合结束的负面状态免疫压制，有概率造成高浮空和定身。本技能无视挑衅和保护，被击败的敌人无法复活。"
+        }
+      },
+      "21015322": {
+        "name": {
+          "source": "Esfera da Busca da Verdade: Combo",
+          "translation": "求道玉·连击"
+        },
+        "desc": {
+          "source": "Ataca um inimigo aleatório, causando dano e <font color=\"#4dc831\">Supressão de Imunidade a Status negativos</font> até o fim da rodada e com chance de causar <font color=\"#4dc831\">Voo</font> e <font color=\"#4dc831\">Imobilidade</font>. Esta habilidade ignora <font color=\"#4dc831\">Provocação</font> e <font color=\"#4dc831\">Proteção</font> e, inimigos derrotados por ela, não podem ser revividos.",
+          "translation": "攻击1名随机敌人，造成伤害和持续至回合结束的负面状态免疫压制，有概率造成高浮空和定身。本技能无视挑衅和保护，被击败的敌人无法复活。"
+        }
+      },
+      "21015323": {
+        "name": {
+          "source": "Esfera da Busca da Verdade: Combo",
+          "translation": "求道玉·连击"
+        },
+        "desc": {
+          "source": "Ataca um inimigo aleatório, causando dano e <font color=\"#4dc831\">Supressão de Imunidade a Status negativos</font> até o fim da rodada e com chance de causar <font color=\"#4dc831\">Voo</font> e <font color=\"#4dc831\">Imobilidade</font>. Esta habilidade ignora <font color=\"#4dc831\">Provocação</font> e <font color=\"#4dc831\">Proteção</font> e, inimigos derrotados por ela, não podem ser revividos.",
+          "translation": "攻击1名随机敌人，造成伤害和持续至回合结束的负面状态免疫压制，有概率造成高浮空和定身。本技能无视挑衅和保护，被击败的敌人无法复活。"
+        }
+      },
+      "21015324": {
+        "name": {
+          "source": "Absorção de Selamento",
+          "translation": "封术吸印"
+        },
+        "desc": {
+          "source": "Hagoromo tem grande chance de evitar <font color=\"#4dc831\">Perseguições</font>. Ao realizar uma esquiva, também lança o <font color=\"#4dc831\">Chakra Senjutsu</font> 1 vez (máx. 1x por rodada). Pode obter até <font color=\"#4dc831\">4</font> <font color=\"#4dc831\">Pontos de Habilidade</font> que, ao chegarem ao limite, são totalmente consumidos e a <font color=\"#4dc831\">Devastação Planetária</font> é lançada 1 vez com efeito diferente.",
+          "translation": "羽衣有较高概率闪避追打。闪避时额外释放1次仙术查克拉，每回合最多1次。可获得最多4个技能点，达到上限时消耗全部技能点，释放1次效果不同的地爆天星。"
+        }
+      },
+      "21015325": {
+        "name": {
+          "source": "Esfera da Busca da Verdade: Luz Rápida",
+          "translation": "求道玉·迅光"
+        },
+        "desc": {
+          "source": "Persegue inimigos com <font color=\"#4dc831\">Queda</font> e causa <font color=\"#4dc831\">Flutuação</font>, além de causar dano à linha do alvo. Inimigos derrotados por esta habilidade não podem ser ressuscitados, e seu próprio <font color=\"#4dc831\">Resfriamento</font> é reduzido em 1 rodada. Caso o alvo já esteja sob <font color=\"#4dc831\">Supressão de Imunidade a Status negativos</font>, também causa <font color=\"#4dc831\">Imobilidade</font> ao alvo da <font color=\"#4dc831\">Flutuação</font>, ignorando parte da <font color=\"#4dc831\">Defesa</font> e <font color=\"#4dc831\">Resistência</font>.",
+          "translation": "追打倒地敌人，造成浮空，并对目标所在一横排造成伤害。被本技能击败的敌人无法复活，自身冷却减少1回合。若目标已受到负面状态免疫压制，还会对浮空目标造成定身，无视部分防御和抗性。"
+        }
+      },
+      "21015326": {
+        "name": {
+          "source": "Chakra Senjutsu",
+          "translation": "仙术查克拉"
+        },
+        "desc": {
+          "source": "Antes da primeira ação de cada rodada, o dano de sua própria <font color=\"#4dc831\">Esotérica</font> aumenta em <font color=\"#4dc831\">10%</font> (podendo acumular), você ganha <font color=\"#4dc831\">1</font> <font color=\"#4dc831\">Ponto de Habilidade</font> e o limite de Chakra de sua equipe é ajustado para <font color=\"#4dc831\">100</font>. Ninjas <font color=\"#4dc831\">Otsutsuki</font> também recuperam <font color=\"#4dc831\">20</font> de Chakra e, até o fim da rodada, suas <font color=\"#4dc831\">Perseguições</font> <font color=\"#4dc831\">sempre acertam</font>.",
+          "translation": "每回合首次行动前，自身奥义伤害提高10%（可叠加），获得1个技能点，将己方队伍查克拉上限调整为100。大筒木忍者额外恢复20点查克拉，且追打必定命中，持续至回合结束。"
+        }
+      },
+      "21015327": {
+        "name": {
+          "source": "Estilo Sombra e Luz",
+          "translation": "阴阳遁"
+        },
+        "desc": {
+          "source": "Hagoromo possui a habilidade <font color=\"#4dc831\">Absorção de Selamento</font>. Além disso, companheiros <font color=\"#4dc831\">Otsutsuki</font> têm <font color=\"#4dc831\">Imunidade a Perseguição</font> e, sempre que recebem ataques Taijutsu, o dano de <font color=\"#4dc831\">Perseguições</font> do atacante é reduzido em <font color=\"#4dc831\">15%</font> e o <font color=\"#4dc831\">Crítico</font> em <font color=\"#4dc831\">15%</font>. Pode acumular até 4 níveis e dura até o fim da rodada.",
+          "translation": "羽衣拥有封术吸印技能。此外，己方大筒木忍者免疫追打，每次受到体术攻击时，使攻击者的追打伤害降低15%、暴击率降低15%，最多叠加4层，持续至回合结束。"
+        }
+      },
+      "21015328": {
+        "name": {
+          "source": "Devastação Planetária",
+          "translation": "地爆天星"
+        },
+        "desc": {
+          "source": "Causa dano que <font color=\"#4dc831\">sempre acerta</font> a até <font color=\"#4dc831\">7</font> inimigos e aplica <font color=\"#4dc831\">Supressão de Imunidade a Status negativos</font> (até o final da rodada), além de causar <font color=\"#4dc831\">Fraqueza</font> que não pode ser imunizada e dispersada ao inimigo selecionado por 1 rodada. Inimigos derrotados por esta habilidade não podem ser ressuscitados. Após o uso desta habilidade, a equipa aliada ganha uma chance extra de <font color=\"#4dc831\">Perseguição</font> durante a rodada.",
+          "translation": "对最多7名敌人造成必定命中的伤害和持续至回合结束的负面状态免疫压制，并对选定目标施加无法免疫或驱散的虚弱，持续1回合。被本技能击败的敌人无法复活。使用后，己方小队本回合额外获得1次追打机会。"
+        }
+      }
+    }
+  },
+  "skillDetails": {
+    "class": "SkillKeyDescCFG",
+    "rows": {
+      "401": {
+        "keys": {
+          "source": "Absorção de Selamento",
+          "translation": "封术吸印"
+        },
+        "desc": {
+          "source": "Hagoromo tem uma alta chance de esquivar de ataques do tipo [Perseguição], e ao esquivar, ativa 1 vez adicional a [Habilidade adicional]: [Chakra Senjutsu] (até 1 vez por rodada). Ele pode acumular até [4] pontos de habilidade. Ao atingir o limite, todo o [Ponto de Habilidade] será consumido para ativar uma versão diferente de [Devastação Planetária]: esta técnica [sempre acerta] e causa [Fraqueza] (o efeito dura 1 rodada) a até [9 inimigos] no campo inimigo. O inimigo com a menor quantidade de vida também sofre [Fraqueza Grave] (neste status, os atributos de [Ataque] e [Ninjutsu] são reduzidos para [25%] dos valores exibidos, e o uso de habilidades de [Perseguição] é impossível. Este status não pode ser imunizado nem dispersado, e o efeito dura até o final de rodada), e recebe [Voo]. Inimigos derrotados por esta habilidade não podem ser revividos.",
+          "translation": "羽衣有较高概率闪避[追打]，闪避时额外触发1次[追加技能]：[仙术查克拉]，每回合最多1次。最多可积累[4]个技能点，达到上限时消耗全部[技能点]，触发另一版本的[地爆天星]：对敌方最多[9名敌人]造成[必定命中]的伤害和持续1回合的[虚弱]。生命最低的敌人额外受到[重度虚弱]（[攻击]和[忍术]降至面板值的[25%]，无法使用[追打]技能；无法免疫或驱散，持续至回合结束）及[高浮空]。被本技能击败的敌人无法复活。"
+        }
+      }
+    }
+  }
+}

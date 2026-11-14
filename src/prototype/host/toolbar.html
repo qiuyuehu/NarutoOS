@@ -1,0 +1,9 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src data:"><link rel="stylesheet" href="host-style.css"><link rel="stylesheet" href="toolbar.css"><title>Naruto OS</title></head>
+<body><header class="chrome"><div class="tabline"><span class="traffic-space" aria-hidden="true"></span>
+<button id="center" class="icon-button" aria-label="打开启动中心"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 11 9-8 9 8M5 10v11h5v-7h4v7h5V10"/></svg></button>
+<nav id="tabs" aria-label="游戏标签"></nav><button id="new-tab" class="icon-button add" aria-label="选择或打开其他账号"></button><span class="drag-space"></span>
+<button id="notice" class="status" aria-live="polite" aria-label="查看提示详情"></button>
+<aside id="save-prompt" hidden><span id="save-text"></span><button id="save" class="primary small">保存</button><button id="dismiss" class="quiet small">暂不</button></aside>
+<div class="tools"><button id="retry-exit" class="quiet small" hidden>重试保存并退出</button><button id="cancel-recovery" class="quiet small" hidden>取消恢复</button><button id="complete" class="primary small" hidden>完成切换</button><button id="refresh" class="icon-button" aria-label="刷新／恢复当前游戏"></button><button id="mute" class="icon-button" aria-label="总静音" aria-pressed="false"></button><button id="settings" class="icon-button" aria-label="设置"></button></div>
+</div></header><main id="placeholder" class="placeholder" hidden><p id="placeholder-title"></p><span id="placeholder-detail"></span><button id="placeholder-recover" class="quiet">重新进入游戏</button></main><script src="toolbar.js"></script></body></html>

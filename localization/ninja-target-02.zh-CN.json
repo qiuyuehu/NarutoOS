@@ -1,0 +1,119 @@
+{
+  "id": "naruto-ninja-target-02-zh-CN-v1",
+  "rootId": "11015121",
+  "ninjaInfo": {
+    "class": "NinjaInfoCFG",
+    "rows": {
+      "11015121": {
+        "name": {
+          "source": "Hamura Otsutsuki",
+          "translation": "大筒木羽村"
+        },
+        "title": {
+          "source": "",
+          "translation": ""
+        }
+      }
+    }
+  },
+  "skills": {
+    "class": "SkillCFG",
+    "rows": {
+      "21015121": {
+        "name": {
+          "source": "Ataque Taijutsu",
+          "translation": "体术攻击"
+        },
+        "desc": {
+          "source": "Ataca o ninja com menos Vida e aumenta o seu próprio número de <font color=\"#4dc831\">Perseguições</font> em 1. Tem grande chance de lançar <font color=\"#4dc831\">Combo de 8</font> e <font color=\"#4dc831\">Repelimento</font> e certa chance de aumentar o número de Perseguições de toda a sua equipe (não acumula). Esta habilidade ignora <font color=\"#4dc831\">Provocação</font> e <font color=\"#4dc831\">Proteção</font>, e inimigos mortos por ela não podem ser ressuscitados.",
+          "translation": "攻击生命最低的忍者，并使自身追打次数增加1次。有较高概率造成8连击和击退，并有一定概率使己方全队追打次数增加（不叠加）。本技能无视挑衅和保护，被击败的敌人无法复活。"
+        }
+      },
+      "21015122": {
+        "name": {
+          "source": "Ataque Taijutsu",
+          "translation": "体术攻击"
+        },
+        "desc": {
+          "source": "Ataca o ninja com menos Vida e aumenta o seu próprio número de <font color=\"#4dc831\">Perseguições</font> em 1. Tem grande chance de lançar <font color=\"#4dc831\">Combo de 8</font> e <font color=\"#4dc831\">Repelimento</font> e certa chance de aumentar o número de Perseguições de toda a sua equipe (não acumula). Esta habilidade ignora <font color=\"#4dc831\">Provocação</font> e <font color=\"#4dc831\">Proteção</font>, e inimigos mortos por ela não podem ser ressuscitados.",
+          "translation": "攻击生命最低的忍者，并使自身追打次数增加1次。有较高概率造成8连击和击退，并有一定概率使己方全队追打次数增加（不叠加）。本技能无视挑衅和保护，被击败的敌人无法复活。"
+        }
+      },
+      "21015123": {
+        "name": {
+          "source": "Ataque Taijutsu",
+          "translation": "体术攻击"
+        },
+        "desc": {
+          "source": "Ataca o ninja com menos Vida e aumenta o seu próprio número de <font color=\"#4dc831\">Perseguições</font> em 1. Tem grande chance de lançar <font color=\"#4dc831\">Combo de 8</font> e <font color=\"#4dc831\">Repelimento</font> e certa chance de aumentar o número de Perseguições de toda a sua equipe (não acumula). Esta habilidade ignora <font color=\"#4dc831\">Provocação</font> e <font color=\"#4dc831\">Proteção</font>, e inimigos mortos por ela não podem ser ressuscitados.",
+          "translation": "攻击生命最低的忍者，并使自身追打次数增加1次。有较高概率造成8连击和击退，并有一定概率使己方全队追打次数增加（不叠加）。本技能无视挑衅和保护，被击败的敌人无法复活。"
+        }
+      },
+      "21015124": {
+        "name": {
+          "source": "Esfera da Busca da Verdade: Giro",
+          "translation": "求道玉·回转"
+        },
+        "desc": {
+          "source": "Hamura tem grande chance de esquivar de <font color=\"#4dc831\">Esotéricas</font>. Ao esquivar, recupera <font color=\"#4dc831\">8%</font> de Vida e <font color=\"#4dc831\">20</font> pontos de Chakra. Além disso, causa <font color=\"#4dc831\">20%</font> de sua Vida restante de dano ao atacante. Sempre que usa <font color=\"#4dc831\">Instakill</font>, lança a <font color=\"#4dc831\">Habilidade adicional</font> - <font color=\"#4dc831\">Byakugan: Coerção</font> 1 vez.",
+          "translation": "羽村有较高概率闪避奥义。闪避时恢复8%生命和20点查克拉，并对攻击者造成相当于自身剩余生命20%的伤害。每次使用瞬杀时，触发1次追加技能：白眼·威压。"
+        }
+      },
+      "21015125": {
+        "name": {
+          "source": "Esfera da Busca da Verdade: Perfurador",
+          "translation": "求道玉·穿刺"
+        },
+        "desc": {
+          "source": "<font color=\"#4dc831\">Lançado com combo de 15</font>, ataca uma linha horizontal inimiga aleatória e causa dano, além de causar <font color=\"#4dc831\">Repelimento</font> a 1 dos alvos. Esta habilidade ignora parte da <font color=\"#4dc831\">Defesa</font> e <font color=\"#4dc831\">Resistência</font>, e inimigos derrotados por esta habilidade não podem ser ressuscitados. Após o uso, o <font color=\"#4dc831\">Efeito da Habilidade</font> será substituído durante a rodada, e <font color=\"#4dc831\">Ataque Comum</font> da equipe aliada de <font color=\"#4dc831\">Otsutsuki</font> <font color=\"#4dc831\">sempre acerta</font>.",
+          "translation": "连击达到15时触发，随机攻击敌方一横排并造成伤害，使其中1名目标击退。本技能无视部分防御和抗性，被击败的敌人无法复活。使用后，本回合技能效果被替换，并使己方大筒木忍者的普攻必定命中。"
+        }
+      },
+      "21015127": {
+        "name": {
+          "source": "Instakill",
+          "translation": "瞬杀"
+        },
+        "desc": {
+          "source": "Causa dano <font color=\"#4dc831\">na certa</font> e <font color=\"#4dc831\">Supressão de Imunidade a Perseguição</font> até o fim da rodada a toda a linha onde se encontra o alvo, além de <font color=\"#4dc831\">Queda</font> ao alvo selecionado. Após seu uso, sua equipe ganha 1 Ataque Comum extra. Alvos mortos por esta habilidade não podem ser ressuscitados.",
+          "translation": "对目标所在一横排造成必定命中的伤害和持续至回合结束的追打免疫压制，并使选定目标倒地。使用后己方全队额外获得1次普攻机会。被本技能击败的目标无法复活。"
+        }
+      },
+      "21015128": {
+        "name": {
+          "source": "Byakugan",
+          "translation": "白眼"
+        },
+        "desc": {
+          "source": "Hamura e companheiros do clã <font color=\"#4dc831\">Otsutsuki</font> tem <font color=\"#4dc831\">Imunidade a Status negativos</font> e, a cada rodada, o dano das primeiras 2 <font color=\"#4dc831\">Esotéricas</font> recebidas é reduzido em <font color=\"#4dc831\">50%</font>.",
+          "translation": "羽村和己方大筒木一族忍者获得负面状态免疫，每回合受到的前2次奥义伤害降低50%。"
+        }
+      }
+    }
+  },
+  "skillDetails": {
+    "class": "SkillKeyDescCFG",
+    "rows": {
+      "362": {
+        "keys": {
+          "source": "Byakugan: Coerção",
+          "translation": "白眼·威压"
+        },
+        "desc": {
+          "source": "Habilidade adicional: Ataca o alvo com [Instakill], causando dano e roubando seus ataques comuns. Também aumenta o dano de seu próprio [ataque comum] em [30%], podendo acumular.",
+          "translation": "追加技能：攻击带有[瞬杀]的目标，造成伤害并夺取其普攻次数。同时自身[普攻]伤害提高[30%]，可叠加。"
+        }
+      },
+      "363": {
+        "keys": {
+          "source": "Efeito da Habilidade",
+          "translation": "技能效果"
+        },
+        "desc": {
+          "source": "[Efeito novo da Esfera da Busca da Verdade: Perfurador]: Persegue inimigos com [Queda], causa dano [na certa] à linha do alvo e reduz seu próprio [Resfriamento] em 1 rodada. Inimigos derrotados por esta habilidade não podem ser revividos.",
+          "translation": "[求道玉·穿刺的新效果]：追打[倒地]敌人，对目标所在一横排造成[必定命中]的伤害，并使自身[冷却]减少1回合。被本技能击败的敌人无法复活。"
+        }
+      }
+    }
+  }
+}

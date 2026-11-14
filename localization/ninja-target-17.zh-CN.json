@@ -1,0 +1,409 @@
+{
+  "id": "naruto-ninja-target-17-zh-CN-v1",
+  "rootId": "11002261",
+  "ninjaInfo": {
+    "class": "NinjaInfoCFG",
+    "rows": {
+      "11002261": {
+        "name": {
+          "source": "Jiraiya",
+          "translation": "自来也"
+        },
+        "title": {
+          "source": "[Canto do Sapo]",
+          "translation": "【蛤蟆临唱】"
+        }
+      }
+    }
+  },
+  "skills": {
+    "class": "SkillCFG",
+    "rows": {
+      "21002261": {
+        "name": {
+          "source": "Super Rasengan Gigante",
+          "translation": "超大玉螺旋丸"
+        },
+        "desc": {
+          "source": "Ataca uma equipe inimiga aleatória, causando dano de <font color=\"#4dc831\">combo de 5</font> que <font color=\"#4dc831\">sempre acerta</font> e reduzindo a <font color=\"#4dc831\">Resistência</font> em <font color=\"#4dc831\">10%</font>, com alta probabilidade de causar <font color=\"#4dc831\">Queda</font> a 1 inimigo aleatório.",
+          "translation": "随机攻击敌方一支小队，造成必定命中的5连击伤害，抗性降低10%，有较高概率使1名随机敌人倒地。"
+        }
+      },
+      "21002262": {
+        "name": {
+          "source": "Super Rasengan Gigante",
+          "translation": "超大玉螺旋丸"
+        },
+        "desc": {
+          "source": "Ataca uma equipe inimiga aleatória, causando dano de <font color=\"#4dc831\">combo de 5</font> que <font color=\"#4dc831\">sempre acerta</font> e reduzindo a <font color=\"#4dc831\">Resistência</font> em <font color=\"#4dc831\">10%</font>, com alta probabilidade de causar <font color=\"#4dc831\">Queda</font> a 1 inimigo aleatório.",
+          "translation": "随机攻击敌方一支小队，造成必定命中的5连击伤害，抗性降低10%，有较高概率使1名随机敌人倒地。"
+        }
+      },
+      "21002263": {
+        "name": {
+          "source": "Super Rasengan Gigante",
+          "translation": "超大玉螺旋丸"
+        },
+        "desc": {
+          "source": "Ataca uma equipe inimiga aleatória, causando dano de <font color=\"#4dc831\">combo de 5</font> que <font color=\"#4dc831\">sempre acerta</font> e reduzindo a <font color=\"#4dc831\">Resistência</font> em <font color=\"#4dc831\">10%</font>, com alta probabilidade de causar <font color=\"#4dc831\">Queda</font> a 1 inimigo aleatório.",
+          "translation": "随机攻击敌方一支小队，造成必定命中的5连击伤害，抗性降低10%，有较高概率使1名随机敌人倒地。"
+        }
+      },
+      "21002264": {
+        "name": {
+          "source": "Arte Eremita: Mil Agulhas de Cabelo",
+          "translation": "仙法·毛针千本"
+        },
+        "desc": {
+          "source": "<font color=\"#4dc831\">Lançado com combo de 15</font>, causa dano a <font color=\"#4dc831\">4</font> alvos aleatórios da equipe inimiga e <font color=\"#4dc831\">Repelimento</font> a <font color=\"#4dc831\">1</font> inimigo aleatório. O uso desta habilidade concede à equipe aliada <font color=\"#4dc831\">1</font> chances extras de <font color=\"#4dc831\">Perseguição</font> durante a rodada (não acumula).",
+          "translation": "连击达到15时触发，对敌方小队4名随机目标造成伤害，并使1名随机敌人击退。使用后，己方小队本回合额外获得1次追打机会，不叠加。"
+        }
+      },
+      "21002265": {
+        "name": {
+          "source": "Modo Sennin",
+          "translation": "仙人模式"
+        },
+        "desc": {
+          "source": "No início de cada rodada, ajusta o <font color=\"#4dc831\">Limite de Chakra</font> da equipe para <font color=\"#4dc831\">100</font> e dispersa todos os próprios <font color=\"#4dc831\">Status negativos</font> e de <font color=\"#4dc831\">1</font> ninja aleatório de <font color=\"#4dc831\">Senjutsu</font> na equipe, recuperando <font color=\"#4dc831\">20</font> de Chakra para cada alvo. A cada uso, aumenta a <font color=\"#4dc831\">Velocidade</font> da equipe aliada em <font color=\"#4dc831\">2%</font> (até um máximo de <font color=\"#4dc831\">10%</font>).",
+          "translation": "每回合开始时，将己方队伍查克拉上限调整为100，驱散自身和己方1名随机仙术忍者的全部负面状态，每个目标恢复20点查克拉。每次使用后，己方小队先攻提高2%，最多10%。"
+        }
+      },
+      "21002266": {
+        "name": {
+          "source": "A Lenda de um Ninja Determinado",
+          "translation": "坚毅忍传"
+        },
+        "desc": {
+          "source": "Após Jiraiya ser morte, sempre que a equipe aliada usar a <font color=\"#4dc831\">Esotérica</font> <font color=\"#4dc831\">3</font> vezes, ele ressuscita com <font color=\"#4dc831\">30%</font> de vida. Seu <font color=\"#4dc831\">Resfriamento da Esotérica</font> reduzido em <font color=\"#4dc831\">1</font> rodada após a ressurreição.",
+          "translation": "自来也被击败后，己方小队每使用3次奥义，他以30%生命复活，复活后奥义冷却减少1回合。"
+        }
+      },
+      "21002267": {
+        "name": {
+          "source": "Invocação: Barriga do Sapo",
+          "translation": "通灵·蛤蟆食口缚"
+        },
+        "desc": {
+          "source": "Invoca um sapo gigante que gera o plano <font color=\"#4dc831\">Culinária Sapo</font> por <font color=\"#4dc831\">2</font> rodadas. Além disso, Jiraiya possui a habilidade <font color=\"#4dc831\">Ilusão Demoníaca: Canto do Sapo</font>.",
+          "translation": "召唤巨型蛤蟆，展开蛤蟆料理结界，持续2回合。此外，自来也拥有魔幻·蛤蟆临唱技能。"
+        }
+      },
+      "21002268": {
+        "name": {
+          "source": "Invocação: Barriga do Sapo",
+          "translation": "通灵·蛤蟆食口缚"
+        },
+        "desc": {
+          "source": "Em <font color=\"#4dc831\">Culinária Sapo</font>, <font color=\"#4dc831\">Culinária Sapo +1</font> e <font color=\"#4dc831\">Culinária Sapo Y</font>, todos os ninjas que lançam e dispersam plano e campo não podem usar <font color=\"#4dc831\">Esotérica</font>. Além disso, ninjas aliados desse tipo ficam imunes a <font color=\"#4dc831\">Dissolução</font> e <font color=\"#4dc831\">Corrosão</font> em <font color=\"#4dc831\">Culinária Sapo Y</font>.",
+          "translation": "蛤蟆料理、蛤蟆料理+1及蛤蟆料理·Y结界内，双方能够展开或驱散结界与领域的忍者均无法使用奥义。此外，蛤蟆料理·Y结界内，己方此类忍者免疫溶解和腐蚀。"
+        }
+      },
+      "21202261": {
+        "name": {
+          "source": "Super Rasengan Gigante",
+          "translation": "超大玉螺旋丸"
+        },
+        "desc": {
+          "source": "Ataca uma equipe inimiga aleatória, causando dano de <font color=\"#4dc831\">combo de 5</font> que <font color=\"#4dc831\">sempre acerta</font> e reduzindo a <font color=\"#4dc831\">Resistência</font> em <font color=\"#4dc831\">15%</font>, com alta probabilidade de causar <font color=\"#4dc831\">Queda</font> a 1 inimigo aleatório.",
+          "translation": "随机攻击敌方一支小队，造成必定命中的5连击伤害，抗性降低15%，有较高概率使1名随机敌人倒地。"
+        }
+      },
+      "21202262": {
+        "name": {
+          "source": "Super Rasengan Gigante",
+          "translation": "超大玉螺旋丸"
+        },
+        "desc": {
+          "source": "Ataca uma equipe inimiga aleatória, causando dano de <font color=\"#4dc831\">combo de 5</font> que <font color=\"#4dc831\">sempre acerta</font> e reduzindo a <font color=\"#4dc831\">Resistência</font> em <font color=\"#4dc831\">15%</font>, com alta probabilidade de causar <font color=\"#4dc831\">Queda</font> a 1 inimigo aleatório.",
+          "translation": "随机攻击敌方一支小队，造成必定命中的5连击伤害，抗性降低15%，有较高概率使1名随机敌人倒地。"
+        }
+      },
+      "21202263": {
+        "name": {
+          "source": "Super Rasengan Gigante",
+          "translation": "超大玉螺旋丸"
+        },
+        "desc": {
+          "source": "Ataca uma equipe inimiga aleatória, causando dano de <font color=\"#4dc831\">combo de 5</font> que <font color=\"#4dc831\">sempre acerta</font> e reduzindo a <font color=\"#4dc831\">Resistência</font> em <font color=\"#4dc831\">15%</font>, com alta probabilidade de causar <font color=\"#4dc831\">Queda</font> a 1 inimigo aleatório.",
+          "translation": "随机攻击敌方一支小队，造成必定命中的5连击伤害，抗性降低15%，有较高概率使1名随机敌人倒地。"
+        }
+      },
+      "21202264": {
+        "name": {
+          "source": "Arte Eremita: Mil Agulhas de Cabelo",
+          "translation": "仙法·毛针千本"
+        },
+        "desc": {
+          "source": "<font color=\"#4dc831\">Lançado com combo de 15</font>, causa dano a <font color=\"#4dc831\">6</font> alvos aleatórios da equipe inimiga e <font color=\"#4dc831\">Repelimento</font> a <font color=\"#4dc831\">1</font> inimigo aleatório. O uso desta habilidade concede à equipe aliada <font color=\"#4dc831\">1</font> chances extras de <font color=\"#4dc831\">Perseguição</font> durante a rodada (não acumula).",
+          "translation": "连击达到15时触发，对敌方小队6名随机目标造成伤害，并使1名随机敌人击退。使用后，己方小队本回合额外获得1次追打机会，不叠加。"
+        }
+      },
+      "21202265": {
+        "name": {
+          "source": "Modo Sennin",
+          "translation": "仙人模式"
+        },
+        "desc": {
+          "source": "No início de cada rodada, ajusta o <font color=\"#4dc831\">Limite de Chakra</font> da equipe para <font color=\"#4dc831\">100</font> e dispersa todos os próprios <font color=\"#4dc831\">Status negativos</font> e de <font color=\"#4dc831\">2</font> ninjas aleatórios de <font color=\"#4dc831\">Senjutsu</font> na equipe, recuperando <font color=\"#4dc831\">20</font> de Chakra para cada alvo. A cada uso, aumenta a <font color=\"#4dc831\">Velocidade</font> da equipe aliada em <font color=\"#4dc831\">2%</font> (até um máximo de <font color=\"#4dc831\">10%</font>) e remove o próprio status de <font color=\"#4dc831\">Selamento</font>.",
+          "translation": "每回合开始时，将己方队伍查克拉上限调整为100，驱散自身和己方2名随机仙术忍者的全部负面状态，每个目标恢复20点查克拉。每次使用后，己方小队先攻提高2%，最多10%，并移除自身封穴。"
+        }
+      },
+      "21202266": {
+        "name": {
+          "source": "A Lenda de um Ninja Determinado",
+          "translation": "坚毅忍传"
+        },
+        "desc": {
+          "source": "Após Jiraiya ser morte, sempre que a equipe aliada usar a <font color=\"#4dc831\">Esotérica</font> <font color=\"#4dc831\">2</font> vezes, ele ressuscita com <font color=\"#4dc831\">50%</font> de vida. Seu <font color=\"#4dc831\">Resfriamento da Esotérica</font> reduzido em <font color=\"#4dc831\">1</font> rodada após a ressurreição.",
+          "translation": "自来也被击败后，己方小队每使用2次奥义，他以50%生命复活，复活后奥义冷却减少1回合。"
+        }
+      },
+      "21202268": {
+        "name": {
+          "source": "Invocação: Barriga do Sapo",
+          "translation": "通灵·蛤蟆食口缚"
+        },
+        "desc": {
+          "source": "Em <font color=\"#4dc831\">Culinária Sapo</font>, <font color=\"#4dc831\">Culinária Sapo +1</font> e <font color=\"#4dc831\">Culinária Sapo Y</font>, todos os ninjas que lançam e dispersam plano e campo não podem usar <font color=\"#4dc831\">Esotérica</font>. Além disso, ninjas aliados desse tipo ficam imunes a <font color=\"#4dc831\">Dissolução</font> e <font color=\"#4dc831\">Corrosão</font> em <font color=\"#4dc831\">Culinária Sapo Y</font>. <font color=\"#4dc831\">Ocupado para ID</font>",
+          "translation": "蛤蟆料理、蛤蟆料理+1及蛤蟆料理·Y结界内，双方能够展开或驱散结界与领域的忍者均无法使用奥义。此外，蛤蟆料理·Y结界内，己方此类忍者免疫溶解和腐蚀。（ID占位）"
+        }
+      },
+      "21302261": {
+        "name": {
+          "source": "Super Rasengan Gigante",
+          "translation": "超大玉螺旋丸"
+        },
+        "desc": {
+          "source": "Ataca uma equipe inimiga aleatória, causando dano de <font color=\"#4dc831\">combo de 5</font> que <font color=\"#4dc831\">sempre acerta</font> e reduzindo a <font color=\"#4dc831\">Resistência</font> em <font color=\"#4dc831\">15%</font>. Ao mesmo tempo, deduz 1 chance de ataque comum. Existe alta probabilidade de causar <font color=\"#4dc831\">Queda</font> a 1 inimigo aleatório.",
+          "translation": "随机攻击敌方一支小队，造成必定命中的5连击伤害，抗性降低15%，并减少1次普攻机会，有较高概率使1名随机敌人倒地。"
+        }
+      },
+      "21302262": {
+        "name": {
+          "source": "Super Rasengan Gigante",
+          "translation": "超大玉螺旋丸"
+        },
+        "desc": {
+          "source": "Ataca uma equipe inimiga aleatória, causando dano de <font color=\"#4dc831\">combo de 5</font> que <font color=\"#4dc831\">sempre acerta</font> e reduzindo a <font color=\"#4dc831\">Resistência</font> em <font color=\"#4dc831\">15%</font>. Ao mesmo tempo, deduz 1 chance de ataque comum. Existe alta probabilidade de causar <font color=\"#4dc831\">Queda</font> a 1 inimigo aleatório.",
+          "translation": "随机攻击敌方一支小队，造成必定命中的5连击伤害，抗性降低15%，并减少1次普攻机会，有较高概率使1名随机敌人倒地。"
+        }
+      },
+      "21302263": {
+        "name": {
+          "source": "Super Rasengan Gigante",
+          "translation": "超大玉螺旋丸"
+        },
+        "desc": {
+          "source": "Ataca uma equipe inimiga aleatória, causando dano de <font color=\"#4dc831\">combo de 5</font> que <font color=\"#4dc831\">sempre acerta</font> e reduzindo a <font color=\"#4dc831\">Resistência</font> em <font color=\"#4dc831\">15%</font>. Ao mesmo tempo, deduz 1 chance de ataque comum. Existe alta probabilidade de causar <font color=\"#4dc831\">Queda</font> a 1 inimigo aleatório.",
+          "translation": "随机攻击敌方一支小队，造成必定命中的5连击伤害，抗性降低15%，并减少1次普攻机会，有较高概率使1名随机敌人倒地。"
+        }
+      },
+      "21302264": {
+        "name": {
+          "source": "Arte Eremita: Mil Agulhas de Cabelo",
+          "translation": "仙法·毛针千本"
+        },
+        "desc": {
+          "source": "<font color=\"#4dc831\">Lançado com combo de 15</font>, causa dano a <font color=\"#4dc831\">6</font> alvos aleatórios da equipe inimiga e <font color=\"#4dc831\">Repelimento</font> a <font color=\"#4dc831\">1</font> inimigo aleatório. O uso desta habilidade concede à equipe aliada <font color=\"#4dc831\">2</font> chances extras de <font color=\"#4dc831\">Perseguição</font> durante a rodada (não acumula).",
+          "translation": "连击达到15时触发，对敌方小队6名随机目标造成伤害，并使1名随机敌人击退。使用后，己方小队本回合额外获得2次追打机会，不叠加。"
+        }
+      },
+      "21302265": {
+        "name": {
+          "source": "Modo Sennin",
+          "translation": "仙人模式"
+        },
+        "desc": {
+          "source": "No início de cada rodada, ajusta o <font color=\"#4dc831\">Limite de Chakra</font> da equipe para <font color=\"#4dc831\">100</font> e dispersa todos os próprios <font color=\"#4dc831\">Status negativos</font> e de <font color=\"#4dc831\">2</font> ninjas aleatórios de <font color=\"#4dc831\">Senjutsu</font> na equipe, recuperando <font color=\"#4dc831\">20</font> de Chakra para cada alvo. O efeito pode ser ativado mesmo sob controle. A cada uso, aumenta a <font color=\"#4dc831\">Velocidade</font> da equipe aliada em <font color=\"#4dc831\">2%</font> (até um máximo de <font color=\"#4dc831\">10%</font>) e anula o próprio status de <font color=\"#4dc831\">Selamento</font>.",
+          "translation": "每回合开始时，将己方队伍查克拉上限调整为100，驱散自身和己方2名随机仙术忍者的全部负面状态，每个目标恢复20点查克拉。被控制时仍可触发。每次使用后，己方小队先攻提高2%，最多10%，并移除自身封穴。"
+        }
+      },
+      "21302266": {
+        "name": {
+          "source": "A Lenda de um Ninja Determinado",
+          "translation": "坚毅忍传"
+        },
+        "desc": {
+          "source": "Após Jiraiya ser morte, sempre que a equipe aliada usar a <font color=\"#4dc831\">Esotérica</font> <font color=\"#4dc831\">2</font> vezes, ele ressuscitará com <font color=\"#4dc831\">50%</font> de vida e seu <font color=\"#4dc831\">Resfriamento da Esotérica</font> zerado. Além disso, toda vez que um ninja da equipe sofrer um ataque, ele ganha <font color=\"#4dc831\">20%</font> de <font color=\"#4dc831\">Defesa</font> e <font color=\"#4dc831\">Resistência</font> durante a rodada (até 5 acúmulos).",
+          "translation": "自来也被击败后，己方小队每使用2次奥义，他以50%生命复活并清除奥义冷却。此外，己方忍者每次受到攻击时，本回合防御和抗性提高20%，最多叠加5层。"
+        }
+      },
+      "21302267": {
+        "name": {
+          "source": "Invocação: Barriga do Sapo",
+          "translation": "通灵·蛤蟆食口缚"
+        },
+        "desc": {
+          "source": "Invoca um sapo gigante que gera o plano <font color=\"#4dc831\">Culinária Sapo +1</font> por <font color=\"#4dc831\">2</font> rodadas. Ao sofrer um ataque durante a rodada, a equipe aliada causa <font color=\"#4dc831\">Dissolução</font> ao atacante. Além disso, Jiraiya possui a habilidade <font color=\"#4dc831\">Ilusão Demoníaca: Canto do Sapo +1</font>.",
+          "translation": "召唤巨型蛤蟆，展开蛤蟆料理+1结界，持续2回合。本回合己方小队受到攻击时，对攻击者施加溶解。此外，自来也拥有魔幻·蛤蟆临唱+1技能。"
+        }
+      },
+      "21302268": {
+        "name": {
+          "source": "Invocação: Barriga do Sapo",
+          "translation": "通灵·蛤蟆食口缚"
+        },
+        "desc": {
+          "source": "Em <font color=\"#4dc831\">Culinária Sapo</font>, <font color=\"#4dc831\">Culinária Sapo +1</font> e <font color=\"#4dc831\">Culinária Sapo Y</font>, todos os ninjas que lançam e dispersam plano e campo não podem usar <font color=\"#4dc831\">Esotérica</font>. Além disso, ninjas aliados desse tipo ficam imunes a <font color=\"#4dc831\">Dissolução</font> e <font color=\"#4dc831\">Corrosão</font> em <font color=\"#4dc831\">Culinária Sapo Y</font>. <font color=\"#4dc831\">Ocupado para ID</font>",
+          "translation": "蛤蟆料理、蛤蟆料理+1及蛤蟆料理·Y结界内，双方能够展开或驱散结界与领域的忍者均无法使用奥义。此外，蛤蟆料理·Y结界内，己方此类忍者免疫溶解和腐蚀。（ID占位）"
+        }
+      },
+      "21302269": {
+        "name": {
+          "source": "Ilusão Demoníaca: Canto do Sapo",
+          "translation": "魔幻·蛤蟆临唱"
+        },
+        "desc": {
+          "source": "O uso de <font color=\"#4dc831\">Invocação: Barriga do Sapo</font> ativa <font color=\"#4dc831\">Ilusão Demoníaca: Canto do Sapo</font>. O uso de <font color=\"#4dc831\">Invocação: Barriga do Sapo +1</font> ativa <font color=\"#4dc831\">Ilusão Demoníaca: Canto do Sapo +1</font>. O uso de <font color=\"#4dc831\">Ilusão Demoníaca: Canto do Sapo Y</font> ativa <font color=\"#4dc831\">Invocação: Barriga do Sapo Y</font>.",
+          "translation": "使用通灵·蛤蟆食口缚时触发魔幻·蛤蟆临唱；使用通灵·蛤蟆食口缚+1时触发魔幻·蛤蟆临唱+1；使用魔幻·蛤蟆临唱·Y时触发通灵·蛤蟆食口缚·Y。"
+        }
+      },
+      "21402261": {
+        "name": {
+          "source": "Super Rasengan Gigante",
+          "translation": "超大玉螺旋丸"
+        },
+        "desc": {
+          "source": "Ataca uma equipe inimiga aleatória, causando dano de <font color=\"#4dc831\">combo de 5</font> que <font color=\"#4dc831\">sempre acerta</font> e reduzindo o <font color=\"#4dc831\">Crítico</font> em <font color=\"#4dc831\">10%</font>, com alta probabilidade de causar <font color=\"#4dc831\">Queda</font> a 1 inimigo aleatório.",
+          "translation": "随机攻击敌方一支小队，造成必定命中的5连击伤害，使暴击率降低10%，并有较高概率使1名随机敌人倒地。"
+        }
+      },
+      "21402262": {
+        "name": {
+          "source": "Super Rasengan Gigante",
+          "translation": "超大玉螺旋丸"
+        },
+        "desc": {
+          "source": "Ataca uma equipe inimiga aleatória, causando dano de <font color=\"#4dc831\">combo de 5</font> que <font color=\"#4dc831\">sempre acerta</font> e reduzindo o <font color=\"#4dc831\">Crítico</font> em <font color=\"#4dc831\">10%</font>, com alta probabilidade de causar <font color=\"#4dc831\">Queda</font> a 1 inimigo aleatório.",
+          "translation": "随机攻击敌方一支小队，造成必定命中的5连击伤害，使暴击率降低10%，并有较高概率使1名随机敌人倒地。"
+        }
+      },
+      "21402263": {
+        "name": {
+          "source": "Super Rasengan Gigante",
+          "translation": "超大玉螺旋丸"
+        },
+        "desc": {
+          "source": "Ataca uma equipe inimiga aleatória, causando dano de <font color=\"#4dc831\">combo de 5</font> que <font color=\"#4dc831\">sempre acerta</font> e reduzindo o <font color=\"#4dc831\">Crítico</font> em <font color=\"#4dc831\">10%</font>, com alta probabilidade de causar <font color=\"#4dc831\">Queda</font> a 1 inimigo aleatório.",
+          "translation": "随机攻击敌方一支小队，造成必定命中的5连击伤害，使暴击率降低10%，并有较高概率使1名随机敌人倒地。"
+        }
+      },
+      "21402264": {
+        "name": {
+          "source": "Arte Eremita: Mil Agulhas de Cabelo",
+          "translation": "仙法·毛针千本"
+        },
+        "desc": {
+          "source": "<font color=\"#4dc831\">Lançado com combo de 15</font>, causa dano, <font color=\"#4dc831\">Rigidez</font> e <font color=\"#4dc831\">Interrupção</font> a uma linha aleatória de inimigos, além de <font color=\"#4dc831\">Repelimento</font> a <font color=\"#4dc831\">1</font> alvo aleatório.",
+          "translation": "连击达到15时触发，随机攻击敌方一排，造成伤害、僵直和打断，并使1名随机目标击退。"
+        }
+      },
+      "21402265": {
+        "name": {
+          "source": "Modo Sennin",
+          "translation": "仙人模式"
+        },
+        "desc": {
+          "source": "No início de cada rodada, ajusta o <font color=\"#4dc831\">Limite de Chakra</font> da equipe para <font color=\"#4dc831\">100</font> e causa à equipe aliada uma pequena quantidade de dano que ignora o <font color=\"#4dc831\">Escudo</font> e que <font color=\"#4dc831\">sempre acerta</font>. Além disso, na primeira vez que a <font color=\"#4dc831\">Esotérica</font> da equipe aliada sofrer <font color=\"#4dc831\">Interrupção</font> durante a rodada, o <font color=\"#4dc831\">Resfriamento da Esotérica</font> será zerado. O efeito pode ser ativado mesmo sob controle. Durante o uso, aumenta a própria <font color=\"#4dc831\">Velocidade</font> em <font color=\"#4dc831\">2%</font> (até um máximo de <font color=\"#4dc831\">10%</font>).",
+          "translation": "每回合开始时，将己方队伍查克拉上限调整为100，对己方小队造成少量无视护盾且必定命中的伤害。此外，己方小队本回合首次奥义被打断时，清除该奥义冷却。被控制时仍可触发。使用时自身先攻提高2%，最多10%。"
+        }
+      },
+      "21402266": {
+        "name": {
+          "source": "A Lenda de um Ninja Determinado",
+          "translation": "坚毅忍传"
+        },
+        "desc": {
+          "source": "Cada vez que Jiraiya perde <font color=\"#4dc831\">1%</font> de vida, aumenta a defesa da equipe aliada em <font color=\"#4dc831\">2%</font>. Além disso, quando a equipe aliada usar habilidade de tipo <font color=\"#4dc831\">gatilho</font>, Jiraiya recupera <font color=\"#4dc831\">15%</font> de vida e ganha <font color=\"#4dc831\">15%</font> de <font color=\"#4dc831\">Ninjutsu</font> (até <font color=\"#4dc831\">75%</font> por rodada). Na primeira vez que a equipe usar habilidade <font color=\"#4dc831\">Esotérica</font> em uma rodada, Jiraiya ativa o <font color=\"#4dc831\">Modo Sennin Z</font>.",
+          "translation": "自来也每损失1%生命，己方小队防御提高2%。己方小队使用触发型技能时，自来也恢复15%生命、忍术提高15%，每回合最多75%。己方小队每回合首次使用奥义时，自来也触发仙人模式·Z。"
+        }
+      },
+      "21402268": {
+        "name": {
+          "source": "Invocação: Barriga do Sapo",
+          "translation": "通灵·蛤蟆食口缚"
+        },
+        "desc": {
+          "source": "Em <font color=\"#4dc831\">Culinária Sapo</font>, <font color=\"#4dc831\">Culinária Sapo +1</font> e <font color=\"#4dc831\">Culinária Sapo Y</font>, todos os ninjas que lançam e dispersam plano e campo não podem usar <font color=\"#4dc831\">Esotérica</font>. Além disso, ninjas aliados desse tipo ficam imunes a <font color=\"#4dc831\">Dissolução</font> e <font color=\"#4dc831\">Corrosão</font> em <font color=\"#4dc831\">Culinária Sapo Y</font>. <font color=\"#4dc831\">Ocupado para ID</font>",
+          "translation": "蛤蟆料理、蛤蟆料理+1及蛤蟆料理·Y结界内，双方能够展开或驱散结界与领域的忍者均无法使用奥义。此外，蛤蟆料理·Y结界内，己方此类忍者免疫溶解和腐蚀。（ID占位）"
+        }
+      },
+      "21402269": {
+        "name": {
+          "source": "Ilusão Demoníaca: Canto do Sapo",
+          "translation": "魔幻·蛤蟆临唱"
+        },
+        "desc": {
+          "source": "O uso de <font color=\"#4dc831\">Invocação: Barriga do Sapo</font> ativa <font color=\"#4dc831\">Ilusão Demoníaca: Canto do Sapo</font>. O uso de <font color=\"#4dc831\">Invocação: Barriga do Sapo +1</font> ativa <font color=\"#4dc831\">Ilusão Demoníaca: Canto do Sapo +1</font>. O uso de <font color=\"#4dc831\">Ilusão Demoníaca: Canto do Sapo Y</font> ativa <font color=\"#4dc831\">Invocação: Barriga do Sapo Y</font>.",
+          "translation": "使用通灵·蛤蟆食口缚时触发魔幻·蛤蟆临唱；使用通灵·蛤蟆食口缚+1时触发魔幻·蛤蟆临唱+1；使用魔幻·蛤蟆临唱·Y时触发通灵·蛤蟆食口缚·Y。"
+        }
+      },
+      "21502267": {
+        "name": {
+          "source": "Ilusão Demoníaca: Canto do Sapo",
+          "translation": "魔幻·蛤蟆临唱"
+        },
+        "desc": {
+          "source": "Causa a <font color=\"#4dc831\">3</font> alvos inimigos dano de Ninjutsu e <font color=\"#4dc831\">Confusão Grave</font> <font color=\"#4dc831\">na certa</font>, com <font color=\"#4dc831\">Supressão de Imunidade a Status negativos</font> até o final da próxima rodada. Além disso, Jiraiya possui a habilidade <font color=\"#4dc831\">Invocação: Barriga do Sapo Y</font>.",
+          "translation": "对3名敌人造成必定命中的忍术伤害和重度混乱，以及持续至下回合结束的负面状态免疫压制。此外，自来也拥有通灵·蛤蟆食口缚·Y技能。"
+        }
+      },
+      "21502269": {
+        "name": {
+          "source": "Ilusão Demoníaca: Canto do Sapo",
+          "translation": "魔幻·蛤蟆临唱"
+        },
+        "desc": {
+          "source": "O uso de <font color=\"#4dc831\">Invocação: Barriga do Sapo</font> ativa <font color=\"#4dc831\">Ilusão Demoníaca: Canto do Sapo</font>. O uso de <font color=\"#4dc831\">Invocação: Barriga do Sapo +1</font> ativa <font color=\"#4dc831\">Ilusão Demoníaca: Canto do Sapo +1</font>. O uso de <font color=\"#4dc831\">Ilusão Demoníaca: Canto do Sapo Y</font> ativa <font color=\"#4dc831\">Invocação: Barriga do Sapo Y</font>.",
+          "translation": "使用通灵·蛤蟆食口缚时触发魔幻·蛤蟆临唱；使用通灵·蛤蟆食口缚+1时触发魔幻·蛤蟆临唱+1；使用魔幻·蛤蟆临唱·Y时触发通灵·蛤蟆食口缚·Y。"
+        }
+      }
+    }
+  },
+  "skillDetails": {
+    "class": "SkillKeyDescCFG",
+    "rows": {
+      "613": {
+        "keys": {
+          "source": "Culinária Sapo +1",
+          "translation": "蛤蟆料理+1"
+        },
+        "desc": {
+          "source": "Quando o plano [Culinária Sapo] está ativo, ninjas de ambos os lados que possam lançar e dispersar [Plano] e [Campo] não podem usar [Esotérica]. O plano dura 2 rodadas. Em [Culinária Sapo +1], todos os ninjas inimigos que lançam e dispersam [Plano] e [Campo] terão sua [Velocidade] reduzida para [98%] das estatísticas e o [Crítico] fixado em [20%].",
+          "translation": "[蛤蟆料理]结界生效时，双方能够展开或驱散[结界]和[领域]的忍者无法使用[奥义]，结界持续2回合。在[蛤蟆料理+1]中，敌方此类忍者的[先攻]降至面板值的[98%]，[暴击]率固定为[20%]。"
+        }
+      },
+      "614": {
+        "keys": {
+          "source": "Ilusão Demoníaca: Canto do Sapo +1",
+          "translation": "魔幻·蛤蟆临唱+1"
+        },
+        "desc": {
+          "source": "[Habilidade adicional] acionada com o uso de [Invocação: Barriga do Sapo +1]: Causa a [3] inimigos dano de Ninjutsu e [Confusão Grave] [na certa], com [Supressão de Imunidade a Status negativos] até o final da próxima rodada.",
+          "translation": "使用[通灵·蛤蟆食口缚+1]时触发的[追加技能]：对[3]名敌人造成[必定命中]的忍术伤害和[重度混乱]，以及持续至下回合结束的[负面状态免疫压制]。"
+        }
+      },
+      "615": {
+        "keys": {
+          "source": "Invocação: Barriga do Sapo Y",
+          "translation": "通灵·蛤蟆食口缚·Y"
+        },
+        "desc": {
+          "source": "Ativado com o uso de [Ilusão Demoníaca: Canto do Sapo Y], invoca um sapo gigante que gera o plano [Culinária Sapo Y] por 2 rodadas. Quando o plano está ativo, ninjas de ambos os lados que possam lançar e dispersar [Plano] e [Campo] não podem usar [Esotérica], enquanto ninjas aliados desse tipo ficam imunes a [Dissolução] e [Corrosão] em [Culinária Sapo Y]. O plano dura 2 rodadas.",
+          "translation": "使用[魔幻·蛤蟆临唱·Y]时触发，召唤巨型蛤蟆，展开[蛤蟆料理·Y]结界，持续2回合。结界内，双方能够展开或驱散[结界]和[领域]的忍者无法使用[奥义]，己方此类忍者免疫[溶解]和[腐蚀]。"
+        }
+      },
+      "616": {
+        "keys": {
+          "source": "Modo Sennin Z",
+          "translation": "仙人模式·Z"
+        },
+        "desc": {
+          "source": "Ajusta o [Limite de Chakra] da equipe aliada para [100] e reduz o [Consumo de Chakra] em [20] (até 5 acúmulos). Durante o uso, remove o próprio status de [Chamas]. Ademais, na primeira vez que Jiraiya sofrer dano fatal durante uma rodada, ele recupera imediatamente [50%] da vida.",
+          "translation": "将己方队伍[查克拉上限]调整为[100]，[查克拉消耗]降低[20]，最多叠加5层。使用时移除自身[烈焰]。此外，自来也本回合首次受到致命伤害时，立即恢复[50%]生命。"
+        }
+      }
+    }
+  }
+}

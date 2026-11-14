@@ -1,0 +1,449 @@
+{
+  "id": "naruto-ninja-target-03-zh-CN-v1",
+  "rootId": "11006011",
+  "ninjaInfo": {
+    "class": "NinjaInfoCFG",
+    "rows": {
+      "11006011": {
+        "name": {
+          "source": "Madara Uchiha",
+          "translation": "宇智波斑"
+        },
+        "title": {
+          "source": "[Cúpula dos Cinco Kage]",
+          "translation": "【五影会谈】"
+        }
+      }
+    }
+  },
+  "skills": {
+    "class": "SkillCFG",
+    "rows": {
+      "21006011": {
+        "name": {
+          "source": "Kamui",
+          "translation": "神威"
+        },
+        "desc": {
+          "source": "Ataca um inimigo aleatório, causa dano Ninjutsu, dispersa todos os <font color=\"#4dc831\">Escudos</font> e <font color=\"#4dc831\">Status positivos</font> e tem chance de causar <font color=\"#4dc831\">Queda</font>. Alvos derrotados por esta habilidade não podem ressuscitar.",
+          "translation": "攻击1名随机敌人，造成忍术伤害，驱散其全部护盾和增益状态，并有概率造成倒地。被本技能击败的目标无法复活。"
+        }
+      },
+      "21006012": {
+        "name": {
+          "source": "Kamui",
+          "translation": "神威"
+        },
+        "desc": {
+          "source": "Ataca um inimigo aleatório, causa dano Ninjutsu, dispersa todos os <font color=\"#4dc831\">Escudos</font> e <font color=\"#4dc831\">Status positivos</font> e tem chance de causar <font color=\"#4dc831\">Queda</font>. Alvos derrotados por esta habilidade não podem ressuscitar.",
+          "translation": "攻击1名随机敌人，造成忍术伤害，驱散其全部护盾和增益状态，并有概率造成倒地。被本技能击败的目标无法复活。"
+        }
+      },
+      "21006013": {
+        "name": {
+          "source": "Kamui",
+          "translation": "神威"
+        },
+        "desc": {
+          "source": "Ataca um inimigo aleatório, causa dano Ninjutsu, dispersa todos os <font color=\"#4dc831\">Escudos</font> e <font color=\"#4dc831\">Status positivos</font> e tem chance de causar <font color=\"#4dc831\">Queda</font>. Alvos derrotados por esta habilidade não podem ressuscitar.",
+          "translation": "攻击1名随机敌人，造成忍术伤害，驱散其全部护盾和增益状态，并有概率造成倒地。被本技能击败的目标无法复活。"
+        }
+      },
+      "21006014": {
+        "name": {
+          "source": "Ataque invisível",
+          "translation": "无形攻击"
+        },
+        "desc": {
+          "source": "Persegue inimigos com <font color=\"#4dc831\">Repelimento</font> e causa <font color=\"#4dc831\">Interrupção</font>, <font color=\"#4dc831\">Queda</font> e <font color=\"#4dc831\">Distúrbio do Chakra</font>, além de absorver até <font color=\"#4dc831\">20</font> de Chakra. Esta habilidade ignora parte da <font color=\"#4dc831\">Defesa</font> e <font color=\"#4dc831\">Resistência</font> e pode ser lançada até 2 vezes por rodada.",
+          "translation": "追打击退敌人，造成打断、倒地和查克拉紊乱，并吸收最多20点查克拉。本技能无视目标部分防御和抗性，每回合最多触发2次。"
+        }
+      },
+      "21006015": {
+        "name": {
+          "source": "Estilo Terra: Dragão de Terra Oculto",
+          "translation": "土遁·土中潜龙"
+        },
+        "desc": {
+          "source": "<font color=\"#4dc831\">Lançado com Combo de 20</font> Causa dano de <font color=\"#4dc831\">Fogo</font> e <font color=\"#4dc831\">Terra</font> e <font color=\"#4dc831\">Chamas</font> a <font color=\"#4dc831\">3</font> inimigos aleatórios.",
+          "translation": "连击达到20时触发，对3名随机敌人造成火、土属性伤害和烈焰。"
+        }
+      },
+      "21006016": {
+        "name": {
+          "source": "Kamui: Vazio",
+          "translation": "神威·虚空"
+        },
+        "desc": {
+          "source": "Grande chance de evitar perseguições",
+          "translation": "有较高概率闪避追打。"
+        }
+      },
+      "21006017": {
+        "name": {
+          "source": "Kamui: Troca Espacial",
+          "translation": "神威·空间转移"
+        },
+        "desc": {
+          "source": "Invoca o plano <font color=\"#4dc831\">Espaço Alternativo</font> e dispersa todos os <font color=\"#4dc831\">Escudos</font> e <font color=\"#4dc831\">Status positivos</font> de ambos os lados.",
+          "translation": "展开异空间结界，驱散双方全部护盾和增益状态。"
+        }
+      },
+      "21006018": {
+        "name": {
+          "source": "Kamui: Troca Espacial",
+          "translation": "神威·空间转移"
+        },
+        "desc": {
+          "source": "Invoca o plano <font color=\"#4dc831\">Espaço Alternativo +1</font> e dispersa todos os <font color=\"#4dc831\">Escudos</font> e <font color=\"#4dc831\">Status positivos</font> dos inimigos.",
+          "translation": "展开异空间+1结界，驱散敌方全部护盾和增益状态。"
+        }
+      },
+      "21006019": {
+        "name": {
+          "source": "Espaço Alternativo: Selamento",
+          "translation": "异空间·封印"
+        },
+        "desc": {
+          "source": "Durante o plano Espaço Alternativo, nenhum inimigo além de Obito com o Mangekyo aberto, membros da <font color=\"#4dc831\">Akatsuki</font> e Kakashi com o Mangekyo aberto pode lançar <font color=\"#4dc831\">Esotéricas</font>.",
+          "translation": "异空间结界持续期间，敌方除开启万花筒的带土、晓组织成员和开启万花筒的卡卡西外，均无法释放奥义。"
+        }
+      },
+      "21206011": {
+        "name": {
+          "source": "Kamui",
+          "translation": "神威"
+        },
+        "desc": {
+          "source": "Ataca um inimigo aleatório, causa dano Ninjutsu, dispersa todos os <font color=\"#4dc831\">Escudos</font> e <font color=\"#4dc831\">Status positivos</font> e tem grande chance de causar <font color=\"#4dc831\">Queda</font>. Alvos derrotados por esta habilidade não podem ressuscitar.",
+          "translation": "攻击1名随机敌人，造成忍术伤害，驱散其全部护盾和增益状态，并有较高概率造成倒地。被本技能击败的目标无法复活。"
+        }
+      },
+      "21206012": {
+        "name": {
+          "source": "Kamui",
+          "translation": "神威"
+        },
+        "desc": {
+          "source": "Ataca um inimigo aleatório, causa dano Ninjutsu, dispersa todos os <font color=\"#4dc831\">Escudos</font> e <font color=\"#4dc831\">Status positivos</font> e tem grande chance de causar <font color=\"#4dc831\">Queda</font>. Alvos derrotados por esta habilidade não podem ressuscitar.",
+          "translation": "攻击1名随机敌人，造成忍术伤害，驱散其全部护盾和增益状态，并有较高概率造成倒地。被本技能击败的目标无法复活。"
+        }
+      },
+      "21206013": {
+        "name": {
+          "source": "Kamui",
+          "translation": "神威"
+        },
+        "desc": {
+          "source": "Ataca um inimigo aleatório, causa dano Ninjutsu, dispersa todos os <font color=\"#4dc831\">Escudos</font> e <font color=\"#4dc831\">Status positivos</font> e tem grande chance de causar <font color=\"#4dc831\">Queda</font>. Alvos derrotados por esta habilidade não podem ressuscitar.",
+          "translation": "攻击1名随机敌人，造成忍术伤害，驱散其全部护盾和增益状态，并有较高概率造成倒地。被本技能击败的目标无法复活。"
+        }
+      },
+      "21206014": {
+        "name": {
+          "source": "Ataque invisível",
+          "translation": "无形攻击"
+        },
+        "desc": {
+          "source": "Persegue inimigos com <font color=\"#4dc831\">Repelimento</font> e <font color=\"#4dc831\">Flutuação</font> e causa <font color=\"#4dc831\">Interrupção</font>, <font color=\"#4dc831\">Queda</font> e <font color=\"#4dc831\">Distúrbio do Chakra</font>, além de absorver até <font color=\"#4dc831\">40</font> de Chakra. Esta habilidade ignora parte da <font color=\"#4dc831\">Defesa</font> e <font color=\"#4dc831\">Resistência</font> e pode ser lançada até 2 vezes por rodada.",
+          "translation": "追打击退和浮空敌人，造成打断、倒地和查克拉紊乱，并吸收最多40点查克拉。本技能无视目标部分防御和抗性，每回合最多触发2次。"
+        }
+      },
+      "21206015": {
+        "name": {
+          "source": "Estilo Terra: Dragão de Terra Oculto",
+          "translation": "土遁·土中潜龙"
+        },
+        "desc": {
+          "source": "<font color=\"#4dc831\">Lançado com Combo de 20</font> Causa dano de <font color=\"#4dc831\">Fogo</font> e <font color=\"#4dc831\">Terra</font> e <font color=\"#4dc831\">Chamas</font> a <font color=\"#4dc831\">5</font> inimigos aleatórios.",
+          "translation": "连击达到20时触发，对5名随机敌人造成火、土属性伤害和烈焰。"
+        }
+      },
+      "21206016": {
+        "name": {
+          "source": "Kamui: Vazio",
+          "translation": "神威·虚空"
+        },
+        "desc": {
+          "source": "Este ninja tem grande chance de evitar o 1º ataque de cada rodada e habilidades de <font color=\"#4dc831\">Perseguição</font>.",
+          "translation": "有较高概率闪避每回合首次攻击和追打技能。"
+        }
+      },
+      "21206017": {
+        "name": {
+          "source": "Espaço Alternativo: Selamento",
+          "translation": "异空间·封印"
+        },
+        "desc": {
+          "source": "Ninjas de ambos os lados não podem lançar <font color=\"#4dc831\">Esotéricas</font> durante o plano Espaço Alternativo.",
+          "translation": "异空间结界持续期间，双方忍者均无法释放奥义。"
+        }
+      },
+      "21206018": {
+        "name": {
+          "source": "Espaço Alternativo: Selamento",
+          "translation": "异空间·封印"
+        },
+        "desc": {
+          "source": "Ninjas de ambos os lados não podem lançar <font color=\"#4dc831\">Esotéricas</font> durante o plano Espaço Alternativo.",
+          "translation": "异空间结界持续期间，双方忍者均无法释放奥义。"
+        }
+      },
+      "21206019": {
+        "name": {
+          "source": "Espaço Alternativo: Selamento",
+          "translation": "异空间·封印"
+        },
+        "desc": {
+          "source": "Durante o plano Espaço Alternativo, nenhum inimigo além de Obito com o Mangekyo aberto, membros da <font color=\"#4dc831\">Akatsuki</font> e Kakashi com o Mangekyo aberto pode lançar <font color=\"#4dc831\">Esotéricas</font>.",
+          "translation": "异空间结界持续期间，敌方除开启万花筒的带土、晓组织成员和开启万花筒的卡卡西外，均无法释放奥义。"
+        }
+      },
+      "21306011": {
+        "name": {
+          "source": "Kamui",
+          "translation": "神威"
+        },
+        "desc": {
+          "source": "Ataca um inimigo aleatório, causa dano Ninjutsu, dispersa todos os <font color=\"#4dc831\">Escudos</font> e <font color=\"#4dc831\">Status positivos</font> e tem grande chance de causar <font color=\"#4dc831\">Queda</font>. Caso o alvo tenha a <font color=\"#4dc831\">Marca Kamui</font>, o <font color=\"#4dc831\">Efeito da Habilidade</font> é substituído. Alvos derrotados por esta habilidade não podem ressuscitar.",
+          "translation": "攻击1名随机敌人，造成忍术伤害，驱散其全部护盾和增益状态，并有较高概率造成倒地。若目标带有神威标记，则替换本技能效果。被本技能击败的目标无法复活。"
+        }
+      },
+      "21306012": {
+        "name": {
+          "source": "Kamui",
+          "translation": "神威"
+        },
+        "desc": {
+          "source": "Ataca um inimigo aleatório, causa dano Ninjutsu, dispersa todos os <font color=\"#4dc831\">Escudos</font> e <font color=\"#4dc831\">Status positivos</font> e tem grande chance de causar <font color=\"#4dc831\">Queda</font>. Caso o alvo tenha a <font color=\"#4dc831\">Marca Kamui</font>, o <font color=\"#4dc831\">Efeito da Habilidade</font> é substituído. Alvos derrotados por esta habilidade não podem ressuscitar.",
+          "translation": "攻击1名随机敌人，造成忍术伤害，驱散其全部护盾和增益状态，并有较高概率造成倒地。若目标带有神威标记，则替换本技能效果。被本技能击败的目标无法复活。"
+        }
+      },
+      "21306013": {
+        "name": {
+          "source": "Kamui",
+          "translation": "神威"
+        },
+        "desc": {
+          "source": "Ataca um inimigo aleatório, causa dano Ninjutsu, dispersa todos os <font color=\"#4dc831\">Escudos</font> e <font color=\"#4dc831\">Status positivos</font> e tem grande chance de causar <font color=\"#4dc831\">Queda</font>. Caso o alvo tenha a <font color=\"#4dc831\">Marca Kamui</font>, o <font color=\"#4dc831\">Efeito da Habilidade</font> é substituído. Alvos derrotados por esta habilidade não podem ressuscitar.",
+          "translation": "攻击1名随机敌人，造成忍术伤害，驱散其全部护盾和增益状态，并有较高概率造成倒地。若目标带有神威标记，则替换本技能效果。被本技能击败的目标无法复活。"
+        }
+      },
+      "21306014": {
+        "name": {
+          "source": "Ataque invisível",
+          "translation": "无形攻击"
+        },
+        "desc": {
+          "source": "Persegue inimigos com <font color=\"#4dc831\">Repelimento</font> e <font color=\"#4dc831\">Flutuação</font> e causa <font color=\"#4dc831\">Interrupção</font>, <font color=\"#4dc831\">Queda</font> e <font color=\"#4dc831\">Distúrbio do Chakra</font>, além de absorver até <font color=\"#4dc831\">40</font> de Chakra. Caso o alvo já tenha <font color=\"#4dc831\">Distúrbio do Chakra</font>, reduz seu limite de Chakra para <font color=\"#4dc831\">60</font> até o fim da rodada seguinte. Esta habilidade ignora parte da <font color=\"#4dc831\">Defesa</font> e <font color=\"#4dc831\">Resistência</font> e pode ser lançada até 2 vezes por rodada.",
+          "translation": "追打击退和浮空敌人，造成打断、倒地和查克拉紊乱，并吸收最多40点查克拉。若目标已有查克拉紊乱，将其查克拉上限降低至60，持续至下回合结束。本技能无视部分防御和抗性，每回合最多触发2次。"
+        }
+      },
+      "21306015": {
+        "name": {
+          "source": "Estilo Terra: Dragão de Terra Oculto",
+          "translation": "土遁·土中潜龙"
+        },
+        "desc": {
+          "source": "<font color=\"#4dc831\">Lançado com Combo de 20</font> Causa dano de <font color=\"#4dc831\">Fogo</font> e <font color=\"#4dc831\">Terra</font> e <font color=\"#4dc831\">Chamas</font> a <font color=\"#4dc831\">5</font> inimigos aleatórios. Também causa <font color=\"#4dc831\">25%</font> de dano de Choque aos inimigos a 1 bloco de distância do alvo. Esta habilidade ignora parte da <font color=\"#4dc831\">Defesa</font> e <font color=\"#4dc831\">Resistência</font>.",
+          "translation": "连击达到20时触发，对5名随机敌人造成火、土属性伤害和烈焰，并对目标周围1格的敌人造成25%的震荡伤害。本技能无视部分防御和抗性。"
+        }
+      },
+      "21306016": {
+        "name": {
+          "source": "Kamui: Vazio",
+          "translation": "神威·虚空"
+        },
+        "desc": {
+          "source": "Este ninja tem grande chance de evitar o 1º ataque de cada rodada e habilidades de <font color=\"#4dc831\">Perseguição</font>. Ao causar dano Taijutsu, também causa a <font color=\"#4dc831\">Marca Kamui</font> ao alvo. Sempre que usa o <font color=\"#4dc831\">Kamui +2</font> para mover o alvo, lança o <font color=\"#4dc831\">Kamui: Troca Espacial +2</font>.",
+          "translation": "有较高概率闪避每回合首次攻击和追打技能。造成体术伤害时，对目标施加神威标记。每次使用神威+2转移目标时，释放神威·空间转移+2。"
+        }
+      },
+      "21306018": {
+        "name": {
+          "source": "Kamui: Troca Espacial",
+          "translation": "神威·空间转移"
+        },
+        "desc": {
+          "source": "Invoca o plano <font color=\"#4dc831\">Espaço Alternativo +2</font>, dispersa todos os <font color=\"#4dc831\">Escudos</font> e <font color=\"#4dc831\">Status positivos</font> dos inimigos e aumenta seu Consumo de Chakra em <font color=\"#4dc831\">20</font> até o fim da rodada.",
+          "translation": "展开异空间+2结界，驱散敌方全部护盾和增益状态，并使其查克拉消耗增加20，持续至回合结束。"
+        }
+      },
+      "21306019": {
+        "name": {
+          "source": "Espaço Alternativo: Selamento",
+          "translation": "异空间·封印"
+        },
+        "desc": {
+          "source": "Usado para ocupar habilidade vazia",
+          "translation": "空技能占位。"
+        }
+      },
+      "21406011": {
+        "name": {
+          "source": "Kamui",
+          "translation": "神威"
+        },
+        "desc": {
+          "source": "Atacar 1 ninja com a <font color=\"#4dc831\">Marca Kamui</font>, causando <font color=\"#4dc831\">7%</font> de sua Vida de dano <font color=\"#4dc831\">na certa</font>. Também  move o alvo por 1 rodada, impedindo que ele realize <font color=\"#4dc831\">Ataques Comuns</font> até o fim da rodada. Caso seu próprio Chakra esteja acima de <font color=\"#4dc831\">60</font>, o alvo é movido por 2 rodadas. Alvos derrotados por esta habilidade não podem ressuscitar.",
+          "translation": "攻击1名带有神威标记的忍者，造成相当于其生命7%的必定命中伤害，并将目标转移1回合，使其无法普攻直至回合结束。若自身查克拉高于60，则转移2回合。被本技能击败的目标无法复活。"
+        }
+      },
+      "21406012": {
+        "name": {
+          "source": "Kamui",
+          "translation": "神威"
+        },
+        "desc": {
+          "source": "Atacar 1 ninja com a <font color=\"#4dc831\">Marca Kamui</font>, causando <font color=\"#4dc831\">7%</font> de sua Vida de dano <font color=\"#4dc831\">na certa</font>. Também  move o alvo por 1 rodada, impedindo que ele realize <font color=\"#4dc831\">Ataques Comuns</font> até o fim da rodada. Caso seu próprio Chakra esteja acima de <font color=\"#4dc831\">60</font>, o alvo é movido por 2 rodadas. Alvos derrotados por esta habilidade não podem ressuscitar.",
+          "translation": "攻击1名带有神威标记的忍者，造成相当于其生命7%的必定命中伤害，并将目标转移1回合，使其无法普攻直至回合结束。若自身查克拉高于60，则转移2回合。被本技能击败的目标无法复活。"
+        }
+      },
+      "21406013": {
+        "name": {
+          "source": "Kamui",
+          "translation": "神威"
+        },
+        "desc": {
+          "source": "Atacar 1 ninja com a <font color=\"#4dc831\">Marca Kamui</font>, causando <font color=\"#4dc831\">7%</font> de sua Vida de dano <font color=\"#4dc831\">na certa</font>. Também  move o alvo por 1 rodada, impedindo que ele realize <font color=\"#4dc831\">Ataques Comuns</font> até o fim da rodada. Caso seu próprio Chakra esteja acima de <font color=\"#4dc831\">60</font>, o alvo é movido por 2 rodadas. Alvos derrotados por esta habilidade não podem ressuscitar.",
+          "translation": "攻击1名带有神威标记的忍者，造成相当于其生命7%的必定命中伤害，并将目标转移1回合，使其无法普攻直至回合结束。若自身查克拉高于60，则转移2回合。被本技能击败的目标无法复活。"
+        }
+      },
+      "21406014": {
+        "name": {
+          "source": "Ataque invisível",
+          "translation": "无形攻击"
+        },
+        "desc": {
+          "source": "<font color=\"#4dc831\">Lançado com Combo de 15</font> Ataca uma linha de inimigos aleatória, causando <font color=\"#4dc831\">Interrupção</font>, <font color=\"#4dc831\">Distúrbio do Chakra</font> e absorvendo até <font color=\"#4dc831\">20</font> de Chakra de cada alvo. Esta habilidade <font color=\"#4dc831\">sempre acerta</font> e ignora parte da <font color=\"#4dc831\">Defesa</font> e <font color=\"#4dc831\">Resistência</font> do alvo.",
+          "translation": "连击达到15时触发，随机攻击敌方一横排，造成打断和查克拉紊乱，并从每个目标吸收最多20点查克拉。本技能必定命中，无视目标部分防御和抗性。"
+        }
+      },
+      "21406015": {
+        "name": {
+          "source": "Estilo Terra: Dragão de Terra Oculto",
+          "translation": "土遁·土中潜龙"
+        },
+        "desc": {
+          "source": "<font color=\"#4dc831\">Lançado com Combo de 20</font> Causa dano de <font color=\"#4dc831\">Fogo</font> e <font color=\"#4dc831\">Terra</font> e <font color=\"#4dc831\">Queimadura</font> a <font color=\"#4dc831\">5</font> inimigos aleatórios. Esta habilidade ignora parte da <font color=\"#4dc831\">Defesa</font> e <font color=\"#4dc831\">Resistência</font>.",
+          "translation": "连击达到20时触发，对5名随机敌人造成火、土属性伤害和灼烧。本技能无视目标部分防御和抗性。"
+        }
+      },
+      "21406016": {
+        "name": {
+          "source": "Kamui: Vazio",
+          "translation": "神威·虚空"
+        },
+        "desc": {
+          "source": "Este ninja tem grande chance de evitar o 1º ataque de cada rodada e habilidades de <font color=\"#4dc831\">Perseguição</font>. Ao receber ataques Taijutsu, também causa a <font color=\"#4dc831\">Marca Kamui</font> ao atacante. Sempre que usa o <font color=\"#4dc831\">Kamui Y</font> move o alvo por 2 rodadas e lança o <font color=\"#4dc831\">Kamui: Troca Espacial Y</font>.",
+          "translation": "有较高概率闪避每回合首次攻击和追打技能。受到体术攻击时，对攻击者施加神威标记。每次使用神威·Y时，将目标转移2回合并释放神威·空间转移·Y。"
+        }
+      },
+      "21406019": {
+        "name": {
+          "source": "Espaço Alternativo: Selamento",
+          "translation": "异空间·封印"
+        },
+        "desc": {
+          "source": "Usado para ocupar habilidade vazia",
+          "translation": "空技能占位。"
+        }
+      },
+      "21506018": {
+        "name": {
+          "source": "Espaço Alternativo: Selamento",
+          "translation": "异空间·封印"
+        },
+        "desc": {
+          "source": "Durante o plano Espaço Alternativo, ninguém além de Obito com o Mangekyo aberto, membros da <font color=\"#4dc831\">Akatsuki</font> e Kakashi com o Mangekyo aberto pode lançar <font color=\"#4dc831\">Esotéricas</font>.",
+          "translation": "异空间结界持续期间，双方除开启万花筒的带土、晓组织成员和开启万花筒的卡卡西外，均无法释放奥义。"
+        }
+      },
+      "21606018": {
+        "name": {
+          "source": "Kamui: Troca Espacial",
+          "translation": "神威·空间转移"
+        },
+        "desc": {
+          "source": "Lança o plano <font color=\"#4dc831\">Espaço Alternativo Y</font> e reduz o dano do <font color=\"#4dc831\">Ataque Comum</font> em <font color=\"#4dc831\">50%</font> até o fim da rodada. Além disso, sempre que alguém de qualquer lado lança um <font color=\"#4dc831\">Ataque Comum</font>, reduz a <font color=\"#4dc831\">Defesa</font> e <font color=\"#4dc831\">Resistência</font> em <font color=\"#4dc831\">10%</font>.",
+          "translation": "展开异空间·Y结界，使普攻伤害降低50%，持续至回合结束。此外，任意一方每次发动普攻时，防御和抗性降低10%。"
+        }
+      },
+      "21806018": {
+        "name": {
+          "source": "Espaço Alternativo: Selamento",
+          "translation": "异空间·封印"
+        },
+        "desc": {
+          "source": "Sempre que alguém de qualquer lado lança um <font color=\"#4dc831\">Ataque Comum</font>, reduz a <font color=\"#4dc831\">Defesa</font> e <font color=\"#4dc831\">Resistência</font> em <font color=\"#4dc831\">10%</font>.",
+          "translation": "任意一方每次发动普攻时，防御和抗性降低10%。"
+        }
+      }
+    }
+  },
+  "skillDetails": {
+    "class": "SkillKeyDescCFG",
+    "rows": {
+      "338": {
+        "keys": {
+          "source": "Efeito da Habilidade",
+          "translation": "技能效果"
+        },
+        "desc": {
+          "source": "[Kamui +2 Efeito Novo]: Causa dano de [acerto garantido] de [5%] com base na máxima vida do alvo, e depois move o alvo por 1 rodada. Após isso, Madara não pode usar habilidades de [ataque comum] até o final da rodada. Os alvos derrotados por esta habilidade não podem ser ressuscitados.",
+          "translation": "[神威+2新效果]：造成相当于目标生命上限[5%]的[必定命中]伤害，随后将目标转移1回合。此后斑无法使用[普攻]技能，持续至回合结束。被本技能击败的目标无法复活。"
+        }
+      },
+      "339": {
+        "keys": {
+          "source": "Espaço Alternativo",
+          "translation": "异空间"
+        },
+        "desc": {
+          "source": "Durante o plano, ninjas de ambos os lados sofrem [Interrupção] e não podem lançar [Esotéricas]. O plano dura 1 rodada.",
+          "translation": "结界持续期间，双方忍者受到[打断]，且无法释放[奥义]。结界持续1回合。"
+        }
+      },
+      "340": {
+        "keys": {
+          "source": "Espaço Alternativo +1",
+          "translation": "异空间+1"
+        },
+        "desc": {
+          "source": "Durante o plano, ninjas de ambos os lados sofrem [Interrupção] e não podem lançar [Esotéricas]. O plano dura 1 rodada.",
+          "translation": "结界持续期间，双方忍者受到[打断]，且无法释放[奥义]。结界持续1回合。"
+        }
+      },
+      "341": {
+        "keys": {
+          "source": "Espaço Alternativo +2",
+          "translation": "异空间+2"
+        },
+        "desc": {
+          "source": "Durante o plano, ninjas de ambos os lados, com exceção de Madara, membros da [Akatsuki] e alguns ninjas especiais não podem lançar [Esotéricas].",
+          "translation": "结界持续期间，双方除斑、[晓]组织成员及部分特殊忍者外，均无法释放[奥义]。"
+        }
+      },
+      "342": {
+        "keys": {
+          "source": "Espaço Alternativo Y",
+          "translation": "异空间·Y"
+        },
+        "desc": {
+          "source": "Quebra o [Plano] e [Campo] existentes por 1 rodada.",
+          "translation": "破坏现有[结界]和[领域]，持续1回合。"
+        }
+      },
+      "343": {
+        "keys": {
+          "source": "Marca Kamui",
+          "translation": "神威标记"
+        },
+        "desc": {
+          "source": "Status negativo. Ninjas sob este status têm sua Taxa de Esquiva reduzida para [35%] do valor e sua [Defesa] e [Resistência] reduzida em [15%]. Este status não pode ser evitado ou dispersado e dura até o fim da rodada seguinte.",
+          "translation": "负面状态：处于此状态的忍者，闪避率降至原值的[35%]，[防御]和[抗性]降低[15%]。本状态无法免疫或驱散，持续至下回合结束。"
+        }
+      }
+    }
+  }
+}

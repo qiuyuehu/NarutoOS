@@ -1,0 +1,22 @@
+// Source-function regression with synthetic pages; 30000ms deadline asserted, timer accelerated.
+const fs=require('fs'),vm=require('vm'),ts=require('typescript'),{EventEmitter}=require('events');
+const host=ts.createSourceFile('host.ts',fs.readFileSync('src/prototype/host/main.ts','utf8'),99,true),game=ts.createSourceFile('game.ts',fs.readFileSync('src/main/game.ts','utf8'),99,true);
+const assert=require('node:assert/strict');
+const names=['runNext','runtimeChanged','sameAttempt','restoreRecoveryPage','report','clearNotice'];let chunks=[],wait;
+function walk(n){if(ts.isFunctionDeclaration(n)&&names.includes(n.name?.text))chunks.push(n.getText(host));ts.forEachChild(n,walk)}walk(host);
+function find(n){if(ts.isMethodDeclaration(n)&&n.name.getText(game)==='waitForReady')wait=n.getText(game);ts.forEachChild(n,find)}find(game);
+const life=new EventEmitter(),profile={id:'synthetic-cn',generation:1,region:'cn',slot:1,name:'synthetic'},task={operationId:'old',ownerOperationId:'old',profileId:profile.id,generation:1,profile,status:'queued'};
+const logs=[],start=Date.now();let seq=0;
+const ctx={Promise,Error,setTimeout:(fn,ms)=>{assert.ok(ms===30000||ms===5000,`unexpected timer: ${ms}`);if(ms===5000){const timer=setTimeout(fn,ms);timer.unref();return timer}return setTimeout(fn,60)},clearTimeout,console,fixture:false,shutting:false,executing:undefined,executingRecovery:false,recoveryAwait:false,recoveryQueue:[],queue:[task],tasks:new Map([['old',task]]),login:{busy:false},loginPages:new Map(),win:{isDestroyed:()=>false,show(){},focus(){}},noticeScope:'',noticeKind:'info',noticeTimer:undefined,notice:'',paint(){},persist(){},executeNext(){},core:async()=>({profiles:[profile]}),newTab:()=>({id:'page-'+(++seq)}),navigation:{selectGame(){}},games:{tabs:[],lifecycle:life,create(saved){const tab={...saved,state:'loading'};this.tabs.push(tab);ctx.runtimeChanged();return tab},close(id){this.tabs=this.tabs.filter(t=>t.id!==id);ctx.runtimeChanged();}}};
+vm.createContext(ctx);vm.runInContext(ts.transpileModule(chunks.join('\n')+'\nfunction actualWait'+wait.slice('waitForReady'.length),{compilerOptions:{target:7}}).outputText,ctx);ctx.games.waitForReady=ctx.actualWait;
+function record(stage){const x={stage,elapsedMs:Date.now()-start,tasks:[...ctx.tasks.values()].map(t=>({id:t.operationId,status:t.status,tabId:t.tabId,owner:t.ownerOperationId})),pages:ctx.games.tabs.map(t=>({id:t.id,state:t.state})),notice:ctx.notice,executing:ctx.executing?.operationId};logs.push(x);console.log(JSON.stringify(x));}
+(async()=>{const work=ctx.runNext();await new Promise(r=>setTimeout(r,50));record('loading');await work;record('after accelerated 30000ms timeout catch/finally');
+// Execute the exact poll intake block, including runtimeChanged before accepting tasks.
+const source=fs.readFileSync('src/prototype/host/main.ts','utf8');const begin=source.indexOf('      for (const incoming of response.tasks as Task[])');const end=source.indexOf('      persist(); // ACK',begin);ctx.response={tasks:[{operationId:'new',profileId:profile.id,generation:1,profile}]};ctx.everHadTask=true;
+ctx.runtimeChanged();record('next poll runtimeChanged');vm.runInContext(ts.transpileModule(source.slice(begin,end),{compilerOptions:{target:7}}).outputText,ctx);await ctx.runNext();record('second startup received');
+await new Promise(r=>setTimeout(r,1));const tab=ctx.games.tabs[0];tab.state='ready';life.emit('changed',{id:tab.id,state:'ready'});ctx.runtimeChanged();record('delayed synthetic ready');
+assert.equal(logs[1].tasks[0].status,'failed');assert.match(logs[1].notice,/加载超时/);assert.equal(logs[1].pages[0].state,'loading');assert.equal(logs[2].tasks[0].status,'loading');assert.equal(logs[3].pages.length,1);assert.equal(logs[3].tasks[1].owner,'old');assert.equal(ctx.notice,'');assert.ok([...ctx.tasks.values()].every(t=>t.status==='ready'));
+for(const identity of [['startup',profile.id,1,'another-owner',tab.id],['startup',profile.id,1,'old','another-page'],['startup',profile.id,2,'old',tab.id],['unrelated-error']]){ctx.report('保留的错误','error',JSON.stringify(identity));ctx.runtimeChanged();assert.equal(ctx.notice,'保留的错误');}
+tab.state='failed';ctx.report('实际页面失败','error',JSON.stringify(['startup',profile.id,1,'old',tab.id]));ctx.runtimeChanged();assert.equal(task.status,'failed');assert.equal(ctx.notice,'实际页面失败');
+console.log('PASS: timeout recovery, shared replay, owner/page/generation isolation and persistent failure');
+})().catch(e=>{console.error(e);process.exitCode=1});

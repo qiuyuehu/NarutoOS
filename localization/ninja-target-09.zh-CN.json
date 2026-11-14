@@ -1,0 +1,108 @@
+{
+  "id": "naruto-ninja-target-09-zh-CN-v1",
+  "rootId": "11005651",
+  "ninjaInfo": {
+    "class": "NinjaInfoCFG",
+    "rows": {
+      "11005651": {
+        "name": {
+          "source": "Sai",
+          "translation": "佐井"
+        },
+        "title": {
+          "source": "[Traje de Banho]",
+          "translation": "【泳装】"
+        }
+      }
+    }
+  },
+  "skills": {
+    "class": "SkillCFG",
+    "rows": {
+      "21005651": {
+        "name": {
+          "source": "Ukiyo-e: Polvo",
+          "translation": "浮世绘·章鱼"
+        },
+        "desc": {
+          "source": "Ataca 1 inimigo aleatório, com chance de causar <font color=\"#4dc831\">Imobilidade</font> e <font color=\"#4dc831\">Queda</font>.",
+          "translation": "攻击1名随机敌人，有概率造成定身和倒地。"
+        }
+      },
+      "21005652": {
+        "name": {
+          "source": "Ukiyo-e: Polvo",
+          "translation": "浮世绘·章鱼"
+        },
+        "desc": {
+          "source": "Ataca 1 inimigo aleatório, com chance de causar <font color=\"#4dc831\">Imobilidade</font> e <font color=\"#4dc831\">Queda</font>.",
+          "translation": "攻击1名随机敌人，有概率造成定身和倒地。"
+        }
+      },
+      "21005653": {
+        "name": {
+          "source": "Ukiyo-e: Polvo",
+          "translation": "浮世绘·章鱼"
+        },
+        "desc": {
+          "source": "Ataca 1 inimigo aleatório, com chance de causar <font color=\"#4dc831\">Imobilidade</font> e <font color=\"#4dc831\">Queda</font>.",
+          "translation": "攻击1名随机敌人，有概率造成定身和倒地。"
+        }
+      },
+      "21005654": {
+        "name": {
+          "source": "Mundo da Pintura: Praia de Treino",
+          "translation": "画中世界·修行海滩"
+        },
+        "desc": {
+          "source": "Invoca o plano <font color=\"#4dc831\">Praia de Treino</font> no início do combate. Quando este ninja recebe um ataque Taijutsu, há 40% de chance de que o atacante receba o status <font color=\"#4dc831\">Mancha</font>. Além disso, cada vez que a equipe de Sai causa dano, ganha 3% de <font color=\"#4dc831\">Resistência</font> e <font color=\"#4dc831\">Ninjutsu</font> por 2 rodadas.",
+          "translation": "战斗开始时展开修行海滩结界。佐井受到体术攻击时，有40%概率使攻击者沾染墨迹。此外，佐井所在小队每次造成伤害时，抗性和忍术提高3%，持续2回合。"
+        }
+      },
+      "21005655": {
+        "name": {
+          "source": "Ukiyo-e: Peixes",
+          "translation": "浮世绘·群鱼"
+        },
+        "desc": {
+          "source": "Persegue inimigos com <font color=\"#4dc831\">Queda</font>, dispersando todos os <font color=\"#4dc831\">Escudos</font> e <font color=\"#4dc831\">Status positivos</font> e causando <font color=\"#4dc831\">Voo</font> e <font color=\"#4dc831\">Imobilidade</font>. Pode ser lançado 2 vezes por rodada.",
+          "translation": "追打倒地敌人，驱散其全部护盾和增益状态，并造成高浮空和定身。每回合最多触发2次。"
+        }
+      },
+      "21005656": {
+        "name": {
+          "source": "Frescor do Verão",
+          "translation": "夏日清凉"
+        },
+        "desc": {
+          "source": "Quando Sai está em combate, o <font color=\"#4dc831\">Crítico</font> dos ninjas homens de ambos os lados é reduzido em 20%.",
+          "translation": "佐井在场时，双方男性忍者的暴击率降低20%。"
+        }
+      },
+      "21005657": {
+        "name": {
+          "source": "Ukiyo-e: Surfe",
+          "translation": "浮世绘·冲浪"
+        },
+        "desc": {
+          "source": "Causa dano de Água e <font color=\"#4dc831\">Mancha</font> a 5 inimigos aleatório e <font color=\"#4dc831\">Repelimento</font> ao inimigo selecionado. Caso o alvo seja um companheiro, lança novamente o <font color=\"#4dc831\">Mundo da Pintura: Praia de Treino</font>",
+          "translation": "对5名随机敌人造成水属性伤害和墨迹，并使选定敌人击退。若选定目标为己方队友，则再次释放画中世界·修行海滩。"
+        }
+      },
+      "21005658": {
+        "name": {
+          "source": "Praia de Treino",
+          "translation": "修行海滩"
+        },
+        "desc": {
+          "source": "Quando o plano está ativo, seu grupo ganha um aumento de 30% de <font color=\"#4dc831\">Ninjutsu</font> e <font color=\"#4dc831\">Resistência a Água</font>. O plano dura por 2 rodadas.",
+          "translation": "结界生效期间，己方队伍忍术和水属性抗性提高30%。结界持续2回合。"
+        }
+      }
+    }
+  },
+  "skillDetails": {
+    "class": "SkillKeyDescCFG",
+    "rows": {}
+  }
+}

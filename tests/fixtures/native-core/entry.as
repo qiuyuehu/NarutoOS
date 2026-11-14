@@ -1,0 +1,1 @@
+package { import flash.display.Sprite; import flash.external.ExternalInterface; public class entry extends Sprite { public function entry() { super(); ExternalInterface.addCallback("readQuality",function():String{return stage.quality;}); } } }

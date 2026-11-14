@@ -1,0 +1,19 @@
+{
+  "resourceURL": "https://cdnnaruto-pt.oasgames.com/PT_NarutoAlpha9.33Build300/config/i18n/TranslatedKeyCFG.cfg",
+  "entries": {
+    "as_task_9954cd1d8f1b4328c1cb9755735cafb2": {"source": "Missões Principais", "translation": "主线任务"},
+    "as_task_5321a918c3ad2678cbac8725b26442d3": {"source": "Missões Principais", "translation": "主线任务"},
+    "as_task_e4d7eac2bff82426b06c478f232740c9": {"source": "Missão de Captura", "translation": "捕获任务"},
+    "as_operatingActivity_257a8cace0ddaa4b99d8a3dddbf72787": {"source": "Missão de Captura", "translation": "捕获任务"},
+    "as_task_33693d1105652a56c3a964754a78d426": {"source": "Missão de Transporte", "translation": "护送任务"},
+    "as_operatingActivity_1a7652d97b1d94aad819e17cfc8fe5f5": {"source": "Missão de Transporte", "translation": "护送任务"},
+    "as_task_c5b75af6d8bea56da493b60d68da30b7": {"source": "Missões de Recompensa", "translation": "悬赏任务"},
+    "as_task_d35c7f2911794777db3ec43b6e88e3ee": {"source": "Missões de Treino", "translation": "修行任务"},
+    "as_task_ffc42dfd93d4657b51987bb120c6fe71": {"source": "Missões de Treino", "translation": "修行任务"},
+    "as_task_b77ababe7757597e040b7f7b7d783efe": {"source": "Missões de Eventos", "translation": "活动任务"},
+    "as_task_ab6915ef00274e186495efe233e500db": {"source": "Missões de Eventos", "translation": "活动任务"},
+    "as_task_3879facb973b1bab5bcfb86855194456": {"source": "Missões Secundárias", "translation": "支线任务"},
+    "as_task_ccb8c8fb8ed5dc660788a5e5367aa98a": {"source": "Missões Secundárias", "translation": "支线任务"},
+    "as_task_434f54bfd7a10da1493d7023bafb96fe": {"source": "Missões de Recompensa", "translation": "悬赏任务"}
+  }
+}

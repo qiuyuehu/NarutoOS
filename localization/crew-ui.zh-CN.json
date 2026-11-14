@@ -1,0 +1,34 @@
+{
+  "id": "naruto-crew-ui-zh-CN-v1",
+  "resourceURL": "https://cdnnaruto-pt.oasgames.com/PT_NarutoAlpha9.18Build300/flash/crew/CrewUI.swf",
+  "font": "PingFang SC",
+  "textFields": {
+    "25": { "source": "Vida", "translation": "生命" },
+    "26": { "source": "Ataque", "translation": "攻击" },
+    "27": { "source": "Defesa", "translation": "防御" },
+    "28": { "source": "Ninjutsu", "translation": "忍术" },
+    "29": { "source": "Resistência", "translation": "抗性" },
+    "30": { "source": "1° ataque", "translation": "先攻" },
+    "31": { "source": "Ataque Crítico", "translation": "暴击" },
+    "32": { "source": "Dano Crítico", "translation": "暴击伤害" },
+    "33": { "source": "Combo", "translation": "连击" },
+    "34": { "source": "Controle", "translation": "控制" },
+    "136": { "source": "Busca ENTER", "translation": "回车搜索" },
+    "156": { "source": "Ver detalhes", "translation": "查看详情" }
+  },
+  "scriptStrings": {
+    "com/tencent/morefun/naruto/plugin/crew/ui/CrewBagModuleUI": {
+      "Incrustar": "镶嵌",
+      "Incrustar Pedras ": "镶嵌勾玉",
+      "Comum": "普通",
+      "Magatamas<br/>Pedras": "勾玉石",
+      "Materiais": "材料",
+      "Tudo": "全部",
+      "Equipar": "装备",
+      "Vender em Lote": "批量出售"
+    },
+    "com/tencent/morefun/naruto/plugin/crew/ui/OthersCrewPanelUI": {
+      "Detalhes ": "详情"
+    }
+  }
+}

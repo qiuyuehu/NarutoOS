@@ -1,0 +1,159 @@
+{
+  "id": "naruto-ninja-target-25-zh-CN-v1",
+  "rootId": "11014831",
+  "ninjaInfo": {
+    "class": "NinjaInfoCFG",
+    "rows": {
+      "11014831": {
+        "name": {
+          "source": "Sasuke",
+          "translation": "宇智波佐助"
+        },
+        "title": {
+          "source": "[Vale do Fim]",
+          "translation": "【终焉之战】"
+        }
+      }
+    }
+  },
+  "skills": {
+    "class": "SkillCFG",
+    "rows": {
+      "21014831": {
+        "name": {
+          "source": "Chidori",
+          "translation": "千鸟"
+        },
+        "desc": {
+          "source": "Ataca uma linha de inimigos aleatória, causando dano de <font color=\"#4dc831\">Relâmpago</font> e <font color=\"#4dc831\">Dano Elétrico</font>. Se os alvos tiverem estado sujeitos à <font color=\"#4dc831\">Paralisia</font>, passa a usar <font color=\"#4dc831\">Chidori: Chama Negra</font>.",
+          "translation": "随机攻击敌方一排，造成雷属性伤害和雷电伤害。若目标已麻痹，则改为使用千鸟·黑炎。"
+        }
+      },
+      "21014832": {
+        "name": {
+          "source": "Chidori",
+          "translation": "千鸟"
+        },
+        "desc": {
+          "source": "Ataca uma linha de inimigos aleatória, causando dano de <font color=\"#4dc831\">Relâmpago</font> e <font color=\"#4dc831\">Dano Elétrico</font>. Se os alvos tiverem estado sujeitos à <font color=\"#4dc831\">Paralisia</font>, passa a usar <font color=\"#4dc831\">Chidori: Chama Negra</font>.",
+          "translation": "随机攻击敌方一排，造成雷属性伤害和雷电伤害。若目标已麻痹，则改为使用千鸟·黑炎。"
+        }
+      },
+      "21014833": {
+        "name": {
+          "source": "Chidori",
+          "translation": "千鸟"
+        },
+        "desc": {
+          "source": "Ataca uma linha de inimigos aleatória, causando dano de <font color=\"#4dc831\">Relâmpago</font> e <font color=\"#4dc831\">Dano Elétrico</font>. Se os alvos tiverem estado sujeitos à <font color=\"#4dc831\">Paralisia</font>, passa a usar <font color=\"#4dc831\">Chidori: Chama Negra</font>.",
+          "translation": "随机攻击敌方一排，造成雷属性伤害和雷电伤害。若目标已麻痹，则改为使用千鸟·黑炎。"
+        }
+      },
+      "21014834": {
+        "name": {
+          "source": "Susano’o: Captura",
+          "translation": "须佐能乎·捕缚"
+        },
+        "desc": {
+          "source": "Persegue inimigos com <font color=\"#4dc831\">Flutuação</font>, <font color=\"#4dc831\">Voo</font>, <font color=\"#4dc831\">Queda</font> ou <font color=\"#4dc831\">Repelimento</font>, causando dano de <font color=\"#4dc831\">Relâmpago</font>, <font color=\"#4dc831\">Flutuação</font> e <font color=\"#4dc831\">Choque Elétrico</font>. Esta habilidade <font color=\"#4dc831\">sempre acerta</font> e ignora determinada <font color=\"#4dc831\">Defesa</font> e <font color=\"#4dc831\">Resistência</font>. Após o uso, os ninjas aliados com <font color=\"#4dc831\">Rinnegan</font> recebem status <font color=\"#4dc831\">Violência</font>. Se os alvos tiverem estado sujeitos à <font color=\"#4dc831\">Chama Negra</font>, <font color=\"#4dc831\">Efeito da Habilidade</font> será fortalecido.",
+          "translation": "追打浮空、高浮空、倒地或击退敌人，造成雷属性伤害、浮空和电击。本技能必定命中，无视部分防御和抗性。使用后，己方轮回眼忍者获得暴怒。若目标已有黑炎，则强化本技能效果。"
+        }
+      },
+      "21014836": {
+        "name": {
+          "source": "Devastação Planetária: Queda",
+          "translation": "地爆天星·坠落"
+        },
+        "desc": {
+          "source": "No final de cada rodada, se <font color=\"#4dc831\">Devastação Planetária</font> tiver sido ativada e <font color=\"#4dc831\">Domínio Rinnegan: Devastação Infernal</font> não tiver sido usado na própria rodada, causa dano que <font color=\"#4dc831\">sempre acerta</font> e aplica <font color=\"#4dc831\">Supressão de Imunidade a Perseguição</font> até <font color=\"#4dc831\">9</font> inimigos (por <font color=\"#4dc831\">1</font> rodada). Causa <font color=\"#4dc831\">30%</font> de Tremor aos inimigos em um raio de <font color=\"#4dc831\">2</font> casas ao redor do alvo. Esta habilidade zera <font color=\"#4dc831\">Resfriamento da Esotérica</font>, e ativa <font color=\"#4dc831\">Habilidade adicional</font>: <font color=\"#4dc831\">Susano’o: Captura</font> ao derrotar o inimigo.",
+          "translation": "每回合结束时，若本回合已发动地爆天星且未使用轮回眼领域·炼狱，则对最多9名敌人造成必定命中的伤害和持续1回合的追打免疫压制，对目标周围2格敌人造成30%震荡伤害。清除自身奥义冷却，击败敌人时触发追加技能：须佐能乎·捕缚。"
+        }
+      },
+      "21014837": {
+        "name": {
+          "source": "Combinação: Relâmpago Infernal",
+          "translation": "组合忍术·炎雷"
+        },
+        "desc": {
+          "source": "Este ninja não pode ser afetado por <font color=\"#4dc831\">Imobilidade</font>, <font color=\"#4dc831\">Confusão</font>, <font color=\"#4dc831\">Chama Negra</font> e <font color=\"#4dc831\">Terror</font> e tem grande chance de esquivar habilidade <font color=\"#4dc831\">Esotérica</font>. Além disso, ao sofrer ataque de habilidade, causa dano ao atacante <font color=\"#4dc831\">dano refletido</font> igual a <font color=\"#4dc831\">20%</font> da própria vida (máx. 14999) (<font color=\"#4dc831\">10</font> vezes por rodada). Ao receber dano pela primeira vez em uma rodada, ativa <font color=\"#4dc831\">Habilidade adicional</font>: <font color=\"#4dc831\">Devastação Planetária</font>. E possui habilidade <font color=\"#4dc831\">Devastação Planetária: Queda</font>.",
+          "translation": "免疫定身、混乱、黑炎和恐惧，有较高概率闪避奥义。每次受到技能攻击时，对攻击者反射相当于自身生命20%的伤害，最多14999点，每回合最多10次。每回合首次受到伤害时，触发追加技能：地爆天星，并拥有地爆天星·坠落技能。"
+        }
+      },
+      "21014848": {
+        "name": {
+          "source": "Estilo Inferno: Susano'o: Armadura",
+          "translation": "炎遁·须佐能乎·铠甲"
+        },
+        "desc": {
+          "source": "Ao derrotar o inimigo com habilidades próprias, aumenta em <font color=\"#4dc831\">12%</font> o <font color=\"#4dc831\">Crítico</font>. Nas primeiras <font color=\"#4dc831\">2</font> vezes em que derrotar inimigos com habilidades por rodada, ganha <font color=\"#4dc831\">60%</font> de <font color=\"#4dc831\">Ataque</font> e <font color=\"#4dc831\">Ninjutsu</font>. Além disso, após usar a habilidade, a equipe aliada não pode ser afetada por <font color=\"#4dc831\">Chama Negra</font>.",
+          "translation": "自身技能击败敌人时，暴击率提高12%。每回合前2次以技能击败敌人时，攻击和忍术提高60%。此外，使用技能后，己方小队免疫黑炎。"
+        }
+      },
+      "21014849": {
+        "name": {
+          "source": "Flecha de Indra",
+          "translation": "因陀罗之矢"
+        },
+        "desc": {
+          "source": "Ataca <font color=\"#4dc831\">12</font> inimigos, causando dano de <font color=\"#4dc831\">Relâmpago</font> que <font color=\"#4dc831\">sempre acerta</font>, e aplicando <font color=\"#4dc831\">Repelimento</font> e <font color=\"#4dc831\">Ruptura</font> ao inimigo escolhido. Os aliados não sofrem <font color=\"#4dc831\">Paralisia</font> por <font color=\"#4dc831\">5</font> rodadas. Após o uso, esta habilidade é permanentemente substituída por <font color=\"#4dc831\">Domínio Rinnegan: Inferno</font>, que pode ser lançado imediatamente.",
+          "translation": "攻击12名敌人，造成必定命中的雷属性伤害，并使选定敌人击退和破碎。己方免疫麻痹，持续5回合。使用后，本技能永久替换为轮回眼领域·地狱，可立即释放。"
+        }
+      }
+    }
+  },
+  "skillDetails": {
+    "class": "SkillKeyDescCFG",
+    "rows": {
+      "618": {
+        "keys": {
+          "source": "Chidori: Chama Negra",
+          "translation": "千鸟·黑炎"
+        },
+        "desc": {
+          "source": "Ataca uma linha de inimigos aleatória, causando dano de [Fogo] e [Relâmpago], [Dano Elétrico] e [Chama Negra]. Essa habilidade [sempre acerta] e absorve [20] pontos de Chakra de cada alvo.",
+          "translation": "随机攻击敌方一排，造成[火]、[雷]属性伤害、[雷电伤害]和[黑炎]。本技能[必定命中]，从每个目标吸收[20]点查克拉。"
+        }
+      },
+      "619": {
+        "keys": {
+          "source": "Efeito da Habilidade",
+          "translation": "技能效果"
+        },
+        "desc": {
+          "source": "Bônus de [Susano’o: Captura]: Persegue inimigos com [Flutuação], [Voo], [Queda] ou [Repelimento], causando dano de [Fogo] e [Relâmpago], [Flutuação], [Chama Negra] e [Choque Elétrico]. Esta habilidade [sempre acerta] e ignora determinada [Defesa] e [Resistência]. Após o uso, os ninjas aliados com [Rinnegan] recebem status [Violência]. Ao derrotar o inimigo, ativa adicionalmente [Habilidade adicional]: [Susano’o: Captura]: [Habilidade adicional]: Ataca a um alvo aleatório, causando dano de [Fogo] e [Relâmpago] que [sempre acerta], [Flutuação], [Chama Negra] e [Choque Elétrico]. Esta habilidade ignora parte de [Defesa] e [Resistência]. Após o uso, os ninjas aliados com [Rinnegan] recebem status [Violência]. Ao derrotar o inimigo, ativa adicionalmente [Habilidade adicional]: [Susano’o: Captura]. Status [Violência]: Neste status, ganha adicionalmente [1] Perseguição. Ao causar [Crítico], recupera [20] pontos de Chakra. Dura até o final da rodada.",
+          "translation": "[须佐能乎·捕缚]强化：追打[浮空]、[高浮空]、[倒地]或[击退]敌人，造成[火]、[雷]属性伤害、[浮空]、[黑炎]和[电击]，本技能[必定命中]，无视部分[防御]和[抗性]。使用后己方[轮回眼]忍者获得[暴怒]。击败敌人时，额外触发[追加技能]：[须佐能乎·捕缚]，随机攻击1名目标，造成[必定命中]的[火]、[雷]属性伤害、[浮空]、[黑炎]和[电击]，无视部分[防御]和[抗性]，使己方[轮回眼]忍者获得[暴怒]；若再次击败敌人，则继续触发该追加技能。[暴怒]：额外获得[1]次追打机会，造成[暴击]时恢复[20]点查克拉，持续至回合结束。"
+        }
+      },
+      "620": {
+        "keys": {
+          "source": "Devastação Planetária",
+          "translation": "地爆天星"
+        },
+        "desc": {
+          "source": "[Habilidade adicional]: Aplica [Supressão de Imunidade a Status negativos] aos [7] inimigos (por [1] rodada) e absorve [10] pontos de Chakra de cada alvo. E alvos que não sejam ninjas com [Rinnegan] não podem recuperar [Chakra] adicional durante a rodada. Fica imune a [Imunidade a Interrupção] e reduz em [40] pontos o consumo de Chakra, até o final da rodada ou até usar [Domínio Rinnegan: Devastação Infernal] ou [Devastação Planetária: Queda].",
+          "translation": "[追加技能]：对[7]名敌人施加持续[1]回合的[负面状态免疫压制]，并从每个目标吸收[10]点查克拉。非[轮回眼]忍者本回合无法额外恢复[查克拉]。获得[打断免疫]，查克拉消耗降低[40]点，持续至回合结束或使用[轮回眼领域·炼狱]或[地爆天星·坠落]。"
+        }
+      },
+      "621": {
+        "keys": {
+          "source": "Domínio Rinnegan: Inferno",
+          "translation": "轮回眼领域·地狱"
+        },
+        "desc": {
+          "source": "Domínio Rinnegan: Inferno (Resfriamento inicial: [0 rodada]/Resfriamento da Esotérica: [1 rodada]/Chakra: [0]) Ataca à equipe de inimigo escolhido, causando dano de [Fogo] e [Chama Negra]. Durante a própria rodada, fica imune a dano puro de [Ninjutsu]. Se [Devastação Planetária] tiver sido usada na rodada, passa a usar [Domínio Rinnegan: Devastação Infernal]: Causa dano de [Fogo] e [Terra] à equipe de inimigo escolhido e [Chama Negra], aplicando Repelimento e [40%] de Tremor aos inimigos no raio de [1] casa ao redor. Durante a própria rodada, fica imune a dano puro de [Ninjutsu]. Se um inimigo for derrotado com esta habilidade, será lançada [Habilidade adicional]: [Susano’o: Captura].",
+          "translation": "轮回眼领域·地狱（进场冷却：[0回合]／奥义冷却：[1回合]／查克拉：[0]）：攻击选定敌人所在小队，造成[火]属性伤害和[黑炎]，自身本回合免疫纯[忍术]伤害。若本回合已使用[地爆天星]，则改为[轮回眼领域·炼狱]：对选定敌人所在小队造成[火]、[土]属性伤害和[黑炎]、击退，并对目标周围[1]格敌人造成[40%]震荡伤害，自身本回合免疫纯[忍术]伤害。若本技能击败敌人，触发[追加技能]：[须佐能乎·捕缚]。"
+        }
+      },
+      "622": {
+        "keys": {
+          "source": "Devastação Planetária: Queda",
+          "translation": "地爆天星·坠落"
+        },
+        "desc": {
+          "source": "No final de cada rodada, se [Devastação Planetária] tiver sido ativada e [Domínio Rinnegan: Devastação Infernal] não tiver sido usado na própria rodada, causa dano que [sempre acerta] e aplica [Supressão de Imunidade a Perseguição] até [9] inimigos (por [1] rodada). Causa [30%] de Tremor aos inimigos em um raio de [2] casas ao redor do alvo. Esta habilidade zera [Resfriamento da Esotérica], e ativa [Habilidade adicional]: [Susano’o: Captura] ao derrotar o inimigo.",
+          "translation": "每回合结束时，若本回合已发动[地爆天星]且未使用[轮回眼领域·炼狱]，则对最多[9]名敌人造成[必定命中]的伤害和持续[1]回合的[追打免疫压制]，对目标周围[2]格敌人造成[30%]震荡伤害。清除自身[奥义冷却]，击败敌人时触发[追加技能]：[须佐能乎·捕缚]。"
+        }
+      }
+    }
+  }
+}

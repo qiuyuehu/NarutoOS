@@ -1,0 +1,159 @@
+{
+  "id": "naruto-ninja-target-06-zh-CN-v1",
+  "rootId": "11002061",
+  "ninjaInfo": {
+    "class": "NinjaInfoCFG",
+    "rows": {
+      "11002061": {
+        "name": {
+          "source": "Kabuto",
+          "translation": "药师兜"
+        },
+        "title": {
+          "source": "[Grande Guerra Ninja]",
+          "translation": "【忍界大战】"
+        }
+      }
+    }
+  },
+  "skills": {
+    "class": "SkillCFG",
+    "rows": {
+      "21002061": {
+        "name": {
+          "source": "Dança Clematite: Flor",
+          "translation": "铁线花之舞·花"
+        },
+        "desc": {
+          "source": "Ataca 1 ninja e reduz sua <font color=\"#4dc831\">Defesa</font> em <font color=\"#4dc831\">12%</font> (pode acumular), com chance de causar <font color=\"#4dc831\">Combo de 6</font> e atacar uma linha inteira de ninjas, além de causar <font color=\"#4dc831\">Supressão de Imunidade a Perseguição</font> até o fim da rodada e causar <font color=\"#4dc831\">Flutuação</font> a 1 inimigo. Caso o inimigo seja um ninja <font color=\"#4dc831\">Reanimado</font>, causa <font color=\"#4dc831\">Cobertura de Amuleto</font> até o fim da rodada seguinte.",
+          "translation": "攻击1名忍者，使其防御降低12%（可叠加），有概率造成6连击并攻击整横排忍者，同时造成持续至回合结束的追打免疫压制，并使1名敌人浮空。若敌人为秽土转生忍者，施加符咒覆盖，持续至下回合结束。"
+        }
+      },
+      "21002062": {
+        "name": {
+          "source": "Dança Clematite: Flor",
+          "translation": "铁线花之舞·花"
+        },
+        "desc": {
+          "source": "Ataca 1 ninja e reduz sua <font color=\"#4dc831\">Defesa</font> em <font color=\"#4dc831\">12%</font> (pode acumular), com chance de causar <font color=\"#4dc831\">Combo de 6</font> e atacar uma linha inteira de ninjas, além de causar <font color=\"#4dc831\">Supressão de Imunidade a Perseguição</font> até o fim da rodada e causar <font color=\"#4dc831\">Flutuação</font> a 1 inimigo. Caso o inimigo seja um ninja <font color=\"#4dc831\">Reanimado</font>, causa <font color=\"#4dc831\">Cobertura de Amuleto</font> até o fim da rodada seguinte.",
+          "translation": "攻击1名忍者，使其防御降低12%（可叠加），有概率造成6连击并攻击整横排忍者，同时造成持续至回合结束的追打免疫压制，并使1名敌人浮空。若敌人为秽土转生忍者，施加符咒覆盖，持续至下回合结束。"
+        }
+      },
+      "21002063": {
+        "name": {
+          "source": "Dança Clematite: Flor",
+          "translation": "铁线花之舞·花"
+        },
+        "desc": {
+          "source": "Ataca 1 ninja e reduz sua <font color=\"#4dc831\">Defesa</font> em <font color=\"#4dc831\">12%</font> (pode acumular), com chance de causar <font color=\"#4dc831\">Combo de 6</font> e atacar uma linha inteira de ninjas, além de causar <font color=\"#4dc831\">Supressão de Imunidade a Perseguição</font> até o fim da rodada e causar <font color=\"#4dc831\">Flutuação</font> a 1 inimigo. Caso o inimigo seja um ninja <font color=\"#4dc831\">Reanimado</font>, causa <font color=\"#4dc831\">Cobertura de Amuleto</font> até o fim da rodada seguinte.",
+          "translation": "攻击1名忍者，使其防御降低12%（可叠加），有概率造成6连击并攻击整横排忍者，同时造成持续至回合结束的追打免疫压制，并使1名敌人浮空。若敌人为秽土转生忍者，施加符咒覆盖，持续至下回合结束。"
+        }
+      },
+      "21002064": {
+        "name": {
+          "source": "Arte Sábia: Ataque Branco Extremo",
+          "translation": "仙法·白激之术"
+        },
+        "desc": {
+          "source": "Persegue inimigos com <font color=\"#4dc831\">Flutuação</font> ou <font color=\"#4dc831\">Voo</font> e causa <font color=\"#4dc831\">Repelimento</font>, além de dano, <font color=\"#4dc831\">Supressão de Imunidade a Status negativos</font> até o fim da rodada e <font color=\"#4dc831\">Cegueira</font> que não pode ser evitada ou dispersada ao alvo e sua linha vertical de inimigos. Esta habilidade <font color=\"#4dc831\">sempre acerta</font>.",
+          "translation": "追打浮空或高浮空敌人，造成击退，并对目标及其所在一纵排造成伤害、持续至回合结束的负面状态免疫压制，以及无法免疫或驱散的目盲。本技能必定命中。"
+        }
+      },
+      "21002065": {
+        "name": {
+          "source": "Cura de Vida",
+          "translation": "生命治愈"
+        },
+        "desc": {
+          "source": "Recupera <font color=\"#4dc831\">12%</font> de sua própria Vida e <font color=\"#4dc831\">40</font> pontos de Chakra, além de ajustar o limite de Chakra de sua equipe para <font color=\"#4dc831\">100</font>. (Pode ser lançado até 2 vezes por rodada)",
+          "translation": "恢复自身12%生命和40点查克拉，并将己方队伍查克拉上限调整为100。每回合最多触发2次。"
+        }
+      },
+      "21002066": {
+        "name": {
+          "source": "Reanimação",
+          "translation": "秽土转生"
+        },
+        "desc": {
+          "source": "No início do combate, invoca <font color=\"#4dc831\">Mu</font> <font color=\"#4dc831\">Reanimado</font> (ele segue vivo mesmo que Kabuto morra). <font color=\"#4dc831\">Mu</font> invoca <font color=\"#4dc831\">Dan Kato</font> no início de rodadas pares e <font color=\"#4dc831\">Pakura</font> no início de rodadas ímpares. Quando realiza Ataques Comuns, invoca <font color=\"#4dc831\">Deidara</font> (até 1 vez por rodada).",
+          "translation": "战斗开始时召唤秽土转生·无，兜被击败后无仍会存活。无在偶数回合开始时召唤加藤断，奇数回合开始时召唤叶仓；进行普攻时召唤迪达拉，每回合最多1次。"
+        }
+      },
+      "21002067": {
+        "name": {
+          "source": "Força da Cobra Branca",
+          "translation": "白蛇之力"
+        },
+        "desc": {
+          "source": "Kabuto tem <font color=\"#4dc831\">Imunidade a Status negativos</font> e, quando morre, ressuscita no início da rodada seguinte com <font color=\"#4dc831\">25%</font> de Vida, invoca <font color=\"#4dc831\">Mu</font> novamente e tem seu <font color=\"#4dc831\">Resfriamento</font> zerado.",
+          "translation": "兜免疫负面状态。被击败后，在下回合开始时以25%生命复活，再次召唤无，并清除自身冷却。"
+        }
+      },
+      "21002068": {
+        "name": {
+          "source": "Invocação: Ataque da Cobra Branca",
+          "translation": "通灵·白蛇袭击"
+        },
+        "desc": {
+          "source": "Ataca até <font color=\"#4dc831\">9</font> inimigos, causando dano, <font color=\"#4dc831\">Combo de 4</font> e <font color=\"#4dc831\">Veneno</font> que não pode ser evitado ou dispersado, além de <font color=\"#4dc831\">Queda</font> e <font color=\"#4dc831\">Interrupção</font> ao inimigo selecionado. Caso o alvo já sofra de <font color=\"#4dc831\">Veneno</font> ou <font color=\"#4dc831\">Toxicidade</font>, também causa <font color=\"#4dc831\">Toxicidade</font> que não pode ser evitada ou dispersada. Esta habilidade <font color=\"#4dc831\">sempre acerta</font>.",
+          "translation": "攻击最多9名敌人，造成伤害、4连击及无法免疫或驱散的中毒，并对选定目标造成倒地和打断。若目标已中毒或带有剧毒，额外施加无法免疫或驱散的剧毒。本技能必定命中。"
+        }
+      }
+    }
+  },
+  "skillDetails": {
+    "class": "SkillKeyDescCFG",
+    "rows": {
+      "364": {
+        "keys": {
+          "source": "Cobertura de Amuleto",
+          "translation": "符咒覆盖"
+        },
+        "desc": {
+          "source": "Status negativo. Sob este status não se pode usar Esotérica, Perseguição e Ataques Comuns que não sejam contra alvos únicos. Além disso, Ataques Comuns contra alvos únicos atingem seus próprios companheiros. Este status não pode ser evitado nem dispersado e dura até o fim da rodada seguinte.",
+          "translation": "负面状态：无法使用奥义、追打及非单体普攻；单体普攻会攻击己方队友。本状态无法免疫或驱散，持续至下回合结束。"
+        }
+      },
+      "365": {
+        "keys": {
+          "source": "Mu",
+          "translation": "无"
+        },
+        "desc": {
+          "source": "Ao entrar em combate, o plano [Estilo Terra: Casa de Pedra] é ativado por 2 rodadas. Durante este plano, nenhum ninja com exceção dos [Reanimados] e de [Kabuto] pode realizar [Ataques Comuns]. Além disso, durante a primeira rodada do plano, nas primeiras 2 vezes que membros de sua equipe receberem ataques mortais, eles revivem com [50%] da Vida.",
+          "translation": "登场时展开[土遁·岩屋]结界，持续2回合。结界内除[秽土转生]忍者和[兜]外，所有忍者均无法[普攻]。此外，结界首回合己方队友前2次受到致命攻击时，会以[50%]生命复活。"
+        }
+      },
+      "366": {
+        "keys": {
+          "source": "Dan Kato",
+          "translation": "加藤断"
+        },
+        "desc": {
+          "source": "Lança o [Jutsu da Possessão Viva] 1 vez ao entrar em combate, causando dano ao alvo à frente e [Supressão de Imunidade a Status negativos] por 3 rodadas, além de absorver todo o Chakra do alvo. Após lançar a habilidade, sai de combate.",
+          "translation": "登场时释放1次[灵化之术]，对前方目标造成伤害和持续3回合的[负面状态免疫压制]，并吸收目标全部查克拉。释放后离场。"
+        }
+      },
+      "367": {
+        "keys": {
+          "source": "Deidara",
+          "translation": "迪达拉"
+        },
+        "desc": {
+          "source": "Lança o [C3: Peça de Kabuki] 1 vez ao entrar em combate, causa dano de [Fogo] a até 12 inimigos e [Queda] e [Supressão de Imunidade a Perseguição] até o fim da rodada ao inimigo à frente. Inimigos derrotados por esta habilidade não podem reviver. Após lançar a habilidade, sai de combate.",
+          "translation": "登场时释放1次[C3·十八番]，对最多12名敌人造成[火]属性伤害，并对前方敌人造成[倒地]和持续至回合结束的[追打免疫压制]。被本技能击败的敌人无法复活。释放后离场。"
+        }
+      },
+      "368": {
+        "keys": {
+          "source": "Pakura",
+          "translation": "叶仓"
+        },
+        "desc": {
+          "source": "Lança o [Estilo Calor: Esfera Flamejante] 1 vez ao entrar em combate, causando dano de [Vento] e [Fogo] e [Chamas] a até 9 inimigos. O dano contra alvos com [Imunidade a Perseguição] é [30%] maior. Após lançar a habilidade, sai de combate.",
+          "translation": "登场时释放1次[灼遁·火球]，对最多9名敌人造成[风]、[火]属性伤害和[烈焰]。对带有[追打免疫]的目标，伤害提高[30%]。释放后离场。"
+        }
+      }
+    }
+  }
+}

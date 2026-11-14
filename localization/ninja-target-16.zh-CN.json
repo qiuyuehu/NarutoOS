@@ -1,0 +1,449 @@
+{
+  "id": "naruto-ninja-target-16-zh-CN-v1",
+  "rootId": "11014501",
+  "ninjaInfo": {
+    "class": "NinjaInfoCFG",
+    "rows": {
+      "11014501": {
+        "name": {
+          "source": "Indra Otsutsuki",
+          "translation": "大筒木因陀罗"
+        },
+        "title": {
+          "source": "",
+          "translation": ""
+        }
+      }
+    }
+  },
+  "skills": {
+    "class": "SkillCFG",
+    "rows": {
+      "21014501": {
+        "name": {
+          "source": "Corrente de Relâmpago Elétrico",
+          "translation": "雷电锁链"
+        },
+        "desc": {
+          "source": "Causa dano de <font color=\"#4dc831\">Relâmpago</font>, <font color=\"#4dc831\">Combo de 8</font> e <font color=\"#4dc831\">Paralisia</font> a até 3-4 inimigos da equipe adversária, com chance de causar <font color=\"#4dc831\">Paralisia</font> que não pode ser evitada ou dispersada (por 1 rodada).",
+          "translation": "对敌方小队3至4名敌人造成雷属性伤害、8连击和麻痹，有概率造成无法免疫或驱散的麻痹，持续1回合。"
+        }
+      },
+      "21014502": {
+        "name": {
+          "source": "Corrente de Relâmpago Elétrico",
+          "translation": "雷电锁链"
+        },
+        "desc": {
+          "source": "Causa dano de <font color=\"#4dc831\">Relâmpago</font>, <font color=\"#4dc831\">Combo de 8</font> e <font color=\"#4dc831\">Paralisia</font> a até 3-4 inimigos da equipe adversária, com chance de causar <font color=\"#4dc831\">Paralisia</font> que não pode ser evitada ou dispersada (por 1 rodada).",
+          "translation": "对敌方小队3至4名敌人造成雷属性伤害、8连击和麻痹，有概率造成无法免疫或驱散的麻痹，持续1回合。"
+        }
+      },
+      "21014503": {
+        "name": {
+          "source": "Corrente de Relâmpago Elétrico",
+          "translation": "雷电锁链"
+        },
+        "desc": {
+          "source": "Causa dano de <font color=\"#4dc831\">Relâmpago</font>, <font color=\"#4dc831\">Combo de 8</font> e <font color=\"#4dc831\">Paralisia</font> a até 3-4 inimigos da equipe adversária, com chance de causar <font color=\"#4dc831\">Paralisia</font> que não pode ser evitada ou dispersada (por 1 rodada).",
+          "translation": "对敌方小队3至4名敌人造成雷属性伤害、8连击和麻痹，有概率造成无法免疫或驱散的麻痹，持续1回合。"
+        }
+      },
+      "21014504": {
+        "name": {
+          "source": "Ninshu das Chamas",
+          "translation": "火焰忍宗"
+        },
+        "desc": {
+          "source": "<font color=\"#4dc831\">Lançado com Combo de 30</font>, causa dano de <font color=\"#4dc831\">Fogo</font> e <font color=\"#4dc831\">Chamas</font> que não pode ser evitada ou dispersada (por 1 rodada) a até 6 inimigos da equipe adversária. Esta habilidade ignora uma pequena quantidade de <font color=\"#4dc831\">Resistência</font>.",
+          "translation": "连击达到30时触发，对敌方小队最多6名敌人造成火属性伤害和无法免疫或驱散的烈焰，持续1回合。本技能无视少量抗性。"
+        }
+      },
+      "21014505": {
+        "name": {
+          "source": "Teleporte Relâmpago",
+          "translation": "雷瞬身"
+        },
+        "desc": {
+          "source": "Indra pode usar 2 <font color=\"#4dc831\">Esotéricas</font> por rodada e tem grandes chances de esquivar de 2 ataques por rodada.",
+          "translation": "因陀罗每回合可使用2次奥义，并有较高概率闪避本回合2次攻击。"
+        }
+      },
+      "21014506": {
+        "name": {
+          "source": "Seita Chama Negra",
+          "translation": "黑炎之宗"
+        },
+        "desc": {
+          "source": "Lançado antes da primeira ação da rodada, causa <font color=\"#4dc831\">Dano Garantido</font> massivo de <font color=\"#4dc831\">Fogo</font> ao inimigo à frente e a todos os inimigos sob <font color=\"#4dc831\">Chamas</font>. Sempre que Indra for atacado, causa <font color=\"#4dc831\">Chamas</font> que não pode ser evitada ou dispersada (por 1 rodada) e <font color=\"#4dc831\">Chama Negra</font> ao atacante.",
+          "translation": "本回合首次行动前触发，对前方敌人及所有带有烈焰的敌人造成大量必定命中的火属性伤害。因陀罗每次受到攻击时，对攻击者施加无法免疫或驱散的烈焰（持续1回合）和黑炎。"
+        }
+      },
+      "21014507": {
+        "name": {
+          "source": "Mangekyo Sharingan",
+          "translation": "万花筒写轮眼"
+        },
+        "desc": {
+          "source": "Causa dano, <font color=\"#4dc831\">Interrupção</font>, <font color=\"#4dc831\">Supressão de Imunidade a Status Negativos</font> (por 1 rodada) e <font color=\"#4dc831\">Apreensão</font> (por 1 rodada) ao alvo selecionado. Após utilizar esta habilidade, lança a <font color=\"#4dc831\">Habilidade Adicional</font>: <font color=\"#4dc831\">Susano'o</font>.",
+          "translation": "对选定目标造成伤害、打断、持续1回合的负面状态免疫压制和焦虑。使用后触发追加技能：须佐能乎。"
+        }
+      },
+      "21014509": {
+        "name": {
+          "source": "Dupla Esotérica",
+          "translation": "双重奥义"
+        },
+        "desc": {
+          "source": "Ao usar o <font color=\"#4dc831\">Mangekyo Sharingan</font>, lança o <font color=\"#4dc831\">Susano’o</font> 1 vez.",
+          "translation": "使用万花筒写轮眼时，释放1次须佐能乎。"
+        }
+      },
+      "21014510": {
+        "name": {
+          "source": "Seita Chama Negra",
+          "translation": "黑炎之宗"
+        },
+        "desc": {
+          "source": "Sempre que Indra for atacado, causa <font color=\"#4dc831\">Chamas</font> que não pode ser evitada ou dispersada (por 1 rodada) e <font color=\"#4dc831\">Chama Negra</font> ao atacante.",
+          "translation": "因陀罗每次受到攻击时，对攻击者施加无法免疫或驱散的烈焰（持续1回合）和黑炎。"
+        }
+      },
+      "21214501": {
+        "name": {
+          "source": "Corrente de Relâmpago Elétrico",
+          "translation": "雷电锁链"
+        },
+        "desc": {
+          "source": "Causa dano de <font color=\"#4dc831\">Relâmpago</font>, <font color=\"#4dc831\">Combo de 8</font> e <font color=\"#4dc831\">Paralisia</font> a até 5-6 inimigos da equipe adversária, com chance de causar <font color=\"#4dc831\">Paralisia</font> que não pode ser evitada ou dispersada (por 1 rodada).",
+          "translation": "对敌方小队5至6名敌人造成雷属性伤害、8连击和麻痹，有概率造成无法免疫或驱散的麻痹，持续1回合。"
+        }
+      },
+      "21214502": {
+        "name": {
+          "source": "Corrente de Relâmpago Elétrico",
+          "translation": "雷电锁链"
+        },
+        "desc": {
+          "source": "Causa dano de <font color=\"#4dc831\">Relâmpago</font>, <font color=\"#4dc831\">Combo de 8</font> e <font color=\"#4dc831\">Paralisia</font> a até 5-6 inimigos da equipe adversária, com chance de causar <font color=\"#4dc831\">Paralisia</font> que não pode ser evitada ou dispersada (por 1 rodada).",
+          "translation": "对敌方小队5至6名敌人造成雷属性伤害、8连击和麻痹，有概率造成无法免疫或驱散的麻痹，持续1回合。"
+        }
+      },
+      "21214503": {
+        "name": {
+          "source": "Corrente de Relâmpago Elétrico",
+          "translation": "雷电锁链"
+        },
+        "desc": {
+          "source": "Causa dano de <font color=\"#4dc831\">Relâmpago</font>, <font color=\"#4dc831\">Combo de 8</font> e <font color=\"#4dc831\">Paralisia</font> a até 5-6 inimigos da equipe adversária, com chance de causar <font color=\"#4dc831\">Paralisia</font> que não pode ser evitada ou dispersada (por 1 rodada).",
+          "translation": "对敌方小队5至6名敌人造成雷属性伤害、8连击和麻痹，有概率造成无法免疫或驱散的麻痹，持续1回合。"
+        }
+      },
+      "21214504": {
+        "name": {
+          "source": "Ninshu das Chamas",
+          "translation": "火焰忍宗"
+        },
+        "desc": {
+          "source": "<font color=\"#4dc831\">Lançado com Combo de 15</font>, causa dano de <font color=\"#4dc831\">Fogo</font>, <font color=\"#4dc831\">Chamas</font> que não pode ser evitada ou dispersada (por 1 rodada) e diminui a <font color=\"#4dc831\">Resistência</font> em <font color=\"#4dc831\">10%</font> (acumulável) a até 6 inimigos da equipe adversária. Esta habilidade ignora uma pequena quantidade de <font color=\"#4dc831\">Resistência</font>.",
+          "translation": "连击达到15时触发，对敌方小队最多6名敌人造成火属性伤害和无法免疫或驱散的烈焰（持续1回合），并使抗性降低10%（可叠加）。本技能无视少量抗性。"
+        }
+      },
+      "21214505": {
+        "name": {
+          "source": "Teleporte Relâmpago",
+          "translation": "雷瞬身"
+        },
+        "desc": {
+          "source": "Indra pode usar 2 <font color=\"#4dc831\">Esotéricas</font> por rodada e tem grandes chances de esquivar de 2 ataques por rodada. Sempre que esquivar, recupera <font color=\"#4dc831\">20</font> Pontos de Chakra.",
+          "translation": "因陀罗每回合可使用2次奥义，有较高概率闪避2次攻击，每次闪避恢复20点查克拉。"
+        }
+      },
+      "21214506": {
+        "name": {
+          "source": "Seita Chama Negra",
+          "translation": "黑炎之宗"
+        },
+        "desc": {
+          "source": "Lançado antes da ação, causa <font color=\"#4dc831\">Dano Garantido</font> massivo de <font color=\"#4dc831\">Fogo</font> ao inimigo à frente e a todos os inimigos sob <font color=\"#4dc831\">Chamas</font>, pode ser ativado 3 vezes por rodada. Sempre que Indra for atacado, causa <font color=\"#4dc831\">Chamas</font> que não pode ser evitada ou dispersada (por 1 rodada) e <font color=\"#4dc831\">Chama Negra</font> ao atacante.",
+          "translation": "行动前触发，对前方敌人及所有带有烈焰的敌人造成大量必定命中的火属性伤害，每回合最多3次。因陀罗每次受到攻击时，对攻击者施加无法免疫或驱散的烈焰（持续1回合）和黑炎。"
+        }
+      },
+      "21214507": {
+        "name": {
+          "source": "Mangekyo Sharingan",
+          "translation": "万花筒写轮眼"
+        },
+        "desc": {
+          "source": "Causa <font color=\"#4dc831\">Dano Garantido</font>, <font color=\"#4dc831\">Interrupção</font>, <font color=\"#4dc831\">Supressão de Imunidade a Status Negativos</font> (por 1 rodada) e <font color=\"#4dc831\">Apreensão</font> (por 1 rodada) ao alvo selecionado. Após utilizar esta habilidade, lança a <font color=\"#4dc831\">Habilidade Adicional</font>: <font color=\"#4dc831\">Susano'o</font>.",
+          "translation": "对选定目标造成必定命中的伤害、打断、持续1回合的负面状态免疫压制和焦虑。使用后触发追加技能：须佐能乎。"
+        }
+      },
+      "21214509": {
+        "name": {
+          "source": "Dupla Esotérica",
+          "translation": "双重奥义"
+        },
+        "desc": {
+          "source": "Ao usar o <font color=\"#4dc831\">Mangekyo Sharingan +1</font>, lança o <font color=\"#4dc831\">Susano’o +1</font> 1 vez.",
+          "translation": "使用万花筒写轮眼+1时，释放1次须佐能乎+1。"
+        }
+      },
+      "21214510": {
+        "name": {
+          "source": "Seita Chama Negra",
+          "translation": "黑炎之宗"
+        },
+        "desc": {
+          "source": "Sempre que Indra for atacado, causa <font color=\"#4dc831\">Chamas</font> que não pode ser evitada ou dispersada (por 1 rodada) e <font color=\"#4dc831\">Chama Negra</font> ao atacante.",
+          "translation": "因陀罗每次受到攻击时，对攻击者施加无法免疫或驱散的烈焰（持续1回合）和黑炎。"
+        }
+      },
+      "21314501": {
+        "name": {
+          "source": "Corrente de Relâmpago Elétrico",
+          "translation": "雷电锁链"
+        },
+        "desc": {
+          "source": "Causa dano de <font color=\"#4dc831\">Relâmpago</font>, <font color=\"#4dc831\">Combo de 8</font> e <font color=\"#4dc831\">Paralisia</font> que não pode ser evitada ou dispersada (por 1 rodada) a até 5-6 inimigos da equipe adversária, com chance de diminuir o próprio <font color=\"#4dc831\">Resfriamento da Esotérica</font> em 1.",
+          "translation": "对敌方小队5至6名敌人造成雷属性伤害、8连击和无法免疫或驱散的麻痹（持续1回合），有概率使自身奥义冷却减少1回合。"
+        }
+      },
+      "21314502": {
+        "name": {
+          "source": "Corrente de Relâmpago Elétrico",
+          "translation": "雷电锁链"
+        },
+        "desc": {
+          "source": "Causa dano de <font color=\"#4dc831\">Relâmpago</font>, <font color=\"#4dc831\">Combo de 8</font> e <font color=\"#4dc831\">Paralisia</font> que não pode ser evitada ou dispersada (por 1 rodada) a até 5-6 inimigos da equipe adversária, com chance de diminuir o próprio <font color=\"#4dc831\">Resfriamento da Esotérica</font> em 1.",
+          "translation": "对敌方小队5至6名敌人造成雷属性伤害、8连击和无法免疫或驱散的麻痹（持续1回合），有概率使自身奥义冷却减少1回合。"
+        }
+      },
+      "21314503": {
+        "name": {
+          "source": "Corrente de Relâmpago Elétrico",
+          "translation": "雷电锁链"
+        },
+        "desc": {
+          "source": "Causa dano de <font color=\"#4dc831\">Relâmpago</font>, <font color=\"#4dc831\">Combo de 8</font> e <font color=\"#4dc831\">Paralisia</font> que não pode ser evitada ou dispersada (por 1 rodada) a até 5-6 inimigos da equipe adversária, com chance de diminuir o próprio <font color=\"#4dc831\">Resfriamento da Esotérica</font> em 1.",
+          "translation": "对敌方小队5至6名敌人造成雷属性伤害、8连击和无法免疫或驱散的麻痹（持续1回合），有概率使自身奥义冷却减少1回合。"
+        }
+      },
+      "21314504": {
+        "name": {
+          "source": "Ninshu das Chamas",
+          "translation": "火焰忍宗"
+        },
+        "desc": {
+          "source": "<font color=\"#4dc831\">Lançado com Combo de 15</font>, causa dano de <font color=\"#4dc831\">Fogo</font>, <font color=\"#4dc831\">Chamas</font> que não pode ser evitada ou dispersada (por 1 rodada) e diminui a <font color=\"#4dc831\">Resistência</font> em <font color=\"#4dc831\">10%</font> (acumulável) a até 6 inimigos da equipe adversária. Após utilizar esta habilidade, aumenta o número de alvos em 1 (até 3x), e, quando chega em 9, esta habilidade tem <font color=\"#4dc831\">Dano Garantido</font>. Esta habilidade ignora uma pequena quantidade de <font color=\"#4dc831\">Resistência</font>.",
+          "translation": "连击达到15时触发，对敌方小队最多6名敌人造成火属性伤害和无法免疫或驱散的烈焰（持续1回合），抗性降低10%（可叠加）。每次使用后目标数增加1，最多增加3次；达到9名目标时，本技能必定命中。本技能无视少量抗性。"
+        }
+      },
+      "21314505": {
+        "name": {
+          "source": "Teleporte Relâmpago",
+          "translation": "雷瞬身"
+        },
+        "desc": {
+          "source": "Indra pode usar 2 <font color=\"#4dc831\">Esotéricas</font> por rodada, tem grandes chances de esquivar de 2 ataques por rodada e tem <font color=\"#4dc831\">60%</font> de chance de esquivar de <font color=\"#4dc831\">Ataques Comuns</font>. Sempre que esquivar, recupera <font color=\"#4dc831\">20</font> Pontos de Chakra.",
+          "translation": "因陀罗每回合可使用2次奥义，有较高概率闪避2次攻击，并有60%概率闪避普攻。每次闪避恢复20点查克拉。"
+        }
+      },
+      "21314506": {
+        "name": {
+          "source": "Seita Chama Negra",
+          "translation": "黑炎之宗"
+        },
+        "desc": {
+          "source": "Lançado antes da ação, causa <font color=\"#4dc831\">Dano Garantido</font> massivo de <font color=\"#4dc831\">Fogo</font> ao inimigo à frente e a todos os inimigos sob <font color=\"#4dc831\">Chamas</font>, pode ser ativado 3 vezes por rodada. Sempre que Indra causar dano <font color=\"#4dc831\">Ninjutsu</font> ou for atacado, causa <font color=\"#4dc831\">Chamas</font> que não pode ser evitada ou dispersada (por 1 rodada) e <font color=\"#4dc831\">Chama Negra</font> ao atacante.",
+          "translation": "行动前触发，对前方敌人及所有带有烈焰的敌人造成大量必定命中的火属性伤害，每回合最多3次。因陀罗每次造成忍术伤害或受到攻击时，对攻击者施加无法免疫或驱散的烈焰（持续1回合）和黑炎。"
+        }
+      },
+      "21314507": {
+        "name": {
+          "source": "Mangekyo Sharingan",
+          "translation": "万花筒写轮眼"
+        },
+        "desc": {
+          "source": "Causa <font color=\"#4dc831\">Dano Garantido</font>, <font color=\"#4dc831\">Interrupção</font>, <font color=\"#4dc831\">Supressão de Imunidade a Status Negativos</font> (por 1 rodada) e <font color=\"#4dc831\">Extremamente Apreensão</font> (por 1 rodada) ao alvo selecionado. Após utilizar esta habilidade, lança a <font color=\"#4dc831\">Habilidade Adicional</font>: <font color=\"#4dc831\">Susano'o</font>.",
+          "translation": "对选定目标造成必定命中的伤害、打断、持续1回合的负面状态免疫压制和极度焦虑。使用后触发追加技能：须佐能乎。"
+        }
+      },
+      "21314509": {
+        "name": {
+          "source": "Dupla Esotérica",
+          "translation": "双重奥义"
+        },
+        "desc": {
+          "source": "Ao usar o <font color=\"#4dc831\">Mangekyo Sharingan +2</font>, lança o <font color=\"#4dc831\">Susano’o +2</font> 1 vez.",
+          "translation": "使用万花筒写轮眼+2时，释放1次须佐能乎+2。"
+        }
+      },
+      "21314510": {
+        "name": {
+          "source": "Seita Chama Negra",
+          "translation": "黑炎之宗"
+        },
+        "desc": {
+          "source": "Sempre que Indra causar dano <font color=\"#4dc831\">Ninjutsu</font> ou for atacado, causa <font color=\"#4dc831\">Chamas</font> que não pode ser evitada ou dispersada (por 1 rodada) e <font color=\"#4dc831\">Chama Negra</font> ao atacante.",
+          "translation": "因陀罗每次造成忍术伤害或受到攻击时，对攻击者施加无法免疫或驱散的烈焰（持续1回合）和黑炎。"
+        }
+      },
+      "21414501": {
+        "name": {
+          "source": "Corrente de Relâmpago Elétrico",
+          "translation": "雷电锁链"
+        },
+        "desc": {
+          "source": "Causa dano de <font color=\"#4dc831\">Relâmpago</font>, <font color=\"#4dc831\">Combo de 8</font> e <font color=\"#4dc831\">Paralisia</font> que não pode ser evitada ou dispersada (por 1 rodada) à linha de inimigos do ninja inimigo com menos Vida, com chance de causar <font color=\"#4dc831\">Paralisia</font> que não pode ser evitada ou dispersada (até o final da próxima rodada).",
+          "translation": "攻击生命最低的敌方忍者所在一排，造成雷属性伤害、8连击和无法免疫或驱散的麻痹（持续1回合），有概率额外造成无法免疫或驱散的麻痹，持续至下回合结束。"
+        }
+      },
+      "21414502": {
+        "name": {
+          "source": "Corrente de Relâmpago Elétrico",
+          "translation": "雷电锁链"
+        },
+        "desc": {
+          "source": "Causa dano de <font color=\"#4dc831\">Relâmpago</font>, <font color=\"#4dc831\">Combo de 8</font> e <font color=\"#4dc831\">Paralisia</font> que não pode ser evitada ou dispersada (por 1 rodada) à linha de inimigos do ninja inimigo com menos Vida, com chance de causar <font color=\"#4dc831\">Paralisia</font> que não pode ser evitada ou dispersada (até o final da próxima rodada).",
+          "translation": "攻击生命最低的敌方忍者所在一排，造成雷属性伤害、8连击和无法免疫或驱散的麻痹（持续1回合），有概率额外造成无法免疫或驱散的麻痹，持续至下回合结束。"
+        }
+      },
+      "21414503": {
+        "name": {
+          "source": "Corrente de Relâmpago Elétrico",
+          "translation": "雷电锁链"
+        },
+        "desc": {
+          "source": "Causa dano de <font color=\"#4dc831\">Relâmpago</font>, <font color=\"#4dc831\">Combo de 8</font> e <font color=\"#4dc831\">Paralisia</font> que não pode ser evitada ou dispersada (por 1 rodada) à linha de inimigos do ninja inimigo com menos Vida, com chance de causar <font color=\"#4dc831\">Paralisia</font> que não pode ser evitada ou dispersada (até o final da próxima rodada).",
+          "translation": "攻击生命最低的敌方忍者所在一排，造成雷属性伤害、8连击和无法免疫或驱散的麻痹（持续1回合），有概率额外造成无法免疫或驱散的麻痹，持续至下回合结束。"
+        }
+      },
+      "21414504": {
+        "name": {
+          "source": "Ninshu das Chamas",
+          "translation": "火焰忍宗"
+        },
+        "desc": {
+          "source": "<font color=\"#4dc831\">Lançado com Combo de 25</font>, causa dano de <font color=\"#4dc831\">Fogo</font> e <font color=\"#4dc831\">Chamas</font> que não pode ser evitada ou dispersada (por 1 rodada) a até 6 inimigos da equipe adversária. Após utilizar esta habilidade, aumenta o dano dela em <font color=\"#4dc831\">25%</font> (acumulável) e diminui o número de alvos em 1 (até 3x), e, quando chega em 3, esta habilidade causa <font color=\"#4dc831\">Repelimento</font> a um inimigo aleatório e tem bônus de <font color=\"#4dc831\">Crítico</font>. Esta habilidade ignora uma pequena quantidade de <font color=\"#4dc831\">Resistência</font>.",
+          "translation": "连击达到25时触发，对敌方小队最多6名敌人造成火属性伤害和无法免疫或驱散的烈焰（持续1回合）。每次使用后，本技能伤害提高25%（可叠加），目标数减少1，最多减少3次；目标数降至3名时，对1名随机敌人造成击退，并获得额外暴击加成。本技能无视少量抗性。"
+        }
+      },
+      "21414505": {
+        "name": {
+          "source": "Teleporte Relâmpago",
+          "translation": "雷瞬身"
+        },
+        "desc": {
+          "source": "Indra pode usar 2 <font color=\"#4dc831\">Esotéricas</font> por rodada, tem grandes chances de esquivar de 2 ataques por rodada e tem <font color=\"#4dc831\">60%</font> de chance de esquivar de <font color=\"#4dc831\">Perseguições</font>. Sempre que esquivar, recupera <font color=\"#4dc831\">20</font> Pontos de Chakra.",
+          "translation": "因陀罗每回合可使用2次奥义，有较高概率闪避2次攻击，并有60%概率闪避追打。每次闪避恢复20点查克拉。"
+        }
+      },
+      "21414506": {
+        "name": {
+          "source": "Seita Chama Negra",
+          "translation": "黑炎之宗"
+        },
+        "desc": {
+          "source": "Lançado antes da ação, causa <font color=\"#4dc831\">Dano Garantido</font> massivo de <font color=\"#4dc831\">Fogo</font> ao inimigo à frente e a todos os inimigos sob <font color=\"#4dc831\">Chama Negra</font>, e causa <font color=\"#4dc831\">50%</font> de dano de choque aos inimigos a 1 espaço de distância dos alvos, pode ser ativado 3 vezes por rodada. Sempre que Indra for atacado, causa <font color=\"#4dc831\">Chamas</font> que não pode ser evitada ou dispersada (por 1 rodada) e <font color=\"#4dc831\">Chama Negra</font> ao atacante.",
+          "translation": "行动前触发，对前方敌人及所有带有黑炎的敌人造成大量必定命中的火属性伤害，并对目标周围1格的敌人造成50%震荡伤害，每回合最多3次。因陀罗每次受到攻击时，对攻击者施加无法免疫或驱散的烈焰（持续1回合）和黑炎。"
+        }
+      },
+      "21414507": {
+        "name": {
+          "source": "Mangekyo Sharingan",
+          "translation": "万花筒写轮眼"
+        },
+        "desc": {
+          "source": "Causa <font color=\"#4dc831\">Dano Garantido</font>, <font color=\"#4dc831\">Interrupção</font>, <font color=\"#4dc831\">Supressão de Imunidade a Status Negativos</font> (até o final da próxima rodada), <font color=\"#4dc831\">Ancioso</font> (até o final da próxima rodada), diminui o dano de <font color=\"#4dc831\">Ataque Comum</font> em <font color=\"#4dc831\">100%</font> (até o final da rodada) e aumenta o <font color=\"#4dc831\">Resfriamento da Esotérica</font> em 1 ao alvo selecionado. Após utilizar esta habilidade, lança a <font color=\"#4dc831\">Habilidade Adicional</font>: <font color=\"#4dc831\">Susano'o</font>.",
+          "translation": "对选定目标造成必定命中的伤害和打断，施加持续至下回合结束的负面状态免疫压制与焦虑，使其普攻伤害降低100%（持续至本回合结束）、奥义冷却增加1回合。使用后触发追加技能：须佐能乎。"
+        }
+      },
+      "21414509": {
+        "name": {
+          "source": "Dupla Esotérica",
+          "translation": "双重奥义"
+        },
+        "desc": {
+          "source": "Ao usar o <font color=\"#4dc831\">Mangekyo Sharingan Y</font>, lança o <font color=\"#4dc831\">Susano’o Y</font> 1 vez.",
+          "translation": "使用万花筒写轮眼·Y时，释放1次须佐能乎·Y。"
+        }
+      },
+      "21414510": {
+        "name": {
+          "source": "Seita Chama Negra",
+          "translation": "黑炎之宗"
+        },
+        "desc": {
+          "source": "Sempre que Indra for atacado, causa <font color=\"#4dc831\">Chamas</font> que não pode ser evitada ou dispersada (por 1 rodada) e <font color=\"#4dc831\">Chama Negra</font> ao atacante.",
+          "translation": "因陀罗每次受到攻击时，对攻击者施加无法免疫或驱散的烈焰（持续1回合）和黑炎。"
+        }
+      }
+    }
+  },
+  "skillDetails": {
+    "class": "SkillKeyDescCFG",
+    "rows": {
+      "107": {
+        "keys": {
+          "source": "Susano'o",
+          "translation": "须佐能乎"
+        },
+        "desc": {
+          "source": "Causa dano e [Combo de 3] a até 9 inimigos e diminui a [Resistência] do alvo em [8%] (acumulável). Após isso Indra ganha [Imunidade a Perseguição] (até o fim da próxima rodada).",
+          "translation": "对最多9名敌人造成伤害和[3连击]，使目标[抗性]降低[8%]（可叠加）。随后因陀罗获得[追打免疫]，持续至下回合结束。"
+        }
+      },
+      "108": {
+        "keys": {
+          "source": "Susano'o",
+          "translation": "须佐能乎"
+        },
+        "desc": {
+          "source": "Causa dano e [Combo de 3] a até 9 inimigos e diminui a [Resistência] do alvo em [12%] (acumulável). Após isso Indra ganha [Imunidade a Perseguição] (até o fim da próxima rodada).",
+          "translation": "对最多9名敌人造成伤害和[3连击]，使目标[抗性]降低[12%]（可叠加）。随后因陀罗获得[追打免疫]，持续至下回合结束。"
+        }
+      },
+      "109": {
+        "keys": {
+          "source": "Susano'o",
+          "translation": "须佐能乎"
+        },
+        "desc": {
+          "source": "Causa dano e [Combo de 3] a até 9 inimigos e diminui a [Resistência] do alvo em [12%] (acumulável). Suprime a [Velocidade] do alvo em [100%] do atributo na tela (até o fim da próxima rodada). Após isso Indra ganha [Imunidade a Perseguição] (até o fim da próxima rodada).",
+          "translation": "对最多9名敌人造成伤害和[3连击]，使目标[抗性]降低[12%]（可叠加），并压制目标相当于面板属性[100%]的[先攻]，持续至下回合结束。随后因陀罗获得[追打免疫]，持续至下回合结束。"
+        }
+      },
+      "110": {
+        "keys": {
+          "source": "Susano'o",
+          "translation": "须佐能乎"
+        },
+        "desc": {
+          "source": "Causa dano e [Combo de 3] a até 9 inimigos, além de causar [Vulnerabilidade] (até o fim da próxima rodada). [Vulnerabilidade]: status negativo, a [Resistência] do ninja é reduzida a [60%] do valor original até o fim da próxima rodada. Este status não pode ser imunizado ou dispersado.",
+          "translation": "对最多9名敌人造成伤害、[3连击]和持续至下回合结束的[易伤]。[易伤]为负面状态，使忍者[抗性]降至原值的[60%]，持续至下回合结束，无法免疫或驱散。"
+        }
+      },
+      "268": {
+        "keys": {
+          "source": "Chama Negra",
+          "translation": "黑炎"
+        },
+        "desc": {
+          "source": "Status negativos: neste status, sempre que o ninja causa dano, seus [Taijutsu] e [Ninjutsu] são reduzidos em [1%]. Ao receber dano, sua [Defesa] e [Resistência] são reduzidas em [2%]. O efeito dura até o final da a próxima rodada e o status não pode ser imunizado nem dispersado.",
+          "translation": "负面状态：持有者每次造成伤害时，自身[体术]和[忍术]降低[1%]；受到伤害时，[防御]和[抗性]降低[2%]。持续至下回合结束，无法免疫或驱散。"
+        }
+      },
+      "337": {
+        "keys": {
+          "source": "Susano'o",
+          "translation": "须佐能乎"
+        },
+        "desc": {
+          "source": "[Habilidade adicional]: Causa dano e [Combo de 3] a até 9 inimigos e diminui a [Resistência] do alvo em [8%] (pode acumular). Após isso ganha [Imunidade a Perseguição] até o fim da próxima rodada.",
+          "translation": "[追加技能]：对最多9名敌人造成伤害和[3连击]，使目标[抗性]降低[8%]（可叠加）。随后获得[追打免疫]，持续至下回合结束。"
+        }
+      }
+    }
+  }
+}

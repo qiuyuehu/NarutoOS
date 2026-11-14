@@ -1,0 +1,388 @@
+{
+  "id": "naruto-ninja-target-08-zh-CN-v1",
+  "rootId": "11006031",
+  "ninjaInfo": {
+    "class": "NinjaInfoCFG",
+    "rows": {
+      "11006031": {
+        "name": {
+          "source": "Obito",
+          "translation": "宇智波带土"
+        },
+        "title": {
+          "source": "[Jinchuuriki da Dez Caudas]",
+          "translation": "【十尾人柱力】"
+        }
+      }
+    }
+  },
+  "skills": {
+    "class": "SkillCFG",
+    "rows": {
+      "21006031": {
+        "name": {
+          "source": "Vazio da Busca da Verdade",
+          "translation": "求道玉·虚空"
+        },
+        "desc": {
+          "source": "Ataca uma linha vertical de inimigos, causando <font color=\"#4dc831\">Chamas</font> e com grande chance de causar <font color=\"#4dc831\">Repelimento</font> a 1 inimigo aleatório. Acerta na certa.",
+          "translation": "攻击敌方一纵排，造成烈焰，并有较高概率使1名随机敌人击退。本技能必定命中。"
+        }
+      },
+      "21006032": {
+        "name": {
+          "source": "Vazio da Busca da Verdade",
+          "translation": "求道玉·虚空"
+        },
+        "desc": {
+          "source": "Ataca uma linha vertical de inimigos, causando <font color=\"#4dc831\">Chamas</font> e com grande chance de causar <font color=\"#4dc831\">Repelimento</font> a 1 inimigo aleatório. Acerta na certa.",
+          "translation": "攻击敌方一纵排，造成烈焰，并有较高概率使1名随机敌人击退。本技能必定命中。"
+        }
+      },
+      "21006033": {
+        "name": {
+          "source": "Vazio da Busca da Verdade",
+          "translation": "求道玉·虚空"
+        },
+        "desc": {
+          "source": "Ataca uma linha vertical de inimigos, causando <font color=\"#4dc831\">Chamas</font> e com grande chance de causar <font color=\"#4dc831\">Repelimento</font> a 1 inimigo aleatório. Acerta na certa.",
+          "translation": "攻击敌方一纵排，造成烈焰，并有较高概率使1名随机敌人击退。本技能必定命中。"
+        }
+      },
+      "21006034": {
+        "name": {
+          "source": "Ataque da Esfera da Busca da Verdade",
+          "translation": "求道玉攻击"
+        },
+        "desc": {
+          "source": "Persegue inimigos com <font color=\"#4dc831\">Repelimento</font> e causa <font color=\"#4dc831\">Queda</font> e <font color=\"#4dc831\">Imobilidade</font>, ignorando parte da Defesa e Resistência e podendo ser lançado até 2 vezes por rodada.",
+          "translation": "追打击退敌人，造成倒地和定身，无视部分防御和抗性，每回合最多触发2次。"
+        }
+      },
+      "21006035": {
+        "name": {
+          "source": "Estilo Sombra e Luz",
+          "translation": "阴阳遁"
+        },
+        "desc": {
+          "source": "Ao atacar e obter um Crítico, o alvo sofre <font color=\"#4dc831\">Selamento de Ninjutsu</font> até o fim da rodada.",
+          "translation": "攻击造成暴击时，对目标施加忍术封印，持续至回合结束。"
+        }
+      },
+      "21006036": {
+        "name": {
+          "source": "Vida: Corpo",
+          "translation": "生命之躯"
+        },
+        "desc": {
+          "source": "Obito é imune a qualquer <font color=\"#4dc831\">status negativo</font> e dano puramente Ninjutsu.",
+          "translation": "带土免疫所有负面状态和纯忍术伤害。"
+        }
+      },
+      "21006037": {
+        "name": {
+          "source": "Seis Caminhos: Cruz de Chamas",
+          "translation": "六道·十字奉火"
+        },
+        "desc": {
+          "source": "Causa dano e <font color=\"#4dc831\">Combo de 3</font> a até 12 inimigos e <font color=\"#4dc831\">Flutuação</font> ao inimigo escolhido, limitando o Chakra inimigo a no máximo 60 até o fim da próxima rodada. Ao lançar a Esotérica, obtém <font color=\"#4dc831\">Violência</font> por 1 rodada.",
+          "translation": "对最多12名敌人造成伤害和3连击，使选定目标浮空，并将敌方查克拉上限限制为60，持续至下回合结束。释放奥义时，获得暴怒，持续1回合。"
+        }
+      },
+      "21006038": {
+        "name": {
+          "source": "Status de Violência",
+          "translation": "暴怒状态"
+        },
+        "desc": {
+          "source": "Antes de lançar a Esotérica, obtém o <font color=\"#4dc831\">status de Violência</font>.",
+          "translation": "释放奥义前，获得暴怒状态。"
+        }
+      },
+      "21006039": {
+        "name": {
+          "source": "Super: Seis Caminhos: Cruz de Chamas",
+          "translation": "超·六道·十字奉火"
+        },
+        "desc": {
+          "source": "Usado para ocupar habilidade vazia",
+          "translation": "空技能占位。"
+        }
+      },
+      "21206031": {
+        "name": {
+          "source": "Vazio da Busca da Verdade",
+          "translation": "求道玉·虚空"
+        },
+        "desc": {
+          "source": "Ataca uma linha vertical de inimigos, causando dano aumentado em 30%, <font color=\"#4dc831\">Chamas</font> e com grande chance de causar <font color=\"#4dc831\">Repelimento</font> a 1 inimigo aleatório. Acerta na certa.",
+          "translation": "攻击敌方一纵排，伤害提高30%，造成烈焰，并有较高概率使1名随机敌人击退。本技能必定命中。"
+        }
+      },
+      "21206032": {
+        "name": {
+          "source": "Vazio da Busca da Verdade",
+          "translation": "求道玉·虚空"
+        },
+        "desc": {
+          "source": "Ataca uma linha vertical de inimigos, causando dano aumentado em 30%, <font color=\"#4dc831\">Chamas</font> e com grande chance de causar <font color=\"#4dc831\">Repelimento</font> a 1 inimigo aleatório. Acerta na certa.",
+          "translation": "攻击敌方一纵排，伤害提高30%，造成烈焰，并有较高概率使1名随机敌人击退。本技能必定命中。"
+        }
+      },
+      "21206033": {
+        "name": {
+          "source": "Vazio da Busca da Verdade",
+          "translation": "求道玉·虚空"
+        },
+        "desc": {
+          "source": "Ataca uma linha vertical de inimigos, causando dano aumentado em 30%, <font color=\"#4dc831\">Chamas</font> e com grande chance de causar <font color=\"#4dc831\">Repelimento</font> a 1 inimigo aleatório. Acerta na certa.",
+          "translation": "攻击敌方一纵排，伤害提高30%，造成烈焰，并有较高概率使1名随机敌人击退。本技能必定命中。"
+        }
+      },
+      "21206034": {
+        "name": {
+          "source": "Ataque da Esfera da Busca da Verdade",
+          "translation": "求道玉攻击"
+        },
+        "desc": {
+          "source": "Persegue inimigos com <font color=\"#4dc831\">Repelimento</font> e causa <font color=\"#4dc831\">Queda</font>, <font color=\"#4dc831\">Imobilidade</font> e <font color=\"#4dc831\">Supressão de Imunidade a Status negativos</font> até o final da rodada. Esta habilidade causa dano que ignora parcialmente a defesa e resistência do inimigo, e pode ser ativada até 2 vezes por rodada.",
+          "translation": "追打击退敌人，造成倒地、定身和持续至回合结束的负面状态免疫压制。本技能无视敌人部分防御和抗性，每回合最多触发2次。"
+        }
+      },
+      "21206035": {
+        "name": {
+          "source": "Estilo Sombra e Luz",
+          "translation": "阴阳遁"
+        },
+        "desc": {
+          "source": "Ao atacar e obter um Crítico, o alvo sofre <font color=\"#4dc831\">Selamento de Ninjutsu</font> até o fim da rodada e, a partir da 2ª rodada, Obito lança o <font color=\"#4dc831\">Super: Seis Caminhos: Cruz de Chamas</font>.",
+          "translation": "攻击造成暴击时，对目标施加持续至回合结束的忍术封印。从第2回合开始，带土释放超·六道·十字奉火。"
+        }
+      },
+      "21206036": {
+        "name": {
+          "source": "Vida: Corpo",
+          "translation": "生命之躯"
+        },
+        "desc": {
+          "source": "Obito é imune a qualquer <font color=\"#4dc831\">status negativo</font> e dano puramente Ninjutsu e, sempre que recebe cura, seu Ataque Ninjutsu aumenta 3%.",
+          "translation": "带土免疫所有负面状态和纯忍术伤害，每次受到治疗时，忍术提高3%。"
+        }
+      },
+      "21206037": {
+        "name": {
+          "source": "Seis Caminhos: Cruz de Chamas",
+          "translation": "六道·十字奉火"
+        },
+        "desc": {
+          "source": "Causa dano e <font color=\"#4dc831\">Combo de 3</font> a até 12 inimigos e <font color=\"#4dc831\">Flutuação</font> ao inimigo escolhido, limitando o Chakra inimigo a no máximo 40 até o fim da próxima rodada. Ao lançar a Esotérica, obtém <font color=\"#4dc831\">Violência nv. 1</font> por 1 rodada.",
+          "translation": "对最多12名敌人造成伤害和3连击，使选定目标浮空，并将敌方查克拉上限限制为40，持续至下回合结束。释放奥义时，获得1级暴怒，持续1回合。"
+        }
+      },
+      "21206038": {
+        "name": {
+          "source": "Status de Violência",
+          "translation": "暴怒状态"
+        },
+        "desc": {
+          "source": "Antes de lançar a Esotérica, obtém o <font color=\"#4dc831\">status de Violência nv. 1</font>.",
+          "translation": "释放奥义前，获得1级暴怒状态。"
+        }
+      },
+      "21206039": {
+        "name": {
+          "source": "Super: Seis Caminhos: Cruz de Chamas",
+          "translation": "超·六道·十字奉火"
+        },
+        "desc": {
+          "source": "Lançado no início da 2ª rodada, causa dano na certa e <font color=\"#4dc831\">Combo de 3</font> a até 12 inimigos, mas recebe 1% da Vida restante de dano sempre que age.",
+          "translation": "第2回合开始时触发，对最多12名敌人造成必定命中的伤害和3连击，但自身每次行动时受到相当于剩余生命1%的伤害。"
+        }
+      },
+      "21306031": {
+        "name": {
+          "source": "Vazio da Busca da Verdade",
+          "translation": "求道玉·虚空"
+        },
+        "desc": {
+          "source": "Ataca uma linha vertical de inimigos, causando dano aumentado em 30%, <font color=\"#4dc831\">Chamas</font> e com grande chance de causar <font color=\"#4dc831\">Repelimento</font> e <font color=\"#4dc831\">Supressão de Imunidade a Perseguição</font> até o fim da próxima rodada a 1 inimigo aleatório. Acerta na certa.",
+          "translation": "攻击敌方一纵排，伤害提高30%，造成烈焰，并有较高概率对1名随机敌人造成击退和持续至下回合结束的追打免疫压制。本技能必定命中。"
+        }
+      },
+      "21306032": {
+        "name": {
+          "source": "Vazio da Busca da Verdade",
+          "translation": "求道玉·虚空"
+        },
+        "desc": {
+          "source": "Ataca uma linha vertical de inimigos, causando dano aumentado em 30%, <font color=\"#4dc831\">Chamas</font> e com grande chance de causar <font color=\"#4dc831\">Repelimento</font> e <font color=\"#4dc831\">Supressão de Imunidade a Perseguição</font> até o fim da próxima rodada a 1 inimigo aleatório. Acerta na certa.",
+          "translation": "攻击敌方一纵排，伤害提高30%，造成烈焰，并有较高概率对1名随机敌人造成击退和持续至下回合结束的追打免疫压制。本技能必定命中。"
+        }
+      },
+      "21306033": {
+        "name": {
+          "source": "Vazio da Busca da Verdade",
+          "translation": "求道玉·虚空"
+        },
+        "desc": {
+          "source": "Ataca uma linha vertical de inimigos, causando dano aumentado em 30%, <font color=\"#4dc831\">Chamas</font> e com grande chance de causar <font color=\"#4dc831\">Repelimento</font> e <font color=\"#4dc831\">Supressão de Imunidade a Perseguição</font> até o fim da próxima rodada a 1 inimigo aleatório. Acerta na certa.",
+          "translation": "攻击敌方一纵排，伤害提高30%，造成烈焰，并有较高概率对1名随机敌人造成击退和持续至下回合结束的追打免疫压制。本技能必定命中。"
+        }
+      },
+      "21306034": {
+        "name": {
+          "source": "Ataque da Esfera da Busca da Verdade",
+          "translation": "求道玉攻击"
+        },
+        "desc": {
+          "source": "Persegue inimigos com <font color=\"#4dc831\">Repelimento</font> e causa <font color=\"#4dc831\">Queda</font>, <font color=\"#4dc831\">Imobilidade</font>, aplicando <font color=\"#4dc831\">Supressão de Imunidade a Status negativos</font> até o final da próxima rodada. Esta habilidade causa dano que ignora parcialmente a defesa e resistência do inimigo, e pode ser ativada até 2 vezes por rodada.",
+          "translation": "追打击退敌人，造成倒地、定身和持续至下回合结束的负面状态免疫压制。本技能无视敌人部分防御和抗性，每回合最多触发2次。"
+        }
+      },
+      "21306035": {
+        "name": {
+          "source": "Estilo Sombra e Luz",
+          "translation": "阴阳遁"
+        },
+        "desc": {
+          "source": "Ao atacar e obter um Crítico, o alvo sofre <font color=\"#4dc831\">Interrupção</font> e <font color=\"#4dc831\">Selamento de Ninjutsu</font> que não pode ser evitado ou dispersado até o fim da rodada. No início de rodadas pares, Obito lança o <font color=\"#4dc831\">Super: Seis Caminhos: Cruz de Chamas</font> (mesmo quando sob Controle). Ao sofrer um ataque, recupera 3% de Vida.",
+          "translation": "攻击造成暴击时，对目标施加打断，以及无法免疫或驱散的忍术封印，持续至回合结束。偶数回合开始时，带土释放超·六道·十字奉火，被控制时仍可触发。受到攻击时恢复3%生命。"
+        }
+      },
+      "21306036": {
+        "name": {
+          "source": "Vida: Corpo",
+          "translation": "生命之躯"
+        },
+        "desc": {
+          "source": "Obito é imune a qualquer <font color=\"#4dc831\">status negativo</font> e dano puramente Ninjutsu e, sempre que recebe cura, seu Ataque Ninjutsu aumenta 5%.",
+          "translation": "带土免疫所有负面状态和纯忍术伤害，每次受到治疗时，忍术提高5%。"
+        }
+      },
+      "21306037": {
+        "name": {
+          "source": "Seis Caminhos: Cruz de Chamas",
+          "translation": "六道·十字奉火"
+        },
+        "desc": {
+          "source": "Causa dano e <font color=\"#4dc831\">Combo de 3</font> a até 12 inimigos e <font color=\"#4dc831\">Flutuação</font> ao inimigo escolhido, limitando o Chakra inimigo a no máximo 40 até o fim da próxima rodada. Ao lançar a Esotérica, obtém <font color=\"#4dc831\">Violência nv. 2</font> por 1 rodada.",
+          "translation": "对最多12名敌人造成伤害和3连击，使选定目标浮空，并将敌方查克拉上限限制为40，持续至下回合结束。释放奥义时，获得2级暴怒，持续1回合。"
+        }
+      },
+      "21306038": {
+        "name": {
+          "source": "Status de Violência",
+          "translation": "暴怒状态"
+        },
+        "desc": {
+          "source": "Antes de lançar a Esotérica, obtém o <font color=\"#4dc831\">status de Violência nv. 2</font>.",
+          "translation": "释放奥义前，获得2级暴怒状态。"
+        }
+      },
+      "21306039": {
+        "name": {
+          "source": "Super: Seis Caminhos: Cruz de Chamas",
+          "translation": "超·六道·十字奉火"
+        },
+        "desc": {
+          "source": "Lançado no início de rodadas pares, causa dano na certa e <font color=\"#4dc831\">Combo de 3</font> a até 12 inimigos e zera seu próprio Resfriamento, mas recebe 1% da Vida restante de dano sempre que age.",
+          "translation": "偶数回合开始时触发，对最多12名敌人造成必定命中的伤害和3连击，并清除自身冷却，但自身每次行动时受到相当于剩余生命1%的伤害。"
+        }
+      },
+      "21406031": {
+        "name": {
+          "source": "Vazio da Busca da Verdade",
+          "translation": "求道玉·虚空"
+        },
+        "desc": {
+          "source": "Ataca uma linha vertical de inimigos, causando dano, <font color=\"#4dc831\">Chamas</font> e <font color=\"#4dc831\">Supressão de Imunidade a Perseguição</font> até o fim da rodada e com grande chance de causar <font color=\"#4dc831\">Repelimento</font> a 1 inimigo aleatório. Acerta na certa.",
+          "translation": "攻击敌方一纵排，造成伤害、烈焰和持续至回合结束的追打免疫压制，并有较高概率使1名随机敌人击退。本技能必定命中。"
+        }
+      },
+      "21406032": {
+        "name": {
+          "source": "Vazio da Busca da Verdade",
+          "translation": "求道玉·虚空"
+        },
+        "desc": {
+          "source": "Ataca uma linha vertical de inimigos, causando dano, <font color=\"#4dc831\">Chamas</font> e <font color=\"#4dc831\">Supressão de Imunidade a Perseguição</font> até o fim da rodada e com grande chance de causar <font color=\"#4dc831\">Repelimento</font> a 1 inimigo aleatório. Acerta na certa.",
+          "translation": "攻击敌方一纵排，造成伤害、烈焰和持续至回合结束的追打免疫压制，并有较高概率使1名随机敌人击退。本技能必定命中。"
+        }
+      },
+      "21406033": {
+        "name": {
+          "source": "Vazio da Busca da Verdade",
+          "translation": "求道玉·虚空"
+        },
+        "desc": {
+          "source": "Ataca uma linha vertical de inimigos, causando dano, <font color=\"#4dc831\">Chamas</font> e <font color=\"#4dc831\">Supressão de Imunidade a Perseguição</font> até o fim da rodada e com grande chance de causar <font color=\"#4dc831\">Repelimento</font> a 1 inimigo aleatório. Acerta na certa.",
+          "translation": "攻击敌方一纵排，造成伤害、烈焰和持续至回合结束的追打免疫压制，并有较高概率使1名随机敌人击退。本技能必定命中。"
+        }
+      },
+      "21406034": {
+        "name": {
+          "source": "Ataque da Esfera da Busca da Verdade",
+          "translation": "求道玉攻击"
+        },
+        "desc": {
+          "source": "Persegue inimigos com <font color=\"#4dc831\">Repelimento</font> e causa <font color=\"#4dc831\">Queda</font> e <font color=\"#4dc831\">Imobilidade</font>, ignorando parte da Defesa e Resistência e podendo ser lançado até 2 vezes por rodada. Acerta na certa e, caso mate um inimigo, este não pode ser ressuscitado.",
+          "translation": "追打击退敌人，造成倒地和定身，无视部分防御和抗性，每回合最多触发2次。本技能必定命中，被击败的敌人无法复活。"
+        }
+      },
+      "21406035": {
+        "name": {
+          "source": "Estilo Sombra e Luz",
+          "translation": "阴阳遁"
+        },
+        "desc": {
+          "source": "Ao sofrer um ataque, seu Crítico aumenta 6% e causa ao atacante <font color=\"#4dc831\">Selamento de Ninjutsu</font> que não pode ser evitado ou dispersado até o fim rodada seguinte. No início de rodadas pares, Obito lança o <font color=\"#4dc831\">Super: Seis Caminhos: Cruz de Chamas</font> (mesmo quando sob Controle).",
+          "translation": "受到攻击时，自身暴击率提高6%，并对攻击者施加无法免疫或驱散的忍术封印，持续至下回合结束。偶数回合开始时，带土释放超·六道·十字奉火，被控制时仍可触发。"
+        }
+      },
+      "21406036": {
+        "name": {
+          "source": "Vida: Corpo",
+          "translation": "生命之躯"
+        },
+        "desc": {
+          "source": "Obito é imune a qualquer <font color=\"#4dc831\">status negativo</font> e dano puramente Ninjutsu e, sempre que recebe cura, seu Ataque aumenta 10%.",
+          "translation": "带土免疫所有负面状态和纯忍术伤害，每次受到治疗时，攻击提高10%。"
+        }
+      },
+      "21406037": {
+        "name": {
+          "source": "Seis Caminhos: Cruz de Chamas",
+          "translation": "六道·十字奉火"
+        },
+        "desc": {
+          "source": "Causa dano e <font color=\"#4dc831\">Combo de 3</font> a até 12 inimigos e <font color=\"#4dc831\">Flutuação</font> ao inimigo escolhido, limitando o Chakra de sua equipe a no máximo 40 até o fim rodada seguinte. Ao lançar a Esotérica, ganha <font color=\"#4dc831\">Violência Y nv. 2</font> por 1 rodada.",
+          "translation": "对最多12名敌人造成伤害和3连击，使选定目标浮空，并将己方队伍查克拉上限限制为40，持续至下回合结束。释放奥义时，获得暴怒·Y·2级，持续1回合。"
+        }
+      },
+      "21406038": {
+        "name": {
+          "source": "Status de Violência",
+          "translation": "暴怒状态"
+        },
+        "desc": {
+          "source": "Antes de lançar a Esotérica, obtém o <font color=\"#4dc831\">status de Violência Y nv. 2</font>.",
+          "translation": "释放奥义前，获得暴怒·Y·2级状态。"
+        }
+      },
+      "21406039": {
+        "name": {
+          "source": "Super: Seis Caminhos: Cruz de Chamas",
+          "translation": "超·六道·十字奉火"
+        },
+        "desc": {
+          "source": "Lançado no início de rodadas pares, causa dano na certa e <font color=\"#4dc831\">Combo de 3</font> a até 12 inimigos e zera seu próprio Resfriamento, mas recebe 1% da Vida restante de dano sempre que age.",
+          "translation": "偶数回合开始时触发，对最多12名敌人造成必定命中的伤害和3连击，并清除自身冷却，但自身每次行动时受到相当于剩余生命1%的伤害。"
+        }
+      }
+    }
+  },
+  "skillDetails": {
+    "class": "SkillKeyDescCFG",
+    "rows": {}
+  }
+}

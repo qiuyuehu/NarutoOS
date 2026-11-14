@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>Naruto OS</title><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="lobby.css">
+</head>
+<body>
+  <header class="chrome">
+    <div class="tabline"><span class="traffic-space" aria-hidden="true"></span><button id="home" class="icon-button" title="启动页 ⇧⌘H" aria-label="启动页" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 11 9-8 9 8M5 10v11h5v-7h4v7h5V10"/></svg></button><nav id="tabs" aria-label="游戏标签"></nav><button id="new-tab" class="icon-button add" title="选择或打开其他账号 ⌘T" aria-label="选择或打开其他账号"></button><span class="drag-space"></span><div class="status" role="status"><span id="status-dot" class="status-dot"></span><span id="status-text"></span></div><div class="tools"><button id="refresh" class="icon-button" title="刷新当前页面 ⌘R" aria-label="刷新当前页面"></button><button id="mute" class="icon-button" title="总静音" aria-label="总静音" aria-pressed="false"></button><button id="settings" class="icon-button" title="设置 ⌘," aria-label="设置" aria-expanded="false"></button></div></div>
+  </header>
+  <aside id="save-prompt" class="save-prompt" hidden><span id="save-text"></span><button id="save-password" class="primary small">保存</button><button id="dismiss-password" class="quiet small">暂不</button></aside>
+  <aside id="recovery-prompt" class="recovery-prompt" role="status" hidden><span id="recovery-text">确认新游戏可以正常操作后，完成切换。</span><button id="complete-recovery" class="primary small">完成切换</button><button id="cancel-recovery" class="quiet small">取消</button></aside>
+  <main id="surface">
+    <section id="lobby" class="lobby" aria-labelledby="lobby-title" hidden>
+      <div class="lobby-artwork" aria-hidden="true">
+        <canvas id="lobby-dots" class="lobby-canvas dots"></canvas>
+        <canvas id="lobby-lines" class="lobby-canvas lines"></canvas>
+        <img id="lobby-character" class="lobby-character" src="lobby-art-br.png" alt="" draggable="false">
+      </div>
+
+      <div id="lobby-dock" class="lobby-dock" aria-label="启动">
+        <h1 id="lobby-title" class="lobby-brand" aria-label="Naruto OS">
+          <span class="word">NARUTO</span><span class="word os"><svg class="swirl" viewBox="0 0 12 12" aria-hidden="true"><path d="M5.91 5.41 L5.91 5.05 L5.98 4.90 L6.06 4.79 L6.15 4.70 L6.25 4.63 L6.36 4.58 L6.48 4.54 L6.60 4.52 L6.72 4.51 L6.85 4.51 L6.98 4.52 L7.11 4.55 L7.24 4.59 L7.36 4.64 L7.49 4.71 L7.61 4.79 L7.72 4.87 L7.83 4.97 L7.93 5.08 L8.03 5.20 L8.11 5.32 L8.19 5.46 L8.26 5.60 L8.32 5.75 L8.37 5.91 L8.40 6.07 L8.43 6.23 L8.44 6.40 L8.44 6.57 L8.42 6.75 L8.40 6.92 L8.36 7.09 L8.31 7.26 L8.24 7.43 L8.17 7.60 L8.07 7.76 L7.97 7.92 L7.86 8.07 L7.73 8.21 L7.59 8.35 L7.45 8.47 L7.29 8.59 L7.12 8.69 L6.95 8.79 L6.76 8.87 L6.57 8.94 L6.37 9.00 L6.17 9.04 L5.97 9.07 L5.76 9.09 L5.55 9.09 L5.33 9.08 L5.12 9.05 L4.91 9.01 L4.70 8.95 L4.49 8.87 L4.29 8.78 L4.09 8.68 L3.90 8.56 L3.71 8.43 L3.54 8.29 L3.37 8.13 L3.22 7.96 L3.07 7.78 L2.94 7.59 L2.82 7.39 L2.71 7.18 L2.62 6.96 L2.54 6.73 L2.48 6.50 L2.43 6.26 L2.40 6.02 L2.39 5.78 L2.39 5.53 L2.41 5.29 L2.45 5.04 L2.50 4.80 L2.57 4.55 L2.66 4.32 L2.76 4.08 L2.88 3.86 L3.02 3.64 L3.17 3.43 L3.34 3.23 L3.52 3.05 L3.71 2.87 L3.92 2.71 L4.13 2.56 L4.36 2.42 L4.60 2.30 L4.85 2.20 L5.10 2.11 L5.37 2.04 L5.63 1.99 L5.90 1.96 L6.18 1.94 L6.45 1.94 L6.73 1.97 L7.01 2.01 L7.28 2.07 L7.55 2.15 L7.81 2.24 L8.07 2.36 L8.32 2.49 L8.56 2.64 L8.79 2.81 L9.02 2.99 L9.22 3.19 L9.42 3.41 L9.60 3.63 L9.77 3.87 L9.92 4.13 L10.05 4.39 L10.17 4.66 L10.26 4.94 L10.34 5.23 L10.40 5.52 L10.44 5.82 L10.46 6.12 L10.45 6.42 L10.43 6.72 L10.39 7.02 L10.32 7.32 L10.24 7.62 L10.13 7.91 L10.01 8.19 L9.87 8.46 L9.70 8.73 L9.52 8.98 L9.33 9.22 L9.11 9.45 L8.88 9.67 L8.64 9.86 L8.38 10.05 L8.10 10.21 L7.82 10.36 L7.53 10.49 L7.23 10.59 L6.92 10.68 L6.60 10.75 L6.28 10.79 L5.95 10.81 L5.63 10.81 L5.30 10.79 L4.98 10.75 L4.66 10.68 L4.34 10.60 L4.03 10.49 L3.72 10.36 L3.42 10.20 L3.14 10.03 L2.86 9.84 L2.60 9.63 L2.35 9.40 L2.12 9.16 L1.91 8.90 L1.71 8.62 L1.53 8.33 L1.37 8.03 L1.23 7.72 L1.11 7.40 L1.01 7.07 L0.94 6.73 L0.89 6.39 L0.86 6.04 L0.85 5.69 L0.87 5.34 L0.92 5.00 L0.98 4.65 L1.07 4.31 L1.18 3.98 L1.32 3.65 L1.48 3.33 L1.66 3.03 L1.86 2.73 L2.08 2.45 L2.32 2.19 L2.57 1.94 L2.85 1.70 L3.14 1.49 L3.44 1.29 L3.76 1.12 L4.09 0.97 L4.43 0.84 L4.78 0.73 L5.14 0.65 L5.50 0.59 L5.86 0.55 L6.23 0.54 L6.60 0.56 L6.97 0.60 L7.33 0.67 L7.69 0.76 L8.05 0.87 L8.40 1.01 L8.73 1.17 L9.06 1.36 L9.38 1.56 L9.68 1.79 L9.96 2.04"/></svg>S</span>
+        </h1>
+        <div id="profile-deck" class="lobby-deck" role="listbox" aria-label="选择启动账号" tabindex="-1" hidden></div>
+        <div class="lobby-capsule">
+          <button id="lobby-region" class="lobby-region" type="button" aria-label="当前巴西服，点击切换地区"><span id="lobby-region-label">巴西服</span></button>
+          <button id="lobby-current" class="lobby-current" type="button" aria-haspopup="listbox" aria-controls="profile-deck" aria-expanded="false" aria-label="选择启动账号">
+            <span id="lobby-stack" class="lobby-stack" aria-hidden="true"></span>
+            <span id="lobby-avatar" class="lobby-avatar" aria-hidden="true">·</span>
+            <span class="lobby-label"><b id="lobby-account-name"></b><small id="profile-choice-note" hidden></small></span>
+          </button>
+          <button id="open-game" disabled class="lobby-start" type="button"><span>出发</span></button>
+        </div>
+        <div class="lobby-status-area"><div id="profile-launch-status" role="status" hidden></div><div class="profile-launch-actions"><button id="lobby-create-profile" class="quiet small" type="button" hidden>新建档案</button><button id="lobby-profile-retry" class="quiet small" type="button" hidden>重试</button></div></div>
+      </div>
+    </section>
+    <div id="placeholder" class="placeholder" hidden><p id="placeholder-title"></p><span id="placeholder-detail"></span><button id="placeholder-recover" class="quiet" hidden>重试</button></div>
+  </main>
+  <section id="settings-panel" class="settings-panel" aria-label="设置" hidden>
+    <nav class="settings-nav" aria-label="设置分类">
+      <button class="settings-nav-item" type="button" data-settings-page="game" aria-current="page">游戏</button>
+      <button class="settings-nav-item" type="button" data-settings-page="appearance">外观</button>
+      <button class="settings-nav-item" type="button" data-settings-page="accounts">账号</button>
+    </nav>
+    <div class="settings-main" id="settings-main">
+      <div class="preferences">
+        <div class="settings-head"><h1>设置</h1><button id="close-settings" class="quiet">完成</button></div>
+        <div class="settings-page" data-settings-content="game">
+          <section class="section" aria-labelledby="game-heading">
+            <div class="section-head"><h2 id="game-heading">游戏</h2></div>
+            <div class="rows">
+              <div class="row"><label id="mute-label">静音</label><button id="settings-mute" class="switch" role="switch" aria-labelledby="mute-label" aria-checked="false"><span></span></button></div>
+              <div class="row"><label id="localization-label">游戏汉化<span class="hint" id="localization-detail">巴西服 · 重启应用后生效</span></label><button id="settings-localization" class="switch" role="switch" aria-labelledby="localization-label" aria-describedby="localization-detail" aria-checked="false"><span></span></button></div>
+              <div class="row"><label for="quality-select">默认画质</label><select id="quality-select"><option value="low">低</option><option value="medium">中</option><option value="high">高</option></select></div>
+              <div class="row"><label for="flash-select">Flash</label><div class="flash-options"><select id="flash-select"><option value="34">34.0.0.384</option><option value="31">31.0.0.148</option></select><span id="flash-detail" hidden></span></div></div>
+            </div>
+          </section>
+        </div>
+        <div class="settings-page" data-settings-content="appearance" hidden>
+          <section class="section" aria-labelledby="appearance-heading">
+            <div class="section-head"><h2 id="appearance-heading">外观</h2></div>
+            <div class="rows">
+              <div class="row"><label for="theme-select">主题</label><select id="theme-select"><option value="system">跟随系统</option><option value="light">浅色</option><option value="dark">深色</option></select></div>
+              <div class="row"><label for="title-mode">标题栏</label><div class="title-options"><input id="title-color" type="color" value="#b7c4d4" aria-label="标题栏颜色" hidden><select id="title-mode"><option value="default">默认</option><option value="custom">自定义颜色</option></select></div></div>
+              <div class="row"><label for="lobby-bg-mode">启动页背景</label><div class="lobby-background-options"><input id="lobby-bg-custom" type="color" value="#fdfcfa" aria-label="自定义启动页背景" hidden><select id="lobby-bg-mode" aria-label="启动页背景"><option value="theme">跟随主题</option><option value="#fdfcfa">纸白</option><option value="#f3ede2">宣纸</option><option value="#e8e8ea">雾灰</option><option value="#f5e3df">樱粉</option><option value="#e1e7d6">抹茶</option><option value="#dde7ec">天青</option><option value="#e8bf55">芥黄</option><option value="#6f8aa6">灰蓝</option><option value="#161514">夜墨</option><option value="#19202c">藏青</option><option value="#2b2d2a">松烟</option><option value="custom">自定义颜色</option></select></div></div>
+              <div class="row"><label id="lobby-motion-label">启动页动态效果</label><button id="lobby-motion" class="switch" type="button" role="switch" aria-labelledby="lobby-motion-label" aria-checked="true"><span></span></button></div>
+            </div>
+          </section>
+        </div>
+        <div class="settings-page" data-settings-content="accounts" hidden>
+          <div class="account-grid">
+            <section class="section account-card" aria-labelledby="profiles-heading">
+              <div class="section-head"><h2 id="profiles-heading">登录档案</h2><button id="profile-create" class="quiet small" type="button">新建档案</button></div>
+              <div id="profile-error" class="profile-error" role="status" hidden></div>
+              <button id="profile-retry" class="quiet small" type="button" hidden>重新检查旧登录槽位</button>
+              <div id="profile-list" aria-live="polite"></div>
+            </section>
+            <section class="section account-card" aria-labelledby="accounts-heading">
+              <div class="section-head"><h2 id="accounts-heading">已保存的密码（国服推荐扫码登录）</h2><div class="section-tools"><button id="credential-create" class="quiet small" type="button">新增</button><span id="vault-count" hidden>0</span></div></div>
+              <div id="credentials" aria-live="polite"></div><button id="reload-credentials" class="quiet small" hidden>重试</button>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div id="toast" role="status" hidden></div>
+  <div id="profile-picker-backdrop" class="profile-picker-backdrop" hidden><section class="profile-picker" role="dialog" aria-modal="true" aria-labelledby="profile-picker-title"><h2 id="profile-picker-title">选择登录档案</h2><p id="profile-picker-help" class="profile-help"></p><div id="profile-picker-status" role="status"></div><div id="profile-picker-list"></div><div class="profile-picker-actions"><button id="profile-picker-create" class="quiet" type="button">新建档案</button><button id="profile-picker-retry" class="quiet small" type="button" hidden>重试</button><span></span><button id="profile-picker-cancel" class="quiet" type="button">取消</button></div></section></div>
+  <div id="dialog-backdrop" class="dialog-backdrop" hidden><form id="edit-form" class="dialog" aria-labelledby="dialog-title" role="dialog" aria-modal="true"><h2 id="dialog-title">标签备注</h2><p id="dialog-description" class="dialog-description" hidden></p><label id="credential-site-label" for="credential-site" hidden>登录站点</label><select id="credential-site" hidden></select><label id="name-label" for="edit-name">备注</label><input id="edit-name" maxlength="320" autocomplete="off"><label id="password-label" for="edit-password" hidden>密码</label><input id="edit-password" type="password" autocomplete="new-password" hidden><label id="server-note-label" for="edit-server-note" hidden>常用区服备注（仅供提醒）</label><input id="edit-server-note" maxlength="40" autocomplete="off" hidden><p id="dialog-error" class="error" role="alert"></p><div class="dialog-actions"><button id="dialog-cancel" type="button" class="quiet">取消</button><button id="dialog-save" type="submit" class="primary">保存</button></div></form></div>
+  <script src="app.js"></script>
+</body></html>

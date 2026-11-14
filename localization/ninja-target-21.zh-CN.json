@@ -1,0 +1,139 @@
+{
+  "id": "naruto-ninja-target-21-zh-CN-v1",
+  "rootId": "11011831",
+  "ninjaInfo": {
+    "class": "NinjaInfoCFG",
+    "rows": {
+      "11011831": {
+        "name": {
+          "source": "Shisui Uchiha",
+          "translation": "宇智波止水"
+        },
+        "title": {
+          "source": "[Oriental]",
+          "translation": "【新中国风】"
+        }
+      }
+    }
+  },
+  "skills": {
+    "class": "SkillCFG",
+    "rows": {
+      "21011831": {
+        "name": {
+          "source": "Estilo Uchiha: Dança Auréola",
+          "translation": "宇智波流·日晕之舞"
+        },
+        "desc": {
+          "source": "Ataca o inimigo à frente, causando dano de <font color=\"#4dc831\">Fogo</font> e <font color=\"#4dc831\">Chamas</font> que não podem ser dispersadas ou evitadas. Há chance de atacar uma linha inteira de inimigos, causando <font color=\"#4dc831\">Queda</font> a 1 inimigo.",
+          "translation": "攻击前方敌人，造成火属性伤害和无法驱散或免疫的烈焰。有概率攻击整排敌人，并使1名敌人倒地。"
+        }
+      },
+      "21011832": {
+        "name": {
+          "source": "Estilo Uchiha: Dança Auréola",
+          "translation": "宇智波流·日晕之舞"
+        },
+        "desc": {
+          "source": "Ataca o inimigo à frente, causando dano de <font color=\"#4dc831\">Fogo</font> e <font color=\"#4dc831\">Chamas</font> que não podem ser dispersadas ou evitadas. Há chance de atacar uma linha inteira de inimigos, causando <font color=\"#4dc831\">Queda</font> a 1 inimigo.",
+          "translation": "攻击前方敌人，造成火属性伤害和无法驱散或免疫的烈焰。有概率攻击整排敌人，并使1名敌人倒地。"
+        }
+      },
+      "21011833": {
+        "name": {
+          "source": "Estilo Uchiha: Dança Auréola",
+          "translation": "宇智波流·日晕之舞"
+        },
+        "desc": {
+          "source": "Ataca o inimigo à frente, causando dano de <font color=\"#4dc831\">Fogo</font> e <font color=\"#4dc831\">Chamas</font> que não podem ser dispersadas ou evitadas. Há chance de atacar uma linha inteira de inimigos, causando <font color=\"#4dc831\">Queda</font> a 1 inimigo.",
+          "translation": "攻击前方敌人，造成火属性伤害和无法驱散或免疫的烈焰。有概率攻击整排敌人，并使1名敌人倒地。"
+        }
+      },
+      "21011834": {
+        "name": {
+          "source": "Análise estratégica",
+          "translation": "战略分析"
+        },
+        "desc": {
+          "source": "Aumenta a Velocidade de sua em equipe em <font color=\"#4dc831\">3%</font> (até o máximo de 4) no início de cada rodada. Ninjas com <font color=\"#4dc831\">Kekkei Genkai</font> também tem seu <font color=\"#4dc831\">Resfriamento</font> reduzido em 1 (até o mínimo de 1) e ganham <font color=\"#4dc831\">25%</font> de <font color=\"#4dc831\">Crítico</font> (até o máximo de 2).",
+          "translation": "每回合开始时，己方小队先攻提高3%，最多4次。血继限界忍者的冷却额外减少1回合，最低为1，暴击率提高25%，最多2次。"
+        }
+      },
+      "21011835": {
+        "name": {
+          "source": "Mangekyo Sharingan",
+          "translation": "万花筒写轮眼"
+        },
+        "desc": {
+          "source": "Enquanto o <font color=\"#4dc831\">Genjutsu: Brilho de Luz</font> estiver ativo, Shisui ataca 1 inimigo antes da 2ª ação de cada rodada, causando <font color=\"#4dc831\">Supressão de Imunidade a Status negativos</font> e <font color=\"#4dc831\">Confusão Grave</font>.",
+          "translation": "幻术·光芒结界生效期间，止水在每回合第2次行动前攻击1名敌人，施加负面状态免疫压制和重度混乱。"
+        }
+      },
+      "21011836": {
+        "name": {
+          "source": "Mangekyo Sharingan",
+          "translation": "万花筒写轮眼"
+        },
+        "desc": {
+          "source": "Reduz a Velocidade de todos os alvos em <font color=\"#4dc831\">2%</font> (até o máximo de 5) no início do combate e lança o plano <font color=\"#4dc831\">Genjutsu: Brilho de Luz</font>.",
+          "translation": "战斗开始时，使所有目标先攻降低2%，最多5次，并展开幻术·光芒结界。"
+        }
+      },
+      "21011837": {
+        "name": {
+          "source": "Susano'o: Armadura",
+          "translation": "须佐能乎·铠甲"
+        },
+        "desc": {
+          "source": "Tem <font color=\"#4dc831\">Imunidade a Perseguição</font> e altíssima chance de se esquivar de <font color=\"#4dc831\">Perseguições</font>. Ao realizar uma esquiva, seu <font color=\"#4dc831\">Ninjutsu</font> aumenta em <font color=\"#4dc831\">25%</font> (até o méximo de 4). Além disso, na primeira vez que recebe dano de Esotérica em cada rodada, ele é reduzido em <font color=\"#4dc831\">40%</font>.",
+          "translation": "免疫追打，并以极高概率闪避追打。每次闪避时，忍术提高25%，最多4次。此外，每回合首次受到的奥义伤害降低40%。"
+        }
+      },
+      "21011838": {
+        "name": {
+          "source": "Mangekyo Sharingan",
+          "translation": "万花筒写轮眼"
+        },
+        "desc": {
+          "source": "Enquanto o <font color=\"#4dc831\">Genjutsu: Brilho de Luz</font> estiver ativo, sua facção não pode sofrer <font color=\"#4dc831\">Terror</font>.",
+          "translation": "幻术·光芒结界生效期间，己方阵营无法受到恐惧。"
+        }
+      },
+      "21011839": {
+        "name": {
+          "source": "Perfectivo: Susano'o",
+          "translation": "完全体须佐能乎"
+        },
+        "desc": {
+          "source": "Causa dano de <font color=\"#4dc831\">Combo de 5</font> <font color=\"#4dc831\">sempre acerta</font> a toda a equipe inimiga e aplica <font color=\"#4dc831\">Ruptura</font>, <font color=\"#4dc831\">Repelimento</font> ao alvo selecionado, além de bloquear o <font color=\"#4dc831\">Resfriamento da Esotérica</font> em 2 rodadas (até o final da próxima rodada). Também concede a si mesmo <font color=\"#4dc831\">Violência</font> e, caso escolha um aliado, usa o <font color=\"#4dc831\">Mangekyo Sharingan</font> novamente.",
+          "translation": "对敌方全队造成必定命中的5连击伤害，对选定目标施加破碎和击退，将其奥义冷却锁定为2回合，持续至下回合结束。自身获得暴怒。若选定己方目标，则再次使用万花筒写轮眼。"
+        }
+      }
+    }
+  },
+  "skillDetails": {
+    "class": "SkillKeyDescCFG",
+    "rows": {
+      "373": {
+        "keys": {
+          "source": "Genjutsu: Brilho de Luz",
+          "translation": "幻术·光芒"
+        },
+        "desc": {
+          "source": "Enquanto o plano estiver ativo, a formação aliada não poderá ser afetada pelo status [Terror], e o plano dura 2 rodadas. Além disso, dentro do plano, Shisui atacará um inimigo aleatório do time adversário antes de suas 2 primeiras ações a cada rodada, aplicando [Supressão de Imunidade a Status negativos] (o efeito dura 1 rodada) e causando [Confusão Grave].",
+          "translation": "结界生效期间，己方阵营无法受到[恐惧]，结界持续2回合。此外，止水每回合前2次行动前，随机攻击敌方小队1名敌人，施加持续1回合的[负面状态免疫压制]和[重度混乱]。"
+        }
+      },
+      "374": {
+        "keys": {
+          "source": "Violência",
+          "translation": "暴怒"
+        },
+        "desc": {
+          "source": "Exclusivo para Shisui Uchiha [Estilo Chinês Novo]: neste status, Shisui possui [Imunidade a Perseguição Nv.2] e, ao receber um ataque, há 45% de chance de causar [Desordem] ao atacante. [Desordem]: neste status, a chance de esquiva é reduzida para [30%]. Sempre que causar dano ou sofrer dano, o portador terá sua vida reduzida em [2%] (o efeito não pode ser imunizado nem dispersado e dura até o final da próxima rodada.).",
+          "translation": "宇智波止水【新中国风】专属：此状态下，止水获得[2级追打免疫]，受到攻击时有45%概率使攻击者[失序]：[失序]状态下，闪避率降至[30%]，每次造成或受到伤害时，生命减少[2%]。无法免疫或驱散，持续至下回合结束。"
+        }
+      }
+    }
+  }
+}

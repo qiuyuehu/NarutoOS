@@ -1,0 +1,40 @@
+{
+  "name": "naruto-os",
+  "productName": "Naruto OS",
+  "version": "0.2.3",
+  "private": true,
+  "description": "个人 macOS 火影 Online 启动器",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test tests/*.test.cjs",
+    "start": "node scripts/start-native-prototype.mjs",
+    "dev": "pnpm prototype:build && pnpm start",
+    "verify": "pnpm typecheck && pnpm build && pnpm test",
+    "test:integration": "pnpm prototype:build && NARUTO_C_SKIP_MEASURE=1 node scripts/test-native-prototype.mjs --maintenance-only && node scripts/test-launcher-center.mjs && node scripts/test-attempt-ownership.mjs",
+    "test:login": "node scripts/test-login.mjs",
+    "test:network": "node scripts/test-network.mjs",
+    "test:native": "node scripts/test-native.mjs",
+    "prepare:icon": "node scripts/prepare-icon.mjs",
+    "package:local": "pnpm build && node scripts/build-native-prototype.mjs && node scripts/package-native.mjs",
+    "test:package": "node scripts/test-native-package.mjs",
+    "test:focus": "node scripts/test-focus.mjs",
+    "test:refresh": "node scripts/test-refresh.mjs",
+    "test:memory": "node scripts/test-memory.mjs",
+    "test:resource-bridge": "node scripts/test-battle-memory-bridge.mjs",
+    "test:sessions": "node scripts/test-sessions.mjs",
+    "test:web-login": "node scripts/test-web-login.mjs",
+    "prototype:build": "pnpm build && node scripts/build-native-prototype.mjs",
+    "prototype:start": "node scripts/start-native-prototype.mjs",
+    "prototype:test": "node scripts/test-native-prototype.mjs",
+    "package:native": "node scripts/package-native.mjs"
+  },
+  "devDependencies": {
+    "@types/node": "14.18.63",
+    "electron": "11.5.0",
+    "esbuild": "0.25.12",
+    "node-api-headers": "1.9.0",
+    "typescript": "5.9.3"
+  },
+  "license": "MIT"
+}

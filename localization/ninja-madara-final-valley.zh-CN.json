@@ -1,0 +1,502 @@
+{
+  "id": "naruto-ninja-madara-final-valley-zh-CN-v1",
+  "ninjaInfo": {
+    "file": "NinjaInfoCFG.zh-CN.cfg",
+    "class": "NinjaInfoCFG",
+    "rows": {
+      "11011756": {
+        "name": {
+          "source": "Madara Uchiha",
+          "translation": "宇智波斑"
+        },
+        "title": {
+          "source": "[Vale do Fim]",
+          "translation": "【终焉之战】"
+        }
+      },
+      "11011741": {
+        "name": {
+          "source": "Madara Uchiha",
+          "translation": "宇智波斑"
+        },
+        "title": {
+          "source": "[Vale do Fim]",
+          "translation": "【终焉之战】"
+        }
+      }
+    }
+  },
+  "skills": {
+    "file": "SkillCFG.madara-zh-CN.cfg",
+    "class": "SkillCFG",
+    "rows": {
+      "21511751": {
+        "name": {
+          "source": "Susano'o: Dança das Espadas Ardentes",
+          "translation": "须佐能乎·烈焰剑舞"
+        },
+        "desc": {
+          "source": "Ataca uma equipe inimiga aleatória, causando dano que <font color=\"#4dc831\">sempre acerta</font>, com alta probabilidade de causar <font color=\"#4dc831\">Queda</font> a 1 inimigo aleatório. Se um inimigo for derrotado com esta habilidade, será lançado <font color=\"#4dc831\">Susano'o: Dança das Espadas Ardentes</font>. Esta habilidade tem bônus extra de <font color=\"#4dc831\">Crítico</font>.",
+          "translation": "攻击一支随机敌方小队，造成必定命中的伤害，并有较高概率对1名随机敌人造成倒地。若此技能击败敌人，则追加释放一次须佐能乎·烈焰剑舞。本技能拥有额外暴击加成。"
+        }
+      },
+      "21511752": {
+        "name": {
+          "source": "Susano'o: Dança das Espadas Ardentes",
+          "translation": "须佐能乎·烈焰剑舞"
+        },
+        "desc": {
+          "source": "Ataca uma equipe inimiga aleatória, causando dano que <font color=\"#4dc831\">sempre acerta</font>, com alta probabilidade de causar <font color=\"#4dc831\">Queda</font> a 1 inimigo aleatório. Se um inimigo for derrotado com esta habilidade, será lançado <font color=\"#4dc831\">Susano'o: Dança das Espadas Ardentes</font>. Esta habilidade tem bônus extra de <font color=\"#4dc831\">Crítico</font>.",
+          "translation": "攻击一支随机敌方小队，造成必定命中的伤害，并有较高概率对1名随机敌人造成倒地。若此技能击败敌人，则追加释放一次须佐能乎·烈焰剑舞。本技能拥有额外暴击加成。"
+        }
+      },
+      "21511753": {
+        "name": {
+          "source": "Susano'o: Dança das Espadas Ardentes",
+          "translation": "须佐能乎·烈焰剑舞"
+        },
+        "desc": {
+          "source": "Ataca uma equipe inimiga aleatória, causando dano que <font color=\"#4dc831\">sempre acerta</font>, com alta probabilidade de causar <font color=\"#4dc831\">Queda</font> a 1 inimigo aleatório. Se um inimigo for derrotado com esta habilidade, será lançado <font color=\"#4dc831\">Susano'o: Dança das Espadas Ardentes</font>. Esta habilidade tem bônus extra de <font color=\"#4dc831\">Crítico</font>.",
+          "translation": "攻击一支随机敌方小队，造成必定命中的伤害，并有较高概率对1名随机敌人造成倒地。若此技能击败敌人，则追加释放一次须佐能乎·烈焰剑舞。本技能拥有额外暴击加成。"
+        }
+      },
+      "21411754": {
+        "name": {
+          "source": "Estilo Fogo: Grande Aniquilação do Fogo",
+          "translation": "火遁·豪火灭却"
+        },
+        "desc": {
+          "source": "<font color=\"#4dc831\">Lançado com combo de 20</font>, causa dano de <font color=\"#4dc831\">Fogo</font> que <font color=\"#4dc831\">sempre acerta</font> e <font color=\"#4dc831\">Queimadura</font> a <font color=\"#4dc831\">9</font> inimigos. Ao abater um inimigo, esta habilidade causa à parte inimiga dano espalhado a <font color=\"#4dc831\">15%</font> da vida restante de Madara (máximo de 30000).",
+          "translation": "连击达到20时触发，对9名敌人造成必定命中的火属性伤害和灼烧。击败敌人时，对敌方全体造成相当于斑剩余生命值15%的溅射伤害，最多30000点。"
+        }
+      },
+      "21311755": {
+        "name": {
+          "source": "A Reflexão Uchiha",
+          "translation": "宇智波反弹·Y"
+        },
+        "desc": {
+          "source": "Há uma grande probabilidade de se esquivar dos primeiros 3 ataques em cada rodada. Na primeira esquiva, ganha adicionalmente <font color=\"#4dc831\">30%</font> de <font color=\"#4dc831\">Ninjutsu</font> e lança a <font color=\"#4dc831\">Habilidade adicional</font>: <font color=\"#4dc831\">Armado: Susano'o</font> (Causa dano Ninjutsu de <font color=\"#4dc831\">Combo de 5</font> que <font color=\"#4dc831\">Ignora o Escudo</font> a todos os inimigos e concede <font color=\"#4dc831\">Queda</font>, <font color=\"#4dc831\">Imobilidade</font>, <font color=\"#4dc831\">Supressão de Imunidade a Status negativos</font> ao alvo com a menor vida, até o final da próxima rodada.",
+          "translation": "每回合有较高概率闪避前3次攻击。首次闪避时，额外获得30%忍术，并触发追加技能：须佐能乎·武装（对敌方全体造成无视护盾的5连击忍术伤害，并对生命值最低的目标造成倒地、定身和负面状态免疫压制，持续至下回合结束）。"
+        }
+      },
+      "21511756": {
+        "name": {
+          "source": "Explosão de Chakra",
+          "translation": "查克拉爆发·Y"
+        },
+        "desc": {
+          "source": "No final de cada rodada, desativa <font color=\"#4dc831\">Explosão de Chakra</font>. Madara ganha <font color=\"#4dc831\">10%</font> de dano de habilidade de <font color=\"#4dc831\">Perseguição</font> (pode acumular) e recupera <font color=\"#4dc831\">60</font> pontos de Chakra. Após a remoção do status, todas as habilidades de Madara continuam com o efeito <font color=\"#4dc831\">Y</font>.",
+          "translation": "每回合结束时，查克拉爆发效果解除。斑的追打技能伤害提高10%（可叠加），并恢复60点查克拉。状态解除后，斑的所有技能仍保留Y效果。"
+        }
+      },
+      "21411759": {
+        "name": {
+          "source": "Susano'o: Armadura",
+          "translation": "须佐能乎·铠甲"
+        },
+        "desc": {
+          "source": "Madara possui <font color=\"#4dc831\">Imunidade a Perseguição Nv.2</font> e ao dano puro de <font color=\"#4dc831\">Taijutsu</font>. Ao causar <font color=\"#4dc831\">Crítico</font>, ganha <font color=\"#4dc831\">10%</font> de <font color=\"#4dc831\">Ninjutsu</font>. Além disso, nas primeiras <font color=\"#4dc831\">4</font> vezes que sofrer dano de <font color=\"#4dc831\">Esotérica</font> em cada rodada, executa adicionalmente a <font color=\"#4dc831\">Habilidade adicional</font>: <font color=\"#4dc831\">Genjutsu: Mangekyo Sharingan</font> (Ataca alvos frontais e sujeitos a <font color=\"#4dc831\">Queimadura</font>, causando dano que <font color=\"#4dc831\">sempre acerta</font>, <font color=\"#4dc831\">Interrupção</font> e <font color=\"#4dc831\">Colapso Mental</font> a até <font color=\"#4dc831\">7</font> inimigos, e anulando <font color=\"#4dc831\">Obstinação</font>). O uso desta habilidade reduz o próprio <font color=\"#4dc831\">Resfriamento da Esotérica</font> em 1 rodada).",
+          "translation": "斑获得2级追打免疫，并免疫体术造成的纯粹伤害。造成暴击时，忍术提高10%。每回合前4次受到奥义伤害时，额外触发追加技能：幻术·万花筒写轮眼，对前排灼烧目标造成必定命中的伤害、打断和精神崩溃，最多影响7名敌人，并清除其执念。使用该技能后，自身奥义冷却减少1回合。"
+        }
+      },
+      "21311785": {
+        "name": {
+          "source": "Jutsu Clone das Sombras",
+          "translation": "影分身之术"
+        },
+        "desc": {
+          "source": "Lançado ao entrar em campo, invoca <font color=\"#4dc831\">1</font> Clone das Sombras com <font color=\"#4dc831\">60%</font> da vida e a habilidade <font color=\"#4dc831\">Susano'o: Armadura</font> (Recebe <font color=\"#4dc831\">Imunidade a Perseguição</font> e ao dano puro de <font color=\"#4dc831\">Taijutsu</font>. Se um Ninja <font color=\"#4dc831\">Espadachim</font> de <font color=\"#4dc831\">Uchiha</font> na equipe aliada liberar a habilidade de tipo <font color=\"#4dc831\">gatilho</font>, ganha propriamente 1 chance extra de ataque comum, até um máximo de 5 por rodada). Além disso, durante a rodada, o corpo original recebe <font color=\"#4dc831\">Imunidade a interrupção</font> e ao sofrer dano mortal pela primeira vez, recupera imediatamente <font color=\"#4dc831\">30%</font> de vida.",
+          "translation": "登场时触发，召唤1个影分身，拥有自身60%的生命值和技能“须佐能乎·铠甲”（获得追打免疫，并免疫体术造成的纯粹伤害；若己方宇智波剑士忍者释放触发型技能，影分身获得1次额外普攻机会，每回合最多5次）。本回合本体获得打断免疫；首次受到致命伤害时立即恢复30%生命值。"
+        }
+      },
+      "21211789": {
+        "name": {
+          "source": "Armado: Susano'o",
+          "translation": "须佐能乎·武装"
+        },
+        "desc": {
+          "source": "Causa dano de <font color=\"#4dc831\">Combo de 5</font> que <font color=\"#4dc831\">sempre acerta</font> a <font color=\"#4dc831\">12</font> inimigos, e concede <font color=\"#4dc831\">Queda</font>, <font color=\"#4dc831\">Imobilidade</font> e <font color=\"#4dc831\">Supressão de Imunidade a Status negativos nv. 2</font> ao alvo escolhido até o final da próxima rodada. Alvos derrotados por esta habilidade não podem ressuscitar.",
+          "translation": "对12名敌人造成必定命中的5连击伤害，并使选定目标倒地、定身，且压制2级负面状态免疫，持续至下回合结束。被此技能击败的目标无法复活。"
+        }
+      },
+      "21011741": {
+        "name": {
+          "source": "Susano'o: Lâmina Cortante",
+          "translation": "须佐能乎·斩击"
+        },
+        "desc": {
+          "source": "Ataca a linha de inimigos em frente e causa dano que <font color=\"#4dc831\">sempre acerta</font>, com grande chance de causar <font color=\"#4dc831\">Queda</font> e reduzir o próprio <font color=\"#4dc831\">Resfriamento da Esotérica</font> em 1 rodada.",
+          "translation": "攻击前方一列敌人，造成<font color=\"#4dc831\">必定命中</font>的伤害，并有较高概率造成<font color=\"#4dc831\">倒地</font>，同时使自身<font color=\"#4dc831\">奥义冷却</font>减少1回合。"
+        }
+      },
+      "21011742": {
+        "name": {
+          "source": "Susano'o: Lâmina Cortante",
+          "translation": "须佐能乎·斩击"
+        },
+        "desc": {
+          "source": "Ataca a linha de inimigos em frente e causa dano que <font color=\"#4dc831\">sempre acerta</font>, com grande chance de causar <font color=\"#4dc831\">Queda</font> e reduzir o próprio <font color=\"#4dc831\">Resfriamento da Esotérica</font> em 1 rodada.",
+          "translation": "攻击前方一列敌人，造成<font color=\"#4dc831\">必定命中</font>的伤害，并有较高概率造成<font color=\"#4dc831\">倒地</font>，同时使自身<font color=\"#4dc831\">奥义冷却</font>减少1回合。"
+        }
+      },
+      "21011743": {
+        "name": {
+          "source": "Susano'o: Lâmina Cortante",
+          "translation": "须佐能乎·斩击"
+        },
+        "desc": {
+          "source": "Ataca a linha de inimigos em frente e causa dano que <font color=\"#4dc831\">sempre acerta</font>, com grande chance de causar <font color=\"#4dc831\">Queda</font> e reduzir o próprio <font color=\"#4dc831\">Resfriamento da Esotérica</font> em 1 rodada.",
+          "translation": "攻击前方一列敌人，造成<font color=\"#4dc831\">必定命中</font>的伤害，并有较高概率造成<font color=\"#4dc831\">倒地</font>，同时使自身<font color=\"#4dc831\">奥义冷却</font>减少1回合。"
+        }
+      },
+      "21011744": {
+        "name": {
+          "source": "Estilo Fogo: Grande Aniquilação do Fogo",
+          "translation": "火遁·豪火灭却"
+        },
+        "desc": {
+          "source": "<font color=\"#4dc831\">Lançado com combo de 20</font>, causa dano de <font color=\"#4dc831\">Fogo</font> e <font color=\"#4dc831\">Queimadura</font> a <font color=\"#4dc831\">7</font> inimigos aleatórios, e lhes deduz 1 chance de ataque comum. Esta habilidade ignora uma pequena quantidade da <font color=\"#4dc831\">Resistência</font>.",
+          "translation": "<font color=\"#4dc831\">连击达到20时触发</font>，对<font color=\"#4dc831\">7</font>名随机敌人造成<font color=\"#4dc831\">火属性</font>伤害和<font color=\"#4dc831\">灼烧</font>，并使其损失1次普攻机会。本技能无视少量<font color=\"#4dc831\">抗性</font>。"
+        }
+      },
+      "21311746": {
+        "name": {
+          "source": "Explosão de Chakra",
+          "translation": "查克拉爆发"
+        },
+        "desc": {
+          "source": "Ao sofrer dano, Madara recebe <font color=\"#4dc831\">1/2</font> <font color=\"#4dc831\">Ponto de Habilidade</font>, podendo acumular até 2. Cada ponto aumenta sua <font color=\"#4dc831\">Resistência</font> em <font color=\"#4dc831\">20%</font>. Ao atingir o limite, consome todo o <font color=\"#4dc831\">Ponto de Habilidade</font> e ativa <font color=\"#4dc831\">Explosão de Chakra</font>. Ao usar <font color=\"#4dc831\">Estilo Fogo: Destruição do Fogo Enorme</font>, ativa adicionalmente a <font color=\"#4dc831\">Habilidade adicional</font>: <font color=\"#4dc831\">Perfectivo: Susano'o</font>.",
+          "translation": "受到伤害时，斑获得<font color=\"#4dc831\">1/2</font>个<font color=\"#4dc831\">技能点</font>，最多累积2个。每个技能点使其<font color=\"#4dc831\">抗性</font>提高<font color=\"#4dc831\">20%</font>。达到上限时，消耗所有<font color=\"#4dc831\">技能点</font>并触发<font color=\"#4dc831\">查克拉爆发</font>。使用<font color=\"#4dc831\">火遁·豪火灭失</font>时，额外触发<font color=\"#4dc831\">追加技能</font>：<font color=\"#4dc831\">完美须佐能乎</font>。"
+        }
+      },
+      "21011749": {
+        "name": {
+          "source": "Susano'o: Armadura",
+          "translation": "须佐能乎·铠甲"
+        },
+        "desc": {
+          "source": "Madara recebe <font color=\"#4dc831\">Imunidade a Perseguição</font> e ao dano puro de <font color=\"#4dc831\">Taijutsu</font>. Na primeira vez que receber dano em uma rodada, ganha <font color=\"#4dc831\">50%</font> de <font color=\"#4dc831\">Crítico</font> durante a rodada.",
+          "translation": "斑获得<font color=\"#4dc831\">追打免疫</font>，并免疫<font color=\"#4dc831\">体术</font>造成的纯粹伤害。每回合首次受到伤害时，本回合<font color=\"#4dc831\">暴击</font>率提高<font color=\"#4dc831\">50%</font>。"
+        }
+      },
+      "21011783": {
+        "name": {
+          "source": "Jutsu Clone das Sombras",
+          "translation": "影分身之术"
+        },
+        "desc": {
+          "source": "Lançado ao entrar em campo, invoca <font color=\"#4dc831\">1</font> Clone das Sombras a partir de <font color=\"#4dc831\">40%</font> do próprio limite de vida, que possui a habilidade <font color=\"#4dc831\">Susano'o: Armadura</font>. Ganha propriamente <font color=\"#4dc831\">Imunidade a Interrupção</font> até o final da próxima rodada.",
+          "translation": "登场时触发，召唤<font color=\"#4dc831\">1</font>个影分身，继承自身<font color=\"#4dc831\">40%</font>的生命上限，并拥有技能<font color=\"#4dc831\">须佐能乎·铠甲</font>。自身获得<font color=\"#4dc831\">打断免疫</font>，持续至下回合结束。"
+        }
+      },
+      "21011786": {
+        "name": {
+          "source": "Estilo Fogo: Destruição do Fogo Enorme",
+          "translation": "火遁·豪火灭失"
+        },
+        "desc": {
+          "source": "Causa dano de <font color=\"#4dc831\">Fogo</font> e <font color=\"#4dc831\">Combustão</font> a <font color=\"#4dc831\">9</font> inimigos, e concede adicionalmente <font color=\"#4dc831\">Interrupção</font> e <font color=\"#4dc831\">Ardência</font> ao alvo selecionado.",
+          "translation": "对<font color=\"#4dc831\">9</font>名敌人造成<font color=\"#4dc831\">火属性</font>伤害和<font color=\"#4dc831\">燃烧</font>，并额外对选定目标造成<font color=\"#4dc831\">打断</font>和<font color=\"#4dc831\">灼伤</font>。"
+        }
+      },
+      "21311786": {
+        "name": {
+          "source": "Estilo Fogo: Destruição do Fogo Enorme",
+          "translation": "火遁·豪火灭失"
+        },
+        "desc": {
+          "source": "Causa dano de <font color=\"#4dc831\">Fogo</font> que <font color=\"#4dc831\">sempre acerta</font> e <font color=\"#4dc831\">Chamas</font> que não podem ser imunizadas ou dispersadas a <font color=\"#4dc831\">9</font> inimigos, e concede adicionalmente <font color=\"#4dc831\">Interrupção</font> e <font color=\"#4dc831\">Ardência</font> ao alvo selecionado.",
+          "translation": "对9名敌人造成必定命中的火属性伤害和无法免疫或驱散的烈焰，并对选定目标额外造成打断和灼伤。"
+        }
+      },
+      "21511741": {
+        "name": {
+          "source": "Susano'o: Lâmina Cortante",
+          "translation": "须佐能乎·斩击"
+        },
+        "desc": {
+          "source": "Ataca a linha onde se encontra o ninja com a menor vida, causando dano que <font color=\"#4dc831\">sempre acerta</font> e aplicando <font color=\"#4dc831\">Ruptura</font>, além de causar <font color=\"#4dc831\">Queda</font> em 1 alvo aleatório e bloquear o <font color=\"#4dc831\">Resfriamento da Esotérica</font> do alvo em <font color=\"#4dc831\">1</font> (até o final da próxima rodada). Após o uso, reduz todo <font color=\"#4dc831\">Resfriamento da Esotérica</font> próprio.",
+          "translation": "攻击生命值最低的忍者所在的一横排，造成必定命中的伤害和破碎，并随机使1名目标倒地，将该目标的奥义冷却锁定为1回合，持续至下回合结束。使用后清除自身全部奥义冷却。"
+        }
+      },
+      "21511742": {
+        "name": {
+          "source": "Susano'o: Lâmina Cortante",
+          "translation": "须佐能乎·斩击"
+        },
+        "desc": {
+          "source": "Ataca a linha onde se encontra o ninja com a menor vida, causando dano que <font color=\"#4dc831\">sempre acerta</font> e aplicando <font color=\"#4dc831\">Ruptura</font>, além de causar <font color=\"#4dc831\">Queda</font> em 1 alvo aleatório e bloquear o <font color=\"#4dc831\">Resfriamento da Esotérica</font> do alvo em <font color=\"#4dc831\">1</font> (até o final da próxima rodada). Após o uso, reduz todo <font color=\"#4dc831\">Resfriamento da Esotérica</font> próprio.",
+          "translation": "攻击生命值最低的忍者所在的一横排，造成必定命中的伤害和破碎，并随机使1名目标倒地，将该目标的奥义冷却锁定为1回合，持续至下回合结束。使用后清除自身全部奥义冷却。"
+        }
+      },
+      "21511743": {
+        "name": {
+          "source": "Susano'o: Lâmina Cortante",
+          "translation": "须佐能乎·斩击"
+        },
+        "desc": {
+          "source": "Ataca a linha onde se encontra o ninja com a menor vida, causando dano que <font color=\"#4dc831\">sempre acerta</font> e aplicando <font color=\"#4dc831\">Ruptura</font>, além de causar <font color=\"#4dc831\">Queda</font> em 1 alvo aleatório e bloquear o <font color=\"#4dc831\">Resfriamento da Esotérica</font> do alvo em <font color=\"#4dc831\">1</font> (até o final da próxima rodada). Após o uso, reduz todo <font color=\"#4dc831\">Resfriamento da Esotérica</font> próprio.",
+          "translation": "攻击生命值最低的忍者所在的一横排，造成必定命中的伤害和破碎，并随机使1名目标倒地，将该目标的奥义冷却锁定为1回合，持续至下回合结束。使用后清除自身全部奥义冷却。"
+        }
+      },
+      "21511744": {
+        "name": {
+          "source": "Estilo Fogo: Grande Aniquilação do Fogo",
+          "translation": "火遁·豪火灭却"
+        },
+        "desc": {
+          "source": "<font color=\"#4dc831\">Lançado com combo de 20</font>, causa dano de <font color=\"#4dc831\">Fogo</font> a <font color=\"#4dc831\">9</font> inimigos aleatórios. Esta habilidade ignora uma pequena quantidade da <font color=\"#4dc831\">Resistência</font> e causa <font color=\"#4dc831\">200%</font> a mais de dano em <font color=\"#4dc831\">Clone</font>, <font color=\"#4dc831\">Marionete</font> e <font color=\"#4dc831\">Invocação</font>.",
+          "translation": "连击达到20时触发，对9名随机敌人造成火属性伤害。本技能无视少量抗性，对分身、傀儡和通灵额外造成200%伤害。"
+        }
+      },
+      "21911746": {
+        "name": {
+          "source": "Explosão de Chakra",
+          "translation": "查克拉爆发"
+        },
+        "desc": {
+          "source": "Cada vez que receber dano durante uma rodada, ganha <font color=\"#4dc831\">20%</font> de <font color=\"#4dc831\">Resistência</font>. Após sofrer dano <font color=\"#4dc831\">4</font> vezes em uma única rodada, entra em status <font color=\"#4dc831\">Explosão de Chakra Y</font>. Ao usar <font color=\"#4dc831\">Estilo Fogo: Destruição do Fogo Enorme Y</font>, ativa adicionalmente a <font color=\"#4dc831\">Habilidade adicional</font>: <font color=\"#4dc831\">Perfectivo: Susano'o Y</font>. Nas primeiras <font color=\"#4dc831\">2</font> vezes que se recebe dano de <font color=\"#4dc831\">gatilho</font> em cada rodada, é lançado <font color=\"#4dc831\">Genjutsu: Mangekyo Sharingan</font>.",
+          "translation": "每回合每次受到伤害时，抗性提高20%。单回合受到4次伤害后，进入查克拉爆发·Y状态。使用火遁·豪火灭失·Y时，额外触发追加技能：完美须佐能乎·Y。每回合前2次受到触发型伤害时，发动幻术·万花筒写轮眼。"
+        }
+      },
+      "21311749": {
+        "name": {
+          "source": "Susano'o: Armadura",
+          "translation": "须佐能乎·铠甲"
+        },
+        "desc": {
+          "source": "Madara recebe <font color=\"#4dc831\">Imunidade a Perseguição</font> e ao dano puro de <font color=\"#4dc831\">Taijutsu</font>, e possui a habilidade <font color=\"#4dc831\">A Reflexão Uchiha</font>. (Há grande chance de se esquivar do primeiro dano de habilidade de <font color=\"#4dc831\">Esotérica</font> em cada rodada e aumenta a própria <font color=\"#4dc831\">Velocidade</font> em <font color=\"#4dc831\">0.8%</font> na primeira esquiva.)",
+          "translation": "斑获得追打免疫，并免疫体术造成的纯粹伤害，且拥有技能“宇智波反弹”（每回合有较高概率闪避首次奥义技能伤害，首次闪避时自身先攻提高0.8%）。"
+        }
+      },
+      "21211783": {
+        "name": {
+          "source": "Jutsu Clone das Sombras",
+          "translation": "影分身之术"
+        },
+        "desc": {
+          "source": "Lançado ao entrar em campo, invoca <font color=\"#4dc831\">1</font> Clone das Sombras a partir de <font color=\"#4dc831\">40%</font> do próprio limite de vida, que possui a habilidade <font color=\"#4dc831\">Susano'o: Armadura</font>. Ganha propriamente <font color=\"#4dc831\">Imunidade a Interrupção</font> até o final da próxima rodada.",
+          "translation": "登场时触发，召唤<font color=\"#4dc831\">1</font>个影分身，继承自身<font color=\"#4dc831\">40%</font>的生命上限，并拥有技能<font color=\"#4dc831\">须佐能乎·铠甲</font>。自身获得<font color=\"#4dc831\">打断免疫</font>，持续至下回合结束。"
+        }
+      },
+      "21311783": {
+        "name": {
+          "source": "Jutsu Clone das Sombras",
+          "translation": "影分身之术"
+        },
+        "desc": {
+          "source": "Lançado ao entrar em campo, invoca <font color=\"#4dc831\">1</font> Clone das Sombras a partir de <font color=\"#4dc831\">40%</font> do próprio limite de vida, que possui a habilidade <font color=\"#4dc831\">Susano'o: Armadura</font>. Ganha propriamente <font color=\"#4dc831\">Imunidade a Interrupção</font> até o final da próxima rodada.",
+          "translation": "登场时触发，召唤<font color=\"#4dc831\">1</font>个影分身，继承自身<font color=\"#4dc831\">40%</font>的生命上限，并拥有技能<font color=\"#4dc831\">须佐能乎·铠甲</font>。自身获得<font color=\"#4dc831\">打断免疫</font>，持续至下回合结束。"
+        }
+      },
+      "21411744": {
+        "name": {
+          "source": "Estilo Fogo: Grande Aniquilação do Fogo",
+          "translation": "火遁·豪火灭却"
+        },
+        "desc": {
+          "source": "<font color=\"#4dc831\">Lançado com combo de 20</font>, causa dano de <font color=\"#4dc831\">Fogo</font>, <font color=\"#4dc831\">Interrupção</font> e <font color=\"#4dc831\">Queimadura</font> a <font color=\"#4dc831\">9</font> inimigos aleatórios, e lhes deduz 1 chance de ataque comum. Esta habilidade ignora uma pequena quantidade da <font color=\"#4dc831\">Resistência</font>.",
+          "translation": "连击达到20时触发，对9名随机敌人造成火属性伤害、打断和灼烧，并使其减少1次普攻机会。本技能无视少量抗性。"
+        }
+      },
+      "21211749": {
+        "name": {
+          "source": "Susano'o: Armadura",
+          "translation": "须佐能乎·铠甲"
+        },
+        "desc": {
+          "source": "Madara recebe <font color=\"#4dc831\">Imunidade a Perseguição</font> e ao dano puro de <font color=\"#4dc831\">Taijutsu</font>, e possui a habilidade <font color=\"#4dc831\">A Reflexão Uchiha</font>. (Há grande chance de se esquivar do primeiro dano de habilidade de <font color=\"#4dc831\">Esotérica</font> em cada rodada e aumenta o próprio Crítico em <font color=\"#4dc831\">25%</font> na primeira esquiva.)",
+          "translation": "斑获得追打免疫，并免疫体术造成的纯粹伤害，且拥有技能“宇智波反弹”（每回合有较高概率闪避首次奥义技能伤害，首次闪避时自身暴击率提高25%）。"
+        }
+      },
+      "21211786": {
+        "name": {
+          "source": "Estilo Fogo: Destruição do Fogo Enorme",
+          "translation": "火遁·豪火灭失"
+        },
+        "desc": {
+          "source": "Causa <font color=\"#4dc831\">30%</font> a mais de dano de <font color=\"#4dc831\">Fogo</font> que <font color=\"#4dc831\">sempre acerta</font> e <font color=\"#4dc831\">Combustão</font> a <font color=\"#4dc831\">9</font> inimigos, e concede adicionalmente <font color=\"#4dc831\">Interrupção</font> e <font color=\"#4dc831\">Ardência</font> ao alvo selecionado.",
+          "translation": "对9名敌人造成额外提高30%的必定命中火属性伤害和燃烧，并对选定目标额外造成打断和灼伤。"
+        }
+      },
+      "21411741": {
+        "name": {
+          "source": "Susano'o: Lâmina Cortante",
+          "translation": "须佐能乎·斩击"
+        },
+        "desc": {
+          "source": "Ataca a linha de inimigos em frente e causa <font color=\"#4dc831\">30%</font> a mais de dano que <font color=\"#4dc831\">sempre acerta</font>, com grande chance de causar <font color=\"#4dc831\">Queda</font>. Esta habilidade possui <font color=\"#4dc831\">Crítico</font> extra e reduz todo <font color=\"#4dc831\">Resfriamento da Esotérica</font> próprio.",
+          "translation": "攻击前方一横排敌人，造成额外提高30%的必定命中伤害，并有较高概率造成倒地。本技能拥有额外暴击加成，使用后清除自身全部奥义冷却。"
+        }
+      },
+      "21411742": {
+        "name": {
+          "source": "Susano'o: Lâmina Cortante",
+          "translation": "须佐能乎·斩击"
+        },
+        "desc": {
+          "source": "Ataca a linha de inimigos em frente e causa <font color=\"#4dc831\">30%</font> a mais de dano que <font color=\"#4dc831\">sempre acerta</font>, com grande chance de causar <font color=\"#4dc831\">Queda</font>. Esta habilidade possui <font color=\"#4dc831\">Crítico</font> extra e reduz todo <font color=\"#4dc831\">Resfriamento da Esotérica</font> próprio.",
+          "translation": "攻击前方一横排敌人，造成额外提高30%的必定命中伤害，并有较高概率造成倒地。本技能拥有额外暴击加成，使用后清除自身全部奥义冷却。"
+        }
+      },
+      "21411743": {
+        "name": {
+          "source": "Susano'o: Lâmina Cortante",
+          "translation": "须佐能乎·斩击"
+        },
+        "desc": {
+          "source": "Ataca a linha de inimigos em frente e causa <font color=\"#4dc831\">30%</font> a mais de dano que <font color=\"#4dc831\">sempre acerta</font>, com grande chance de causar <font color=\"#4dc831\">Queda</font>. Esta habilidade possui <font color=\"#4dc831\">Crítico</font> extra e reduz todo <font color=\"#4dc831\">Resfriamento da Esotérica</font> próprio.",
+          "translation": "攻击前方一横排敌人，造成额外提高30%的必定命中伤害，并有较高概率造成倒地。本技能拥有额外暴击加成，使用后清除自身全部奥义冷却。"
+        }
+      },
+      "21511746": {
+        "name": {
+          "source": "Explosão de Chakra",
+          "translation": "查克拉爆发"
+        },
+        "desc": {
+          "source": "Cada vez que receber dano durante uma rodada, ganha <font color=\"#4dc831\">20%</font> de <font color=\"#4dc831\">Resistência</font>. Após sofrer dano <font color=\"#4dc831\">4</font> vezes em uma única rodada, entra em status <font color=\"#4dc831\">Explosão de Chakra +1</font>. Ao usar <font color=\"#4dc831\">Estilo Fogo: Destruição do Fogo Enorme +1</font>, ativa adicionalmente a <font color=\"#4dc831\">Habilidade adicional</font>: <font color=\"#4dc831\">Perfectivo: Susano'o +1</font>. Nas primeiras <font color=\"#4dc831\">2</font> vezes que se recebe dano de <font color=\"#4dc831\">gatilho</font> em cada rodada, é lançado <font color=\"#4dc831\">Genjutsu: Mangekyo Sharingan</font>.",
+          "translation": "每回合每次受到伤害时，抗性提高20%。单回合受到4次伤害后，进入查克拉爆发+1状态。使用火遁·豪火灭失+1时，额外触发追加技能：完美须佐能乎+1。每回合前2次受到触发型伤害时，发动幻术·万花筒写轮眼。"
+        }
+      },
+      "21711746": {
+        "name": {
+          "source": "Explosão de Chakra",
+          "translation": "查克拉爆发"
+        },
+        "desc": {
+          "source": "Cada vez que receber dano durante uma rodada, ganha <font color=\"#4dc831\">20%</font> de <font color=\"#4dc831\">Resistência</font>. Após sofrer dano <font color=\"#4dc831\">4</font> vezes em uma única rodada, entra em status <font color=\"#4dc831\">Explosão de Chakra +2</font>. Ao usar <font color=\"#4dc831\">Estilo Fogo: Destruição do Fogo Enorme +1</font>, ativa adicionalmente a <font color=\"#4dc831\">Habilidade adicional</font>: <font color=\"#4dc831\">Perfectivo: Susano'o +1</font>. Nas primeiras <font color=\"#4dc831\">2</font> vezes que se recebe dano de <font color=\"#4dc831\">gatilho</font> em cada rodada, é lançado <font color=\"#4dc831\">Genjutsu: Mangekyo Sharingan</font>.",
+          "translation": "每回合每次受到伤害时，抗性提高20%。单回合受到4次伤害后，进入查克拉爆发+2状态。使用火遁·豪火灭失+1时，额外触发追加技能：完美须佐能乎+1。每回合前2次受到触发型伤害时，发动幻术·万花筒写轮眼。"
+        }
+      },
+      "21511786": {
+        "name": {
+          "source": "Explosão de Chakra",
+          "translation": "查克拉爆发"
+        },
+        "desc": {
+          "source": "Cada vez que receber dano durante uma rodada, ganha <font color=\"#4dc831\">20%</font> de <font color=\"#4dc831\">Resistência</font>. Após sofrer dano <font color=\"#4dc831\">4</font> vezes em uma única rodada, entra em status <font color=\"#4dc831\">Explosão de Chakra Y+1</font>. Ao usar <font color=\"#4dc831\">Estilo Fogo: Destruição do Fogo Enorme Y</font>, ativa adicionalmente a <font color=\"#4dc831\">Habilidade adicional</font>: <font color=\"#4dc831\">Perfectivo: Susano'o Y</font>. Nas primeiras <font color=\"#4dc831\">2</font> vezes que se recebe dano de <font color=\"#4dc831\">gatilho</font> em cada rodada, é lançado <font color=\"#4dc831\">Genjutsu: Mangekyo Sharingan</font>.",
+          "translation": "每回合每次受到伤害时，抗性提高20%。单回合受到4次伤害后，进入查克拉爆发·Y+1状态。使用火遁·豪火灭失·Y时，额外触发追加技能：完美须佐能乎·Y。每回合前2次受到触发型伤害时，发动幻术·万花筒写轮眼。"
+        }
+      }
+    }
+  },
+  "skillDetails": {
+    "resourceURL": "https://cdnnaruto-pt.oasgames.com/PT_NarutoAlpha9.37Build301/config/skill/SkillKeyDescCFG.cfg",
+    "file": "SkillKeyDescCFG.madara-zh-CN.cfg",
+    "class": "SkillKeyDescCFG",
+    "rows": {
+      "595": {
+        "keys": {
+          "source": "Explosão de Chakra Y",
+          "translation": "查克拉爆发·Y"
+        },
+        "desc": {
+          "source": "Ao entrar neste status, ajusta o limite de Chakra da equipe aliada para [100] e recupera [40] pontos de Chakra. Neste status, Madara Uchiha [Vale do Fim] ganha um novo conjunto de habilidades inclusive [A Reflexão Uchiha Y]: Há uma grande probabilidade de se esquivar dos primeiros 3 ataques em cada rodada. Na primeira esquiva, ganha adicionalmente [30%] de [Ninjutsu] e aciona a [Habilidade adicional]: [Armado: Susano'o] (Causa dano Ninjutsu de [Combo de 5] que [Ignora o Escudo] a todos os inimigos e concede [Queda], [Imobilidade], [Supressão de Imunidade a Status negativos] ao alvo com a menor vida, até o final da próxima rodada). Além disso, na hora de explosão, aumenta o dano de [Perseguição] de Madara em [10%] (pode acumular).",
+          "translation": "进入该状态时，将己方队伍查克拉上限调整为[100]并恢复[40]点查克拉。此状态下，终焉之战·宇智波斑获得一组新技能，包括[宇智波反弹·Y]：每回合有较高概率闪避前[3]次攻击。首次闪避时，额外获得[30%]的[忍术]，并触发[追加技能]：[须佐能乎·武装]（对敌方全体造成必定命中的[5连击]忍术伤害，并对生命值最低的目标造成[倒地]、[定身]和[负面状态免疫压制]，持续至下回合结束）。此外，爆发时使斑的[追打]伤害提高[10%]（可叠加）。"
+        }
+      },
+      "582": {
+        "keys": {
+          "source": "Susano'o: Dança das Espadas Ardentes",
+          "translation": "须佐能乎·烈焰剑舞"
+        },
+        "desc": {
+          "source": "Ataca todas as equipes inimigas, causando dano que [sempre acerta] e reduzindo a [Resistência] em [10%], com alta probabilidade de causar [Queda] e [Ruptura] a 1 inimigo aleatório.",
+          "translation": "攻击敌方全体，造成[必定命中]的伤害并使其[抗性]降低[10%]；较高概率对1名随机敌人造成[倒地]和[破碎]。"
+        }
+      },
+      "583": {
+        "keys": {
+          "source": "Efeito da Habilidade",
+          "translation": "技能效果"
+        },
+        "desc": {
+          "source": "[Novo Efeito de Susano'o: Armadura]: Madara possui [Imunidade a Perseguição Nv.2] (neste status, não vai sofrer [Flutuação], [Voo], [Repelimento] e [Queda], nem [Supressão de Imunidade a Perseguição], exceto [Supressão de Imunidade a Status negativos] de níveis mais altos), e é imune a dano puro de [Taijutsu]. Na primeira vez que receber dano em cada rodada, ganha [50%] de [Crítico], e reduz o próprio consumo de Chakra a 0. Ao causar [Crítico], ganha [10%] de [Ninjutsu].",
+          "translation": "[须佐能乎·铠甲效果提升]：斑获得[2级追打免疫]（处于该状态时，不会受到[浮空]、[高浮空]、[击退]和[倒地]效果，也不会受到[追打免疫压制]；更高级的[负面状态免疫压制]除外），并免疫[体术]造成的纯粹伤害。每回合首次受到伤害时，获得[50%][暴击]率，并使自身查克拉消耗降为0。造成[暴击]时，获得[10%][忍术]。"
+        }
+      },
+      "585": {
+        "keys": {
+          "source": "Efeito da Habilidade",
+          "translation": "技能效果"
+        },
+        "desc": {
+          "source": "[Novo Efeito de Estilo Fogo: Grande Aniquilação do Fogo]: [Lançado com combo de 20], causa dano de [Fogo] que [sempre acerta] e [Queimadura] a [12] inimigos aleatórios. Esta habilidade ignora uma pequena parte da [Resistência] e tem bônus de [Crítico] adicional.",
+          "translation": "[火遁·豪火灭却效果提升]：[连击达到20时触发]，对[12]名随机敌人造成[必定命中]的[火属性]伤害和[灼烧]。本技能无视少量[抗性]，并额外提高[暴击]率。"
+        }
+      },
+      "586": {
+        "keys": {
+          "source": "A Reflexão Uchiha",
+          "translation": "宇智波反弹"
+        },
+        "desc": {
+          "source": "Tem grande chance de Esquiva contra habilidades de [Esotérica]. O efeito pode ser ativado até [1] vez por rodada. Para cada Esquiva realizada, recupera [30%] de Vida, além disso, causa um dano equivalente a [20%] da vida restante de Madara ao atacante.",
+          "translation": "受到[奥义]攻击时有较高概率闪避。每回合最多触发[1]次。每次闪避后恢复[30%]生命，并对攻击者造成相当于斑当前生命[20%]的伤害。"
+        }
+      },
+      "587": {
+        "keys": {
+          "source": "Perfectivo: Susano'o",
+          "translation": "完美须佐能乎"
+        },
+        "desc": {
+          "source": "[Habilidade adicional]: Causa dano de [Combo de 3] a [12] inimigos e [Queda], [Ruptura] e [Supressão de Imunidade a Perseguição] a 1 alvo aleatório até o final da próxima rodada.",
+          "translation": "[追加技能]：对[12]名敌人造成[3连击]伤害，并随机对1名目标造成[倒地]、[破碎]和[追打免疫压制]，持续至下回合结束。"
+        }
+      },
+      "592": {
+        "keys": {
+          "source": "Explosão de Chakra",
+          "translation": "查克拉爆发"
+        },
+        "desc": {
+          "source": "Neste status, Madara Uchiha [Vale do Fim] ganha um novo conjunto de habilidades inclusive [A Reflexão Uchiha]: Há uma grande probabilidade de se esquivar do primeiro ataque em cada rodada. A cada esquiva, recupera [30%] de vida, e causa dano equivalente a [20%] da própria vida restante ao atacante. Na primeira esquiva, ganha adicionalmente [15%] de [Ninjutsu]. Além disso, na hora de explosão, aumenta o dano de [Perseguição] de Madara em [10%] (pode acumular).",
+          "translation": "处于此状态时，宇智波斑【终焉之战】获得一组新技能，包括[宇智波反弹]：每回合首次受到攻击时有较高概率闪避。每次闪避恢复[30%]生命，并对攻击者造成相当于自身当前生命[20%]的伤害。首次闪避时额外获得[15%][忍术]。此外，爆发时斑的[追打]伤害提高[10%]（可叠加）。"
+        }
+      },
+      "593": {
+        "keys": {
+          "source": "Explosão de Chakra +1",
+          "translation": "查克拉爆发+1"
+        },
+        "desc": {
+          "source": "Ao entrar neste status, ajusta o limite de Chakra da equipe aliada para [100] e recupera [40] pontos de Chakra. Neste status, Madara Uchiha [Vale do Fim] ganha um novo conjunto de habilidades inclusive [A Reflexão Uchiha +1]: Há uma grande probabilidade de se esquivar dos primeiros 3 ataques em cada rodada. A cada esquiva, recupera [20%] de vida, e causa dano equivalente a [20%] da própria vida restante ao atacante. Na primeira esquiva, ganha adicionalmente [30%] de [Ninjutsu]. Além disso, na hora de explosão, aumenta o dano de [Perseguição] de Madara em [10%] (pode acumular).",
+          "translation": "进入此状态时，将己方查克拉上限调整为[100]并恢复[40]点查克拉。处于此状态时，宇智波斑【终焉之战】获得一组新技能，包括[宇智波反弹+1]：每回合首次受到攻击时有较高概率闪避。每次闪避恢复[20%]生命，并对攻击者造成相当于自身当前生命[20%]的伤害。首次闪避时额外获得[30%][忍术]。此外，爆发时斑的[追打]伤害提高[10%]（可叠加）。"
+        }
+      },
+      "597": {
+        "keys": {
+          "source": "Genjutsu: Mangekyo Sharingan",
+          "translation": "幻术·万花筒写轮眼"
+        },
+        "desc": {
+          "source": "[Habilidade adicional]: Ataca até 4 [ninjas] da equipe à frente, causando dano que [sempre acerta] e [Interrupção] e deduzindo [20] pontos de Chakra de cada alvo. Ao mesmo tempo, aplica [Colapso Mental] (status negativo, ao usar qualquer habilidade, o portador remove o status [Obstinação] da sua equipe e tem o [Crítico] reduzido em [15%] (máximo de [60%]), até o final da rodada. Este status não pode ser imunizado ou dispersado e é válido até o fim da rodada) e remove o status [Obstinação]. Ao derrotar o alvo, causa dano espalhado igual a [40%] da própria vida máxima ao grupo inimigo, até um máximo de [25000] pontos.",
+          "translation": "[追加技能]：攻击前方队伍最多4名[忍者]，造成[必定命中]的伤害和[打断]，并使每个目标减少[20]点查克拉。同时施加[精神崩溃]（负面状态：持有者使用任意技能时，移除己方的[坚毅]状态，并使[暴击]率降低[15%]，最多降低[60%]，持续至回合结束；该状态无法免疫或驱散），并移除[坚毅]状态。击败目标时，对敌方全体造成扩散伤害，伤害值为自身生命上限的[40%]，最多造成[25000]点伤害。"
+        }
+      },
+      "601": {
+        "keys": {
+          "source": "Susano'o: Armadura",
+          "translation": "须佐能乎·铠甲"
+        },
+        "desc": {
+          "source": "Exclusiva do Clone das Sombras de Madara Uchiha em [Vale do Fim]: O Clone das Sombras tem [Imunidade a Perseguição] e ao dano puro de [Taijutsu]. Na primeira vez que sofrer dano de habilidade de tipo [gatilho] em cada rodada, é lançado [Genjutsu: Mangekyo Sharingan] (Ataca o [Ninja] com a menor vida, causando dano que [sempre acerta] e [Colapso Mental] (status negativo, ao usar qualquer habilidade, o portador remove o status [Obstinação] da sua equipe e tem o [Crítico] reduzido em [15%] (máximo de [60%]) até o final da rodada. Este status não pode ser imunizado ou dispersado e é válido até o fim da rodada). Ao derrotar o alvo, causa dano espalhado igual a [100%] da própria vida máxima ao grupo inimigo, até um máximo de [30000] pontos).",
+          "translation": "宇智波斑【终焉之战】的影分身专属：[影分身]获得[追打免疫]，并免疫[体术]造成的纯粹伤害。每回合首次受到[触发型]技能伤害时，发动[幻术·万花筒写轮眼]（攻击生命最低的[忍者]，造成[必定命中]的伤害和[精神崩溃]；该负面状态会使持有者使用技能时移除己方[坚毅]，并使[暴击]率降低[15%]，最多降低[60%]，持续至回合结束，且无法免疫或驱散）。击败目标时，对敌方全体造成扩散伤害，伤害值为自身生命上限的[100%]，最多造成[30000]点伤害。"
+        }
+      },
+      "602": {
+        "keys": {
+          "source": "Susano'o: Armadura",
+          "translation": "须佐能乎·铠甲"
+        },
+        "desc": {
+          "source": "Exclusiva do Clone das Sombras de Madara Uchiha em [Vale do Fim]: O Clone das Sombras tem [Imunidade a Perseguição] e ao dano puro de [Taijutsu]. Nas primeiras 2 vezes que sofrer dano de habilidade de tipo [gatilho] em cada rodada, é lançado [Genjutsu: Mangekyo Sharingan] (Ataca o [Ninja] com a menor vida, causando dano que [sempre acerta] e [Colapso Mental] (status negativo, ao usar qualquer habilidade, o portador remove o status [Obstinação] da sua equipe e tem o [Crítico] reduzido em [15%] (máximo de [60%]) até o final da rodada. Este status não pode ser imunizado ou dispersado e é válido até o fim da rodada). Ao derrotar o alvo, causa dano espalhado igual a [100%] da própria vida máxima ao grupo inimigo, até um máximo de [30000] pontos).",
+          "translation": "宇智波斑【终焉之战】的影分身专属：[影分身]获得[追打免疫]，并免疫[体术]造成的纯粹伤害。每回合前2次受到[触发型]技能伤害时，发动[幻术·万花筒写轮眼]（攻击生命最低的[忍者]，造成[必定命中]的伤害和[精神崩溃]；该负面状态会使持有者使用技能时移除己方[坚毅]，并使[暴击]率降低[15%]，最多降低[60%]，持续至回合结束，且无法免疫或驱散）。击败目标时，对敌方全体造成扩散伤害，伤害值为自身生命上限的[100%]，最多造成[30000]点伤害。"
+        }
+      }
+    }
+  }
+}

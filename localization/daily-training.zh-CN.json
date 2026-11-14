@@ -1,0 +1,78 @@
+{
+  "id": "naruto-daily-training-zh-CN-v1",
+  "resourceURL": "https://cdnnaruto-pt.oasgames.com/PT_NarutoAlpha9.33Build300/config/i18n/TranslatedKeyCFG.cfg",
+  "entries": {
+    "as_hud_02485cf4dd236c4fb3fa97068038d37e": {
+      "source": "<b><font color='#6B5940'>Horário: </font><font color='#6B5940'>%1</font></b>",
+      "translation": "<b><font color='#6B5940'>时间： </font><font color='#6B5940'>%1</font></b>"
+    },
+    "as_hud_42105efdae9fec946c3cf37c0dbc888c": {
+      "source": "<b><font color='#6B5940'>Horário: </font><font color='#6B5940'>%1</font></b>",
+      "translation": "<b><font color='#6B5940'>时间： </font><font color='#6B5940'>%1</font></b>"
+    },
+    "as_hud_1b8017577a5e514136a0d873c21daac8": {
+      "source": "<b><font color='#6B5940'>Horário: </font><font color='#d54e32'>%1</font></b>",
+      "translation": "<b><font color='#6B5940'>时间： </font><font color='#d54e32'>%1</font></b>"
+    },
+    "as_hud_8b8dd0d762b5a58d0d9545df0b49e28a": {
+      "source": "<b><font color='#6B5940'>Horário: </font><font color='#6B5940'>%1</font></b>",
+      "translation": "<b><font color='#6B5940'>时间： </font><font color='#6B5940'>%1</font></b>"
+    },
+    "as_hud_d000a4639be5c394f7c874448ece3782": {
+      "source": "<b><font color='#6B5940'>Pré-requisitos: </font><font color='#6B5940'>%1</font></b>",
+      "translation": "<b><font color='#6B5940'>参与条件： </font><font color='#6B5940'>%1</font></b>"
+    },
+    "as_hud_4f24b0244a7d8f18704ecb655f46aed5": {
+      "source": "<b><font color='#6B5940'>Nv. de Atividade: </font><font color='#6B5940'>0/%1</font></b>",
+      "translation": "<b><font color='#6B5940'>活跃度： </font><font color='#6B5940'>0/%1</font></b>"
+    },
+    "as_hud_224bee79cd9a5626fe44e254bd427606": {
+      "source": "<b><font color='#6B5940'>Nv. de Atividade: </font><font color='#6B5940'>%1/%2</font></b>",
+      "translation": "<b><font color='#6B5940'>活跃度： </font><font color='#6B5940'>%1/%2</font></b>"
+    },
+    "as_hud_dce568f7d90a63dbf5a5d30e780509a4": {
+      "source": "<b><font color='#6B5940'>Nv. de Atividade: </font><font color='#6B5940'>%1/%2</font></b>",
+      "translation": "<b><font color='#6B5940'>活跃度： </font><font color='#6B5940'>%1/%2</font></b>"
+    },
+    "as_hud_6c8c071eaf80e177e50bc54ac11eb03f": {
+      "source": "<b><font color='#6B5940'>Nv. de Atividade: </font><font color='#6B5940'>0/%1</font></b>",
+      "translation": "<b><font color='#6B5940'>活跃度： </font><font color='#6B5940'>0/%1</font></b>"
+    },
+    "as_hud_f990e4a14e34c060a1421df2d61a4e7a": {
+      "source": "<b><font color='#6B5940'>Pré-requisitos: %1</font></b>",
+      "translation": "<b><font color='#6B5940'>参与条件：%1</font></b>"
+    },
+    "as_hud_f2b52181092ab743bf6578695e97a822": {
+      "source": "<b><font color='#6B5940'>Pré-requisitos: </font><font color='#6B5940'>%1</font></b>",
+      "translation": "<b><font color='#6B5940'>参与条件： </font><font color='#6B5940'>%1</font></b>"
+    },
+    "as_hud_de0ddb7b9fd63717dd263b5c829c58b1": {
+      "source": "<b><font color='#6B5940'>Pré-requisitos: </font><font color='#d54e32'>%1</font></b>",
+      "translation": "<b><font color='#6B5940'>参与条件： </font><font color='#d54e32'>%1</font></b>"
+    },
+    "as_hud_caa59f5de616adbdead1f8200ee744c1": {
+      "source": "<b><font color='#6B5940'>Pré-requisitos: </font><font color='#6B5940'>%1</font></b>",
+      "translation": "<b><font color='#6B5940'>参与条件： </font><font color='#6B5940'>%1</font></b>"
+    },
+    "as_hud_46f9014c300a1ba74a7dea1aa94c08d2": {
+      "source": "<b><font color='#6B5940'>Pré-requisitos：</font><font color='#d54e32'>%1</font></b>",
+      "translation": "<b><font color='#6B5940'>参与条件：</font><font color='#d54e32'>%1</font></b>"
+    },
+    "as_hud_1b447796cb92b57b152738d0f0b64395": {
+      "source": "Sempre",
+      "translation": "全天"
+    },
+    "as_hud_3b4f0154169d6f714ff212193e2398ef": {
+      "source": "Selos do Sol possuídos: %1",
+      "translation": "持有太阳印章：%1"
+    },
+    "as_hud_1b98fac280289f4f2864f7c7375ccab7": {
+      "source": "Selos da Lua possuídos: %1",
+      "translation": "持有月亮印章：%1"
+    },
+    "as_hud_afd3b5db89f3a29fdb2c9aef028472cc": {
+      "source": "Nv. de Atividade atual: %1",
+      "translation": "当前活跃度：%1"
+    }
+  }
+}

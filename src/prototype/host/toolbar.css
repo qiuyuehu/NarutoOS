@@ -1,0 +1,21 @@
+/* Base chrome, tabs and icons come directly from the existing renderer stylesheet. */
+.tabline { padding-left: 14px; }
+#tabs { max-width: none; flex-shrink: 1; }
+.tab { padding: 0 6px 0 0; gap: 0; }
+.tab-select { display: flex; align-items: center; gap: 8px; flex: 1; min-width: 0; height: 100%; padding: 0 8px 0 12px; border: 0; background: transparent; color: inherit; }
+.tab-close { opacity: .45; }
+.tab-retry { width: 20px; height: 22px; font-size: 14px; }
+#notice { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+#save-prompt { position: static; display: flex; align-items: center; gap: 6px; min-width: 0; font-size: 11px; }
+#save-text { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.tools, #save-prompt button { flex-shrink: 0; }
+.chrome.has-save #save-prompt { position:absolute; top:42px; left:0; right:0; height:44px; padding:0 16px; justify-content:flex-end; background:var(--surface); border-bottom:1px solid var(--line); }
+.chrome.has-save + #placeholder { top:86px; }
+@media (max-width: 800px) { #notice { max-width:150px; } .tab { width:130px; flex-basis:130px; } }
+
+#notice:empty { display:none; }
+#placeholder { position:absolute; inset:42px 0 0; height:auto; }
+
+#notice { border:0; padding:0 4px; background:transparent; text-align:left; min-width:60px; cursor:pointer; }
+#notice.is-error { color:var(--text); }
+#notice:disabled { opacity:1; cursor:default; }

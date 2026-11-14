@@ -1,0 +1,278 @@
+{
+  "id": "naruto-ninja-target-04-zh-CN-v1",
+  "rootId": "11000831",
+  "ninjaInfo": {
+    "class": "NinjaInfoCFG",
+    "rows": {
+      "11000831": {
+        "name": {
+          "source": "Shikamaru",
+          "translation": "奈良鹿丸"
+        },
+        "title": {
+          "source": "[Chuunin]",
+          "translation": "【中忍】"
+        }
+      }
+    }
+  },
+  "skills": {
+    "class": "SkillCFG",
+    "rows": {
+      "21000851": {
+        "name": {
+          "source": "Jutsu de Costura da Sombra",
+          "translation": "影缝术"
+        },
+        "desc": {
+          "source": "Ataca 1 inimigo à frente, há chance de se lançar um Combo de 3 e causar <font color=\"#4dc831\">Queda</font>.",
+          "translation": "攻击前方1名敌人，有概率造成3连击和倒地。"
+        }
+      },
+      "21000852": {
+        "name": {
+          "source": "Jutsu de Costura da Sombra",
+          "translation": "影缝术"
+        },
+        "desc": {
+          "source": "Ataca 1 inimigo à frente, há chance de se lançar um Combo de 3 e causar <font color=\"#4dc831\">Queda</font>.",
+          "translation": "攻击前方1名敌人，有概率造成3连击和倒地。"
+        }
+      },
+      "21000853": {
+        "name": {
+          "source": "Jutsu de Costura da Sombra",
+          "translation": "影缝术"
+        },
+        "desc": {
+          "source": "Ataca 1 inimigo à frente, há chance de se lançar um Combo de 3 e causar <font color=\"#4dc831\">Queda</font>.",
+          "translation": "攻击前方1名敌人，有概率造成3连击和倒地。"
+        }
+      },
+      "21000854": {
+        "name": {
+          "source": "Ataque de Selos Explosivos",
+          "translation": "起爆符攻击"
+        },
+        "desc": {
+          "source": "Persegue inimigos com <font color=\"#4dc831\">Repelimento</font> e causa <font color=\"#4dc831\">Queda</font> e <font color=\"#4dc831\">Chamas</font>.",
+          "translation": "追打击退敌人，造成倒地和烈焰。"
+        }
+      },
+      "21000855": {
+        "name": {
+          "source": "Fortalecer Habilidade Secreta",
+          "translation": "秘传强化"
+        },
+        "desc": {
+          "source": "No início do combate até 6 de seus companheiros que possuam Habilidade Secreta recebem aumento de 100% de Defesa e Resistência por 2 rodadas.",
+          "translation": "战斗开始时，己方最多6名拥有秘传技能的忍者，防御和抗性提高100%，持续2回合。"
+        }
+      },
+      "21000856": {
+        "name": {
+          "source": "Jutsu Imitação das Sombras",
+          "translation": "影子模仿术"
+        },
+        "desc": {
+          "source": "Persegue inimigos com <font color=\"#4dc831\">Queda</font> e causa <font color=\"#4dc831\">Imobilidade</font>. Pode ser lançado até 2 vezes por rodada.",
+          "translation": "追打倒地敌人，造成定身，每回合最多触发2次。"
+        }
+      },
+      "21000857": {
+        "name": {
+          "source": "Formulação de Tática",
+          "translation": "战术制定"
+        },
+        "desc": {
+          "source": "Recupera 60 de Chakra do grupo.",
+          "translation": "为己方队伍恢复60点查克拉。"
+        }
+      },
+      "21020851": {
+        "name": {
+          "source": "Jutsu de Costura da Sombra",
+          "translation": "影缝术"
+        },
+        "desc": {
+          "source": "Ataca 1 inimigo à frente, causa dano com aumento de 15% e tem chance de lançar um Combo de 3 e causar <font color=\"#4dc831\">Queda</font>.",
+          "translation": "攻击前方1名敌人，伤害提高15%，有概率造成3连击和倒地。"
+        }
+      },
+      "21020852": {
+        "name": {
+          "source": "Jutsu de Costura da Sombra",
+          "translation": "影缝术"
+        },
+        "desc": {
+          "source": "Ataca 1 inimigo à frente, causa dano com aumento de 15% e tem chance de lançar um Combo de 3 e causar <font color=\"#4dc831\">Queda</font>.",
+          "translation": "攻击前方1名敌人，伤害提高15%，有概率造成3连击和倒地。"
+        }
+      },
+      "21020853": {
+        "name": {
+          "source": "Jutsu de Costura da Sombra",
+          "translation": "影缝术"
+        },
+        "desc": {
+          "source": "Ataca 1 inimigo à frente, causa dano com aumento de 15% e tem chance de lançar um Combo de 3 e causar <font color=\"#4dc831\">Queda</font>.",
+          "translation": "攻击前方1名敌人，伤害提高15%，有概率造成3连击和倒地。"
+        }
+      },
+      "21020854": {
+        "name": {
+          "source": "Ataque de Selos Explosivos",
+          "translation": "起爆符攻击"
+        },
+        "desc": {
+          "source": "Persegue inimigos com <font color=\"#4dc831\">Repelimento</font> e causa <font color=\"#4dc831\">Queda</font> e <font color=\"#4dc831\">Chamas</font>, podendo ser lançado até 2 vezes por rodada.",
+          "translation": "追打击退敌人，造成倒地和烈焰，每回合最多触发2次。"
+        }
+      },
+      "21020855": {
+        "name": {
+          "source": "Fortalecer Habilidade Secreta",
+          "translation": "秘传强化"
+        },
+        "desc": {
+          "source": "No início do combate até 6 de seus companheiros que possuam Habilidade Secreta recebem aumento de 100% de Defesa e Resistência e 15% de chance de Crítico por 2 rodadas.",
+          "translation": "战斗开始时，己方最多6名拥有秘传技能的忍者，防御和抗性提高100%，暴击率提高15%，持续2回合。"
+        }
+      },
+      "21020856": {
+        "name": {
+          "source": "Jutsu Imitação das Sombras",
+          "translation": "影子模仿术"
+        },
+        "desc": {
+          "source": "Persegue inimigos com <font color=\"#4dc831\">Queda</font>, dispersando todos os <font color=\"#4dc831\">Escudos</font> e <font color=\"#4dc831\">Status positivos</font> e causando <font color=\"#4dc831\">Imobilidade</font>. Pode ser lançado até 2 vezes por rodada.",
+          "translation": "追打倒地敌人，驱散其全部护盾和增益状态，并造成定身，每回合最多触发2次。"
+        }
+      },
+      "21020857": {
+        "name": {
+          "source": "Formulação de Tática",
+          "translation": "战术制定"
+        },
+        "desc": {
+          "source": "Cria um Escudo de 20% de sua Resistência no alvo e recupera 60 pontos de Chakra à sua equipe.",
+          "translation": "为目标施加相当于自身抗性20%的护盾，并为己方队伍恢复60点查克拉。"
+        }
+      },
+      "21030851": {
+        "name": {
+          "source": "Jutsu de Costura da Sombra",
+          "translation": "影缝术"
+        },
+        "desc": {
+          "source": "Ataca 1 inimigo à frente, causa dano com aumento de 15% e tem grande chance de lançar um Combo de 3 e causar <font color=\"#4dc831\">Queda</font>.",
+          "translation": "攻击前方1名敌人，伤害提高15%，有较高概率造成3连击和倒地。"
+        }
+      },
+      "21030852": {
+        "name": {
+          "source": "Jutsu de Costura da Sombra",
+          "translation": "影缝术"
+        },
+        "desc": {
+          "source": "Ataca 1 inimigo à frente, causa dano com aumento de 15% e tem grande chance de lançar um Combo de 3 e causar <font color=\"#4dc831\">Queda</font>.",
+          "translation": "攻击前方1名敌人，伤害提高15%，有较高概率造成3连击和倒地。"
+        }
+      },
+      "21030853": {
+        "name": {
+          "source": "Jutsu de Costura da Sombra",
+          "translation": "影缝术"
+        },
+        "desc": {
+          "source": "Ataca 1 inimigo à frente, causa dano com aumento de 15% e tem grande chance de lançar um Combo de 3 e causar <font color=\"#4dc831\">Queda</font>.",
+          "translation": "攻击前方1名敌人，伤害提高15%，有较高概率造成3连击和倒地。"
+        }
+      },
+      "21030854": {
+        "name": {
+          "source": "Ataque de Selos Explosivos",
+          "translation": "起爆符攻击"
+        },
+        "desc": {
+          "source": "Persegue inimigos com <font color=\"#4dc831\">Repelimento</font>, causa <font color=\"#4dc831\">Queda</font> e <font color=\"#4dc831\">Chamas</font> e aumenta o resfriamento do alvo em 1.",
+          "translation": "追打击退敌人，造成倒地和烈焰，并使目标冷却增加1回合。"
+        }
+      },
+      "21030855": {
+        "name": {
+          "source": "Fortalecer Habilidade Secreta",
+          "translation": "秘传强化"
+        },
+        "desc": {
+          "source": "No início do combate até 6 de seus companheiros que possuam Habilidade Secreta recebem aumento de 100% de Defesa e Resistência e 30% de chance de Crítico por 2 rodadas.",
+          "translation": "战斗开始时，己方最多6名拥有秘传技能的忍者，防御和抗性提高100%，暴击率提高30%，持续2回合。"
+        }
+      },
+      "21030857": {
+        "name": {
+          "source": "Formulação de Tática",
+          "translation": "战术制定"
+        },
+        "desc": {
+          "source": "Cria um Escudo de 35% de sua Resistência no alvo e recupera 60 pontos de Chakra à sua equipe.",
+          "translation": "为目标施加相当于自身抗性35%的护盾，并为己方队伍恢复60点查克拉。"
+        }
+      },
+      "21040855": {
+        "name": {
+          "source": "Fortalecer Habilidade Secreta",
+          "translation": "秘传强化"
+        },
+        "desc": {
+          "source": "Enquanto estiver vivo, seus companheiros com Habilidade Secreta têm aumento de 15% na Defesa e Resistência.",
+          "translation": "自身存活时，己方拥有秘传技能的忍者，防御和抗性提高15%。"
+        }
+      },
+      "21040857": {
+        "name": {
+          "source": "Formulação de Tática",
+          "translation": "战术制定"
+        },
+        "desc": {
+          "source": "O resfriamento da Esotérica do alvo diminui em 1 rodada.",
+          "translation": "使目标的奥义冷却减少1回合。"
+        }
+      },
+      "21050855": {
+        "name": {
+          "source": "Fortalecer Habilidade Secreta",
+          "translation": "秘传强化"
+        },
+        "desc": {
+          "source": "Enquanto estiver vivo, seus companheiros com Habilidade Secreta têm aumento de 25% na Defesa e Resistência.",
+          "translation": "自身存活时，己方拥有秘传技能的忍者，防御和抗性提高25%。"
+        }
+      },
+      "21050857": {
+        "name": {
+          "source": "Formulação de Tática",
+          "translation": "战术制定"
+        },
+        "desc": {
+          "source": "O resfriamento da Esotérica do alvo diminui em 1 rodada e ganha 20 de Chakra.",
+          "translation": "使目标的奥义冷却减少1回合，并获得20点查克拉。"
+        }
+      },
+      "21060855": {
+        "name": {
+          "source": "Fortalecer Habilidade Secreta",
+          "translation": "秘传强化"
+        },
+        "desc": {
+          "source": "Enquanto estiver vivo, seus companheiros com Habilidade Secreta têm aumento de 40% na Defesa e Resistência.",
+          "translation": "自身存活时，己方拥有秘传技能的忍者，防御和抗性提高40%。"
+        }
+      }
+    }
+  },
+  "skillDetails": {
+    "class": "SkillKeyDescCFG",
+    "rows": {}
+  }
+}

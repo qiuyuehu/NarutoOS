@@ -1,0 +1,30 @@
+{
+  "id": "naruto-role-profile-ui-zh-CN-v1",
+  "resourceURL": "https://cdnnaruto-pt.oasgames.com/PT_NarutoAlpha8.43Build300/flash/crew/roleProfileUI.swf",
+  "font": "PingFang SC",
+  "fontSize": 28,
+  "textFields": {
+    "22": { "source": "Nível", "translation": "等级" },
+    "24": { "source": "Vida", "translation": "生命" },
+    "25": { "source": "Ataque", "translation": "攻击" },
+    "34": { "source": "Ataque", "translation": "攻击" },
+    "35": { "source": "Ataque", "translation": "攻击" },
+    "42": { "source": "Nível", "translation": "等级" },
+    "44": { "source": "Vida", "translation": "生命" },
+    "45": { "source": "Ataque", "translation": "攻击" },
+    "46": { "source": "Ataque", "translation": "攻击" },
+    "47": { "source": "Ataque", "translation": "攻击" },
+    "326": { "source": "Personagens", "translation": "角色", "fontSize": 20 },
+    "332": { "source": "Personagens", "translation": "角色", "fontSize": 20 },
+    "335": { "source": "Ferramentas", "translation": "物品", "fontSize": 18 },
+    "337": { "source": "Ferramentas", "translation": "物品", "fontSize": 18 },
+    "357": { "source": "Nível", "translation": "等级" },
+    "359": { "source": "Vida", "translation": "生命" },
+    "360": { "source": "Ataque", "translation": "攻击" },
+    "372": { "source": "Gasto:", "translation": "消耗：" },
+    "407": { "source": "Fortalecer", "translation": "强化" },
+    "410": { "source": "Fortalecer", "translation": "强化" },
+    "467": { "source": "Gasto:", "translation": "消耗：" },
+    "469": { "source": "Possui: ", "translation": "拥有："}
+  }
+}

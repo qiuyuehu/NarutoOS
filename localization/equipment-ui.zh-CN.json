@@ -1,0 +1,51 @@
+{
+  "id": "naruto-equipment-ui-zh-CN-v1",
+  "resourceURL": "https://cdnnaruto-pt.oasgames.com/PT_NarutoAlpha8.10Build300/flash/equipment/EquipmentUI.swf",
+  "file": "EquipmentUI.zh-CN.swf",
+  "textFields": {
+    "37": { "source": "Nome do item", "translation": "装备名称" },
+    "38": { "source": "Nível de Fortalecimento", "translation": "强化等级" },
+    "39": { "source": "Nível de Refino", "translation": "精炼等级" },
+    "40": { "source": "Nome do item", "translation": "装备名称" },
+    "41": { "source": "Nível de Fortalecimento", "translation": "强化等级" },
+    "43": { "source": "Fortalecendo automaticamente pode fortalecer um equipamento ao nível mais alto possível. (Para fortalecer é necessário gastar ryos.)Deseja fortalecer automaticamente?", "translation": "自动强化会将装备提升到当前可强化的最高等级（强化需要消耗铜币），确定开始自动强化吗？" },
+    "53": { "source": "Ver materiais", "translation": "查看材料" },
+    "82": { "source": "Magatama de Vida", "translation": "生命\n勾玉" },
+    "83": { "source": "Magatama de Ataque", "translation": "攻击\n勾玉" },
+    "84": { "source": "Magatama de Defesa", "translation": "防御\n勾玉" },
+    "85": { "source": "Magatama de Ninjutsu", "translation": "忍术\n勾玉" },
+    "86": { "source": "Magatama de Resistência", "translation": "抗性\n勾玉" },
+    "87": { "source": "Pedra de 1° Ataque", "translation": "先攻\n宝石" },
+    "88": { "source": "Pedra de Atq. Crít.", "translation": "暴击\n宝石" },
+    "89": { "source": "Pedra de Dano Crít.", "translation": "暴伤\n宝石" },
+    "90": { "source": "Pedra de Controle", "translation": "控制\n宝石" },
+    "91": { "source": "Pedra de Combo", "translation": "连击\n宝石" },
+    "92": { "source": "Magatama Arco-íris", "translation": "七彩\n勾玉" },
+    "154": { "source": "Gastar os materiais necessário à Elevação", "translation": "消耗升阶所需材料" },
+    "155": { "source": "O gasto de materiais é interrompido quando a elevação é bem-sucedida ou os materiais esgotam-se.", "translation": "升阶成功或材料耗尽时会停止消耗材料。" },
+    "241": { "source": "O nível seguinte ainda não foi liberado, por favor aguarde.", "translation": "下一等级尚未开放，\n请稍候。" },
+    "404": { "source": "O efeito de polimento aumenta o valor de refino em porcentagem", "translation": "精炼效果会按百分比提升属性" },
+    "615": { "source": "Comprar o item consumirá primeiro Cupons. Caso estes não sejam suficientes serão consumidos Lingotes.", "translation": "购买物品时优先消耗点券；点券不足时将消耗金币。" },
+    "618": { "source": "Este equipamento já foi refinado ao máximo.", "translation": "这件装备已精炼至最高等级。" },
+    "647": { "source": "Insira ou retire 1 Magatama com duplo-clique Arraste as Magatamas com 1 clique", "translation": "双击可镶嵌或取下一颗勾玉，\n单击可拖动勾玉。" }
+  },
+  "scriptStrings": {
+    "scripts/com/tencent/morefun/naruto/plugin/equipment/ui/EquipmentPanelUI.as": {
+      "Fortalecer": "强化",
+      "Evoluir": "升阶",
+      "Magatama": "勾玉",
+      "Refino": "精炼",
+      "Polimento": "洗练",
+      "Pedras": "宝石",
+      "Amuletos": "护符",
+      "Equipamento ": "装备"
+    },
+    "scripts/com/tencent/morefun/naruto/plugin/equipment/ui/UpgradeEquipmentRowUI.as": {
+      "<b>Fortalecer</b>": "<b>强化</b>",
+      "<b>Fortalec. máx.</b>": "<b>一键强化</b>"
+    },
+    "scripts/com/tencent/morefun/naruto/plugin/equipment/ui/EvolveEquipmentDetailUI.as": {
+      "Evoluir": "升阶"
+    }
+  }
+}

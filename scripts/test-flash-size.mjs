@@ -1,0 +1,11 @@
+import {spawn} from 'node:child_process';
+import fs from 'node:fs';
+import path from 'node:path';
+import electron from 'electron';
+const project=path.resolve(import.meta.dirname,'..');
+const directory=fs.mkdtempSync(path.join(project,'.test-artifacts/flash-size-'));
+const env={...process.env,NARUTO_FLASH_SIZE_TEST:directory};delete env.ELECTRON_RUN_AS_NODE;
+const child=spawn(electron,[path.join(project,'tests/flash-size-window.cjs')],{cwd:project,env,stdio:'inherit'});
+const timer=setTimeout(()=>child.kill('SIGTERM'),20000);
+child.on('error',error=>{clearTimeout(timer);console.error(error.message);process.exitCode=1});
+child.on('exit',code=>{clearTimeout(timer);console.log('尺寸检查资料：'+directory);process.exitCode=code===0?0:1});

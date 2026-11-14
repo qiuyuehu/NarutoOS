@@ -1,0 +1,54 @@
+{
+  "id": "naruto-info-ui-zh-CN-v1",
+  "resourceURL": "https://cdnnaruto-pt.oasgames.com/PT_NarutoAlpha8.13Build300/flash/crew/infoUI.swf",
+  "font": "PingFang SC",
+  "textFields": {
+    "210": { "source": "Estado de captura: 2/3", "translation": "捕获状态：2/3" },
+    "220": { "source": "Treino de Estilo", "translation": "流派修行" }
+  },
+  "scriptStrings": {
+    "infoUI_fla/detail_attr_mc_6": {
+      "Ataque geral": "总攻击",
+      "Defesa geral": "总防御",
+      "Ataque Fogo": "火属性攻击",
+      "Ataque Água": "水属性攻击",
+      "Ataque Terra": "土属性攻击",
+      "Ataque Relâmp.": "雷属性攻击",
+      "Ataque Vento": "风属性攻击",
+      "1° ataque": "先攻",
+      "Vida potencial": "生命潜力",
+      "Ataque potencial": "攻击潜力",
+      "Defesa potencial": "防御潜力",
+      "Ninjutsu potencial": "忍术潜力",
+      "Resistência potencial": "抗性潜力",
+      "Resistência a Vento": "风抗性",
+      "Resistência a Fogo": "火抗性",
+      "Resistência a Água": "水抗性",
+      "Resistência a Terra": "土抗性",
+      "Resistência a Relâmpago": "雷抗性",
+      "Crítico": "暴击",
+      "Dano Crítico": "暴击伤害",
+      "Combo": "连击",
+      "Controle": "控制",
+      "Penetração Taijutsu": "体术穿透",
+      "Penetração Ninjutsu": "忍术穿透",
+      "Redução de Dano": "伤害减免",
+      "Regeneração": "恢复"
+    },
+    "ui/crew/DetailInfoUI": {
+      "Vida": "生命",
+      "Ataque": "攻击",
+      "Defesa": "防御",
+      "Ninjutsu": "忍术",
+      "<b>Resistência</b>": "<b>抗性</b>",
+      "<b>Voltar</b>": "<b>返回</b>"
+    },
+    "ui/crew/InfoUI": {
+      "<b>Talentos</b>": "<b>天赋</b>",
+      "<b>Promoção</b>": "<b>晋升</b>",
+      "<b>Detalhes</b>": "<b>详情</b>",
+      "Trocar classe": "更换职业",
+      "Esconder n° de servidor": "隐藏服务器编号"
+    }
+  }
+}

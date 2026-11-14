@@ -1,0 +1,179 @@
+{
+  "id": "naruto-ninja-target-05-zh-CN-v1",
+  "rootId": "11014821",
+  "ninjaInfo": {
+    "class": "NinjaInfoCFG",
+    "rows": {
+      "11014821": {
+        "name": {
+          "source": "Sasuke",
+          "translation": "宇智波佐助"
+        },
+        "title": {
+          "source": "[Sasuke Shinden]",
+          "translation": "【佐助真传】"
+        }
+      }
+    }
+  },
+  "skills": {
+    "class": "SkillCFG",
+    "rows": {
+      "21014821": {
+        "name": {
+          "source": "Espada Chidori",
+          "translation": "千鸟刀"
+        },
+        "desc": {
+          "source": "Ataca 1 <font color=\"#4dc831\">Ninja</font> aleatório, causando dano de <font color=\"#4dc831\">Relâmpago</font>, com chance de desferir <font color=\"#4dc831\">Queda</font> e <font color=\"#4dc831\">Choque Elétrico</font>. Esta habilidade ignora zoação e provocação. Quando a própria vida não for menor que <font color=\"#4dc831\">50%</font>, passa a usar <font color=\"#4dc831\">Estilo Inferno: Espada Chidori</font>.",
+          "translation": "随机攻击1名忍者，造成雷属性伤害，有概率造成倒地和电击。本技能无视嘲讽与挑衅。自身生命不低于50%时，改为使用炎遁·千鸟刀。"
+        }
+      },
+      "21014822": {
+        "name": {
+          "source": "Espada Chidori",
+          "translation": "千鸟刀"
+        },
+        "desc": {
+          "source": "Ataca 1 <font color=\"#4dc831\">Ninja</font> aleatório, causando dano de <font color=\"#4dc831\">Relâmpago</font>, com chance de desferir <font color=\"#4dc831\">Queda</font> e <font color=\"#4dc831\">Choque Elétrico</font>. Esta habilidade ignora zoação e provocação. Quando a própria vida não for menor que <font color=\"#4dc831\">50%</font>, passa a usar <font color=\"#4dc831\">Estilo Inferno: Espada Chidori</font>.",
+          "translation": "随机攻击1名忍者，造成雷属性伤害，有概率造成倒地和电击。本技能无视嘲讽与挑衅。自身生命不低于50%时，改为使用炎遁·千鸟刀。"
+        }
+      },
+      "21014823": {
+        "name": {
+          "source": "Espada Chidori",
+          "translation": "千鸟刀"
+        },
+        "desc": {
+          "source": "Ataca 1 <font color=\"#4dc831\">Ninja</font> aleatório, causando dano de <font color=\"#4dc831\">Relâmpago</font>, com chance de desferir <font color=\"#4dc831\">Queda</font> e <font color=\"#4dc831\">Choque Elétrico</font>. Esta habilidade ignora zoação e provocação. Quando a própria vida não for menor que <font color=\"#4dc831\">50%</font>, passa a usar <font color=\"#4dc831\">Estilo Inferno: Espada Chidori</font>.",
+          "translation": "随机攻击1名忍者，造成雷属性伤害，有概率造成倒地和电击。本技能无视嘲讽与挑衅。自身生命不低于50%时，改为使用炎遁·千鸟刀。"
+        }
+      },
+      "21014824": {
+        "name": {
+          "source": "Estilo Fogo: Jutsu do Dragão de Chama",
+          "translation": "火遁·炎龙之术"
+        },
+        "desc": {
+          "source": "Lançado no início de rodadas ímpares, ataca 4 inimigos da equipe à frente, causando dano de <font color=\"#4dc831\">Fogo</font> que <font color=\"#4dc831\">sempre acerta</font>, e <font color=\"#4dc831\">Chamas</font> que não podem ser imunizadas e dispersadas. Durante rodadas pares, é substituída por <font color=\"#4dc831\">Estilo Inferno: Jutsu do Dragão de Chama</font>.",
+          "translation": "奇数回合开始时触发，攻击正前方小队的4名敌人，造成必定命中的火属性伤害和无法免疫或驱散的烈焰。偶数回合替换为炎遁·炎龙之术。"
+        }
+      },
+      "21014826": {
+        "name": {
+          "source": "Susano'o: Armadura",
+          "translation": "须佐能乎·铠甲"
+        },
+        "desc": {
+          "source": "Com <font color=\"#4dc831\">Imunidade a Status negativos</font> e a <font color=\"#4dc831\">Perseguição</font>, a cada rodada, este ninja pode usar <font color=\"#4dc831\">Esotérica</font> até 2 vezes e reduzir os primeiros 2 danos sofridos de <font color=\"#4dc831\">Esotérica</font> em <font color=\"#4dc831\">40%</font>. Quando Sasuke está vivo, os primeiros 2 danos puros de <font color=\"#4dc831\">Taijutsu</font> recebidos pela equipe aliada são reduzidos em <font color=\"#4dc831\">50%</font> a cada rodada. Ao usar habilidades de <font color=\"#4dc831\">Perseguição</font>, Sasuke ganha <font color=\"#4dc831\">18%</font> de <font color=\"#4dc831\">Ninjutsu</font> e <font color=\"#4dc831\">7%</font> de <font color=\"#4dc831\">Crítico</font>.",
+          "translation": "免疫负面状态和追打，每回合最多可释放2次奥义，并使受到的前2次奥义伤害降低40%。佐助存活时，己方小队每回合受到的前2次纯体术伤害降低50%。每次使用追打技能时，佐助忍术提高18%，暴击率提高7%。"
+        }
+      },
+      "21014827": {
+        "name": {
+          "source": "Kirin",
+          "translation": "麒麟"
+        },
+        "desc": {
+          "source": "Ataca todas as equipes inimigas, causando dano de <font color=\"#4dc831\">Relâmpago</font> que <font color=\"#4dc831\">sempre acerta</font> e <font color=\"#4dc831\">Dano Elétrico</font>, e concede <font color=\"#4dc831\">Interrupção</font> ao alvo selecionado. O uso da habilidade permite ganhar <font color=\"#4dc831\">20%</font> de dano de habilidade de tipo <font color=\"#4dc831\">gatilho</font> (máximo de <font color=\"#4dc831\">100%</font>). É utilizada alternadamente com <font color=\"#4dc831\">Kirin: Fogo</font>.",
+          "translation": "攻击敌方所有小队，造成必定命中的雷属性伤害和雷电伤害，并对选定目标造成打断。使用后自身触发型技能伤害提高20%，最多100%。本技能与麒麟·火交替使用。"
+        }
+      },
+      "21014828": {
+        "name": {
+          "source": "Genjutsu: Mangekyo Sharingan",
+          "translation": "幻术·万花筒写轮眼"
+        },
+        "desc": {
+          "source": "Na primeira vez que receber dano de <font color=\"#4dc831\">gatilho</font> em cada rodada, executa <font color=\"#4dc831\">Genjutsu: Mangekyo Sharingan</font>. Além disso, ao sofrer dano de <font color=\"#4dc831\">Esotérica</font>, executa adicionalmente <font color=\"#4dc831\">Genjutsu: Rinnegan</font> (até 4 vezes por rodada).",
+          "translation": "每回合首次受到触发型伤害时，发动幻术·万花筒写轮眼。此外，受到奥义伤害时额外发动幻术·轮回眼，每回合最多4次。"
+        }
+      },
+      "21014829": {
+        "name": {
+          "source": "Susano'o: Armadura",
+          "translation": "须佐能乎·铠甲"
+        },
+        "desc": {
+          "source": "Os primeiros 2 danos puros de <font color=\"#4dc831\">Taijutsu</font> recebidos pela equipe aliada são reduzidos em <font color=\"#4dc831\">50%</font> a cada rodada. Ao usar habilidades de <font color=\"#4dc831\">Perseguição</font>, Sasuke ganha <font color=\"#4dc831\">18%</font> de <font color=\"#4dc831\">Ninjutsu</font> e <font color=\"#4dc831\">7%</font> de <font color=\"#4dc831\">Crítico</font>.",
+          "translation": "己方小队每回合受到的前2次纯体术伤害降低50%。每次使用追打技能时，佐助忍术提高18%，暴击率提高7%。"
+        }
+      },
+      "21214824": {
+        "name": {
+          "source": "Estilo Inferno: Jutsu do Dragão de Chama",
+          "translation": "炎遁·炎龙之术"
+        },
+        "desc": {
+          "source": "Lançado no início de rodadas pares, ataca 4 inimigos da equipe à frente, causando dano de <font color=\"#4dc831\">Fogo</font> que <font color=\"#4dc831\">sempre acerta</font>, e inflige <font color=\"#4dc831\">Chamas</font> e <font color=\"#4dc831\">Chama Negra</font> que não podem ser imunizadas e dispersadas.",
+          "translation": "偶数回合开始时触发，攻击正前方小队的4名敌人，造成必定命中的火属性伤害，并施加无法免疫或驱散的烈焰和黑炎。"
+        }
+      }
+    }
+  },
+  "skillDetails": {
+    "class": "SkillKeyDescCFG",
+    "rows": {
+      "523": {
+        "keys": {
+          "source": "Confusão",
+          "translation": "迷乱"
+        },
+        "desc": {
+          "source": "Status negativos: neste status, o primeiro [Crítico] realizado durante a rodada reduzirá em [15%] o [Crítico] e em [10%] a vida máxima do portador. Este status não pode ser imunizado nem dispersado e o efeito dura até o final da rodada.",
+          "translation": "负面状态：本回合首次造成[暴击]时，持有者的[暴击]率降低[15%]，生命上限降低[10%]。本状态无法免疫或驱散，持续至回合结束。"
+        }
+      },
+      "525": {
+        "keys": {
+          "source": "Estilo Inferno: Espada Chidori",
+          "translation": "炎遁·千鸟刀"
+        },
+        "desc": {
+          "source": "Ataca um 1 [ninjas] aleatório, causando dano de [Relâmpago] e [Fogo] que [sempre acerta], além de aplicar [Chama Negra] (é um status negativo, pode reduzir [1%] de [Taijutsu] e [Ninjutsu] de si mesmo ao causar dano, e reduzir [2%] de [Defesa] e [Resistência] ao sofrer dano. O efeito dura até o final da próxima rodada. Este status não pode ser imunizado e dispersado.). Esta habilidade ignora zoações e provocações, e tem uma chance de causar [Queda] e [Choque Elétrico].",
+          "translation": "随机攻击1名[忍者]，造成[必定命中]的[雷]、[火]属性伤害，并施加[黑炎]（负面状态：造成伤害时，自身[体术]和[忍术]降低[1%]；受到伤害时，[防御]和[抗性]降低[2%]；持续至下回合结束，无法免疫或驱散）。本技能无视嘲讽与挑衅，有概率造成[倒地]和[电击]。"
+        }
+      },
+      "526": {
+        "keys": {
+          "source": "Estilo Inferno: Jutsu do Dragão de Chama",
+          "translation": "炎遁·炎龙之术"
+        },
+        "desc": {
+          "source": "Ativado no início das rodadas pares, ataca 4 inimigos na frente da equipe, causando dano de [Fogo] que [sempre acerta], além de aplicar [Chamas] e [Chama Negra] (é um status negativo, pode reduzir [1%] de [Taijutsu] e [Ninjutsu] de si mesmo quando ninja causa dano, e reduzir [2%] de [Defesa] e [Resistência] ao receber dano. O efeito dura até o final da próxima rodada. Este status não pode ser imunizado e dispersado.).",
+          "translation": "偶数回合开始时触发，攻击正前方小队的4名敌人，造成[必定命中]的[火]属性伤害，并施加[烈焰]和[黑炎]（负面状态：造成伤害时，自身[体术]和[忍术]降低[1%]；受到伤害时，[防御]和[抗性]降低[2%]；持续至下回合结束，无法免疫或驱散）。"
+        }
+      },
+      "527": {
+        "keys": {
+          "source": "Genjutsu: Mangekyo Sharingan",
+          "translation": "幻术·万花筒写轮眼"
+        },
+        "desc": {
+          "source": "Ataca os inimigos à frente e aqueles sob o efeito de [Chama Negra], causando dano que [sempre acerta] ao até [7] inimigos e aplicando [Confusão] (é um status negativo, pode reduzir [15%] do [Crítico] e [10%] da vida máxima do portador quando o primeiro [Crítico] é ativado durante a rodada. Este status não pode ser imunizado e dispersado. O efeito dura até o final da rodada.).",
+          "translation": "攻击前排敌人及带有[黑炎]的敌人，对最多[7]名敌人造成[必定命中]的伤害，并施加[迷乱]（负面状态：本回合首次造成[暴击]时，持有者的[暴击]率降低[15%]，生命上限降低[10%]；无法免疫或驱散，持续至回合结束）。"
+        }
+      },
+      "528": {
+        "keys": {
+          "source": "Genjutsu: Rinnegan",
+          "translation": "幻术·轮回眼"
+        },
+        "desc": {
+          "source": "Ativado ao receber dano de habilidades de tipo [Esotérico] durante a rodada, pode atacar inimigos à frente e aqueles sob efeito de [Chama Negra], causando dano que [sempre acerta] a até [7] inimigos e aumentando em 1 rodada o [Resfriamento da Esotérica]. Aplica [Terror Extremo], impedindo receber novos bônus ou escudos. E não pode realizar ataques comuns na rodada atual. Ao final da rodada, com base nas vezes que o portador usou habilidades na rodada atual (contando a partir da ativação do status), causa dano igual a [5%] da vida restante por uso (com o limite máximo de 30.000, e o status dura 1 rodada).",
+          "translation": "本回合受到[奥义]技能伤害时触发，攻击前排敌人及带有[黑炎]的敌人，对最多[7]名敌人造成[必定命中]的伤害，使其[奥义冷却]增加1回合，并施加[极度恐惧]：无法获得新的增益或护盾，本回合无法普攻。回合结束时，按持有者本回合使用技能的次数（从状态生效时开始计数），每次造成相当于剩余生命[5%]的伤害，最高30000点；状态持续1回合。"
+        }
+      },
+      "529": {
+        "keys": {
+          "source": "Kirin: Fogo",
+          "translation": "麒麟·火"
+        },
+        "desc": {
+          "source": "(Resfriamento inicial [0 rodada] / Resfriamento da Esotérica [3 rodada] / Chakra: [20]) Ataca toda a equipe inimiga, causando dano de [Relâmpago] e [Fogo] que [sempre acerta], além de aplicar [Chama Negra] (é um status negativo, neste status, pode reduzir [1%] de [Taijutsu] e [Ninjutsu] de si mesmo ao causar dano e reduzir [2%] de [Defesa] e [Resistência] ao sofrer dano, e o efeito dura até o final da próxima rodada. Este status não pode ser imunizado e dispersado). Remove o status de [Obstinação]. O alvo selecionado sofre um efeito adicional de [Interrupção] e tem seu [Resfriamento da Esotérica] bloqueado por 1 rodada (até o final da próxima rodada). Esta habilidade é usada com [Kirin].",
+          "translation": "（进场冷却：[0回合]／奥义冷却：[3回合]／查克拉：[20]）攻击敌方全队，造成[必定命中]的[雷]、[火]属性伤害，并施加[黑炎]（负面状态：造成伤害时，自身[体术]和[忍术]降低[1%]；受到伤害时，[防御]和[抗性]降低[2%]；持续至下回合结束，无法免疫或驱散）。移除[坚毅]状态。对选定目标额外造成[打断]，并将其[奥义冷却]锁定为1回合，持续至下回合结束。本技能与[麒麟]交替使用。"
+        }
+      }
+    }
+  }
+}
