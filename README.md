@@ -48,4 +48,4 @@ open "Naruto OS.app"
 
 ---
 
-维护者：攸也。GPT / Codex 参与代码实现、调试和文档整理；署名方式见[贡献说明](.github/CONTRIBUTING.md)。
+由攸也维护，GPT / Codex 参与了代码实现、调试和文档整理。
