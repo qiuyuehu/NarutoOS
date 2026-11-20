@@ -1,0 +1,699 @@
+{
+  "id": "naruto-ninja-target-19-zh-CN-v1",
+  "rootId": "11006531",
+  "ninjaInfo": {
+    "class": "NinjaInfoCFG",
+    "rows": {
+      "11006531": {
+        "name": {
+          "source": "Pain",
+          "translation": "佩恩"
+        },
+        "title": {
+          "source": "[Reunião dos Seis Caminhos]",
+          "translation": "【六道集结】"
+        }
+      },
+      "11006532": {
+        "name": {
+          "source": "Pain",
+          "translation": "佩恩"
+        },
+        "title": {
+          "source": "[Reunião dos Seis Caminhos]",
+          "translation": "【六道集结】"
+        }
+      },
+      "11006533": {
+        "name": {
+          "source": "Pain",
+          "translation": "佩恩"
+        },
+        "title": {
+          "source": "[Reunião dos Seis Caminhos]",
+          "translation": "【六道集结】"
+        }
+      }
+    }
+  },
+  "skills": {
+    "class": "SkillCFG",
+    "rows": {
+      "21006551": {
+        "name": {
+          "source": "Seis em Um",
+          "translation": "六位一体"
+        },
+        "desc": {
+          "source": "Ataca até 6 inimigos aleatórios, causa dano de <font color=\"#4dc831\">Fogo</font> e <font color=\"#4dc831\">Combo de 4</font>, ganha 1 <font color=\"#4dc831\">Ponto de Habilidade</font> e reduz seu próprio <font color=\"#4dc831\">Resfriamento</font> em 1 rodada.",
+          "translation": "攻击最多6名随机敌人，造成火属性伤害和4连击，获得1个技能点，自身冷却减少1回合。"
+        }
+      },
+      "21006552": {
+        "name": {
+          "source": "Seis em Um",
+          "translation": "六位一体"
+        },
+        "desc": {
+          "source": "Ataca até 6 inimigos aleatórios, causa dano de <font color=\"#4dc831\">Fogo</font> e <font color=\"#4dc831\">Combo de 4</font>, ganha 1 <font color=\"#4dc831\">Ponto de Habilidade</font> e reduz seu próprio <font color=\"#4dc831\">Resfriamento</font> em 1 rodada.",
+          "translation": "攻击最多6名随机敌人，造成火属性伤害和4连击，获得1个技能点，自身冷却减少1回合。"
+        }
+      },
+      "21006553": {
+        "name": {
+          "source": "Seis em Um",
+          "translation": "六位一体"
+        },
+        "desc": {
+          "source": "Ataca até 6 inimigos aleatórios, causa dano de <font color=\"#4dc831\">Fogo</font> e <font color=\"#4dc831\">Combo de 4</font>, ganha 1 <font color=\"#4dc831\">Ponto de Habilidade</font> e reduz seu próprio <font color=\"#4dc831\">Resfriamento</font> em 1 rodada.",
+          "translation": "攻击最多6名随机敌人，造成火属性伤害和4连击，获得1个技能点，自身冷却减少1回合。"
+        }
+      },
+      "21006554": {
+        "name": {
+          "source": "Sinta a Dor",
+          "translation": "感受痛苦"
+        },
+        "desc": {
+          "source": "Persegue inimigos com <font color=\"#4dc831\">Repelimento</font> e <font color=\"#4dc831\">Queda</font>, causa <font color=\"#4dc831\">Queda</font>, <font color=\"#4dc831\">Distúrbio do Chakra</font> e <font color=\"#4dc831\">Dor</font> e reduz seu limite de Chakra para <font color=\"#4dc831\">20</font> até o fim da rodada. Esta habilidade <font color=\"#4dc831\">sempre acerta</font>, ignora parte da <font color=\"#4dc831\">Defesa</font> e <font color=\"#4dc831\">Resistência</font>, causa <font color=\"#4dc831\">30%</font> de dano de Choque aos inimigos a até 1 espaço de distância.",
+          "translation": "追打击退和倒地敌人，造成倒地、查克拉紊乱和痛苦，将其查克拉上限降至20，持续至回合结束。本技能必定命中，无视部分防御和抗性，对目标周围1格敌人造成30%震荡伤害。"
+        }
+      },
+      "21006555": {
+        "name": {
+          "source": "Rinnegan Universal: Reunião dos Seis Caminhos",
+          "translation": "轮回眼·六道集结"
+        },
+        "desc": {
+          "source": "Cada vez que este ninja for atingido, recebe 1 ou 2 <font color=\"#4dc831\">Ponto de Habilidade</font>, podendo acumular até 5. Cada <font color=\"#4dc831\">Ponto de Habilidade</font> aumenta <font color=\"#4dc831\">Ataque</font> e <font color=\"#4dc831\">Ninjutsu</font> em <font color=\"#4dc831\">12%</font>. Na primeira vez que for derrotado, ele será ressuscitado imediatamente, mas perderá <font color=\"#4dc831\">Parte das Habilidades</font>. Além disso, <font color=\"#4dc831\">Super Impulso Todo-poderoso</font> e <font color=\"#4dc831\">Como um Deus</font> terão seus efeitos modificados.",
+          "translation": "每次受到攻击时获得1或2个技能点，最多5点。每个技能点使攻击和忍术提高12%。首次被击败时立即复活，但失去部分技能，超·神罗天征与如同神明的效果发生变化。"
+        }
+      },
+      "21006556": {
+        "name": {
+          "source": "Como um Deus",
+          "translation": "如同神明"
+        },
+        "desc": {
+          "source": "Ao receber dano, seu Ataque aumenta <font color=\"#4dc831\">12%</font>. Ao realizar Ataques Críticos, causa <font color=\"#4dc831\">Distúrbio do Chakra</font>. Sempre que recebe um <font color=\"#4dc831\">Status negativos</font>, este é dispersado (com exceção dos que não podem ser evitados ou dispersados) e sua <font color=\"#4dc831\">Velocidade</font> aumenta em <font color=\"#4dc831\">2%</font> (até 5x).",
+          "translation": "受到伤害时攻击提高12%。造成暴击时施加查克拉紊乱。每次受到负面状态时将其驱散（无法免疫或驱散的状态除外），并使先攻提高2%，最多5次。"
+        }
+      },
+      "21006557": {
+        "name": {
+          "source": "Impulso Todo-poderoso",
+          "translation": "神罗天征"
+        },
+        "desc": {
+          "source": "Gasta 1 <font color=\"#4dc831\">Ponto de Habilidade</font> para ser lançada, causando dano e <font color=\"#4dc831\">Interrupção</font> a até 7 inimigos, além de <font color=\"#4dc831\">Terror</font> e aumento de <font color=\"#4dc831\">20</font> pontos no Consumo de Chakra do alvo até o fim da rodada, podendo acumular. Caso sua Vida esteja abaixo de <font color=\"#4dc831\">60%</font>, é substituída pelo <font color=\"#4dc831\">Super Impulso Todo-poderoso</font>.",
+          "translation": "消耗1个技能点，对最多7名敌人造成伤害和打断，额外使目标恐惧、查克拉消耗增加20点，持续至回合结束，可叠加。自身生命低于60%时，替换为超·神罗天征。"
+        }
+      },
+      "21006558": {
+        "name": {
+          "source": "Asura: Canhão Laser",
+          "translation": "修罗道·激光炮"
+        },
+        "desc": {
+          "source": "Lançado no início de cada rodada. Ataca a coluna inimiga da frente, causa dano, recebe 1 <font color=\"#4dc831\">Ponto de Habilidade</font>, reduz o Chakra de todos os alvos em <font color=\"#4dc831\">10</font>, faz com que a <font color=\"#4dc831\">Esotérica</font> de companheiros com <font color=\"#4dc831\">Rinnegan</font> <font color=\"#4dc831\">sempre acerte</font> e ganha imunidade a <font color=\"#4dc831\">Interrupção</font> até o fim da rodada.",
+          "translation": "每回合开始时触发，攻击前方敌人所在一纵排，造成伤害，获得1个技能点，使全部目标查克拉减少10点，并使己方轮回眼忍者奥义必定命中，自身免疫打断，持续至回合结束。"
+        }
+      },
+      "21006559": {
+        "name": {
+          "source": "Rinnegan Universal: Reunião dos Seis Caminhos",
+          "translation": "轮回眼·六道集结"
+        },
+        "desc": {
+          "source": "Na primeira vez que este ninja for derrotado, ressuscita imediatamente como um ninja manco <font color=\"#4dc831\">11006533</font>.",
+          "translation": "首次被击败时，立即以残缺形态11006533复活。"
+        }
+      },
+      "21006564": {
+        "name": {
+          "source": "Como um Deus",
+          "translation": "如同神明"
+        },
+        "desc": {
+          "source": "Este ninja tem <font color=\"#4dc831\">Imunidade a Perseguição</font> e <font color=\"#4dc831\">Status negativos</font>, possui <font color=\"#4dc831\">5</font> <font color=\"#4dc831\">Ponto de Habilidade</font> no início e pode lançar habilidade Esotérica até 2 vezes por rodada.",
+          "translation": "免疫追打和负面状态，初始拥有5个技能点，每回合最多使用2次奥义。"
+        }
+      },
+      "21006565": {
+        "name": {
+          "source": "Como um Deus",
+          "translation": "如同神明"
+        },
+        "desc": {
+          "source": "Ganha <font color=\"#4dc831\">1</font> <font color=\"#4dc831\">Ponto de Habilidade</font> cada vez que recebe um ataque. Para cada <font color=\"#4dc831\">Ponto de Habilidade</font> possuído, seu <font color=\"#4dc831\">Ataque</font> e <font color=\"#4dc831\">Ninjutsu</font> aumentam <font color=\"#4dc831\">20%</font>. Sempre que realiza um Ataque Crítico, o Consumo de Chakra do alvo aumenta em <font color=\"#4dc831\">20</font> pontos até o fim da rodada, podendo acumular.",
+          "translation": "每次受到攻击时获得1个技能点。每个技能点使自身攻击和忍术提高20%。造成暴击时，使目标查克拉消耗增加20点，持续至回合结束，可叠加。"
+        }
+      },
+      "21006566": {
+        "name": {
+          "source": "Como um Deus",
+          "translation": "如同神明"
+        },
+        "desc": {
+          "source": "Caso algum ninja seja derrotado, Pain o ressuscita com <font color=\"#4dc831\">40%</font> de Vida e lançando o <font color=\"#4dc831\">Super Impulso Todo-poderoso</font> 1 vez. Só pode ser lançado 1 vez por combate.",
+          "translation": "任意忍者被击败时，佩恩以40%生命将其复活，并释放1次超·神罗天征，每场战斗最多1次。"
+        }
+      },
+      "21006567": {
+        "name": {
+          "source": "Super Impulso Todo-poderoso",
+          "translation": "超·神罗天征"
+        },
+        "desc": {
+          "source": "Gasta 2 <font color=\"#4dc831\">Pontos de Habilidade</font> para ser lançada, causando dano <font color=\"#4dc831\">na certa</font>, <font color=\"#4dc831\">Interrupção</font> e aumento de <font color=\"#4dc831\">20</font> pontos no Consumo de Chakra de todos os inimigos até o fim da rodada, podendo acumular. Também causa <font color=\"#4dc831\">Terror</font> e <font color=\"#4dc831\">Repelimento</font> ao inimigo selecionado.",
+          "translation": "消耗2个技能点，对敌方全体造成必定命中的伤害和打断，使查克拉消耗增加20点，持续至回合结束，可叠加。额外对选定目标造成恐惧和击退。"
+        }
+      },
+      "21006568": {
+        "name": {
+          "source": "Super Impulso Todo-poderoso",
+          "translation": "超·神罗天征"
+        },
+        "desc": {
+          "source": "Lançado com a ressurreição, causando dano <font color=\"#4dc831\">na certa</font>, <font color=\"#4dc831\">Interrupção</font> e aumento de <font color=\"#4dc831\">20</font> pontos no Consumo de Chakra de todos os inimigos até o fim da rodada, podendo acumular. Só pode ser lançado 1 vez por combate.",
+          "translation": "复活时触发，对敌方全体造成必定命中的伤害和打断，使查克拉消耗增加20点，持续至回合结束，可叠加。每场战斗最多1次。"
+        }
+      },
+      "21206526": {
+        "name": {
+          "source": "Como um Deus",
+          "translation": "如同神明"
+        },
+        "desc": {
+          "source": "Este ninja tem <font color=\"#4dc831\">Imunidade a Perseguição</font> e <font color=\"#4dc831\">Status negativos</font> pode lançar habilidade Esotérica até 2 vezes por rodada.",
+          "translation": "免疫追打和负面状态，每回合最多使用2次奥义。"
+        }
+      },
+      "21206527": {
+        "name": {
+          "source": "Super Impulso Todo-poderoso",
+          "translation": "超·神罗天征"
+        },
+        "desc": {
+          "source": "Causa dano a 12 ninjas inimigos e <font color=\"#4dc831\">Interrupção</font>, além de <font color=\"#4dc831\">Repelimento</font> ao alvo selecionado; também aumenta seu consumo de Chakra em 20 por 2 rodadas.",
+          "translation": "对12名敌方忍者造成伤害和打断，额外使选定目标击退，查克拉消耗增加20点，持续2回合。"
+        }
+      },
+      "21206528": {
+        "name": {
+          "source": "Como um Deus",
+          "translation": "如同神明"
+        },
+        "desc": {
+          "source": "Cada vez que lança a Esotérica, perde <font color=\"#4dc831\">20%</font> de Vida, e aumenta o <font color=\"#4dc831\">Ataque</font> e <font color=\"#4dc831\">Ninjutsu</font> em <font color=\"#4dc831\">30%</font>.",
+          "translation": "每次释放奥义时，损失20%生命，攻击和忍术提高30%。"
+        }
+      },
+      "21206551": {
+        "name": {
+          "source": "Seis em Um",
+          "translation": "六位一体"
+        },
+        "desc": {
+          "source": "Ataca até <font color=\"#4dc831\">6</font> inimigos aleatórios, causa dano aumentado em <font color=\"#4dc831\">30%</font> de <font color=\"#4dc831\">Fogo</font> e <font color=\"#4dc831\">Combo de 4</font>, ganha 1 <font color=\"#4dc831\">Ponto de Habilidade</font> e reduz seu próprio <font color=\"#4dc831\">Resfriamento</font> em 1 rodada.",
+          "translation": "攻击最多6名随机敌人，造成提高30%的火属性伤害和4连击，获得1个技能点，自身冷却减少1回合。"
+        }
+      },
+      "21206552": {
+        "name": {
+          "source": "Seis em Um",
+          "translation": "六位一体"
+        },
+        "desc": {
+          "source": "Ataca até <font color=\"#4dc831\">6</font> inimigos aleatórios, causa dano aumentado em <font color=\"#4dc831\">30%</font> de <font color=\"#4dc831\">Fogo</font> e <font color=\"#4dc831\">Combo de 4</font>, ganha 1 <font color=\"#4dc831\">Ponto de Habilidade</font> e reduz seu próprio <font color=\"#4dc831\">Resfriamento</font> em 1 rodada.",
+          "translation": "攻击最多6名随机敌人，造成提高30%的火属性伤害和4连击，获得1个技能点，自身冷却减少1回合。"
+        }
+      },
+      "21206553": {
+        "name": {
+          "source": "Seis em Um",
+          "translation": "六位一体"
+        },
+        "desc": {
+          "source": "Ataca até <font color=\"#4dc831\">6</font> inimigos aleatórios, causa dano aumentado em <font color=\"#4dc831\">30%</font> de <font color=\"#4dc831\">Fogo</font> e <font color=\"#4dc831\">Combo de 4</font>, ganha 1 <font color=\"#4dc831\">Ponto de Habilidade</font> e reduz seu próprio <font color=\"#4dc831\">Resfriamento</font> em 1 rodada.",
+          "translation": "攻击最多6名随机敌人，造成提高30%的火属性伤害和4连击，获得1个技能点，自身冷却减少1回合。"
+        }
+      },
+      "21206554": {
+        "name": {
+          "source": "Sinta a Dor",
+          "translation": "感受痛苦"
+        },
+        "desc": {
+          "source": "Persegue inimigos com <font color=\"#4dc831\">Repelimento</font> e <font color=\"#4dc831\">Queda</font>, causa <font color=\"#4dc831\">Queda</font>, <font color=\"#4dc831\">Distúrbio do Chakra</font> e <font color=\"#4dc831\">Dor</font>, consome 1 <font color=\"#4dc831\">Ponto de Habilidade</font> e reduz seu limite de Chakra para <font color=\"#4dc831\">20</font> até o fim da rodada. Esta habilidade <font color=\"#4dc831\">sempre acerta</font>, ignora parte da <font color=\"#4dc831\">Defesa</font> e <font color=\"#4dc831\">Resistência</font> e causa <font color=\"#4dc831\">30%</font> de dano de Choque aos inimigos a até 1 espaço de distância.",
+          "translation": "追打击退和倒地敌人，造成倒地、查克拉紊乱和痛苦，消耗1个技能点，将目标查克拉上限降至20，持续至回合结束。本技能必定命中，无视部分防御和抗性，对目标周围1格敌人造成30%震荡伤害。"
+        }
+      },
+      "21206555": {
+        "name": {
+          "source": "Rinnegan Universal: Reunião dos Seis Caminhos",
+          "translation": "轮回眼·六道集结"
+        },
+        "desc": {
+          "source": "Você obtém 1/2 <font color=\"#4dc831\">Pontos de Habilidade</font>, até o máximo de 5. Cada <font color=\"#4dc831\">Ponto de Habilidade</font> aumenta seu <font color=\"#4dc831\">Ataque</font> e <font color=\"#4dc831\">Ninjutsu</font> em <font color=\"#4dc831\">18%</font>. Ao receber um ataque fatal, lança o <font color=\"#4dc831\">Golpe Mortal</font> - <font color=\"#4dc831\">Sinta a Dor</font>, perdendo todas as habilidade e renascendo como <font color=\"#4dc831\">Pain: Caminho Deva <font color=\"#4dc831\">Super</font></font>, com as habilidades <font color=\"#4dc831\">Super Impulso Todo-poderoso</font>, <font color=\"#4dc831\">Golpe Penetrante dos Bastões Negros</font>, <font color=\"#4dc831\">Impulso Todo Poderoso</font>, <font color=\"#4dc831\">Puxão Universal</font> e <font color=\"#4dc831\">Devastação Planetária</font>.",
+          "translation": "获得1/2个技能点，最多5点。每个技能点使攻击和忍术提高18%。受到致命攻击时，释放致命一击·感受痛苦，失去全部技能，并以佩恩·天道【超】重生，拥有超·神罗天征、黑棒贯穿、神罗天征、万象天引和地爆天星。"
+        }
+      },
+      "21206556": {
+        "name": {
+          "source": "Como um Deus",
+          "translation": "如同神明"
+        },
+        "desc": {
+          "source": "Ao receber dano, seu Ataque aumenta <font color=\"#4dc831\">15%</font>. Ao realizar Ataques Críticos, causa <font color=\"#4dc831\">Distúrbio do Chakra</font>. Sempre que recebe um <font color=\"#4dc831\">Status negativos</font>, este é dispersado (com exceção dos que não podem ser evitados ou dispersados) e sua <font color=\"#4dc831\">Velocidade</font> aumenta em <font color=\"#4dc831\">2%</font> (até 5x).",
+          "translation": "受到伤害时攻击提高15%。造成暴击时施加查克拉紊乱。每次受到负面状态时将其驱散（无法免疫或驱散的状态除外），先攻提高2%，最多5次。"
+        }
+      },
+      "21206558": {
+        "name": {
+          "source": "Asura: Canhão Laser",
+          "translation": "修罗道·激光炮"
+        },
+        "desc": {
+          "source": "Lançado no início de cada rodada. Ataca a coluna inimiga da frente, causa dano, recebe 1 <font color=\"#4dc831\">Ponto de Habilidade</font> e reduz o Chakra de todos os alvos em <font color=\"#4dc831\">10</font>. Além disso, faz com que a <font color=\"#4dc831\">Esotérica</font> de companheiros com <font color=\"#4dc831\">Rinnegan</font> <font color=\"#4dc831\">sempre acerte</font>, ganha imunidade a <font color=\"#4dc831\">Interrupção</font> e, sempre que recebe ataques Taijutsu, ganha <font color=\"#4dc831\">2%</font> de <font color=\"#4dc831\">Ataque</font> e <font color=\"#4dc831\">Ninjutsu</font> até o fim da rodada.",
+          "translation": "每回合开始时触发，攻击前方敌人所在一纵排，造成伤害，获得1个技能点，使全部目标查克拉减少10点。此外，己方轮回眼忍者奥义必定命中，自身免疫打断，每次受到体术攻击时攻击和忍术提高2%，持续至回合结束。"
+        }
+      },
+      "21206559": {
+        "name": {
+          "source": "Rinnegan Universal: Reunião dos Seis Caminhos",
+          "translation": "轮回眼·六道集结"
+        },
+        "desc": {
+          "source": "Na primeira vez que este ninja for derrotado, ressuscita imediatamente como <font color=\"#4dc831\">11006534</font> Pain: Caminho Deva <font color=\"#4dc831\">Super</font>.",
+          "translation": "首次被击败时，立即以11006534佩恩·天道【超】复活。"
+        }
+      },
+      "21306551": {
+        "name": {
+          "source": "Seis em Um",
+          "translation": "六位一体"
+        },
+        "desc": {
+          "source": "Ataca até <font color=\"#4dc831\">6</font> inimigos aleatórios, causa dano aumentado em <font color=\"#4dc831\">30%</font> de <font color=\"#4dc831\">Fogo</font> e <font color=\"#4dc831\">Combo de 4</font> <font color=\"#4dc831\">na certa</font>, ganha 1 <font color=\"#4dc831\">Ponto de Habilidade</font> e reduz seu próprio <font color=\"#4dc831\">Resfriamento</font> em 1 rodada.",
+          "translation": "攻击最多6名随机敌人，造成提高30%且必定命中的火属性伤害和4连击，获得1个技能点，自身冷却减少1回合。"
+        }
+      },
+      "21306552": {
+        "name": {
+          "source": "Seis em Um",
+          "translation": "六位一体"
+        },
+        "desc": {
+          "source": "Ataca até <font color=\"#4dc831\">6</font> inimigos aleatórios, causa dano aumentado em <font color=\"#4dc831\">30%</font> de <font color=\"#4dc831\">Fogo</font> e <font color=\"#4dc831\">Combo de 4</font> <font color=\"#4dc831\">na certa</font>, ganha 1 <font color=\"#4dc831\">Ponto de Habilidade</font> e reduz seu próprio <font color=\"#4dc831\">Resfriamento</font> em 1 rodada.",
+          "translation": "攻击最多6名随机敌人，造成提高30%且必定命中的火属性伤害和4连击，获得1个技能点，自身冷却减少1回合。"
+        }
+      },
+      "21306553": {
+        "name": {
+          "source": "Seis em Um",
+          "translation": "六位一体"
+        },
+        "desc": {
+          "source": "Ataca até <font color=\"#4dc831\">6</font> inimigos aleatórios, causa dano aumentado em <font color=\"#4dc831\">30%</font> de <font color=\"#4dc831\">Fogo</font> e <font color=\"#4dc831\">Combo de 4</font> <font color=\"#4dc831\">na certa</font>, ganha 1 <font color=\"#4dc831\">Ponto de Habilidade</font> e reduz seu próprio <font color=\"#4dc831\">Resfriamento</font> em 1 rodada.",
+          "translation": "攻击最多6名随机敌人，造成提高30%且必定命中的火属性伤害和4连击，获得1个技能点，自身冷却减少1回合。"
+        }
+      },
+      "21306554": {
+        "name": {
+          "source": "Sinta a Dor",
+          "translation": "感受痛苦"
+        },
+        "desc": {
+          "source": "Persegue inimigos com <font color=\"#4dc831\">Repelimento</font> e <font color=\"#4dc831\">Queda</font>, causa <font color=\"#4dc831\">Queda</font>, <font color=\"#4dc831\">Distúrbio do Chakra</font> e <font color=\"#4dc831\">Dor Extrema</font>, consome 1 <font color=\"#4dc831\">Ponto de Habilidade</font> e reduz seu limite de Chakra para <font color=\"#4dc831\">20</font> até o fim da rodada. Esta habilidade <font color=\"#4dc831\">sempre acerta</font>, ignora parte da <font color=\"#4dc831\">Defesa</font> e <font color=\"#4dc831\">Resistência</font> e causa <font color=\"#4dc831\">30%</font> de dano de Choque aos inimigos a até 1 espaço de distância.",
+          "translation": "追打击退和倒地敌人，造成倒地、查克拉紊乱和极度痛苦，消耗1个技能点，将目标查克拉上限降至20，持续至回合结束。本技能必定命中，无视部分防御和抗性，对目标周围1格敌人造成30%震荡伤害。"
+        }
+      },
+      "21306555": {
+        "name": {
+          "source": "Rinnegan Universal: Reunião dos Seis Caminhos",
+          "translation": "轮回眼·六道集结"
+        },
+        "desc": {
+          "source": "Você obtém 1/2 <font color=\"#4dc831\">Pontos de Habilidade</font>, até o máximo de 5. Quando sua Vida cai abaixo de <font color=\"#4dc831\">60%</font>, lança o <font color=\"#4dc831\">Super Impulso Todo-poderoso</font> com <font color=\"#4dc831\">Novo Efeito</font> 1 vez, perdendo todas as habilidade e renascendo como <font color=\"#4dc831\">Pain: Caminho Deva <font color=\"#4dc831\">Super</font></font>, com as habilidades <font color=\"#4dc831\">Super Impulso Todo-poderoso</font>, <font color=\"#4dc831\">Golpe Penetrante dos Bastões Negros</font>, <font color=\"#4dc831\">Impulso Todo Poderoso</font>, <font color=\"#4dc831\">Puxão Universal</font> e <font color=\"#4dc831\">Devastação Planetária</font>.",
+          "translation": "获得1/2个技能点，最多5点。自身生命低于60%时，释放1次新效果的超·神罗天征，失去全部技能，并以佩恩·天道【超】重生，拥有超·神罗天征、黑棒贯穿、神罗天征、万象天引和地爆天星。"
+        }
+      },
+      "21306556": {
+        "name": {
+          "source": "Como um Deus",
+          "translation": "如同神明"
+        },
+        "desc": {
+          "source": "Sempre que causa dano, seu Ataque aumenta <font color=\"#4dc831\">20%</font>. Sempre que recebe dano, seu <font color=\"#4dc831\">Resfriamento</font> é reduzido em 1. Ao realizar Ataques Críticos, causa <font color=\"#4dc831\">Distúrbio do Chakra</font>. Sempre que recebe um <font color=\"#4dc831\">Status negativo</font>, este é dispersado (com exceção dos que não podem ser evitados ou dispersados) e sua <font color=\"#4dc831\">Velocidade</font> aumenta <font color=\"#4dc831\">2%</font> (até 5x).",
+          "translation": "每次造成伤害时攻击提高20%。每次受到伤害时冷却减少1回合。造成暴击时施加查克拉紊乱。每次受到负面状态时将其驱散（无法免疫或驱散的状态除外），先攻提高2%，最多5次。"
+        }
+      },
+      "21306557": {
+        "name": {
+          "source": "Impulso Todo-poderoso",
+          "translation": "神罗天征"
+        },
+        "desc": {
+          "source": "Gasta 1 <font color=\"#4dc831\">Ponto de Habilidade</font> para ser lançada, causando dano e <font color=\"#4dc831\">Interrupção</font> a até 7 inimigos, além de <font color=\"#4dc831\">Terror</font> e aumento de <font color=\"#4dc831\">20</font> pontos no Consumo de Chakra do alvo até o fim da rodada, podendo acumular. Caso sua Vida esteja abaixo de <font color=\"#4dc831\">60%</font>, é substituída pelo <font color=\"#4dc831\">Super Impulso Todo-poderoso</font>.",
+          "translation": "消耗1个技能点，对最多7名敌人造成伤害和打断，额外使目标恐惧、查克拉消耗增加20点，持续至回合结束，可叠加。自身生命低于60%时，替换为超·神罗天征。"
+        }
+      },
+      "21306558": {
+        "name": {
+          "source": "Asura: Canhão Laser",
+          "translation": "修罗道·激光炮"
+        },
+        "desc": {
+          "source": "Lançado no início de cada rodada. Ataca a coluna inimiga da frente, causa dano, recebe 1 <font color=\"#4dc831\">Ponto de Habilidade</font> e reduz o Chakra de todos os alvos em <font color=\"#4dc831\">10</font>. Além disso, faz com que a <font color=\"#4dc831\">Esotérica</font> de companheiros com <font color=\"#4dc831\">Rinnegan</font> <font color=\"#4dc831\">sempre acerte</font>, ganha imunidade a <font color=\"#4dc831\">Interrupção</font> e, sempre que recebe ataques Taijutsu, ganha <font color=\"#4dc831\">4%</font> de <font color=\"#4dc831\">Ataque</font> e <font color=\"#4dc831\">Ninjutsu</font> até o fim da rodada.",
+          "translation": "每回合开始时触发，攻击前方敌人所在一纵排，造成伤害，获得1个技能点，使全部目标查克拉减少10点。此外，己方轮回眼忍者奥义必定命中，自身免疫打断，每次受到体术攻击时攻击和忍术提高4%，持续至回合结束。"
+        }
+      },
+      "21306559": {
+        "name": {
+          "source": "Super Impulso Todo-poderoso",
+          "translation": "超·神罗天征"
+        },
+        "desc": {
+          "source": "Gasta toda a Vida restante e obtém 5 <font color=\"#4dc831\">Pontos de Habilidade</font>. Causa dano, <font color=\"#4dc831\">Interrupção</font> e aumento de <font color=\"#4dc831\">20</font> pontos no Consumo de Chakra de todos os inimigos até o fim da rodada, podendo acumular. Também reduz o Consumo de Chakra de sua equipe em <font color=\"#4dc831\">20</font> até o fim da rodada, sem acumular.",
+          "translation": "消耗全部剩余生命，获得5个技能点。对敌方全体造成伤害和打断，查克拉消耗增加20点，持续至回合结束，可叠加。己方小队查克拉消耗降低20点，持续至回合结束，不叠加。"
+        }
+      },
+      "21406551": {
+        "name": {
+          "source": "Seis em Um",
+          "translation": "六位一体"
+        },
+        "desc": {
+          "source": "Ataca até <font color=\"#4dc831\">9</font> inimigos aleatórios, causa dano de <font color=\"#4dc831\">Fogo</font> e <font color=\"#4dc831\">Combo de 4</font>, ganha 1 <font color=\"#4dc831\">Ponto de Habilidade</font> e reduz seu próprio <font color=\"#4dc831\">Resfriamento</font> em 1 rodada.",
+          "translation": "攻击最多9名随机敌人，造成火属性伤害和4连击，获得1个技能点，自身冷却减少1回合。"
+        }
+      },
+      "21406552": {
+        "name": {
+          "source": "Seis em Um",
+          "translation": "六位一体"
+        },
+        "desc": {
+          "source": "Ataca até <font color=\"#4dc831\">9</font> inimigos aleatórios, causa dano de <font color=\"#4dc831\">Fogo</font> e <font color=\"#4dc831\">Combo de 4</font>, ganha 1 <font color=\"#4dc831\">Ponto de Habilidade</font> e reduz seu próprio <font color=\"#4dc831\">Resfriamento</font> em 1 rodada.",
+          "translation": "攻击最多9名随机敌人，造成火属性伤害和4连击，获得1个技能点，自身冷却减少1回合。"
+        }
+      },
+      "21406553": {
+        "name": {
+          "source": "Seis em Um",
+          "translation": "六位一体"
+        },
+        "desc": {
+          "source": "Ataca até <font color=\"#4dc831\">9</font> inimigos aleatórios, causa dano de <font color=\"#4dc831\">Fogo</font> e <font color=\"#4dc831\">Combo de 4</font>, ganha 1 <font color=\"#4dc831\">Ponto de Habilidade</font> e reduz seu próprio <font color=\"#4dc831\">Resfriamento</font> em 1 rodada.",
+          "translation": "攻击最多9名随机敌人，造成火属性伤害和4连击，获得1个技能点，自身冷却减少1回合。"
+        }
+      },
+      "21406554": {
+        "name": {
+          "source": "Sinta a Dor",
+          "translation": "感受痛苦"
+        },
+        "desc": {
+          "source": "Persegue inimigos com <font color=\"#4dc831\">Repelimento</font> e <font color=\"#4dc831\">Queda</font>, causa <font color=\"#4dc831\">Queda</font>, <font color=\"#4dc831\">Distúrbio do Chakra</font> e <font color=\"#4dc831\">Dor</font> e absorve toda a sua Chakra. Esta habilidade <font color=\"#4dc831\">sempre acerta</font>, ignora parte da <font color=\"#4dc831\">Defesa</font> e <font color=\"#4dc831\">Resistência</font> e, caso o alvo já esteja sob <font color=\"#4dc831\">Dor</font> ou <font color=\"#4dc831\">Dor Extrema</font>, causa um <font color=\"#4dc831\">Efeito da Habilidade</font>.",
+          "translation": "追打击退和倒地敌人，造成倒地、查克拉紊乱和痛苦，并吸收其全部查克拉。本技能必定命中，无视部分防御和抗性。若目标已带有痛苦或极度痛苦，则触发另一技能效果。"
+        }
+      },
+      "21406556": {
+        "name": {
+          "source": "Como um Deus",
+          "translation": "如同神明"
+        },
+        "desc": {
+          "source": "Os Pains em sua equipe têm <font color=\"#4dc831\">Imunidade a Status negativos</font>. Ao receber dano, seu <font color=\"#4dc831\">Resfriamento</font> é reduzido em 1 rodada. Sempre que Pain usa habilidades, o Ataque de Pain <font color=\"#4dc831\">Reunião dos Seis Caminhos</font> aumenta em <font color=\"#4dc831\">25%</font> (pode ser lançado 4x por rodada)",
+          "translation": "己方佩恩免疫负面状态。受到伤害时，自身冷却减少1回合。每次佩恩使用技能时，佩恩【六道集结】的攻击提高25%，每回合最多4次。"
+        }
+      },
+      "21406558": {
+        "name": {
+          "source": "Asura: Canhão Laser",
+          "translation": "修罗道·激光炮"
+        },
+        "desc": {
+          "source": "Lançado no início de cada rodada. Ataca a coluna onde o ninja com menos Vida estiver, causando <font color=\"#4dc831\">Supressão de Imunidade a Perseguição</font> até o fim da rodada, dano <font color=\"#4dc831\">na certa</font>, e recebendo 1 <font color=\"#4dc831\">Ponto de Habilidade</font>. Além disso, sempre que recebe ataques, ganha <font color=\"#4dc831\">5%</font> de <font color=\"#4dc831\">Ataque</font> e <font color=\"#4dc831\">Ninjutsu</font>.",
+          "translation": "每回合开始时触发，攻击生命最低的忍者所在一纵排，造成持续至回合结束的追打免疫压制及必定命中的伤害，获得1个技能点。此外，每次受到攻击时，攻击和忍术提高5%。"
+        }
+      },
+      "21506557": {
+        "name": {
+          "source": "Impulso Todo-poderoso",
+          "translation": "神罗天征"
+        },
+        "desc": {
+          "source": "Gasta 1 <font color=\"#4dc831\">Ponto de Habilidade</font> para ser lançada, causando dano e <font color=\"#4dc831\">Interrupção</font> a até 7 inimigos, além de <font color=\"#4dc831\">Terror</font> e aumento de <font color=\"#4dc831\">20</font> pontos no Consumo de Chakra do alvo até o fim da rodada, podendo acumular. Caso sua Vida esteja abaixo de <font color=\"#4dc831\">70%</font>, é substituída pelo <font color=\"#4dc831\">Super Impulso Todo-poderoso</font>.",
+          "translation": "消耗1个技能点，对最多7名敌人造成伤害和打断，额外使目标恐惧、查克拉消耗增加20点，持续至回合结束，可叠加。自身生命低于70%时，替换为超·神罗天征。"
+        }
+      },
+      "21706557": {
+        "name": {
+          "source": "Impulso Todo-poderoso",
+          "translation": "神罗天征"
+        },
+        "desc": {
+          "source": "Causa dano e <font color=\"#4dc831\">Interrupção</font> a 7 inimigos, além de <font color=\"#4dc831\">Terror</font> e aumento de <font color=\"#4dc831\">20</font> pontos no Consumo de Chakra do alvo até o fim da rodada, podendo acumular. A cada 1 alvo atingido, você gasta <font color=\"#4dc831\">2%</font> de Vida e reduz o Consumo de Chakra da equipe em <font color=\"#4dc831\">20</font> durante a rodada (não acumula). Caso a Vida do alvo esteja abaixo de <font color=\"#4dc831\">70%</font>, lança o <font color=\"#4dc831\">Super Impulso Todo-poderoso</font>.",
+          "translation": "对7名敌人造成伤害和打断，额外使目标恐惧、查克拉消耗增加20点，持续至回合结束，可叠加。每命中1名目标，自身消耗2%生命，己方队伍本回合查克拉消耗降低20点，不叠加。若目标生命低于70%，释放超·神罗天征。"
+        }
+      }
+    }
+  },
+  "skillDetails": {
+    "class": "SkillKeyDescCFG",
+    "rows": {
+      "230": {
+        "keys": {
+          "source": "Parte das Habilidades",
+          "translation": "部分技能"
+        },
+        "desc": {
+          "source": "Inclui habilidades [Seis em Um], [Sinta a Dor], [Asura: Canhão Laser] e [Rinnegan Universal: Reunião dos Seis Caminhos].",
+          "translation": "包括[六位一体]、[感受痛苦]、[修罗道·激光炮]及[轮回眼·六道集结]。"
+        }
+      },
+      "231": {
+        "keys": {
+          "source": "Super Impulso Todo-poderoso",
+          "translation": "超·神罗天征"
+        },
+        "desc": {
+          "source": "Substituição após derrota: [Super Impulso Todo-poderoso] (Resfriamento inicial [0 rodadas] / Resfriamento Esotérico [0 rodadas] / [0] pontos de chakra / [2] pontos de chocolate) causa dano [certeiro] e [interrupção] em toda a facção inimiga, aumentando o consumo de chakra em [20] pontos (pode ser acumulado, dura até o final da rodada), causando [Medo] e [Repelimento] adicionais ao inimigo selecionado.",
+          "translation": "被击败后替换为[超·神罗天征]（进场冷却：[0回合]／奥义冷却：[0回合]／查克拉：[0]／技能点：[2]）：对敌方全阵营造成[必定命中]的伤害和[打断]，使查克拉消耗增加[20]点，可叠加，持续至回合结束；额外使选定目标[恐惧]和[击退]。"
+        }
+      },
+      "232": {
+        "keys": {
+          "source": "Como um Deus",
+          "translation": "如同神明"
+        },
+        "desc": {
+          "source": "Este ninja tem [Imunidade a Perseguição] e a [Status negativos], podendo liberar seu Jutsu de Fúria até 2 vezes em um único turno. Cada vez que é atingido, ele ganha [1] [ponto de chocolate], e, a cada ponto de chocolate acumulado, aumenta seu [ataque] e [ninjutsu] em [20%]. Além disso, quando realiza um golpe crítico, aumenta o consumo de chakra do alvo atingido em [20] pontos. Em caso de derrota, se qualquer ninja do seu time for derrotado, este ninja revive com [40%] de sua vida e imediatamente ativa uma vez [Super Impulso Todo-poderoso]: causando dano [certeiro] e [interrupção] em todo a facção inimiga e aumentando o consumo de chakra em [20] pontos (pode ser acumulado, dura até o final da rodada). (Pode reviver apenas uma vez por combate).",
+          "translation": "免疫[追打]和[负面状态]，每回合最多使用2次奥义。每次受到攻击获得[1]个[技能点]，每个技能点使[攻击]和[忍术]提高[20%]。造成暴击时，使目标查克拉消耗增加[20]点。被击败后，若己方任意忍者被击败，则以[40%]生命复活，并立即释放1次[超·神罗天征]：对敌方全阵营造成[必定命中]的伤害和[打断]，使查克拉消耗增加[20]点，可叠加，持续至回合结束。每场战斗最多复活1次。"
+        }
+      },
+      "233": {
+        "keys": {
+          "source": "Super Impulso Todo-poderoso",
+          "translation": "超·神罗天征"
+        },
+        "desc": {
+          "source": "Substituição de Jutsu de Fúria: [Super Impulso Todo-poderoso] (Resfriamento inicial [0 rodadas] / Resfriamento Esotérico [2 rodadas] / [20] chakra / todos os pontos de habilidade) causa dano e [interrupção] em todo a facção inimiga. Ao selecionar um inimigo, causará [medo], aumentará o consumo de chakra em [20] pontos (pode ser acumulado, dura até o final da rodada) e causará [Repelimento]. Este poder curará a si mesmo em [7%] do dano causado.",
+          "translation": "奥义替换为[超·神罗天征]（进场冷却：[0回合]／奥义冷却：[2回合]／查克拉：[20]／全部技能点）：对敌方全阵营造成伤害和[打断]，额外使选定目标[恐惧]、查克拉消耗增加[20]点（可叠加，持续至回合结束）及[击退]。恢复相当于本技能造成伤害[7%]的生命。"
+        }
+      },
+      "234": {
+        "keys": {
+          "source": "Super Impulso Todo-poderoso",
+          "translation": "超·神罗天征"
+        },
+        "desc": {
+          "source": "Substituição de Jutsu de Fúria: [Super Impulso Todo-poderoso] (Resfriamento inicial [0 rodadas] / Resfriamento Esotérico [2 rodadas] / [20] chakra / [1] ponto de habilidade) causa dano e [interrupção] em todo a facção inimiga. Ao selecionar um inimigo, causará [medo], aumentará o consumo de chakra em [20] pontos (pode ser acumulado, dura até o final da rodada) e causará [Repelimento]. Este poder curará a si mesmo em [7%] do dano causado.",
+          "translation": "奥义替换为[超·神罗天征]（进场冷却：[0回合]／奥义冷却：[2回合]／查克拉：[20]／[1]个技能点）：对敌方全阵营造成伤害和[打断]，额外使选定目标[恐惧]、查克拉消耗增加[20]点（可叠加，持续至回合结束）及[击退]。恢复相当于本技能造成伤害[7%]的生命。"
+        }
+      },
+      "235": {
+        "keys": {
+          "source": "Super Impulso Todo-poderoso",
+          "translation": "超·神罗天征"
+        },
+        "desc": {
+          "source": "Substituição de Jutsu de Fúria: [Super Impulso Todo-poderoso] (Resfriamento inicial [0 rodadas] / Resfriamento Esotérico [2 rodadas] / [20] chakra / [1] ponto de habilidade) causa dano e [interrupção] em todo a facção inimiga. Ao selecionar um inimigo, causará [medo], aumentará o consumo de chakra em [20] pontos (pode ser acumulado, dura até o final da rodada) e causará [Repelimento]. Este poder curará a si mesmo em [7%] do dano causado.",
+          "translation": "奥义替换为[超·神罗天征]（进场冷却：[0回合]／奥义冷却：[2回合]／查克拉：[20]／[1]个技能点）：对敌方全阵营造成伤害和[打断]，额外使选定目标[恐惧]、查克拉消耗增加[20]点（可叠加，持续至回合结束）及[击退]。恢复相当于本技能造成伤害[7%]的生命。"
+        }
+      },
+      "236": {
+        "keys": {
+          "source": "Super Impulso Todo-poderoso",
+          "translation": "超·神罗天征"
+        },
+        "desc": {
+          "source": "Substituição de Habilidade Esotérica: [Super Impulso Todo-poderoso] (Resfriamento inicial [0 rodada] / Resfriamento da Esotérica [2 rodadas] / Chakra: [20]) Causa dano a todas as formações e aplica [Interrupção]. O inimigo selecionado sofrerá [Terror] e tem um aumento de [20] no consumo de Chakra (pode acumular e dura até o final da rodada) e [Repelimento]. Para cada inimigo atingido, o usuário consome [1%] de sua própria vida. Durante a rodada, o consumo de Chakra da equipe aliada será reduzido em [40] (não acumula).",
+          "translation": "奥义替换为[超·神罗天征]（进场冷却：[0回合]／奥义冷却：[2回合]／查克拉：[20]）：对敌方所有阵营造成伤害和[打断]，额外使选定目标[恐惧]、查克拉消耗增加[20]点（可叠加，持续至回合结束）及[击退]。每命中1名敌人，自身消耗[1%]生命。己方队伍本回合查克拉消耗降低[40]点，不叠加。"
+        }
+      },
+      "237": {
+        "keys": {
+          "source": "Sinta a Dor",
+          "translation": "感受痛苦"
+        },
+        "desc": {
+          "source": "[Golpe Mortal]: ataca o [ninjas] com a menor quantidade de vida, aumentando em 1 rodada o [Resfriamento da Esotérica] do alvo e absorvendo todo o Chakra do alvo. Causa [Dor Extrema] e concede à equipe aliada o status de [Tolerância] (é um status positivo que reduz o dano recebido pelos ninjas em [45%]. Este efeito não pode acumular e dispersar e dura até o final da próxima rodada. Usar habilidades de tipo [Esotérico] pode remover esse efeito). Esta habilidade [sempre acerta] e ignora parte da [Defesa] e [Resistência].",
+          "translation": "[致命一击]：攻击生命最低的[忍者]，使目标[奥义冷却]增加1回合，吸收全部查克拉，造成[极度痛苦]，并使己方小队获得[忍耐]（增益状态，受到伤害降低[45%]，不可叠加或驱散，持续至下回合结束；使用[奥义]可移除）。本技能[必定命中]，无视部分[防御]和[抗性]。"
+        }
+      },
+      "238": {
+        "keys": {
+          "source": "Efeito da Habilidade",
+          "translation": "技能效果"
+        },
+        "desc": {
+          "source": "[Novo Efeito de Sinta a Dor]: ersegue inimigos com [Repelimento] ou [Queda], aplicando [Supressão de Imunidade a Status negativos] (dura até o final do próxima rodada) e causando [Queda]. Além disso, bloqueia o [Resfriamento da Esotérica] do alvo em 1 (até o final da rodada) e rouba as vezes de ataques comuns. Esta habilidade [sempre acerta] e ignora parte da [Defesa] e [Resistência].",
+          "translation": "[感受痛苦的新效果]：追打[击退]或[倒地]敌人，施加持续至下回合结束的[负面状态免疫压制]及[倒地]，将目标[奥义冷却]锁定为1（持续至本回合结束），并夺取其普攻次数。本技能[必定命中]，无视部分[防御]和[抗性]。"
+        }
+      },
+      "239": {
+        "keys": {
+          "source": "Super Impulso Todo-poderoso",
+          "translation": "超·神罗天征"
+        },
+        "desc": {
+          "source": "Ativa [Rinnegan Universal: Reunião dos Seis Caminhos]: consome toda a vida atual para obter 5 [Ponto de Habilidade], causando dano a todos os inimigos e aplicando [Interrupção], além de aumentar o consumo de Chakra em [20] pontos (pode acumular e dura até o final da rodada). A equipe aliada terá seu consumo de Chakra reduzido em [20] pontos (não pode acumular, o efeito dura até o final da rodada).",
+          "translation": "触发[轮回眼·六道集结]：消耗全部当前生命，获得5个[技能点]，对敌方全体造成伤害和[打断]，查克拉消耗增加[20]点，可叠加，持续至回合结束。己方小队查克拉消耗降低[20]点，不叠加，持续至回合结束。"
+        }
+      },
+      "240": {
+        "keys": {
+          "source": "Pain: Caminho Deva [Super]",
+          "translation": "佩恩·天道【超】"
+        },
+        "desc": {
+          "source": "Este ninja possui [Imunidade a Perseguição] e [Status negativos]. Ele causa o dano e recupera [15%] da vida própria. Ao receber o primeiro ataque de habilidade de tipo [Esotérico] por rodada, ele ganha [Imunidade a Perseguição Nv.2], que dura até o final da rodada. O primeiro [Status negativos] sofrido pela equipa aliada será removido (exceto status que não podem ser imunizados e dispersados), e a equipe ganhará um aumento de [2%] em Velocidade (acumula até 5 vezes). Quando o inimigo absorver Chakra, sempre manterá pelo menos [20] pontos de Chakra. Quando algum ninja for derrotado no campo de batalha, Pain: Caminho Deva [Super] será ressuscitado com [70%] de sua vida máxima. (Pode ressuscitar apenas uma vez por batalha.)",
+          "translation": "免疫[追打]和[负面状态]。造成伤害时恢复自身[15%]生命。每回合首次受到[奥义]攻击时，获得[2级追打免疫]，持续至回合结束。己方小队首次受到的[负面状态]会被移除（无法免疫或驱散的状态除外），小队[先攻]提高[2%]，最多5次。敌人吸收查克拉时，己方始终保留至少[20]点查克拉。战场上任意忍者被击败时，佩恩·天道【超】以生命上限的[70%]复活，每场战斗最多1次。"
+        }
+      },
+      "241": {
+        "keys": {
+          "source": "Super Impulso Todo-poderoso",
+          "translation": "超·神罗天征"
+        },
+        "desc": {
+          "source": "Habilidade de [Pain: Caminho Deva [Super]]: (Resfriamento inicial [0 rodada] / Resfriamento da Esotérica [1 rodada] / Chakra: [0]) causa dano que [sempre acerta] a todas as formações inimigas e aplica [Interrupção]. O inimigo selecionado sofre efeitos adicionais de [Terror] (o efeito não pode ser imunizado e dispersado e dura até o final da rodada), [Dor Extrema] e [Repelimento], além de aumentar o [Resfriamento da Esotérica] em 1 rodada. Esta habilidade possui um bônus adicional de [Crítico] e, após o uso, remove o status de [Terror] de si mesmo.",
+          "translation": "[佩恩·天道【超】]的技能（进场冷却：[0回合]／奥义冷却：[1回合]／查克拉：[0]）：对敌方所有阵营造成[必定命中]的伤害和[打断]，额外使选定目标受到[恐惧]（无法免疫或驱散，持续至回合结束）、[极度痛苦]和[击退]，并使[奥义冷却]增加1回合。本技能拥有额外[暴击]加成，使用后移除自身[恐惧]。"
+        }
+      },
+      "242": {
+        "keys": {
+          "source": "Puxão Universal",
+          "translation": "万象天引"
+        },
+        "desc": {
+          "source": "Habilidade de [Pain: Caminho Deva [Super]]: [Lançado com combo de 20], ataca até [5] inimigos na equipe inimiga, causando dano de [Terra] que [sempre acerta] e aplicando [Quebra de Defesa]. Esta habilidade ignora parte da [Defesa] e [Resistência], concedendo 1 [Ponto de Habilidade]. A cada uso, o dano desta habilidade aumenta em [30%], acumulando até [5] vezes.",
+          "translation": "[佩恩·天道【超】]的技能：[连击达到20时触发]，攻击敌方小队最多[5]名敌人，造成[必定命中]的[土]属性伤害和[破防]。无视部分[防御]和[抗性]，获得1个[技能点]。每次使用后，本技能伤害提高[30%]，最多叠加[5]次。"
+        }
+      },
+      "243": {
+        "keys": {
+          "source": "Golpe Penetrante dos Bastões Negros",
+          "translation": "黑棒贯穿"
+        },
+        "desc": {
+          "source": "Habilidade de [Pain: Caminho Deva [Super]]: ataca o [ninjas] com a menor quantidade de vida, causando dano e aplicando [Distúrbio do Chakra], absorvando [20 pontos] de Chakra do alvo e reduzindo em 1 rodada o [Resfriamento da Esotérica] de si mesmo. Há uma chance de, em vez disso, atacar a linha horizontal onde o alvo está posicionado, causando [Dor Extrema] e aplicando [Repelimento] a 1 inimigo aleatório, com a quantidade de Chakra absorvida aumentando para [40]. Esta habilidade [sempre acerta]. Se o alvo possuir mais de 1 [Ponto de Habilidade], ganhará 1 [Ponto de Habilidade] adicional.",
+          "translation": "[佩恩·天道【超】]的技能：攻击生命最低的[忍者]，造成伤害和[查克拉紊乱]，吸收目标[20]点查克拉，自身[奥义冷却]减少1回合。有概率改为攻击目标所在一横排，造成[极度痛苦]并使1名随机敌人[击退]，吸收的查克拉提高至[40]点。本技能[必定命中]。若目标拥有多于1个[技能点]，额外获得1个[技能点]。"
+        }
+      },
+      "244": {
+        "keys": {
+          "source": "Impulso Todo-poderoso",
+          "translation": "神罗天征"
+        },
+        "desc": {
+          "source": "Habilidade de [Pain: Caminho Deva [Super]]: tem uma chance extremamente alta de esquivar do primeiro ataque a cada rodada. A cada esquiva, ativa uma vez adicional o [Puxão Universal]: ativado ao esquivar, ataca até [5] inimigos na equipe inimiga, causando dano de [Terra] que [sempre acerta], reduzindo [15%] da [Defesa] e [Resistência] (acumula até 3 vezes e dura até o final da rodada). Esta habilidade ignora parte da [Defesa] e [Resistência], concede 1 [Ponto de Habilidade] e 1 ataque comum adicional (pode ser ativada até 4 vezes por rodada). Quando os Pontos de Habilidade atingem o limite, a [Devastação Planetária] é ativada. A cada esquiva, aumenta em [30%] o [Ataque] e [Ninjutsu], além de [15%] do [Crítico] (cada atributo pode acumular até 3 vezes por rodada).",
+          "translation": "[佩恩·天道【超】]的技能：以极高概率闪避每回合首次攻击。每次闪避时额外触发[万象天引]：攻击敌方小队最多[5]名敌人，造成[必定命中]的[土]属性伤害，[防御]和[抗性]降低[15%]，最多3层，持续至回合结束。无视部分[防御]和[抗性]，获得1个[技能点]和1次额外普攻机会，每回合最多触发4次。技能点达到上限时触发[地爆天星]。每次闪避使[攻击]和[忍术]提高[30%]、[暴击]率提高[15%]，各属性每回合最多叠加3次。"
+        }
+      },
+      "245": {
+        "keys": {
+          "source": "Devastação Planetária",
+          "translation": "地爆天星"
+        },
+        "desc": {
+          "source": "Habilidade de [Pain: Caminho Deva [Super]]: é ativado quando os pontos de habilidade atingem o limite máximo. Aumenta o consumo de Chakra de os inimigos de todas as inimigas em [20] e aplicando [Supressão de Imunidade a Status negativos] (dura até o final da rodada). Além disso, Pain: Caminho Deva bloqueia o Resfriamento da Esotérica para 0 (até o final da rodada) e recebe o status de [Violência]. (Violência: Concede um escudo baseado em [50%] da própria vida máxima e uma chance extremamente alta de esquivar de todos os ataques, podendo ser ativado até 5 vezes, até o final da rodada). Após isso, ataca os inimigos de todas as formações inimigas com dano de [Terra] que [sempre acerta] e aplica [Supressão de Imunidade a Perseguição] (dura 1 rodada), enquanto reduz 1 [Ponto de Habilidade]. Também causa [Queda] e [Dor Extrema] ao [ninjas] com menor vida.",
+          "translation": "[佩恩·天道【超】]的技能：技能点达到上限时触发，使敌方所有阵营的查克拉消耗增加[20]点，并施加[负面状态免疫压制]，持续至回合结束。此外，佩恩·天道将自身奥义冷却锁定为0，持续至回合结束，并获得[暴怒]：获得相当于自身生命上限[50%]的护盾，以极高概率闪避所有攻击，最多5次，持续至回合结束。随后攻击敌方所有阵营，造成[必定命中]的[土]属性伤害和持续1回合的[追打免疫压制]，减少1个[技能点]，额外对生命最低的[忍者]造成[倒地]和[极度痛苦]。"
+        }
+      },
+      "246": {
+        "keys": {
+          "source": "Sinta a Dor",
+          "translation": "感受痛苦"
+        },
+        "desc": {
+          "source": "[Golpe Mortal]: ataca o [ninjas] com a menor quantidade de vida, aumentando em 1 rodada o [Resfriamento da Esotérica] do alvo e absorvendo todo o Chakra do alvo. Causa [Dor Extrema] e concede à equipe aliada o status de [Tolerância] (é um status positivo que reduz o dano recebido pelos ninjas em [45%]. Este efeito não pode acumular e dispersar e dura até o final da próxima rodada. Usar habilidades de tipo [Esotérico] pode remover esse efeito). Esta habilidade [sempre acerta] e ignora parte da [Defesa] e [Resistência].",
+          "translation": "[致命一击]：攻击生命最低的[忍者]，使目标[奥义冷却]增加1回合，吸收全部查克拉，造成[极度痛苦]，并使己方小队获得[忍耐]（增益状态，受到伤害降低[45%]，不可叠加或驱散，持续至下回合结束；使用[奥义]可移除）。本技能[必定命中]，无视部分[防御]和[抗性]。"
+        }
+      },
+      "247": {
+        "keys": {
+          "source": "Pain: Caminho Deva [Super]",
+          "translation": "佩恩·天道【超】"
+        },
+        "desc": {
+          "source": "Este ninja possui [Imunidade a Perseguição] e [Status negativos]. Ele causa o dano e recupera [15%] da vida própria. Ao receber o primeiro ataque de habilidade de tipo [Esotérico] por rodada, ele ganha [Imunidade a Perseguição Nv.2], que dura até o final da rodada. O primeiro [Status negativos] sofrido pela equipa aliada será removido (exceto status que não podem ser imunizados e dispersados), e a equipe ganhará um aumento de [2%] em Velocidade (acumula até 5 vezes). Quando o inimigo absorver Chakra, sempre manterá pelo menos [20] pontos de Chakra. Quando algum ninja for derrotado no campo de batalha, Pain: Caminho Deva [Super] será ressuscitado com [70%] de sua vida máxima. (Pode ressuscitar apenas uma vez por batalha.)",
+          "translation": "免疫[追打]和[负面状态]。造成伤害时恢复自身[15%]生命。每回合首次受到[奥义]攻击时，获得[2级追打免疫]，持续至回合结束。己方小队首次受到的[负面状态]会被移除（无法免疫或驱散的状态除外），小队[先攻]提高[2%]，最多5次。敌人吸收查克拉时，己方始终保留至少[20]点查克拉。战场上任意忍者被击败时，佩恩·天道【超】以生命上限的[70%]复活，每场战斗最多1次。"
+        }
+      },
+      "248": {
+        "keys": {
+          "source": "Super Impulso Todo-poderoso",
+          "translation": "超·神罗天征"
+        },
+        "desc": {
+          "source": "Habilidade de [Pain: Caminho Deva [Super]]: (Resfriamento inicial [0 rodada] / Resfriamento da Esotérica [1 rodada] / Chakra: [0]) causa dano que [sempre acerta] a todas as formações inimigas e aplica [Interrupção]. O inimigo selecionado sofre efeitos adicionais de [Terror] (o efeito não pode ser imunizado e dispersado e dura até o final da rodada), [Dor Extrema] e [Repelimento], além de aumentar o [Resfriamento da Esotérica] em 1 rodada. Esta habilidade possui um bônus adicional de [Crítico] e, após o uso, remove o status de [Terror] de si mesmo.",
+          "translation": "[佩恩·天道【超】]的技能（进场冷却：[0回合]／奥义冷却：[1回合]／查克拉：[0]）：对敌方所有阵营造成[必定命中]的伤害和[打断]，额外使选定目标受到[恐惧]（无法免疫或驱散，持续至回合结束）、[极度痛苦]和[击退]，并使[奥义冷却]增加1回合。本技能拥有额外[暴击]加成，使用后移除自身[恐惧]。"
+        }
+      },
+      "249": {
+        "keys": {
+          "source": "Puxão Universal",
+          "translation": "万象天引"
+        },
+        "desc": {
+          "source": "Habilidade de [Pain: Caminho Deva [Super]]: [Lançado com combo de 20], ataca até [5] inimigos na equipe inimiga, causando dano de [Terra] que [sempre acerta] e aplicando [Quebra de Defesa]. Esta habilidade ignora parte da [Defesa] e [Resistência], concedendo 1 [Ponto de Habilidade]. A cada uso, o dano desta habilidade aumenta em [30%], acumulando até [5] vezes.",
+          "translation": "[佩恩·天道【超】]的技能：[连击达到20时触发]，攻击敌方小队最多[5]名敌人，造成[必定命中]的[土]属性伤害和[破防]。无视部分[防御]和[抗性]，获得1个[技能点]。每次使用后，本技能伤害提高[30%]，最多叠加[5]次。"
+        }
+      },
+      "250": {
+        "keys": {
+          "source": "Golpe Penetrante dos Bastões Negros",
+          "translation": "黑棒贯穿"
+        },
+        "desc": {
+          "source": "Habilidade de [Pain: Caminho Deva [Super]]: ataca o [ninjas] com a menor quantidade de vida, causando dano e aplicando [Distúrbio do Chakra], absorvando [20 pontos] de Chakra do alvo e reduzindo em 1 rodada o [Resfriamento da Esotérica] de si mesmo. Há uma chance de, em vez disso, atacar a linha horizontal onde o alvo está posicionado, causando [Dor Extrema] e aplicando [Repelimento] a 1 inimigo aleatório, com a quantidade de Chakra absorvida aumentando para [40]. Esta habilidade [sempre acerta]. Se o alvo possuir mais de 1 [Ponto de Habilidade], ganhará 1 [Ponto de Habilidade] adicional.",
+          "translation": "[佩恩·天道【超】]的技能：攻击生命最低的[忍者]，造成伤害和[查克拉紊乱]，吸收目标[20]点查克拉，自身[奥义冷却]减少1回合。有概率改为攻击目标所在一横排，造成[极度痛苦]并使1名随机敌人[击退]，吸收的查克拉提高至[40]点。本技能[必定命中]。若目标拥有多于1个[技能点]，额外获得1个[技能点]。"
+        }
+      },
+      "251": {
+        "keys": {
+          "source": "Impulso Todo-poderoso",
+          "translation": "神罗天征"
+        },
+        "desc": {
+          "source": "Habilidade de [Pain: Caminho Deva [Super]]: tem uma chance extremamente alta de esquivar do primeiro ataque a cada rodada. A cada esquiva, ativa uma vez adicional o [Puxão Universal]: ativado ao esquivar, ataca até [5] inimigos na equipe inimiga, causando dano de [Terra] que [sempre acerta], reduzindo [15%] da [Defesa] e [Resistência] (acumula até 3 vezes e dura até o final da rodada). Esta habilidade ignora parte da [Defesa] e [Resistência], concede 1 [Ponto de Habilidade] e 1 ataque comum adicional (pode ser ativada até 4 vezes por rodada). Quando os Pontos de Habilidade atingem o limite, a [Devastação Planetária] é ativada. A cada esquiva, aumenta em [30%] o [Ataque] e [Ninjutsu], além de [15%] do [Crítico] (cada atributo pode acumular até 3 vezes por rodada).",
+          "translation": "[佩恩·天道【超】]的技能：以极高概率闪避每回合首次攻击。每次闪避时额外触发[万象天引]：攻击敌方小队最多[5]名敌人，造成[必定命中]的[土]属性伤害，[防御]和[抗性]降低[15%]，最多3层，持续至回合结束。无视部分[防御]和[抗性]，获得1个[技能点]和1次额外普攻机会，每回合最多触发4次。技能点达到上限时触发[地爆天星]。每次闪避使[攻击]和[忍术]提高[30%]、[暴击]率提高[15%]，各属性每回合最多叠加3次。"
+        }
+      },
+      "252": {
+        "keys": {
+          "source": "Devastação Planetária",
+          "translation": "地爆天星"
+        },
+        "desc": {
+          "source": "Habilidade de [Pain: Caminho Deva [Super]]: é ativado quando os pontos de habilidade atingem o limite máximo. Aumenta o consumo de Chakra de os inimigos de todas as inimigas em [20] e aplicando [Supressão de Imunidade a Status negativos] (dura até o final da rodada). Além disso, Pain: Caminho Deva bloqueia o Resfriamento da Esotérica para 0 (até o final da rodada) e recebe o status de [Violência]. (Violência: Concede um escudo baseado em [50%] da própria vida máxima e uma chance extremamente alta de esquivar de todos os ataques, podendo ser ativado até 5 vezes, até o final da rodada). Após isso, ataca os inimigos de todas as formações inimigas com dano de [Terra] que [sempre acerta] e aplica [Supressão de Imunidade a Perseguição] (dura 1 rodada), enquanto reduz 1 [Ponto de Habilidade]. Também causa [Queda] e [Dor Extrema] ao [ninjas] com menor vida.",
+          "translation": "[佩恩·天道【超】]的技能：技能点达到上限时触发，使敌方所有阵营的查克拉消耗增加[20]点，并施加[负面状态免疫压制]，持续至回合结束。此外，佩恩·天道将自身奥义冷却锁定为0，持续至回合结束，并获得[暴怒]：获得相当于自身生命上限[50%]的护盾，以极高概率闪避所有攻击，最多5次，持续至回合结束。随后攻击敌方所有阵营，造成[必定命中]的[土]属性伤害和持续1回合的[追打免疫压制]，减少1个[技能点]，额外对生命最低的[忍者]造成[倒地]和[极度痛苦]。"
+        }
+      }
+    }
+  }
+}

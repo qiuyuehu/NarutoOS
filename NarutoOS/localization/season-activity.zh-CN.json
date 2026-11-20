@@ -1,0 +1,13 @@
+{
+  "resourceURL": "https://cdnnaruto-pt.oasgames.com/PT_NarutoAlpha9.33Build300/config/i18n/TranslatedKeyCFG.cfg",
+  "entries": {
+    "as_seasonTask_baeae9fff6841a6b1c813cc8c41ca244": {
+      "source": "<font color='#FFFFFF'><a href='event:7'><u>A nova temporada já abriu</u></a></font>\\n",
+      "translation": "<font color='#FFFFFF'><a href='event:7'><u>新赛季已开启</u></a></font>\\n"
+    },
+    "as_seasonTask_53a33652887d91b20a5678ce62dff328": {
+      "source": "<font color='#FFFFFF'><a href='event:8'><u>O sorteio do Bilhete da Temporada já começou</u></a></font>\\n",
+      "translation": "<font color='#FFFFFF'><a href='event:8'><u>赛季通行证抽奖已开启</u></a></font>\\n"
+    }
+  }
+}

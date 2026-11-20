@@ -1,0 +1,165 @@
+{
+  "resourceURL": "https://cdnnaruto-pt.oasgames.com/PT_NarutoAlpha9.33Build300/config/i18n/TranslatedKeyCFG.cfg",
+  "entries": {
+    "as_majorRole_cebe0ddce1b1b6bb95a41a818ad4856c": {
+      "source": "%1 <font face='_serif' size='12' color='#00ff00'>Clique para aprender o talento</font><b>",
+      "translation": "%1 <font face='_serif' size='12' color='#00ff00'>点击学习天赋</font><b>"
+    },
+    "as_majorRole_3766bc500f0e2067e6f83a630d66c942": {
+      "source": "%1<font face='simSun' size='12' color='#00ff00'>Clique para aprender este talento</font><b>",
+      "translation": "%1<font face='simSun' size='12' color='#00ff00'>点击学习此天赋</font><b>"
+    },
+    "as_majorRole_b52bc686c225245e79e45365fae0a17f": {
+      "source": "%1 <font face='_serif' size='12' color='#ff0000'>Não alcançou o nível</font><b>",
+      "translation": "%1 <font face='_serif' size='12' color='#ff0000'>未达到等级</font><b>"
+    },
+    "as_majorRole_c09d68a4ab82427536d56457dca017bf": {
+      "source": "%1<font face='simSun' size='12' color='#ff0000'>Não atingiu o nível</font><b>",
+      "translation": "%1<font face='simSun' size='12' color='#ff0000'>未达到等级</font><b>"
+    },
+    "as_majorRole_4f96cfb22913ee66fa13e6ef88ec0122": {
+      "source": "%1<font face='_serif' size='12' color='#ffffff'>Consumo de Chakra: %2</font>",
+      "translation": "%1<font face='_serif' size='12' color='#ffffff'>查克拉消耗：%2</font>"
+    },
+    "as_majorRole_ec35d1b53876f6c302e27afa36c18c5f": {
+      "source": "<font face='_serif' size='12' color='#ffffff'>Tempo de resfriamento: %1rodadas</font>",
+      "translation": "<font face='_serif' size='12' color='#ffffff'>冷却时间：%1回合</font>"
+    },
+    "as_majorRole_7a9cf1cc08ecae2e5fb4688a1972b780": {
+      "source": "<font face='simSun' size='12' color='#ffffff'>Tempo de resfriamento: %1 turnos</font>",
+      "translation": "<font face='simSun' size='12' color='#ffffff'>冷却时间：%1回合</font>"
+    },
+    "as_majorRole_a9b29658b5774c0441f9bdcf325956d5": {
+      "source": "Estilo Fogo",
+      "translation": "火遁"
+    },
+    "as_majorRole_7e56c1f7bc80933c9d6e7b136568b53c": {
+      "source": "Estilo Relâmpago",
+      "translation": "雷遁"
+    },
+    "as_majorRole_6e15bdce23c5b09837fb5659de0fcba2": {
+      "source": "Estilo Terra",
+      "translation": "土遁"
+    },
+    "as_majorRole_bbc59bf9e3c1120169476273a8b98d22": {
+      "source": "Estilo Vento",
+      "translation": "风遁"
+    },
+    "as_majorRole_9a90767fc186c1bd2ee214b100bec4c7": {
+      "source": "Estilo Água",
+      "translation": "水遁"
+    },
+    "as_majorRole_TalentPanle_001": {
+      "source": "Seleção do 2° elemento",
+      "translation": "第二遁术选择"
+    },
+    "as_majorRole_bfef0f73e7acde2f3a9a5d10ef5f72c6": {
+      "source": "Talentos recomendados",
+      "translation": "推荐天赋"
+    },
+    "as_majorRole_67213f7b8796203051161a2b09160857": {
+      "source": "Talentos recomendados",
+      "translation": "推荐天赋"
+    },
+    "as_majorRole_a97888d21f1faaa7dad40bbb8515d25a": {
+      "source": "Liberado no nv. %1",
+      "translation": "%1级解锁"
+    },
+    "as_majorRole_d19051645a30a493d5f8c42a2ba35f3a": {
+      "source": "Liberado no nv. %1",
+      "translation": "%1级解锁"
+    },
+    "as_majorRole_a2d1f8d9c5b2468caa1088a462e9237d": {
+      "source": "Liberado no nv. %1",
+      "translation": "%1级解锁"
+    },
+    "as_majorRole_7ae1570904eab78d037fcaaf819b1b97": {
+      "source": "Liberado no nv. %1",
+      "translation": "%1级解锁"
+    },
+    "as_majorRole_b1fd402da8baf53f8a151ba6dd4933a5": {
+      "source": "Liberado no nv. %1",
+      "translation": "%1级解锁"
+    },
+    "as_majorRole_46d0b615ec91f5a7c08eb7967e716ff5": {
+      "source": "Liberado no nível %1",
+      "translation": "%1级解锁"
+    },
+    "as_majorRole_cd1004e4ab8b1d9789548dcb7412fbdf": {
+      "source": "Liberado no nível %1",
+      "translation": "%1级解锁"
+    },
+    "as_majorRole_61e9ef552a14e5d7f3bfa0912d5c2d1e": {
+      "source": "Liberado no nível %1",
+      "translation": "%1级解锁"
+    },
+    "as_majorRole_eaefcc8c5e677f8eadae5582e6092042": {
+      "source": "Liberado no nível %1",
+      "translation": "%1级解锁"
+    },
+    "as_dungeon_f7dc085c928bb0f9777abbf9f2186775": {
+      "source": "Liberado no nível %1",
+      "translation": "%1级解锁"
+    },
+    "as_dungeon_db9323ce4fb519543d490867372bb315": {
+      "source": "Liberado no nível %1",
+      "translation": "%1级解锁"
+    },
+    "as_dungeon_3adc5db5bc008a80ef3ff9b33f894e29": {
+      "source": "Liberado no nível %1",
+      "translation": "%1级解锁"
+    },
+    "as_ninjaAid_2fc799fc6fff5226a84e99dd96201822": {
+      "source": "Ajuda nv. %1\\n",
+      "translation": "协助等级%1\\n"
+    },
+    "as_ninjaAid_54c2aeb6c4297531045d0025bc6acadb": {
+      "source": "Alcance do bônus",
+      "translation": "加成范围"
+    },
+    "as_ninjaAid_e7137ca37b1a2ce214f03ac02cc86b8e": {
+      "source": "Aumentar",
+      "translation": "提升"
+    },
+    "as_ninjaAid_018a37c17cbf7e6b723d09b19dfdf671": {
+      "source": "Bandeiras de Comando insuficientes, não é possível desbloquear!",
+      "translation": "指挥旗不足，无法解锁！"
+    },
+    "as_ninjaAid_282c1724c45d3d1b8cadfa95adb4e4a1": {
+      "source": "Deseja ativar tudo?",
+      "translation": "是否全部激活？"
+    },
+    "as_ninjaAid_fed85838f42efec0b87c6c36d96991aa": {
+      "source": "Deseja gastar 1 Bandeira de Comando para desbloquear?",
+      "translation": "是否消耗1个指挥旗解锁？"
+    },
+    "as_ninjaAid_5916d30a2bc64e7c8710a173ba7398b9": {
+      "source": "Especialidade nv. %2",
+      "translation": "特长等级%2"
+    },
+    "as_ninjaAid_c4ec7d3d7d1036117886c726c5c4fa6e": {
+      "source": "Kakashi",
+      "translation": "卡卡西"
+    },
+    "as_ninjaAid_1aad5cff732c300981032d5e26443587": {
+      "source": "Ninjas de Ajuda podem aumentar sua força mais rápido",
+      "translation": "协助忍者可以更快提升战力"
+    },
+    "as_ninjaAid_aab095768fe9abeb83ac3fbc68da001f": {
+      "source": "Nível da Especialidade cheio",
+      "translation": "特长等级已满"
+    },
+    "as_ninjaAid_55ca251e49f3e456e283e46f8c06f87c": {
+      "source": "Nível de Ajuda cheio!",
+      "translation": "协助等级已满！"
+    },
+    "as_ninjaAid_04f37b2d10059bdcd298687bdd8689b8": {
+      "source": "Tipo de bônus",
+      "translation": "加成类型"
+    },
+    "as_ninjaAid_4a760247cd94624693bd38fe2d27abb9": {
+      "source": "É preciso Ajuda nv. %1 para ativar",
+      "translation": "需要协助等级%1才能激活"
+    }
+  }
+}

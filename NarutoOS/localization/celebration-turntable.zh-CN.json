@@ -1,0 +1,52 @@
+{
+  "activity": "庆典大转盘",
+  "resourceURL": "https://cdnnaruto-pt.oasgames.com/PT_NarutoAlpha9.40Build300/flash/operatingActivity/OperatingActivityPlugin.swf",
+  "i18n": {
+    "as_operatingActivity_2021330248636be04e0d7649dd914bc0": "尚未满足领取条件",
+    "as_operatingActivity_29c665502102771e2ed114c86f85d837": "已领取",
+    "as_operatingActivity_35b96abc0cf145c55db5938432d84493": "结束时间：%1",
+    "as_operatingActivity_3920a11132cb92c66fb3ad6c093c5449": "幸运钥匙可用于转动转盘，可通过活动获得或在商店购买。",
+    "as_operatingActivity_4248641ed609e4a14137e4b61aaeea6e": "钥匙不足！",
+    "as_operatingActivity_474fa8bd94a10354c8cc0f4561bc6db8": "1）活动期间，每天通过游戏内任务最多可获得20把免费钥匙，也可在商店购买。\n2）每把钥匙可转动转盘1次并获得奖励，累计转动达到指定次数还可领取额外奖励。\n3）活动结束后钥匙将消失，累计转动次数的奖励会通过邮件发放。",
+    "as_operatingActivity_508cce3e289089f1d671bdafbaa22162": "<b>我的积分：%1</b>",
+    "as_operatingActivity_55ac2885dd521c81a62d2aa446fc2fe9": "尚未满足领取条件",
+    "as_operatingActivity_62b4b5eca4f62b30a113fdc5b411756a": "未上榜",
+    "as_operatingActivity_7a5ad24a634de80bf82cf41706a0a201": "领取",
+    "as_operatingActivity_8455b117cc994e13b6d0c08dc800a4a0": "幸运钥匙可用于转动转盘，可通过活动获得或在商店购买。",
+    "as_operatingActivity_909dff33227fc14b181935721e357a3a": "已领取",
+    "as_operatingActivity_9a1b0a999412136c23935144d8390eed": "累计转动%1次奖励",
+    "as_operatingActivity_9c871d03de1be4c7e314500111aac1c9": "已达领取上限",
+    "as_operatingActivity_ad7a4492b7438624c9a8cbf4ae7fc340": "转盘转动期间，请等待本次操作结束。",
+    "as_operatingActivity_cca23dcef3bad38e0f0616e079b949e8": "领取",
+    "as_operatingActivity_cda3cb9cbd250c04cda078cecdfbe60c": "<b>我的排名：%1</b>",
+    "as_operatingActivity_d8e164ca97fa7f97a1e84c293f70f6be": "领取",
+    "as_operatingActivity_f66253744e2d74451f91c6e1fa4e719a": "%1：%2把钥匙"
+  },
+  "labels": {
+    "Obter chaves": "获取钥匙",
+    "Girar a roleta": "转动转盘",
+    "Regras": "活动规则",
+    "Ranking": "排行榜",
+    "Chaves de atividade (até 20 por dia)": "活动钥匙（每天最多20把）",
+    "Comprar": "购买",
+    "Retirar tudo": "全部领取",
+    "Retirar": "领取",
+    "Retirado": "已领取",
+    "Girar 1 vez": "转动1次",
+    "Girar 10 vezes": "转动10次",
+    "Abrir 1 vez": "开启1次",
+    "Abrir 10 vezes": "开启10次",
+    "1) Pode-se obter até 20 chaves gratuitas por dia através de atividade no jogo durante o evento, as demais podem ser compradas na loja. 2) Cada chave permite girar a roleta 1 vez e obter o prêmio, ao se girar a roleta determinado número de vezes há prêmios extras. 3) Após o fim do evento as chaves desaparecem e os prêmios de número de giradas são enviados pela caixa de mensagens.": "1）活动期间，每天通过游戏内任务最多可获得20把免费钥匙，也可在商店购买。\n2）每把钥匙可转动转盘1次并获得奖励，累计转动达到指定次数还可领取额外奖励。\n3）活动结束后钥匙将消失，累计转动次数的奖励会通过邮件发放。"
+  },
+  "tasks": {
+    "Conectar-se ao jogo": "登录游戏",
+    "Passar ou fazer raids em fases comuns": "通关或扫荡普通副本",
+    "Passar ou fazer raids em fases de elite": "通关或扫荡精英副本",
+    "Passar ou fazer raids no Teste Shinobi": "通关或扫荡忍者考试",
+    "Participar da Sala da Abundância": "参加丰饶之间"
+  },
+  "notes": "仅活动专属显示代码；未匹配的服务器任务原文保留；标题、位图按钮美术字和左侧活动名称保留。",
+  "activityTypes": [
+    810020
+  ]
+}

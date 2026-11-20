@@ -1,0 +1,249 @@
+{
+  "id": "naruto-ninja-target-26-zh-CN-v1",
+  "rootId": "11016211",
+  "ninjaInfo": {
+    "class": "NinjaInfoCFG",
+    "rows": {
+      "11016211": {
+        "name": {
+          "source": "Naruto",
+          "translation": "漩涡鸣人"
+        },
+        "title": {
+          "source": "[Vale do Fim]",
+          "translation": "【终焉之战】"
+        }
+      }
+    }
+  },
+  "skills": {
+    "class": "SkillCFG",
+    "rows": {
+      "21016211": {
+        "name": {
+          "source": "Força de Kurama",
+          "translation": "九喇嘛之力"
+        },
+        "desc": {
+          "source": "Ataca até <font color=\"#4dc831\">6</font> inimigos, causando dano que <font color=\"#4dc831\">Ignora o Escudo</font> e <font color=\"#4dc831\">Supressão de Imunidade a Status negativos</font>. Causa <font color=\"#4dc831\">Queda</font> a 1 inimigo aleatório. Esta habilidade tem bônus extra de <font color=\"#4dc831\">Crítico</font>.",
+          "translation": "攻击最多6名敌人，造成无视护盾的伤害和负面状态免疫压制，使1名随机敌人倒地。本技能拥有额外暴击加成。"
+        }
+      },
+      "21016212": {
+        "name": {
+          "source": "Força de Kurama",
+          "translation": "九喇嘛之力"
+        },
+        "desc": {
+          "source": "Ataca até <font color=\"#4dc831\">6</font> inimigos, causando <font color=\"#4dc831\">Supressão de Imunidade a Status negativos</font>. Causa <font color=\"#4dc831\">Queda</font> a 1 inimigo aleatório.",
+          "translation": "攻击最多6名敌人，造成负面状态免疫压制，使1名随机敌人倒地。"
+        }
+      },
+      "21016213": {
+        "name": {
+          "source": "Força de Kurama",
+          "translation": "九喇嘛之力"
+        },
+        "desc": {
+          "source": "Naruto utiliza aleatoriamente <font color=\"#4dc831\">Bomba de Bijuu</font>, <font color=\"#4dc831\">Braço de Chakra</font> ou <font color=\"#4dc831\">Cauda de Chakra</font> para atacar inimigos.",
+          "translation": "鸣人随机使用尾兽玉、查克拉手臂或查克拉尾巴攻击敌人。"
+        }
+      },
+      "21016214": {
+        "name": {
+          "source": "Arte Eremita: Estilo Magneto: Rasengan",
+          "translation": "仙法·磁遁·螺旋丸"
+        },
+        "desc": {
+          "source": "Persegue inimigos com <font color=\"#4dc831\">Flutuação</font> ou <font color=\"#4dc831\">Queda</font>, causando <font color=\"#4dc831\">Repelimento</font> e <font color=\"#4dc831\">Selamento de Estilo Magneto</font>. Esta habilidade <font color=\"#4dc831\">sempre acerta</font>. Após Naruto obter a ressonância do <font color=\"#4dc831\">Chakra de Shukaku</font>, esta habilidade ignora determinada <font color=\"#4dc831\">Defesa</font> e <font color=\"#4dc831\">Resistência</font>, e o <font color=\"#4dc831\">Selamento de Estilo Magneto</font> causado será elevado para um status especial.",
+          "translation": "追打浮空或倒地敌人，造成击退和磁遁封印，本技能必定命中。鸣人获得守鹤查克拉共鸣后，本技能无视部分防御和抗性，造成的磁遁封印提升为特殊状态。"
+        }
+      },
+      "21016216": {
+        "name": {
+          "source": "Ressonância do Chakra do Bijuu",
+          "translation": "尾兽查克拉共鸣"
+        },
+        "desc": {
+          "source": "Naruto obtém sequencialmente a ressonância de Chakra de <font color=\"#4dc831\">Shukaku</font>, <font color=\"#4dc831\">Matatabi</font>, <font color=\"#4dc831\">Isobu</font>, <font color=\"#4dc831\">Son Goku</font>, <font color=\"#4dc831\">Kokuo</font>, <font color=\"#4dc831\">Saiken</font>, <font color=\"#4dc831\">Chomei</font>, <font color=\"#4dc831\">Gyuki</font> e <font color=\"#4dc831\">Kurama</font>. A cada obtenção, reseta a Esotérica como <font color=\"#4dc831\">Pronta para Uso</font> e depois troca a Esotérica por <font color=\"#4dc831\">Seis Caminhos: Rasen Shuriken Gigante</font>.",
+          "translation": "鸣人依次获得守鹤、又旅、矶抚、孙悟空、穆王、犀犬、重明、牛鬼和九喇嘛的查克拉共鸣。每次获得时，将奥义重置为可使用，随后将奥义替换为六道·超大玉螺旋手里剑。"
+        }
+      },
+      "21016217": {
+        "name": {
+          "source": "Força dos Seis Caminhos",
+          "translation": "六道之力"
+        },
+        "desc": {
+          "source": "Naruto possui <font color=\"#4dc831\">Força dos Seis Caminhos</font>. Além disso, sempre que um ninja aliado recebe um ataque, aumenta o dano de habilidade do tipo <font color=\"#4dc831\">Ataque Comum</font> do alvo em <font color=\"#4dc831\">15%</font> durante a rodada (até 6 acúmulos) e remove o status de <font color=\"#4dc831\">Terror</font>. Durante a rodada, a habilidade do tipo <font color=\"#4dc831\">Ataque Comum</font> de <font color=\"#4dc831\">Jinchuuriki</font> <font color=\"#4dc831\">sempre acerta</font>.",
+          "translation": "鸣人拥有六道之力。此外，己方忍者每次受到攻击时，该忍者本回合普攻技能伤害提高15%，最多6层，并移除恐惧。本回合人柱力的普攻必定命中。"
+        }
+      },
+      "21216215": {
+        "name": {
+          "source": "Rasenshuriken da Bomba de Bijuu Múltiplo",
+          "translation": "多重尾兽玉螺旋手里剑"
+        },
+        "desc": {
+          "source": "Na primeira vez que a equipe aliada usar <font color=\"#4dc831\">Esotérica</font> ou habilidade de tipo <font color=\"#4dc831\">gatilho</font> em cada rodada, Naruto ativa a <font color=\"#4dc831\">Habilidade adicional</font>: <font color=\"#4dc831\">Rasenshuriken da Bomba de Bijuu Múltiplo</font> uma vez, causando dano que <font color=\"#4dc831\">sempre acerta</font> e <font color=\"#4dc831\">Interrupção</font> a <font color=\"#4dc831\">7</font> inimigos aleatórios, além de aplicar <font color=\"#4dc831\">Supressão de Imunidade a Perseguição</font> (duração: 1 rodada).",
+          "translation": "己方小队每回合首次使用奥义或触发型技能时，鸣人触发1次追加技能：多重尾兽玉螺旋手里剑，对7名随机敌人造成必定命中的伤害和打断，并施加持续1回合的追打免疫压制。"
+        }
+      },
+      "21216217": {
+        "name": {
+          "source": "Força dos Seis Caminhos",
+          "translation": "六道之力"
+        },
+        "desc": {
+          "source": "Além disso, sempre que um ninja aliado recebe um ataque, aumenta o dano de habilidade do tipo <font color=\"#4dc831\">Ataque Comum</font> do alvo em <font color=\"#4dc831\">15%</font> (o efeito pode ser acumulado até 6 vezes e dura até o final da rodada) e remove o próprio status de <font color=\"#4dc831\">Terror</font>. Durante a rodada, a habilidade do tipo <font color=\"#4dc831\">Ataque Comum</font> de <font color=\"#4dc831\">Jinchuuriki</font> <font color=\"#4dc831\">sempre acerta</font>.",
+          "translation": "此外，己方忍者每次受到攻击时，该忍者普攻技能伤害提高15%，最多6层，持续至回合结束，并移除自身恐惧。本回合人柱力的普攻必定命中。"
+        }
+      }
+    }
+  },
+  "skillDetails": {
+    "class": "SkillKeyDescCFG",
+    "rows": {
+      "561": {
+        "keys": {
+          "source": "Braço de Chakra",
+          "translation": "查克拉手臂"
+        },
+        "desc": {
+          "source": "Ataca até [6] inimigos e aplica [Supressão de Imunidade a Status negativos] (até o final da próxima rodada), causando [Queda] em 1 alvo aleatório.",
+          "translation": "攻击最多[6]名敌人，施加持续至下回合结束的[负面状态免疫压制]，使1名随机目标[倒地]。"
+        }
+      },
+      "562": {
+        "keys": {
+          "source": "Caudas de Chakra",
+          "translation": "查克拉尾巴"
+        },
+        "desc": {
+          "source": "Ataca até [6] inimigos e aplica [Supressão de Imunidade a Status negativos] (até o final da próxima rodada), causando [Queda] em 1 alvo aleatório.",
+          "translation": "攻击最多[6]名敌人，施加持续至下回合结束的[负面状态免疫压制]，使1名随机目标[倒地]。"
+        }
+      },
+      "565": {
+        "keys": {
+          "source": "Isobu",
+          "translation": "矶抚"
+        },
+        "desc": {
+          "source": "Obtém a ressonância de Chakra de [Isobu] durante a rodada. Nesse status, alvos atingidos por habilidade de [Ataque Comum] de Naruto sofrem adicionalmente [Decadência]. O uso desta habilidade cancelará o próprio status de [Cegueira].",
+          "translation": "本回合获得[矶抚]查克拉共鸣。此状态下，被鸣人[普攻]命中的目标额外受到[衰败]。使用本技能时移除自身[目盲]。"
+        }
+      },
+      "566": {
+        "keys": {
+          "source": "Kurama",
+          "translation": "九喇嘛"
+        },
+        "desc": {
+          "source": "Obtém a ressonância de Chakra de [Kurama] durante a rodada. Nesse status, ao derrotar um alvo com habilidade de [Ataque Comum], Naruto pode receber 1 chance extra de ataque comum na rodada. O uso desta habilidade cancelará o próprio status de [Cegueira].",
+          "translation": "本回合获得[九喇嘛]查克拉共鸣。此状态下，鸣人用[普攻]击败目标时，本回合额外获得1次普攻机会。使用本技能时移除自身[目盲]。"
+        }
+      },
+      "567": {
+        "keys": {
+          "source": "Seis Caminhos: Rasen Shuriken Gigante",
+          "translation": "六道·超大玉螺旋手里剑"
+        },
+        "desc": {
+          "source": "(Resfriamento inicial: [0 rodada] / Resfriamento da Esotérica: [2 rodadas] / Consome [40] de Chakra) Ataca [12] inimigos e causa dano que [sempre acerta] e que [Ignora o Escudo], além de aplicar adicionalmente ao alvo selecionado [Queda] e [Fraqueza] que não pode ser imunizada ou dispersada. Quando só houver 1 alvo inimigo, o dano da habilidade aumenta em [100%]. Caso o alvo selecionado seja [Menina], esta ação é substituída por [Jutsu Sexy: Jutsu Sensual do Harém Invertido]. (Causa [Interrupção] no alvo selecionado e aplica [Lentidão] que não pode ser imunizada ou dispersada (até o final da rodada), reduzindo também o dano de todas as habilidades do alvo em [60%] (o efeito não acumula e dura até o final da rodada). Esta habilida de é [sempre acerta].)",
+          "translation": "（进场冷却：[0回合]／奥义冷却：[2回合]／查克拉：[40]）攻击[12]名敌人，造成[必定命中]且[无视护盾]的伤害，额外对选定目标造成[倒地]和无法免疫或驱散的[虚弱]。敌方仅剩1名目标时，本技能伤害提高[100%]。若选定目标为[女性]，替换为[色诱术·逆后宫之术]：对选定目标造成[打断]和无法免疫或驱散的[迟缓]，持续至回合结束，并使目标全部技能伤害降低[60%]，不叠加，持续至回合结束。本技能[必定命中]。"
+        }
+      },
+      "568": {
+        "keys": {
+          "source": "Força dos Seis Caminhos",
+          "translation": "六道之力"
+        },
+        "desc": {
+          "source": "Naruto possui [Imunidade a Status negativos Nv.2] e ao usar habilidades do tipo [Esotérico], aumenta seu [Ataque] e [Ninjutsu] em [12%]. Além disso, após obter a ressonância de chakra de [Kokuo], Naruto ativa [Força dos Seis Caminhos], removendo todos os seus [Status negativos] e reiniciando a contagem de usos de [Rasenshuriken da Bomba de Bijuu Múltiplo]. No final da rodada, ativa [Força dos Seis Caminhos] novamente, reiniciando o estado da [Ressonância do Chakra do Bijuu] para o estado inicial.",
+          "translation": "鸣人获得[2级负面状态免疫]，每次使用[奥义]时，[攻击]和[忍术]提高[12%]。此外，获得[穆王]查克拉共鸣后，触发[六道之力]，移除自身全部[负面状态]，重置[多重尾兽玉螺旋手里剑]的使用次数。回合结束时再次触发[六道之力]，将[尾兽查克拉共鸣]重置为初始状态。"
+        }
+      },
+      "569": {
+        "keys": {
+          "source": "Kokuo",
+          "translation": "穆王"
+        },
+        "desc": {
+          "source": "Obtém a ressonância de Chakra de [Kokuo] durante a rodada. Nesse status, alvos atingidos por habilidade de [Ataque Comum] de Naruto sofrem adicionalmente [Ruptura]. O uso desta habilidade dispersa todos os [status negativos] do alvo.",
+          "translation": "本回合获得[穆王]查克拉共鸣。此状态下，被鸣人[普攻]命中的目标额外受到[破碎]。使用本技能时驱散目标全部[负面状态]。"
+        }
+      },
+      "570": {
+        "keys": {
+          "source": "Touro",
+          "translation": "牛鬼"
+        },
+        "desc": {
+          "source": "Obtém a ressonância de Chakra de [Gyuki] durante a rodada. Nesse status, alvos sujeitos a [Queda] por habilidade de [Ataque Comum] de Naruto sofrem adicionalmente [Mancha]. O uso desta habilidade cancelará o próprio status de [Cegueira].",
+          "translation": "本回合获得[牛鬼]查克拉共鸣。此状态下，被鸣人[普攻]造成[倒地]的目标额外受到[墨迹]。使用本技能时移除自身[目盲]。"
+        }
+      },
+      "571": {
+        "keys": {
+          "source": "Shukaku",
+          "translation": "守鹤"
+        },
+        "desc": {
+          "source": "Obtém a ressonância de Chakra de [Shukaku] durante a rodada. Nesse status, alvos atingidos por habilidade de [Ataque Comum] de Naruto sofrem adicionalmente [Lentidão]. O uso desta habilidade cancelará o próprio status de [Cegueira].",
+          "translation": "本回合获得[守鹤]查克拉共鸣。此状态下，被鸣人[普攻]命中的目标额外受到[迟缓]。使用本技能时移除自身[目盲]。"
+        }
+      },
+      "572": {
+        "keys": {
+          "source": "Son Goku",
+          "translation": "孙悟空"
+        },
+        "desc": {
+          "source": "Obtém a ressonância de Chakra de [Son Goku] durante a rodada. Nesse status, alvos atingidos por habilidade de [Ataque Comum] de Naruto sofrem adicionalmente [Queimadura]. O uso desta habilidade cancelará o próprio status de [Cegueira].",
+          "translation": "本回合获得[孙悟空]查克拉共鸣。此状态下，被鸣人[普攻]命中的目标额外受到[灼烧]。使用本技能时移除自身[目盲]。"
+        }
+      },
+      "573": {
+        "keys": {
+          "source": "Bomba de Bijuu",
+          "translation": "尾兽玉"
+        },
+        "desc": {
+          "source": "Ataca até [6] inimigos, causando dano que [Ignora o Escudo] e [Supressão de Imunidade a Status negativos] (até o fim da próxima rodada). Causa [Queda] a 1 inimigo aleatório. Esta habilidade tem bônus extra de [Crítico].",
+          "translation": "攻击最多[6]名敌人，造成[无视护盾]的伤害和持续至下回合结束的[负面状态免疫压制]，使1名随机敌人[倒地]。本技能拥有额外[暴击]加成。"
+        }
+      },
+      "574": {
+        "keys": {
+          "source": "Saiken",
+          "translation": "犀犬"
+        },
+        "desc": {
+          "source": "Obtém a ressonância de Chakra de [Saiken] durante a rodada. Nesse status, alvos atingidos por habilidade de [Ataque Comum] de Naruto sofrem adicionalmente [Dissolução]. O uso desta habilidade cancelará o próprio status de [Cegueira].",
+          "translation": "本回合获得[犀犬]查克拉共鸣。此状态下，被鸣人[普攻]命中的目标额外受到[溶解]。使用本技能时移除自身[目盲]。"
+        }
+      },
+      "575": {
+        "keys": {
+          "source": "Matatabi",
+          "translation": "又旅"
+        },
+        "desc": {
+          "source": "Obtém a ressonância de Chakra de [Matatabi] durante a rodada. Nesse status, alvos atingidos por habilidade de [Ataque Comum] de Naruto sofrem adicionalmente [Chamas]. O uso desta habilidade cancelará o próprio status de [Cegueira].",
+          "translation": "本回合获得[又旅]查克拉共鸣。此状态下，被鸣人[普攻]命中的目标额外受到[烈焰]。使用本技能时移除自身[目盲]。"
+        }
+      },
+      "576": {
+        "keys": {
+          "source": "Chomei",
+          "translation": "重明"
+        },
+        "desc": {
+          "source": "Obtém a ressonância de Chakra de [Chomei] durante a rodada. Nesse status, alvos atingidos por habilidade de [Ataque Comum] de Naruto sofrem adicionalmente [Cegueira]. O uso desta habilidade cancelará o próprio status de [Cegueira].",
+          "translation": "本回合获得[重明]查克拉共鸣。此状态下，被鸣人[普攻]命中的目标额外受到[目盲]。使用本技能时移除自身[目盲]。"
+        }
+      }
+    }
+  }
+}

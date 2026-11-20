@@ -1,0 +1,749 @@
+{
+  "id": "naruto-ninja-target-01-zh-CN-v1",
+  "rootId": "11006051",
+  "ninjaInfo": {
+    "class": "NinjaInfoCFG",
+    "rows": {
+      "11006051": {
+        "name": {
+          "source": "Obito Uchiha",
+          "translation": "宇智波带土"
+        },
+        "title": {
+          "source": "[Violência]",
+          "translation": "【暴怒】"
+        }
+      },
+      "11006061": {
+        "name": {
+          "source": "Obito Uchiha",
+          "translation": "宇智波带土"
+        },
+        "title": {
+          "source": "Habilidade de Fortalecimento de [Violência]",
+          "translation": "【暴怒强化】"
+        }
+      },
+      "11006062": {
+        "name": {
+          "source": "Obito Uchiha",
+          "translation": "宇智波带土"
+        },
+        "title": {
+          "source": "Habilidade de Fortalecimento de [Violência]",
+          "translation": "【暴怒强化】"
+        }
+      }
+    }
+  },
+  "skills": {
+    "class": "SkillCFG",
+    "rows": {
+      "21006051": {
+        "name": {
+          "source": "Kamui: Chute Descendente",
+          "translation": "神威·下踢"
+        },
+        "desc": {
+          "source": "Gasta <font color=\"#4dc831\">5%</font> da própria Vida e ataca o inimigo com menos Vida, com chance de causar <font color=\"#4dc831\">Queda</font> e <font color=\"#4dc831\">Marca Kamui</font>. Acerta <font color=\"#4dc831\">na certa</font> e ignora Zoação e Provocação.",
+          "translation": "消耗自身5%生命，攻击生命最低的敌人，有概率造成倒地和神威标记。本技能必定命中，无视嘲讽与挑衅。"
+        }
+      },
+      "21006052": {
+        "name": {
+          "source": "Kamui: Chute Descendente",
+          "translation": "神威·下踢"
+        },
+        "desc": {
+          "source": "Gasta <font color=\"#4dc831\">5%</font> da própria Vida e ataca o inimigo com menos Vida, com chance de causar <font color=\"#4dc831\">Queda</font> e <font color=\"#4dc831\">Marca Kamui</font>. Acerta <font color=\"#4dc831\">na certa</font> e ignora Zoação e Provocação.",
+          "translation": "消耗自身5%生命，攻击生命最低的敌人，有概率造成倒地和神威标记。本技能必定命中，无视嘲讽与挑衅。"
+        }
+      },
+      "21006053": {
+        "name": {
+          "source": "Kamui: Chute Descendente",
+          "translation": "神威·下踢"
+        },
+        "desc": {
+          "source": "Gasta <font color=\"#4dc831\">5%</font> da própria Vida e ataca o inimigo com menos Vida, com chance de causar <font color=\"#4dc831\">Queda</font> e <font color=\"#4dc831\">Marca Kamui</font>. Acerta <font color=\"#4dc831\">na certa</font> e ignora Zoação e Provocação.",
+          "translation": "消耗自身5%生命，攻击生命最低的敌人，有概率造成倒地和神威标记。本技能必定命中，无视嘲讽与挑衅。"
+        }
+      },
+      "21006054": {
+        "name": {
+          "source": "Estilo Madeira: Caos Infernal",
+          "translation": "木遁·地狱之乱"
+        },
+        "desc": {
+          "source": "<font color=\"#4dc831\">Lançado com combo de 20</font>, causa dano a 7 inimigos aleatórios e absorve até <font color=\"#4dc831\">20</font> pontos de Chakra de cada alvo.",
+          "translation": "连击达到20时触发，对7名随机敌人造成伤害，并从每个目标吸收最多20点查克拉。"
+        }
+      },
+      "21006055": {
+        "name": {
+          "source": "Estilo Madeira: Jutsu Cortante",
+          "translation": "木遁·扦插之术"
+        },
+        "desc": {
+          "source": "Gasta <font color=\"#4dc831\">5%</font> de Vida e persegue inimigos com <font color=\"#4dc831\">Flutuação</font>, causando <font color=\"#4dc831\">Queda</font>, <font color=\"#4dc831\">Imobilidade</font> e <font color=\"#4dc831\">Marca Kamui</font>. Esta habilidade ignora parte da <font color=\"#4dc831\">Defesa</font> e <font color=\"#4dc831\">Resistência</font> do alvo.",
+          "translation": "消耗自身5%生命，追打浮空敌人，造成倒地、定身和神威标记。本技能无视目标部分防御和抗性。"
+        }
+      },
+      "21006056": {
+        "name": {
+          "source": "Esquiva",
+          "translation": "闪避"
+        },
+        "desc": {
+          "source": "Habilidade com chance de Esquiva 0, não sendo exibida.",
+          "translation": "闪避概率为0的技能，不显示。"
+        }
+      },
+      "21006057": {
+        "name": {
+          "source": "Kamui: Transferência do Vazio",
+          "translation": "神威·虚化转移"
+        },
+        "desc": {
+          "source": "Gasta <font color=\"#4dc831\">10%</font> de Vida e tem altíssima chance de Esquiva contra o primeiro Ataque Comum da rodada e os primeiros 5 <font color=\"#4dc831\">Ataques Comuns</font> e <font color=\"#4dc831\">Perseguições</font> que o atingirem não podem matar.",
+          "translation": "消耗自身10%生命，以极高概率闪避本回合首次普攻；受到的前5次普攻和追打无法将自身击败。"
+        }
+      },
+      "21006058": {
+        "name": {
+          "source": "Kamui: Violência",
+          "translation": "神威·暴怒"
+        },
+        "desc": {
+          "source": "Realiza 2 Ataques Comuns a cada rodada e, na primeira vez em que sua Vida cair abaixo de <font color=\"#4dc831\">50%</font>, entra no status de <font color=\"#4dc831\">Violência</font> e recupera <font color=\"#4dc831\">50%</font> de Vida. O <font color=\"#4dc831\">Kamui: Transferência do Vazio</font> passa a ser lançado no início de cada rodada e ganha as habilidade <font color=\"#4dc831\">Estilo Madeira: Lança Explosiva</font>. Além disso, o <font color=\"#4dc831\">Kamui: Chute Descendente</font>, <font color=\"#4dc831\">Estilo Madeira: Caos Infernal</font> e <font color=\"#4dc831\">Estilo Madeira: Jutsu Cortante</font> são fortalecidos.",
+          "translation": "每回合进行2次普攻。生命首次低于50%时，进入暴怒状态并恢复50%生命。此后每回合开始时释放神威·虚化转移，并获得技能木遁·爆枪。同时强化神威·下踢、木遁·地狱之乱和木遁·扦插之术。"
+        }
+      },
+      "21006059": {
+        "name": {
+          "source": "Kamui: Violência",
+          "translation": "神威·暴怒"
+        },
+        "desc": {
+          "source": "Ganha 1 ataque comum extra. Caso sua Vida caia abaixo de 50%, torna-se Obito com Violência.",
+          "translation": "额外获得1次普攻机会。生命低于50%时，变为暴怒带土。"
+        }
+      },
+      "21206051": {
+        "name": {
+          "source": "Kamui: Chute Descendente",
+          "translation": "神威·下踢"
+        },
+        "desc": {
+          "source": "Gasta <font color=\"#4dc831\">5%</font> da própria Vida e ataca o inimigo com menos Vida, com grande chance de causar <font color=\"#4dc831\">Queda</font> e <font color=\"#4dc831\">Marca Kamui</font>. Acerta <font color=\"#4dc831\">na certa</font> e ignora Zoação e Provocação.",
+          "translation": "消耗自身5%生命，攻击生命最低的敌人，有较高概率造成倒地和神威标记。本技能必定命中，无视嘲讽与挑衅。"
+        }
+      },
+      "21206052": {
+        "name": {
+          "source": "Kamui: Chute Descendente",
+          "translation": "神威·下踢"
+        },
+        "desc": {
+          "source": "Gasta <font color=\"#4dc831\">5%</font> da própria Vida e ataca o inimigo com menos Vida, com grande chance de causar <font color=\"#4dc831\">Queda</font> e <font color=\"#4dc831\">Marca Kamui</font>. Acerta <font color=\"#4dc831\">na certa</font> e ignora Zoação e Provocação.",
+          "translation": "消耗自身5%生命，攻击生命最低的敌人，有较高概率造成倒地和神威标记。本技能必定命中，无视嘲讽与挑衅。"
+        }
+      },
+      "21206053": {
+        "name": {
+          "source": "Kamui: Chute Descendente",
+          "translation": "神威·下踢"
+        },
+        "desc": {
+          "source": "Gasta <font color=\"#4dc831\">5%</font> da própria Vida e ataca o inimigo com menos Vida, com grande chance de causar <font color=\"#4dc831\">Queda</font> e <font color=\"#4dc831\">Marca Kamui</font>. Acerta <font color=\"#4dc831\">na certa</font> e ignora Zoação e Provocação.",
+          "translation": "消耗自身5%生命，攻击生命最低的敌人，有较高概率造成倒地和神威标记。本技能必定命中，无视嘲讽与挑衅。"
+        }
+      },
+      "21206054": {
+        "name": {
+          "source": "Estilo Madeira: Caos Infernal",
+          "translation": "木遁·地狱之乱"
+        },
+        "desc": {
+          "source": "<font color=\"#4dc831\">Lançado com combo de 20</font>, causa dano aumentado em <font color=\"#4dc831\">20%</font> a 7 inimigos e absorve até <font color=\"#4dc831\">20</font> pontos de Chakra de cada alvo.",
+          "translation": "连击达到20时触发，对7名敌人造成提高20%的伤害，并从每个目标吸收最多20点查克拉。"
+        }
+      },
+      "21206055": {
+        "name": {
+          "source": "Estilo Madeira: Jutsu Cortante",
+          "translation": "木遁·扦插之术"
+        },
+        "desc": {
+          "source": "Gasta <font color=\"#4dc831\">5%</font> de Vida e persegue inimigos com <font color=\"#4dc831\">Flutuação</font> e <font color=\"#4dc831\">Voo</font>, causando <font color=\"#4dc831\">Queda</font>, <font color=\"#4dc831\">Imobilidade</font> e <font color=\"#4dc831\">Marca Kamui</font>. Esta habilidade ignora parte da <font color=\"#4dc831\">Defesa</font> e <font color=\"#4dc831\">Resistência</font> do alvo.",
+          "translation": "消耗自身5%生命，追打浮空和高浮空敌人，造成倒地、定身和神威标记。本技能无视目标部分防御和抗性。"
+        }
+      },
+      "21206056": {
+        "name": {
+          "source": "Esquiva",
+          "translation": "闪避"
+        },
+        "desc": {
+          "source": "Habilidade com chance de Esquiva 0, não sendo exibida.",
+          "translation": "闪避概率为0的技能，不显示。"
+        }
+      },
+      "21206057": {
+        "name": {
+          "source": "Kamui: Transferência do Vazio",
+          "translation": "神威·虚化转移"
+        },
+        "desc": {
+          "source": "Gasta <font color=\"#4dc831\">10%</font> de Vida e tem altíssima chance de Esquiva contra o primeiro Ataque Comum da rodada e os primeiros 8 <font color=\"#4dc831\">Ataques Comuns</font> e <font color=\"#4dc831\">Perseguições</font> que o atingirem não podem matar.",
+          "translation": "消耗自身10%生命，以极高概率闪避本回合首次普攻；受到的前8次普攻和追打无法将自身击败。"
+        }
+      },
+      "21206058": {
+        "name": {
+          "source": "Kamui: Violência",
+          "translation": "神威·暴怒"
+        },
+        "desc": {
+          "source": "Realiza 2 Ataques Comuns a cada rodada e, na primeira vez em que sua Vida cair abaixo de <font color=\"#4dc831\">70%</font>, entra no status de <font color=\"#4dc831\">Violência</font> e recupera <font color=\"#4dc831\">50%</font> de Vida. O <font color=\"#4dc831\">Kamui: Transferência do Vazio</font> passa a ser lançado no início de cada rodada e ganha as habilidades <font color=\"#4dc831\">Estilo Madeira: Lança Explosiva</font> e <font color=\"#4dc831\">Super: Estilo Madeira: Lança Explosiva</font>. Além disso, o <font color=\"#4dc831\">Kamui: Chute Descendente</font>, <font color=\"#4dc831\">Estilo Madeira: Caos Infernal</font> e <font color=\"#4dc831\">Estilo Madeira: Jutsu Cortante</font> são fortalecidos.",
+          "translation": "每回合进行2次普攻。生命首次低于70%时，进入暴怒状态并恢复50%生命。此后每回合开始时释放神威·虚化转移，并获得木遁·爆枪和超·木遁·爆枪。同时强化神威·下踢、木遁·地狱之乱和木遁·扦插之术。"
+        }
+      },
+      "21206059": {
+        "name": {
+          "source": "Kamui: Violência",
+          "translation": "神威·暴怒"
+        },
+        "desc": {
+          "source": "Ganha 1 ataque comum extra. Caso sua Vida caia abaixo de 70%, torna-se Obito com Violência.",
+          "translation": "额外获得1次普攻机会。生命低于70%时，变为暴怒带土。"
+        }
+      },
+      "21306051": {
+        "name": {
+          "source": "Kamui: Chute Descendente",
+          "translation": "神威·下踢"
+        },
+        "desc": {
+          "source": "Gasta <font color=\"#4dc831\">5%</font> da própria Vida e ataca o inimigo com menos Vida, com grande chance de causar <font color=\"#4dc831\">Queda</font> e <font color=\"#4dc831\">Marca Kamui</font>. Esta habilidade <font color=\"#4dc831\">sempre certa</font> e ignora <font color=\"#4dc831\">Defesa</font>, Zoação e Provocação.",
+          "translation": "消耗自身5%生命，攻击生命最低的敌人，有较高概率造成倒地和神威标记。本技能必定命中，无视防御、嘲讽与挑衅。"
+        }
+      },
+      "21306052": {
+        "name": {
+          "source": "Kamui: Chute Descendente",
+          "translation": "神威·下踢"
+        },
+        "desc": {
+          "source": "Gasta <font color=\"#4dc831\">5%</font> da própria Vida e ataca o inimigo com menos Vida, com grande chance de causar <font color=\"#4dc831\">Queda</font> e <font color=\"#4dc831\">Marca Kamui</font>. Esta habilidade <font color=\"#4dc831\">sempre certa</font> e ignora <font color=\"#4dc831\">Defesa</font>, Zoação e Provocação.",
+          "translation": "消耗自身5%生命，攻击生命最低的敌人，有较高概率造成倒地和神威标记。本技能必定命中，无视防御、嘲讽与挑衅。"
+        }
+      },
+      "21306053": {
+        "name": {
+          "source": "Kamui: Chute Descendente",
+          "translation": "神威·下踢"
+        },
+        "desc": {
+          "source": "Gasta <font color=\"#4dc831\">5%</font> da própria Vida e ataca o inimigo com menos Vida, com grande chance de causar <font color=\"#4dc831\">Queda</font> e <font color=\"#4dc831\">Marca Kamui</font>. Esta habilidade <font color=\"#4dc831\">sempre certa</font> e ignora <font color=\"#4dc831\">Defesa</font>, Zoação e Provocação.",
+          "translation": "消耗自身5%生命，攻击生命最低的敌人，有较高概率造成倒地和神威标记。本技能必定命中，无视防御、嘲讽与挑衅。"
+        }
+      },
+      "21306054": {
+        "name": {
+          "source": "Estilo Madeira: Caos Infernal",
+          "translation": "木遁·地狱之乱"
+        },
+        "desc": {
+          "source": "<font color=\"#4dc831\">Lançado com combo de 20</font>, causa dano aumentado em <font color=\"#4dc831\">7</font> a 20% inimigos e absorve até <font color=\"#4dc831\">20</font> pontos de Chakra de cada alvo. A cada uso da habilidade, seu dano aumenta em 20% e o número de alvos em 1, até o máximo de 9. Ao atingir 9 alvos, ela <font color=\"#4dc831\">sempre acerta</font>.",
+          "translation": "连击达到20时触发，对7名敌人造成提高20%的伤害，并从每个目标吸收最多20点查克拉。每次使用后，本技能伤害提高20%，目标数增加1，最多9名。目标数达到9名时，本技能必定命中。"
+        }
+      },
+      "21306055": {
+        "name": {
+          "source": "Estilo Madeira: Jutsu Cortante",
+          "translation": "木遁·扦插之术"
+        },
+        "desc": {
+          "source": "Gasta <font color=\"#4dc831\">5%</font> de Vida e persegue inimigos com <font color=\"#4dc831\">Flutuação</font> e <font color=\"#4dc831\">Voo</font>, causando <font color=\"#4dc831\">Queda</font>, <font color=\"#4dc831\">Imobilidade</font> e <font color=\"#4dc831\">Marca Kamui</font>. Esta habilidade ignora parte da <font color=\"#4dc831\">Defesa</font> e <font color=\"#4dc831\">Resistência</font> do alvo e tem bônus <font color=\"#4dc831\">Crítico</font>.",
+          "translation": "消耗自身5%生命，追打浮空和高浮空敌人，造成倒地、定身和神威标记。本技能无视目标部分防御和抗性，并拥有额外暴击加成。"
+        }
+      },
+      "21306056": {
+        "name": {
+          "source": "Esquiva",
+          "translation": "闪避"
+        },
+        "desc": {
+          "source": "Habilidade com chance de Esquiva 0, não sendo exibida.",
+          "translation": "闪避概率为0的技能，不显示。"
+        }
+      },
+      "21306057": {
+        "name": {
+          "source": "Kamui: Transferência do Vazio",
+          "translation": "神威·虚化转移"
+        },
+        "desc": {
+          "source": "Gasta <font color=\"#4dc831\">10%</font> de Vida e tem altíssima chance de Esquiva contra os primeiros 2 Ataques Comuns da rodada e os primeiros 8 <font color=\"#4dc831\">Ataques Comuns</font> e <font color=\"#4dc831\">Perseguições</font> que o atingirem não podem matar.",
+          "translation": "消耗自身10%生命，以极高概率闪避本回合前2次普攻；受到的前8次普攻和追打无法将自身击败。"
+        }
+      },
+      "21306058": {
+        "name": {
+          "source": "Kamui: Violência",
+          "translation": "神威·暴怒"
+        },
+        "desc": {
+          "source": "Realiza 2 Ataques Comuns a cada rodada, revive ao ser derrotado e entra no status de <font color=\"#4dc831\">Violência</font>. O <font color=\"#4dc831\">Kamui: Transferência do Vazio</font> passa a ser lançado no início de cada rodada e ganha as habilidades <font color=\"#4dc831\">Estilo Madeira: Lança Explosiva</font> e <font color=\"#4dc831\">Super: Estilo Madeira: Lança Explosiva</font>. Além disso, o <font color=\"#4dc831\">Kamui: Chute Descendente</font>, <font color=\"#4dc831\">Estilo Madeira: Caos Infernal</font> e <font color=\"#4dc831\">Estilo Madeira: Jutsu Cortante</font> são fortalecidos.",
+          "translation": "每回合进行2次普攻，被击败时复活并进入暴怒状态。此后每回合开始时释放神威·虚化转移，并获得木遁·爆枪和超·木遁·爆枪。同时强化神威·下踢、木遁·地狱之乱和木遁·扦插之术。"
+        }
+      },
+      "21306059": {
+        "name": {
+          "source": "Kamui: Violência",
+          "translation": "神威·暴怒"
+        },
+        "desc": {
+          "source": "Habilidade vazia (ocupando)",
+          "translation": "空技能（占位）。"
+        }
+      },
+      "21406052": {
+        "name": {
+          "source": "Kamui: Chute Descendente",
+          "translation": "神威·下踢"
+        },
+        "desc": {
+          "source": "Gasta <font color=\"#4dc831\">5%</font> da própria Vida e ataca 1 inimigo, causando dano e com chance de causar <font color=\"#4dc831\">Queda</font>, <font color=\"#4dc831\">Marca Kamui</font> e roubar suas chances de Ataques Comuns. Esta habilidade <font color=\"#4dc831\">sempre certa</font> e ignora <font color=\"#4dc831\">Defesa</font>, Zoação e Provocação.",
+          "translation": "消耗自身5%生命，攻击1名敌人，造成伤害，并有概率造成倒地、神威标记及夺取其普攻次数。本技能必定命中，无视防御、嘲讽与挑衅。"
+        }
+      },
+      "21406053": {
+        "name": {
+          "source": "Kamui: Chute Descendente",
+          "translation": "神威·下踢"
+        },
+        "desc": {
+          "source": "Gasta <font color=\"#4dc831\">5%</font> da própria Vida e ataca 1 inimigo, causando dano e com chance de causar <font color=\"#4dc831\">Queda</font>, <font color=\"#4dc831\">Marca Kamui</font> e roubar suas chances de Ataques Comuns. Esta habilidade <font color=\"#4dc831\">sempre certa</font> e ignora <font color=\"#4dc831\">Defesa</font>, Zoação e Provocação.",
+          "translation": "消耗自身5%生命，攻击1名敌人，造成伤害，并有概率造成倒地、神威标记及夺取其普攻次数。本技能必定命中，无视防御、嘲讽与挑衅。"
+        }
+      },
+      "21406054": {
+        "name": {
+          "source": "Estilo Madeira: Caos Infernal",
+          "translation": "木遁·地狱之乱"
+        },
+        "desc": {
+          "source": "<font color=\"#4dc831\">Lançado com combo de 15</font>, ataca uma linha horizontal e causa dano e <font color=\"#4dc831\">Interrupção</font>, além de absorver todo o <font color=\"#4dc831\">Chakra</font>. Esta habilidade tem bônus de <font color=\"#4dc831\">Crítico</font>.",
+          "translation": "连击达到15时触发，攻击一横排敌人，造成伤害和打断，并吸收全部查克拉。本技能拥有额外暴击加成。"
+        }
+      },
+      "21406055": {
+        "name": {
+          "source": "Estilo Madeira: Jutsu Cortante",
+          "translation": "木遁·扦插之术"
+        },
+        "desc": {
+          "source": "Gasta <font color=\"#4dc831\">5%</font> de Vida e persegue inimigos com <font color=\"#4dc831\">Flutuação</font>, causando <font color=\"#4dc831\">Supressão de Imunidade a Status negativos</font> até o fim da rodada seguinte, <font color=\"#4dc831\">Queda</font>, <font color=\"#4dc831\">Imobilidade</font> e <font color=\"#4dc831\">Marca Kamui</font>. Esta habilidade ignora parte da <font color=\"#4dc831\">Defesa</font> e <font color=\"#4dc831\">Resistência</font> do alvo.",
+          "translation": "消耗自身5%生命，追打浮空敌人，造成持续至下回合结束的负面状态免疫压制，以及倒地、定身和神威标记。本技能无视目标部分防御和抗性。"
+        }
+      },
+      "21406056": {
+        "name": {
+          "source": "Esquiva",
+          "translation": "闪避"
+        },
+        "desc": {
+          "source": "Habilidade com chance de Esquiva 0, não sendo exibida.",
+          "translation": "闪避概率为0的技能，不显示。"
+        }
+      },
+      "21406057": {
+        "name": {
+          "source": "Kamui: Transferência do Vazio",
+          "translation": "神威·虚化转移"
+        },
+        "desc": {
+          "source": "Gasta <font color=\"#4dc831\">10%</font> de Vida e tem altíssima chance de Esquiva contra a primeiras 3 <font color=\"#4dc831\">Esotéricas</font> da rodada.",
+          "translation": "消耗自身10%生命，以极高概率闪避本回合前3次奥义攻击。"
+        }
+      },
+      "21006061": {
+        "name": {
+          "source": "Kamui: Chute Descendente",
+          "translation": "神威·下踢"
+        },
+        "desc": {
+          "source": "Ataca o inimigo com menos Vida, com grande chance de causar <font color=\"#4dc831\">Queda</font> e <font color=\"#4dc831\">Marca Kamui</font>. Acerta <font color=\"#4dc831\">na certa</font> e ignora Zoação e Provocação.",
+          "translation": "攻击生命最低的敌人，有较高概率造成倒地和神威标记。本技能必定命中，无视嘲讽与挑衅。"
+        }
+      },
+      "21006062": {
+        "name": {
+          "source": "Kamui: Chute Descendente",
+          "translation": "神威·下踢"
+        },
+        "desc": {
+          "source": "Ataca o inimigo com menos Vida, com grande chance de causar <font color=\"#4dc831\">Queda</font> e <font color=\"#4dc831\">Marca Kamui</font>. Acerta <font color=\"#4dc831\">na certa</font> e ignora Zoação e Provocação.",
+          "translation": "攻击生命最低的敌人，有较高概率造成倒地和神威标记。本技能必定命中，无视嘲讽与挑衅。"
+        }
+      },
+      "21006063": {
+        "name": {
+          "source": "Kamui: Chute Descendente",
+          "translation": "神威·下踢"
+        },
+        "desc": {
+          "source": "Ataca o inimigo com menos Vida, com grande chance de causar <font color=\"#4dc831\">Queda</font> e <font color=\"#4dc831\">Marca Kamui</font>. Acerta <font color=\"#4dc831\">na certa</font> e ignora Zoação e Provocação.",
+          "translation": "攻击生命最低的敌人，有较高概率造成倒地和神威标记。本技能必定命中，无视嘲讽与挑衅。"
+        }
+      },
+      "21006064": {
+        "name": {
+          "source": "Estilo Madeira: Caos Infernal",
+          "translation": "木遁·地狱之乱"
+        },
+        "desc": {
+          "source": "<font color=\"#4dc831\">Lançado com combo de 20</font>, causa dano a 7 inimigos aleatórios, <font color=\"#4dc831\">Supressão de Imunidade a Status negativos</font> por 1 rodada e absorve até 20 pontos de Chakra de cada alvo.",
+          "translation": "连击达到20时触发，对7名随机敌人造成伤害和持续1回合的负面状态免疫压制，并从每个目标吸收最多20点查克拉。"
+        }
+      },
+      "21006065": {
+        "name": {
+          "source": "Estilo Madeira: Jutsu Cortante",
+          "translation": "木遁·扦插之术"
+        },
+        "desc": {
+          "source": "Persegue inimigos com <font color=\"#4dc831\">Flutuação</font>, causando <font color=\"#4dc831\">Queda</font> e <font color=\"#4dc831\">Imobilidade</font>, além de causar dano e <font color=\"#4dc831\">Marca Kamui</font> aos demais alvos na mesma linha. O efeito pode ser ativado até 2 vezes por turno e ignora parte da <font color=\"#4dc831\">Defesa</font> e <font color=\"#4dc831\">Resistência</font>.",
+          "translation": "追打浮空敌人，造成倒地和定身，并对同一横排其他目标造成伤害和神威标记。每回合最多2次，无视部分防御和抗性。"
+        }
+      },
+      "21006066": {
+        "name": {
+          "source": "Kamui: Transferência do Vazio",
+          "translation": "神威·虚化转移"
+        },
+        "desc": {
+          "source": "Ganha 1 grande chance de Esquiva. Caso o inimigo tenha <font color=\"#4dc831\">Marca Kamui</font>, Obito causa 15% de seu Ataque de dano extra e recupera 6% de Vida ao atacar.",
+          "translation": "获得1次较高概率闪避机会。攻击带有神威标记的敌人时，额外造成相当于自身攻击15%的伤害，并恢复6%生命。"
+        }
+      },
+      "21006067": {
+        "name": {
+          "source": "Estilo Madeira: Lança Explosiva",
+          "translation": "木遁·爆枪"
+        },
+        "desc": {
+          "source": "Causa dano de Terra e Água à toda a equipe inimiga e <font color=\"#4dc831\">Flutuação</font> ao alvo. Após isso o dano de sua Perseguição aumenta 40% até o fim da rodada (Não pode acumular). Esta habilidade reduz o consumo de Chakras em <font color=\"#4dc831\">20</font> pontos por cada lançamento e ao causar danos cura a si mesmo a uma taxa de <font color=\"#4dc831\">12%</font>.",
+          "translation": "对敌方全队造成土、水属性伤害，并使目标浮空。随后自身追打伤害提高40%，持续至回合结束，不叠加。每次使用后本技能查克拉消耗降低20点；造成伤害时恢复相当于伤害12%的生命。"
+        }
+      },
+      "21006068": {
+        "name": {
+          "source": "Esquiva",
+          "translation": "闪避"
+        },
+        "desc": {
+          "source": "Habilidade com chance de Esquiva 0, não sendo exibida.",
+          "translation": "闪避概率为0的技能，不显示。"
+        }
+      },
+      "21006069": {
+        "name": {
+          "source": "Kamui: Violência",
+          "translation": "神威·暴怒"
+        },
+        "desc": {
+          "source": "Realiza 2 ataques comuns por rodada e ganha mais 1 ataque comum ao matar um inimigo. Ao causar danos cura a si mesmo a uma taxa de 12%.",
+          "translation": "每回合进行2次普攻，击败敌人时额外获得1次普攻机会。造成伤害时恢复相当于伤害12%的生命。"
+        }
+      },
+      "21206061": {
+        "name": {
+          "source": "Kamui: Chute Descendente",
+          "translation": "神威·下踢"
+        },
+        "desc": {
+          "source": "Ataca <font color=\"#4dc831\">ninjas</font> inimigos, com grande chance de causar <font color=\"#4dc831\">Queda</font> e <font color=\"#4dc831\">Marca Kamui</font>. Esta habilidade ignora <font color=\"#4dc831\">Defesa</font>, Zoação e Provocação, e dá 1/2 <font color=\"#4dc831\">Ponto de Habilidade</font>.",
+          "translation": "攻击敌方忍者，有较高概率造成倒地和神威标记，无视防御、嘲讽与挑衅，并获得1/2个技能点。"
+        }
+      },
+      "21206062": {
+        "name": {
+          "source": "Kamui: Chute Descendente",
+          "translation": "神威·下踢"
+        },
+        "desc": {
+          "source": "Ataca <font color=\"#4dc831\">ninjas</font> inimigos, com grande chance de causar <font color=\"#4dc831\">Queda</font> e <font color=\"#4dc831\">Marca Kamui</font>. Esta habilidade ignora <font color=\"#4dc831\">Defesa</font>, Zoação e Provocação, e dá 1/2 <font color=\"#4dc831\">Ponto de Habilidade</font>.",
+          "translation": "攻击敌方忍者，有较高概率造成倒地和神威标记，无视防御、嘲讽与挑衅，并获得1/2个技能点。"
+        }
+      },
+      "21206063": {
+        "name": {
+          "source": "Kamui: Chute Descendente",
+          "translation": "神威·下踢"
+        },
+        "desc": {
+          "source": "Ataca <font color=\"#4dc831\">ninjas</font> inimigos, com grande chance de causar <font color=\"#4dc831\">Queda</font> e <font color=\"#4dc831\">Marca Kamui</font>. Esta habilidade ignora <font color=\"#4dc831\">Defesa</font>, Zoação e Provocação, e dá 1/2 <font color=\"#4dc831\">Ponto de Habilidade</font>.",
+          "translation": "攻击敌方忍者，有较高概率造成倒地和神威标记，无视防御、嘲讽与挑衅，并获得1/2个技能点。"
+        }
+      },
+      "21206064": {
+        "name": {
+          "source": "Estilo Madeira: Caos Infernal",
+          "translation": "木遁·地狱之乱"
+        },
+        "desc": {
+          "source": "<font color=\"#4dc831\">Lançado com combo de 15</font>, causa dano e <font color=\"#4dc831\">Terror</font> (Não pode receber imunidade nem dispersão até o fim da rodada. Dispersado caso lance uma Esotérica) a 7 inimigos aleatórios e absorve até <font color=\"#4dc831\">20</font> pontos de Chakra de cada alvo. Esta habilidade tem bônus de <font color=\"#4dc831\">Critico</font> e dá 1/2 <font color=\"#4dc831\">Ponto de Habilidade</font>.",
+          "translation": "连击达到15时触发，对7名随机敌人造成伤害和恐惧（无法免疫或驱散，持续至回合结束，释放奥义时解除），从每个目标吸收最多20点查克拉。本技能拥有额外暴击加成，获得1/2个技能点。"
+        }
+      },
+      "21206065": {
+        "name": {
+          "source": "Estilo Madeira: Jutsu Cortante",
+          "translation": "木遁·扦插之术"
+        },
+        "desc": {
+          "source": "Persegue inimigos com <font color=\"#4dc831\">Flutuação</font> e <font color=\"#4dc831\">Voo</font>, causando <font color=\"#4dc831\">Supressão de Imunidade a Status negativos</font> até o fim da rodada, <font color=\"#4dc831\">Queda</font> e <font color=\"#4dc831\">Imobilidade</font>, além de causar dano e <font color=\"#4dc831\">Marca Kamui</font> aos demais alvos na mesma linha. O efeito pode ser ativado até 2 vezes por turno, ignora parte da <font color=\"#4dc831\">Defesa</font> e <font color=\"#4dc831\">Resistência</font> e dá 1/2 <font color=\"#4dc831\">Ponto de Habilidade</font>.",
+          "translation": "追打浮空和高浮空敌人，造成持续至回合结束的负面状态免疫压制、倒地和定身，对同一横排其他目标造成伤害和神威标记。每回合最多2次，无视部分防御和抗性，获得1/2个技能点。"
+        }
+      },
+      "21206066": {
+        "name": {
+          "source": "Kamui: Transferência do Vazio",
+          "translation": "神威·虚化转移"
+        },
+        "desc": {
+          "source": "No início de cada rodada, Dispersa 1 de seus próprios <font color=\"#4dc831\">Status negativos</font>, tem chance altíssima de Esquiva contra os primeiros 2 ataques da rodada e, ao causar dano, ganha <font color=\"#4dc831\">25%</font> de <font color=\"#4dc831\">Ataque</font> e recupera <font color=\"#4dc831\">6%</font> de Vida. Para cada 1 inimigo com <font color=\"#4dc831\">Marca Kamui</font>, Obito ganha 2 Ataques Comuns extras (máx. 6). Esta habilidade é válida mesmo quando vítima de Controle.",
+          "translation": "每回合开始时，驱散自身1个负面状态，以极高概率闪避本回合前2次攻击。每次造成伤害时攻击提高25%，恢复6%生命。敌方每有1名带有神威标记的忍者，带土额外获得2次普攻机会，最多6次。被控制时仍有效。"
+        }
+      },
+      "21206067": {
+        "name": {
+          "source": "Estilo Madeira: Lança Explosiva",
+          "translation": "木遁·爆枪"
+        },
+        "desc": {
+          "source": "Causa dano de Terra e Água à toda a equipe inimiga, além de <font color=\"#4dc831\">Supressão de Imunidade a Perseguição</font> até o fim da rodada e <font color=\"#4dc831\">Flutuação</font> ao alvo selecionado. Após isso o dano de sua Perseguição aumenta <font color=\"#4dc831\">40%</font> até o fim da rodada (não pode acumular).",
+          "translation": "对敌方全队造成土、水属性伤害和持续至回合结束的追打免疫压制，使选定目标浮空。随后自身追打伤害提高40%，持续至回合结束，不叠加。"
+        }
+      },
+      "21206068": {
+        "name": {
+          "source": "Esquiva",
+          "translation": "闪避"
+        },
+        "desc": {
+          "source": "Ganha 3 <font color=\"#4dc831\">Pontos de Habilidade</font> ao realizar Esquiva. Ao atingir o limite, consome todos os <font color=\"#4dc831\">Pontos de Habilidade</font> e lança o <font color=\"#4dc831\">Super: Estilo Madeira: Jutsu Cortante</font>.",
+          "translation": "闪避时获得3个技能点。达到上限时消耗全部技能点，释放超·木遁·扦插之术。"
+        }
+      },
+      "21206069": {
+        "name": {
+          "source": "Kamui: Violência",
+          "translation": "神威·暴怒"
+        },
+        "desc": {
+          "source": "Realiza 2 Ataques Comuns por rodada e ganha mais 1 Ataque Comum ao matar 1 inimigo. Ao causar danos, cura a si mesmo a uma taxa de <font color=\"#4dc831\">12</font>%. Esta habilidade <font color=\"#4dc831\">sempre acerta</font>.",
+          "translation": "每回合进行2次普攻，击败1名敌人时额外获得1次普攻机会。造成伤害时恢复相当于伤害12%的生命。本技能必定命中。"
+        }
+      }
+    }
+  },
+  "skillDetails": {
+    "class": "SkillKeyDescCFG",
+    "rows": {
+      "382": {
+        "keys": {
+          "source": "Estilo Madeira: Lança Explosiva",
+          "translation": "木遁·爆枪"
+        },
+        "desc": {
+          "source": "(Resfriamento inicial: [0 rodada] / Resfriamento da Esotérica [0 rodada] / Chakra: [40]) Causa dano de Terra e Água a toda a equipe inimiga e [Flutuação] ao alvo. Após isso, aumenta o próprio [Dano de Perseguição] em [40%] até o final da rodada (não acumula). A cada uso desta habilidade, o custo de Chakra será reduzido em [20] pontos.",
+          "translation": "（进场冷却：[0回合]／奥义冷却：[0回合]／查克拉：[40]）对敌方全队造成土、水属性伤害，并使目标[浮空]。随后自身[追打伤害]提高[40%]，持续至回合结束，不叠加。每次使用后，本技能查克拉消耗降低[20]点。"
+        }
+      },
+      "383": {
+        "keys": {
+          "source": "Kamui: Chute Descendente",
+          "translation": "神威·下踢"
+        },
+        "desc": {
+          "source": "Ataca o inimigo com menos Vida, com grande chance de causar [Queda] e [Marca Kamui]. Acerta [na certa] e ignora Zoação e Provocação.",
+          "translation": "攻击生命最低的敌人，有较高概率造成[倒地]和[神威标记]。本技能[必定命中]，无视嘲讽与挑衅。"
+        }
+      },
+      "384": {
+        "keys": {
+          "source": "Estilo Madeira: Caos Infernal",
+          "translation": "木遁·地狱之乱"
+        },
+        "desc": {
+          "source": "[Lançado com combo de 20], causa dano a 7 inimigos aleatórios, [Supressão de Imunidade a Status negativos] por 1 rodada e absorve até 20 pontos de Chakra de cada alvo.",
+          "translation": "[连击达到20时触发]，对7名随机敌人造成伤害和持续1回合的[负面状态免疫压制]，并从每个目标吸收最多20点查克拉。"
+        }
+      },
+      "385": {
+        "keys": {
+          "source": "Estilo Madeira: Jutsu Cortante",
+          "translation": "木遁·扦插之术"
+        },
+        "desc": {
+          "source": "Persegue inimigos com [Flutuação], causando [Queda] e [Imobilidade], além de causar dano e [Marca Kamui] aos demais alvos na mesma linha. O efeito pode ser ativado até 2 vezes por turno e ignora parte da [Defesa] e [Resistência].",
+          "translation": "追打[浮空]敌人，造成[倒地]和[定身]，并对同一横排的其他目标造成伤害和[神威标记]。每回合最多触发2次，无视部分[防御]和[抗性]。"
+        }
+      },
+      "386": {
+        "keys": {
+          "source": "Violência",
+          "translation": "暴怒"
+        },
+        "desc": {
+          "source": "Exclusivo para Obito Uchiha [Violência]: neste status, ao causar dano, recupera [12%] da vida própria. O dano de todas as habilidades será aumentado. Ao derrotar um inimigo com um ataque comum, Obito ganha 1 ataque comum adicional.",
+          "translation": "宇智波带土【暴怒】专属：此状态下，每次造成伤害时恢复自身[12%]生命，所有技能伤害提高。使用普攻击败敌人时，额外获得1次普攻机会。"
+        }
+      },
+      "387": {
+        "keys": {
+          "source": "Violência",
+          "translation": "暴怒"
+        },
+        "desc": {
+          "source": "Exclusivo para Obito Uchiha [Violência]: neste status, ao causar dano, recupera [12%] da vida. Toda a habilidade [sempre acerta] e tem o dano aumentado. Ao derrotar um inimigo com um ataque comum, Obito ganha 1 ataque comum adicional. Além disso, cada uso de uma habilidade (exceto [Kamui: Transferência do Vazio], [Estilo Madeira: Lança Explosiva] e [Super: Estilo Madeira: Lança Explosiva]) concede 1/2 [Ponto de Habilidade], até o limite máximo de [3]. Ao atingir o limite, todo o [Ponto de Habilidade] será consumido para desencadear automaticamente [Super: Estilo Madeira: Lança Explosiva].",
+          "translation": "宇智波带土【暴怒】专属：此状态下，每次造成伤害时恢复自身[12%]生命，所有技能[必定命中]且伤害提高。使用普攻击败敌人时，额外获得1次普攻机会。此外，每次使用技能（[神威·虚化转移]、[木遁·爆枪]和[超·木遁·爆枪]除外）获得1/2个[技能点]，上限[3]点。达到上限时消耗全部[技能点]，自动触发[超·木遁·爆枪]。"
+        }
+      },
+      "388": {
+        "keys": {
+          "source": "Violência",
+          "translation": "暴怒"
+        },
+        "desc": {
+          "source": "Exclusivo para Obito Uchiha [Violência]: neste status, ao causar dano, recupera [12%] da vida. Toda a habilidade [sempre acerta] e tem o dano aumentado. Ao derrotar um inimigo com um ataque comum, Obito ganha 1 ataque comum adicional. Além disso, cada uso de uma habilidade (exceto [Kamui: Transferência do Vazio], [Estilo Madeira: Lança Explosiva] e [Super: Estilo Madeira: Lança Explosiva]) concede 1/2 [Ponto de Habilidade], até o limite máximo de [3]. Ao atingir o limite, todo o [Ponto de Habilidade] será consumido para desencadear automaticamente [Super: Estilo Madeira: Lança Explosiva].",
+          "translation": "宇智波带土【暴怒】专属：此状态下，每次造成伤害时恢复自身[12%]生命，所有技能[必定命中]且伤害提高。使用普攻击败敌人时，额外获得1次普攻机会。此外，每次使用技能（[神威·虚化转移]、[木遁·爆枪]和[超·木遁·爆枪]除外）获得1/2个[技能点]，上限[3]点。达到上限时消耗全部[技能点]，自动触发[超·木遁·爆枪]。"
+        }
+      },
+      "389": {
+        "keys": {
+          "source": "Estilo Madeira: Lança Explosiva",
+          "translation": "木遁·爆枪"
+        },
+        "desc": {
+          "source": "(Resfriamento Inicial [0 rodada] / Resfriamento da Esotérica [0 rodada] / Chakra: [20]) Causa dano de [Terra] e [Água] a todas as equipes inimigas e o alvo selecionado sofre [Supressão de Imunidade a Perseguição] (o efeito dura até o final da rodada) e [Flutuação]. Depois, aumenta em [40%] o dano das habilidades de [Perseguição]. (O efeito dura até o final da rodada e não acumula).",
+          "translation": "（进场冷却：[0回合]／奥义冷却：[0回合]／查克拉：[20]）对敌方所有小队造成[土]、[水]属性伤害，并对选定目标造成持续至本回合结束的[追打免疫压制]和[浮空]。随后自身[追打]技能伤害提高[40%]，持续至回合结束，不叠加。"
+        }
+      },
+      "390": {
+        "keys": {
+          "source": "Estilo Madeira: Lança Explosiva",
+          "translation": "木遁·爆枪"
+        },
+        "desc": {
+          "source": "(Resfriamento Inicial [0 rodada] / Resfriamento da Esotérica [0 rodada] / Chakra: [20]) Causa dano de [Terra] e [Água] a todas as equipes inimigas e o alvo selecionado sofre [Supressão de Imunidade a Perseguição] (o efeito dura até o final da rodada) e [Flutuação]. Depois, aumenta em [40%] o dano das habilidades de [Perseguição]. (O efeito dura até o final da rodada e não acumula).",
+          "translation": "（进场冷却：[0回合]／奥义冷却：[0回合]／查克拉：[20]）对敌方所有小队造成[土]、[水]属性伤害，并对选定目标造成持续至本回合结束的[追打免疫压制]和[浮空]。随后自身[追打]技能伤害提高[40%]，持续至回合结束，不叠加。"
+        }
+      },
+      "391": {
+        "keys": {
+          "source": "Kamui: Chute Descendente",
+          "translation": "神威·下踢"
+        },
+        "desc": {
+          "source": "Ataca [ninjas] inimigos, com grande chance de causar [Queda] e [Marca Kamui]. Esta habilidade ignora [Defesa], Zoação e Provocação.",
+          "translation": "攻击敌方[忍者]，有较高概率造成[倒地]和[神威标记]。本技能无视[防御]、嘲讽与挑衅。"
+        }
+      },
+      "392": {
+        "keys": {
+          "source": "Kamui: Chute Descendente",
+          "translation": "神威·下踢"
+        },
+        "desc": {
+          "source": "Ataca [ninjas] inimigos, com grande chance de causar [Queda] e [Marca Kamui]. Esta habilidade ignora [Defesa], Zoação e Provocação.",
+          "translation": "攻击敌方[忍者]，有较高概率造成[倒地]和[神威标记]。本技能无视[防御]、嘲讽与挑衅。"
+        }
+      },
+      "393": {
+        "keys": {
+          "source": "Estilo Madeira: Caos Infernal",
+          "translation": "木遁·地狱之乱"
+        },
+        "desc": {
+          "source": "[Lançado com combo de 15], causa dano e [Terror] (Não pode receber imunidade nem dispersão até o fim da rodada. Dispersado caso lance uma Esotérica) a 7 inimigos aleatórios e absorve até [20] pontos de Chakra de cada alvo. Esta habilidade tem bônus de [Critico].",
+          "translation": "[连击达到15时触发]，对7名随机敌人造成伤害和[恐惧]（无法免疫或驱散，持续至回合结束；释放奥义时解除），并从每个目标吸收最多[20]点查克拉。本技能拥有额外[暴击]加成。"
+        }
+      },
+      "394": {
+        "keys": {
+          "source": "Estilo Madeira: Caos Infernal",
+          "translation": "木遁·地狱之乱"
+        },
+        "desc": {
+          "source": "[Lançado com combo de 15], causa dano e [Terror] (Não pode receber imunidade nem dispersão até o fim da rodada. Dispersado caso lance uma Esotérica) a 7 inimigos aleatórios e absorve até [20] pontos de Chakra de cada alvo. Esta habilidade tem bônus de [Critico].",
+          "translation": "[连击达到15时触发]，对7名随机敌人造成伤害和[恐惧]（无法免疫或驱散，持续至回合结束；释放奥义时解除），并从每个目标吸收最多[20]点查克拉。本技能拥有额外[暴击]加成。"
+        }
+      },
+      "395": {
+        "keys": {
+          "source": "Estilo Madeira: Jutsu Cortante",
+          "translation": "木遁·扦插之术"
+        },
+        "desc": {
+          "source": "Persegue inimigos com [Flutuação] e [Voo], causando [Supressão de Imunidade a Status negativos] até o fim da rodada, [Queda] e [Imobilidade], além de causar dano e [Marca Kamui] aos demais alvos na mesma linha. O efeito pode ser ativado até 2 vezes por turno, ignora parte da [Defesa] e [Resistência].",
+          "translation": "追打[浮空]和[高浮空]敌人，造成持续至回合结束的[负面状态免疫压制]、[倒地]和[定身]，并对同一横排的其他目标造成伤害和[神威标记]。每回合最多触发2次，无视部分[防御]和[抗性]。"
+        }
+      },
+      "396": {
+        "keys": {
+          "source": "Estilo Madeira: Jutsu Cortante",
+          "translation": "木遁·扦插之术"
+        },
+        "desc": {
+          "source": "Persegue inimigos com [Flutuação] e [Voo], causando [Supressão de Imunidade a Status negativos] até o fim da rodada, [Queda] e [Imobilidade], além de causar dano e [Marca Kamui] aos demais alvos na mesma linha. O efeito pode ser ativado até 2 vezes por turno, ignora parte da [Defesa] e [Resistência].",
+          "translation": "追打[浮空]和[高浮空]敌人，造成持续至回合结束的[负面状态免疫压制]、[倒地]和[定身]，并对同一横排的其他目标造成伤害和[神威标记]。每回合最多触发2次，无视部分[防御]和[抗性]。"
+        }
+      },
+      "397": {
+        "keys": {
+          "source": "Kamui: Transferência do Vazio",
+          "translation": "神威·虚化转移"
+        },
+        "desc": {
+          "source": "No início de cada rodada, Dispersa 1 de seus próprios [Status negativos], tem chance altíssima de Esquiva contra os primeiros 2 ataques da rodada e, ao causar dano, ganha [25%] de [Ataque] e recupera [6%] de Vida. Para cada 1 inimigo com [Marca Kamui], Obito ganha 2 Ataques Comuns extras (máx. 6). Esta habilidade é válida mesmo quando vítima de Controle.",
+          "translation": "每回合开始时，驱散自身1个[负面状态]，以极高概率闪避本回合前2次攻击。每次造成伤害时，[攻击]提高[25%]并恢复[6%]生命。每有1名敌人带有[神威标记]，带土额外获得2次普攻机会，最多6次。被控制时本技能仍有效。"
+        }
+      },
+      "398": {
+        "keys": {
+          "source": "Kamui: Transferência do Vazio",
+          "translation": "神威·虚化转移"
+        },
+        "desc": {
+          "source": "No início de cada rodada, Dispersa 1 de seus próprios [Status negativos], tem chance altíssima de Esquiva contra os primeiros 2 ataques da rodada e, ao causar dano, ganha [25%] de [Ataque] e recupera [6%] de Vida. Para cada 1 inimigo com [Marca Kamui], Obito ganha 2 Ataques Comuns extras (máx. 6). Esta habilidade é válida mesmo quando vítima de Controle.",
+          "translation": "每回合开始时，驱散自身1个[负面状态]，以极高概率闪避本回合前2次攻击。每次造成伤害时，[攻击]提高[25%]并恢复[6%]生命。每有1名敌人带有[神威标记]，带土额外获得2次普攻机会，最多6次。被控制时本技能仍有效。"
+        }
+      },
+      "399": {
+        "keys": {
+          "source": "Super: Estilo Madeira: Lança Explosiva",
+          "translation": "超·木遁·爆枪"
+        },
+        "desc": {
+          "source": "Causa dano de Terra e Água e [Supressão de Imunidade a Perseguição] até o fim da rodada à toda a equipe inimiga, além de [Flutuação] a 1 inimigos. Após isso, o dano de sua Perseguição aumenta [40%] até o fim da rodada (não pode acumular). Esta habilidade tem bônus de [Critico].",
+          "translation": "对敌方全队造成土、水属性伤害和持续至回合结束的[追打免疫压制]，并使1名敌人[浮空]。随后自身追打伤害提高[40%]，持续至回合结束，不叠加。本技能拥有额外[暴击]加成。"
+        }
+      },
+      "400": {
+        "keys": {
+          "source": "Super: Estilo Madeira: Lança Explosiva",
+          "translation": "超·木遁·爆枪"
+        },
+        "desc": {
+          "source": "Causa dano de Terra e Água e [Supressão de Imunidade a Perseguição] até o fim da rodada à toda a equipe inimiga, além de [Flutuação] a 1 inimigos. Após isso, o dano de sua Perseguição aumenta [40%] até o fim da rodada (não pode acumular). Esta habilidade tem bônus de [Critico].",
+          "translation": "对敌方全队造成土、水属性伤害和持续至回合结束的[追打免疫压制]，并使1名敌人[浮空]。随后自身追打伤害提高[40%]，持续至回合结束，不叠加。本技能拥有额外[暴击]加成。"
+        }
+      }
+    }
+  }
+}

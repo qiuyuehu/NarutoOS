@@ -1,0 +1,419 @@
+{
+  "id": "naruto-ninja-target-12-zh-CN-v1",
+  "rootId": "11002441",
+  "ninjaInfo": {
+    "class": "NinjaInfoCFG",
+    "rows": {
+      "11002441": {
+        "name": {
+          "source": "Hiruzen Sarutobi",
+          "translation": "猿飞日斩"
+        },
+        "title": {
+          "source": "[Ano novo]",
+          "translation": "【新年】"
+        }
+      }
+    }
+  },
+  "skills": {
+    "class": "SkillCFG",
+    "rows": {
+      "21002441": {
+        "name": {
+          "source": "Bastão Adamantino: Varredura",
+          "translation": "金刚如意棒·横扫"
+        },
+        "desc": {
+          "source": "Ataca uma linha vertical aleatória de inimigos, causando dano de Taijutsu, com grande chance de causar <font color=\"#4dc831\">Repelimento</font> a 1 alvo aleatório. O dano de habilidade em ninjas com <font color=\"#4dc831\">Imunidade a Perseguição</font> aumenta em <font color=\"#4dc831\">30%</font>.",
+          "translation": "随机攻击敌方一纵排，造成体术伤害，有较高概率使1名随机目标击退。对免疫追打的忍者，技能伤害提高30%。"
+        }
+      },
+      "21002442": {
+        "name": {
+          "source": "Bastão Adamantino: Varredura",
+          "translation": "金刚如意棒·横扫"
+        },
+        "desc": {
+          "source": "Ataca uma linha vertical aleatória de inimigos, causando dano de Taijutsu, com grande chance de causar <font color=\"#4dc831\">Repelimento</font> a 1 alvo aleatório. O dano de habilidade em ninjas com <font color=\"#4dc831\">Imunidade a Perseguição</font> aumenta em <font color=\"#4dc831\">30%</font>.",
+          "translation": "随机攻击敌方一纵排，造成体术伤害，有较高概率使1名随机目标击退。对免疫追打的忍者，技能伤害提高30%。"
+        }
+      },
+      "21002443": {
+        "name": {
+          "source": "Bastão Adamantino: Varredura",
+          "translation": "金刚如意棒·横扫"
+        },
+        "desc": {
+          "source": "Ataca uma linha vertical aleatória de inimigos, causando dano de Taijutsu, com grande chance de causar <font color=\"#4dc831\">Repelimento</font> a 1 alvo aleatório. O dano de habilidade em ninjas com <font color=\"#4dc831\">Imunidade a Perseguição</font> aumenta em <font color=\"#4dc831\">30%</font>.",
+          "translation": "随机攻击敌方一纵排，造成体术伤害，有较高概率使1名随机目标击退。对免疫追打的忍者，技能伤害提高30%。"
+        }
+      },
+      "21002444": {
+        "name": {
+          "source": "Jutsu de Invocação: Enma",
+          "translation": "通灵之术·猿魔"
+        },
+        "desc": {
+          "source": "Persegue inimigos com <font color=\"#4dc831\">Flutuação</font> e causa <font color=\"#4dc831\">Repelimento</font>. Esta habilidade ignora parte da <font color=\"#4dc831\">Defesa</font>, podendo ser lançada até 2 vezes por rodada. Se o alvo tiver um escudo, o dano aumenta em <font color=\"#4dc831\">100%</font>.",
+          "translation": "追打浮空敌人，造成击退，无视部分防御，每回合最多触发2次。若目标带有护盾，伤害提高100%。"
+        }
+      },
+      "21002445": {
+        "name": {
+          "source": "Professor de Ninjutsu",
+          "translation": "忍术教授"
+        },
+        "desc": {
+          "source": "No início de cada rodada, deixa 2 ninjas aliados aleatórios ganharem <font color=\"#4dc831\">15%</font> de <font color=\"#4dc831\">Ninjutsu</font> ao causarem dano de <font color=\"#4dc831\">Ninjutsu</font> durante a rodada. Após o uso, reduz o próprio <font color=\"#4dc831\">Consumo de Chakra Esotérica</font> em 10 pontos (até um máximo de 40 pontos).",
+          "translation": "每回合开始时，随机使己方2名忍者在本回合造成忍术伤害时，忍术提高15%。使用后，自身奥义查克拉消耗降低10点，最多降低40点。"
+        }
+      },
+      "21002446": {
+        "name": {
+          "source": "O Mais Forte dos Guerreiros",
+          "translation": "最强武者"
+        },
+        "desc": {
+          "source": "Após ser atacado pela primeira vez em cada rodada, Hiruzen ganha <font color=\"#4dc831\">Imunidade a Perseguição</font>, e após ser atacado pela segunda vez, <font color=\"#4dc831\">Imunidade a Status negativos</font>, e após ser atacado pela terceira vez, aumenta a sua <font color=\"#4dc831\">Defesa</font> e <font color=\"#4dc831\">Resistência</font> em <font color=\"#4dc831\">60%</font>. O status obtido por esta habilidade dura até o final da rodada.",
+          "translation": "每回合首次受到攻击后，获得追打免疫；第2次受到攻击后，获得负面状态免疫；第3次受到攻击后，防御和抗性提高60%。本技能获得的状态均持续至回合结束。"
+        }
+      },
+      "21002447": {
+        "name": {
+          "source": "Combinação: Bomba do Dragão da Trovoada",
+          "translation": "组合忍术·雷龙弹"
+        },
+        "desc": {
+          "source": "Causa dano de Ninjutsu de <font color=\"#4dc831\">Relâmpago</font> e <font color=\"#4dc831\">Água</font> a 9 inimigos <font color=\"#4dc831\">combo de 3</font>, e reduz a <font color=\"#4dc831\">Resistência</font> em <font color=\"#4dc831\">20%</font> (pode acumular), além disso causa <font color=\"#4dc831\">Interrupção</font> ao inimigo selecionado e aumenta o <font color=\"#4dc831\">Resfriamento da Esotérica</font> em 1 rodada. Esta habilidade <font color=\"#4dc831\">sempre acerta</font> e é usada com <font color=\"#4dc831\">Combinação: Vento do Dragão de Fogo</font>.",
+          "translation": "对9名敌人造成雷、水属性忍术伤害和3连击，使其抗性降低20%（可叠加），并对选定目标造成打断和奥义冷却增加1回合。本技能必定命中，与组合忍术·火龙风交替使用。"
+        }
+      },
+      "21002449": {
+        "name": {
+          "source": "O Mais Forte dos Guerreiros",
+          "translation": "最强武者"
+        },
+        "desc": {
+          "source": "Usado para ocupar habilidade vazia",
+          "translation": "空技能占位。"
+        }
+      },
+      "21202441": {
+        "name": {
+          "source": "Bastão Adamantino: Varredura",
+          "translation": "金刚如意棒·横扫"
+        },
+        "desc": {
+          "source": "Ataca uma linha vertical aleatória de inimigos, causando dano de Taijutsu, com grande chance de causar <font color=\"#4dc831\">Repelimento</font> a 1 alvo aleatório. O dano de habilidade em ninjas com <font color=\"#4dc831\">Imunidade a Perseguição</font> aumenta em <font color=\"#4dc831\">45%</font>.",
+          "translation": "随机攻击敌方一纵排，造成体术伤害，有较高概率使1名随机目标击退。对免疫追打的忍者，技能伤害提高45%。"
+        }
+      },
+      "21202442": {
+        "name": {
+          "source": "Bastão Adamantino: Varredura",
+          "translation": "金刚如意棒·横扫"
+        },
+        "desc": {
+          "source": "Ataca uma linha vertical aleatória de inimigos, causando dano de Taijutsu, com grande chance de causar <font color=\"#4dc831\">Repelimento</font> a 1 alvo aleatório. O dano de habilidade em ninjas com <font color=\"#4dc831\">Imunidade a Perseguição</font> aumenta em <font color=\"#4dc831\">45%</font>.",
+          "translation": "随机攻击敌方一纵排，造成体术伤害，有较高概率使1名随机目标击退。对免疫追打的忍者，技能伤害提高45%。"
+        }
+      },
+      "21202443": {
+        "name": {
+          "source": "Bastão Adamantino: Varredura",
+          "translation": "金刚如意棒·横扫"
+        },
+        "desc": {
+          "source": "Ataca uma linha vertical aleatória de inimigos, causando dano de Taijutsu, com grande chance de causar <font color=\"#4dc831\">Repelimento</font> a 1 alvo aleatório. O dano de habilidade em ninjas com <font color=\"#4dc831\">Imunidade a Perseguição</font> aumenta em <font color=\"#4dc831\">45%</font>.",
+          "translation": "随机攻击敌方一纵排，造成体术伤害，有较高概率使1名随机目标击退。对免疫追打的忍者，技能伤害提高45%。"
+        }
+      },
+      "21202445": {
+        "name": {
+          "source": "Professor de Ninjutsu",
+          "translation": "忍术教授"
+        },
+        "desc": {
+          "source": "No início de cada rodada, deixa 3 ninjas aliados aleatórios ganharem <font color=\"#4dc831\">15%</font> de <font color=\"#4dc831\">Ninjutsu</font> ao causarem dano de <font color=\"#4dc831\">Ninjutsu</font> durante a rodada. Após o uso, reduz o próprio <font color=\"#4dc831\">Consumo de Chakra Esotérica</font> em 10 pontos (até um máximo de 40 pontos).",
+          "translation": "每回合开始时，随机使己方3名忍者在本回合造成忍术伤害时，忍术提高15%。使用后，自身奥义查克拉消耗降低10点，最多降低40点。"
+        }
+      },
+      "21202446": {
+        "name": {
+          "source": "O Mais Forte dos Guerreiros",
+          "translation": "最强武者"
+        },
+        "desc": {
+          "source": "Hiruzen entra em status de <font color=\"#4dc831\">Violência</font> ao sofrer o primeiro ataque em cada rodada.",
+          "translation": "每回合首次受到攻击时，日斩进入暴怒状态。"
+        }
+      },
+      "21202447": {
+        "name": {
+          "source": "Combinação: Bomba do Dragão da Trovoada",
+          "translation": "组合忍术·雷龙弹"
+        },
+        "desc": {
+          "source": "Causa dano de Ninjutsu de <font color=\"#4dc831\">Relâmpago</font> e <font color=\"#4dc831\">Água</font> a 12 inimigos com <font color=\"#4dc831\">combo de 3</font>, e reduz a <font color=\"#4dc831\">Resistência</font> em <font color=\"#4dc831\">20%</font> (pode acumular), além disso causa <font color=\"#4dc831\">Interrupção</font> ao inimigo selecionado e aumenta o <font color=\"#4dc831\">Resfriamento da Esotérica</font> em 1 rodada. Esta habilidade <font color=\"#4dc831\">sempre acerta</font> e é usada com <font color=\"#4dc831\">Combinação: Vento do Dragão de Fogo +1</font>.",
+          "translation": "对12名敌人造成雷、水属性忍术伤害和3连击，使其抗性降低20%（可叠加），并对选定目标造成打断和奥义冷却增加1回合。本技能必定命中，与组合忍术·火龙风+1交替使用。"
+        }
+      },
+      "21202449": {
+        "name": {
+          "source": "O Mais Forte dos Guerreiros",
+          "translation": "最强武者"
+        },
+        "desc": {
+          "source": "Usado para ocupar habilidade vazia",
+          "translation": "空技能占位。"
+        }
+      },
+      "21302441": {
+        "name": {
+          "source": "Bastão Adamantino: Varredura",
+          "translation": "金刚如意棒·横扫"
+        },
+        "desc": {
+          "source": "Ataca uma linha vertical aleatória de inimigos, causando dano de Taijutsu, com grande chance de causar <font color=\"#4dc831\">Repelimento</font> a 1 alvo aleatório. O dano de habilidade em ninjas com <font color=\"#4dc831\">Imunidade a Perseguição</font> aumenta em <font color=\"#4dc831\">60%</font>.",
+          "translation": "随机攻击敌方一纵排，造成体术伤害，有较高概率使1名随机目标击退。对免疫追打的忍者，技能伤害提高60%。"
+        }
+      },
+      "21302442": {
+        "name": {
+          "source": "Bastão Adamantino: Varredura",
+          "translation": "金刚如意棒·横扫"
+        },
+        "desc": {
+          "source": "Ataca uma linha vertical aleatória de inimigos, causando dano de Taijutsu, com grande chance de causar <font color=\"#4dc831\">Repelimento</font> a 1 alvo aleatório. O dano de habilidade em ninjas com <font color=\"#4dc831\">Imunidade a Perseguição</font> aumenta em <font color=\"#4dc831\">60%</font>.",
+          "translation": "随机攻击敌方一纵排，造成体术伤害，有较高概率使1名随机目标击退。对免疫追打的忍者，技能伤害提高60%。"
+        }
+      },
+      "21302443": {
+        "name": {
+          "source": "Bastão Adamantino: Varredura",
+          "translation": "金刚如意棒·横扫"
+        },
+        "desc": {
+          "source": "Ataca uma linha vertical aleatória de inimigos, causando dano de Taijutsu, com grande chance de causar <font color=\"#4dc831\">Repelimento</font> a 1 alvo aleatório. O dano de habilidade em ninjas com <font color=\"#4dc831\">Imunidade a Perseguição</font> aumenta em <font color=\"#4dc831\">60%</font>.",
+          "translation": "随机攻击敌方一纵排，造成体术伤害，有较高概率使1名随机目标击退。对免疫追打的忍者，技能伤害提高60%。"
+        }
+      },
+      "21302444": {
+        "name": {
+          "source": "Jutsu de Invocação: Enma",
+          "translation": "通灵之术·猿魔"
+        },
+        "desc": {
+          "source": "Persegue inimigos com <font color=\"#4dc831\">Flutuação</font> e causa <font color=\"#4dc831\">Repelimento</font>, além de infligir dano aos inimigos da mesma linha horizontal. Esta habilidade ignora parte da <font color=\"#4dc831\">Defesa</font>, podendo ser lançada até 2 vezes por rodada. Se o alvo tiver um escudo, o dano aumenta em <font color=\"#4dc831\">100%</font>.",
+          "translation": "追打浮空敌人，造成击退，并对同一横排敌人造成伤害。本技能无视部分防御，每回合最多触发2次。若目标带有护盾，伤害提高100%。"
+        }
+      },
+      "21302445": {
+        "name": {
+          "source": "Professor de Ninjutsu",
+          "translation": "忍术教授"
+        },
+        "desc": {
+          "source": "No início de cada rodada, deixa 3 ninjas aliados aleatórios ganharem <font color=\"#4dc831\">15%</font> de <font color=\"#4dc831\">Ninjutsu</font> ao causarem dano de <font color=\"#4dc831\">Ninjutsu</font> durante a rodada. Ao mesmo tempo, causa <font color=\"#4dc831\">20%</font> a mais de dano em ninjas com <font color=\"#4dc831\">Imunidade a Status negativos</font> durante a rodada. Após o uso, reduz o próprio <font color=\"#4dc831\">Consumo de Chakra Esotérica</font> em 10 pontos (até um máximo de 40 pontos).",
+          "translation": "每回合开始时，随机使己方3名忍者在本回合造成忍术伤害时，忍术提高15%，且对免疫负面状态的忍者造成的伤害提高20%。使用后，自身奥义查克拉消耗降低10点，最多降低40点。"
+        }
+      },
+      "21302446": {
+        "name": {
+          "source": "O Mais Forte dos Guerreiros",
+          "translation": "最强武者"
+        },
+        "desc": {
+          "source": "Hiruzen entra em status de <font color=\"#4dc831\">Violência</font> ao sofrer o primeiro ataque em cada rodada. Além disso, enquanto Hiruzen estiver vivo, a equipe aliada sofre <font color=\"#4dc831\">50%</font> a menos de dano da primeira habilidade de tipo <font color=\"#4dc831\">gatilho</font> na rodada.",
+          "translation": "每回合首次受到攻击时，日斩进入暴怒状态。此外，日斩存活时，己方小队本回合受到的首次触发型技能伤害降低50%。"
+        }
+      },
+      "21302447": {
+        "name": {
+          "source": "Combinação: Bomba do Dragão da Trovoada",
+          "translation": "组合忍术·雷龙弹"
+        },
+        "desc": {
+          "source": "Causa dano de Ninjutsu de <font color=\"#4dc831\">Relâmpago</font> e <font color=\"#4dc831\">Água</font> a 12 inimigos com <font color=\"#4dc831\">combo de 3</font>, e reduz a <font color=\"#4dc831\">Resistência</font> em <font color=\"#4dc831\">20%</font> (pode acumular), além disso causa <font color=\"#4dc831\">Interrupção</font> ao inimigo selecionado e aumenta o <font color=\"#4dc831\">Resfriamento da Esotérica</font> em 1 rodada. Esta habilidade <font color=\"#4dc831\">sempre acerta</font> e é usada com <font color=\"#4dc831\">Combinação: Vento do Dragão de Fogo +2</font>.",
+          "translation": "对12名敌人造成雷、水属性忍术伤害和3连击，使其抗性降低20%（可叠加），并对选定目标造成打断和奥义冷却增加1回合。本技能必定命中，与组合忍术·火龙风+2交替使用。"
+        }
+      },
+      "21302449": {
+        "name": {
+          "source": "O Mais Forte dos Guerreiros",
+          "translation": "最强武者"
+        },
+        "desc": {
+          "source": "Enquanto Hiruzen estiver vivo, a equipe aliada sofre <font color=\"#4dc831\">50%</font> a menos de dano da primeira habilidade de tipo <font color=\"#4dc831\">gatilho</font> na rodada.",
+          "translation": "日斩存活时，己方小队本回合受到的首次触发型技能伤害降低50%。"
+        }
+      },
+      "21402441": {
+        "name": {
+          "source": "Bastão Adamantino: Varredura",
+          "translation": "金刚如意棒·横扫"
+        },
+        "desc": {
+          "source": "Ataca uma linha vertical aleatória de inimigos, causando dano que <font color=\"#4dc831\">sempre acerta</font>, com certa chance de causar <font color=\"#4dc831\">Repelimento</font> a 1 alvo aleatório. Ademais, ganha 1 chance extra de ataque comum (até 5 vezes por rodada).",
+          "translation": "随机攻击敌方一纵排，造成必定命中的伤害，有一定概率使1名随机目标击退。此外，额外获得1次普攻机会，每回合最多5次。"
+        }
+      },
+      "21402442": {
+        "name": {
+          "source": "Bastão Adamantino: Varredura",
+          "translation": "金刚如意棒·横扫"
+        },
+        "desc": {
+          "source": "Ataca uma linha vertical aleatória de inimigos, causando dano que <font color=\"#4dc831\">sempre acerta</font>, com certa chance de causar <font color=\"#4dc831\">Repelimento</font> a 1 alvo aleatório. Ademais, ganha 1 chance extra de ataque comum (até 5 vezes por rodada).",
+          "translation": "随机攻击敌方一纵排，造成必定命中的伤害，有一定概率使1名随机目标击退。此外，额外获得1次普攻机会，每回合最多5次。"
+        }
+      },
+      "21402443": {
+        "name": {
+          "source": "Bastão Adamantino: Varredura",
+          "translation": "金刚如意棒·横扫"
+        },
+        "desc": {
+          "source": "Ataca uma linha vertical aleatória de inimigos, causando dano que <font color=\"#4dc831\">sempre acerta</font>, com certa chance de causar <font color=\"#4dc831\">Repelimento</font> a 1 alvo aleatório. Ademais, ganha 1 chance extra de ataque comum (até 5 vezes por rodada).",
+          "translation": "随机攻击敌方一纵排，造成必定命中的伤害，有一定概率使1名随机目标击退。此外，额外获得1次普攻机会，每回合最多5次。"
+        }
+      },
+      "21402445": {
+        "name": {
+          "source": "Professor de Ninjutsu",
+          "translation": "忍术教授"
+        },
+        "desc": {
+          "source": "Após um ninja aliado usar habilidade <font color=\"#4dc831\">Esotérica</font>, a habilidade de <font color=\"#4dc831\">Perseguição</font> do próprio usuário <font color=\"#4dc831\">sempre acerta</font> na rodada e os <font color=\"#4dc831\">3</font> primeiros danos de puro <font color=\"#4dc831\">Ninjutsu</font> recebidos por todos os membros da equipe aliada durante a rodada não serão fatais.",
+          "translation": "己方忍者使用奥义后，自身追打技能本回合必定命中，且己方全队本回合受到的前3次纯忍术伤害无法将其击败。"
+        }
+      },
+      "21402446": {
+        "name": {
+          "source": "O Mais Forte dos Guerreiros",
+          "translation": "最强武者"
+        },
+        "desc": {
+          "source": "A cada uso de habilidade <font color=\"#4dc831\">Esotérica</font> por um ninja aliado, Hiruzen recupera <font color=\"#4dc831\">10%</font> de Vida e ganha <font color=\"#4dc831\">8%</font> de <font color=\"#4dc831\">Crítico</font> (até 5 vezes por rodada). Além disso, enquanto Hiruzen estiver vivo, ao sofrer o primeiro ataque na rodada, o ninja aliado entra em <font color=\"#4dc831\">Violência</font>.",
+          "translation": "己方忍者每次使用奥义时，日斩恢复10%生命并提高8%暴击率，每回合最多5次。此外，日斩存活时，己方忍者本回合首次受到攻击时进入暴怒状态。"
+        }
+      },
+      "21402447": {
+        "name": {
+          "source": "Combinação: Bomba do Dragão da Trovoada",
+          "translation": "组合忍术·雷龙弹"
+        },
+        "desc": {
+          "source": "Causa dano de Ninjutsu de <font color=\"#4dc831\">Relâmpago</font> e <font color=\"#4dc831\">Água</font> a 7 inimigos com <font color=\"#4dc831\">combo de 3</font>, e reduz a <font color=\"#4dc831\">Resistência</font> em <font color=\"#4dc831\">20%</font> (pode acumular) e causa <font color=\"#4dc831\">Choque Elétrico</font>, aplicando <font color=\"#4dc831\">Interrupção</font> ao inimigo selecionado. Esta habilidade <font color=\"#4dc831\">sempre acerta</font> e é usada com <font color=\"#4dc831\">Combinação: Vento do Dragão de Fogo Y</font>.",
+          "translation": "对7名敌人造成雷、水属性忍术伤害和3连击，抗性降低20%（可叠加），并造成电击；对选定目标造成打断。本技能必定命中，与组合忍术·火龙风·Y交替使用。"
+        }
+      },
+      "21402449": {
+        "name": {
+          "source": "O Mais Forte dos Guerreiros",
+          "translation": "最强武者"
+        },
+        "desc": {
+          "source": "A cada uso de habilidade <font color=\"#4dc831\">Esotérica</font> por um ninja aliado, Hiruzen recupera <font color=\"#4dc831\">10%</font> de vida e ganha <font color=\"#4dc831\">8%</font> de <font color=\"#4dc831\">Crítico</font> (até <font color=\"#4dc831\">40%</font> por rodada). Além disso, enquanto Hiruzen estiver vivo, ao sofrer o primeiro ataque na rodada, o ninja aliado entra em status de <font color=\"#4dc831\">Violência</font>.",
+          "translation": "己方忍者每次使用奥义时，日斩恢复10%生命并提高8%暴击率，每回合最多提高40%。此外，日斩存活时，己方忍者本回合首次受到攻击时进入暴怒状态。"
+        }
+      },
+      "21502444": {
+        "name": {
+          "source": "Jutsu de Invocação: Enma",
+          "translation": "通灵之术·猿魔"
+        },
+        "desc": {
+          "source": "Persegue inimigos com <font color=\"#4dc831\">Flutuação</font> e causa <font color=\"#4dc831\">Repelimento</font>, além de infligir dano aos inimigos da mesma linha horizontal. Esta habilidade ignora parte da <font color=\"#4dc831\">Defesa</font>, podendo ser lançada até 2 vezes por rodada. Se o alvo atingido estiver com um escudo, remove seu <font color=\"#4dc831\">Escudo</font> e <font color=\"#4dc831\">status positivos</font>, e aumenta o dano em <font color=\"#4dc831\">100%</font>.",
+          "translation": "追打浮空敌人，造成击退，并对同一横排敌人造成伤害。本技能无视部分防御，每回合最多触发2次。若目标带有护盾，移除其护盾和增益状态，伤害提高100%。"
+        }
+      },
+      "21702444": {
+        "name": {
+          "source": "Jutsu de Invocação: Enma",
+          "translation": "通灵之术·猿魔"
+        },
+        "desc": {
+          "source": "Persegue inimigos com <font color=\"#4dc831\">Flutuação</font> e causa <font color=\"#4dc831\">Repelimento</font>, adquirindo todas as chances de ataque comum do alvo. Após o uso, reduz o próprio <font color=\"#4dc831\">Resfriamento da Esotérica</font> em 1 rodada.",
+          "translation": "追打浮空敌人，造成击退，并夺取目标全部普攻次数。使用后，自身奥义冷却减少1回合。"
+        }
+      }
+    }
+  },
+  "skillDetails": {
+    "class": "SkillKeyDescCFG",
+    "rows": {
+      "549": {
+        "keys": {
+          "source": "Vento do Dragão de Fogo",
+          "translation": "火龙风"
+        },
+        "desc": {
+          "source": "Causa dano de Ninjutsu de [Vento] e [Fogo] à equipe inimiga com [combo de 4], reduz o [Crítico] em [15%] (pode acumular) e causa [Repelimento] adicional ao inimigo selecionado. Essa habilidade [sempre acerta] e é usada com [Combinação: Bomba do Dragão da Trovoada].",
+          "translation": "对敌方小队造成[风]、[火]属性忍术伤害和[4连击]，使其[暴击]率降低[15%]（可叠加），并额外使选定目标[击退]。本技能[必定命中]，与[组合忍术·雷龙弹]交替使用。"
+        }
+      },
+      "550": {
+        "keys": {
+          "source": "Vento do Dragão de Fogo +1",
+          "translation": "火龙风+1"
+        },
+        "desc": {
+          "source": "Causa dano de Ninjutsu de [Vento] e [Fogo] à equipe inimiga com [combo de 4], reduz o [Crítico] em [15%] (pode acumular) e causa [Repelimento] adicional ao inimigo selecionado. Essa habilidade [sempre acerta] e causa [10%] de dano de Tremor aos inimigos em um raio de 1 espaço e é usada com [Combinação: Bomba do Dragão da Trovoada +1].",
+          "translation": "对敌方小队造成[风]、[火]属性忍术伤害和[4连击]，使其[暴击]率降低[15%]（可叠加），并额外使选定目标[击退]。本技能[必定命中]，对目标周围1格的敌人造成[10%]震荡伤害，与[组合忍术·雷龙弹+1]交替使用。"
+        }
+      },
+      "551": {
+        "keys": {
+          "source": "Vento do Dragão de Fogo +2",
+          "translation": "火龙风+2"
+        },
+        "desc": {
+          "source": "Causa dano de Ninjutsu de [Vento] e [Fogo] à equipe inimiga com [combo de 4], reduz o [Crítico] em [20%] (pode acumular) e causa [Repelimento] adicional ao inimigo selecionado. Essa habilidade [sempre acerta] e causa [20%] de dano de Tremor aos inimigos em um raio de 1 espaço e é usada com [Combinação: Bomba do Dragão da Trovoada +2].",
+          "translation": "对敌方小队造成[风]、[火]属性忍术伤害和[4连击]，使其[暴击]率降低[20%]（可叠加），并额外使选定目标[击退]。本技能[必定命中]，对目标周围1格的敌人造成[20%]震荡伤害，与[组合忍术·雷龙弹+2]交替使用。"
+        }
+      },
+      "552": {
+        "keys": {
+          "source": "Vento do Dragão de Fogo Y",
+          "translation": "火龙风·Y"
+        },
+        "desc": {
+          "source": "Causa dano de Ninjutsu de [Vento] e [Fogo] à equipe inimiga com [combo de 4] e [Combustão] (status negativo, este status não pode ser imunizado nem dispersado e o efeito até o final da próxima rodada. Se lança habilidade de tipo [gatilho], causa a si mesmo [Chamas] que não pode ser imunizadas nem dispersadas (até o final da rodada). Se lançar a habilidade [Esotérica], o efeito de [Chamas] será expandido para toda a equipe do portador). Causa [Repelimento] adicional ao inimigo selecionado. Esta habilidade [sempre acerta] e é usada com [Combinação: Bomba do Dragão da Trovoada Y].",
+          "translation": "对敌方小队造成[风]、[火]属性忍术伤害、[4连击]和[燃烧]（负面状态：无法免疫或驱散，持续至下回合结束。持有者释放[触发型]技能时，对自身施加无法免疫或驱散的[烈焰]，持续至本回合结束；释放[奥义]时，该[烈焰]扩展至持有者所在全队）。额外使选定目标[击退]。本技能[必定命中]，与[组合忍术·雷龙弹·Y]交替使用。"
+        }
+      },
+      "556": {
+        "keys": {
+          "source": "Violência",
+          "translation": "暴怒"
+        },
+        "desc": {
+          "source": "Exclusivo de Hiruzen Sarutobi [Ano novo]. Neste status tem [Imunidade a Perseguição] e [Status negativos], aumenta a [Defesa] e [Resistência] em [60%] até o final da rodada.",
+          "translation": "猿飞日斩【新年】专属：此状态下免疫[追打]和[负面状态]，[防御]和[抗性]提高[60%]，持续至回合结束。"
+        }
+      },
+      "557": {
+        "keys": {
+          "source": "Violência",
+          "translation": "暴怒"
+        },
+        "desc": {
+          "source": "Exclusivo de Hiruzen Sarutobi [Ano novo]. Neste status tem [Imunidade a Perseguição] e [Status negativos], aumenta a [Defesa] e [Resistência] em [60%] até o final da rodada.",
+          "translation": "猿飞日斩【新年】专属：此状态下免疫[追打]和[负面状态]，[防御]和[抗性]提高[60%]，持续至回合结束。"
+        }
+      },
+      "558": {
+        "keys": {
+          "source": "Violência",
+          "translation": "暴怒"
+        },
+        "desc": {
+          "source": "Exclusivo de Hiruzen Sarutobi [Ano novo]. Neste status tem [Imunidade a Perseguição] e [Status negativos], aumenta a [Defesa] e [Resistência] em [60%] até o final da rodada.",
+          "translation": "猿飞日斩【新年】专属：此状态下免疫[追打]和[负面状态]，[防御]和[抗性]提高[60%]，持续至回合结束。"
+        }
+      }
+    }
+  }
+}

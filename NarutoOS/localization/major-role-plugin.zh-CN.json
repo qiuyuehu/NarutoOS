@@ -1,0 +1,11 @@
+{
+  "id": "naruto-major-role-plugin-zh-CN-v1",
+  "resourceURL": "https://cdnnaruto-pt.oasgames.com/PT_NarutoAlpha8.27Build302/flash/majorRole/MajorRolePlugin.swf",
+  "file": "MajorRolePlugin.zh-CN.swf",
+  "font": "PingFang SC",
+  "scriptStrings": {
+    "frame1": {
+      "Disponível": "可使用"
+    }
+  }
+}

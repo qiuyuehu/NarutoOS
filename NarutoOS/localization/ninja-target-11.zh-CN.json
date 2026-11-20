@@ -1,0 +1,108 @@
+{
+  "id": "naruto-ninja-target-11-zh-CN-v1",
+  "rootId": "11010631",
+  "ninjaInfo": {
+    "class": "NinjaInfoCFG",
+    "rows": {
+      "11010631": {
+        "name": {
+          "source": "Kushina Uzumaki",
+          "translation": "漩涡玖辛奈"
+        },
+        "title": {
+          "source": "[Natal]",
+          "translation": "【圣诞】"
+        }
+      }
+    }
+  },
+  "skills": {
+    "class": "SkillCFG",
+    "rows": {
+      "21010631": {
+        "name": {
+          "source": "Tapa com Ardência: Presente de Natal",
+          "translation": "灼热巴掌·圣诞礼物"
+        },
+        "desc": {
+          "source": "Ataca o inimigo com menos Vida, com grande chance de causar <font color=\"#4dc831\">Voo</font>, <font color=\"#4dc831\">Chamas</font> e <font color=\"#4dc831\">Confusão</font>.",
+          "translation": "攻击生命最低的敌人，有较高概率造成高浮空、烈焰和混乱。"
+        }
+      },
+      "21010632": {
+        "name": {
+          "source": "Tapa com Ardência: Presente de Natal",
+          "translation": "灼热巴掌·圣诞礼物"
+        },
+        "desc": {
+          "source": "Ataca o inimigo com menos Vida, com grande chance de causar <font color=\"#4dc831\">Voo</font>, <font color=\"#4dc831\">Chamas</font> e <font color=\"#4dc831\">Confusão</font>.",
+          "translation": "攻击生命最低的敌人，有较高概率造成高浮空、烈焰和混乱。"
+        }
+      },
+      "21010633": {
+        "name": {
+          "source": "Tapa com Ardência: Presente de Natal",
+          "translation": "灼热巴掌·圣诞礼物"
+        },
+        "desc": {
+          "source": "Ataca o inimigo com menos Vida, com grande chance de causar <font color=\"#4dc831\">Voo</font>, <font color=\"#4dc831\">Chamas</font> e <font color=\"#4dc831\">Confusão</font>.",
+          "translation": "攻击生命最低的敌人，有较高概率造成高浮空、烈焰和混乱。"
+        }
+      },
+      "21010634": {
+        "name": {
+          "source": "Presente de Natal",
+          "translation": "圣诞礼物"
+        },
+        "desc": {
+          "source": "Persegue inimigos com <font color=\"#4dc831\">Repelimento</font>, dispersando todos seus <font color=\"#4dc831\">Escudos</font> e <font color=\"#4dc831\">Status positivos</font> e causando <font color=\"#4dc831\">Confusão</font>, <font color=\"#4dc831\">Queda</font> e <font color=\"#4dc831\">Combo de 10</font>. O resfriamento de sua Esotérica também diminui em 1 rodada.",
+          "translation": "追打击退敌人，驱散其全部护盾和增益状态，并造成混乱、倒地和10连击，同时使自身奥义冷却减少1回合。"
+        }
+      },
+      "21010635": {
+        "name": {
+          "source": "Dança de natal",
+          "translation": "圣诞之舞"
+        },
+        "desc": {
+          "source": "No início de cada rodada diminui a Resistência e Defesa de até quatro ninjas inimigos masculinos em 8% (pode acumular).",
+          "translation": "每回合开始时，使敌方最多4名男性忍者的抗性和防御降低8%，可叠加。"
+        }
+      },
+      "21010636": {
+        "name": {
+          "source": "Pimenta vermelha",
+          "translation": "血红辣椒"
+        },
+        "desc": {
+          "source": "Imunidade a qualquer <font color=\"#4dc831\">status negativo</font>. A cada 10 de Chakra gastos por um companheiro, seu Ataque aumenta em 8% e o Crítico em 3%",
+          "translation": "免疫所有负面状态。己方队友每消耗10点查克拉，自身攻击提高8%，暴击率提高3%。"
+        }
+      },
+      "21010637": {
+        "name": {
+          "source": "Ataque Árvore de Natal",
+          "translation": "圣诞树攻击"
+        },
+        "desc": {
+          "source": "Causa dano na certa, <font color=\"#4dc831\">Combo de 3</font>, <font color=\"#4dc831\">Interrupção</font> e <font color=\"#4dc831\">Supressão de Imunidade a Perseguição</font> até o fim da rodada a até 4 inimigos e <font color=\"#4dc831\">Voo</font> ao inimigo escolhido.",
+          "translation": "对最多4名敌人造成必定命中的伤害、3连击、打断和持续至回合结束的追打免疫压制，并使选定目标高浮空。"
+        }
+      },
+      "21010638": {
+        "name": {
+          "source": "Pimenta vermelha",
+          "translation": "血红辣椒"
+        },
+        "desc": {
+          "source": "Imunidade a qualquer <font color=\"#4dc831\">status negativo</font>. A cada 10 de Chakra gastos por um companheiro, seu Ataque aumenta em 8% e o Crítico em 3%",
+          "translation": "免疫所有负面状态。己方队友每消耗10点查克拉，自身攻击提高8%，暴击率提高3%。"
+        }
+      }
+    }
+  },
+  "skillDetails": {
+    "class": "SkillKeyDescCFG",
+    "rows": {}
+  }
+}

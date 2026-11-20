@@ -1,0 +1,6135 @@
+{
+ "id": "naruto-ninja-aid-skills-zh-CN-v1",
+ "class": "NinjaAidSkillCFG",
+ "resourceURL": "https://cdnnaruto-pt.oasgames.com/PT_NarutoAlpha9.35Build301/config/ninjaAid/NinjaAidSkillCFG.cfgx",
+ "rows": {
+  "10240001": {
+   "ninjaName": {
+    "source": "Sasuke",
+    "translation": "佐助"
+   },
+   "tips": {
+    "source": "Cada vez que sua equipe causa [Repelimento] seu [Ataque] aumenta [1%].",
+    "translation": "己方小队忍者每次造成[击退]时，成长自身[1%]的[攻击]。"
+   },
+   "description": {
+    "source": "Ataque; Ninjutsu",
+    "translation": "攻击;忍术"
+   }
+  },
+  "10240002": {
+   "ninjaName": {
+    "source": "Sasuke",
+    "translation": "佐助"
+   },
+   "tips": {
+    "source": "Cada vez que sua equipe causa [Repelimento] seu [Ataque] e [Ninjutsu] aumentam [1%].",
+    "translation": "己方小队忍者每次造成[击退]时，成长自身[1%]的[攻击]和[忍术]。"
+   },
+   "description": {
+    "source": "Ataque; Ninjutsu",
+    "translation": "攻击;忍术"
+   }
+  },
+  "10240003": {
+   "ninjaName": {
+    "source": "Sasuke",
+    "translation": "佐助"
+   },
+   "tips": {
+    "source": "Cada vez que sua equipe causa [Repelimento] seu [Ataque] aumenta [2%] e o [Ninjutsu] [1%].",
+    "translation": "己方小队忍者每次造成[击退]时，成长自身[2%]的[攻击]和[1%]的[忍术]。"
+   },
+   "description": {
+    "source": "Ataque; Ninjutsu",
+    "translation": "攻击;忍术"
+   }
+  },
+  "10240004": {
+   "ninjaName": {
+    "source": "Sasuke",
+    "translation": "佐助"
+   },
+   "tips": {
+    "source": "Cada vez que sua equipe causa [Repelimento] seu [Ataque] e [Ninjutsu] aumentam [2%].",
+    "translation": "己方小队忍者每次造成[击退]时，成长自身[2%]的[攻击]和[忍术]。"
+   },
+   "description": {
+    "source": "Ataque; Ninjutsu",
+    "translation": "攻击;忍术"
+   }
+  },
+  "10240005": {
+   "ninjaName": {
+    "source": "Sasuke",
+    "translation": "佐助"
+   },
+   "tips": {
+    "source": "Cada vez que sua equipe causa [Repelimento] seu [Ataque] aumenta [3%] e o [Ninjutsu] [2%].",
+    "translation": "己方小队忍者每次造成[击退]时，成长自身[3%]的[攻击]和[2%]的[忍术]。"
+   },
+   "description": {
+    "source": "Ataque; Ninjutsu",
+    "translation": "攻击;忍术"
+   }
+  },
+  "10240006": {
+   "ninjaName": {
+    "source": "Sasuke",
+    "translation": "佐助"
+   },
+   "tips": {
+    "source": "Cada vez que sua equipe causa [Repelimento] seu [Ataque] e [Ninjutsu] aumentam [3%].",
+    "translation": "己方小队忍者每次造成[击退]时，成长自身[3%]的[攻击]和[忍术]。"
+   },
+   "description": {
+    "source": "Ataque; Ninjutsu",
+    "translation": "攻击;忍术"
+   }
+  },
+  "10240007": {
+   "ninjaName": {
+    "source": "Sasuke",
+    "translation": "佐助"
+   },
+   "tips": {
+    "source": "Cada vez que sua equipe causa [Repelimento] seu [Ataque] aumenta [4%] e o [Ninjutsu] [3%].",
+    "translation": "己方小队忍者每次造成[击退]时，成长自身[4%]的[攻击]和[3%]的[忍术]。"
+   },
+   "description": {
+    "source": "Ataque; Ninjutsu",
+    "translation": "攻击;忍术"
+   }
+  },
+  "10240008": {
+   "ninjaName": {
+    "source": "Sasuke",
+    "translation": "佐助"
+   },
+   "tips": {
+    "source": "Cada vez que sua equipe causa [Repelimento] seu [Ataque] e [Ninjutsu] aumentam [4%].",
+    "translation": "己方小队忍者每次造成[击退]时，成长自身[4%]的[攻击]和[忍术]。"
+   },
+   "description": {
+    "source": "Ataque; Ninjutsu",
+    "translation": "攻击;忍术"
+   }
+  },
+  "10410001": {
+   "ninjaName": {
+    "source": "Izuna Uchiha",
+    "translation": "宇智波泉奈"
+   },
+   "tips": {
+    "source": "Sempre que um companheiro [Uchiha] recebe dano, seu [Ninjutsu] e [Resistência] aumentam [1%] até o fim da rodada.",
+    "translation": "己方小队[宇智波]忍者每次受到伤害时，提升[1%]的[忍术]及[抗性]（持续至回合结束）。"
+   },
+   "description": {
+    "source": "Ninjutsu; Resistência",
+    "translation": "忍术;抗性"
+   }
+  },
+  "10410002": {
+   "ninjaName": {
+    "source": "Izuna Uchiha",
+    "translation": "宇智波泉奈"
+   },
+   "tips": {
+    "source": "Sempre que um companheiro [Uchiha] recebe dano, seu [Ninjutsu] e [Resistência] aumentam [2%] até o fim da rodada.",
+    "translation": "己方小队[宇智波]忍者每次受到伤害时，提升[2%]的[忍术]及[抗性]（持续至回合结束）。"
+   },
+   "description": {
+    "source": "Ninjutsu; Resistência",
+    "translation": "忍术;抗性"
+   }
+  },
+  "10410003": {
+   "ninjaName": {
+    "source": "Izuna Uchiha",
+    "translation": "宇智波泉奈"
+   },
+   "tips": {
+    "source": "Sempre que um companheiro [Uchiha] recebe dano, seu [Ninjutsu] e [Resistência] aumentam [3%] até o fim da rodada.",
+    "translation": "己方小队[宇智波]忍者每次受到伤害时，提升[3%]的[忍术]及[抗性]（持续至回合结束）。"
+   },
+   "description": {
+    "source": "Ninjutsu; Resistência",
+    "translation": "忍术;抗性"
+   }
+  },
+  "10410004": {
+   "ninjaName": {
+    "source": "Izuna Uchiha",
+    "translation": "宇智波泉奈"
+   },
+   "tips": {
+    "source": "Sempre que um companheiro [Uchiha] recebe dano, seu [Ninjutsu] e [Resistência] aumentam [4%] até o fim da rodada.",
+    "translation": "己方小队[宇智波]忍者每次受到伤害时，提升[4%]的[忍术]及[抗性]（持续至回合结束）。"
+   },
+   "description": {
+    "source": "Ninjutsu; Resistência",
+    "translation": "忍术;抗性"
+   }
+  },
+  "10410005": {
+   "ninjaName": {
+    "source": "Izuna Uchiha",
+    "translation": "宇智波泉奈"
+   },
+   "tips": {
+    "source": "Sempre que um companheiro [Uchiha] recebe dano, seu [Ninjutsu] e [Resistência] aumentam [5%] até o fim da rodada.",
+    "translation": "己方小队[宇智波]忍者每次受到伤害时，提升[5%]的[忍术]及[抗性]（持续至回合结束）。"
+   },
+   "description": {
+    "source": "Ninjutsu; Resistência",
+    "translation": "忍术;抗性"
+   }
+  },
+  "10410006": {
+   "ninjaName": {
+    "source": "Izuna Uchiha",
+    "translation": "宇智波泉奈"
+   },
+   "tips": {
+    "source": "Sempre que um companheiro [Uchiha] recebe dano, seu [Ninjutsu] e [Resistência] aumentam [6%] até o fim da rodada.",
+    "translation": "己方小队[宇智波]忍者每次受到伤害时，提升[6%]的[忍术]及[抗性]（持续至回合结束）。"
+   },
+   "description": {
+    "source": "Ninjutsu; Resistência",
+    "translation": "忍术;抗性"
+   }
+  },
+  "10410007": {
+   "ninjaName": {
+    "source": "Izuna Uchiha",
+    "translation": "宇智波泉奈"
+   },
+   "tips": {
+    "source": "Sempre que um companheiro [Uchiha] recebe dano, seu [Ninjutsu] e [Resistência] aumentam [7%] até o fim da rodada e ganha [Imunidade a Status negativos].",
+    "translation": "己方小队[宇智波]忍者每次受到伤害时，提升[7%]的[忍术]及[抗性]（持续至回合结束），并[免疫不良状态]。"
+   },
+   "description": {
+    "source": "Ninjutsu; Resistência",
+    "translation": "忍术;抗性"
+   }
+  },
+  "10410008": {
+   "ninjaName": {
+    "source": "Izuna Uchiha",
+    "translation": "宇智波泉奈"
+   },
+   "tips": {
+    "source": "Sempre que um companheiro [Uchiha] recebe dano, seu [Ninjutsu] e [Resistência] aumentam [8%] até o fim da rodada e ganha [Imunidade a Status negativos].",
+    "translation": "己方小队[宇智波]忍者每次受到伤害时，提升[8%]的[忍术]及[抗性]（持续至回合结束），并[免疫不良状态]。"
+   },
+   "description": {
+    "source": "Ninjutsu; Resistência",
+    "translation": "忍术;抗性"
+   }
+  },
+  "10110001": {
+   "ninjaName": {
+    "source": "Tenten",
+    "translation": "天天"
+   },
+   "tips": {
+    "source": "Aumenta o [Ataque Crítico] dos companheiros em [2%].",
+    "translation": "己方小队忍者[暴击]提升[2%]。"
+   },
+   "description": {
+    "source": "Ataque Crítico",
+    "translation": "暴击"
+   }
+  },
+  "10110002": {
+   "ninjaName": {
+    "source": "Tenten",
+    "translation": "天天"
+   },
+   "tips": {
+    "source": "Aumenta o [Ataque Crítico] dos companheiros em [4%].",
+    "translation": "己方小队忍者[暴击]提升[4%]。"
+   },
+   "description": {
+    "source": "Ataque Crítico",
+    "translation": "暴击"
+   }
+  },
+  "10110003": {
+   "ninjaName": {
+    "source": "Tenten",
+    "translation": "天天"
+   },
+   "tips": {
+    "source": "Aumenta o [Ataque Crítico] dos companheiros em [6%].",
+    "translation": "己方小队忍者[暴击]提升[6%]。"
+   },
+   "description": {
+    "source": "Ataque Crítico",
+    "translation": "暴击"
+   }
+  },
+  "10110004": {
+   "ninjaName": {
+    "source": "Tenten",
+    "translation": "天天"
+   },
+   "tips": {
+    "source": "Aumenta o [Ataque Crítico] dos companheiros em [8%].",
+    "translation": "己方小队忍者[暴击]提升[8%]。"
+   },
+   "description": {
+    "source": "Ataque Crítico",
+    "translation": "暴击"
+   }
+  },
+  "10110005": {
+   "ninjaName": {
+    "source": "Tenten",
+    "translation": "天天"
+   },
+   "tips": {
+    "source": "Aumenta o [Ataque Crítico] dos companheiros em [11%].",
+    "translation": "己方小队忍者[暴击]提升[11%]。"
+   },
+   "description": {
+    "source": "Ataque Crítico",
+    "translation": "暴击"
+   }
+  },
+  "10110006": {
+   "ninjaName": {
+    "source": "Tenten",
+    "translation": "天天"
+   },
+   "tips": {
+    "source": "Aumenta o [Ataque Crítico] dos companheiros em [14%].",
+    "translation": "己方小队忍者[暴击]提升[14%]。"
+   },
+   "description": {
+    "source": "Ataque Crítico",
+    "translation": "暴击"
+   }
+  },
+  "10110007": {
+   "ninjaName": {
+    "source": "Tenten",
+    "translation": "天天"
+   },
+   "tips": {
+    "source": "Aumenta o [Ataque Crítico] dos companheiros em [17%].",
+    "translation": "己方小队忍者[暴击]提升[17%]。"
+   },
+   "description": {
+    "source": "Ataque Crítico",
+    "translation": "暴击"
+   }
+  },
+  "10110008": {
+   "ninjaName": {
+    "source": "Tenten",
+    "translation": "天天"
+   },
+   "tips": {
+    "source": "Aumenta o [Ataque Crítico] dos companheiros em [20%].",
+    "translation": "己方小队忍者[暴击]提升[20%]。"
+   },
+   "description": {
+    "source": "Ataque Crítico",
+    "translation": "暴击"
+   }
+  },
+  "10280001": {
+   "ninjaName": {
+    "source": "Kimimaro",
+    "translation": "君麻吕"
+   },
+   "tips": {
+    "source": "Reduz o dano da primeira Perseguição recebida pela equipe na rodada em [2%].",
+    "translation": "使己方小队每回合受到的首次追打伤害降低[2%]。"
+   },
+   "description": {
+    "source": "Redução de dano",
+    "translation": "减免"
+   }
+  },
+  "10280002": {
+   "ninjaName": {
+    "source": "Kimimaro",
+    "translation": "君麻吕"
+   },
+   "tips": {
+    "source": "Reduz o dano da primeira Perseguição recebida pela equipe na rodada em [4%].",
+    "translation": "使己方小队每回合受到的首次追打伤害降低[4%]。"
+   },
+   "description": {
+    "source": "Redução de dano",
+    "translation": "减免"
+   }
+  },
+  "10280003": {
+   "ninjaName": {
+    "source": "Kimimaro",
+    "translation": "君麻吕"
+   },
+   "tips": {
+    "source": "Reduz o dano da primeira Perseguição recebida pela equipe na rodada em [6%].",
+    "translation": "使己方小队每回合受到的首次追打伤害降低[6%]。"
+   },
+   "description": {
+    "source": "Redução de dano",
+    "translation": "减免"
+   }
+  },
+  "10280004": {
+   "ninjaName": {
+    "source": "Kimimaro",
+    "translation": "君麻吕"
+   },
+   "tips": {
+    "source": "Reduz o dano da primeira Perseguição recebida pela equipe na rodada em [8%].",
+    "translation": "使己方小队每回合受到的首次追打伤害降低[8%]。"
+   },
+   "description": {
+    "source": "Redução de dano",
+    "translation": "减免"
+   }
+  },
+  "10280005": {
+   "ninjaName": {
+    "source": "Kimimaro",
+    "translation": "君麻吕"
+   },
+   "tips": {
+    "source": "Reduz o dano da primeira Perseguição recebida pela equipe na rodada em [11%].",
+    "translation": "使己方小队每回合受到的首次追打伤害降低[11%]。"
+   },
+   "description": {
+    "source": "Redução de dano",
+    "translation": "减免"
+   }
+  },
+  "10280006": {
+   "ninjaName": {
+    "source": "Kimimaro",
+    "translation": "君麻吕"
+   },
+   "tips": {
+    "source": "Reduz o dano da primeira Perseguição recebida pela equipe na rodada em [14%].",
+    "translation": "使己方小队每回合受到的首次追打伤害降低[14%]。"
+   },
+   "description": {
+    "source": "Redução de dano",
+    "translation": "减免"
+   }
+  },
+  "10280007": {
+   "ninjaName": {
+    "source": "Kimimaro",
+    "translation": "君麻吕"
+   },
+   "tips": {
+    "source": "Reduz o dano da primeira Perseguição recebida pela equipe na rodada em [17%].",
+    "translation": "使己方小队每回合受到的首次追打伤害降低[17%]。"
+   },
+   "description": {
+    "source": "Redução de dano",
+    "translation": "减免"
+   }
+  },
+  "10280008": {
+   "ninjaName": {
+    "source": "Kimimaro",
+    "translation": "君麻吕"
+   },
+   "tips": {
+    "source": "Reduz o dano da primeira Perseguição recebida pela equipe na rodada em [20%].",
+    "translation": "使己方小队每回合受到的首次追打伤害降低[20%]。"
+   },
+   "description": {
+    "source": "Redução de dano",
+    "translation": "减免"
+   }
+  },
+  "10450001": {
+   "ninjaName": {
+    "source": "Yuugao Uzuki",
+    "translation": "卯月夕颜"
+   },
+   "tips": {
+    "source": "Aumenta o [Crítico] dos Ninjas [Anbu] em [1%].",
+    "translation": "提升己方小队[暗部]忍者[1%]的[暴击]。"
+   },
+   "description": {
+    "source": "Ataque Crítico",
+    "translation": "暴击"
+   }
+  },
+  "10450002": {
+   "ninjaName": {
+    "source": "Yuugao Uzuki",
+    "translation": "卯月夕颜"
+   },
+   "tips": {
+    "source": "Aumenta o [Crítico] dos Ninjas [Anbu] em [3%].",
+    "translation": "提升己方小队[暗部]忍者[3%]的[暴击]。"
+   },
+   "description": {
+    "source": "Ataque Crítico",
+    "translation": "暴击"
+   }
+  },
+  "10450003": {
+   "ninjaName": {
+    "source": "Yuugao Uzuki",
+    "translation": "卯月夕颜"
+   },
+   "tips": {
+    "source": "Aumenta o [Crítico] dos Ninjas [Anbu] em [5%].",
+    "translation": "提升己方小队[暗部]忍者[5%]的[暴击]。"
+   },
+   "description": {
+    "source": "Ataque Crítico",
+    "translation": "暴击"
+   }
+  },
+  "10450004": {
+   "ninjaName": {
+    "source": "Yuugao Uzuki",
+    "translation": "卯月夕颜"
+   },
+   "tips": {
+    "source": "Aumenta o [Crítico] dos Ninjas [Anbu] em [7%].",
+    "translation": "提升己方小队[暗部]忍者[7%]的[暴击]。"
+   },
+   "description": {
+    "source": "Ataque Crítico",
+    "translation": "暴击"
+   }
+  },
+  "10450005": {
+   "ninjaName": {
+    "source": "Yuugao Uzuki",
+    "translation": "卯月夕颜"
+   },
+   "tips": {
+    "source": "Aumenta o [Crítico] dos Ninjas [Anbu] em [9%].",
+    "translation": "提升己方小队[暗部]忍者[9%]的[暴击]。"
+   },
+   "description": {
+    "source": "Ataque Crítico",
+    "translation": "暴击"
+   }
+  },
+  "10450006": {
+   "ninjaName": {
+    "source": "Yuugao Uzuki",
+    "translation": "卯月夕颜"
+   },
+   "tips": {
+    "source": "Aumenta o [Crítico] dos Ninjas [Anbu] em [11%].",
+    "translation": "提升己方小队[暗部]忍者[11%]的[暴击]。"
+   },
+   "description": {
+    "source": "Ataque Crítico",
+    "translation": "暴击"
+   }
+  },
+  "10450007": {
+   "ninjaName": {
+    "source": "Yuugao Uzuki",
+    "translation": "卯月夕颜"
+   },
+   "tips": {
+    "source": "Aumenta o [Crítico] dos Ninjas [Anbu] em [13%] e dá a eles [Imunidade a Perseguição].",
+    "translation": "提升己方小队[暗部]忍者[13%]的[暴击]，并使其[免疫追打状态]。"
+   },
+   "description": {
+    "source": "Ataque Crítico",
+    "translation": "暴击"
+   }
+  },
+  "10450008": {
+   "ninjaName": {
+    "source": "Yuugao Uzuki",
+    "translation": "卯月夕颜"
+   },
+   "tips": {
+    "source": "Aumenta o [Crítico] dos Ninjas [Anbu] em [15%] e dá a eles [Imunidade a Perseguição].",
+    "translation": "提升己方小队[暗部]忍者[15%]的[暴击]，并使其[免疫追打状态]。"
+   },
+   "description": {
+    "source": "Ataque Crítico",
+    "translation": "暴击"
+   }
+  },
+  "10150001": {
+   "ninjaName": {
+    "source": "Minato Namikaze",
+    "translation": "波风水门"
+   },
+   "tips": {
+    "source": "Aumenta a Velocidade dos companheiros em 50 pontos.",
+    "translation": "己方小队忍者[速度]提升[50点]。"
+   },
+   "description": {
+    "source": "Velocidade",
+    "translation": "速度"
+   }
+  },
+  "10150002": {
+   "ninjaName": {
+    "source": "Minato Namikaze",
+    "translation": "波风水门"
+   },
+   "tips": {
+    "source": "Aumenta a Velocidade dos companheiros em 100 pontos.",
+    "translation": "己方小队忍者[速度]提升[100点]。"
+   },
+   "description": {
+    "source": "Velocidade",
+    "translation": "速度"
+   }
+  },
+  "10150003": {
+   "ninjaName": {
+    "source": "Minato Namikaze",
+    "translation": "波风水门"
+   },
+   "tips": {
+    "source": "Aumenta a Velocidade dos companheiros em 150 pontos.",
+    "translation": "己方小队忍者[速度]提升[150点]。"
+   },
+   "description": {
+    "source": "Velocidade",
+    "translation": "速度"
+   }
+  },
+  "10150004": {
+   "ninjaName": {
+    "source": "Minato Namikaze",
+    "translation": "波风水门"
+   },
+   "tips": {
+    "source": "Aumenta a Velocidade dos companheiros em 200 pontos.",
+    "translation": "己方小队忍者[速度]提升[200点]。"
+   },
+   "description": {
+    "source": "Velocidade",
+    "translation": "速度"
+   }
+  },
+  "10150005": {
+   "ninjaName": {
+    "source": "Minato Namikaze",
+    "translation": "波风水门"
+   },
+   "tips": {
+    "source": "Aumenta a Velocidade dos companheiros em 250 pontos.",
+    "translation": "己方小队忍者[速度]提升[250点]。"
+   },
+   "description": {
+    "source": "Velocidade",
+    "translation": "速度"
+   }
+  },
+  "10150006": {
+   "ninjaName": {
+    "source": "Minato Namikaze",
+    "translation": "波风水门"
+   },
+   "tips": {
+    "source": "Aumenta a Velocidade dos companheiros em 300 pontos.",
+    "translation": "己方小队忍者[速度]提升[300点]。"
+   },
+   "description": {
+    "source": "Velocidade",
+    "translation": "速度"
+   }
+  },
+  "10150007": {
+   "ninjaName": {
+    "source": "Minato Namikaze",
+    "translation": "波风水门"
+   },
+   "tips": {
+    "source": "Aumenta a Velocidade dos companheiros em 350 pontos.",
+    "translation": "己方小队忍者[速度]提升[350点]。"
+   },
+   "description": {
+    "source": "Velocidade",
+    "translation": "速度"
+   }
+  },
+  "10150008": {
+   "ninjaName": {
+    "source": "Minato Namikaze",
+    "translation": "波风水门"
+   },
+   "tips": {
+    "source": "Aumenta a Velocidade dos companheiros em 400 pontos.",
+    "translation": "己方小队忍者[速度]提升[400点]。"
+   },
+   "description": {
+    "source": "Velocidade",
+    "translation": "速度"
+   }
+  },
+  "10320001": {
+   "ninjaName": {
+    "source": "Hiashi Hyuga",
+    "translation": "日向日足"
+   },
+   "tips": {
+    "source": "Reduz o dano do primeiro Ataque Comum recebido pela equipe na rodada em [2%].",
+    "translation": "使己方小队每回合受到的首次普攻伤害降低[2%]。"
+   },
+   "description": {
+    "source": "Redução de dano",
+    "translation": "减免"
+   }
+  },
+  "10320002": {
+   "ninjaName": {
+    "source": "Hiashi Hyuga",
+    "translation": "日向日足"
+   },
+   "tips": {
+    "source": "Reduz o dano do primeiro Ataque Comum recebido pela equipe na rodada em [4%].",
+    "translation": "使己方小队每回合受到的首次普攻伤害降低[4%]。"
+   },
+   "description": {
+    "source": "Redução de dano",
+    "translation": "减免"
+   }
+  },
+  "10320003": {
+   "ninjaName": {
+    "source": "Hiashi Hyuga",
+    "translation": "日向日足"
+   },
+   "tips": {
+    "source": "Reduz o dano do primeiro Ataque Comum recebido pela equipe na rodada em [6%].",
+    "translation": "使己方小队每回合受到的首次普攻伤害降低[6%]。"
+   },
+   "description": {
+    "source": "Redução de dano",
+    "translation": "减免"
+   }
+  },
+  "10320004": {
+   "ninjaName": {
+    "source": "Hiashi Hyuga",
+    "translation": "日向日足"
+   },
+   "tips": {
+    "source": "Reduz o dano do primeiro Ataque Comum recebido pela equipe na rodada em [8%].",
+    "translation": "使己方小队每回合受到的首次普攻伤害降低[8%]。"
+   },
+   "description": {
+    "source": "Redução de dano",
+    "translation": "减免"
+   }
+  },
+  "10320005": {
+   "ninjaName": {
+    "source": "Hiashi Hyuga",
+    "translation": "日向日足"
+   },
+   "tips": {
+    "source": "Reduz o dano do primeiro Ataque Comum recebido pela equipe na rodada em [11%].",
+    "translation": "使己方小队每回合受到的首次普攻伤害降低[11%]。"
+   },
+   "description": {
+    "source": "Redução de dano",
+    "translation": "减免"
+   }
+  },
+  "10320006": {
+   "ninjaName": {
+    "source": "Hiashi Hyuga",
+    "translation": "日向日足"
+   },
+   "tips": {
+    "source": "Reduz o dano do primeiro Ataque Comum recebido pela equipe na rodada em [14%].",
+    "translation": "使己方小队每回合受到的首次普攻伤害降低[14%]。"
+   },
+   "description": {
+    "source": "Redução de dano",
+    "translation": "减免"
+   }
+  },
+  "10320007": {
+   "ninjaName": {
+    "source": "Hiashi Hyuga",
+    "translation": "日向日足"
+   },
+   "tips": {
+    "source": "Reduz o dano do primeiro Ataque Comum recebido pela equipe na rodada em [17%].",
+    "translation": "使己方小队每回合受到的首次普攻伤害降低[17%]。"
+   },
+   "description": {
+    "source": "Redução de dano",
+    "translation": "减免"
+   }
+  },
+  "10320008": {
+   "ninjaName": {
+    "source": "Hiashi Hyuga",
+    "translation": "日向日足"
+   },
+   "tips": {
+    "source": "Reduz o dano do primeiro Ataque Comum recebido pela equipe na rodada em [20%].",
+    "translation": "使己方小队每回合受到的首次普攻伤害降低[20%]。"
+   },
+   "description": {
+    "source": "Redução de dano",
+    "translation": "减免"
+   }
+  },
+  "10490001": {
+   "ninjaName": {
+    "source": "Might Duy",
+    "translation": "迈特戴"
+   },
+   "tips": {
+    "source": "Sempre que uma unidade [ninja] ou [não-ninja] da sua equipe lança habilidades de [Ataque Comum], recupera [1] pontos de Chakra e ganha [1%] de [Crítico].",
+    "translation": "己方小队[忍者]及[非忍者]单位每次使用[普攻]类技能将回复[1]点查克拉并成长[1%]的[暴击]。"
+   },
+   "description": {
+    "source": "Chakra, Crítico",
+    "translation": "查克拉;暴击"
+   }
+  },
+  "10490002": {
+   "ninjaName": {
+    "source": "Might Duy",
+    "translation": "迈特戴"
+   },
+   "tips": {
+    "source": "Sempre que uma unidade [ninja] ou [não-ninja] da sua equipe lança habilidades de [Ataque Comum], recupera [1] pontos de Chakra e ganha [2%] de [Crítico].",
+    "translation": "己方小队[忍者]及[非忍者]单位每次使用[普攻]类技能将回复[1]点查克拉并成长[2%]的[暴击]。"
+   },
+   "description": {
+    "source": "Chakra, Crítico",
+    "translation": "查克拉;暴击"
+   }
+  },
+  "10490003": {
+   "ninjaName": {
+    "source": "Might Duy",
+    "translation": "迈特戴"
+   },
+   "tips": {
+    "source": "Sempre que uma unidade [ninja] ou [não-ninja] da sua equipe lança habilidades de [Ataque Comum], recupera [2] pontos de Chakra e ganha [2%] de [Crítico].",
+    "translation": "己方小队[忍者]及[非忍者]单位每次使用[普攻]类技能将回复[2]点查克拉并成长[2%]的[暴击]。"
+   },
+   "description": {
+    "source": "Chakra, Crítico",
+    "translation": "查克拉;暴击"
+   }
+  },
+  "10490004": {
+   "ninjaName": {
+    "source": "Might Duy",
+    "translation": "迈特戴"
+   },
+   "tips": {
+    "source": "Sempre que uma unidade [ninja] ou [não-ninja] da sua equipe lança habilidades de [Ataque Comum], recupera [2] pontos de Chakra e ganha [3%] de [Crítico].",
+    "translation": "己方小队[忍者]及[非忍者]单位每次使用[普攻]类技能将回复[2]点查克拉并成长[3%]的[暴击]。"
+   },
+   "description": {
+    "source": "Chakra, Crítico",
+    "translation": "查克拉;暴击"
+   }
+  },
+  "10490005": {
+   "ninjaName": {
+    "source": "Might Duy",
+    "translation": "迈特戴"
+   },
+   "tips": {
+    "source": "Sempre que uma unidade [ninja] ou [não-ninja] da sua equipe lança habilidades de [Ataque Comum], recupera [3] pontos de Chakra e ganha [3%] de [Crítico].",
+    "translation": "己方小队[忍者]及[非忍者]单位每次使用[普攻]类技能将回复[3]点查克拉并成长[3%]的[暴击]。"
+   },
+   "description": {
+    "source": "Chakra, Crítico",
+    "translation": "查克拉;暴击"
+   }
+  },
+  "10490006": {
+   "ninjaName": {
+    "source": "Might Duy",
+    "translation": "迈特戴"
+   },
+   "tips": {
+    "source": "Sempre que uma unidade [ninja] ou [não-ninja] da sua equipe lança habilidades de [Ataque Comum], recupera [3] pontos de Chakra e ganha [4%] de [Crítico].",
+    "translation": "己方小队[忍者]及[非忍者]单位每次使用[普攻]类技能将回复[3]点查克拉并成长[4%]的[暴击]。"
+   },
+   "description": {
+    "source": "Chakra, Crítico",
+    "translation": "查克拉;暴击"
+   }
+  },
+  "10490007": {
+   "ninjaName": {
+    "source": "Might Duy",
+    "translation": "迈特戴"
+   },
+   "tips": {
+    "source": "Sempre que uma unidade [ninja] ou [não-ninja] da sua equipe lança habilidades de [Ataque Comum], recupera [4] pontos de Chakra e ganha [4%] de [Crítico].",
+    "translation": "己方小队[忍者]及[非忍者]单位每次使用[普攻]类技能将回复[4]点查克拉并成长[4%]的[暴击]。"
+   },
+   "description": {
+    "source": "Chakra, Crítico",
+    "translation": "查克拉;暴击"
+   }
+  },
+  "10490008": {
+   "ninjaName": {
+    "source": "Might Duy",
+    "translation": "迈特戴"
+   },
+   "tips": {
+    "source": "Sempre que uma unidade [ninja] ou [não-ninja] da sua equipe lança habilidades de [Ataque Comum], recupera [5] pontos de Chakra e ganha [5%] de [Crítico].",
+    "translation": "己方小队[忍者]及[非忍者]单位每次使用[普攻]类技能将回复[5]点查克拉并成长[5%]的[暴击]。"
+   },
+   "description": {
+    "source": "Chakra, Crítico",
+    "translation": "查克拉;暴击"
+   }
+  },
+  "10020001": {
+   "ninjaName": {
+    "source": "Ao",
+    "translation": "青"
+   },
+   "tips": {
+    "source": "Aumenta o [Ataque] dos companheiros de Água em [2%] e a [Defesa] em 3%.",
+    "translation": "己方小队[水属性]忍者[攻击]提升[2%]，[防御]提升[3%]。"
+   },
+   "description": {
+    "source": "Ataque; Defesa",
+    "translation": "攻击;防御"
+   }
+  },
+  "10020002": {
+   "ninjaName": {
+    "source": "Ao",
+    "translation": "青"
+   },
+   "tips": {
+    "source": "Aumenta o [Ataque] dos companheiros de Água em [4%] e a [Defesa] em 6%.",
+    "translation": "己方小队[水属性]忍者[攻击]提升[4%]，[防御]提升[6%]。"
+   },
+   "description": {
+    "source": "Ataque; Defesa",
+    "translation": "攻击;防御"
+   }
+  },
+  "10020003": {
+   "ninjaName": {
+    "source": "Ao",
+    "translation": "青"
+   },
+   "tips": {
+    "source": "Aumenta o [Ataque] dos companheiros de Água em [6%] e a [Defesa] em 9%.",
+    "translation": "己方小队[水属性]忍者[攻击]提升[6%]，[防御]提升[9%]。"
+   },
+   "description": {
+    "source": "Ataque; Defesa",
+    "translation": "攻击;防御"
+   }
+  },
+  "10020004": {
+   "ninjaName": {
+    "source": "Ao",
+    "translation": "青"
+   },
+   "tips": {
+    "source": "Aumenta o [Ataque] dos companheiros de Água em [8%] e a [Defesa] em 12%.",
+    "translation": "己方小队[水属性]忍者[攻击]提升[8%]，[防御]提升[12%]。"
+   },
+   "description": {
+    "source": "Ataque; Defesa",
+    "translation": "攻击;防御"
+   }
+  },
+  "10020005": {
+   "ninjaName": {
+    "source": "Ao",
+    "translation": "青"
+   },
+   "tips": {
+    "source": "Aumenta o [Ataque] dos companheiros de Água em [11%] e a [Defesa] em 16%.",
+    "translation": "己方小队[水属性]忍者[攻击]提升[11%]，[防御]提升[16%]。"
+   },
+   "description": {
+    "source": "Ataque; Defesa",
+    "translation": "攻击;防御"
+   }
+  },
+  "10020006": {
+   "ninjaName": {
+    "source": "Ao",
+    "translation": "青"
+   },
+   "tips": {
+    "source": "Aumenta o [Ataque] dos companheiros de Água em [14%] e a [Defesa] em 20%.",
+    "translation": "己方小队[水属性]忍者[攻击]提升[14%]，[防御]提升[20%]。"
+   },
+   "description": {
+    "source": "Ataque; Defesa",
+    "translation": "攻击;防御"
+   }
+  },
+  "10020007": {
+   "ninjaName": {
+    "source": "Ao",
+    "translation": "青"
+   },
+   "tips": {
+    "source": "Aumenta o [Ataque] dos companheiros de Água em [17%] e a [Defesa] em 25%.",
+    "translation": "己方小队[水属性]忍者[攻击]提升[17%]，[防御]提升[25%]。"
+   },
+   "description": {
+    "source": "Ataque; Defesa",
+    "translation": "攻击;防御"
+   }
+  },
+  "10020008": {
+   "ninjaName": {
+    "source": "Ao",
+    "translation": "青"
+   },
+   "tips": {
+    "source": "Aumenta o [Ataque] dos companheiros de Água em [20%] e a [Defesa] em 30%.",
+    "translation": "己方小队[水属性]忍者[攻击]提升[20%]，[防御]提升[30%]。"
+   },
+   "description": {
+    "source": "Ataque; Defesa",
+    "translation": "攻击;防御"
+   }
+  },
+  "10190001": {
+   "ninjaName": {
+    "source": "Shisui Uchiha",
+    "translation": "宇智波止水"
+   },
+   "tips": {
+    "source": "Quando um companheiro recebe um ataque [Esotérico] sua [Velocidade] aumenta em 0.3% até o fim da próxima rodada (não acumula).",
+    "translation": "己方小队忍者受到[奥义]类攻击时[速度]提升[0.3%]，持续至下一回合结束（不可叠加）。"
+   }
+  },
+  "10190002": {
+   "ninjaName": {
+    "source": "Shisui Uchiha",
+    "translation": "宇智波止水"
+   },
+   "tips": {
+    "source": "Quando um companheiro recebe um ataque [Esotérico] sua [Velocidade] aumenta em 0.6% até o fim da próxima rodada (não acumula).",
+    "translation": "己方小队忍者受到[奥义]类攻击时[速度]提升[0.6%]，持续至下一回合结束（不可叠加）。"
+   }
+  },
+  "10190003": {
+   "ninjaName": {
+    "source": "Shisui Uchiha",
+    "translation": "宇智波止水"
+   },
+   "tips": {
+    "source": "Quando um companheiro recebe um ataque [Esotérico] sua [Velocidade] aumenta em 0.9% até o fim da próxima rodada (não acumula).",
+    "translation": "己方小队忍者受到[奥义]类攻击时[速度]提升[0.9%]，持续至下一回合结束（不可叠加）。"
+   }
+  },
+  "10190004": {
+   "ninjaName": {
+    "source": "Shisui Uchiha",
+    "translation": "宇智波止水"
+   },
+   "tips": {
+    "source": "Quando um companheiro recebe um ataque [Esotérico] sua [Velocidade] aumenta em 1.2% até o fim da próxima rodada (não acumula).",
+    "translation": "己方小队忍者受到[奥义]类攻击时[速度]提升[1.2%]，持续至下一回合结束（不可叠加）。"
+   }
+  },
+  "10190005": {
+   "ninjaName": {
+    "source": "Shisui Uchiha",
+    "translation": "宇智波止水"
+   },
+   "tips": {
+    "source": "Quando um companheiro recebe um ataque [Esotérico] sua [Velocidade] aumenta em 1.6% até o fim da próxima rodada (não acumula).",
+    "translation": "己方小队忍者受到[奥义]类攻击时[速度]提升[1.6%]，持续至下一回合结束（不可叠加）。"
+   }
+  },
+  "10190006": {
+   "ninjaName": {
+    "source": "Shisui Uchiha",
+    "translation": "宇智波止水"
+   },
+   "tips": {
+    "source": "Quando um companheiro recebe um ataque [Esotérico] sua [Velocidade] aumenta em 2% até o fim da próxima rodada (não acumula).",
+    "translation": "己方小队忍者受到[奥义]类攻击时[速度]提升[2%]，持续至下一回合结束（不可叠加）。"
+   }
+  },
+  "10190007": {
+   "ninjaName": {
+    "source": "Shisui Uchiha",
+    "translation": "宇智波止水"
+   },
+   "tips": {
+    "source": "Quando um companheiro recebe um ataque [Esotérico] sua [Velocidade] aumenta em 2.5% até o fim da próxima rodada (não acumula).",
+    "translation": "己方小队忍者受到[奥义]类攻击时[速度]提升[2.5%]，持续至下一回合结束（不可叠加）。"
+   }
+  },
+  "10190008": {
+   "ninjaName": {
+    "source": "Shisui Uchiha",
+    "translation": "宇智波止水"
+   },
+   "tips": {
+    "source": "Quando um companheiro recebe um ataque [Esotérico] sua [Velocidade] aumenta em 3% até o fim da próxima rodada (não acumula).",
+    "translation": "己方小队忍者受到[奥义]类攻击时[速度]提升[3%]，持续至下一回合结束（不可叠加）。"
+   }
+  },
+  "10360001": {
+   "ninjaName": {
+    "source": "Gengetsu Hozuki",
+    "translation": "鬼灯幻月"
+   },
+   "tips": {
+    "source": "Sempre que alguém de sua equipe se Esquiva, também recupera [2] pontos de Chakra.",
+    "translation": "己方小队[忍者]及[非忍者]单位每次闪避时，额外回复[2]点查克拉。"
+   },
+   "description": {
+    "source": "Chakra",
+    "translation": "查克拉"
+   }
+  },
+  "10360002": {
+   "ninjaName": {
+    "source": "Gengetsu Hozuki",
+    "translation": "鬼灯幻月"
+   },
+   "tips": {
+    "source": "Sempre que alguém de sua equipe se Esquiva, também recupera [3] pontos de Chakra.",
+    "translation": "己方小队[忍者]及[非忍者]单位每次闪避时，额外回复[3]点查克拉。"
+   },
+   "description": {
+    "source": "Chakra",
+    "translation": "查克拉"
+   }
+  },
+  "10360003": {
+   "ninjaName": {
+    "source": "Gengetsu Hozuki",
+    "translation": "鬼灯幻月"
+   },
+   "tips": {
+    "source": "Sempre que alguém de sua equipe se Esquiva, também recupera [4] pontos de Chakra.",
+    "translation": "己方小队[忍者]及[非忍者]单位每次闪避时，额外回复[4]点查克拉。"
+   },
+   "description": {
+    "source": "Chakra",
+    "translation": "查克拉"
+   }
+  },
+  "10360004": {
+   "ninjaName": {
+    "source": "Gengetsu Hozuki",
+    "translation": "鬼灯幻月"
+   },
+   "tips": {
+    "source": "Sempre que alguém de sua equipe se Esquiva, também recupera [5] pontos de Chakra.",
+    "translation": "己方小队[忍者]及[非忍者]单位每次闪避时，额外回复[5]点查克拉。"
+   },
+   "description": {
+    "source": "Chakra",
+    "translation": "查克拉"
+   }
+  },
+  "10360005": {
+   "ninjaName": {
+    "source": "Gengetsu Hozuki",
+    "translation": "鬼灯幻月"
+   },
+   "tips": {
+    "source": "Sempre que alguém de sua equipe se Esquiva, também recupera [6] pontos de Chakra.",
+    "translation": "己方小队[忍者]及[非忍者]单位每次闪避时，额外回复[6]点查克拉。"
+   },
+   "description": {
+    "source": "Chakra",
+    "translation": "查克拉"
+   }
+  },
+  "10360006": {
+   "ninjaName": {
+    "source": "Gengetsu Hozuki",
+    "translation": "鬼灯幻月"
+   },
+   "tips": {
+    "source": "Sempre que alguém de sua equipe se Esquiva, também recupera [7] pontos de Chakra.",
+    "translation": "己方小队[忍者]及[非忍者]单位每次闪避时，额外回复[7]点查克拉。"
+   },
+   "description": {
+    "source": "Chakra",
+    "translation": "查克拉"
+   }
+  },
+  "10360007": {
+   "ninjaName": {
+    "source": "Gengetsu Hozuki",
+    "translation": "鬼灯幻月"
+   },
+   "tips": {
+    "source": "Sempre que alguém de sua equipe se Esquiva, também recupera [8] pontos de Chakra.",
+    "translation": "己方小队[忍者]及[非忍者]单位每次闪避时，额外回复[8]点查克拉。"
+   },
+   "description": {
+    "source": "Chakra",
+    "translation": "查克拉"
+   }
+  },
+  "10360008": {
+   "ninjaName": {
+    "source": "Gengetsu Hozuki",
+    "translation": "鬼灯幻月"
+   },
+   "tips": {
+    "source": "Sempre que alguém de sua equipe se Esquiva, também recupera [10] pontos de Chakra.",
+    "translation": "己方小队[忍者]及[非忍者]单位每次闪避时，额外回复[10]点查克拉。"
+   },
+   "description": {
+    "source": "Chakra",
+    "translation": "查克拉"
+   }
+  },
+  "10530001": {
+   "ninjaName": {
+    "source": "Pain: Caminho Preta",
+    "translation": "佩恩·饿鬼道"
+   },
+   "tips": {
+    "source": "Para liberar [Esotérica], o Chakra consumido pelo ninja aliado com [Rinnegan] é reduzido em [2] pontos. Além disso, ao recuperar Chakra, recupera adicionalmente [2%] da vida dele.",
+    "translation": "己方小队[轮回眼]忍者[奥义]消耗查克拉降低[2]点，此外，回复查克拉时，额外恢复其[2%]的血量。"
+   },
+   "description": {
+    "source": "Chakra; Cura",
+    "translation": "查克拉;治疗"
+   }
+  },
+  "10530002": {
+   "ninjaName": {
+    "source": "Pain: Caminho Preta",
+    "translation": "佩恩·饿鬼道"
+   },
+   "tips": {
+    "source": "Para liberar [Esotérica], o Chakra consumido pelo ninja aliado com [Rinnegan] é reduzido em [4] pontos. Além disso, ao recuperar Chakra, recupera adicionalmente [2%] da vida dele.",
+    "translation": "己方小队[轮回眼]忍者[奥义]消耗查克拉降低[4]点，此外，回复查克拉时，额外恢复其[2%]的血量。"
+   },
+   "description": {
+    "source": "Chakra; Cura",
+    "translation": "查克拉;治疗"
+   }
+  },
+  "10530003": {
+   "ninjaName": {
+    "source": "Pain: Caminho Preta",
+    "translation": "佩恩·饿鬼道"
+   },
+   "tips": {
+    "source": "Para liberar [Esotérica], o Chakra consumido pelo ninja aliado com [Rinnegan] é reduzido em [4] pontos. Além disso, ao recuperar Chakra, recupera adicionalmente [4%] da vida dele.",
+    "translation": "己方小队[轮回眼]忍者[奥义]消耗查克拉降低[4]点，此外，回复查克拉时，额外恢复其[4%]的血量。"
+   },
+   "description": {
+    "source": "Chakra; Cura",
+    "translation": "查克拉;治疗"
+   }
+  },
+  "10530004": {
+   "ninjaName": {
+    "source": "Pain: Caminho Preta",
+    "translation": "佩恩·饿鬼道"
+   },
+   "tips": {
+    "source": "Para liberar [Esotérica], o Chakra consumido pelo ninja aliado com [Rinnegan] é reduzido em [6] pontos. Além disso, ao recuperar Chakra, recupera adicionalmente [4%] da vida dele.",
+    "translation": "己方小队[轮回眼]忍者[奥义]消耗查克拉降低[6]点，此外，回复查克拉时，额外恢复其[4%]的血量。"
+   },
+   "description": {
+    "source": "Chakra; Cura",
+    "translation": "查克拉;治疗"
+   }
+  },
+  "10530005": {
+   "ninjaName": {
+    "source": "Pain: Caminho Preta",
+    "translation": "佩恩·饿鬼道"
+   },
+   "tips": {
+    "source": "Para liberar [Esotérica], o Chakra consumido pelo ninja aliado com [Rinnegan] é reduzido em [6] pontos. Além disso, ao recuperar Chakra, recupera adicionalmente [6%] da vida dele.",
+    "translation": "己方小队[轮回眼]忍者[奥义]消耗查克拉降低[6]点，此外，回复查克拉时，额外恢复其[6%]的血量。"
+   },
+   "description": {
+    "source": "Chakra; Cura",
+    "translation": "查克拉;治疗"
+   }
+  },
+  "10530006": {
+   "ninjaName": {
+    "source": "Pain: Caminho Preta",
+    "translation": "佩恩·饿鬼道"
+   },
+   "tips": {
+    "source": "Para liberar [Esotérica], o Chakra consumido pelo ninja aliado com [Rinnegan] é reduzido em [8] pontos. Além disso, ao recuperar Chakra, recupera adicionalmente [6%] da vida dele.",
+    "translation": "己方小队[轮回眼]忍者[奥义]消耗查克拉降低[8]点，此外，回复查克拉时，额外恢复其[6%]的血量。"
+   },
+   "description": {
+    "source": "Chakra; Cura",
+    "translation": "查克拉;治疗"
+   }
+  },
+  "10530007": {
+   "ninjaName": {
+    "source": "Pain: Caminho Preta",
+    "translation": "佩恩·饿鬼道"
+   },
+   "tips": {
+    "source": "Para liberar [Esotérica], o Chakra consumido pelo ninja aliado com [Rinnegan] é reduzido em [8] pontos. Além disso, ao recuperar Chakra, recupera adicionalmente [8%] da vida dele.",
+    "translation": "己方小队[轮回眼]忍者[奥义]消耗查克拉降低[8]点，此外，回复查克拉时，额外恢复其[8%]的血量。"
+   },
+   "description": {
+    "source": "Chakra; Cura",
+    "translation": "查克拉;治疗"
+   }
+  },
+  "10530008": {
+   "ninjaName": {
+    "source": "Pain: Caminho Preta",
+    "translation": "佩恩·饿鬼道"
+   },
+   "tips": {
+    "source": "Para liberar [Esotérica], o Chakra consumido pelo ninja aliado com [Rinnegan] é reduzido em [10] pontos. Além disso, ao recuperar Chakra, recupera adicionalmente [10%] da vida dele.",
+    "translation": "己方小队[轮回眼]忍者[奥义]消耗查克拉降低[10]点，此外，回复查克拉时，额外恢复其[10%]的血量。"
+   },
+   "description": {
+    "source": "Chakra; Cura",
+    "translation": "查克拉;治疗"
+   }
+  },
+  "10060001": {
+   "ninjaName": {
+    "source": "Temari [Cúpula dos Cinco Kage]",
+    "translation": "手鞠[五影会谈]"
+   },
+   "tips": {
+    "source": "Aumenta o [Ataque] dos companheiros de Vento em [2%] e a [Defesa] em 3%.",
+    "translation": "己方小队[风属性]忍者[攻击]提升[2%]，[防御]提升[3%]。"
+   },
+   "description": {
+    "source": "Ataque; Defesa",
+    "translation": "攻击;防御"
+   }
+  },
+  "10060002": {
+   "ninjaName": {
+    "source": "Temari [Cúpula dos Cinco Kage]",
+    "translation": "手鞠[五影会谈]"
+   },
+   "tips": {
+    "source": "Aumenta o [Ataque] dos companheiros de Vento em [4%] e a [Defesa] em 6%.",
+    "translation": "己方小队[风属性]忍者[攻击]提升[4%]，[防御]提升[6%]。"
+   },
+   "description": {
+    "source": "Ataque; Defesa",
+    "translation": "攻击;防御"
+   }
+  },
+  "10060003": {
+   "ninjaName": {
+    "source": "Temari [Cúpula dos Cinco Kage]",
+    "translation": "手鞠[五影会谈]"
+   },
+   "tips": {
+    "source": "Aumenta o [Ataque] dos companheiros de Vento em [6%] e a [Defesa] em 9%.",
+    "translation": "己方小队[风属性]忍者[攻击]提升[6%]，[防御]提升[9%]。"
+   },
+   "description": {
+    "source": "Ataque; Defesa",
+    "translation": "攻击;防御"
+   }
+  },
+  "10060004": {
+   "ninjaName": {
+    "source": "Temari [Cúpula dos Cinco Kage]",
+    "translation": "手鞠[五影会谈]"
+   },
+   "tips": {
+    "source": "Aumenta o [Ataque] dos companheiros de Vento em [8%] e a [Defesa] em 12%.",
+    "translation": "己方小队[风属性]忍者[攻击]提升[8%]，[防御]提升[12%]。"
+   },
+   "description": {
+    "source": "Ataque; Defesa",
+    "translation": "攻击;防御"
+   }
+  },
+  "10060005": {
+   "ninjaName": {
+    "source": "Temari [Cúpula dos Cinco Kage]",
+    "translation": "手鞠[五影会谈]"
+   },
+   "tips": {
+    "source": "Aumenta o [Ataque] dos companheiros de Vento em [11%] e a [Defesa] em 16%.",
+    "translation": "己方小队[风属性]忍者[攻击]提升[11%]，[防御]提升[16%]。"
+   },
+   "description": {
+    "source": "Ataque; Defesa",
+    "translation": "攻击;防御"
+   }
+  },
+  "10060006": {
+   "ninjaName": {
+    "source": "Temari [Cúpula dos Cinco Kage]",
+    "translation": "手鞠[五影会谈]"
+   },
+   "tips": {
+    "source": "Aumenta o [Ataque] dos companheiros de Vento em [14%] e a [Defesa] em 20%.",
+    "translation": "己方小队[风属性]忍者[攻击]提升[14%]，[防御]提升[20%]。"
+   },
+   "description": {
+    "source": "Ataque; Defesa",
+    "translation": "攻击;防御"
+   }
+  },
+  "10060007": {
+   "ninjaName": {
+    "source": "Temari [Cúpula dos Cinco Kage]",
+    "translation": "手鞠[五影会谈]"
+   },
+   "tips": {
+    "source": "Aumenta o [Ataque] dos companheiros de Vento em [17%] e a [Defesa] em 25%.",
+    "translation": "己方小队[风属性]忍者[攻击]提升[17%]，[防御]提升[25%]。"
+   },
+   "description": {
+    "source": "Ataque; Defesa",
+    "translation": "攻击;防御"
+   }
+  },
+  "10060008": {
+   "ninjaName": {
+    "source": "Temari [Cúpula dos Cinco Kage]",
+    "translation": "手鞠[五影会谈]"
+   },
+   "tips": {
+    "source": "Aumenta o [Ataque] dos companheiros de Vento em [20%] e a [Defesa] em 30%.",
+    "translation": "己方小队[风属性]忍者[攻击]提升[20%]，[防御]提升[30%]。"
+   },
+   "description": {
+    "source": "Ataque; Defesa",
+    "translation": "攻击;防御"
+   }
+  },
+  "10230001": {
+   "ninjaName": {
+    "source": "Karin",
+    "translation": "香燐"
+   },
+   "tips": {
+    "source": "Cada vez que sua equipe causa [Queda], seu [Ataque] aumenta [1%].",
+    "translation": "己方小队忍者每次造成[倒地]时，成长自身[1%]的[攻击]。"
+   },
+   "description": {
+    "source": "Ataque; Ninjutsu",
+    "translation": "攻击;忍术"
+   }
+  },
+  "10230002": {
+   "ninjaName": {
+    "source": "Karin",
+    "translation": "香燐"
+   },
+   "tips": {
+    "source": "Cada vez que sua equipe causa [Queda], seu [Ataque] e [Ninjutsu] aumentam [1%].",
+    "translation": "己方小队忍者每次造成[倒地]时，成长自身[1%]的[攻击]和[忍术]。"
+   },
+   "description": {
+    "source": "Ataque; Ninjutsu",
+    "translation": "攻击;忍术"
+   }
+  },
+  "10230003": {
+   "ninjaName": {
+    "source": "Karin",
+    "translation": "香燐"
+   },
+   "tips": {
+    "source": "Cada vez que sua equipe causa [Queda], seu [Ataque] aumenta [2%] e o [Ninjutsu] [1%].",
+    "translation": "己方小队忍者每次造成[倒地]时，成长自身[2%]的[攻击]和[1%]的[忍术]。"
+   },
+   "description": {
+    "source": "Ataque; Ninjutsu",
+    "translation": "攻击;忍术"
+   }
+  },
+  "10230004": {
+   "ninjaName": {
+    "source": "Karin",
+    "translation": "香燐"
+   },
+   "tips": {
+    "source": "Cada vez que sua equipe causa [Queda], seu [Ataque] e [Ninjutsu] aumentam [2%].",
+    "translation": "己方小队忍者每次造成[倒地]时，成长自身[2%]的[攻击]和[忍术]。"
+   },
+   "description": {
+    "source": "Ataque; Ninjutsu",
+    "translation": "攻击;忍术"
+   }
+  },
+  "10230005": {
+   "ninjaName": {
+    "source": "Karin",
+    "translation": "香燐"
+   },
+   "tips": {
+    "source": "Cada vez que sua equipe causa [Queda], seu [Ataque] aumenta [3%] e o [Ninjutsu] [2%].",
+    "translation": "己方小队忍者每次造成[倒地]时，成长自身[3%]的[攻击]和[2%]的[忍术]。"
+   },
+   "description": {
+    "source": "Ataque; Ninjutsu",
+    "translation": "攻击;忍术"
+   }
+  },
+  "10230006": {
+   "ninjaName": {
+    "source": "Karin",
+    "translation": "香燐"
+   },
+   "tips": {
+    "source": "Cada vez que sua equipe causa [Queda], seu [Ataque] e [Ninjutsu] aumentam [3%].",
+    "translation": "己方小队忍者每次造成[倒地]时，成长自身[3%]的[攻击]和[忍术]。"
+   },
+   "description": {
+    "source": "Ataque; Ninjutsu",
+    "translation": "攻击;忍术"
+   }
+  },
+  "10230007": {
+   "ninjaName": {
+    "source": "Karin",
+    "translation": "香燐"
+   },
+   "tips": {
+    "source": "Cada vez que sua equipe causa [Queda], seu [Ataque] aumenta [4%] e o [Ninjutsu] [3%].",
+    "translation": "己方小队忍者每次造成[倒地]时，成长自身[4%]的[攻击]和[3%]的[忍术]。"
+   },
+   "description": {
+    "source": "Ataque; Ninjutsu",
+    "translation": "攻击;忍术"
+   }
+  },
+  "10230008": {
+   "ninjaName": {
+    "source": "Karin",
+    "translation": "香燐"
+   },
+   "tips": {
+    "source": "Cada vez que sua equipe causa [Queda], seu [Ataque] e [Ninjutsu] aumentam [4%].",
+    "translation": "己方小队忍者每次造成[倒地]时，成长自身[4%]的[攻击]和[忍术]。"
+   },
+   "description": {
+    "source": "Ataque; Ninjutsu",
+    "translation": "攻击;忍术"
+   }
+  },
+  "10400001": {
+   "ninjaName": {
+    "source": "Rin Nohara",
+    "translation": "野原琳"
+   },
+   "tips": {
+    "source": "A cura recebida por companheiros com [Roupa de Verão] e [Traje de Banho] aumenta [1%].",
+    "translation": "提升己方小队[夏装]及[泳装]忍者受治疗量[1%]。"
+   },
+   "description": {
+    "source": "Cura",
+    "translation": "治疗"
+   }
+  },
+  "10400002": {
+   "ninjaName": {
+    "source": "Rin Nohara",
+    "translation": "野原琳"
+   },
+   "tips": {
+    "source": "A cura recebida por companheiros com [Roupa de Verão] e [Traje de Banho] aumenta [3%].",
+    "translation": "提升己方小队[夏装]及[泳装]忍者受治疗量[3%]。"
+   },
+   "description": {
+    "source": "Cura",
+    "translation": "治疗"
+   }
+  },
+  "10400003": {
+   "ninjaName": {
+    "source": "Rin Nohara",
+    "translation": "野原琳"
+   },
+   "tips": {
+    "source": "A cura recebida por companheiros com [Roupa de Verão] e [Traje de Banho] aumenta [6%].",
+    "translation": "提升己方小队[夏装]及[泳装]忍者受治疗量[6%]。"
+   },
+   "description": {
+    "source": "Cura",
+    "translation": "治疗"
+   }
+  },
+  "10400004": {
+   "ninjaName": {
+    "source": "Rin Nohara",
+    "translation": "野原琳"
+   },
+   "tips": {
+    "source": "A cura recebida por companheiros com [Roupa de Verão] e [Traje de Banho] aumenta [9%].",
+    "translation": "提升己方小队[夏装]及[泳装]忍者受治疗量[9%]。"
+   },
+   "description": {
+    "source": "Cura",
+    "translation": "治疗"
+   }
+  },
+  "10400005": {
+   "ninjaName": {
+    "source": "Rin Nohara",
+    "translation": "野原琳"
+   },
+   "tips": {
+    "source": "A cura recebida por companheiros com [Roupa de Verão] e [Traje de Banho] aumenta [11%].",
+    "translation": "提升己方小队[夏装]及[泳装]忍者受治疗量[11%]。"
+   },
+   "description": {
+    "source": "Cura",
+    "translation": "治疗"
+   }
+  },
+  "10400006": {
+   "ninjaName": {
+    "source": "Rin Nohara",
+    "translation": "野原琳"
+   },
+   "tips": {
+    "source": "A cura recebida por companheiros com [Roupa de Verão] e [Traje de Banho] aumenta [13%].",
+    "translation": "提升己方小队[夏装]及[泳装]忍者受治疗量[13%]。"
+   },
+   "description": {
+    "source": "Cura",
+    "translation": "治疗"
+   }
+  },
+  "10400007": {
+   "ninjaName": {
+    "source": "Rin Nohara",
+    "translation": "野原琳"
+   },
+   "tips": {
+    "source": "A cura recebida por companheiros com [Roupa de Verão] e [Traje de Banho] aumenta [16%] e ganham [Imunidade a Status negativos].",
+    "translation": "己方小队[夏装]及[泳装]忍者提升受治疗量[16%]，并[免疫不良状态]。"
+   },
+   "description": {
+    "source": "Cura",
+    "translation": "治疗"
+   }
+  },
+  "10400008": {
+   "ninjaName": {
+    "source": "Rin Nohara",
+    "translation": "野原琳"
+   },
+   "tips": {
+    "source": "A cura recebida por companheiros com [Roupa de Verão] e [Traje de Banho] aumenta [18%] e ganham [Imunidade a Status negativos].",
+    "translation": "己方小队[夏装]及[泳装]忍者提升受治疗量[18%]，并[免疫不良状态]。"
+   },
+   "description": {
+    "source": "Cura",
+    "translation": "治疗"
+   }
+  },
+  "10100001": {
+   "ninjaName": {
+    "source": "Akatsuchi",
+    "translation": "赤土"
+   },
+   "tips": {
+    "source": "Aumenta o [Ataque] dos companheiros de Terra em [2%] e a [Defesa] em 3%.",
+    "translation": "己方小队[土属性]忍者[攻击]提升[2%]，[防御]提升[3%]。"
+   },
+   "description": {
+    "source": "Ataque; Defesa",
+    "translation": "攻击;防御"
+   }
+  },
+  "10100002": {
+   "ninjaName": {
+    "source": "Akatsuchi",
+    "translation": "赤土"
+   },
+   "tips": {
+    "source": "Aumenta o [Ataque] dos companheiros de Terra em [4%] e a [Defesa] em 6%.",
+    "translation": "己方小队[土属性]忍者[攻击]提升[4%]，[防御]提升[6%]。"
+   },
+   "description": {
+    "source": "Ataque; Defesa",
+    "translation": "攻击;防御"
+   }
+  },
+  "10100003": {
+   "ninjaName": {
+    "source": "Akatsuchi",
+    "translation": "赤土"
+   },
+   "tips": {
+    "source": "Aumenta o [Ataque] dos companheiros de Terra em [6%] e a [Defesa] em 9%.",
+    "translation": "己方小队[土属性]忍者[攻击]提升[6%]，[防御]提升[9%]。"
+   },
+   "description": {
+    "source": "Ataque; Defesa",
+    "translation": "攻击;防御"
+   }
+  },
+  "10100004": {
+   "ninjaName": {
+    "source": "Akatsuchi",
+    "translation": "赤土"
+   },
+   "tips": {
+    "source": "Aumenta o [Ataque] dos companheiros de Terra em [8%] e a [Defesa] em 12%.",
+    "translation": "己方小队[土属性]忍者[攻击]提升[8%]，[防御]提升[12%]。"
+   },
+   "description": {
+    "source": "Ataque; Defesa",
+    "translation": "攻击;防御"
+   }
+  },
+  "10100005": {
+   "ninjaName": {
+    "source": "Akatsuchi",
+    "translation": "赤土"
+   },
+   "tips": {
+    "source": "Aumenta o [Ataque] dos companheiros de Terra em [11%] e a [Defesa] em 16%.",
+    "translation": "己方小队[土属性]忍者[攻击]提升[11%]，[防御]提升[16%]。"
+   },
+   "description": {
+    "source": "Ataque; Defesa",
+    "translation": "攻击;防御"
+   }
+  },
+  "10100006": {
+   "ninjaName": {
+    "source": "Akatsuchi",
+    "translation": "赤土"
+   },
+   "tips": {
+    "source": "Aumenta o [Ataque] dos companheiros de Terra em [14%] e a [Defesa] em 20%.",
+    "translation": "己方小队[土属性]忍者[攻击]提升[14%]，[防御]提升[20%]。"
+   },
+   "description": {
+    "source": "Ataque; Defesa",
+    "translation": "攻击;防御"
+   }
+  },
+  "10100007": {
+   "ninjaName": {
+    "source": "Akatsuchi",
+    "translation": "赤土"
+   },
+   "tips": {
+    "source": "Aumenta o [Ataque] dos companheiros de Terra em [17%] e a [Defesa] em 25%.",
+    "translation": "己方小队[土属性]忍者[攻击]提升[17%]，[防御]提升[25%]。"
+   },
+   "description": {
+    "source": "Ataque; Defesa",
+    "translation": "攻击;防御"
+   }
+  },
+  "10100008": {
+   "ninjaName": {
+    "source": "Akatsuchi",
+    "translation": "赤土"
+   },
+   "tips": {
+    "source": "Aumenta o [Ataque] dos companheiros de Terra em [20%] e a [Defesa] em 30%.",
+    "translation": "己方小队[土属性]忍者[攻击]提升[20%]，[防御]提升[30%]。"
+   },
+   "description": {
+    "source": "Ataque; Defesa",
+    "translation": "攻击;防御"
+   }
+  },
+  "10270001": {
+   "ninjaName": {
+    "source": "Orochimaru - Ódio a Konoha (nv. 1)",
+    "translation": "大蛇丸[木叶的叛忍]"
+   },
+   "tips": {
+    "source": "O dano causado pela equipe a ninjas da [Folha] aumenta [3%].",
+    "translation": "己方小队忍者对[木叶]的忍者伤害提升[3%]。"
+   },
+   "description": {
+    "source": "Dano",
+    "translation": "伤害"
+   }
+  },
+  "10270002": {
+   "ninjaName": {
+    "source": "Orochimaru - Ódio a Konoha (nv. 2)",
+    "translation": "大蛇丸[木叶的叛忍]"
+   },
+   "tips": {
+    "source": "O dano causado pela equipe a ninjas da [Folha] aumenta [6%].",
+    "translation": "己方小队忍者对[木叶]的忍者伤害提升[6%]。"
+   },
+   "description": {
+    "source": "Dano",
+    "translation": "伤害"
+   }
+  },
+  "10270003": {
+   "ninjaName": {
+    "source": "Orochimaru - Ódio a Konoha (nv. 3)",
+    "translation": "大蛇丸[木叶的叛忍]"
+   },
+   "tips": {
+    "source": "O dano causado pela equipe a ninjas da [Folha] aumenta [9%].",
+    "translation": "己方小队忍者对[木叶]的忍者伤害提升[9%]。"
+   },
+   "description": {
+    "source": "Dano",
+    "translation": "伤害"
+   }
+  },
+  "10270004": {
+   "ninjaName": {
+    "source": "Orochimaru - Ódio a Konoha (nv. 4)",
+    "translation": "大蛇丸[木叶的叛忍]"
+   },
+   "tips": {
+    "source": "O dano causado pela equipe a ninjas da [Folha] aumenta [12%].",
+    "translation": "己方小队忍者对[木叶]的忍者伤害提升[12%]。"
+   },
+   "description": {
+    "source": "Dano",
+    "translation": "伤害"
+   }
+  },
+  "10270005": {
+   "ninjaName": {
+    "source": "Orochimaru - Ódio a Konoha (nv. 5)",
+    "translation": "大蛇丸[木叶的叛忍]"
+   },
+   "tips": {
+    "source": "O dano causado pela equipe a ninjas da [Folha] aumenta [16%].",
+    "translation": "己方小队忍者对[木叶]的忍者伤害提升[16%]。"
+   },
+   "description": {
+    "source": "Dano",
+    "translation": "伤害"
+   }
+  },
+  "10270006": {
+   "ninjaName": {
+    "source": "Orochimaru - Ódio a Konoha (nv. 6)",
+    "translation": "大蛇丸[木叶的叛忍]"
+   },
+   "tips": {
+    "source": "O dano causado pela equipe a ninjas da [Folha] aumenta [20%].",
+    "translation": "己方小队忍者对[木叶]的忍者伤害提升[20%]。"
+   },
+   "description": {
+    "source": "Dano",
+    "translation": "伤害"
+   }
+  },
+  "10270007": {
+   "ninjaName": {
+    "source": "Orochimaru - Ódio a Konoha (nv. 7)",
+    "translation": "大蛇丸[木叶的叛忍]"
+   },
+   "tips": {
+    "source": "O dano causado pela equipe a ninjas da [Folha] aumenta [25%].",
+    "translation": "己方小队忍者对[木叶]的忍者伤害提升[25%]。"
+   },
+   "description": {
+    "source": "Dano",
+    "translation": "伤害"
+   }
+  },
+  "10270008": {
+   "ninjaName": {
+    "source": "Orochimaru - Ódio a Konoha (nv. 8)",
+    "translation": "大蛇丸[木叶的叛忍]"
+   },
+   "tips": {
+    "source": "O dano causado pela equipe a ninjas da [Folha] aumenta [30%].",
+    "translation": "己方小队忍者对[木叶]的忍者伤害提升[30%]。"
+   },
+   "description": {
+    "source": "Dano",
+    "translation": "伤害"
+   }
+  },
+  "10440001": {
+   "ninjaName": {
+    "source": "Jinpachi Munashi",
+    "translation": "无梨甚八"
+   },
+   "tips": {
+    "source": "Para cada nível de [Status negativo] possuído por sua equipe, sua [Ataque] e [Ninjutsu] aumentam [2%].",
+    "translation": "己方小队忍者每拥有1层[不良状态]将提升自身[2%]的[攻击]及[忍术]。"
+   },
+   "description": {
+    "source": "Ataque; Ninjutsu",
+    "translation": "攻击;忍术"
+   }
+  },
+  "10440002": {
+   "ninjaName": {
+    "source": "Jinpachi Munashi",
+    "translation": "无梨甚八"
+   },
+   "tips": {
+    "source": "Para cada nível de [Status negativo] possuído por sua equipe, sua [Ataque] e [Ninjutsu] aumentam [4%].",
+    "translation": "己方小队忍者每拥有1层[不良状态]将提升自身[4%]的[攻击]及[忍术]。"
+   },
+   "description": {
+    "source": "Ataque; Ninjutsu",
+    "translation": "攻击;忍术"
+   }
+  },
+  "10440003": {
+   "ninjaName": {
+    "source": "Jinpachi Munashi",
+    "translation": "无梨甚八"
+   },
+   "tips": {
+    "source": "Para cada nível de [Status negativo] possuído por sua equipe, sua [Ataque] e [Ninjutsu] aumentam [6%].",
+    "translation": "己方小队忍者每拥有1层[不良状态]将提升自身[6%]的[攻击]及[忍术]。"
+   },
+   "description": {
+    "source": "Ataque; Ninjutsu",
+    "translation": "攻击;忍术"
+   }
+  },
+  "10440004": {
+   "ninjaName": {
+    "source": "Jinpachi Munashi",
+    "translation": "无梨甚八"
+   },
+   "tips": {
+    "source": "Para cada nível de [Status negativo] possuído por sua equipe, sua [Ataque] e [Ninjutsu] aumentam [8%].",
+    "translation": "己方小队忍者每拥有1层[不良状态]将提升自身[8%]的[攻击]及[忍术]。"
+   },
+   "description": {
+    "source": "Ataque; Ninjutsu",
+    "translation": "攻击;忍术"
+   }
+  },
+  "10440005": {
+   "ninjaName": {
+    "source": "Jinpachi Munashi",
+    "translation": "无梨甚八"
+   },
+   "tips": {
+    "source": "Para cada nível de [Status negativo] possuído por sua equipe, sua [Ataque] e [Ninjutsu] aumentam [10%].",
+    "translation": "己方小队忍者每拥有1层[不良状态]将提升自身[10%]的[攻击]及[忍术]。"
+   },
+   "description": {
+    "source": "Ataque; Ninjutsu",
+    "translation": "攻击;忍术"
+   }
+  },
+  "10440006": {
+   "ninjaName": {
+    "source": "Jinpachi Munashi",
+    "translation": "无梨甚八"
+   },
+   "tips": {
+    "source": "Para cada nível de [Status negativo] possuído por sua equipe, sua [Ataque] e [Ninjutsu] aumentam [12%].",
+    "translation": "己方小队忍者每拥有1层[不良状态]将提升自身[12%]的[攻击]及[忍术]。"
+   },
+   "description": {
+    "source": "Ataque; Ninjutsu",
+    "translation": "攻击;忍术"
+   }
+  },
+  "10440007": {
+   "ninjaName": {
+    "source": "Jinpachi Munashi",
+    "translation": "无梨甚八"
+   },
+   "tips": {
+    "source": "Para cada nível de [Status negativo] possuído por sua equipe, sua [Ataque] e [Ninjutsu] aumentam [14%].",
+    "translation": "己方小队忍者每拥有1层[不良状态]将提升自身[14%]的[攻击]及[忍术]。"
+   },
+   "description": {
+    "source": "Ataque; Ninjutsu",
+    "translation": "攻击;忍术"
+   }
+  },
+  "10440008": {
+   "ninjaName": {
+    "source": "Jinpachi Munashi",
+    "translation": "无梨甚八"
+   },
+   "tips": {
+    "source": "Para cada nível de [Status negativo] possuído por sua equipe, sua [Ataque] e [Ninjutsu] aumentam [16%].",
+    "translation": "己方小队忍者每拥有1层[不良状态]将提升自身[16%]的[攻击]及[忍术]。"
+   },
+   "description": {
+    "source": "Ataque; Ninjutsu",
+    "translation": "攻击;忍术"
+   }
+  },
+  "10140001": {
+   "ninjaName": {
+    "source": "Deidara",
+    "translation": "迪达拉"
+   },
+   "tips": {
+    "source": "Aumenta o Dano aos alvos com [Chamas] causado pelos companheiros em [3%].",
+    "translation": "己方小队忍者对[点燃]的目标伤害提升[3%]。"
+   },
+   "description": {
+    "source": "Dano",
+    "translation": "伤害"
+   }
+  },
+  "10140002": {
+   "ninjaName": {
+    "source": "Deidara",
+    "translation": "迪达拉"
+   },
+   "tips": {
+    "source": "Aumenta o Dano aos alvos com [Chamas] causado pelos companheiros em [6%].",
+    "translation": "己方小队忍者对[点燃]的目标伤害提升[6%]。"
+   },
+   "description": {
+    "source": "Dano",
+    "translation": "伤害"
+   }
+  },
+  "10140003": {
+   "ninjaName": {
+    "source": "Deidara",
+    "translation": "迪达拉"
+   },
+   "tips": {
+    "source": "Aumenta o Dano aos alvos com [Chamas] causado pelos companheiros em [9%].",
+    "translation": "己方小队忍者对[点燃]的目标伤害提升[9%]。"
+   },
+   "description": {
+    "source": "Dano",
+    "translation": "伤害"
+   }
+  },
+  "10140004": {
+   "ninjaName": {
+    "source": "Deidara",
+    "translation": "迪达拉"
+   },
+   "tips": {
+    "source": "Aumenta o Dano aos alvos com [Chamas] causado pelos companheiros em [12%].",
+    "translation": "己方小队忍者对[点燃]的目标伤害提升[12%]。"
+   },
+   "description": {
+    "source": "Dano",
+    "translation": "伤害"
+   }
+  },
+  "10140005": {
+   "ninjaName": {
+    "source": "Deidara",
+    "translation": "迪达拉"
+   },
+   "tips": {
+    "source": "Aumenta o Dano aos alvos com [Chamas] causado pelos companheiros em [16%].",
+    "translation": "己方小队忍者对[点燃]的目标伤害提升[16%]。"
+   },
+   "description": {
+    "source": "Dano",
+    "translation": "伤害"
+   }
+  },
+  "10140006": {
+   "ninjaName": {
+    "source": "Deidara",
+    "translation": "迪达拉"
+   },
+   "tips": {
+    "source": "Aumenta o Dano aos alvos com [Chamas] causado pelos companheiros em [20%].",
+    "translation": "己方小队忍者对[点燃]的目标伤害提升[20%]。"
+   },
+   "description": {
+    "source": "Dano",
+    "translation": "伤害"
+   }
+  },
+  "10140007": {
+   "ninjaName": {
+    "source": "Deidara",
+    "translation": "迪达拉"
+   },
+   "tips": {
+    "source": "Aumenta o Dano aos alvos com [Chamas] causado pelos companheiros em [25%].",
+    "translation": "己方小队忍者对[点燃]的目标伤害提升[25%]。"
+   },
+   "description": {
+    "source": "Dano",
+    "translation": "伤害"
+   }
+  },
+  "10140008": {
+   "ninjaName": {
+    "source": "Deidara",
+    "translation": "迪达拉"
+   },
+   "tips": {
+    "source": "Aumenta o Dano aos alvos com [Chamas] causado pelos companheiros em [30%].",
+    "translation": "己方小队忍者对[点燃]的目标伤害提升[30%]。"
+   },
+   "description": {
+    "source": "Dano",
+    "translation": "伤害"
+   }
+  },
+  "10310001": {
+   "ninjaName": {
+    "source": "Yamato",
+    "translation": "大和"
+   },
+   "tips": {
+    "source": "O dano causado pela equipe a ninjas [Jinchuuriki] aumenta [3%].",
+    "translation": "己方小队忍者对[人柱力]忍者伤害提升[3%]。"
+   },
+   "description": {
+    "source": "Dano",
+    "translation": "伤害"
+   }
+  },
+  "10310002": {
+   "ninjaName": {
+    "source": "Yamato",
+    "translation": "大和"
+   },
+   "tips": {
+    "source": "O dano causado pela equipe a ninjas [Jinchuuriki] aumenta [6%].",
+    "translation": "己方小队忍者对[人柱力]忍者伤害提升[6%]。"
+   },
+   "description": {
+    "source": "Dano",
+    "translation": "伤害"
+   }
+  },
+  "10310003": {
+   "ninjaName": {
+    "source": "Yamato",
+    "translation": "大和"
+   },
+   "tips": {
+    "source": "O dano causado pela equipe a ninjas [Jinchuuriki] aumenta [9%].",
+    "translation": "己方小队忍者对[人柱力]忍者伤害提升[9%]。"
+   },
+   "description": {
+    "source": "Dano",
+    "translation": "伤害"
+   }
+  },
+  "10310004": {
+   "ninjaName": {
+    "source": "Yamato",
+    "translation": "大和"
+   },
+   "tips": {
+    "source": "O dano causado pela equipe a ninjas [Jinchuuriki] aumenta [12%].",
+    "translation": "己方小队忍者对[人柱力]忍者伤害提升[12%]。"
+   },
+   "description": {
+    "source": "Dano",
+    "translation": "伤害"
+   }
+  },
+  "10310005": {
+   "ninjaName": {
+    "source": "Yamato",
+    "translation": "大和"
+   },
+   "tips": {
+    "source": "O dano causado pela equipe a ninjas [Jinchuuriki] aumenta [16%].",
+    "translation": "己方小队忍者对[人柱力]忍者伤害提升[16%]。"
+   },
+   "description": {
+    "source": "Dano",
+    "translation": "伤害"
+   }
+  },
+  "10310006": {
+   "ninjaName": {
+    "source": "Yamato",
+    "translation": "大和"
+   },
+   "tips": {
+    "source": "O dano causado pela equipe a ninjas [Jinchuuriki] aumenta [20%].",
+    "translation": "己方小队忍者对[人柱力]忍者伤害提升[20%]。"
+   },
+   "description": {
+    "source": "Dano",
+    "translation": "伤害"
+   }
+  },
+  "10310007": {
+   "ninjaName": {
+    "source": "Yamato",
+    "translation": "大和"
+   },
+   "tips": {
+    "source": "O dano causado pela equipe a ninjas [Jinchuuriki] aumenta [25%].",
+    "translation": "己方小队忍者对[人柱力]忍者伤害提升[25%]。"
+   },
+   "description": {
+    "source": "Dano",
+    "translation": "伤害"
+   }
+  },
+  "10310008": {
+   "ninjaName": {
+    "source": "Yamato",
+    "translation": "大和"
+   },
+   "tips": {
+    "source": "O dano causado pela equipe a ninjas [Jinchuuriki] aumenta [30%].",
+    "translation": "己方小队忍者对[人柱力]忍者伤害提升[30%]。"
+   },
+   "description": {
+    "source": "Dano",
+    "translation": "伤害"
+   }
+  },
+  "10480001": {
+   "ninjaName": {
+    "source": "Jirobo",
+    "translation": "次郎坊"
+   },
+   "tips": {
+    "source": "Na primeira vez que a equipe aliada sofrer dano de habilidade [Esotérica] em cada rodada, reduz o dano recebido em [2%].",
+    "translation": "使己方小队每回合受到的首次[奥义]类技能伤害降低[2%]。"
+   },
+   "description": {
+    "source": "Redução",
+    "translation": "减免"
+   }
+  },
+  "10480002": {
+   "ninjaName": {
+    "source": "Jirobo",
+    "translation": "次郎坊"
+   },
+   "tips": {
+    "source": "Na primeira vez que a equipe aliada sofrer dano de habilidade [Esotérica] em cada rodada, reduz o dano recebido em [4%].",
+    "translation": "使己方小队每回合受到的首次[奥义]类技能伤害降低[4%]。"
+   },
+   "description": {
+    "source": "Redução",
+    "translation": "减免"
+   }
+  },
+  "10480003": {
+   "ninjaName": {
+    "source": "Jirobo",
+    "translation": "次郎坊"
+   },
+   "tips": {
+    "source": "Na primeira vez que a equipe aliada sofrer dano de habilidade [Esotérica] em cada rodada, reduz o dano recebido em [6%].",
+    "translation": "使己方小队每回合受到的首次[奥义]类技能伤害降低[6%]。"
+   },
+   "description": {
+    "source": "Redução",
+    "translation": "减免"
+   }
+  },
+  "10480004": {
+   "ninjaName": {
+    "source": "Jirobo",
+    "translation": "次郎坊"
+   },
+   "tips": {
+    "source": "Na primeira vez que a equipe aliada sofrer dano de habilidade [Esotérica] em cada rodada, reduz o dano recebido em [8%].",
+    "translation": "使己方小队每回合受到的首次[奥义]类技能伤害降低[8%]。"
+   },
+   "description": {
+    "source": "Redução",
+    "translation": "减免"
+   }
+  },
+  "10480005": {
+   "ninjaName": {
+    "source": "Jirobo",
+    "translation": "次郎坊"
+   },
+   "tips": {
+    "source": "Na primeira vez que a equipe aliada sofrer dano de habilidade [Esotérica] em cada rodada, reduz o dano recebido em [11%].",
+    "translation": "使己方小队每回合受到的首次[奥义]类技能伤害降低[11%]。"
+   },
+   "description": {
+    "source": "Redução",
+    "translation": "减免"
+   }
+  },
+  "10480006": {
+   "ninjaName": {
+    "source": "Jirobo",
+    "translation": "次郎坊"
+   },
+   "tips": {
+    "source": "Na primeira vez que a equipe aliada sofrer dano de habilidade [Esotérica] em cada rodada, reduz o dano recebido em [14%].",
+    "translation": "使己方小队每回合受到的首次[奥义]类技能伤害降低[14%]。"
+   },
+   "description": {
+    "source": "Redução",
+    "translation": "减免"
+   }
+  },
+  "10480007": {
+   "ninjaName": {
+    "source": "Jirobo",
+    "translation": "次郎坊"
+   },
+   "tips": {
+    "source": "Na primeira vez que a equipe aliada sofrer dano de habilidade [Esotérica] em cada rodada, reduz o dano recebido em [17%].",
+    "translation": "使己方小队每回合受到的首次[奥义]类技能伤害降低[17%]。"
+   },
+   "description": {
+    "source": "Redução",
+    "translation": "减免"
+   }
+  },
+  "10480008": {
+   "ninjaName": {
+    "source": "Jirobo",
+    "translation": "次郎坊"
+   },
+   "tips": {
+    "source": "Na primeira vez que a equipe aliada sofrer dano de habilidade [Esotérica] em cada rodada, reduz o dano recebido em [20%].",
+    "translation": "使己方小队每回合受到的首次[奥义]类技能伤害降低[20%]。"
+   },
+   "description": {
+    "source": "Redução",
+    "translation": "减免"
+   }
+  },
+  "10010001": {
+   "ninjaName": {
+    "source": "Mei Terumi [Quinta Mizukage]",
+    "translation": "照美冥[五代水影]"
+   },
+   "tips": {
+    "source": "Aumenta o [Ninjutsu] dos companheiros de Água em [2%] e a [Resistência] em 3%.",
+    "translation": "己方小队[水属性]忍者[忍术]提升[2%]，[抗性]提升[3%]。"
+   },
+   "description": {
+    "source": "Ninjutsu; Resistência",
+    "translation": "忍术;抗性"
+   }
+  },
+  "10010002": {
+   "ninjaName": {
+    "source": "Mei Terumi [Quinta Mizukage]",
+    "translation": "照美冥[五代水影]"
+   },
+   "tips": {
+    "source": "Aumenta o [Ninjutsu] dos companheiros de Água em [4%] e a [Resistência] em 6%.",
+    "translation": "己方小队[水属性]忍者[忍术]提升[4%]，[抗性]提升[6%]。"
+   },
+   "description": {
+    "source": "Ninjutsu; Resistência",
+    "translation": "忍术;抗性"
+   }
+  },
+  "10010003": {
+   "ninjaName": {
+    "source": "Mei Terumi [Quinta Mizukage]",
+    "translation": "照美冥[五代水影]"
+   },
+   "tips": {
+    "source": "Aumenta o [Ninjutsu] dos companheiros de Água em [6%] e a [Resistência] em 9%.",
+    "translation": "己方小队[水属性]忍者[忍术]提升[6%]，[抗性]提升[9%]。"
+   },
+   "description": {
+    "source": "Ninjutsu; Resistência",
+    "translation": "忍术;抗性"
+   }
+  },
+  "10010004": {
+   "ninjaName": {
+    "source": "Mei Terumi [Quinta Mizukage]",
+    "translation": "照美冥[五代水影]"
+   },
+   "tips": {
+    "source": "Aumenta o [Ninjutsu] dos companheiros de Água em [8%] e a [Resistência] em 12%.",
+    "translation": "己方小队[水属性]忍者[忍术]提升[8%]，[抗性]提升[12%]。"
+   },
+   "description": {
+    "source": "Ninjutsu; Resistência",
+    "translation": "忍术;抗性"
+   }
+  },
+  "10010005": {
+   "ninjaName": {
+    "source": "Mei Terumi [Quinta Mizukage]",
+    "translation": "照美冥[五代水影]"
+   },
+   "tips": {
+    "source": "Aumenta o [Ninjutsu] dos companheiros de Água em [11%] e a [Resistência] em 16%.",
+    "translation": "己方小队[水属性]忍者[忍术]提升[11%]，[抗性]提升[16%]。"
+   },
+   "description": {
+    "source": "Ninjutsu; Resistência",
+    "translation": "忍术;抗性"
+   }
+  },
+  "10010006": {
+   "ninjaName": {
+    "source": "Mei Terumi [Quinta Mizukage]",
+    "translation": "照美冥[五代水影]"
+   },
+   "tips": {
+    "source": "Aumenta o [Ninjutsu] dos companheiros de Água em [14%] e a [Resistência] em 20%.",
+    "translation": "己方小队[水属性]忍者[忍术]提升[14%]，[抗性]提升[20%]。"
+   },
+   "description": {
+    "source": "Ninjutsu; Resistência",
+    "translation": "忍术;抗性"
+   }
+  },
+  "10010007": {
+   "ninjaName": {
+    "source": "Mei Terumi [Quinta Mizukage]",
+    "translation": "照美冥[五代水影]"
+   },
+   "tips": {
+    "source": "Aumenta o [Ninjutsu] dos companheiros de Água em [17%] e a [Resistência] em 25%.",
+    "translation": "己方小队[水属性]忍者[忍术]提升[17%]，[抗性]提升[25%]。"
+   },
+   "description": {
+    "source": "Ninjutsu; Resistência",
+    "translation": "忍术;抗性"
+   }
+  },
+  "10010008": {
+   "ninjaName": {
+    "source": "Mei Terumi [Quinta Mizukage]",
+    "translation": "照美冥[五代水影]"
+   },
+   "tips": {
+    "source": "Aumenta o [Ninjutsu] dos companheiros de Água em [20%] e a [Resistência] em 30%.",
+    "translation": "己方小队[水属性]忍者[忍术]提升[20%]，[抗性]提升[30%]。"
+   },
+   "description": {
+    "source": "Ninjutsu; Resistência",
+    "translation": "忍术;抗性"
+   }
+  },
+  "10180001": {
+   "ninjaName": {
+    "source": "Kotetsu Hagane",
+    "translation": "钢子铁"
+   },
+   "tips": {
+    "source": "O dano de [Perseguição] de sua equipe aumenta [4%]",
+    "translation": "己方小队忍者[追打]伤害提升[4%]。"
+   },
+   "description": {
+    "source": "Dano",
+    "translation": "伤害"
+   }
+  },
+  "10180002": {
+   "ninjaName": {
+    "source": "Kotetsu Hagane",
+    "translation": "钢子铁"
+   },
+   "tips": {
+    "source": "O dano de [Perseguição] de sua equipe aumenta [8%]",
+    "translation": "己方小队忍者[追打]伤害提升[8%]。"
+   },
+   "description": {
+    "source": "Dano",
+    "translation": "伤害"
+   }
+  },
+  "10180003": {
+   "ninjaName": {
+    "source": "Kotetsu Hagane",
+    "translation": "钢子铁"
+   },
+   "tips": {
+    "source": "O dano de [Perseguição] de sua equipe aumenta [12%]",
+    "translation": "己方小队忍者[追打]伤害提升[12%]。"
+   },
+   "description": {
+    "source": "Dano",
+    "translation": "伤害"
+   }
+  },
+  "10180004": {
+   "ninjaName": {
+    "source": "Kotetsu Hagane",
+    "translation": "钢子铁"
+   },
+   "tips": {
+    "source": "O dano de [Perseguição] de sua equipe aumenta [18%]",
+    "translation": "己方小队忍者[追打]伤害提升[18%]。"
+   },
+   "description": {
+    "source": "Dano",
+    "translation": "伤害"
+   }
+  },
+  "10180005": {
+   "ninjaName": {
+    "source": "Kotetsu Hagane",
+    "translation": "钢子铁"
+   },
+   "tips": {
+    "source": "O dano de [Perseguição] de sua equipe aumenta [24%]",
+    "translation": "己方小队忍者[追打]伤害提升[24%]。"
+   },
+   "description": {
+    "source": "Dano",
+    "translation": "伤害"
+   }
+  },
+  "10180006": {
+   "ninjaName": {
+    "source": "Kotetsu Hagane",
+    "translation": "钢子铁"
+   },
+   "tips": {
+    "source": "O dano de [Perseguição] de sua equipe aumenta [32%]",
+    "translation": "己方小队忍者[追打]伤害提升[32%]。"
+   },
+   "description": {
+    "source": "Dano",
+    "translation": "伤害"
+   }
+  },
+  "10180007": {
+   "ninjaName": {
+    "source": "Kotetsu Hagane",
+    "translation": "钢子铁"
+   },
+   "tips": {
+    "source": "O dano de [Perseguição] de sua equipe aumenta [40%]",
+    "translation": "己方小队忍者[追打]伤害提升[40%]。"
+   },
+   "description": {
+    "source": "Dano",
+    "translation": "伤害"
+   }
+  },
+  "10180008": {
+   "ninjaName": {
+    "source": "Kotetsu Hagane",
+    "translation": "钢子铁"
+   },
+   "tips": {
+    "source": "O dano de [Perseguição] de sua equipe aumenta [50%]",
+    "translation": "己方小队忍者[追打]伤害提升[50%]。"
+   },
+   "description": {
+    "source": "Dano",
+    "translation": "伤害"
+   }
+  },
+  "10350001": {
+   "ninjaName": {
+    "source": "Mu",
+    "translation": "无"
+   },
+   "tips": {
+    "source": "A [Esotérica] de seus [ninjas] tem o dano aumentado em [2%] e, sempre que é lançada, recupera [2] de Chakra.",
+    "translation": "己方小队[忍者]的[奥义]类技能提升[2%]的伤害，且每次释放[奥义]类技能将回复[2]点查克拉。"
+   },
+   "description": {
+    "source": "Dano; Chakra",
+    "translation": "伤害;查克拉"
+   }
+  },
+  "10350002": {
+   "ninjaName": {
+    "source": "Mu",
+    "translation": "无"
+   },
+   "tips": {
+    "source": "A [Esotérica] de seus [ninjas] tem o dano aumentado em [2%] e, sempre que é lançada, recupera [4] de Chakra.",
+    "translation": "己方小队[忍者]的[奥义]类技能提升[2%]的伤害，且每次释放[奥义]类技能将回复[4]点查克拉。"
+   },
+   "description": {
+    "source": "Dano; Chakra",
+    "translation": "伤害;查克拉"
+   }
+  },
+  "10350003": {
+   "ninjaName": {
+    "source": "Mu",
+    "translation": "无"
+   },
+   "tips": {
+    "source": "A [Esotérica] de seus [ninjas] tem o dano aumentado em [4%] e, sempre que é lançada, recupera [4] de Chakra.",
+    "translation": "己方小队[忍者]的[奥义]类技能提升[4%]的伤害，且每次释放[奥义]类技能将回复[4]点查克拉。"
+   },
+   "description": {
+    "source": "Dano; Chakra",
+    "translation": "伤害;查克拉"
+   }
+  },
+  "10350004": {
+   "ninjaName": {
+    "source": "Mu",
+    "translation": "无"
+   },
+   "tips": {
+    "source": "A [Esotérica] de seus [ninjas] tem o dano aumentado em [4%] e, sempre que é lançada, recupera [6] de Chakra.",
+    "translation": "己方小队[忍者]的[奥义]类技能提升[4%]的伤害，且每次释放[奥义]类技能将回复[6]点查克拉。"
+   },
+   "description": {
+    "source": "Dano; Chakra",
+    "translation": "伤害;查克拉"
+   }
+  },
+  "10350005": {
+   "ninjaName": {
+    "source": "Mu",
+    "translation": "无"
+   },
+   "tips": {
+    "source": "A [Esotérica] de seus [ninjas] tem o dano aumentado em [6%] e, sempre que é lançada, recupera [6] de Chakra.",
+    "translation": "己方小队[忍者]的[奥义]类技能提升[6%]的伤害，且每次释放[奥义]类技能将回复[6]点查克拉。"
+   },
+   "description": {
+    "source": "Dano; Chakra",
+    "translation": "伤害;查克拉"
+   }
+  },
+  "10350006": {
+   "ninjaName": {
+    "source": "Mu",
+    "translation": "无"
+   },
+   "tips": {
+    "source": "A [Esotérica] de seus [ninjas] tem o dano aumentado em [6%] e, sempre que é lançada, recupera [8] de Chakra.",
+    "translation": "己方小队[忍者]的[奥义]类技能提升[6%]的伤害，且每次释放[奥义]类技能将回复[8]点查克拉。"
+   },
+   "description": {
+    "source": "Dano; Chakra",
+    "translation": "伤害;查克拉"
+   }
+  },
+  "10350007": {
+   "ninjaName": {
+    "source": "Mu",
+    "translation": "无"
+   },
+   "tips": {
+    "source": "A [Esotérica] de seus [ninjas] tem o dano aumentado em [8%] e, sempre que é lançada, recupera [8] de Chakra.",
+    "translation": "己方小队[忍者]的[奥义]类技能提升[8%]的伤害，且每次释放[奥义]类技能将回复[8]点查克拉。"
+   },
+   "description": {
+    "source": "Dano; Chakra",
+    "translation": "伤害;查克拉"
+   }
+  },
+  "10350008": {
+   "ninjaName": {
+    "source": "Mu",
+    "translation": "无"
+   },
+   "tips": {
+    "source": "A [Esotérica] de seus [ninjas] tem o dano aumentado em [10%] e, sempre que é lançada, recupera [10] de Chakra.",
+    "translation": "己方小队[忍者]的[奥义]类技能提升[10%]的伤害，且每次释放[奥义]类技能将回复[10]点查克拉。"
+   },
+   "description": {
+    "source": "Dano; Chakra",
+    "translation": "伤害;查克拉"
+   }
+  },
+  "10520001": {
+   "ninjaName": {
+    "source": "Chiyo [Dez Marionetes de Chikamatsu]",
+    "translation": "千代婆婆[近松十人卫]"
+   },
+   "tips": {
+    "source": "Sempre que a equipe aliada usar a habilidade, o dano de [Perseguição] de todos os membros aumenta em [1%] durante a rodada (acumula até [4] vezes).",
+    "translation": "己方小队每次使用技能时，小队全体将在回合内提升[1%]的[追打]类技能伤害（至多叠加[4]层）。"
+   },
+   "description": {
+    "source": "Dano",
+    "translation": "伤害"
+   }
+  },
+  "10520002": {
+   "ninjaName": {
+    "source": "Chiyo [Dez Marionetes de Chikamatsu]",
+    "translation": "千代婆婆[近松十人卫]"
+   },
+   "tips": {
+    "source": "Sempre que a equipe aliada usar a habilidade, o dano de [Perseguição] de todos os membros aumenta em [2%] durante a rodada (acumula até [4] vezes).",
+    "translation": "己方小队每次使用技能时，小队全体将在回合内提升[2%]的[追打]类技能伤害（至多叠加[4]层）。"
+   },
+   "description": {
+    "source": "Dano",
+    "translation": "伤害"
+   }
+  },
+  "10520003": {
+   "ninjaName": {
+    "source": "Chiyo [Dez Marionetes de Chikamatsu]",
+    "translation": "千代婆婆[近松十人卫]"
+   },
+   "tips": {
+    "source": "Sempre que a equipe aliada usar a habilidade, o dano de [Perseguição] de todos os membros aumenta em [3%] durante a rodada (acumula até [4] vezes).",
+    "translation": "己方小队每次使用技能时，小队全体将在回合内提升[3%]的[追打]类技能伤害（至多叠加[4]层）。"
+   },
+   "description": {
+    "source": "Dano",
+    "translation": "伤害"
+   }
+  },
+  "10520004": {
+   "ninjaName": {
+    "source": "Chiyo [Dez Marionetes de Chikamatsu]",
+    "translation": "千代婆婆[近松十人卫]"
+   },
+   "tips": {
+    "source": "Sempre que a equipe aliada usar a habilidade, o dano de [Perseguição] de todos os membros aumenta em [4%] durante a rodada (acumula até [4] vezes).",
+    "translation": "己方小队每次使用技能时，小队全体将在回合内提升[4%]的[追打]类技能伤害（至多叠加[4]层）。"
+   },
+   "description": {
+    "source": "Dano",
+    "translation": "伤害"
+   }
+  },
+  "10520005": {
+   "ninjaName": {
+    "source": "Chiyo [Dez Marionetes de Chikamatsu]",
+    "translation": "千代婆婆[近松十人卫]"
+   },
+   "tips": {
+    "source": "Sempre que a equipe aliada usar a habilidade, o dano de [Perseguição] de todos os membros aumenta em [5%] durante a rodada (acumula até [4] vezes).",
+    "translation": "己方小队每次使用技能时，小队全体将在回合内提升[5%]的[追打]类技能伤害（至多叠加[4]层）。"
+   },
+   "description": {
+    "source": "Dano",
+    "translation": "伤害"
+   }
+  },
+  "10520006": {
+   "ninjaName": {
+    "source": "Chiyo [Dez Marionetes de Chikamatsu]",
+    "translation": "千代婆婆[近松十人卫]"
+   },
+   "tips": {
+    "source": "Sempre que a equipe aliada usar a habilidade, o dano de [Perseguição] de todos os membros aumenta em [6%] durante a rodada (acumula até [4] vezes).",
+    "translation": "己方小队每次使用技能时，小队全体将在回合内提升[6%]的[追打]类技能伤害（至多叠加[4]层）。"
+   },
+   "description": {
+    "source": "Dano",
+    "translation": "伤害"
+   }
+  },
+  "10520007": {
+   "ninjaName": {
+    "source": "Chiyo [Dez Marionetes de Chikamatsu]",
+    "translation": "千代婆婆[近松十人卫]"
+   },
+   "tips": {
+    "source": "Sempre que a equipe aliada usar a habilidade, o dano de [Perseguição] de todos os membros aumenta em [7%] durante a rodada (acumula até [4] vezes) com [Imunidade a Status negativos].",
+    "translation": "己方小队每次使用技能时，小队全体将在回合内提升[7%]的[追打]类技能伤害（至多叠加[4]层），并[免疫不良状态]。"
+   },
+   "description": {
+    "source": "Dano",
+    "translation": "伤害"
+   }
+  },
+  "10520008": {
+   "ninjaName": {
+    "source": "Chiyo [Dez Marionetes de Chikamatsu]",
+    "translation": "千代婆婆[近松十人卫]"
+   },
+   "tips": {
+    "source": "Sempre que a equipe aliada usar a habilidade, o dano de [Perseguição] de todos os membros aumenta em [8%] durante a rodada (acumula até [4] vezes) com [Imunidade a Status negativos].",
+    "translation": "己方小队每次使用技能时，小队全体将在回合内提升[8%]的[追打]类技能伤害（至多叠加[4]层），并[免疫不良状态]。"
+   },
+   "description": {
+    "source": "Dano",
+    "translation": "伤害"
+   }
+  },
+  "10050001": {
+   "ninjaName": {
+    "source": "Gaara [Quinto Kazekage]",
+    "translation": "我爱罗[五代风影]"
+   },
+   "tips": {
+    "source": "Aumenta o [Ninjutsu] dos companheiros de Vento em [2%] e a [Resistência] em 3%.",
+    "translation": "己方小队[风属性]忍者[忍术]提升[2%]，[抗性]提升[3%]。"
+   },
+   "description": {
+    "source": "Ninjutsu; Resistência",
+    "translation": "忍术;抗性"
+   }
+  },
+  "10050002": {
+   "ninjaName": {
+    "source": "Gaara [Quinto Kazekage]",
+    "translation": "我爱罗[五代风影]"
+   },
+   "tips": {
+    "source": "Aumenta o [Ninjutsu] dos companheiros de Vento em [4%] e a [Resistência] em 6%.",
+    "translation": "己方小队[风属性]忍者[忍术]提升[4%]，[抗性]提升[6%]。"
+   },
+   "description": {
+    "source": "Ninjutsu; Resistência",
+    "translation": "忍术;抗性"
+   }
+  },
+  "10050003": {
+   "ninjaName": {
+    "source": "Gaara [Quinto Kazekage]",
+    "translation": "我爱罗[五代风影]"
+   },
+   "tips": {
+    "source": "Aumenta o [Ninjutsu] dos companheiros de Vento em [6%] e a [Resistência] em 9%.",
+    "translation": "己方小队[风属性]忍者[忍术]提升[6%]，[抗性]提升[9%]。"
+   },
+   "description": {
+    "source": "Ninjutsu; Resistência",
+    "translation": "忍术;抗性"
+   }
+  },
+  "10050004": {
+   "ninjaName": {
+    "source": "Gaara [Quinto Kazekage]",
+    "translation": "我爱罗[五代风影]"
+   },
+   "tips": {
+    "source": "Aumenta o [Ninjutsu] dos companheiros de Vento em [8%] e a [Resistência] em 12%.",
+    "translation": "己方小队[风属性]忍者[忍术]提升[8%]，[抗性]提升[12%]。"
+   },
+   "description": {
+    "source": "Ninjutsu; Resistência",
+    "translation": "忍术;抗性"
+   }
+  },
+  "10050005": {
+   "ninjaName": {
+    "source": "Gaara [Quinto Kazekage]",
+    "translation": "我爱罗[五代风影]"
+   },
+   "tips": {
+    "source": "Aumenta o [Ninjutsu] dos companheiros de Vento em [11%] e a [Resistência] em 16%.",
+    "translation": "己方小队[风属性]忍者[忍术]提升[11%]，[抗性]提升[16%]。"
+   },
+   "description": {
+    "source": "Ninjutsu; Resistência",
+    "translation": "忍术;抗性"
+   }
+  },
+  "10050006": {
+   "ninjaName": {
+    "source": "Gaara [Quinto Kazekage]",
+    "translation": "我爱罗[五代风影]"
+   },
+   "tips": {
+    "source": "Aumenta o [Ninjutsu] dos companheiros de Vento em [14%] e a [Resistência] em 20%.",
+    "translation": "己方小队[风属性]忍者[忍术]提升[14%]，[抗性]提升[20%]。"
+   },
+   "description": {
+    "source": "Ninjutsu; Resistência",
+    "translation": "忍术;抗性"
+   }
+  },
+  "10050007": {
+   "ninjaName": {
+    "source": "Gaara [Quinto Kazekage]",
+    "translation": "我爱罗[五代风影]"
+   },
+   "tips": {
+    "source": "Aumenta o [Ninjutsu] dos companheiros de Vento em [17%] e a [Resistência] em 25%.",
+    "translation": "己方小队[风属性]忍者[忍术]提升[17%]，[抗性]提升[25%]。"
+   },
+   "description": {
+    "source": "Ninjutsu; Resistência",
+    "translation": "忍术;抗性"
+   }
+  },
+  "10050008": {
+   "ninjaName": {
+    "source": "Gaara [Quinto Kazekage]",
+    "translation": "我爱罗[五代风影]"
+   },
+   "tips": {
+    "source": "Aumenta o [Ninjutsu] dos companheiros de Vento em [20%] e a [Resistência] em 30%.",
+    "translation": "己方小队[风属性]忍者[忍术]提升[20%]，[抗性]提升[30%]。"
+   },
+   "description": {
+    "source": "Ninjutsu; Resistência",
+    "translation": "忍术;抗性"
+   }
+  },
+  "10220001": {
+   "ninjaName": {
+    "source": "Jugo",
+    "translation": "重吾"
+   },
+   "tips": {
+    "source": "Cada vez que sua equipe causa [Voo] seu [Ataque] aumenta [1%].",
+    "translation": "己方小队忍者每次造成[大浮空]时，成长自身[1%]的[攻击]。"
+   },
+   "description": {
+    "source": "Ataque; Ninjutsu",
+    "translation": "攻击;忍术"
+   }
+  },
+  "10220002": {
+   "ninjaName": {
+    "source": "Jugo",
+    "translation": "重吾"
+   },
+   "tips": {
+    "source": "Cada vez que sua equipe causa [Voo] seu [Ataque] e [Ninjutsu] aumentam [1%].",
+    "translation": "己方小队忍者每次造成[大浮空]时，成长自身[1%]的[攻击]和[忍术]。"
+   },
+   "description": {
+    "source": "Ataque; Ninjutsu",
+    "translation": "攻击;忍术"
+   }
+  },
+  "10220003": {
+   "ninjaName": {
+    "source": "Jugo",
+    "translation": "重吾"
+   },
+   "tips": {
+    "source": "Cada vez que sua equipe causa [Voo] seu [Ataque] aumenta [2%] e o [Ninjutsu] [1%].",
+    "translation": "己方小队忍者每次造成[大浮空]时，成长自身[2%]的[攻击]和[1%]的[忍术]。"
+   },
+   "description": {
+    "source": "Ataque; Ninjutsu",
+    "translation": "攻击;忍术"
+   }
+  },
+  "10220004": {
+   "ninjaName": {
+    "source": "Jugo",
+    "translation": "重吾"
+   },
+   "tips": {
+    "source": "Cada vez que sua equipe causa [Voo] seu [Ataque] e [Ninjutsu] aumentam [2%].",
+    "translation": "己方小队忍者每次造成[大浮空]时，成长自身[2%]的[攻击]和[忍术]。"
+   },
+   "description": {
+    "source": "Ataque; Ninjutsu",
+    "translation": "攻击;忍术"
+   }
+  },
+  "10220005": {
+   "ninjaName": {
+    "source": "Jugo",
+    "translation": "重吾"
+   },
+   "tips": {
+    "source": "Cada vez que sua equipe causa [Voo] seu [Ataque] aumenta [3%] e o [Ninjutsu] [2%].",
+    "translation": "己方小队忍者每次造成[大浮空]时，成长自身[3%]的[攻击]和[2%]的[忍术]。"
+   },
+   "description": {
+    "source": "Ataque; Ninjutsu",
+    "translation": "攻击;忍术"
+   }
+  },
+  "10220006": {
+   "ninjaName": {
+    "source": "Jugo",
+    "translation": "重吾"
+   },
+   "tips": {
+    "source": "Cada vez que sua equipe causa [Voo] seu [Ataque] e [Ninjutsu] aumentam [3%].",
+    "translation": "己方小队忍者每次造成[大浮空]时，成长自身[3%]的[攻击]和[忍术]。"
+   },
+   "description": {
+    "source": "Ataque; Ninjutsu",
+    "translation": "攻击;忍术"
+   }
+  },
+  "10220007": {
+   "ninjaName": {
+    "source": "Jugo",
+    "translation": "重吾"
+   },
+   "tips": {
+    "source": "Cada vez que sua equipe causa [Voo] seu [Ataque] aumenta [4%] e o [Ninjutsu] [3%].",
+    "translation": "己方小队忍者每次造成[大浮空]时，成长自身[4%]的[攻击]和[3%]的[忍术]。"
+   },
+   "description": {
+    "source": "Ataque; Ninjutsu",
+    "translation": "攻击;忍术"
+   }
+  },
+  "10220008": {
+   "ninjaName": {
+    "source": "Jugo",
+    "translation": "重吾"
+   },
+   "tips": {
+    "source": "Cada vez que sua equipe causa [Voo] seu [Ataque] e [Ninjutsu] aumentam [4%].",
+    "translation": "己方小队忍者每次造成[大浮空]时，成长自身[4%]的[攻击]和[忍术]。"
+   },
+   "description": {
+    "source": "Ataque; Ninjutsu",
+    "translation": "攻击;忍术"
+   }
+  },
+  "10390001": {
+   "ninjaName": {
+    "source": "Inoichi Yamanaka",
+    "translation": "山中亥一"
+   },
+   "tips": {
+    "source": "Quando ninjas com [Habilidade Secreta] do seu equipe usa habilidade de [tipo gatilho], recupera [1%] de Vida.",
+    "translation": "己方小队[秘传技]忍者使用[触发]类技能时，回复自身最大生命值[1%]的血量。"
+   },
+   "description": {
+    "source": "Cura",
+    "translation": "治疗"
+   }
+  },
+  "10390002": {
+   "ninjaName": {
+    "source": "Inoichi Yamanaka",
+    "translation": "山中亥一"
+   },
+   "tips": {
+    "source": "Quando ninjas com [Habilidade Secreta] do seu equipe usa habilidade de [tipo gatilho], recupera [3%] de Vida.",
+    "translation": "己方小队[秘传技]忍者使用[触发]类技能时，回复自身最大生命值[3%]的血量。"
+   },
+   "description": {
+    "source": "Cura",
+    "translation": "治疗"
+   }
+  },
+  "10390003": {
+   "ninjaName": {
+    "source": "Inoichi Yamanaka",
+    "translation": "山中亥一"
+   },
+   "tips": {
+    "source": "Quando ninjas com [Habilidade Secreta] do seu equipe usa habilidade de [tipo gatilho], recupera [5%] de Vida.",
+    "translation": "己方小队[秘传技]忍者使用[触发]类技能时，回复自身最大生命值[5%]的血量。"
+   },
+   "description": {
+    "source": "Cura",
+    "translation": "治疗"
+   }
+  },
+  "10390004": {
+   "ninjaName": {
+    "source": "Inoichi Yamanaka",
+    "translation": "山中亥一"
+   },
+   "tips": {
+    "source": "Quando ninjas com [Habilidade Secreta] do seu equipe usa habilidade de [tipo gatilho], recupera [7%] de Vida.",
+    "translation": "己方小队[秘传技]忍者使用[触发]类技能时，回复自身最大生命值[7%]的血量。"
+   },
+   "description": {
+    "source": "Cura",
+    "translation": "治疗"
+   }
+  },
+  "10390005": {
+   "ninjaName": {
+    "source": "Inoichi Yamanaka",
+    "translation": "山中亥一"
+   },
+   "tips": {
+    "source": "Quando ninjas com [Habilidade Secreta] do seu equipe usa habilidade de [tipo gatilho], recupera [9%] de Vida.",
+    "translation": "己方小队[秘传技]忍者使用[触发]类技能时，回复自身最大生命值[9%]的血量。"
+   },
+   "description": {
+    "source": "Cura",
+    "translation": "治疗"
+   }
+  },
+  "10390006": {
+   "ninjaName": {
+    "source": "Inoichi Yamanaka",
+    "translation": "山中亥一"
+   },
+   "tips": {
+    "source": "Quando ninjas com [Habilidade Secreta] do seu equipe usa habilidade de [tipo gatilho], recupera [11%] de Vida.",
+    "translation": "己方小队[秘传技]忍者使用[触发]类技能时，回复自身最大生命值[11%]的血量。"
+   },
+   "description": {
+    "source": "Cura",
+    "translation": "治疗"
+   }
+  },
+  "10390007": {
+   "ninjaName": {
+    "source": "Inoichi Yamanaka",
+    "translation": "山中亥一"
+   },
+   "tips": {
+    "source": "Quando ninjas com [Habilidade Secreta] do seu equipe usa habilidade de [tipo gatilho], recupera [13%] de Vida.",
+    "translation": "己方小队[秘传技]忍者使用[触发]类技能时，回复自身最大生命值[13%]的血量。"
+   },
+   "description": {
+    "source": "Cura",
+    "translation": "治疗"
+   }
+  },
+  "10390008": {
+   "ninjaName": {
+    "source": "Inoichi Yamanaka",
+    "translation": "山中亥一"
+   },
+   "tips": {
+    "source": "Quando ninjas com [Habilidade Secreta] do seu equipe usa habilidade de [tipo gatilho], recupera [15%] de Vida.",
+    "translation": "己方小队[秘传技]忍者使用[触发]类技能时，回复自身最大生命值[15%]的血量。"
+   },
+   "description": {
+    "source": "Cura",
+    "translation": "治疗"
+   }
+  },
+  "10090001": {
+   "ninjaName": {
+    "source": "Ohnoki [Terceiro Tsuchikage]",
+    "translation": "大野木[三代土影]"
+   },
+   "tips": {
+    "source": "Aumenta o [Ninjutsu] dos companheiros de Terra em [2%] e a [Resistência] em 3%.",
+    "translation": "己方小队[土属性]忍者[忍术]提升[2%]，[抗性]提升[3%]。"
+   },
+   "description": {
+    "source": "Ninjutsu; Resistência",
+    "translation": "忍术;抗性"
+   }
+  },
+  "10090002": {
+   "ninjaName": {
+    "source": "Ohnoki [Terceiro Tsuchikage]",
+    "translation": "大野木[三代土影]"
+   },
+   "tips": {
+    "source": "Aumenta o [Ninjutsu] dos companheiros de Terra em [4%] e a [Resistência] em 6%.",
+    "translation": "己方小队[土属性]忍者[忍术]提升[4%]，[抗性]提升[6%]。"
+   },
+   "description": {
+    "source": "Ninjutsu; Resistência",
+    "translation": "忍术;抗性"
+   }
+  },
+  "10090003": {
+   "ninjaName": {
+    "source": "Ohnoki [Terceiro Tsuchikage]",
+    "translation": "大野木[三代土影]"
+   },
+   "tips": {
+    "source": "Aumenta o [Ninjutsu] dos companheiros de Terra em [6%] e a [Resistência] em 9%.",
+    "translation": "己方小队[土属性]忍者[忍术]提升[6%]，[抗性]提升[9%]。"
+   },
+   "description": {
+    "source": "Ninjutsu; Resistência",
+    "translation": "忍术;抗性"
+   }
+  },
+  "10090004": {
+   "ninjaName": {
+    "source": "Ohnoki [Terceiro Tsuchikage]",
+    "translation": "大野木[三代土影]"
+   },
+   "tips": {
+    "source": "Aumenta o [Ninjutsu] dos companheiros de Terra em [8%] e a [Resistência] em 12%.",
+    "translation": "己方小队[土属性]忍者[忍术]提升[8%]，[抗性]提升[12%]。"
+   },
+   "description": {
+    "source": "Ninjutsu; Resistência",
+    "translation": "忍术;抗性"
+   }
+  },
+  "10090005": {
+   "ninjaName": {
+    "source": "Ohnoki [Terceiro Tsuchikage]",
+    "translation": "大野木[三代土影]"
+   },
+   "tips": {
+    "source": "Aumenta o [Ninjutsu] dos companheiros de Terra em [11%] e a [Resistência] em 16%.",
+    "translation": "己方小队[土属性]忍者[忍术]提升[11%]，[抗性]提升[16%]。"
+   },
+   "description": {
+    "source": "Ninjutsu; Resistência",
+    "translation": "忍术;抗性"
+   }
+  },
+  "10090006": {
+   "ninjaName": {
+    "source": "Ohnoki [Terceiro Tsuchikage]",
+    "translation": "大野木[三代土影]"
+   },
+   "tips": {
+    "source": "Aumenta o [Ninjutsu] dos companheiros de Terra em [14%] e a [Resistência] em 20%.",
+    "translation": "己方小队[土属性]忍者[忍术]提升[14%]，[抗性]提升[20%]。"
+   },
+   "description": {
+    "source": "Ninjutsu; Resistência",
+    "translation": "忍术;抗性"
+   }
+  },
+  "10090007": {
+   "ninjaName": {
+    "source": "Ohnoki [Terceiro Tsuchikage]",
+    "translation": "大野木[三代土影]"
+   },
+   "tips": {
+    "source": "Aumenta o [Ninjutsu] dos companheiros de Terra em [17%] e a [Resistência] em 25%.",
+    "translation": "己方小队[土属性]忍者[忍术]提升[17%]，[抗性]提升[25%]。"
+   },
+   "description": {
+    "source": "Ninjutsu; Resistência",
+    "translation": "忍术;抗性"
+   }
+  },
+  "10090008": {
+   "ninjaName": {
+    "source": "Ohnoki [Terceiro Tsuchikage]",
+    "translation": "大野木[三代土影]"
+   },
+   "tips": {
+    "source": "Aumenta o [Ninjutsu] dos companheiros de Terra em [20%] e a [Resistência] em 30%.",
+    "translation": "己方小队[土属性]忍者[忍术]提升[20%]，[抗性]提升[30%]。"
+   },
+   "description": {
+    "source": "Ninjutsu; Resistência",
+    "translation": "忍术;抗性"
+   }
+  },
+  "10260001": {
+   "ninjaName": {
+    "source": "Tsunade [Quinta Hokage]",
+    "translation": "纲手[五代火影]"
+   },
+   "tips": {
+    "source": "A cura recebida por sua equipe aumenta [4%].",
+    "translation": "己方小队受治疗量提升[4%]。"
+   },
+   "description": {
+    "source": "Cura",
+    "translation": "治疗"
+   }
+  },
+  "10260002": {
+   "ninjaName": {
+    "source": "Tsunade [Quinta Hokage]",
+    "translation": "纲手[五代火影]"
+   },
+   "tips": {
+    "source": "A cura recebida por sua equipe aumenta [8%].",
+    "translation": "己方小队受治疗量提升[8%]。"
+   },
+   "description": {
+    "source": "Cura",
+    "translation": "治疗"
+   }
+  },
+  "10260003": {
+   "ninjaName": {
+    "source": "Tsunade [Quinta Hokage]",
+    "translation": "纲手[五代火影]"
+   },
+   "tips": {
+    "source": "A cura recebida por sua equipe aumenta [12%].",
+    "translation": "己方小队受治疗量提升[12%]。"
+   },
+   "description": {
+    "source": "Cura",
+    "translation": "治疗"
+   }
+  },
+  "10260004": {
+   "ninjaName": {
+    "source": "Tsunade [Quinta Hokage]",
+    "translation": "纲手[五代火影]"
+   },
+   "tips": {
+    "source": "A cura recebida por sua equipe aumenta [16%].",
+    "translation": "己方小队受治疗量提升[16%]。"
+   },
+   "description": {
+    "source": "Cura",
+    "translation": "治疗"
+   }
+  },
+  "10260005": {
+   "ninjaName": {
+    "source": "Tsunade [Quinta Hokage]",
+    "translation": "纲手[五代火影]"
+   },
+   "tips": {
+    "source": "A cura recebida por sua equipe aumenta [20%].",
+    "translation": "己方小队受治疗量提升[20%]。"
+   },
+   "description": {
+    "source": "Cura",
+    "translation": "治疗"
+   }
+  },
+  "10260006": {
+   "ninjaName": {
+    "source": "Tsunade [Quinta Hokage]",
+    "translation": "纲手[五代火影]"
+   },
+   "tips": {
+    "source": "A cura recebida por sua equipe aumenta [24%].",
+    "translation": "己方小队受治疗量提升[24%]。"
+   },
+   "description": {
+    "source": "Cura",
+    "translation": "治疗"
+   }
+  },
+  "10260007": {
+   "ninjaName": {
+    "source": "Tsunade [Quinta Hokage]",
+    "translation": "纲手[五代火影]"
+   },
+   "tips": {
+    "source": "A cura recebida por sua equipe aumenta [28%].",
+    "translation": "己方小队受治疗量提升[28%]。"
+   },
+   "description": {
+    "source": "Cura",
+    "translation": "治疗"
+   }
+  },
+  "10260008": {
+   "ninjaName": {
+    "source": "Tsunade [Quinta Hokage]",
+    "translation": "纲手[五代火影]"
+   },
+   "tips": {
+    "source": "A cura recebida por sua equipe aumenta [32%].",
+    "translation": "己方小队受治疗量提升[32%]。"
+   },
+   "description": {
+    "source": "Cura",
+    "translation": "治疗"
+   }
+  },
+  "10430001": {
+   "ninjaName": {
+    "source": "Chiriku",
+    "translation": "地陆"
+   },
+   "tips": {
+    "source": "Sempre que alguém de sua equipe se Esquiva, seu [Ataque] aumenta em [2%].",
+    "translation": "己方小队[忍者]及[非忍者]单位每次闪避时，成长自身[2%]的[攻击]。"
+   },
+   "description": {
+    "source": "Ataque; Ninjutsu",
+    "translation": "攻击;忍术"
+   }
+  },
+  "10430002": {
+   "ninjaName": {
+    "source": "Chiriku",
+    "translation": "地陆"
+   },
+   "tips": {
+    "source": "Sempre que alguém de sua equipe se Esquiva, seu [Ataque] e [Ninjutsu] aumentam em [2%].",
+    "translation": "己方小队[忍者]及[非忍者]单位每次闪避时，成长自身[2%]的[攻击]和[忍术]。"
+   },
+   "description": {
+    "source": "Ataque; Ninjutsu",
+    "translation": "攻击;忍术"
+   }
+  },
+  "10430003": {
+   "ninjaName": {
+    "source": "Chiriku",
+    "translation": "地陆"
+   },
+   "tips": {
+    "source": "Sempre que alguém de sua equipe se Esquiva, seu [Ataque] aumenta em [3%] e seu [Ninjutsu] em [2%].",
+    "translation": "己方小队[忍者]及[非忍者]单位每次闪避时，成长自身[3%]的[攻击]和[2%]的[忍术]。"
+   },
+   "description": {
+    "source": "Ataque; Ninjutsu",
+    "translation": "攻击;忍术"
+   }
+  },
+  "10430004": {
+   "ninjaName": {
+    "source": "Chiriku",
+    "translation": "地陆"
+   },
+   "tips": {
+    "source": "Sempre que alguém de sua equipe se Esquiva, seu [Ataque] e [Ninjutsu] aumentam em [3%].",
+    "translation": "己方小队[忍者]及[非忍者]单位每次闪避时，成长自身[3%]的[攻击]和[忍术]。"
+   },
+   "description": {
+    "source": "Ataque; Ninjutsu",
+    "translation": "攻击;忍术"
+   }
+  },
+  "10430005": {
+   "ninjaName": {
+    "source": "Chiriku",
+    "translation": "地陆"
+   },
+   "tips": {
+    "source": "Sempre que alguém de sua equipe se Esquiva, seu [Ataque] aumenta em [4%] e seu [Ninjutsu] em [3%].",
+    "translation": "己方小队[忍者]及[非忍者]单位每次闪避时，成长自身[4%]的[攻击]和[3%]的[忍术]。"
+   },
+   "description": {
+    "source": "Ataque; Ninjutsu",
+    "translation": "攻击;忍术"
+   }
+  },
+  "10430006": {
+   "ninjaName": {
+    "source": "Chiriku",
+    "translation": "地陆"
+   },
+   "tips": {
+    "source": "Sempre que alguém de sua equipe se Esquiva, seu [Ataque] e [Ninjutsu] aumentam em [4%].",
+    "translation": "己方小队[忍者]及[非忍者]单位每次闪避时，成长自身[4%]的[攻击]和[忍术]。"
+   },
+   "description": {
+    "source": "Ataque; Ninjutsu",
+    "translation": "攻击;忍术"
+   }
+  },
+  "10430007": {
+   "ninjaName": {
+    "source": "Chiriku",
+    "translation": "地陆"
+   },
+   "tips": {
+    "source": "Sempre que alguém de sua equipe se Esquiva, seu [Ataque] aumenta em [5%] e seu [Ninjutsu] em [4%].",
+    "translation": "己方小队[忍者]及[非忍者]单位每次闪避时，成长自身[5%]的[攻击]和[4%]的[忍术]。"
+   },
+   "description": {
+    "source": "Ataque; Ninjutsu",
+    "translation": "攻击;忍术"
+   }
+  },
+  "10430008": {
+   "ninjaName": {
+    "source": "Chiriku",
+    "translation": "地陆"
+   },
+   "tips": {
+    "source": "Sempre que alguém de sua equipe se Esquiva, seu [Ataque] e [Ninjutsu] aumentam em [5%].",
+    "translation": "己方小队[忍者]及[非忍者]单位每次闪避时，成长自身[5%]的[攻击]和[忍术]。"
+   },
+   "description": {
+    "source": "Ataque; Ninjutsu",
+    "translation": "攻击;忍术"
+   }
+  },
+  "10130001": {
+   "ninjaName": {
+    "source": "Hidan",
+    "translation": "飞段"
+   },
+   "tips": {
+    "source": "Aumenta o Dano aos alvos com [Marca] causado pelos companheiros em [3%].",
+    "translation": "己方小队忍者对[标记]的目标伤害提升[3%]。（此[标记]不包含[飞雷神标记]、[神威标记]）"
+   },
+   "description": {
+    "source": "Dano",
+    "translation": "伤害"
+   }
+  },
+  "10130002": {
+   "ninjaName": {
+    "source": "Hidan",
+    "translation": "飞段"
+   },
+   "tips": {
+    "source": "Aumenta o Dano aos alvos com [Marca] causado pelos companheiros em [6%].",
+    "translation": "己方小队忍者对[标记]的目标伤害提升[6%]。（此[标记]不包含[飞雷神标记]、[神威标记]）"
+   },
+   "description": {
+    "source": "Dano",
+    "translation": "伤害"
+   }
+  },
+  "10130003": {
+   "ninjaName": {
+    "source": "Hidan",
+    "translation": "飞段"
+   },
+   "tips": {
+    "source": "Aumenta o Dano aos alvos com [Marca] causado pelos companheiros em [9%].",
+    "translation": "己方小队忍者对[标记]的目标伤害提升[9%]。（此[标记]不包含[飞雷神标记]、[神威标记]）"
+   },
+   "description": {
+    "source": "Dano",
+    "translation": "伤害"
+   }
+  },
+  "10130004": {
+   "ninjaName": {
+    "source": "Hidan",
+    "translation": "飞段"
+   },
+   "tips": {
+    "source": "Aumenta o Dano aos alvos com [Marca] causado pelos companheiros em [12%].",
+    "translation": "己方小队忍者对[标记]的目标伤害提升[12%]。（此[标记]不包含[飞雷神标记]、[神威标记]）"
+   },
+   "description": {
+    "source": "Dano",
+    "translation": "伤害"
+   }
+  },
+  "10130005": {
+   "ninjaName": {
+    "source": "Hidan",
+    "translation": "飞段"
+   },
+   "tips": {
+    "source": "Aumenta o Dano aos alvos com [Marca] causado pelos companheiros em [16%].",
+    "translation": "己方小队忍者对[标记]的目标伤害提升[16%]。（此[标记]不包含[飞雷神标记]、[神威标记]）"
+   },
+   "description": {
+    "source": "Dano",
+    "translation": "伤害"
+   }
+  },
+  "10130006": {
+   "ninjaName": {
+    "source": "Hidan",
+    "translation": "飞段"
+   },
+   "tips": {
+    "source": "Aumenta o Dano aos alvos com [Marca] causado pelos companheiros em [20%].",
+    "translation": "己方小队忍者对[标记]的目标伤害提升[20%]。（此[标记]不包含[飞雷神标记]、[神威标记]）"
+   },
+   "description": {
+    "source": "Dano",
+    "translation": "伤害"
+   }
+  },
+  "10130007": {
+   "ninjaName": {
+    "source": "Hidan",
+    "translation": "飞段"
+   },
+   "tips": {
+    "source": "Aumenta o Dano aos alvos com [Marca] causado pelos companheiros em [25%].",
+    "translation": "己方小队忍者对[标记]的目标伤害提升[25%]。（此[标记]不包含[飞雷神标记]、[神威标记]）"
+   },
+   "description": {
+    "source": "Dano",
+    "translation": "伤害"
+   }
+  },
+  "10130008": {
+   "ninjaName": {
+    "source": "Hidan",
+    "translation": "飞段"
+   },
+   "tips": {
+    "source": "Aumenta o Dano aos alvos com [Marca] causado pelos companheiros em [30%].",
+    "translation": "己方小队忍者对[标记]的目标伤害提升[30%]。（此[标记]不包含[飞雷神标记]、[神威标记]）"
+   },
+   "description": {
+    "source": "Dano",
+    "translation": "伤害"
+   }
+  },
+  "10300001": {
+   "ninjaName": {
+    "source": "Shizune",
+    "translation": "静音"
+   },
+   "tips": {
+    "source": "Para cada nível de [Status negativo] possuído por sua equipe, sua [Defesa] e [Resistência] aumentam [2%].",
+    "translation": "己方小队忍者每拥有1层[不良状态]将提升自身[2%]的[防御]及[抗性]。"
+   },
+   "description": {
+    "source": "Defesa; Resistência",
+    "translation": "防御;抗性"
+   }
+  },
+  "10300002": {
+   "ninjaName": {
+    "source": "Shizune",
+    "translation": "静音"
+   },
+   "tips": {
+    "source": "Para cada nível de [Status negativo] possuído por sua equipe, sua [Defesa] e [Resistência] aumentam [4%].",
+    "translation": "己方小队忍者每拥有1层[不良状态]将提升自身[4%]的[防御]及[抗性]。"
+   },
+   "description": {
+    "source": "Defesa; Resistência",
+    "translation": "防御;抗性"
+   }
+  },
+  "10300003": {
+   "ninjaName": {
+    "source": "Shizune",
+    "translation": "静音"
+   },
+   "tips": {
+    "source": "Para cada nível de [Status negativo] possuído por sua equipe, sua [Defesa] e [Resistência] aumentam [6%].",
+    "translation": "己方小队忍者每拥有1层[不良状态]将提升自身[6%]的[防御]及[抗性]。"
+   },
+   "description": {
+    "source": "Defesa; Resistência",
+    "translation": "防御;抗性"
+   }
+  },
+  "10300004": {
+   "ninjaName": {
+    "source": "Shizune",
+    "translation": "静音"
+   },
+   "tips": {
+    "source": "Para cada nível de [Status negativo] possuído por sua equipe, sua [Defesa] e [Resistência] aumentam [8%].",
+    "translation": "己方小队忍者每拥有1层[不良状态]将提升自身[8%]的[防御]及[抗性]。"
+   },
+   "description": {
+    "source": "Defesa; Resistência",
+    "translation": "防御;抗性"
+   }
+  },
+  "10300005": {
+   "ninjaName": {
+    "source": "Shizune",
+    "translation": "静音"
+   },
+   "tips": {
+    "source": "Para cada nível de [Status negativo] possuído por sua equipe, sua [Defesa] e [Resistência] aumentam [10%].",
+    "translation": "己方小队忍者每拥有1层[不良状态]将提升自身[10%]的[防御]及[抗性]。"
+   },
+   "description": {
+    "source": "Defesa; Resistência",
+    "translation": "防御;抗性"
+   }
+  },
+  "10300006": {
+   "ninjaName": {
+    "source": "Shizune",
+    "translation": "静音"
+   },
+   "tips": {
+    "source": "Para cada nível de [Status negativo] possuído por sua equipe, sua [Defesa] e [Resistência] aumentam [12%].",
+    "translation": "己方小队忍者每拥有1层[不良状态]将提升自身[12%]的[防御]及[抗性]。"
+   },
+   "description": {
+    "source": "Defesa; Resistência",
+    "translation": "防御;抗性"
+   }
+  },
+  "10300007": {
+   "ninjaName": {
+    "source": "Shizune",
+    "translation": "静音"
+   },
+   "tips": {
+    "source": "Para cada nível de [Status negativo] possuído por sua equipe, sua [Defesa] e [Resistência] aumentam [14%].",
+    "translation": "己方小队忍者每拥有1层[不良状态]将提升自身[14%]的[防御]及[抗性]。"
+   },
+   "description": {
+    "source": "Defesa; Resistência",
+    "translation": "防御;抗性"
+   }
+  },
+  "10300008": {
+   "ninjaName": {
+    "source": "Shizune",
+    "translation": "静音"
+   },
+   "tips": {
+    "source": "Para cada nível de [Status negativo] possuído por sua equipe, sua [Defesa] e [Resistência] aumentam [16%].",
+    "translation": "己方小队忍者每拥有1层[不良状态]将提升自身[16%]的[防御]及[抗性]。"
+   },
+   "description": {
+    "source": "Defesa; Resistência",
+    "translation": "防御;抗性"
+   }
+  },
+  "10470001": {
+   "ninjaName": {
+    "source": "Kushina Uzumaki",
+    "translation": "漩涡玖辛奈"
+   },
+   "tips": {
+    "source": "Após usar a habilidade, o ninja [Jinchuuriki] na equipe aliada recebe o status de [Fúria] (ao causar um [Crítico] durante uma rodada, regenera [4%] da própria Vida e ganha [4%] de [Crítico]; máximo de 1 ativação por rodada).",
+    "translation": "己方小队[人柱力]忍者使用技能后获得[暴怒]（回合内[暴击]时将回复自身[4%]的生命并成长[4%]的[暴击]，每回合1次）状态。"
+   },
+   "description": {
+    "source": "Cura; Crítico",
+    "translation": "治疗;暴击"
+   }
+  },
+  "10470002": {
+   "ninjaName": {
+    "source": "Kushina Uzumaki",
+    "translation": "漩涡玖辛奈"
+   },
+   "tips": {
+    "source": "Após usar a habilidade, o ninja [Jinchuuriki] na equipe aliada recebe o status de [Fúria] (ao causar um [Crítico] durante uma rodada, regenera [6%] da própria Vida e ganha [4%] de [Crítico]; máximo de 1 ativação por rodada).",
+    "translation": "己方小队[人柱力]忍者使用技能后获得[暴怒]（回合内[暴击]时将回复自身[6%]的生命并成长[4%]的[暴击]，每回合1次）状态。"
+   },
+   "description": {
+    "source": "Cura; Crítico",
+    "translation": "治疗;暴击"
+   }
+  },
+  "10470003": {
+   "ninjaName": {
+    "source": "Kushina Uzumaki",
+    "translation": "漩涡玖辛奈"
+   },
+   "tips": {
+    "source": "Após usar a habilidade, o ninja [Jinchuuriki] na equipe aliada recebe o status de [Fúria] (ao causar um [Crítico] durante uma rodada, regenera [6%] da própria Vida e ganha [6%] de [Crítico]; máximo de 1 ativação por rodada).",
+    "translation": "己方小队[人柱力]忍者使用技能后获得[暴怒]（回合内[暴击]时将回复自身[6%]的生命并成长[6%]的[暴击]，每回合1次）状态。"
+   },
+   "description": {
+    "source": "Cura; Crítico",
+    "translation": "治疗;暴击"
+   }
+  },
+  "10470004": {
+   "ninjaName": {
+    "source": "Kushina Uzumaki",
+    "translation": "漩涡玖辛奈"
+   },
+   "tips": {
+    "source": "Após usar a habilidade, o ninja [Jinchuuriki] na equipe aliada recebe o status de [Fúria] (ao causar um [Crítico] durante uma rodada, regenera [8%] da própria Vida e ganha [6%] de [Crítico]; máximo de 1 ativação por rodada).",
+    "translation": "己方小队[人柱力]忍者使用技能后获得[暴怒]（回合内[暴击]时将回复自身[8%]的生命并成长[6%]的[暴击]，每回合1次）状态。"
+   },
+   "description": {
+    "source": "Cura; Crítico",
+    "translation": "治疗;暴击"
+   }
+  },
+  "10470005": {
+   "ninjaName": {
+    "source": "Kushina Uzumaki",
+    "translation": "漩涡玖辛奈"
+   },
+   "tips": {
+    "source": "Após usar a habilidade, o ninja [Jinchuuriki] na equipe aliada recebe o status de [Fúria] (ao causar um [Crítico] durante uma rodada, regenera [8%] da própria Vida e ganha [8%] de [Crítico]; máximo de 1 ativação por rodada).",
+    "translation": "己方小队[人柱力]忍者使用技能后获得[暴怒]（回合内[暴击]时将回复自身[8%]的生命并成长[8%]的[暴击]，每回合1次）状态。"
+   },
+   "description": {
+    "source": "Cura; Crítico",
+    "translation": "治疗;暴击"
+   }
+  },
+  "10470006": {
+   "ninjaName": {
+    "source": "Kushina Uzumaki",
+    "translation": "漩涡玖辛奈"
+   },
+   "tips": {
+    "source": "Após usar a habilidade, o ninja [Jinchuuriki] na equipe aliada recebe o status de [Fúria] (ao causar um [Crítico] durante uma rodada, regenera [10%] da própria Vida e ganha [8%] de [Crítico]; máximo de 1 ativação por rodada).",
+    "translation": "己方小队[人柱力]忍者使用技能后获得[暴怒]（回合内[暴击]时将回复自身[10%]的生命并成长[8%]的[暴击]，每回合1次）状态。"
+   },
+   "description": {
+    "source": "Cura; Crítico",
+    "translation": "治疗;暴击"
+   }
+  },
+  "10470007": {
+   "ninjaName": {
+    "source": "Kushina Uzumaki",
+    "translation": "漩涡玖辛奈"
+   },
+   "tips": {
+    "source": "Após usar a habilidade, o ninja [Jinchuuriki] na equipe aliada recebe o status de [Fúria] (ao causar um [Crítico] durante uma rodada, regenera [10%] da própria Vida e ganha [10%] de [Crítico]; máximo de 1 ativação por rodada).",
+    "translation": "己方小队[人柱力]忍者使用技能后获得[暴怒]（回合内[暴击]时将回复自身[10%]的生命并成长[10%]的[暴击]，每回合1次）状态。"
+   },
+   "description": {
+    "source": "Cura; Crítico",
+    "translation": "治疗;暴击"
+   }
+  },
+  "10470008": {
+   "ninjaName": {
+    "source": "Kushina Uzumaki",
+    "translation": "漩涡玖辛奈"
+   },
+   "tips": {
+    "source": "Após usar a habilidade, o ninja [Jinchuuriki] na equipe aliada recebe o status de [Fúria] (ao causar um [Crítico] durante uma rodada, regenera [12%] da própria Vida e ganha [12%] de [Crítico]; máximo de 1 ativação por rodada).",
+    "translation": "己方小队[人柱力]忍者使用技能后获得[暴怒]（回合内[暴击]时将回复自身[12%]的生命并成长[12%]的[暴击]，每回合1次）状态。"
+   },
+   "description": {
+    "source": "Cura; Crítico",
+    "translation": "治疗;暴击"
+   }
+  },
+  "10170001": {
+   "ninjaName": {
+    "source": "Torune Aburame",
+    "translation": "油女取根"
+   },
+   "tips": {
+    "source": "O dano causado pelos companheiros a inimigos com [Imunidade a Status negativos] aumenta em 3%.",
+    "translation": "己方小队忍者对[免疫不良状态]的目标伤害提升[3%]。"
+   },
+   "description": {
+    "source": "Dano",
+    "translation": "伤害"
+   }
+  },
+  "10170002": {
+   "ninjaName": {
+    "source": "Torune Aburame",
+    "translation": "油女取根"
+   },
+   "tips": {
+    "source": "O dano causado pelos companheiros a inimigos com [Imunidade a Status negativos] aumenta em 6%.",
+    "translation": "己方小队忍者对[免疫不良状态]的目标伤害提升[6%]。"
+   },
+   "description": {
+    "source": "Dano",
+    "translation": "伤害"
+   }
+  },
+  "10170003": {
+   "ninjaName": {
+    "source": "Torune Aburame",
+    "translation": "油女取根"
+   },
+   "tips": {
+    "source": "O dano causado pelos companheiros a inimigos com [Imunidade a Status negativos] aumenta em 9%.",
+    "translation": "己方小队忍者对[免疫不良状态]的目标伤害提升[9%]。"
+   },
+   "description": {
+    "source": "Dano",
+    "translation": "伤害"
+   }
+  },
+  "10170004": {
+   "ninjaName": {
+    "source": "Torune Aburame",
+    "translation": "油女取根"
+   },
+   "tips": {
+    "source": "O dano causado pelos companheiros a inimigos com [Imunidade a Status negativos] aumenta em 12%.",
+    "translation": "己方小队忍者对[免疫不良状态]的目标伤害提升[12%]。"
+   },
+   "description": {
+    "source": "Dano",
+    "translation": "伤害"
+   }
+  },
+  "10170005": {
+   "ninjaName": {
+    "source": "Torune Aburame",
+    "translation": "油女取根"
+   },
+   "tips": {
+    "source": "O dano causado pelos companheiros a inimigos com [Imunidade a Status negativos] aumenta em 16%.",
+    "translation": "己方小队忍者对[免疫不良状态]的目标伤害提升[16%]。"
+   },
+   "description": {
+    "source": "Dano",
+    "translation": "伤害"
+   }
+  },
+  "10170006": {
+   "ninjaName": {
+    "source": "Torune Aburame",
+    "translation": "油女取根"
+   },
+   "tips": {
+    "source": "O dano causado pelos companheiros a inimigos com [Imunidade a Status negativos] aumenta em 20%.",
+    "translation": "己方小队忍者对[免疫不良状态]的目标伤害提升[20%]。"
+   },
+   "description": {
+    "source": "Dano",
+    "translation": "伤害"
+   }
+  },
+  "10170007": {
+   "ninjaName": {
+    "source": "Torune Aburame",
+    "translation": "油女取根"
+   },
+   "tips": {
+    "source": "O dano causado pelos companheiros a inimigos com [Imunidade a Status negativos] aumenta em 25%.",
+    "translation": "己方小队忍者对[免疫不良状态]的目标伤害提升[25%]。"
+   },
+   "description": {
+    "source": "Dano",
+    "translation": "伤害"
+   }
+  },
+  "10170008": {
+   "ninjaName": {
+    "source": "Torune Aburame",
+    "translation": "油女取根"
+   },
+   "tips": {
+    "source": "O dano causado pelos companheiros a inimigos com [Imunidade a Status negativos] aumenta em 30%.",
+    "translation": "己方小队忍者对[免疫不良状态]的目标伤害提升[30%]。"
+   },
+   "description": {
+    "source": "Dano",
+    "translation": "伤害"
+   }
+  },
+  "10340001": {
+   "ninjaName": {
+    "source": "Killer Bee",
+    "translation": "奇拉比"
+   },
+   "tips": {
+    "source": "Cada vez que habilidade de um [Jinchuuriki] de sua equipe é lançada, seu próprio [Ataque] aumenta [2%].",
+    "translation": "己方小队[人柱力]忍者每次使用[触发]类技能时，成长自身[2%]的[攻击]。"
+   },
+   "description": {
+    "source": "Ataque; Ninjutsu",
+    "translation": "攻击;忍术"
+   }
+  },
+  "10340002": {
+   "ninjaName": {
+    "source": "Killer Bee",
+    "translation": "奇拉比"
+   },
+   "tips": {
+    "source": "Cada vez que habilidade de um [Jinchuuriki] de sua equipe é lançada, seus próprios [Ataque] e [Ninjutsu] aumentam [2%].",
+    "translation": "己方小队[人柱力]忍者每次使用[触发]类技能时，成长自身[2%]的[攻击]和[忍术]。"
+   },
+   "description": {
+    "source": "Ataque; Ninjutsu",
+    "translation": "攻击;忍术"
+   }
+  },
+  "10340003": {
+   "ninjaName": {
+    "source": "Killer Bee",
+    "translation": "奇拉比"
+   },
+   "tips": {
+    "source": "Cada vez que habilidade de um [Jinchuuriki] de sua equipe é lançada, seu próprio [Ataque] aumenta [3%] e o [Ninjutsu] [2%].",
+    "translation": "己方小队[人柱力]忍者每次使用[触发]类技能时，成长自身[3%]的[攻击]和[2%]的[忍术]。"
+   },
+   "description": {
+    "source": "Ataque; Ninjutsu",
+    "translation": "攻击;忍术"
+   }
+  },
+  "10340004": {
+   "ninjaName": {
+    "source": "Killer Bee",
+    "translation": "奇拉比"
+   },
+   "tips": {
+    "source": "Cada vez que habilidade de um [Jinchuuriki] de sua equipe é lançada, seus próprios [Ataque] e [Ninjutsu] aumentam [3%].",
+    "translation": "己方小队[人柱力]忍者每次使用[触发]类技能时，成长自身[3%]的[攻击]和[忍术]。"
+   },
+   "description": {
+    "source": "Ataque; Ninjutsu",
+    "translation": "攻击;忍术"
+   }
+  },
+  "10340005": {
+   "ninjaName": {
+    "source": "Killer Bee",
+    "translation": "奇拉比"
+   },
+   "tips": {
+    "source": "Cada vez que habilidade de um [Jinchuuriki] de sua equipe é lançada, seu próprio [Ataque] aumenta [4%] e o [Ninjutsu] [3%].",
+    "translation": "己方小队[人柱力]忍者每次使用[触发]类技能时，成长自身[4%]的[攻击]和[3%]的[忍术]。"
+   },
+   "description": {
+    "source": "Ataque; Ninjutsu",
+    "translation": "攻击;忍术"
+   }
+  },
+  "10340006": {
+   "ninjaName": {
+    "source": "Killer Bee",
+    "translation": "奇拉比"
+   },
+   "tips": {
+    "source": "Cada vez que habilidade de um [Jinchuuriki] de sua equipe é lançada, seus próprios [Ataque] e [Ninjutsu] aumentam [4%].",
+    "translation": "己方小队[人柱力]忍者每次使用[触发]类技能时，成长自身[4%]的[攻击]和[忍术]。"
+   },
+   "description": {
+    "source": "Ataque; Ninjutsu",
+    "translation": "攻击;忍术"
+   }
+  },
+  "10340007": {
+   "ninjaName": {
+    "source": "Killer Bee",
+    "translation": "奇拉比"
+   },
+   "tips": {
+    "source": "Cada vez que habilidade de um [Jinchuuriki] de sua equipe é lançada, seu próprio [Ataque] aumenta [5%] e o [Ninjutsu] [4%].",
+    "translation": "己方小队[人柱力]忍者每次使用[触发]类技能时，成长自身[5%]的[攻击]和[4%]的[忍术]。"
+   },
+   "description": {
+    "source": "Ataque; Ninjutsu",
+    "translation": "攻击;忍术"
+   }
+  },
+  "10340008": {
+   "ninjaName": {
+    "source": "Killer Bee",
+    "translation": "奇拉比"
+   },
+   "tips": {
+    "source": "Cada vez que habilidade de um [Jinchuuriki] de sua equipe é lançada, seus próprios [Ataque] e [Ninjutsu] aumentam [5%].",
+    "translation": "己方小队[人柱力]忍者每次使用[触发]类技能时，成长自身[5%]的[攻击]和[忍术]。"
+   },
+   "description": {
+    "source": "Ataque; Ninjutsu",
+    "translation": "攻击;忍术"
+   }
+  },
+  "10510001": {
+   "ninjaName": {
+    "source": "Kabuto",
+    "translation": "兜"
+   },
+   "tips": {
+    "source": "A cura recebida por companheiros com [Marca da Maldição] aumenta em [1%].",
+    "translation": "提升己方小队[咒印]忍者受治疗量[1%]。"
+   },
+   "description": {
+    "source": "Cura",
+    "translation": "治疗"
+   }
+  },
+  "10510002": {
+   "ninjaName": {
+    "source": "Kabuto",
+    "translation": "兜"
+   },
+   "tips": {
+    "source": "A cura recebida por companheiros com [Marca da Maldição] aumenta em [3%].",
+    "translation": "提升己方小队[咒印]忍者受治疗量[3%]。"
+   },
+   "description": {
+    "source": "Cura",
+    "translation": "治疗"
+   }
+  },
+  "10510003": {
+   "ninjaName": {
+    "source": "Kabuto",
+    "translation": "兜"
+   },
+   "tips": {
+    "source": "A cura recebida por companheiros com [Marca da Maldição] aumenta em [6%].",
+    "translation": "提升己方小队[咒印]忍者受治疗量[6%]。"
+   },
+   "description": {
+    "source": "Cura",
+    "translation": "治疗"
+   }
+  },
+  "10510004": {
+   "ninjaName": {
+    "source": "Kabuto",
+    "translation": "兜"
+   },
+   "tips": {
+    "source": "A cura recebida por companheiros com [Marca da Maldição] aumenta em [9%].",
+    "translation": "提升己方小队[咒印]忍者受治疗量[9%]。"
+   },
+   "description": {
+    "source": "Cura",
+    "translation": "治疗"
+   }
+  },
+  "10510005": {
+   "ninjaName": {
+    "source": "Kabuto",
+    "translation": "兜"
+   },
+   "tips": {
+    "source": "A cura recebida por companheiros com [Marca da Maldição] aumenta em [11%].",
+    "translation": "提升己方小队[咒印]忍者受治疗量[11%]。"
+   },
+   "description": {
+    "source": "Cura",
+    "translation": "治疗"
+   }
+  },
+  "10510006": {
+   "ninjaName": {
+    "source": "Kabuto",
+    "translation": "兜"
+   },
+   "tips": {
+    "source": "A cura recebida por companheiros com [Marca da Maldição] aumenta em [13%].",
+    "translation": "提升己方小队[咒印]忍者受治疗量[13%]。"
+   },
+   "description": {
+    "source": "Cura",
+    "translation": "治疗"
+   }
+  },
+  "10510007": {
+   "ninjaName": {
+    "source": "Kabuto",
+    "translation": "兜"
+   },
+   "tips": {
+    "source": "A cura recebida por companheiros com [Marca da Maldição] aumenta em [16%] e os companheiros ganham [Imunidade a Status negativos].",
+    "translation": "己方小队[咒印]忍者提升受治疗量[16%]，并[免疫不良状态]。"
+   },
+   "description": {
+    "source": "Cura",
+    "translation": "治疗"
+   }
+  },
+  "10510008": {
+   "ninjaName": {
+    "source": "Kabuto",
+    "translation": "兜"
+   },
+   "tips": {
+    "source": "A cura recebida por companheiros com [Marca da Maldição] aumenta em [18%] e os companheiros ganham [Imunidade a Status negativos].",
+    "translation": "己方小队[咒印]忍者提升受治疗量[18%]，并[免疫不良状态]。"
+   },
+   "description": {
+    "source": "Cura",
+    "translation": "治疗"
+   }
+  },
+  "10040001": {
+   "ninjaName": {
+    "source": "Fuu Yamanaka",
+    "translation": "山中风"
+   },
+   "tips": {
+    "source": "Aumenta o [Ataque] dos companheiros de Fogo em [2%] e a [Defesa] em 3%.",
+    "translation": "己方小队[火属性]忍者[攻击]提升[2%]，[防御]提升[3%]。"
+   },
+   "description": {
+    "source": "Ataque; Defesa",
+    "translation": "攻击;防御"
+   }
+  },
+  "10040002": {
+   "ninjaName": {
+    "source": "Fuu Yamanaka",
+    "translation": "山中风"
+   },
+   "tips": {
+    "source": "Aumenta o [Ataque] dos companheiros de Fogo em [4%] e a [Defesa] em 6%.",
+    "translation": "己方小队[火属性]忍者[攻击]提升[4%]，[防御]提升[6%]。"
+   },
+   "description": {
+    "source": "Ataque; Defesa",
+    "translation": "攻击;防御"
+   }
+  },
+  "10040003": {
+   "ninjaName": {
+    "source": "Fuu Yamanaka",
+    "translation": "山中风"
+   },
+   "tips": {
+    "source": "Aumenta o [Ataque] dos companheiros de Fogo em [6%] e a [Defesa] em 9%.",
+    "translation": "己方小队[火属性]忍者[攻击]提升[6%]，[防御]提升[9%]。"
+   },
+   "description": {
+    "source": "Ataque; Defesa",
+    "translation": "攻击;防御"
+   }
+  },
+  "10040004": {
+   "ninjaName": {
+    "source": "Fuu Yamanaka",
+    "translation": "山中风"
+   },
+   "tips": {
+    "source": "Aumenta o [Ataque] dos companheiros de Fogo em [8%] e a [Defesa] em 12%.",
+    "translation": "己方小队[火属性]忍者[攻击]提升[8%]，[防御]提升[12%]。"
+   },
+   "description": {
+    "source": "Ataque; Defesa",
+    "translation": "攻击;防御"
+   }
+  },
+  "10040005": {
+   "ninjaName": {
+    "source": "Fuu Yamanaka",
+    "translation": "山中风"
+   },
+   "tips": {
+    "source": "Aumenta o [Ataque] dos companheiros de Fogo em [11%] e a [Defesa] em 16%.",
+    "translation": "己方小队[火属性]忍者[攻击]提升[11%]，[防御]提升[16%]。"
+   },
+   "description": {
+    "source": "Ataque; Defesa",
+    "translation": "攻击;防御"
+   }
+  },
+  "10040006": {
+   "ninjaName": {
+    "source": "Fuu Yamanaka",
+    "translation": "山中风"
+   },
+   "tips": {
+    "source": "Aumenta o [Ataque] dos companheiros de Fogo em [14%] e a [Defesa] em 20%.",
+    "translation": "己方小队[火属性]忍者[攻击]提升[14%]，[防御]提升[20%]。"
+   },
+   "description": {
+    "source": "Ataque; Defesa",
+    "translation": "攻击;防御"
+   }
+  },
+  "10040007": {
+   "ninjaName": {
+    "source": "Fuu Yamanaka",
+    "translation": "山中风"
+   },
+   "tips": {
+    "source": "Aumenta o [Ataque] dos companheiros de Fogo em [17%] e a [Defesa] em 25%.",
+    "translation": "己方小队[火属性]忍者[攻击]提升[17%]，[防御]提升[25%]。"
+   },
+   "description": {
+    "source": "Ataque; Defesa",
+    "translation": "攻击;防御"
+   }
+  },
+  "10040008": {
+   "ninjaName": {
+    "source": "Fuu Yamanaka",
+    "translation": "山中风"
+   },
+   "tips": {
+    "source": "Aumenta o [Ataque] dos companheiros de Fogo em [20%] e a [Defesa] em 30%.",
+    "translation": "己方小队[火属性]忍者[攻击]提升[20%]，[防御]提升[30%]。"
+   },
+   "description": {
+    "source": "Ataque; Defesa",
+    "translation": "攻击;防御"
+   }
+  },
+  "10210001": {
+   "ninjaName": {
+    "source": "Suigetsu",
+    "translation": "水月"
+   },
+   "tips": {
+    "source": "Cada vez que sua equipe causa [Flutuação] seu [Ataque] aumenta [1%].",
+    "translation": "己方小队忍者每次造成[小浮空]时，成长自身[1%]的[攻击]。"
+   },
+   "description": {
+    "source": "Ataque; Ninjutsu",
+    "translation": "攻击;忍术"
+   }
+  },
+  "10210002": {
+   "ninjaName": {
+    "source": "Suigetsu",
+    "translation": "水月"
+   },
+   "tips": {
+    "source": "Cada vez que sua equipe causa [Flutuação] seu [Ataque] e [Ninjutsu] aumentam [1%].",
+    "translation": "己方小队忍者每次造成[小浮空]时，成长自身[1%]的[攻击]和[忍术]。"
+   },
+   "description": {
+    "source": "Ataque; Ninjutsu",
+    "translation": "攻击;忍术"
+   }
+  },
+  "10210003": {
+   "ninjaName": {
+    "source": "Suigetsu",
+    "translation": "水月"
+   },
+   "tips": {
+    "source": "Cada vez que sua equipe causa [Flutuação] seu [Ataque] aumenta [2%] e o [Ninjutsu] [1%].",
+    "translation": "己方小队忍者每次造成[小浮空]时，成长自身[2%]的[攻击]和[1%]的[忍术]。"
+   },
+   "description": {
+    "source": "Ataque; Ninjutsu",
+    "translation": "攻击;忍术"
+   }
+  },
+  "10210004": {
+   "ninjaName": {
+    "source": "Suigetsu",
+    "translation": "水月"
+   },
+   "tips": {
+    "source": "Cada vez que sua equipe causa [Flutuação] seu [Ataque] e [Ninjutsu] aumentam [2%].",
+    "translation": "己方小队忍者每次造成[小浮空]时，成长自身[2%]的[攻击]和[忍术]。"
+   },
+   "description": {
+    "source": "Ataque; Ninjutsu",
+    "translation": "攻击;忍术"
+   }
+  },
+  "10210005": {
+   "ninjaName": {
+    "source": "Suigetsu",
+    "translation": "水月"
+   },
+   "tips": {
+    "source": "Cada vez que sua equipe causa [Flutuação] seu [Ataque] aumenta [3%] e o [Ninjutsu] [2%].",
+    "translation": "己方小队忍者每次造成[小浮空]时，成长自身[3%]的[攻击]和[2%]的[忍术]。"
+   },
+   "description": {
+    "source": "Ataque; Ninjutsu",
+    "translation": "攻击;忍术"
+   }
+  },
+  "10210006": {
+   "ninjaName": {
+    "source": "Suigetsu",
+    "translation": "水月"
+   },
+   "tips": {
+    "source": "Cada vez que sua equipe causa [Flutuação] seu [Ataque] e [Ninjutsu] aumentam [3%].",
+    "translation": "己方小队忍者每次造成[小浮空]时，成长自身[3%]的[攻击]和[忍术]。"
+   },
+   "description": {
+    "source": "Ataque; Ninjutsu",
+    "translation": "攻击;忍术"
+   }
+  },
+  "10210007": {
+   "ninjaName": {
+    "source": "Suigetsu",
+    "translation": "水月"
+   },
+   "tips": {
+    "source": "Cada vez que sua equipe causa [Flutuação] seu [Ataque] aumenta [4%] e o [Ninjutsu] [3%].",
+    "translation": "己方小队忍者每次造成[小浮空]时，成长自身[4%]的[攻击]和[3%]的[忍术]。"
+   },
+   "description": {
+    "source": "Ataque; Ninjutsu",
+    "translation": "攻击;忍术"
+   }
+  },
+  "10210008": {
+   "ninjaName": {
+    "source": "Suigetsu",
+    "translation": "水月"
+   },
+   "tips": {
+    "source": "Cada vez que sua equipe causa [Flutuação] seu [Ataque] e [Ninjutsu] aumentam [4%].",
+    "translation": "己方小队忍者每次造成[小浮空]时，成长自身[4%]的[攻击]和[忍术]。"
+   },
+   "description": {
+    "source": "Ataque; Ninjutsu",
+    "translation": "攻击;忍术"
+   }
+  },
+  "10380001": {
+   "ninjaName": {
+    "source": "Baki",
+    "translation": "马基"
+   },
+   "tips": {
+    "source": "Quando Ninja da [Aldeia da Areia] do seu equipe usa Habilidade [Esotérica], recupera [1%] de Vida.",
+    "translation": "己方小队[砂隐]忍者使用[奥义]类技能时，回复自身最大生命值[1%]的血量。"
+   },
+   "description": {
+    "source": "Cura",
+    "translation": "治疗"
+   }
+  },
+  "10380002": {
+   "ninjaName": {
+    "source": "Baki",
+    "translation": "马基"
+   },
+   "tips": {
+    "source": "Quando Ninja da [Aldeia da Areia] do seu equipe usa Habilidade [Esotérica], recupera [3%] de Vida.",
+    "translation": "己方小队[砂隐]忍者使用[奥义]类技能时，回复自身最大生命值[3%]的血量。"
+   },
+   "description": {
+    "source": "Cura",
+    "translation": "治疗"
+   }
+  },
+  "10380003": {
+   "ninjaName": {
+    "source": "Baki",
+    "translation": "马基"
+   },
+   "tips": {
+    "source": "Quando Ninja da [Aldeia da Areia] do seu equipe usa Habilidade [Esotérica], recupera [5%] de Vida.",
+    "translation": "己方小队[砂隐]忍者使用[奥义]类技能时，回复自身最大生命值[5%]的血量。"
+   },
+   "description": {
+    "source": "Cura",
+    "translation": "治疗"
+   }
+  },
+  "10380004": {
+   "ninjaName": {
+    "source": "Baki",
+    "translation": "马基"
+   },
+   "tips": {
+    "source": "Quando Ninja da [Aldeia da Areia] do seu equipe usa Habilidade [Esotérica], recupera [7%] de Vida.",
+    "translation": "己方小队[砂隐]忍者使用[奥义]类技能时，回复自身最大生命值[7%]的血量。"
+   },
+   "description": {
+    "source": "Cura",
+    "translation": "治疗"
+   }
+  },
+  "10380005": {
+   "ninjaName": {
+    "source": "Baki",
+    "translation": "马基"
+   },
+   "tips": {
+    "source": "Quando Ninja da [Aldeia da Areia] do seu equipe usa Habilidade [Esotérica], recupera [9%] de Vida.",
+    "translation": "己方小队[砂隐]忍者使用[奥义]类技能时，回复自身最大生命值[9%]的血量。"
+   },
+   "description": {
+    "source": "Cura",
+    "translation": "治疗"
+   }
+  },
+  "10380006": {
+   "ninjaName": {
+    "source": "Baki",
+    "translation": "马基"
+   },
+   "tips": {
+    "source": "Quando Ninja da [Aldeia da Areia] do seu equipe usa Habilidade [Esotérica], recupera [11%] de Vida.",
+    "translation": "己方小队[砂隐]忍者使用[奥义]类技能时，回复自身最大生命值[11%]的血量。"
+   },
+   "description": {
+    "source": "Cura",
+    "translation": "治疗"
+   }
+  },
+  "10380007": {
+   "ninjaName": {
+    "source": "Baki",
+    "translation": "马基"
+   },
+   "tips": {
+    "source": "Quando Ninja da [Aldeia da Areia] do seu equipe usa Habilidade [Esotérica], recupera [13%] de Vida.",
+    "translation": "己方小队[砂隐]忍者使用[奥义]类技能时，回复自身最大生命值[13%]的血量。"
+   },
+   "description": {
+    "source": "Cura",
+    "translation": "治疗"
+   }
+  },
+  "10380008": {
+   "ninjaName": {
+    "source": "Baki",
+    "translation": "马基"
+   },
+   "tips": {
+    "source": "Quando Ninja da [Aldeia da Areia] do seu equipe usa Habilidade [Esotérica], recupera [15%] de Vida.",
+    "translation": "己方小队[砂隐]忍者使用[奥义]类技能时，回复自身最大生命值[15%]的血量。"
+   },
+   "description": {
+    "source": "Cura",
+    "translation": "治疗"
+   }
+  },
+  "10550001": {
+   "ninjaName": {
+    "source": "Mei Terumi [Traje de Banho]",
+    "translation": "照美冥[泳装]"
+   },
+   "tips": {
+    "source": "Toda vez que um ninja aliado de [Traje de Banho] ou [Roupa de Verão] sofrer dano, ganha [1%] de [Crítico] e [Resistência] (até o final da rodada).",
+    "translation": "己方小队[泳装]及[夏装]忍者每次受到伤害时，提升[1%]的[暴击]及[抗性]（持续至回合结束）。"
+   },
+   "description": {
+    "source": "Crítico; Resistência",
+    "translation": "暴击;抗性"
+   }
+  },
+  "10550002": {
+   "ninjaName": {
+    "source": "Mei Terumi [Traje de Banho]",
+    "translation": "照美冥[泳装]"
+   },
+   "tips": {
+    "source": "Toda vez que um ninja aliado de [Traje de Banho] ou [Roupa de Verão] sofrer dano, ganha [2%] de [Crítico] e [Resistência] (até o final da rodada).",
+    "translation": "己方小队[泳装]及[夏装]忍者每次受到伤害时，提升[2%]的[暴击]及[抗性]（持续至回合结束）。"
+   },
+   "description": {
+    "source": "Crítico; Resistência",
+    "translation": "暴击;抗性"
+   }
+  },
+  "10550003": {
+   "ninjaName": {
+    "source": "Mei Terumi [Traje de Banho]",
+    "translation": "照美冥[泳装]"
+   },
+   "tips": {
+    "source": "Toda vez que um ninja aliado de [Traje de Banho] ou [Roupa de Verão] sofrer dano, ganha [3%] de [Crítico] e [Resistência] (até o final da rodada).",
+    "translation": "己方小队[泳装]及[夏装]忍者每次受到伤害时，提升[3%]的[暴击]及[抗性]（持续至回合结束）。"
+   },
+   "description": {
+    "source": "Crítico; Resistência",
+    "translation": "暴击;抗性"
+   }
+  },
+  "10550004": {
+   "ninjaName": {
+    "source": "Mei Terumi [Traje de Banho]",
+    "translation": "照美冥[泳装]"
+   },
+   "tips": {
+    "source": "Toda vez que um ninja aliado de [Traje de Banho] ou [Roupa de Verão] sofrer dano, ganha [4%] de [Crítico] e [Resistência] (até o final da rodada).",
+    "translation": "己方小队[泳装]及[夏装]忍者每次受到伤害时，提升[4%]的[暴击]及[抗性]（持续至回合结束）。"
+   },
+   "description": {
+    "source": "Crítico; Resistência",
+    "translation": "暴击;抗性"
+   }
+  },
+  "10550005": {
+   "ninjaName": {
+    "source": "Mei Terumi [Traje de Banho]",
+    "translation": "照美冥[泳装]"
+   },
+   "tips": {
+    "source": "Toda vez que um ninja aliado de [Traje de Banho] ou [Roupa de Verão] sofrer dano, ganha [5%] de [Crítico] e [Resistência] (até o final da rodada).",
+    "translation": "己方小队[泳装]及[夏装]忍者每次受到伤害时，提升[5%]的[暴击]及[抗性]（持续至回合结束）。"
+   },
+   "description": {
+    "source": "Crítico; Resistência",
+    "translation": "暴击;抗性"
+   }
+  },
+  "10550006": {
+   "ninjaName": {
+    "source": "Mei Terumi [Traje de Banho]",
+    "translation": "照美冥[泳装]"
+   },
+   "tips": {
+    "source": "Toda vez que um ninja aliado de [Traje de Banho] ou [Roupa de Verão] sofrer dano, ganha [6%] de [Crítico] e [Resistência] (até o final da rodada).",
+    "translation": "己方小队[泳装]及[夏装]忍者每次受到伤害时，提升[6%]的[暴击]及[抗性]（持续至回合结束）。"
+   },
+   "description": {
+    "source": "Crítico; Resistência",
+    "translation": "暴击;抗性"
+   }
+  },
+  "10550007": {
+   "ninjaName": {
+    "source": "Mei Terumi [Traje de Banho]",
+    "translation": "照美冥[泳装]"
+   },
+   "tips": {
+    "source": "Toda vez que um ninja aliado de [Traje de Banho] ou [Roupa de Verão] sofrer dano, ganha [7%] de [Crítico] e [Resistência] (até o final da rodada). Ademais, ao usar habilidade [Esotérica], causa adicionalmente [Dissolução] ao alvo selecionado (válido apenas para habilidades que permitem a escolha do alvo).",
+    "translation": "己方小队[泳装]及[夏装]忍者每次受到伤害时，提升[7%]的[暴击]及[抗性]（持续至回合结束），此外，使用[奥义]类技能时额外对选定目标造成[溶解]（仅针对可选定目标的技能生效）。"
+   },
+   "description": {
+    "source": "Crítico; Resistência",
+    "translation": "暴击;抗性"
+   }
+  },
+  "10550008": {
+   "ninjaName": {
+    "source": "Mei Terumi [Traje de Banho]",
+    "translation": "照美冥[泳装]"
+   },
+   "tips": {
+    "source": "Toda vez que um ninja aliado de [Traje de Banho] ou [Roupa de Verão] sofrer dano, ganha [8%] de [Crítico] e [Resistência] (até o final da rodada). Ademais, ao usar habilidade [Esotérica], causa adicionalmente [Dissolução] ao alvo selecionado (válido apenas para habilidades que permitem a escolha do alvo).",
+    "translation": "己方小队[泳装]及[夏装]忍者每次受到伤害时，提升[8%]的[暴击]及[抗性]（持续至回合结束），此外，使用[奥义]类技能时额外对选定目标造成[溶解]（仅针对可选定目标的技能生效）。"
+   },
+   "description": {
+    "source": "Crítico; Resistência",
+    "translation": "暴击;抗性"
+   }
+  },
+  "10080001": {
+   "ninjaName": {
+    "source": "Mabui",
+    "translation": "麻布依"
+   },
+   "tips": {
+    "source": "Aumenta o [Ataque] dos companheiros de Relâmpago em [2%] e a [Defesa] em 3%.",
+    "translation": "己方小队[雷属性]忍者[攻击]提升[2%]，[防御]提升[3%]。"
+   },
+   "description": {
+    "source": "Ataque; Defesa",
+    "translation": "攻击;防御"
+   }
+  },
+  "10080002": {
+   "ninjaName": {
+    "source": "Mabui",
+    "translation": "麻布依"
+   },
+   "tips": {
+    "source": "Aumenta o [Ataque] dos companheiros de Relâmpago em [4%] e a [Defesa] em 6%.",
+    "translation": "己方小队[雷属性]忍者[攻击]提升[4%]，[防御]提升[6%]。"
+   },
+   "description": {
+    "source": "Ataque; Defesa",
+    "translation": "攻击;防御"
+   }
+  },
+  "10080003": {
+   "ninjaName": {
+    "source": "Mabui",
+    "translation": "麻布依"
+   },
+   "tips": {
+    "source": "Aumenta o [Ataque] dos companheiros de Relâmpago em [6%] e a [Defesa] em 9%.",
+    "translation": "己方小队[雷属性]忍者[攻击]提升[6%]，[防御]提升[9%]。"
+   },
+   "description": {
+    "source": "Ataque; Defesa",
+    "translation": "攻击;防御"
+   }
+  },
+  "10080004": {
+   "ninjaName": {
+    "source": "Mabui",
+    "translation": "麻布依"
+   },
+   "tips": {
+    "source": "Aumenta o [Ataque] dos companheiros de Relâmpago em [8%] e a [Defesa] em 12%.",
+    "translation": "己方小队[雷属性]忍者[攻击]提升[8%]，[防御]提升[12%]。"
+   },
+   "description": {
+    "source": "Ataque; Defesa",
+    "translation": "攻击;防御"
+   }
+  },
+  "10080005": {
+   "ninjaName": {
+    "source": "Mabui",
+    "translation": "麻布依"
+   },
+   "tips": {
+    "source": "Aumenta o [Ataque] dos companheiros de Relâmpago em [11%] e a [Defesa] em 16%.",
+    "translation": "己方小队[雷属性]忍者[攻击]提升[11%]，[防御]提升[16%]。"
+   },
+   "description": {
+    "source": "Ataque; Defesa",
+    "translation": "攻击;防御"
+   }
+  },
+  "10080006": {
+   "ninjaName": {
+    "source": "Mabui",
+    "translation": "麻布依"
+   },
+   "tips": {
+    "source": "Aumenta o [Ataque] dos companheiros de Relâmpago em [14%] e a [Defesa] em 20%.",
+    "translation": "己方小队[雷属性]忍者[攻击]提升[14%]，[防御]提升[20%]。"
+   },
+   "description": {
+    "source": "Ataque; Defesa",
+    "translation": "攻击;防御"
+   }
+  },
+  "10080007": {
+   "ninjaName": {
+    "source": "Mabui",
+    "translation": "麻布依"
+   },
+   "tips": {
+    "source": "Aumenta o [Ataque] dos companheiros de Relâmpago em [17%] e a [Defesa] em 25%.",
+    "translation": "己方小队[雷属性]忍者[攻击]提升[17%]，[防御]提升[25%]。"
+   },
+   "description": {
+    "source": "Ataque; Defesa",
+    "translation": "攻击;防御"
+   }
+  },
+  "10080008": {
+   "ninjaName": {
+    "source": "Mabui",
+    "translation": "麻布依"
+   },
+   "tips": {
+    "source": "Aumenta o [Ataque] dos companheiros de Relâmpago em [20%] e a [Defesa] em 30%.",
+    "translation": "己方小队[雷属性]忍者[攻击]提升[20%]，[防御]提升[30%]。"
+   },
+   "description": {
+    "source": "Ataque; Defesa",
+    "translation": "攻击;防御"
+   }
+  },
+  "10250001": {
+   "ninjaName": {
+    "source": "Kisame Hoshigaki",
+    "translation": "干柿鬼鲛"
+   },
+   "tips": {
+    "source": "Quando sua equipe tem seu Chakra absorvido, retém pelo menos [3] pontos de Chakra.",
+    "translation": "己方小队遭遇敌方吸收查克拉时，至少保留[3]点查克拉。"
+   },
+   "description": {
+    "source": "Chakra",
+    "translation": "查克拉"
+   }
+  },
+  "10250002": {
+   "ninjaName": {
+    "source": "Kisame Hoshigaki",
+    "translation": "干柿鬼鲛"
+   },
+   "tips": {
+    "source": "Quando sua equipe tem seu Chakra absorvido, retém pelo menos [6] pontos de Chakra.",
+    "translation": "己方小队遭遇敌方吸收查克拉时，至少保留[6]点查克拉。"
+   },
+   "description": {
+    "source": "Chakra",
+    "translation": "查克拉"
+   }
+  },
+  "10250003": {
+   "ninjaName": {
+    "source": "Kisame Hoshigaki",
+    "translation": "干柿鬼鲛"
+   },
+   "tips": {
+    "source": "Quando sua equipe tem seu Chakra absorvido, retém pelo menos [9] pontos de Chakra.",
+    "translation": "己方小队遭遇敌方吸收查克拉时，至少保留[9]点查克拉。"
+   },
+   "description": {
+    "source": "Chakra",
+    "translation": "查克拉"
+   }
+  },
+  "10250004": {
+   "ninjaName": {
+    "source": "Kisame Hoshigaki",
+    "translation": "干柿鬼鲛"
+   },
+   "tips": {
+    "source": "Quando sua equipe tem seu Chakra absorvido, retém pelo menos [12] pontos de Chakra.",
+    "translation": "己方小队遭遇敌方吸收查克拉时，至少保留[12]点查克拉。"
+   },
+   "description": {
+    "source": "Chakra",
+    "translation": "查克拉"
+   }
+  },
+  "10250005": {
+   "ninjaName": {
+    "source": "Kisame Hoshigaki",
+    "translation": "干柿鬼鲛"
+   },
+   "tips": {
+    "source": "Quando sua equipe tem seu Chakra absorvido, retém pelo menos [16] pontos de Chakra.",
+    "translation": "己方小队遭遇敌方吸收查克拉时，至少保留[16]点查克拉。"
+   },
+   "description": {
+    "source": "Chakra",
+    "translation": "查克拉"
+   }
+  },
+  "10250006": {
+   "ninjaName": {
+    "source": "Kisame Hoshigaki",
+    "translation": "干柿鬼鲛"
+   },
+   "tips": {
+    "source": "Quando sua equipe tem seu Chakra absorvido, retém pelo menos [20] pontos de Chakra.",
+    "translation": "己方小队遭遇敌方吸收查克拉时，至少保留[20]点查克拉。"
+   },
+   "description": {
+    "source": "Chakra",
+    "translation": "查克拉"
+   }
+  },
+  "10250007": {
+   "ninjaName": {
+    "source": "Kisame Hoshigaki",
+    "translation": "干柿鬼鲛"
+   },
+   "tips": {
+    "source": "Quando sua equipe tem seu Chakra absorvido, retém pelo menos [25] pontos de Chakra.",
+    "translation": "己方小队遭遇敌方吸收查克拉时，至少保留[25]点查克拉。"
+   },
+   "description": {
+    "source": "Chakra",
+    "translation": "查克拉"
+   }
+  },
+  "10250008": {
+   "ninjaName": {
+    "source": "Kisame Hoshigaki",
+    "translation": "干柿鬼鲛"
+   },
+   "tips": {
+    "source": "Quando sua equipe tem seu Chakra absorvido, retém pelo menos [30] pontos de Chakra.",
+    "translation": "己方小队遭遇敌方吸收查克拉时，至少保留[30]点查克拉。"
+   },
+   "description": {
+    "source": "Chakra",
+    "translation": "查克拉"
+   }
+  },
+  "10420001": {
+   "ninjaName": {
+    "source": "Jinin Akebino",
+    "translation": "通草野饵人"
+   },
+   "tips": {
+    "source": "O dano causado pela equipe a ninjas da [espadachins] aumenta [3%].",
+    "translation": "己方小队忍者对[带刀]忍者伤害提升[3%]。"
+   },
+   "description": {
+    "source": "Dano",
+    "translation": "伤害"
+   }
+  },
+  "10420002": {
+   "ninjaName": {
+    "source": "Jinin Akebino",
+    "translation": "通草野饵人"
+   },
+   "tips": {
+    "source": "O dano causado pela equipe a ninjas da [espadachins] aumenta [6%].",
+    "translation": "己方小队忍者对[带刀]忍者伤害提升[6%]。"
+   },
+   "description": {
+    "source": "Dano",
+    "translation": "伤害"
+   }
+  },
+  "10420003": {
+   "ninjaName": {
+    "source": "Jinin Akebino",
+    "translation": "通草野饵人"
+   },
+   "tips": {
+    "source": "O dano causado pela equipe a ninjas da [espadachins] aumenta [9%].",
+    "translation": "己方小队忍者对[带刀]忍者伤害提升[9%]。"
+   },
+   "description": {
+    "source": "Dano",
+    "translation": "伤害"
+   }
+  },
+  "10420004": {
+   "ninjaName": {
+    "source": "Jinin Akebino",
+    "translation": "通草野饵人"
+   },
+   "tips": {
+    "source": "O dano causado pela equipe a ninjas da [espadachins] aumenta [12%].",
+    "translation": "己方小队忍者对[带刀]忍者伤害提升[12%]。"
+   },
+   "description": {
+    "source": "Dano",
+    "translation": "伤害"
+   }
+  },
+  "10420005": {
+   "ninjaName": {
+    "source": "Jinin Akebino",
+    "translation": "通草野饵人"
+   },
+   "tips": {
+    "source": "O dano causado pela equipe a ninjas da [espadachins] aumenta [16%].",
+    "translation": "己方小队忍者对[带刀]忍者伤害提升[16%]。"
+   },
+   "description": {
+    "source": "Dano",
+    "translation": "伤害"
+   }
+  },
+  "10420006": {
+   "ninjaName": {
+    "source": "Jinin Akebino",
+    "translation": "通草野饵人"
+   },
+   "tips": {
+    "source": "O dano causado pela equipe a ninjas da [espadachins] aumenta [20%].",
+    "translation": "己方小队忍者对[带刀]忍者伤害提升[20%]。"
+   },
+   "description": {
+    "source": "Dano",
+    "translation": "伤害"
+   }
+  },
+  "10420007": {
+   "ninjaName": {
+    "source": "Jinin Akebino",
+    "translation": "通草野饵人"
+   },
+   "tips": {
+    "source": "O dano causado pela equipe a ninjas da [espadachins] aumenta [25%].",
+    "translation": "己方小队忍者对[带刀]忍者伤害提升[25%]。"
+   },
+   "description": {
+    "source": "Dano",
+    "translation": "伤害"
+   }
+  },
+  "10420008": {
+   "ninjaName": {
+    "source": "Jinin Akebino",
+    "translation": "通草野饵人"
+   },
+   "tips": {
+    "source": "O dano causado pela equipe a ninjas da [espadachins] aumenta [30%].",
+    "translation": "己方小队忍者对[带刀]忍者伤害提升[30%]。"
+   },
+   "description": {
+    "source": "Dano",
+    "translation": "伤害"
+   }
+  },
+  "10120001": {
+   "ninjaName": {
+    "source": "Hanzo da Salamandra",
+    "translation": "山椒鱼半藏"
+   },
+   "tips": {
+    "source": "Aumenta o Dano aos alvos com [Veneno] e [Toxicidade] causado pelos companheiros em [3%].",
+    "translation": "己方小队忍者对[中毒]和[剧毒]的目标伤害提升[3%]。"
+   },
+   "description": {
+    "source": "Dano",
+    "translation": "伤害"
+   }
+  },
+  "10120002": {
+   "ninjaName": {
+    "source": "Hanzo da Salamandra",
+    "translation": "山椒鱼半藏"
+   },
+   "tips": {
+    "source": "Aumenta o Dano aos alvos com [Veneno] e [Toxicidade] causado pelos companheiros em [6%].",
+    "translation": "己方小队忍者对[中毒]和[剧毒]的目标伤害提升[6%]。"
+   },
+   "description": {
+    "source": "Dano",
+    "translation": "伤害"
+   }
+  },
+  "10120003": {
+   "ninjaName": {
+    "source": "Hanzo da Salamandra",
+    "translation": "山椒鱼半藏"
+   },
+   "tips": {
+    "source": "Aumenta o Dano aos alvos com [Veneno] e [Toxicidade] causado pelos companheiros em [9%].",
+    "translation": "己方小队忍者对[中毒]和[剧毒]的目标伤害提升[9%]。"
+   },
+   "description": {
+    "source": "Dano",
+    "translation": "伤害"
+   }
+  },
+  "10120004": {
+   "ninjaName": {
+    "source": "Hanzo da Salamandra",
+    "translation": "山椒鱼半藏"
+   },
+   "tips": {
+    "source": "Aumenta o Dano aos alvos com [Veneno] e [Toxicidade] causado pelos companheiros em [12%].",
+    "translation": "己方小队忍者对[中毒]和[剧毒]的目标伤害提升[12%]。"
+   },
+   "description": {
+    "source": "Dano",
+    "translation": "伤害"
+   }
+  },
+  "10120005": {
+   "ninjaName": {
+    "source": "Hanzo da Salamandra",
+    "translation": "山椒鱼半藏"
+   },
+   "tips": {
+    "source": "Aumenta o Dano aos alvos com [Veneno] e [Toxicidade] causado pelos companheiros em [16%].",
+    "translation": "己方小队忍者对[中毒]和[剧毒]的目标伤害提升[16%]。"
+   },
+   "description": {
+    "source": "Dano",
+    "translation": "伤害"
+   }
+  },
+  "10120006": {
+   "ninjaName": {
+    "source": "Hanzo da Salamandra",
+    "translation": "山椒鱼半藏"
+   },
+   "tips": {
+    "source": "Aumenta o Dano aos alvos com [Veneno] e [Toxicidade] causado pelos companheiros em [20%].",
+    "translation": "己方小队忍者对[中毒]和[剧毒]的目标伤害提升[20%]。"
+   },
+   "description": {
+    "source": "Dano",
+    "translation": "伤害"
+   }
+  },
+  "10120007": {
+   "ninjaName": {
+    "source": "Hanzo da Salamandra",
+    "translation": "山椒鱼半藏"
+   },
+   "tips": {
+    "source": "Aumenta o Dano aos alvos com [Veneno] e [Toxicidade] causado pelos companheiros em [25%].",
+    "translation": "己方小队忍者对[中毒]和[剧毒]的目标伤害提升[25%]。"
+   },
+   "description": {
+    "source": "Dano",
+    "translation": "伤害"
+   }
+  },
+  "10120008": {
+   "ninjaName": {
+    "source": "Hanzo da Salamandra",
+    "translation": "山椒鱼半藏"
+   },
+   "tips": {
+    "source": "Aumenta o Dano aos alvos com [Veneno] e [Toxicidade] causado pelos companheiros em [30%].",
+    "translation": "己方小队忍者对[中毒]和[剧毒]的目标伤害提升[30%]。"
+   },
+   "description": {
+    "source": "Dano",
+    "translation": "伤害"
+   }
+  },
+  "10290001": {
+   "ninjaName": {
+    "source": "A [Terceiro Raikage]",
+    "translation": "艾[三代雷影]"
+   },
+   "tips": {
+    "source": "Quando sua equipe tem um [Escudo], a [Defesa] e [Ninjutsu] aumentam [2%].",
+    "translation": "己方小队忍者拥有护盾时[攻击]和[忍术]提升[2%]。"
+   },
+   "description": {
+    "source": "Ataque; Ninjutsu",
+    "translation": "攻击;忍术"
+   }
+  },
+  "10290002": {
+   "ninjaName": {
+    "source": "A [Terceiro Raikage]",
+    "translation": "艾[三代雷影]"
+   },
+   "tips": {
+    "source": "Quando sua equipe tem um [Escudo], a [Defesa] e [Ninjutsu] aumentam [4%].",
+    "translation": "己方小队忍者拥有护盾时[攻击]和[忍术]提升[4%]。"
+   },
+   "description": {
+    "source": "Ataque; Ninjutsu",
+    "translation": "攻击;忍术"
+   }
+  },
+  "10290003": {
+   "ninjaName": {
+    "source": "A [Terceiro Raikage]",
+    "translation": "艾[三代雷影]"
+   },
+   "tips": {
+    "source": "Quando sua equipe tem um [Escudo], a [Defesa] e [Ninjutsu] aumentam [6%].",
+    "translation": "己方小队忍者拥有护盾时[攻击]和[忍术]提升[6%]。"
+   },
+   "description": {
+    "source": "Ataque; Ninjutsu",
+    "translation": "攻击;忍术"
+   }
+  },
+  "10290004": {
+   "ninjaName": {
+    "source": "A [Terceiro Raikage]",
+    "translation": "艾[三代雷影]"
+   },
+   "tips": {
+    "source": "Quando sua equipe tem um [Escudo], a [Defesa] e [Ninjutsu] aumentam [8%].",
+    "translation": "己方小队忍者拥有护盾时[攻击]和[忍术]提升[8%]。"
+   },
+   "description": {
+    "source": "Ataque; Ninjutsu",
+    "translation": "攻击;忍术"
+   }
+  },
+  "10290005": {
+   "ninjaName": {
+    "source": "A [Terceiro Raikage]",
+    "translation": "艾[三代雷影]"
+   },
+   "tips": {
+    "source": "Quando sua equipe tem um [Escudo], a [Defesa] e [Ninjutsu] aumentam [11%].",
+    "translation": "己方小队忍者拥有护盾时[攻击]和[忍术]提升[11%]。"
+   },
+   "description": {
+    "source": "Ataque; Ninjutsu",
+    "translation": "攻击;忍术"
+   }
+  },
+  "10290006": {
+   "ninjaName": {
+    "source": "A [Terceiro Raikage]",
+    "translation": "艾[三代雷影]"
+   },
+   "tips": {
+    "source": "Quando sua equipe tem um [Escudo], a [Defesa] e [Ninjutsu] aumentam [14%].",
+    "translation": "己方小队忍者拥有护盾时[攻击]和[忍术]提升[14%]。"
+   },
+   "description": {
+    "source": "Ataque; Ninjutsu",
+    "translation": "攻击;忍术"
+   }
+  },
+  "10290007": {
+   "ninjaName": {
+    "source": "A [Terceiro Raikage]",
+    "translation": "艾[三代雷影]"
+   },
+   "tips": {
+    "source": "Quando sua equipe tem um [Escudo], a [Defesa] e [Ninjutsu] aumentam [17%].",
+    "translation": "己方小队忍者拥有护盾时[攻击]和[忍术]提升[17%]。"
+   },
+   "description": {
+    "source": "Ataque; Ninjutsu",
+    "translation": "攻击;忍术"
+   }
+  },
+  "10290008": {
+   "ninjaName": {
+    "source": "A [Terceiro Raikage]",
+    "translation": "艾[三代雷影]"
+   },
+   "tips": {
+    "source": "Quando sua equipe tem um [Escudo], a [Defesa] e [Ninjutsu] aumentam [20%].",
+    "translation": "己方小队忍者拥有护盾时[攻击]和[忍术]提升[20%]。"
+   },
+   "description": {
+    "source": "Ataque; Ninjutsu",
+    "translation": "攻击;忍术"
+   }
+  },
+  "10460001": {
+   "ninjaName": {
+    "source": "Shikaku Nara",
+    "translation": "奈良鹿久"
+   },
+   "tips": {
+    "source": "A cada [10] pontos de Chakra consumidos, o ninja [Kage] na equipe aliada ganha [0.1%] de [Velocidade] (até um máximo de [8%]). Habilidades de tipo [gatilho] ganham [2%] de dano.",
+    "translation": "己方小队[影]忍者每使用[10]点查克拉成长自身[0.1%]的[速度]（至多成长[8%]），[触发]类技能提升[2%]伤害。"
+   },
+   "description": {
+    "source": "Velocidade;Dano",
+    "translation": "速度;伤害"
+   }
+  },
+  "10460002": {
+   "ninjaName": {
+    "source": "Shikaku Nara",
+    "translation": "奈良鹿久"
+   },
+   "tips": {
+    "source": "A cada [10] pontos de Chakra consumidos, o ninja [Kage] na equipe aliada ganha [0.1%] de [Velocidade] (até um máximo de [8%]). Habilidades de tipo [gatilho] ganham [4%] de dano.",
+    "translation": "己方小队[影]忍者每使用[10]点查克拉成长自身[0.1%]的[速度]（至多成长[8%]），[触发]类技能提升[4%]伤害。"
+   },
+   "description": {
+    "source": "Velocidade;Dano",
+    "translation": "速度;伤害"
+   }
+  },
+  "10460003": {
+   "ninjaName": {
+    "source": "Shikaku Nara",
+    "translation": "奈良鹿久"
+   },
+   "tips": {
+    "source": "A cada [10] pontos de Chakra consumidos, o ninja [Kage] na equipe aliada ganha [0.2%] de [Velocidade] (até um máximo de [8%]). Habilidades de tipo [gatilho] ganham [4%] de dano.",
+    "translation": "己方小队[影]忍者每使用[10]点查克拉成长自身[0.2%]的[速度]（至多成长[8%]），[触发]类技能提升[4%]伤害。"
+   },
+   "description": {
+    "source": "Velocidade;Dano",
+    "translation": "速度;伤害"
+   }
+  },
+  "10460004": {
+   "ninjaName": {
+    "source": "Shikaku Nara",
+    "translation": "奈良鹿久"
+   },
+   "tips": {
+    "source": "A cada [10] pontos de Chakra consumidos, o ninja [Kage] na equipe aliada ganha [0.2%] de [Velocidade] (até um máximo de [8%]). Habilidades de tipo [gatilho] ganham [6%] de dano.",
+    "translation": "己方小队[影]忍者每使用[10]点查克拉成长自身[0.2%]的[速度]（至多成长[8%]），[触发]类技能提升[6%]伤害。"
+   },
+   "description": {
+    "source": "Velocidade;Dano",
+    "translation": "速度;伤害"
+   }
+  },
+  "10460005": {
+   "ninjaName": {
+    "source": "Shikaku Nara",
+    "translation": "奈良鹿久"
+   },
+   "tips": {
+    "source": "A cada [10] pontos de Chakra consumidos, o ninja [Kage] na equipe aliada ganha [0.3%] de [Velocidade] (até um máximo de [8%]). Habilidades de tipo [gatilho] ganham [6%] de dano.",
+    "translation": "己方小队[影]忍者每使用[10]点查克拉成长自身[0.3%]的[速度]（至多成长[8%]），[触发]类技能提升[6%]伤害。"
+   },
+   "description": {
+    "source": "Velocidade;Dano",
+    "translation": "速度;伤害"
+   }
+  },
+  "10460006": {
+   "ninjaName": {
+    "source": "Shikaku Nara",
+    "translation": "奈良鹿久"
+   },
+   "tips": {
+    "source": "A cada [10] pontos de Chakra consumidos, o ninja [Kage] na equipe aliada ganha [0.3%] de [Velocidade] (até um máximo de [8%]). Habilidades de tipo [gatilho] ganham [8%] de dano.",
+    "translation": "己方小队[影]忍者每使用[10]点查克拉成长自身[0.3%]的[速度]（至多成长[8%]），[触发]类技能提升[8%]伤害。"
+   },
+   "description": {
+    "source": "Velocidade;Dano",
+    "translation": "速度;伤害"
+   }
+  },
+  "10460007": {
+   "ninjaName": {
+    "source": "Shikaku Nara",
+    "translation": "奈良鹿久"
+   },
+   "tips": {
+    "source": "A cada [10] pontos de Chakra consumidos, o ninja [Kage] na equipe aliada ganha [0.4%] de [Velocidade] (até um máximo de [8%]). Habilidades de tipo [gatilho] ganham [8%] de dano.",
+    "translation": "己方小队[影]忍者每使用[10]点查克拉成长自身[0.4%]的[速度]（至多成长[8%]），[触发]类技能提升[8%]伤害。"
+   },
+   "description": {
+    "source": "Velocidade;Dano",
+    "translation": "速度;伤害"
+   }
+  },
+  "10460008": {
+   "ninjaName": {
+    "source": "Shikaku Nara",
+    "translation": "奈良鹿久"
+   },
+   "tips": {
+    "source": "A cada [10] pontos de Chakra consumidos, o ninja [Kage] na equipe aliada ganha [0.5%] de [Velocidade] (até um máximo de [8%]). Habilidades de tipo [gatilho] ganham [10%] de dano.",
+    "translation": "己方小队[影]忍者每使用[10]点查克拉成长自身[0.5%]的[速度]（至多成长[8%]），[触发]类技能提升[10%]伤害。"
+   },
+   "description": {
+    "source": "Velocidade;Dano",
+    "translation": "速度;伤害"
+   }
+  },
+  "10160001": {
+   "ninjaName": {
+    "source": "Rasa [Quarto Kazekage]",
+    "translation": "罗砂[四代风影]"
+   },
+   "tips": {
+    "source": "Seus companheiros que tiverem um Escudo ganham também [2%] de [Defesa] e [Resistência]",
+    "translation": "己方小队忍者拥有护盾时[防御]和[抗性]提升[2%]。"
+   },
+   "description": {
+    "source": "Defesa; Resistência",
+    "translation": "防御;抗性"
+   }
+  },
+  "10160002": {
+   "ninjaName": {
+    "source": "Rasa [Quarto Kazekage]",
+    "translation": "罗砂[四代风影]"
+   },
+   "tips": {
+    "source": "Seus companheiros que tiverem um Escudo ganham também [4%] de [Defesa] e [Resistência]",
+    "translation": "己方小队忍者拥有护盾时[防御]和[抗性]提升[4%]。"
+   },
+   "description": {
+    "source": "Defesa; Resistência",
+    "translation": "防御;抗性"
+   }
+  },
+  "10160003": {
+   "ninjaName": {
+    "source": "Rasa [Quarto Kazekage]",
+    "translation": "罗砂[四代风影]"
+   },
+   "tips": {
+    "source": "Seus companheiros que tiverem um Escudo ganham também [6%] de [Defesa] e [Resistência]",
+    "translation": "己方小队忍者拥有护盾时[防御]和[抗性]提升[6%]。"
+   },
+   "description": {
+    "source": "Defesa; Resistência",
+    "translation": "防御;抗性"
+   }
+  },
+  "10160004": {
+   "ninjaName": {
+    "source": "Rasa [Quarto Kazekage]",
+    "translation": "罗砂[四代风影]"
+   },
+   "tips": {
+    "source": "Seus companheiros que tiverem um Escudo ganham também [8%] de [Defesa] e [Resistência]",
+    "translation": "己方小队忍者拥有护盾时[防御]和[抗性]提升[8%]。"
+   },
+   "description": {
+    "source": "Defesa; Resistência",
+    "translation": "防御;抗性"
+   }
+  },
+  "10160005": {
+   "ninjaName": {
+    "source": "Rasa [Quarto Kazekage]",
+    "translation": "罗砂[四代风影]"
+   },
+   "tips": {
+    "source": "Seus companheiros que tiverem um Escudo ganham também [11%] de [Defesa] e [Resistência]",
+    "translation": "己方小队忍者拥有护盾时[防御]和[抗性]提升[11%]。"
+   },
+   "description": {
+    "source": "Defesa; Resistência",
+    "translation": "防御;抗性"
+   }
+  },
+  "10160006": {
+   "ninjaName": {
+    "source": "Rasa [Quarto Kazekage]",
+    "translation": "罗砂[四代风影]"
+   },
+   "tips": {
+    "source": "Seus companheiros que tiverem um Escudo ganham também [14%] de [Defesa] e [Resistência]",
+    "translation": "己方小队忍者拥有护盾时[防御]和[抗性]提升[14%]。"
+   },
+   "description": {
+    "source": "Defesa; Resistência",
+    "translation": "防御;抗性"
+   }
+  },
+  "10160007": {
+   "ninjaName": {
+    "source": "Rasa [Quarto Kazekage]",
+    "translation": "罗砂[四代风影]"
+   },
+   "tips": {
+    "source": "Seus companheiros que tiverem um Escudo ganham também [17%] de [Defesa] e [Resistência]",
+    "translation": "己方小队忍者拥有护盾时[防御]和[抗性]提升[17%]。"
+   },
+   "description": {
+    "source": "Defesa; Resistência",
+    "translation": "防御;抗性"
+   }
+  },
+  "10160008": {
+   "ninjaName": {
+    "source": "Rasa [Quarto Kazekage]",
+    "translation": "罗砂[四代风影]"
+   },
+   "tips": {
+    "source": "Seus companheiros que tiverem um Escudo ganham também [20%] de [Defesa] e [Resistência]",
+    "translation": "己方小队忍者拥有护盾时[防御]和[抗性]提升[20%]。"
+   },
+   "description": {
+    "source": "Defesa; Resistência",
+    "translation": "防御;抗性"
+   }
+  },
+  "10330001": {
+   "ninjaName": {
+    "source": "Fuguki Suikazan",
+    "translation": "西瓜山河豚鬼"
+   },
+   "tips": {
+    "source": "Aumenta o [Crítico] dos Ninjas da [Aldeia da Névoa] em [1%].",
+    "translation": "提升己方小队[雾隐]忍者[1%]的[暴击]。"
+   },
+   "description": {
+    "source": "Crítico; Pontos de Habilidade",
+    "translation": "暴击;技巧点"
+   }
+  },
+  "10330002": {
+   "ninjaName": {
+    "source": "Fuguki Suikazan",
+    "translation": "西瓜山河豚鬼"
+   },
+   "tips": {
+    "source": "Aumenta o [Crítico] dos Ninjas da [Aldeia da Névoa] em [2%].",
+    "translation": "提升己方小队[雾隐]忍者[2%]的[暴击]。"
+   },
+   "description": {
+    "source": "Crítico; Pontos de Habilidade",
+    "translation": "暴击;技巧点"
+   }
+  },
+  "10330003": {
+   "ninjaName": {
+    "source": "Fuguki Suikazan",
+    "translation": "西瓜山河豚鬼"
+   },
+   "tips": {
+    "source": "Aumenta o [Crítico] dos Ninjas da [Aldeia da Névoa] em [4%].",
+    "translation": "提升己方小队[雾隐]忍者[4%]的[暴击]。"
+   },
+   "description": {
+    "source": "Crítico; Pontos de Habilidade",
+    "translation": "暴击;技巧点"
+   }
+  },
+  "10330004": {
+   "ninjaName": {
+    "source": "Fuguki Suikazan",
+    "translation": "西瓜山河豚鬼"
+   },
+   "tips": {
+    "source": "Aumenta o [Crítico] dos Ninjas da [Aldeia da Névoa] em [6%].",
+    "translation": "提升己方小队[雾隐]忍者[6%]的[暴击]。"
+   },
+   "description": {
+    "source": "Crítico; Pontos de Habilidade",
+    "translation": "暴击;技巧点"
+   }
+  },
+  "10330005": {
+   "ninjaName": {
+    "source": "Fuguki Suikazan",
+    "translation": "西瓜山河豚鬼"
+   },
+   "tips": {
+    "source": "Aumenta o [Crítico] dos Ninjas da [Aldeia da Névoa] em [8%].",
+    "translation": "提升己方小队[雾隐]忍者[8%]的[暴击]。"
+   },
+   "description": {
+    "source": "Crítico; Pontos de Habilidade",
+    "translation": "暴击;技巧点"
+   }
+  },
+  "10330006": {
+   "ninjaName": {
+    "source": "Fuguki Suikazan",
+    "translation": "西瓜山河豚鬼"
+   },
+   "tips": {
+    "source": "Aumenta o [Crítico] dos Ninjas da [Aldeia da Névoa] em [10%].",
+    "translation": "提升己方小队[雾隐]忍者[10%]的[暴击]。"
+   },
+   "description": {
+    "source": "Crítico; Pontos de Habilidade",
+    "translation": "暴击;技巧点"
+   }
+  },
+  "10330007": {
+   "ninjaName": {
+    "source": "Fuguki Suikazan",
+    "translation": "西瓜山河豚鬼"
+   },
+   "tips": {
+    "source": "Aumenta o [Crítico] dos Ninjas da [Aldeia da Névoa] em [10%], e aumenta 1/2 [Ponto de Habilidade] cada vez que for atacado.",
+    "translation": "提升己方小队[雾隐]忍者[10%]的[暴击]且每次受到攻击时将增加1/2个[技巧点]。"
+   },
+   "description": {
+    "source": "Crítico; Pontos de Habilidade",
+    "translation": "暴击;技巧点"
+   }
+  },
+  "10330008": {
+   "ninjaName": {
+    "source": "Fuguki Suikazan",
+    "translation": "西瓜山河豚鬼"
+   },
+   "tips": {
+    "source": "Aumenta o [Crítico] dos Ninjas da [Aldeia da Névoa] em [10%], e aumenta 1 [Ponto de Habilidade] cada vez que for atacado.",
+    "translation": "提升己方小队[雾隐]忍者[10%]的[暴击]且每次受到攻击时将增加1个[技巧点]。"
+   },
+   "description": {
+    "source": "Crítico; Pontos de Habilidade",
+    "translation": "暴击;技巧点"
+   }
+  },
+  "10500001": {
+   "ninjaName": {
+    "source": "Itachi Uchiha [Anbu]",
+    "translation": "宇智波鼬[暗部]"
+   },
+   "tips": {
+    "source": "Quando um ninja [Espadachim] de [Uchiha] da equipe aliada usar habilidade de tipo [gatilho], ele recuperará a vida no valor equivalente a [2%] da própria vida máxima e ganhará [2%] de [Crítico].",
+    "translation": "己方小队[宇智波]的[带刀]忍者使用[触发]类技能时，回复自身最大生命值[2%]的血量并成长[2%]的[暴击]。"
+   },
+   "description": {
+    "source": "Cura; Crítico",
+    "translation": "治疗;暴击"
+   }
+  },
+  "10500002": {
+   "ninjaName": {
+    "source": "Itachi Uchiha [Anbu]",
+    "translation": "宇智波鼬[暗部]"
+   },
+   "tips": {
+    "source": "Quando um ninja [Espadachim] de [Uchiha] da equipe aliada usar habilidade de tipo [gatilho], ele recuperará a vida no valor equivalente a [4%] da própria vida máxima e ganhará [4%] de [Crítico].",
+    "translation": "己方小队[宇智波]的[带刀]忍者使用[触发]类技能时，回复自身最大生命值[4%]的血量并成长[4%]的[暴击]。"
+   },
+   "description": {
+    "source": "Cura; Crítico",
+    "translation": "治疗;暴击"
+   }
+  },
+  "10500003": {
+   "ninjaName": {
+    "source": "Itachi Uchiha [Anbu]",
+    "translation": "宇智波鼬[暗部]"
+   },
+   "tips": {
+    "source": "Quando um ninja [Espadachim] de [Uchiha] da equipe aliada usar habilidade de tipo [gatilho], ele recuperará a vida no valor equivalente a [6%] da própria vida máxima e ganhará [4%] de [Crítico].",
+    "translation": "己方小队[宇智波]的[带刀]忍者使用[触发]类技能时，回复自身最大生命值[6%]的血量并成长[4%]的[暴击]。"
+   },
+   "description": {
+    "source": "Cura; Crítico",
+    "translation": "治疗;暴击"
+   }
+  },
+  "10500004": {
+   "ninjaName": {
+    "source": "Itachi Uchiha [Anbu]",
+    "translation": "宇智波鼬[暗部]"
+   },
+   "tips": {
+    "source": "Quando um ninja [Espadachim] de [Uchiha] da equipe aliada usar habilidade de tipo [gatilho], ele recuperará a vida no valor equivalente a [6%] da própria vida máxima e ganhará [6%] de [Crítico].",
+    "translation": "己方小队[宇智波]的[带刀]忍者使用[触发]类技能时，回复自身最大生命值[6%]的血量并成长[6%]的[暴击]。"
+   },
+   "description": {
+    "source": "Cura; Crítico",
+    "translation": "治疗;暴击"
+   }
+  },
+  "10500005": {
+   "ninjaName": {
+    "source": "Itachi Uchiha [Anbu]",
+    "translation": "宇智波鼬[暗部]"
+   },
+   "tips": {
+    "source": "Quando um ninja [Espadachim] de [Uchiha] da equipe aliada usar habilidade de tipo [gatilho], ele recuperará a vida no valor equivalente a [8%] da própria vida máxima e ganhará [6%] de [Crítico].",
+    "translation": "己方小队[宇智波]的[带刀]忍者使用[触发]类技能时，回复自身最大生命值[8%]的血量并成长[6%]的[暴击]。"
+   },
+   "description": {
+    "source": "Cura; Crítico",
+    "translation": "治疗;暴击"
+   }
+  },
+  "10500006": {
+   "ninjaName": {
+    "source": "Itachi Uchiha [Anbu]",
+    "translation": "宇智波鼬[暗部]"
+   },
+   "tips": {
+    "source": "Quando um ninja [Espadachim] de [Uchiha] da equipe aliada usar habilidade de tipo [gatilho], ele recuperará a vida no valor equivalente a [8%] da própria vida máxima e ganhará [8%] de [Crítico].",
+    "translation": "己方小队[宇智波]的[带刀]忍者使用[触发]类技能时，回复自身最大生命值[8%]的血量并成长[8%]的[暴击]。"
+   },
+   "description": {
+    "source": "Cura; Crítico",
+    "translation": "治疗;暴击"
+   }
+  },
+  "10500007": {
+   "ninjaName": {
+    "source": "Itachi Uchiha [Anbu]",
+    "translation": "宇智波鼬[暗部]"
+   },
+   "tips": {
+    "source": "Quando um ninja [Espadachim] de [Uchiha] da equipe aliada usar habilidade de tipo [gatilho], ele recuperará a vida no valor equivalente a [10%] da própria vida máxima e ganhará [8%] de [Crítico].",
+    "translation": "己方小队[宇智波]的[带刀]忍者使用[触发]类技能时，回复自身最大生命值[10%]的血量并成长[8%]的[暴击]。"
+   },
+   "description": {
+    "source": "Cura; Crítico",
+    "translation": "治疗;暴击"
+   }
+  },
+  "10500008": {
+   "ninjaName": {
+    "source": "Itachi Uchiha [Anbu]",
+    "translation": "宇智波鼬[暗部]"
+   },
+   "tips": {
+    "source": "Quando um ninja [Espadachim] de [Uchiha] da equipe aliada usar habilidade de tipo [gatilho], ele recuperará a vida no valor equivalente a [10%] da própria vida máxima e ganhará [10%] de [Crítico].",
+    "translation": "己方小队[宇智波]的[带刀]忍者使用[触发]类技能时，回复自身最大生命值[10%]的血量并成长[10%]的[暴击]。"
+   },
+   "description": {
+    "source": "Cura; Crítico",
+    "translation": "治疗;暴击"
+   }
+  },
+  "10030001": {
+   "ninjaName": {
+    "source": "Danzou Shimura",
+    "translation": "志村团藏"
+   },
+   "tips": {
+    "source": "Aumenta o [Ninjutsu] dos companheiros de Fogo em [2%] e a [Resistência] em 3%.",
+    "translation": "己方小队[火属性]忍者[忍术]提升[2%]，[抗性]提升[3%]。"
+   },
+   "description": {
+    "source": "Ninjutsu; Resistência",
+    "translation": "忍术;抗性"
+   }
+  },
+  "10030002": {
+   "ninjaName": {
+    "source": "Danzou Shimura",
+    "translation": "志村团藏"
+   },
+   "tips": {
+    "source": "Aumenta o [Ninjutsu] dos companheiros de Fogo em [4%] e a [Resistência] em 6%.",
+    "translation": "己方小队[火属性]忍者[忍术]提升[4%]，[抗性]提升[6%]。"
+   },
+   "description": {
+    "source": "Ninjutsu; Resistência",
+    "translation": "忍术;抗性"
+   }
+  },
+  "10030003": {
+   "ninjaName": {
+    "source": "Danzou Shimura",
+    "translation": "志村团藏"
+   },
+   "tips": {
+    "source": "Aumenta o [Ninjutsu] dos companheiros de Fogo em [6%] e a [Resistência] em 9%.",
+    "translation": "己方小队[火属性]忍者[忍术]提升[6%]，[抗性]提升[9%]。"
+   },
+   "description": {
+    "source": "Ninjutsu; Resistência",
+    "translation": "忍术;抗性"
+   }
+  },
+  "10030004": {
+   "ninjaName": {
+    "source": "Danzou Shimura",
+    "translation": "志村团藏"
+   },
+   "tips": {
+    "source": "Aumenta o [Ninjutsu] dos companheiros de Fogo em [8%] e a [Resistência] em 12%.",
+    "translation": "己方小队[火属性]忍者[忍术]提升[8%]，[抗性]提升[12%]。"
+   },
+   "description": {
+    "source": "Ninjutsu; Resistência",
+    "translation": "忍术;抗性"
+   }
+  },
+  "10030005": {
+   "ninjaName": {
+    "source": "Danzou Shimura",
+    "translation": "志村团藏"
+   },
+   "tips": {
+    "source": "Aumenta o [Ninjutsu] dos companheiros de Fogo em [11%] e a [Resistência] em 16%.",
+    "translation": "己方小队[火属性]忍者[忍术]提升[11%]，[抗性]提升[16%]。"
+   },
+   "description": {
+    "source": "Ninjutsu; Resistência",
+    "translation": "忍术;抗性"
+   }
+  },
+  "10030006": {
+   "ninjaName": {
+    "source": "Danzou Shimura",
+    "translation": "志村团藏"
+   },
+   "tips": {
+    "source": "Aumenta o [Ninjutsu] dos companheiros de Fogo em [14%] e a [Resistência] em 20%.",
+    "translation": "己方小队[火属性]忍者[忍术]提升[14%]，[抗性]提升[20%]。"
+   },
+   "description": {
+    "source": "Ninjutsu; Resistência",
+    "translation": "忍术;抗性"
+   }
+  },
+  "10030007": {
+   "ninjaName": {
+    "source": "Danzou Shimura",
+    "translation": "志村团藏"
+   },
+   "tips": {
+    "source": "Aumenta o [Ninjutsu] dos companheiros de Fogo em [17%] e a [Resistência] em 25%.",
+    "translation": "己方小队[火属性]忍者[忍术]提升[17%]，[抗性]提升[25%]。"
+   },
+   "description": {
+    "source": "Ninjutsu; Resistência",
+    "translation": "忍术;抗性"
+   }
+  },
+  "10030008": {
+   "ninjaName": {
+    "source": "Danzou Shimura",
+    "translation": "志村团藏"
+   },
+   "tips": {
+    "source": "Aumenta o [Ninjutsu] dos companheiros de Fogo em [20%] e a [Resistência] em 30%.",
+    "translation": "己方小队[火属性]忍者[忍术]提升[20%]，[抗性]提升[30%]。"
+   },
+   "description": {
+    "source": "Ninjutsu; Resistência",
+    "translation": "忍术;抗性"
+   }
+  },
+  "10200001": {
+   "ninjaName": {
+    "source": "Ameyuri Ringo",
+    "translation": "林檎雨由利"
+   },
+   "tips": {
+    "source": "O dano causado pelos companheiros a inimigos com [Paralisia] aumenta em [3%].",
+    "translation": "己方小队忍者对[麻痹]的目标伤害提升[3%]。"
+   },
+   "description": {
+    "source": "Dano",
+    "translation": "伤害"
+   }
+  },
+  "10200002": {
+   "ninjaName": {
+    "source": "Ameyuri Ringo",
+    "translation": "林檎雨由利"
+   },
+   "tips": {
+    "source": "O dano causado pelos companheiros a inimigos com [Paralisia] aumenta em [6%].",
+    "translation": "己方小队忍者对[麻痹]的目标伤害提升[6%]。"
+   },
+   "description": {
+    "source": "Dano",
+    "translation": "伤害"
+   }
+  },
+  "10200003": {
+   "ninjaName": {
+    "source": "Ameyuri Ringo",
+    "translation": "林檎雨由利"
+   },
+   "tips": {
+    "source": "O dano causado pelos companheiros a inimigos com [Paralisia] aumenta em [9%].",
+    "translation": "己方小队忍者对[麻痹]的目标伤害提升[9%]。"
+   },
+   "description": {
+    "source": "Dano",
+    "translation": "伤害"
+   }
+  },
+  "10200004": {
+   "ninjaName": {
+    "source": "Ameyuri Ringo",
+    "translation": "林檎雨由利"
+   },
+   "tips": {
+    "source": "O dano causado pelos companheiros a inimigos com [Paralisia] aumenta em [12%].",
+    "translation": "己方小队忍者对[麻痹]的目标伤害提升[12%]。"
+   },
+   "description": {
+    "source": "Dano",
+    "translation": "伤害"
+   }
+  },
+  "10200005": {
+   "ninjaName": {
+    "source": "Ameyuri Ringo",
+    "translation": "林檎雨由利"
+   },
+   "tips": {
+    "source": "O dano causado pelos companheiros a inimigos com [Paralisia] aumenta em [16%].",
+    "translation": "己方小队忍者对[麻痹]的目标伤害提升[16%]。"
+   },
+   "description": {
+    "source": "Dano",
+    "translation": "伤害"
+   }
+  },
+  "10200006": {
+   "ninjaName": {
+    "source": "Ameyuri Ringo",
+    "translation": "林檎雨由利"
+   },
+   "tips": {
+    "source": "O dano causado pelos companheiros a inimigos com [Paralisia] aumenta em [20%].",
+    "translation": "己方小队忍者对[麻痹]的目标伤害提升[20%]。"
+   },
+   "description": {
+    "source": "Dano",
+    "translation": "伤害"
+   }
+  },
+  "10200007": {
+   "ninjaName": {
+    "source": "Ameyuri Ringo",
+    "translation": "林檎雨由利"
+   },
+   "tips": {
+    "source": "O dano causado pelos companheiros a inimigos com [Paralisia] aumenta em [25%].",
+    "translation": "己方小队忍者对[麻痹]的目标伤害提升[25%]。"
+   },
+   "description": {
+    "source": "Dano",
+    "translation": "伤害"
+   }
+  },
+  "10200008": {
+   "ninjaName": {
+    "source": "Ameyuri Ringo",
+    "translation": "林檎雨由利"
+   },
+   "tips": {
+    "source": "O dano causado pelos companheiros a inimigos com [Paralisia] aumenta em [30%].",
+    "translation": "己方小队忍者对[麻痹]的目标伤害提升[30%]。"
+   },
+   "description": {
+    "source": "Dano",
+    "translation": "伤害"
+   }
+  },
+  "10370001": {
+   "ninjaName": {
+    "source": "Shikamaru",
+    "translation": "鹿丸"
+   },
+   "tips": {
+    "source": "Sempre que alguém de sua equipe lança [Perseguição], recupera [1] ponto de Chakra e tem seu [Crítico] aumentado em [1%].",
+    "translation": "己方小队[忍者]及[非忍者]单位每次使用[追打]类技能将回复[1]点查克拉并成长[1%]的[暴击]。"
+   },
+   "description": {
+    "source": "Chakra; Crítico",
+    "translation": "查克拉;暴击"
+   }
+  },
+  "10370002": {
+   "ninjaName": {
+    "source": "Shikamaru",
+    "translation": "鹿丸"
+   },
+   "tips": {
+    "source": "Sempre que alguém de sua equipe lança [Perseguição], recupera [1] ponto de Chakra e tem seu [Crítico] aumentado em [2%].",
+    "translation": "己方小队[忍者]及[非忍者]单位每次使用[追打]类技能将回复[1]点查克拉并成长[2%]的[暴击]。"
+   },
+   "description": {
+    "source": "Chakra; Crítico",
+    "translation": "查克拉;暴击"
+   }
+  },
+  "10370003": {
+   "ninjaName": {
+    "source": "Shikamaru",
+    "translation": "鹿丸"
+   },
+   "tips": {
+    "source": "Sempre que alguém de sua equipe lança [Perseguição], recupera [2] pontos de Chakra e tem seu [Crítico] aumentado em [2%].",
+    "translation": "己方小队[忍者]及[非忍者]单位每次使用[追打]类技能将回复[2]点查克拉并成长[2%]的[暴击]。"
+   },
+   "description": {
+    "source": "Chakra; Crítico",
+    "translation": "查克拉;暴击"
+   }
+  },
+  "10370004": {
+   "ninjaName": {
+    "source": "Shikamaru",
+    "translation": "鹿丸"
+   },
+   "tips": {
+    "source": "Sempre que alguém de sua equipe lança [Perseguição], recupera [2] ponto de Chakra e tem seu [Crítico] aumentado em [3%].",
+    "translation": "己方小队[忍者]及[非忍者]单位每次使用[追打]类技能将回复[2]点查克拉并成长[3%]的[暴击]。"
+   },
+   "description": {
+    "source": "Chakra; Crítico",
+    "translation": "查克拉;暴击"
+   }
+  },
+  "10370005": {
+   "ninjaName": {
+    "source": "Shikamaru",
+    "translation": "鹿丸"
+   },
+   "tips": {
+    "source": "Sempre que alguém de sua equipe lança [Perseguição], recupera [3] ponto de Chakra e tem seu [Crítico] aumentado em [3%].",
+    "translation": "己方小队[忍者]及[非忍者]单位每次使用[追打]类技能将回复[3]点查克拉并成长[3%]的[暴击]。"
+   },
+   "description": {
+    "source": "Chakra; Crítico",
+    "translation": "查克拉;暴击"
+   }
+  },
+  "10370006": {
+   "ninjaName": {
+    "source": "Shikamaru",
+    "translation": "鹿丸"
+   },
+   "tips": {
+    "source": "Sempre que alguém de sua equipe lança [Perseguição], recupera [3] ponto de Chakra e tem seu [Crítico] aumentado em [4%].",
+    "translation": "己方小队[忍者]及[非忍者]单位每次使用[追打]类技能将回复[3]点查克拉并成长[4%]的[暴击]。"
+   },
+   "description": {
+    "source": "Chakra; Crítico",
+    "translation": "查克拉;暴击"
+   }
+  },
+  "10370007": {
+   "ninjaName": {
+    "source": "Shikamaru",
+    "translation": "鹿丸"
+   },
+   "tips": {
+    "source": "Sempre que alguém de sua equipe lança [Perseguição], recupera [4] ponto de Chakra e tem seu [Crítico] aumentado em [4%].",
+    "translation": "己方小队[忍者]及[非忍者]单位每次使用[追打]类技能将回复[4]点查克拉并成长[4%]的[暴击]。"
+   },
+   "description": {
+    "source": "Chakra; Crítico",
+    "translation": "查克拉;暴击"
+   }
+  },
+  "10370008": {
+   "ninjaName": {
+    "source": "Shikamaru",
+    "translation": "鹿丸"
+   },
+   "tips": {
+    "source": "Sempre que alguém de sua equipe lança [Perseguição], recupera [5] ponto de Chakra e tem seu [Crítico] aumentado em [5%].",
+    "translation": "己方小队[忍者]及[非忍者]单位每次使用[追打]类技能将回复[5]点查克拉并成长[5%]的[暴击]。"
+   },
+   "description": {
+    "source": "Chakra; Crítico",
+    "translation": "查克拉;暴击"
+   }
+  },
+  "10540001": {
+   "ninjaName": {
+    "source": "Haku [Samurai Errante]",
+    "translation": "白[漂泊武士]"
+   },
+   "tips": {
+    "source": "Ninjas da série [Samurai] na equipe aliada, ao usarem qualquer habilidade, ganham [8%] de probabilidade de esquiva (pode se esquivar até [4] vezes, mas não acumula).",
+    "translation": "己方小队[武士]系列忍者使用任意技能将在回合内提升自身[8%]的闪避概率（可闪避[4]次，不可叠加）。"
+   },
+   "description": {
+    "source": "Esquiva",
+    "translation": "闪避"
+   }
+  },
+  "10540002": {
+   "ninjaName": {
+    "source": "Haku [Samurai Errante]",
+    "translation": "白[漂泊武士]"
+   },
+   "tips": {
+    "source": "Ninjas da série [Samurai] na equipe aliada, ao usarem qualquer habilidade, ganham [12%] de probabilidade de esquiva (pode se esquivar até [4] vezes, mas não acumula).",
+    "translation": "己方小队[武士]系列忍者使用任意技能将在回合内提升自身[12%]的闪避概率（可闪避[4]次，不可叠加）。"
+   },
+   "description": {
+    "source": "Esquiva",
+    "translation": "闪避"
+   }
+  },
+  "10540003": {
+   "ninjaName": {
+    "source": "Haku [Samurai Errante]",
+    "translation": "白[漂泊武士]"
+   },
+   "tips": {
+    "source": "Ninjas da série [Samurai] na equipe aliada, ao usarem qualquer habilidade, ganham [15%] de probabilidade de esquiva (pode se esquivar até [4] vezes, mas não acumula).",
+    "translation": "己方小队[武士]系列忍者使用任意技能将在回合内提升自身[15%]的闪避概率（可闪避[4]次，不可叠加）。"
+   },
+   "description": {
+    "source": "Esquiva",
+    "translation": "闪避"
+   }
+  },
+  "10540004": {
+   "ninjaName": {
+    "source": "Haku [Samurai Errante]",
+    "translation": "白[漂泊武士]"
+   },
+   "tips": {
+    "source": "Ninjas da série [Samurai] na equipe aliada, ao usarem qualquer habilidade, ganham [18%] de probabilidade de esquiva (pode se esquivar até [4] vezes, mas não acumula).",
+    "translation": "己方小队[武士]系列忍者使用任意技能将在回合内提升自身[18%]的闪避概率（可闪避[4]次，不可叠加）。"
+   },
+   "description": {
+    "source": "Esquiva",
+    "translation": "闪避"
+   }
+  },
+  "10540005": {
+   "ninjaName": {
+    "source": "Haku [Samurai Errante]",
+    "translation": "白[漂泊武士]"
+   },
+   "tips": {
+    "source": "Ninjas da série [Samurai] na equipe aliada, ao usarem qualquer habilidade, ganham [21%] de probabilidade de esquiva (pode se esquivar até [4] vezes, mas não acumula).",
+    "translation": "己方小队[武士]系列忍者使用任意技能将在回合内提升自身[21%]的闪避概率（可闪避[4]次，不可叠加）。"
+   },
+   "description": {
+    "source": "Esquiva",
+    "translation": "闪避"
+   }
+  },
+  "10540006": {
+   "ninjaName": {
+    "source": "Haku [Samurai Errante]",
+    "translation": "白[漂泊武士]"
+   },
+   "tips": {
+    "source": "Ninjas da série [Samurai] na equipe aliada, ao usarem qualquer habilidade, ganham [24%] de probabilidade de esquiva (pode se esquivar até [4] vezes, mas não acumula).",
+    "translation": "己方小队[武士]系列忍者使用任意技能将在回合内提升自身[24%]的闪避概率（可闪避[4]次，不可叠加）。"
+   },
+   "description": {
+    "source": "Esquiva",
+    "translation": "闪避"
+   }
+  },
+  "10540007": {
+   "ninjaName": {
+    "source": "Haku [Samurai Errante]",
+    "translation": "白[漂泊武士]"
+   },
+   "tips": {
+    "source": "Ninjas da série [Samurai] na equipe aliada, ao usarem qualquer habilidade, ganham [27%] de probabilidade de esquiva (pode se esquivar até [4] vezes, mas não acumula). Ademais, o uso de habilidade [Esotérica] causa [Selamento] ao alvo escolhido (válido apenas para habilidades que permitem a escolha do alvo).",
+    "translation": "己方小队[武士]系列忍者使用任意技能将在回合内提升自身[27%]的闪避概率（可闪避[4]次，不可叠加），此外，使用[奥义]类技能时额外对选定目标造成[封穴]（仅针对可选定目标的技能生效）。"
+   },
+   "description": {
+    "source": "Esquiva",
+    "translation": "闪避"
+   }
+  },
+  "10540008": {
+   "ninjaName": {
+    "source": "Haku [Samurai Errante]",
+    "translation": "白[漂泊武士]"
+   },
+   "tips": {
+    "source": "Ninjas da série [Samurai] na equipe aliada, ao usarem qualquer habilidade, ganham [30%] de probabilidade de esquiva (pode se esquivar até [4] vezes, mas não acumula). Ademais, o uso de habilidade [Esotérica] causa [Selamento] ao alvo escolhido (válido apenas para habilidades que permitem a escolha do alvo).",
+    "translation": "己方小队[武士]系列忍者使用任意技能将在回合内提升自身[30%]的闪避概率（可闪避[4]次，不可叠加），此外，使用[奥义]类技能时额外对选定目标造成[封穴]（仅针对可选定目标的技能生效）。"
+   },
+   "description": {
+    "source": "Esquiva",
+    "translation": "闪避"
+   }
+  },
+  "10070001": {
+   "ninjaName": {
+    "source": "A [Quarto Raikage]",
+    "translation": "艾[四代雷影]"
+   },
+   "tips": {
+    "source": "Aumenta o [Ninjutsu] dos companheiros de Relâmpago em [2%] e a [Resistência] em 3%.",
+    "translation": "己方小队[雷属性]忍者[忍术]提升[2%]，[抗性]提升[3%]。"
+   },
+   "description": {
+    "source": "Ninjutsu; Resistência",
+    "translation": "忍术;抗性"
+   }
+  },
+  "10070002": {
+   "ninjaName": {
+    "source": "A [Quarto Raikage]",
+    "translation": "艾[四代雷影]"
+   },
+   "tips": {
+    "source": "Aumenta o [Ninjutsu] dos companheiros de Relâmpago em [4%] e a [Resistência] em 6%.",
+    "translation": "己方小队[雷属性]忍者[忍术]提升[4%]，[抗性]提升[6%]。"
+   },
+   "description": {
+    "source": "Ninjutsu; Resistência",
+    "translation": "忍术;抗性"
+   }
+  },
+  "10070003": {
+   "ninjaName": {
+    "source": "A [Quarto Raikage]",
+    "translation": "艾[四代雷影]"
+   },
+   "tips": {
+    "source": "Aumenta o [Ninjutsu] dos companheiros de Relâmpago em [6%] e a [Resistência] em 9%.",
+    "translation": "己方小队[雷属性]忍者[忍术]提升[6%]，[抗性]提升[9%]。"
+   },
+   "description": {
+    "source": "Ninjutsu; Resistência",
+    "translation": "忍术;抗性"
+   }
+  },
+  "10070004": {
+   "ninjaName": {
+    "source": "A [Quarto Raikage]",
+    "translation": "艾[四代雷影]"
+   },
+   "tips": {
+    "source": "Aumenta o [Ninjutsu] dos companheiros de Relâmpago em [8%] e a [Resistência] em 12%.",
+    "translation": "己方小队[雷属性]忍者[忍术]提升[8%]，[抗性]提升[12%]。"
+   },
+   "description": {
+    "source": "Ninjutsu; Resistência",
+    "translation": "忍术;抗性"
+   }
+  },
+  "10070005": {
+   "ninjaName": {
+    "source": "A [Quarto Raikage]",
+    "translation": "艾[四代雷影]"
+   },
+   "tips": {
+    "source": "Aumenta o [Ninjutsu] dos companheiros de Relâmpago em [11%] e a [Resistência] em 16%.",
+    "translation": "己方小队[雷属性]忍者[忍术]提升[11%]，[抗性]提升[16%]。"
+   },
+   "description": {
+    "source": "Ninjutsu; Resistência",
+    "translation": "忍术;抗性"
+   }
+  },
+  "10070006": {
+   "ninjaName": {
+    "source": "A [Quarto Raikage]",
+    "translation": "艾[四代雷影]"
+   },
+   "tips": {
+    "source": "Aumenta o [Ninjutsu] dos companheiros de Relâmpago em [14%] e a [Resistência] em 20%.",
+    "translation": "己方小队[雷属性]忍者[忍术]提升[14%]，[抗性]提升[20%]。"
+   },
+   "description": {
+    "source": "Ninjutsu; Resistência",
+    "translation": "忍术;抗性"
+   }
+  },
+  "10070007": {
+   "ninjaName": {
+    "source": "A [Quarto Raikage]",
+    "translation": "艾[四代雷影]"
+   },
+   "tips": {
+    "source": "Aumenta o [Ninjutsu] dos companheiros de Relâmpago em [17%] e a [Resistência] em 25%.",
+    "translation": "己方小队[雷属性]忍者[忍术]提升[17%]，[抗性]提升[25%]。"
+   },
+   "description": {
+    "source": "Ninjutsu; Resistência",
+    "translation": "忍术;抗性"
+   }
+  },
+  "10070008": {
+   "ninjaName": {
+    "source": "A [Quarto Raikage]",
+    "translation": "艾[四代雷影]"
+   },
+   "tips": {
+    "source": "Aumenta o [Ninjutsu] dos companheiros de Relâmpago em [20%] e a [Resistência] em 30%.",
+    "translation": "己方小队[雷属性]忍者[忍术]提升[20%]，[抗性]提升[30%]。"
+   },
+   "description": {
+    "source": "Ninjutsu; Resistência",
+    "translation": "忍术;抗性"
+   }
+  }
+ }
+}

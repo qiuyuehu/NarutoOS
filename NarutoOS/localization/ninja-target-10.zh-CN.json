@@ -1,0 +1,439 @@
+{
+  "id": "naruto-ninja-target-10-zh-CN-v1",
+  "rootId": "11008001",
+  "ninjaInfo": {
+    "class": "NinjaInfoCFG",
+    "rows": {
+      "11008001": {
+        "name": {
+          "source": "Ao",
+          "translation": "青"
+        },
+        "title": {
+          "source": "",
+          "translation": ""
+        }
+      }
+    }
+  },
+  "skills": {
+    "class": "SkillCFG",
+    "rows": {
+      "21008001": {
+        "name": {
+          "source": "Ataque Taijutsu",
+          "translation": "体术攻击"
+        },
+        "desc": {
+          "source": "Ataca o inimigo à frente, com chance de lançar um <font color=\"#4dc831\">Combo de 3</font> e causar <font color=\"#4dc831\">Flutuação</font>.",
+          "translation": "攻击前方敌人，有概率造成3连击和浮空。"
+        }
+      },
+      "21008002": {
+        "name": {
+          "source": "Ataque Taijutsu",
+          "translation": "体术攻击"
+        },
+        "desc": {
+          "source": "Ataca o inimigo à frente, com chance de lançar um <font color=\"#4dc831\">Combo de 3</font> e causar <font color=\"#4dc831\">Flutuação</font>.",
+          "translation": "攻击前方敌人，有概率造成3连击和浮空。"
+        }
+      },
+      "21008003": {
+        "name": {
+          "source": "Ataque Taijutsu",
+          "translation": "体术攻击"
+        },
+        "desc": {
+          "source": "Ataca o inimigo à frente, com chance de lançar um <font color=\"#4dc831\">Combo de 3</font> e causar <font color=\"#4dc831\">Flutuação</font>.",
+          "translation": "攻击前方敌人，有概率造成3连击和浮空。"
+        }
+      },
+      "21008004": {
+        "name": {
+          "source": "Estilo Água: Palma do Dragão Índigo",
+          "translation": "水遁·青龙掌"
+        },
+        "desc": {
+          "source": "Persegue inimigos com <font color=\"#4dc831\">Queda</font> e causa <font color=\"#4dc831\">Repelimento</font> e <font color=\"#4dc831\">Selamento</font>.",
+          "translation": "追打倒地敌人，造成击退和封穴。"
+        }
+      },
+      "21008005": {
+        "name": {
+          "source": "Estilo Água: Multi-clone de Água",
+          "translation": "水遁·多重水分身"
+        },
+        "desc": {
+          "source": "No início do combate, invoca 2 <font color=\"#4dc831\">Clone Água</font> com <font color=\"#4dc831\">10%</font> de vida máxima de seu corpo original.",
+          "translation": "战斗开始时召唤2个水分身，继承本体10%的生命上限。"
+        }
+      },
+      "21008006": {
+        "name": {
+          "source": "Proteção da Aldeia da Névoa",
+          "translation": "雾隐守护"
+        },
+        "desc": {
+          "source": "No início do combate dá a até <font color=\"#4dc831\">9</font> companheiros de <font color=\"#4dc831\">Água</font> ou <font color=\"#4dc831\">Fogo</font> um <font color=\"#4dc831\">Escudo</font> de <font color=\"#4dc831\">30%</font> de sua <font color=\"#4dc831\">Resistência</font>.",
+          "translation": "战斗开始时，为己方最多9名水或火属性忍者施加相当于自身抗性30%的护盾。"
+        }
+      },
+      "21008008": {
+        "name": {
+          "source": "Estilo Água: Palma do Dragão Azul-celeste",
+          "translation": "水遁·苍龙掌"
+        },
+        "desc": {
+          "source": "Causa dano de Água e <font color=\"#4dc831\">Selamento</font> ao inimigo escolhido. Esta habilidade é imune a <font color=\"#4dc831\">Interrupção</font>.",
+          "translation": "对选定敌人造成水属性伤害和封穴。本技能免疫打断。"
+        }
+      },
+      "21008009": {
+        "name": {
+          "source": "Jutsu de Despertar da Mente",
+          "translation": "心神唤醒术"
+        },
+        "desc": {
+          "source": "Habilidade com chance de Esquiva 0, não sendo exibida. A Esotérica não pode ser interrompida.",
+          "translation": "闪避概率为0的技能，不显示。奥义无法被打断。"
+        }
+      },
+      "21008010": {
+        "name": {
+          "source": "Habilidade vazia",
+          "translation": "空技能"
+        },
+        "desc": {
+          "source": "Habilidade vazia (ocupando)",
+          "translation": "空技能（占位）。"
+        }
+      },
+      "21208001": {
+        "name": {
+          "source": "Ataque Taijutsu",
+          "translation": "体术攻击"
+        },
+        "desc": {
+          "source": "Ataca o inimigo à frente, com grande chance de lançar um <font color=\"#4dc831\">Combo de 3</font> e causar <font color=\"#4dc831\">Flutuação</font>.",
+          "translation": "攻击前方敌人，有较高概率造成3连击和浮空。"
+        }
+      },
+      "21208002": {
+        "name": {
+          "source": "Ataque Taijutsu",
+          "translation": "体术攻击"
+        },
+        "desc": {
+          "source": "Ataca o inimigo à frente, com grande chance de lançar um <font color=\"#4dc831\">Combo de 3</font> e causar <font color=\"#4dc831\">Flutuação</font>.",
+          "translation": "攻击前方敌人，有较高概率造成3连击和浮空。"
+        }
+      },
+      "21208003": {
+        "name": {
+          "source": "Ataque Taijutsu",
+          "translation": "体术攻击"
+        },
+        "desc": {
+          "source": "Ataca o inimigo à frente, com grande chance de lançar um <font color=\"#4dc831\">Combo de 3</font> e causar <font color=\"#4dc831\">Flutuação</font>.",
+          "translation": "攻击前方敌人，有较高概率造成3连击和浮空。"
+        }
+      },
+      "21208004": {
+        "name": {
+          "source": "Estilo Água: Palma do Dragão Índigo",
+          "translation": "水遁·青龙掌"
+        },
+        "desc": {
+          "source": "Persegue inimigos com <font color=\"#4dc831\">Queda</font> e causa <font color=\"#4dc831\">Repelimento</font> e <font color=\"#4dc831\">Selamento</font>, podendo ser lançado até 2 vezes por rodada.",
+          "translation": "追打倒地敌人，造成击退和封穴，每回合最多触发2次。"
+        }
+      },
+      "21208005": {
+        "name": {
+          "source": "Estilo Água: Multi-clone de Água",
+          "translation": "水遁·多重水分身"
+        },
+        "desc": {
+          "source": "No início do combate, invoca 2 <font color=\"#4dc831\">Clone Água</font> com <font color=\"#4dc831\">10%</font> de vida máxima de seu corpo original.",
+          "translation": "战斗开始时召唤2个水分身，继承本体10%的生命上限。"
+        }
+      },
+      "21208006": {
+        "name": {
+          "source": "Proteção da Aldeia da Névoa",
+          "translation": "雾隐守护"
+        },
+        "desc": {
+          "source": "No início do combate dá a até <font color=\"#4dc831\">9</font> companheiros de <font color=\"#4dc831\">Água</font> ou <font color=\"#4dc831\">Fogo</font> um <font color=\"#4dc831\">Escudo</font> de <font color=\"#4dc831\">40%</font> de sua <font color=\"#4dc831\">Resistência</font>. Além disso, <font color=\"#4dc831\">Esotéricas</font> de companheiros da <font color=\"#4dc831\">Névoa</font> <font color=\"#4dc831\">sempre acertam</font>, até o fim da rodada seguinte.",
+          "translation": "战斗开始时，为己方最多9名水或火属性忍者施加相当于自身抗性40%的护盾。此外，己方雾隐忍者奥义必定命中，持续至下回合结束。"
+        }
+      },
+      "21208008": {
+        "name": {
+          "source": "Estilo Água: Palma do Dragão Azul-celeste",
+          "translation": "水遁·苍龙掌"
+        },
+        "desc": {
+          "source": "Causa dano de Água e <font color=\"#4dc831\">Selamento</font> ao inimigo escolhido. Esta habilidade é imune a <font color=\"#4dc831\">Interrupção</font> e <font color=\"#4dc831\">ignora Escudos</font>.",
+          "translation": "对选定敌人造成水属性伤害和封穴。本技能免疫打断，并无视护盾。"
+        }
+      },
+      "21208009": {
+        "name": {
+          "source": "Jutsu de Despertar da Mente",
+          "translation": "心神唤醒术"
+        },
+        "desc": {
+          "source": "Habilidade com chance de Esquiva 0, não sendo exibida. A Esotérica não pode ser interrompida.",
+          "translation": "闪避概率为0的技能，不显示。奥义无法被打断。"
+        }
+      },
+      "21208010": {
+        "name": {
+          "source": "Habilidade vazia",
+          "translation": "空技能"
+        },
+        "desc": {
+          "source": "Habilidade vazia (ocupando)",
+          "translation": "空技能（占位）。"
+        }
+      },
+      "21308001": {
+        "name": {
+          "source": "Ataque Taijutsu",
+          "translation": "体术攻击"
+        },
+        "desc": {
+          "source": "Ataca o inimigo à frente, com grande chance de lançar um <font color=\"#4dc831\">Combo de 3</font> e causar <font color=\"#4dc831\">Flutuação</font>. Também lança um Escudo de <font color=\"#4dc831\">10%</font> ou <font color=\"#4dc831\">15%</font> de sua Resistência sobre a sua equipe.",
+          "translation": "攻击前方敌人，有较高概率造成3连击和浮空，并为己方小队施加相当于自身抗性10%或15%的护盾。"
+        }
+      },
+      "21308002": {
+        "name": {
+          "source": "Ataque Taijutsu",
+          "translation": "体术攻击"
+        },
+        "desc": {
+          "source": "Ataca o inimigo à frente, com grande chance de lançar um <font color=\"#4dc831\">Combo de 3</font> e causar <font color=\"#4dc831\">Flutuação</font>. Também lança um Escudo de <font color=\"#4dc831\">10%</font> ou <font color=\"#4dc831\">15%</font> de sua Resistência sobre a sua equipe.",
+          "translation": "攻击前方敌人，有较高概率造成3连击和浮空，并为己方小队施加相当于自身抗性10%或15%的护盾。"
+        }
+      },
+      "21308003": {
+        "name": {
+          "source": "Ataque Taijutsu",
+          "translation": "体术攻击"
+        },
+        "desc": {
+          "source": "Ataca o inimigo à frente, com grande chance de lançar um <font color=\"#4dc831\">Combo de 3</font> e causar <font color=\"#4dc831\">Flutuação</font>. Também lança um Escudo de <font color=\"#4dc831\">10%</font> ou <font color=\"#4dc831\">15%</font> de sua Resistência sobre a sua equipe.",
+          "translation": "攻击前方敌人，有较高概率造成3连击和浮空，并为己方小队施加相当于自身抗性10%或15%的护盾。"
+        }
+      },
+      "21308004": {
+        "name": {
+          "source": "Estilo Água: Palma do Dragão Índigo",
+          "translation": "水遁·青龙掌"
+        },
+        "desc": {
+          "source": "Persegue inimigos com <font color=\"#4dc831\">Queda</font> e causa <font color=\"#4dc831\">Repelimento</font> e <font color=\"#4dc831\">Selamento</font> <font color=\"#4dc831\">na certa</font>, podendo ser lançado até 2 vezes por rodada.",
+          "translation": "追打倒地敌人，造成必定命中的击退和封穴，每回合最多触发2次。"
+        }
+      },
+      "21308005": {
+        "name": {
+          "source": "Estilo Água: Multi-clone de Água",
+          "translation": "水遁·多重水分身"
+        },
+        "desc": {
+          "source": "No início do combate e antes de usar a <font color=\"#4dc831\">Esotérica</font>, invoca 2 <font color=\"#4dc831\">Clone Água</font> com <font color=\"#4dc831\">10%</font> de vida máxima de seu corpo original.",
+          "translation": "战斗开始时和释放奥义前，召唤2个水分身，继承本体10%的生命上限。"
+        }
+      },
+      "21308006": {
+        "name": {
+          "source": "Proteção da Aldeia da Névoa",
+          "translation": "雾隐守护"
+        },
+        "desc": {
+          "source": "No início do combate dá a até <font color=\"#4dc831\">12</font> companheiros de <font color=\"#4dc831\">Água</font> ou <font color=\"#4dc831\">Fogo</font> um <font color=\"#4dc831\">Escudo</font> de <font color=\"#4dc831\">40%</font> de sua <font color=\"#4dc831\">Resistência</font>. Além disso, <font color=\"#4dc831\">Esotéricas</font> de companheiros da <font color=\"#4dc831\">Névoa</font> <font color=\"#4dc831\">sempre acertam</font>, até o fim da rodada seguinte.",
+          "translation": "战斗开始时，为己方最多12名水或火属性忍者施加相当于自身抗性40%的护盾。此外，己方雾隐忍者奥义必定命中，持续至下回合结束。"
+        }
+      },
+      "21308008": {
+        "name": {
+          "source": "Estilo Água: Palma do Dragão Azul-celeste",
+          "translation": "水遁·苍龙掌"
+        },
+        "desc": {
+          "source": "Causa dano de Água e <font color=\"#4dc831\">Selamento</font> ao inimigo escolhido. Esta habilidade é imune a <font color=\"#4dc831\">Interrupção</font> e <font color=\"#4dc831\">ignora Escudos</font>. Caso o alvo da habilidade seja um companheiro, o <font color=\"#4dc831\">Efeito da Habilidade</font> muda.",
+          "translation": "对选定敌人造成水属性伤害和封穴。本技能免疫打断，并无视护盾。若选定目标为己方队友，则替换技能效果。"
+        }
+      },
+      "21308009": {
+        "name": {
+          "source": "Jutsu de Despertar da Mente",
+          "translation": "心神唤醒术"
+        },
+        "desc": {
+          "source": "Habilidade com chance de Esquiva 0, não sendo exibida. A Esotérica não pode ser interrompida.",
+          "translation": "闪避概率为0的技能，不显示。奥义无法被打断。"
+        }
+      },
+      "21308010": {
+        "name": {
+          "source": "Estilo Água: Multi-clone de Água",
+          "translation": "水遁·多重水分身"
+        },
+        "desc": {
+          "source": "Ao lançãr a <font color=\"#4dc831\">Esotérica</font>, invoca 2 <font color=\"#4dc831\">Clones de Água</font> com <font color=\"#4dc831\">10%</font> de seu limite de Vida.",
+          "translation": "释放奥义时召唤2个水分身，继承自身10%的生命上限。"
+        }
+      },
+      "21408001": {
+        "name": {
+          "source": "Ataque Taijutsu",
+          "translation": "体术攻击"
+        },
+        "desc": {
+          "source": "Ataca o inimigo à frente, com grande chance de lançar um <font color=\"#4dc831\">Combo de 3</font> e causar <font color=\"#4dc831\">Flutuação</font>. Também faz com que você só perca 1 de Vida ao receber ataques durante o seu turno.",
+          "translation": "攻击前方敌人，有较高概率造成3连击和浮空，并使自身行动期间受到攻击时仅损失1点生命。"
+        }
+      },
+      "21408003": {
+        "name": {
+          "source": "Ataque Taijutsu",
+          "translation": "体术攻击"
+        },
+        "desc": {
+          "source": "Ataca o inimigo à frente, com grande chance de lançar um <font color=\"#4dc831\">Combo de 3</font> e causar <font color=\"#4dc831\">Flutuação</font>. Também faz com que você só perca 1 de Vida ao receber ataques durante o seu turno.",
+          "translation": "攻击前方敌人，有较高概率造成3连击和浮空，并使自身行动期间受到攻击时仅损失1点生命。"
+        }
+      },
+      "21408004": {
+        "name": {
+          "source": "Estilo Água: Palma do Dragão Índigo",
+          "translation": "水遁·青龙掌"
+        },
+        "desc": {
+          "source": "Persegue inimigos com <font color=\"#4dc831\">Queda</font>, causa <font color=\"#4dc831\">Repelimento</font> e <font color=\"#4dc831\">Interrupção</font> e rouba chances de ataques comuns. Esta habilidade <font color=\"#4dc831\">sempre acerta</font>.",
+          "translation": "追打倒地敌人，造成击退和打断，并夺取普攻次数。本技能必定命中。"
+        }
+      },
+      "21408005": {
+        "name": {
+          "source": "Estilo Água: Multi-clone de Água",
+          "translation": "水遁·多重水分身"
+        },
+        "desc": {
+          "source": "No início do combate e antes de lançar a <font color=\"#4dc831\">Esotérica</font>, invoca 1 <font color=\"#4dc831\">Clone Água</font> com <font color=\"#4dc831\">80%</font> de vida máxima de seu corpo original. (No máximo 1 clone)",
+          "translation": "战斗开始时和释放奥义前，召唤1个水分身，继承本体80%的生命上限，最多存在1个。"
+        }
+      },
+      "21408006": {
+        "name": {
+          "source": "Proteção da Aldeia da Névoa",
+          "translation": "雾隐守护"
+        },
+        "desc": {
+          "source": "Quando companheiros <font color=\"#4dc831\">Kage</font> ou com <font color=\"#4dc831\">Byakugan</font> ganham Escudos, também ganham <font color=\"#4dc831\">Imunidade a Status negativos</font>. Além disso, recupera <font color=\"#4dc831\">10</font> de Chakra ao usar habilidades de lançamento e seu <font color=\"#4dc831\">Ninjutsu</font> aumenta <font color=\"#4dc831\">10%</font> ao usar <font color=\"#4dc831\">Perseguição</font>.",
+          "translation": "己方影或拥有白眼的忍者获得护盾时，同时获得负面状态免疫。此外，自身使用主动释放技能时恢复10点查克拉，使用追打时忍术提高10%。"
+        }
+      },
+      "21408008": {
+        "name": {
+          "source": "Estilo Água: Palma do Dragão Azul-celeste",
+          "translation": "水遁·苍龙掌"
+        },
+        "desc": {
+          "source": "Causa dano de Água e <font color=\"#4dc831\">Selamento</font> ao inimigo escolhido. Esta habilidade é imune a <font color=\"#4dc831\">Interrupção</font> e <font color=\"#4dc831\">ignora Escudos</font>. Caso o alvo da habilidade seja um companheiro, o <font color=\"#4dc831\">Efeito da Habilidade</font> muda.",
+          "translation": "对选定敌人造成水属性伤害和封穴。本技能免疫打断，并无视护盾。若选定目标为己方队友，则替换技能效果。"
+        }
+      },
+      "21408009": {
+        "name": {
+          "source": "Jutsu de Despertar da Mente",
+          "translation": "心神唤醒术"
+        },
+        "desc": {
+          "source": "Habilidade com chance de Esquiva 0, não sendo exibida. A Esotérica não pode ser interrompida.",
+          "translation": "闪避概率为0的技能，不显示。奥义无法被打断。"
+        }
+      },
+      "21408010": {
+        "name": {
+          "source": "Estilo Água: Multi-clone de Água",
+          "translation": "水遁·多重水分身"
+        },
+        "desc": {
+          "source": "Ao lançar a <font color=\"#4dc831\">Esotérica</font>, invoca 1 <font color=\"#4dc831\">Clone de Água</font> com <font color=\"#4dc831\">80%</font> de seu limite de Vida. (Pode haver até 1 clone por vez)",
+          "translation": "释放奥义时召唤1个水分身，继承自身80%的生命上限，同一时间最多存在1个。"
+        }
+      }
+    }
+  },
+  "skillDetails": {
+    "class": "SkillKeyDescCFG",
+    "rows": {
+      "317": {
+        "keys": {
+          "source": "Clone Água",
+          "translation": "水分身"
+        },
+        "desc": {
+          "source": "Quando o Clone de Água é derrotada, ela restaura [20] pontos de Chakra à equipe de onde provém.",
+          "translation": "水分身被击败时，为其所属队伍恢复[20]点查克拉。"
+        }
+      },
+      "318": {
+        "keys": {
+          "source": "Clone Água",
+          "translation": "水分身"
+        },
+        "desc": {
+          "source": "A taxa de herança de [Defesa] e [Resistência] é aumentada. Além disso, quando o Clone de Água é derrotada, aumenta o [Crítico] e [Ninjutsu] dos ninjas [Kage] e [Byakugan] da equipe em [10%] e [20%], respectivamente, e restaura [20] pontos de Chakra à equipe de Ao.",
+          "translation": "提高[防御]和[抗性]的继承比例。此外，水分身被击败时，使己方[影]和[白眼]忍者的[暴击]率与[忍术]分别提高[10%]和[20%]，并为青所在队伍恢复[20]点查克拉。"
+        }
+      },
+      "319": {
+        "keys": {
+          "source": "Clone Água",
+          "translation": "水分身"
+        },
+        "desc": {
+          "source": "A taxa de herança de [Defesa] e [Resistência] é promovida. Além disso, quando o Clone de Água é derrotada, aumenta o [Crítico] e [Ninjutsu] dos ninjas [Kage] e [Byakugan] da equipe em [10%] e [20%], respectivamente, e restaura [20] pontos de Chakra à equipe de Ao.",
+          "translation": "提高[防御]和[抗性]的继承比例。此外，水分身被击败时，使己方[影]和[白眼]忍者的[暴击]率与[忍术]分别提高[10%]和[20%]，并为青所在队伍恢复[20]点查克拉。"
+        }
+      },
+      "320": {
+        "keys": {
+          "source": "Clone Água",
+          "translation": "水分身"
+        },
+        "desc": {
+          "source": "A taxa de herança de [Defesa] e [Resistência] é promovida. Quando o Clone de Água está no campo, os ninjas [Kage] e [Byakugan] da equipe terão seu [Resfriamento Jutsu de Fúria] reduzida por 1 rodada e um aumento de [5%] em [Ninjutsu] quando forem atacados. Quando o Clone de Água é derrotada, restaura [20] pontos de Chakra à equipe de Ao.",
+          "translation": "提高[防御]和[抗性]的继承比例。水分身在场时，己方[影]和[白眼]忍者受到攻击时，[奥义冷却]减少1回合，[忍术]提高[5%]。水分身被击败时，为青所在队伍恢复[20]点查克拉。"
+        }
+      },
+      "321": {
+        "keys": {
+          "source": "Efeito da Habilidade",
+          "translation": "技能效果"
+        },
+        "desc": {
+          "source": "[Estilo Água: Palma do Dragão Azul-celeste +2 Efeito Novo] (Resfriamento inicial [0 rodadas] / Resfriamento da Jutsu de Fúria [3 rodadas] / [0] de Chakra) Causa um leve dano [ignorando escudos protetores] no alvo, dispersa todos os [status negativos], e concede a Ao uma oportunidade de esquivar um ataque.",
+          "translation": "[水遁·苍龙掌+2新效果]（进场冷却：[0回合]／奥义冷却：[3回合]／查克拉：[0]）：对目标造成[无视护盾]的少量伤害，驱散全部[负面状态]，并使青获得1次闪避攻击的机会。"
+        }
+      },
+      "322": {
+        "keys": {
+          "source": "Efeito da Habilidade",
+          "translation": "技能效果"
+        },
+        "desc": {
+          "source": "[Estilo Água: Palma do Dragão Azul-celeste Y Efeito Novo] (Resfriamento inicial [0 rodadas] / Resfriamento da Jutsu de Fúria [3 rodadas] / [0] de Chakra) Causa um leve dano [ignorando escudos protetores] no alvo, recupera [40] pontos de Chakra e estabelece o limite de Chakra da equipe em [100] pontos, e concede a Ao uma oportunidade de esquivar um ataque.",
+          "translation": "[水遁·苍龙掌·Y新效果]（进场冷却：[0回合]／奥义冷却：[3回合]／查克拉：[0]）：对目标造成[无视护盾]的少量伤害，恢复[40]点查克拉，将己方队伍查克拉上限设为[100]，并使青获得1次闪避攻击的机会。"
+        }
+      }
+    }
+  }
+}

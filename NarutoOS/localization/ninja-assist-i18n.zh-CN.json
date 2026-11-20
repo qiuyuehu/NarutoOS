@@ -1,0 +1,133 @@
+{
+  "resourceURL": "https://cdnnaruto-pt.oasgames.com/PT_NarutoAlpha9.33Build300/config/i18n/TranslatedKeyCFG.cfg",
+  "entries": {
+    "as_ninjaAid_b76209ecf4aff53b03c93bdf1cf9c19c": {
+      "source": "Nível",
+      "translation": "等级"
+    },
+    "as_ninjaAid_9861fa959bf6d99aaf940f7a4171bb4b": {
+      "source": "Tudo",
+      "translation": "全部"
+    },
+    "as_ninjaAid_cd57e2fb336cf707c699cf636995a26b": {
+      "source": "Limite atingido",
+      "translation": "已达上限"
+    },
+    "as_ninjaAid_871cb4ad11e5b469527a41534b6e79d2": {
+      "source": "Itens insuficientes",
+      "translation": "道具不足"
+    },
+    "as_ninjaAid_9a28f44020d8055e2c7469d77b94c807": {
+      "source": "Itens insuficientes",
+      "translation": "道具不足"
+    },
+    "as_throughTheBeast_c4dc064f498af3a1b18fa0d616b471fe": {
+      "source": "Tudo",
+      "translation": "全部"
+    },
+    "as_throughTheBeast_0b5c15c05218d40027689eb1d40f1d85": {
+      "source": "Tudo",
+      "translation": "全部"
+    },
+    "as_throughTheBeast_ddd87e5bd4ec3daa6c05b3888bfcc195": {
+      "source": "Tudo",
+      "translation": "全部"
+    },
+    "as_throughTheBeast_382e3ae0ef92e160fb2b0dd1a211455e": {
+      "source": "Tudo",
+      "translation": "全部"
+    },
+    "as_throughTheBeast_0b419ef38e27e47173a4e6b492e91596": {
+      "source": "Tudo",
+      "translation": "全部"
+    },
+    "as_include_2877c00300bd5b10abf3a31182d441a2": {
+      "source": "Tudo",
+      "translation": "全部"
+    },
+    "as_mail_77684538391dc6902d7c32a6bd08c70a": {
+      "source": "Tudo",
+      "translation": "全部"
+    },
+    "as_exui_79fb8014b6f81865f59035fe5a3e6234": {
+      "source": "Tudo",
+      "translation": "全部"
+    },
+    "as_exui_5cb8599ce84d3ea7585efcc1309a9c84": {
+      "source": "Tudo",
+      "translation": "全部"
+    },
+    "as_throughTheBeast_43e6f9a73edf636500cafd4e003e84c5": {
+      "source": "Tudo",
+      "translation": "全部"
+    },
+    "as_throughTheBeast_3670c937507b222afbb4175f50c61901": {
+      "source": "Tudo",
+      "translation": "全部"
+    },
+    "as_throughTheBeast_6ebeca40a482563fb591f9a808d47a4d": {
+      "source": "Tudo",
+      "translation": "全部"
+    },
+    "as_throughTheBeast_7be75b7a10699f973d9f38b2641ec4b9": {
+      "source": "Tudo",
+      "translation": "全部"
+    },
+    "as_throughTheBeast_39e0f94247a1d863b0856a3fc7358e6a": {
+      "source": "Tudo",
+      "translation": "全部"
+    },
+    "as_throughTheBeast_8637ef5fe73980d2753d8a674aae4861": {
+      "source": "Tudo",
+      "translation": "全部"
+    },
+    "as_throughTheBeast_1d73a525b460f6895710dadd9b1e6ff3": {
+      "source": "Tudo",
+      "translation": "全部"
+    },
+    "as_narutoplugin_efa74cce07caeb19efcbab3c53f0db81": {
+      "source": "Tudo",
+      "translation": "全部"
+    },
+    "as_activity_bc429b3e9090a582f9c78cc683cffcc5": {
+      "source": "Nível",
+      "translation": "等级"
+    },
+    "as_operatingActivity_5ac9ab56da5a70efe2923783b3813b27": {
+      "source": "Nível",
+      "translation": "等级"
+    },
+    "as_operatingActivity_6ea7768c6103d0867359bd60adf960b1": {
+      "source": "Nível",
+      "translation": "等级"
+    },
+    "as_operatingActivity_9d44760643251ff46a5f40a2e541990a": {
+      "source": "Nível",
+      "translation": "等级"
+    },
+    "as_equipment_ff6f32559b092412983d21cef2493020": {
+      "source": "Nível",
+      "translation": "等级"
+    },
+    "as_secretRoll_8974432186118525dbac3ea0fcfd4ee0": {
+      "source": "Itens insuficientes",
+      "translation": "道具不足"
+    },
+    "as_secretRoll_f494f289a05d81d49c40c045f609697a": {
+      "source": "Itens insuficientes",
+      "translation": "道具不足"
+    },
+    "as_secretRoll_63c6e6ea93d846f168a4a9e01eec0690": {
+      "source": "Itens insuficientes",
+      "translation": "道具不足"
+    },
+    "as_ninjaAid_d0468adb71704c7d146fe2aba8280be7": {
+      "source": "Itens insuficientes",
+      "translation": "道具不足"
+    },
+    "as_operatingActivity_e19643a61115f85c4d2c5ff2109ba9f7": {
+      "source": "Limite atingido",
+      "translation": "已达上限"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "id": "naruto-assists-v1",
+  "version": 1,
+  "modules": [
+    {
+      "id": "huntlife-batch",
+      "nameKey": "ui.assist_chakra_batch",
+      "targets": [
+        {
+          "region": "cn",
+          "build": "NarutoBeta6.38Build302",
+          "url": "https://res.huoying.qq.com/NarutoBeta6.38Build302/flash/huntLife/HuntLifePlugin.swf",
+          "file": "huntlife/HuntLifePlugin.batch-assist.swf",
+          "sha256": "0d0868d99b8ec09e6f7c4b1c797129792e6aeffed4cf0dd4372cf9c37a56a97e",
+          "baseSha256": "95a955264f832b351f7b7e2db3e86c99b49f53d6e9f6811841755a3795bc8eb6",
+          "contentType": "application/x-shockwave-flash"
+        }
+      ]
+    },
+    {
+      "id": "huntlife-batch-br",
+      "nameKey": "ui.assist_chakra_batch",
+      "targets": [
+        {
+          "region": "br",
+          "build": "PT_NarutoAlpha8.65Build300",
+          "url": "https://cdnnaruto-pt.oasgames.com/PT_NarutoAlpha8.65Build300/flash/huntLife/HuntLifePlugin.swf",
+          "file": "huntlife/HuntLifePlugin.batch-assist-br.swf",
+          "sha256": "e85fa5455e606886737a453089af2361d3f08b6fb02d4677639139e3017f433e",
+          "baseSha256": "e4160a0f8354221cf436f7055ea268ef7d08bf324b2095c053214b4428e33956",
+          "contentType": "application/x-shockwave-flash"
+        }
+      ]
+    }
+  ]
+}

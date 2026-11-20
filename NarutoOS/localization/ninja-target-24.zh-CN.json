@@ -1,0 +1,129 @@
+{
+  "id": "naruto-ninja-target-24-zh-CN-v1",
+  "rootId": "11014511",
+  "ninjaInfo": {
+    "class": "NinjaInfoCFG",
+    "rows": {
+      "11014511": {
+        "name": {
+          "source": "Indra Otsutsuki",
+          "translation": "大筒木因陀罗"
+        },
+        "title": {
+          "source": "[Susano'o Perfeito]",
+          "translation": "【完全体须佐能乎】"
+        }
+      }
+    }
+  },
+  "skills": {
+    "class": "SkillCFG",
+    "rows": {
+      "21014511": {
+        "name": {
+          "source": "Chama Negra: Lâmina Voadora",
+          "translation": "黑炎·飞刃"
+        },
+        "desc": {
+          "source": "Ataca 7 a 9 inimigos em 1 linha vertical, causando dano de <font color=\"#4dc831\">Fogo</font> <font color=\"#4dc831\">na certa</font>, <font color=\"#4dc831\">Chama Negra</font>, <font color=\"#4dc831\">10%</font> de dano de Choque aos inimigos no raio de 1 espaço ao redor do alvo e com chance de causar <font color=\"#4dc831\">Combo de 7</font> e <font color=\"#4dc831\">Repelimento</font> a 1 inimigo aleatório.",
+          "translation": "攻击一纵排的7至9名敌人，造成必定命中的火属性伤害和黑炎，对目标周围1格敌人造成10%震荡伤害，并有概率对1名随机敌人造成7连击和击退。"
+        }
+      },
+      "21014512": {
+        "name": {
+          "source": "Chama Negra: Lâmina Voadora",
+          "translation": "黑炎·飞刃"
+        },
+        "desc": {
+          "source": "Ataca 7 a 9 inimigos em 1 linha vertical, causando dano de <font color=\"#4dc831\">Fogo</font> <font color=\"#4dc831\">na certa</font>, <font color=\"#4dc831\">Chama Negra</font>, <font color=\"#4dc831\">10%</font> de dano de Choque aos inimigos no raio de 1 espaço ao redor do alvo e com chance de causar <font color=\"#4dc831\">Combo de 7</font> e <font color=\"#4dc831\">Repelimento</font> a 1 inimigo aleatório.",
+          "translation": "攻击一纵排的7至9名敌人，造成必定命中的火属性伤害和黑炎，对目标周围1格敌人造成10%震荡伤害，并有概率对1名随机敌人造成7连击和击退。"
+        }
+      },
+      "21014513": {
+        "name": {
+          "source": "Chama Negra: Lâmina Voadora",
+          "translation": "黑炎·飞刃"
+        },
+        "desc": {
+          "source": "Ataca 7 a 9 inimigos em 1 linha vertical, causando dano de <font color=\"#4dc831\">Fogo</font> <font color=\"#4dc831\">na certa</font>, <font color=\"#4dc831\">Chama Negra</font>, <font color=\"#4dc831\">10%</font> de dano de Choque aos inimigos no raio de 1 espaço ao redor do alvo e com chance de causar <font color=\"#4dc831\">Combo de 7</font> e <font color=\"#4dc831\">Repelimento</font> a 1 inimigo aleatório.",
+          "translation": "攻击一纵排的7至9名敌人，造成必定命中的火属性伤害和黑炎，对目标周围1格敌人造成10%震荡伤害，并有概率对1名随机敌人造成7连击和击退。"
+        }
+      },
+      "21014514": {
+        "name": {
+          "source": "Prisão Relâmpago",
+          "translation": "雷牢"
+        },
+        "desc": {
+          "source": "Persegue inimigos com <font color=\"#4dc831\">Repelimento</font>, <font color=\"#4dc831\">Queda</font>, <font color=\"#4dc831\">Flutuação</font> e <font color=\"#4dc831\">Voo</font>, causando <font color=\"#4dc831\">Queda</font>. Também causa dano de <font color=\"#4dc831\">Relâmpago</font> e <font color=\"#4dc831\">Paralisia</font> que não pode ser evitada ou dispersada a 7 inimigos. Esta habilidade ignora parte da <font color=\"#4dc831\">Resistência</font> e reduz seu próprio Resfriamento em 1 rodada. Caso o alvo tenha <font color=\"#4dc831\">Paralisia</font>, lança a <font color=\"#4dc831\">Prisão Relâmpago: Ataque de Chamas</font>.",
+          "translation": "追打击退、倒地、浮空和高浮空敌人，造成倒地，同时对7名敌人造成雷属性伤害和无法免疫或驱散的麻痹。本技能无视部分抗性，自身冷却减少1回合。若目标已有麻痹，则释放雷牢·炎袭。"
+        }
+      },
+      "21014516": {
+        "name": {
+          "source": "Reavivamento Elétrico",
+          "translation": "雷电复苏"
+        },
+        "desc": {
+          "source": "Antes de lançar a Esotéria, faz com que sua Perseguição <font color=\"#4dc831\">sempre acerte</font>. Além disso, parte dos ninjas especiais de seu lado ganha <font color=\"#4dc831\">Imunidade a Status negativos nv. 2</font> até o fim da rodada.",
+          "translation": "释放奥义前，使自身追打必定命中，并使己方部分特殊忍者获得2级负面状态免疫，持续至回合结束。"
+        }
+      },
+      "21014517": {
+        "name": {
+          "source": "Susano'o: Armadura",
+          "translation": "须佐能乎·铠甲"
+        },
+        "desc": {
+          "source": "Indra tem <font color=\"#4dc831\">Imunidade a Status negativos</font> e ganha <font color=\"#4dc831\">Violência</font> na primeira vez que recebe uma <font color=\"#4dc831\">Esotérica</font> na rodada. Em caso de Crítico, perde o status de <font color=\"#4dc831\">Paralisia</font> e adiciona 1 ao número de Perseguições que pode realizar por rodada, até o máximo de 5.",
+          "translation": "因陀罗免疫负面状态，每回合首次受到奥义攻击时获得暴怒。造成暴击时，移除自身麻痹，本回合可追打次数增加1，最多5次。"
+        }
+      },
+      "21014518": {
+        "name": {
+          "source": "Perfectivo: Susano'o",
+          "translation": "完全体须佐能乎"
+        },
+        "desc": {
+          "source": "Causa dano Ninjutsu e <font color=\"#4dc831\">Combo de 3</font> a <font color=\"#4dc831\">9</font> inimigos aleatórios, além de <font color=\"#4dc831\">Queda</font>, <font color=\"#4dc831\">Terror</font> e <font color=\"#4dc831\">Supressão de Imunidade a Perseguição</font> ao inimigo escolhido até o final da próxima rodada. Caso sua própria Vida esteja acima de <font color=\"#4dc831\">60%</font>, lança o <font color=\"#4dc831\">Fatal: Perfectivo: Susano'o</font>.",
+          "translation": "对9名随机敌人造成忍术伤害和3连击，额外对选定目标造成倒地、恐惧和追打免疫压制，持续至下回合结束。自身生命高于60%时，释放终结·完全体须佐能乎。"
+        }
+      }
+    }
+  },
+  "skillDetails": {
+    "class": "SkillKeyDescCFG",
+    "rows": {
+      "358": {
+        "keys": {
+          "source": "Prisão Relâmpago: Ataque de Chamas",
+          "translation": "雷牢·炎袭"
+        },
+        "desc": {
+          "source": "Persegue inimigos com [Repelimento], [Queda], [Flutuação] e [Voo], causando dano de [Relâmpago] e [Fogo], e [Queda] a até 9 inimigos. Também causa [Paralisia] e [Chama Negra] que não podem ser evitadas ou dispersadas. Esta habilidade ignora parte da [Defesa] e [Resistência] e fixa seu próprio [Resfriamento] em 0 até o fim da rodada.",
+          "translation": "追打[击退]、[倒地]、[浮空]和[高浮空]敌人，对最多9名敌人造成[雷]、[火]属性伤害和[倒地]，并施加无法免疫或驱散的[麻痹]和[黑炎]。本技能无视部分[防御]和[抗性]，将自身[冷却]锁定为0，持续至回合结束。"
+        }
+      },
+      "359": {
+        "keys": {
+          "source": "Fatal: Perfectivo: Susano'o",
+          "translation": "终结·完全体须佐能乎"
+        },
+        "desc": {
+          "source": "(Resfriamento inicial: [1 rodada]/Resfriamento da Esotérica: [2 rodadas]/Chakra: [40]) Causa dano [na certa], [Combo de 3] e [Medo] a [12] inimigos, além de [Supressão de Imunidade a Perseguição] até o final da rodada, [Queda] e [Tremedeira] ao inimigo selecionado. Alvos sob [Tremedeira] não podem realizar [ataques comuns] e, com exceção membros do clã [Uchiha], não podem usar [Habilidades adicionais] e [Golpe Mortal]. Para cada ninja com [Kekkei Genkai] no lado do portador do status, o [Crítico] é reduzido em [8%]. Este status não pode ser evitado ou dispersado e dura até o fim da rodada.",
+          "translation": "（进场冷却：[1回合]／奥义冷却：[2回合]／查克拉：[40]）对[12]名敌人造成[必定命中]的伤害、[3连击]和[恐惧]，额外对选定目标造成持续至回合结束的[追打免疫压制]、[倒地]和[战栗]。[战栗]持有者无法[普攻]，除[宇智波]一族外，无法使用[追加技能]和[致命一击]；持有者一方每有1名[血继限界]忍者，[暴击]率降低[8%]。无法免疫或驱散，持续至回合结束。"
+        }
+      },
+      "360": {
+        "keys": {
+          "source": "Violência",
+          "translation": "暴怒"
+        },
+        "desc": {
+          "source": "Exclusivo de Indra Otsutsuki [Perfectivo: Susano'o], sob este status, Indra tem [Imunidade a Perseguição]. Ao causar dano, ele aumenta em [8%] seu próprio [Ninjutsu] e em [5%] sua [Resistência], além de ser imune a dano de [Fogo]. Este efeito dura até o final da rodada.",
+          "translation": "大筒木因陀罗【完全体须佐能乎】专属：此状态下免疫[追打]和[火]属性伤害，每次造成伤害时，自身[忍术]提高[8%]、[抗性]提高[5%]。持续至回合结束。"
+        }
+      }
+    }
+  }
+}

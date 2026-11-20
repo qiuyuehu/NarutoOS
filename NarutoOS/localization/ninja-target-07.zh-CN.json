@@ -1,0 +1,129 @@
+{
+  "id": "naruto-ninja-target-07-zh-CN-v1",
+  "rootId": "11001941",
+  "ninjaInfo": {
+    "class": "NinjaInfoCFG",
+    "rows": {
+      "11001941": {
+        "name": {
+          "source": "Guy",
+          "translation": "迈特凯"
+        },
+        "title": {
+          "source": "[Portão da Morte]",
+          "translation": "【死门】"
+        }
+      }
+    }
+  },
+  "skills": {
+    "class": "SkillCFG",
+    "rows": {
+      "21001941": {
+        "name": {
+          "source": "Elefante da Noite",
+          "translation": "夕象"
+        },
+        "desc": {
+          "source": "Ataca uma linha de inimigos aleatória, causando dano <font color=\"#4dc831\">na certa</font>, <font color=\"#4dc831\">Supressão de Imunidade a Perseguição</font> até o fim da rodada e <font color=\"#4dc831\">Repelimento</font> a um inimigo aleatório.  Esta habilidade ignora parte da <font color=\"#4dc831\">Defesa</font> e, após seu lançamento, você e o alvo sofrem <font color=\"#4dc831\">Elefante da Noite - Bloq.</font>, com chance de causar <font color=\"#4dc831\">20%</font> de Dano de Choque no entorno.",
+          "translation": "随机攻击敌方一横排，造成必定命中的伤害、持续至回合结束的追打免疫压制，并使1名随机敌人击退。本技能无视部分防御。使用后，自身和目标受到夕象·封锁，并有概率对周围造成20%的震荡伤害。"
+        }
+      },
+      "21001942": {
+        "name": {
+          "source": "Elefante da Noite",
+          "translation": "夕象"
+        },
+        "desc": {
+          "source": "Ataca uma linha de inimigos aleatória, causando dano <font color=\"#4dc831\">na certa</font>, <font color=\"#4dc831\">Supressão de Imunidade a Perseguição</font> até o fim da rodada e <font color=\"#4dc831\">Repelimento</font> a um inimigo aleatório.  Esta habilidade ignora parte da <font color=\"#4dc831\">Defesa</font> e, após seu lançamento, você e o alvo sofrem <font color=\"#4dc831\">Elefante da Noite - Bloq.</font>, com chance de causar <font color=\"#4dc831\">20%</font> de Dano de Choque no entorno.",
+          "translation": "随机攻击敌方一横排，造成必定命中的伤害、持续至回合结束的追打免疫压制，并使1名随机敌人击退。本技能无视部分防御。使用后，自身和目标受到夕象·封锁，并有概率对周围造成20%的震荡伤害。"
+        }
+      },
+      "21001943": {
+        "name": {
+          "source": "Elefante da Noite",
+          "translation": "夕象"
+        },
+        "desc": {
+          "source": "Ataca uma linha de inimigos aleatória, causando dano <font color=\"#4dc831\">na certa</font>, <font color=\"#4dc831\">Supressão de Imunidade a Perseguição</font> até o fim da rodada e <font color=\"#4dc831\">Repelimento</font> a um inimigo aleatório.  Esta habilidade ignora parte da <font color=\"#4dc831\">Defesa</font> e, após seu lançamento, você e o alvo sofrem <font color=\"#4dc831\">Elefante da Noite - Bloq.</font>, com chance de causar <font color=\"#4dc831\">20%</font> de Dano de Choque no entorno.",
+          "translation": "随机攻击敌方一横排，造成必定命中的伤害、持续至回合结束的追打免疫压制，并使1名随机敌人击退。本技能无视部分防御。使用后，自身和目标受到夕象·封锁，并有概率对周围造成20%的震荡伤害。"
+        }
+      },
+      "21001944": {
+        "name": {
+          "source": "Night Guy",
+          "translation": "夜凯"
+        },
+        "desc": {
+          "source": "Caso a <font color=\"#4dc831\">Esotérica</font> de Guy seja interrompida, seu <font color=\"#4dc831\">Resfriamento</font> é zerado. Ao receber um golpe mortal, <font color=\"#4dc831\">Night Guy</font> é lançado, que não pode mais ser ressuscitado em caso de morte.",
+          "translation": "凯的奥义被打断时，清除自身冷却。受到致命攻击时，释放夜凯；此后若被击败，将无法复活。"
+        }
+      },
+      "21001945": {
+        "name": {
+          "source": "Acúmulo",
+          "translation": "蓄势"
+        },
+        "desc": {
+          "source": "Antes de cada ação, Guy consume <font color=\"#4dc831\">10%</font> de sua vida para aumentar seu <font color=\"#4dc831\">Ataque</font> em <font color=\"#4dc831\">60%</font> (pode acumular) e sua <font color=\"#4dc831\">Velocidade</font> em <font color=\"#4dc831\">5%</font> (no máximo 3 vezes). Também tem grande chance de esquivar <font color=\"#4dc831\">Ataque Comum</font> e ganha <font color=\"#4dc831\">Imunidade a Perseguição Nv.2</font> até o final da rodada.",
+          "translation": "每次行动前，凯消耗自身10%生命，使攻击提高60%（可叠加）、先攻提高5%（最多3次），并有较高概率闪避普攻，获得2级追打免疫，持续至回合结束。"
+        }
+      },
+      "21001946": {
+        "name": {
+          "source": "Oito Portões Internos: Portão da Morte",
+          "translation": "八门遁甲·死门"
+        },
+        "desc": {
+          "source": "Guy tem <font color=\"#4dc831\">Imunidade a Status negativos</font>, a <font color=\"#4dc831\">Perseguição</font> e não pode ser curado. Sempre que usa a <font color=\"#4dc831\">Esotérica</font> gasta <font color=\"#4dc831\">10%</font> de Vida. A cada <font color=\"#4dc831\">1%</font> de Vida que perde, sua equipe ganha <font color=\"#4dc831\">2%</font> de <font color=\"#4dc831\">Ataque</font> e <font color=\"#4dc831\">1%</font> de <font color=\"#4dc831\">Crítico</font>.",
+          "translation": "凯免疫负面状态和追打，无法被治疗。每次使用奥义时，消耗自身10%生命。每损失1%生命，己方队伍攻击提高2%，暴击率提高1%。"
+        }
+      },
+      "21001947": {
+        "name": {
+          "source": "Elefante da Noite: Cinco Velocidades",
+          "translation": "夕象·伍足"
+        },
+        "desc": {
+          "source": "Ataca até <font color=\"#4dc831\">12</font> alvos e causa <font color=\"#4dc831\">Combo de 5</font> <font color=\"#4dc831\">na certa</font>, além de <font color=\"#4dc831\">Queda</font> ao alvo selecionado. Também causa <font color=\"#4dc831\">Elefante da Noite: Selo</font> a si mesmo e ao alvo.",
+          "translation": "攻击最多12名目标，造成必定命中的5连击，并使选定目标倒地，同时对自身和目标施加夕象·封印。"
+        }
+      },
+      "21001949": {
+        "name": {
+          "source": "Oito Portões Internos: Portão da Morte",
+          "translation": "八门遁甲·死门"
+        },
+        "desc": {
+          "source": "A cada <font color=\"#4dc831\">1%</font> de Vida que Guy perde, sua equipe ganha <font color=\"#4dc831\">2%</font> de <font color=\"#4dc831\">Ataque</font> e <font color=\"#4dc831\">1%</font> de <font color=\"#4dc831\">Crítico</font>.",
+          "translation": "凯每损失1%生命，己方队伍攻击提高2%，暴击率提高1%。"
+        }
+      },
+      "21201944": {
+        "name": {
+          "source": "Super-velocidade",
+          "translation": "超高速"
+        },
+        "desc": {
+          "source": "Quando Guy lança habilidades, consome <font color=\"#4dc831\">10%</font> de sua Vida. (Habilidade de Esquiva)",
+          "translation": "凯释放技能时，消耗自身10%生命。（闪避技能）"
+        }
+      }
+    }
+  },
+  "skillDetails": {
+    "class": "SkillKeyDescCFG",
+    "rows": {
+      "303": {
+        "keys": {
+          "source": "Night Guy",
+          "translation": "夜凯"
+        },
+        "desc": {
+          "source": "[Golpe Mortal]: Causa dano [na certa] à linha inimiga à frente conforme seu próprio limite de vida. Ninja mortos por esta habilidade não podem ser ressuscitados.",
+          "translation": "[致命一击]：根据自身生命上限，对前方敌人所在一横排造成[必定命中]的伤害。被本技能击败的忍者无法复活。"
+        }
+      }
+    }
+  }
+}

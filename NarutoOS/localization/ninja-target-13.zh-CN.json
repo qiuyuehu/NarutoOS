@@ -1,0 +1,149 @@
+{
+  "id": "naruto-ninja-target-13-zh-CN-v1",
+  "rootId": "11002191",
+  "ninjaInfo": {
+    "class": "NinjaInfoCFG",
+    "rows": {
+      "11002191": {
+        "name": {
+          "source": "Orochimaru",
+          "translation": "大蛇丸"
+        },
+        "title": {
+          "source": "[Ano Novo]",
+          "translation": "【新年】"
+        }
+      }
+    }
+  },
+  "skills": {
+    "class": "SkillCFG",
+    "rows": {
+      "21002191": {
+        "name": {
+          "source": "Cobra das Múltiplas Sombras Escondidas",
+          "translation": "潜影多蛇手"
+        },
+        "desc": {
+          "source": "Ataca o <font color=\"#4dc831\">Ninja</font> com a menor vida causando dano que <font color=\"#4dc831\">sempre acerta</font>, com chance de causar <font color=\"#4dc831\">Repelimento</font>. Esta habilidade tem bônus extra de <font color=\"#4dc831\">Crítico</font> e ignora <font color=\"#4dc831\">Zoação</font> e <font color=\"#4dc831\">Proteção</font>. Ao atacar um alvo sujeito à <font color=\"#4dc831\">Laceração</font>, reduz adicionalmente a vida do alvo igual a <font color=\"#4dc831\">10%</font> do seu limite máximo de vida, e ganha propriamente <font color=\"#4dc831\">Cegueira</font> (até o final da rodada).",
+          "translation": "攻击生命最低的忍者，造成必定命中的伤害，有概率造成击退。本技能拥有额外暴击加成，无视嘲讽和保护。攻击带有撕裂的目标时，额外扣除目标生命上限10%的生命，并使自身目盲，持续至回合结束。"
+        }
+      },
+      "21002192": {
+        "name": {
+          "source": "Cobra das Múltiplas Sombras Escondidas",
+          "translation": "潜影多蛇手"
+        },
+        "desc": {
+          "source": "Ataca o <font color=\"#4dc831\">Ninja</font> com a menor vida causando dano que <font color=\"#4dc831\">sempre acerta</font>, com chance de causar <font color=\"#4dc831\">Repelimento</font>. Esta habilidade tem bônus extra de <font color=\"#4dc831\">Crítico</font> e ignora <font color=\"#4dc831\">Zoação</font> e <font color=\"#4dc831\">Proteção</font>. Ao atacar um alvo sujeito à <font color=\"#4dc831\">Laceração</font>, reduz adicionalmente a vida do alvo igual a <font color=\"#4dc831\">10%</font> do seu limite máximo de vida, e ganha propriamente <font color=\"#4dc831\">Cegueira</font> (até o final da rodada).",
+          "translation": "攻击生命最低的忍者，造成必定命中的伤害，有概率造成击退。本技能拥有额外暴击加成，无视嘲讽和保护。攻击带有撕裂的目标时，额外扣除目标生命上限10%的生命，并使自身目盲，持续至回合结束。"
+        }
+      },
+      "21002193": {
+        "name": {
+          "source": "Cobra das Múltiplas Sombras Escondidas",
+          "translation": "潜影多蛇手"
+        },
+        "desc": {
+          "source": "Ataca o <font color=\"#4dc831\">Ninja</font> com a menor vida causando dano que <font color=\"#4dc831\">sempre acerta</font>, com chance de causar <font color=\"#4dc831\">Repelimento</font>. Esta habilidade tem bônus extra de <font color=\"#4dc831\">Crítico</font> e ignora <font color=\"#4dc831\">Zoação</font> e <font color=\"#4dc831\">Proteção</font>. Ao atacar um alvo sujeito à <font color=\"#4dc831\">Laceração</font>, reduz adicionalmente a vida do alvo igual a <font color=\"#4dc831\">10%</font> do seu limite máximo de vida, e ganha propriamente <font color=\"#4dc831\">Cegueira</font> (até o final da rodada).",
+          "translation": "攻击生命最低的忍者，造成必定命中的伤害，有概率造成击退。本技能拥有额外暴击加成，无视嘲讽和保护。攻击带有撕裂的目标时，额外扣除目标生命上限10%的生命，并使自身目盲，持续至回合结束。"
+        }
+      },
+      "21002194": {
+        "name": {
+          "source": "Estilo Vento: Grande Descoberta",
+          "translation": "风遁·大突破"
+        },
+        "desc": {
+          "source": "Persegue inimigos com <font color=\"#4dc831\">Flutuação</font> aplicando <font color=\"#4dc831\">Repelimento</font>, e causa dano de <font color=\"#4dc831\">Vento</font> a toda a sua equipe. A cada uso desta habilidade, são acrescentadas sequencialmente como condição de perseguição <font color=\"#4dc831\">Voo</font>, <font color=\"#4dc831\">Queda</font> e <font color=\"#4dc831\">Repelimento</font>. Quando todas as 4 condições de <font color=\"#4dc831\">Perseguição</font> são ativadas, a habilidade <font color=\"#4dc831\">sempre acerta</font> e remove o status de <font color=\"#4dc831\">Obstinação</font> do alvo.",
+          "translation": "追打浮空敌人，造成击退，并对其所在全队造成风属性伤害。每次使用后，依次增加高浮空、倒地和击退作为追打条件。4种追打条件全部开启后，本技能必定命中，并移除目标的坚毅状态。"
+        }
+      },
+      "21002195": {
+        "name": {
+          "source": "Jutsu de Substituição de Terra",
+          "translation": "土替身之术"
+        },
+        "desc": {
+          "source": "Orochimaru tem alta chance de esquivar a habilidade de tipo <font color=\"#4dc831\">Esotérico</font> recuperando <font color=\"#4dc831\">15%</font> de vida após esquivar, aumentando <font color=\"#4dc831\">8%</font> de <font color=\"#4dc831\">Crítico</font> (o Crítico pode aumentar até 5 vezes por rodada).",
+          "translation": "大蛇丸有较高概率闪避奥义，闪避后恢复15%生命，暴击率提高8%，每回合最多提高5次。"
+        }
+      },
+      "21002196": {
+        "name": {
+          "source": "Selo de Cinco Pontos",
+          "translation": "五行封印"
+        },
+        "desc": {
+          "source": "Lançada no final de cada rodada, ataca 1 inimigo aleatório, causando dano que <font color=\"#4dc831\">sempre acerta</font>, e aplica <font color=\"#4dc831\">Selamento</font> <font color=\"#4dc831\">na certa</font> que não pode ser imunizado e dispersado (até o final da próxima rodada) e <font color=\"#4dc831\">Selo de Cinco Pontos</font>. Após o uso, reduz o próprio <font color=\"#4dc831\">Resfriamento da Esotérica</font> em 1 rodada, e reduz o consumo de Chakra da equipe em <font color=\"#4dc831\">20</font> pontos (máximo de 2 acúmulos, válido até o final da próxima rodada).",
+          "translation": "每回合结束时触发，攻击1名随机敌人，造成必定命中的伤害，以及必定生效且无法免疫或驱散的封穴，持续至下回合结束，并施加五行封印。使用后，自身奥义冷却减少1回合，己方队伍查克拉消耗降低20点，最多叠加2层，持续至下回合结束。"
+        }
+      },
+      "21002197": {
+        "name": {
+          "source": "Jutsu de Transformação Ofídea",
+          "translation": "蛇化之术"
+        },
+        "desc": {
+          "source": "Orochimaru recebe <font color=\"#4dc831\">Imunidade a Status negativos</font> e possui a habilidade <font color=\"#4dc831\">Jutsu de Substituição de Terra</font>. Ao usar habilidade de tipo <font color=\"#4dc831\">gatilho</font>, ganha <font color=\"#4dc831\">15%</font> de <font color=\"#4dc831\">Ninjutsu</font>. Ao receber dano de habilidade de tipo <font color=\"#4dc831\">gatilho</font>, Orochimaru ativa o <font color=\"#4dc831\">Selo de Cinco Pontos</font>. Na rodada seguinte à morte, ressuscita com <font color=\"#4dc831\">50%</font> de vida.",
+          "translation": "大蛇丸免疫负面状态，并拥有土替身之术。使用触发型技能时，忍术提高15%。受到触发型技能伤害时，发动五行封印。被击败后的下一回合，以50%生命复活。"
+        }
+      },
+      "21002198": {
+        "name": {
+          "source": "Jutsu de Invocação: Cobra Gigante",
+          "translation": "通灵之术·巨蛇"
+        },
+        "desc": {
+          "source": "Ataca até <font color=\"#4dc831\">4</font> <font color=\"#4dc831\">ninjas</font> inimigos, causando dano que <font color=\"#4dc831\">sempre acerta</font> e <font color=\"#4dc831\">Laceração</font>, e aplica <font color=\"#4dc831\">Interrupção</font> a um alvo escolhido. Esta habilidade é usada com <font color=\"#4dc831\">Jutsu da Serpente de 8 Cabeças</font>. Após a eliminação dos inimigos, será ativada imediatamente a <font color=\"#4dc831\">Habilidade adicional</font>: <font color=\"#4dc831\">Jutsu da Serpente de 8 Cabeças</font>.",
+          "translation": "攻击最多4名敌方忍者，造成必定命中的伤害和撕裂，并对选定目标造成打断。本技能与八岐之术交替使用。击败敌人后，立即触发追加技能：八岐之术。"
+        }
+      }
+    }
+  },
+  "skillDetails": {
+    "class": "SkillKeyDescCFG",
+    "rows": {
+      "543": {
+        "keys": {
+          "source": "Jutsu da Serpente de 8 Cabeças",
+          "translation": "八岐之术"
+        },
+        "desc": {
+          "source": "(Resfriamento inicial [1 rodada] / Resfriamento da Esotérica [3 rodadas] / Chakra: [0]) Ataca [12] inimigos e causa dano que [sempre acerta]. Esta habilidade causa [30%] a mais de dano contra ninjas com [Imunidade a Status negativos] e [Imunidade a Perseguição]. É usada com [Jutsu de Invocação: Cobra Gigante]. Após o uso, Orochimaru entra em status de [Violência] (não pode ser derrotado durante a rodada, recuperando [4%] do limite de vida quando for atacado).",
+          "translation": "（进场冷却：[1回合]／奥义冷却：[3回合]／查克拉：[0]）攻击[12]名敌人，造成[必定命中]的伤害，对免疫[负面状态]和[追打]的忍者额外造成[30%]伤害。本技能与[通灵之术·巨蛇]交替使用。使用后，大蛇丸进入[暴怒]状态：本回合无法被击败，受到攻击时恢复生命上限的[4%]。"
+        }
+      },
+      "545": {
+        "keys": {
+          "source": "Selo de Cinco Pontos",
+          "translation": "五行封印"
+        },
+        "desc": {
+          "source": "[Habilidade adicional]: Ataca 1 inimigo aleatório, causando dano que [sempre acerta], e aplica [Selamento] [na certa] que não pode ser imunizado e dispersado e [Selo de Cinco Pontos] até o final da rodada. Após o uso, reduz o próprio [Resfriamento da Esotérica] em 1 rodada, e reduz o consumo de Chakra da equipe em [20] pontos (máximo de 2 acúmulos, válido até o final da próxima rodada). (A habilidade pode ser ativada até 5 vezes por rodada).",
+          "translation": "[追加技能]：攻击1名随机敌人，造成[必定命中]的伤害，并施加必定生效且无法免疫或驱散的[封穴]和[五行封印]，持续至回合结束。使用后，自身[奥义冷却]减少1回合，己方队伍查克拉消耗降低[20]点，最多叠加2层，持续至下回合结束。本技能每回合最多触发5次。"
+        }
+      },
+      "546": {
+        "keys": {
+          "source": "Jutsu da Serpente de 8 Cabeças",
+          "translation": "八岐之术"
+        },
+        "desc": {
+          "source": "[Habilidade adicional]: Ataca [12] inimigos, causando dano que [sempre acerta]. Esta habilidade causa [30%] a mais de dano contra ninjas com [Imunidade a Status negativos] e [Imunidade a Perseguição]. Após o uso, Orochimaru entra em status de [Violência] (não pode ser derrotado durante a rodada, recuperando [4%] do limite de vida quando for atacado.).",
+          "translation": "[追加技能]：攻击[12]名敌人，造成[必定命中]的伤害，对免疫[负面状态]和[追打]的忍者额外造成[30%]伤害。使用后，大蛇丸进入[暴怒]状态：本回合无法被击败，受到攻击时恢复生命上限的[4%]。"
+        }
+      },
+      "548": {
+        "keys": {
+          "source": "Jutsu de Substituição de Terra",
+          "translation": "土替身之术"
+        },
+        "desc": {
+          "source": "Orochimaru tem alta chance de esquivar a habilidade de tipo [Esotérico] recuperando [15%] de vida após esquivar, aumentando [8%] de [Crítico] (o Crítico pode aumentar até 5 vezes por rodada).",
+          "translation": "大蛇丸有较高概率闪避[奥义]，闪避后恢复[15%]生命，[暴击]率提高[8%]，每回合最多提高5次。"
+        }
+      }
+    }
+  }
+}

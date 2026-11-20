@@ -1,0 +1,749 @@
+{
+ "id": "naruto-beast-monsters-zh-CN-v1",
+ "class": "SummonMonsterCFG",
+ "resourceURL": "https://cdnnaruto-pt.oasgames.com/PT_NarutoAlpha9.31Build300/config/throughTheBeast/SummonMonsterCFG.cfgx",
+ "rows": {
+  "20000001": {
+   "name": {
+    "source": "Tonton",
+    "translation": "豚豚"
+   },
+   "skillName": {
+    "source": "Invocação: Tonton",
+    "translation": "通灵兽·豚豚"
+   },
+   "desc": {
+    "source": "Ataca uma vez extra antes que o primeiro membro a atacar ataque. É lançado uma vez por combate.",
+    "translation": "第一次行动前额外攻击，每场战斗触发一次。"
+   }
+  },
+  "20000002": {
+   "name": {
+    "source": "Falcão Rei",
+    "translation": "鹰王"
+   },
+   "skillName": {
+    "source": "Invocação: Falcão Rei",
+    "translation": "通灵兽·鹰王"
+   },
+   "desc": {
+    "source": "Persegue inimigos com <font color=\"#4dc831\">Voo</font> e causa <font color=\"#4dc831\">Voo</font>.",
+    "translation": "追打<font color=\"#4dc831\">大浮空</font>造成<font color=\"#4dc831\">大浮空</font>。"
+   }
+  },
+  "20000003": {
+   "name": {
+    "source": "Cobra Azul",
+    "translation": "蓝蛇"
+   },
+   "skillName": {
+    "source": "Invocação: Cobra Azul",
+    "translation": "通灵兽·蓝蛇"
+   },
+   "desc": {
+    "source": "Persegue inimigos com <font color=\"#4dc831\">Queda</font> e causa <font color=\"#4dc831\">Queda</font>.",
+    "translation": "追打<font color=\"#4dc831\">倒地</font>造成<font color=\"#4dc831\">倒地</font>。"
+   }
+  },
+  "20000004": {
+   "name": {
+    "source": "Gamakichi",
+    "translation": "蛤蟆吉"
+   },
+   "skillName": {
+    "source": "Invocação: Gamakichi",
+    "translation": "通灵兽·蛤蟆吉"
+   },
+   "desc": {
+    "source": "Persegue inimigos com <font color=\"#4dc831\">Repelimento</font> e causa <font color=\"#4dc831\">Repelimento</font>.",
+    "translation": "追打<font color=\"#4dc831\">击退</font>造成<font color=\"#4dc831\">击退</font>。"
+   }
+  },
+  "20000005": {
+   "name": {
+    "source": "Pakkun",
+    "translation": "忍犬帕克"
+   },
+   "skillName": {
+    "source": "Invocação: Pakkun",
+    "translation": "通灵兽·忍犬帕克"
+   },
+   "desc": {
+    "source": "Persegue inimigos com <font color=\"#4dc831\">Flutuação</font> e causa <font color=\"#4dc831\">Flutuação</font>.",
+    "translation": "追打<font color=\"#4dc831\">小浮空</font>造成<font color=\"#4dc831\">小浮空</font>。"
+   }
+  },
+  "20000006": {
+   "name": {
+    "source": "Camaleão Gigante",
+    "translation": "变色龙"
+   },
+   "skillName": {
+    "source": "Invocação: Camaleão Gigante",
+    "translation": "通灵兽·变色龙"
+   },
+   "desc": {
+    "source": "Persegue <font color=\"#4dc831\">Combo alto</font> e causa dano a 2 inimigos.",
+    "translation": "追打<font color=\"#4dc831\">高连击</font>，对2体造成伤害。"
+   }
+  },
+  "20000007": {
+   "name": {
+    "source": "Corvo Genjutsu",
+    "translation": "幻术鸦"
+   },
+   "skillName": {
+    "source": "Invocação: Corvo Genjutsu",
+    "translation": "通灵兽·幻术鸦"
+   },
+   "desc": {
+    "source": "Persegue inimigos com <font color=\"#4dc831\">Voo</font> e causa <font color=\"#4dc831\">Flutuação</font>.",
+    "translation": "追打<font color=\"#4dc831\">大浮空</font>造成<font color=\"#4dc831\">小浮空</font>。"
+   }
+  },
+  "20000008": {
+   "name": {
+    "source": "Tigre Branco",
+    "translation": "白虎"
+   },
+   "skillName": {
+    "source": "Invocação: Tigre Branco",
+    "translation": "通灵兽·白虎"
+   },
+   "desc": {
+    "source": "Persegue inimigos com <font color=\"#4dc831\">Voo</font> e causa <font color=\"#4dc831\">Repelimento</font>.",
+    "translation": "追打<font color=\"#4dc831\">大浮空</font>造成<font color=\"#4dc831\">击退</font>。"
+   }
+  },
+  "20000009": {
+   "name": {
+    "source": "Macaco Ninja",
+    "translation": "忍猿"
+   },
+   "skillName": {
+    "source": "Invocação: Macaco Ninja",
+    "translation": "通灵兽·忍猿"
+   },
+   "desc": {
+    "source": "Persegue inimigos com <font color=\"#4dc831\">Voo</font> e causa <font color=\"#4dc831\">Queda</font>.",
+    "translation": "追打<font color=\"#4dc831\">大浮空</font>造成<font color=\"#4dc831\">倒地</font>。"
+   }
+  },
+  "20000010": {
+   "name": {
+    "source": "Cobra Branca",
+    "translation": "白蛇"
+   },
+   "skillName": {
+    "source": "Invocação: Cobra Branca",
+    "translation": "通灵兽·白蛇"
+   },
+   "desc": {
+    "source": "Persegue inimigos com <font color=\"#4dc831\">Queda</font> e causa <font color=\"#4dc831\">Voo</font>.",
+    "translation": "追打<font color=\"#4dc831\">倒地</font>造成<font color=\"#4dc831\">大浮空</font>。"
+   }
+  },
+  "20000011": {
+   "name": {
+    "source": "Katsuyu Pequeno",
+    "translation": "小蛞蝓"
+   },
+   "skillName": {
+    "source": "Invocação - Katsuyu",
+    "translation": "通灵兽·小蛞蝓"
+   },
+   "desc": {
+    "source": "Persegue inimigos com <font color=\"#4dc831\">Queda</font> e causa <font color=\"#4dc831\">Flutuação</font>.",
+    "translation": "追打<font color=\"#4dc831\">倒地</font>造成<font color=\"#4dc831\">小浮空</font>。"
+   }
+  },
+  "20000012": {
+   "name": {
+    "source": "Touro Gigante",
+    "translation": "公牛"
+   },
+   "skillName": {
+    "source": "Invocação: Touro Gigante",
+    "translation": "通灵兽·公牛"
+   },
+   "desc": {
+    "source": "Persegue inimigos com <font color=\"#4dc831\">Queda</font> e causa <font color=\"#4dc831\">Repelimento</font>.",
+    "translation": "追打<font color=\"#4dc831\">倒地</font>造成<font color=\"#4dc831\">击退</font>。"
+   }
+  },
+  "20000013": {
+   "name": {
+    "source": "Gama",
+    "translation": "蛤蟆忠"
+   },
+   "skillName": {
+    "source": "Invocação: Gama",
+    "translation": "通灵兽·蛤蟆忠"
+   },
+   "desc": {
+    "source": "Persegue inimigos com <font color=\"#4dc831\">Repelimento</font> e causa <font color=\"#4dc831\">Queda</font>.",
+    "translation": "追打<font color=\"#4dc831\">击退</font>造成<font color=\"#4dc831\">倒地</font>。"
+   }
+  },
+  "20000014": {
+   "name": {
+    "source": "Hina",
+    "translation": "忍猫"
+   },
+   "skillName": {
+    "source": "Invocação: Hina",
+    "translation": "通灵兽·忍猫"
+   },
+   "desc": {
+    "source": "Persegue inimigos com <font color=\"#4dc831\">Repelimento</font> e causa <font color=\"#4dc831\">Voo</font>.",
+    "translation": "追打<font color=\"#4dc831\">击退</font>造成<font color=\"#4dc831\">大浮空</font>。"
+   }
+  },
+  "20000015": {
+   "name": {
+    "source": "Kamatari",
+    "translation": "镰鼬"
+   },
+   "skillName": {
+    "source": "Invocação: Kamatari",
+    "translation": "通灵兽·镰鼬"
+   },
+   "desc": {
+    "source": "Persegue inimigos com <font color=\"#4dc831\">Repelimento</font> e causa <font color=\"#4dc831\">Flutuação</font>.",
+    "translation": "追打<font color=\"#4dc831\">击退</font>造成<font color=\"#4dc831\">小浮空</font>。"
+   }
+  },
+  "20000016": {
+   "name": {
+    "source": "Shiba",
+    "translation": "忍犬西巴"
+   },
+   "skillName": {
+    "source": "Invocação: Shiba",
+    "translation": "通灵兽·忍犬西巴"
+   },
+   "desc": {
+    "source": "Persegue inimigos com <font color=\"#4dc831\">Flutuação</font> e causa <font color=\"#4dc831\">Repelimento</font>.",
+    "translation": "追打<font color=\"#4dc831\">小浮空</font>造成<font color=\"#4dc831\">击退</font>。"
+   }
+  },
+  "20000017": {
+   "name": {
+    "source": "Cervo",
+    "translation": "九色鹿"
+   },
+   "skillName": {
+    "source": "Invocação: Cervo",
+    "translation": "通灵兽·九色鹿"
+   },
+   "desc": {
+    "source": "Persegue inimigos com <font color=\"#4dc831\">Flutuação</font> e causa <font color=\"#4dc831\">Queda</font>.",
+    "translation": "追打<font color=\"#4dc831\">小浮空</font>造成<font color=\"#4dc831\">倒地</font>。"
+   }
+  },
+  "20000018": {
+   "name": {
+    "source": "Tubarão",
+    "translation": "鲛鲨"
+   },
+   "skillName": {
+    "source": "Invocação: Tubarão",
+    "translation": "通灵兽·鲛鲨"
+   },
+   "desc": {
+    "source": "Persegue inimigos com <font color=\"#4dc831\">Flutuação</font> e causa <font color=\"#4dc831\">Voo</font>.",
+    "translation": "追打<font color=\"#4dc831\">小浮空</font>造成<font color=\"#4dc831\">大浮空</font>。"
+   }
+  },
+  "20000019": {
+   "name": {
+    "source": "Rei do Inferno",
+    "translation": "阎王"
+   },
+   "skillName": {
+    "source": "Invocação: Rei do Inferno",
+    "translation": "通灵兽·阎王"
+   },
+   "desc": {
+    "source": "Persegue <font color=\"#4dc831\">Combo alto</font>, causa dano a 2 inimigos e <font color=\"#4dc831\">Veneno</font>.",
+    "translation": "追打<font color=\"#4dc831\">高连击</font>，对2体造成伤害，并附带<font color=\"#4dc831\">中毒</font>。"
+   }
+  },
+  "20000020": {
+   "name": {
+    "source": "Yatagarasu",
+    "translation": "八咫鸟"
+   },
+   "skillName": {
+    "source": "Invocação: Yatagarasu",
+    "translation": "通灵兽·八咫鸟"
+   },
+   "desc": {
+    "source": "Persegue inimigos com <font color=\"#4dc831\">Voo</font> e causa <font color=\"#4dc831\">Flutuação</font>, sendo lançado 2 vezes por rodada.",
+    "translation": "追打<font color=\"#4dc831\">大浮空</font>造成<font color=\"#4dc831\">小浮空</font>,每回合触发2次。"
+   }
+  },
+  "20000021": {
+   "name": {
+    "source": "Tigre Elétrico",
+    "translation": "雷虎王"
+   },
+   "skillName": {
+    "source": "Invocação: Tigre Elétrico",
+    "translation": "通灵兽·雷虎王"
+   },
+   "desc": {
+    "source": "Persegue inimigos com <font color=\"#4dc831\">Voo</font> e causa <font color=\"#4dc831\">Repelimento</font>, sendo lançado 2 vezes por rodada.",
+    "translation": "追打<font color=\"#4dc831\">大浮空</font>造成<font color=\"#4dc831\">击退</font>,每回合触发2次。"
+   }
+  },
+  "20000022": {
+   "name": {
+    "source": "Macaco Rei",
+    "translation": "美猴王"
+   },
+   "skillName": {
+    "source": "Invocação: Macaco Rei",
+    "translation": "通灵兽·美猴王"
+   },
+   "desc": {
+    "source": "Persegue inimigos com <font color=\"#4dc831\">Voo</font> e causa <font color=\"#4dc831\">Queda</font>, sendo lançado 2 vezes por rodada.",
+    "translation": "追打<font color=\"#4dc831\">大浮空</font>造成<font color=\"#4dc831\">倒地</font>,每回合触发2次。"
+   }
+  },
+  "20000023": {
+   "name": {
+    "source": "Cobra Gigante",
+    "translation": "巨蛇"
+   },
+   "skillName": {
+    "source": "Invocação: Cobra Gigante",
+    "translation": "通灵兽·巨蛇"
+   },
+   "desc": {
+    "source": "Persegue inimigos com <font color=\"#4dc831\">Queda</font> e causa <font color=\"#4dc831\">Voo</font>, sendo lançado 2 vezes por rodada.",
+    "translation": "追打<font color=\"#4dc831\">倒地</font>造成<font color=\"#4dc831\">大浮空</font>,每回合触发2次。"
+   }
+  },
+  "20000024": {
+   "name": {
+    "source": "Katsuyu Gigante",
+    "translation": "巨蛞蝓"
+   },
+   "skillName": {
+    "source": "Invocação: Katsuyu Gigante",
+    "translation": "通灵兽·巨蛞蝓"
+   },
+   "desc": {
+    "source": "Persegue inimigos com <font color=\"#4dc831\">Queda</font> e causa <font color=\"#4dc831\">Flutuação</font>, sendo lançado 2 vezes por rodada.",
+    "translation": "追打<font color=\"#4dc831\">倒地</font>造成<font color=\"#4dc831\">小浮空</font>,每回合触发2次。"
+   }
+  },
+  "20000025": {
+   "name": {
+    "source": "Rinoceronte",
+    "translation": "犀牛"
+   },
+   "skillName": {
+    "source": "Invocação: Rinoceronte",
+    "translation": "通灵兽·犀牛"
+   },
+   "desc": {
+    "source": "Persegue inimigos com <font color=\"#4dc831\">Queda</font> e causa <font color=\"#4dc831\">Repelimento</font>, ser lançado 2 vezes por rodada.",
+    "translation": "追打<font color=\"#4dc831\">倒地</font>造成<font color=\"#4dc831\">击退</font>,每回合触发2次。"
+   }
+  },
+  "20000026": {
+   "name": {
+    "source": "Gamaken",
+    "translation": "蛤蟆健"
+   },
+   "skillName": {
+    "source": "Invocação: Gamaken",
+    "translation": "通灵兽·蛤蟆健"
+   },
+   "desc": {
+    "source": "Persegue inimigos com <font color=\"#4dc831\">Repelimento</font> e causa <font color=\"#4dc831\">Queda</font>, sendo lançado 2 vezes por rodada.",
+    "translation": "追打<font color=\"#4dc831\">击退</font>造成<font color=\"#4dc831\">倒地</font>,每回合触发2次。"
+   }
+  },
+  "20000027": {
+   "name": {
+    "source": "Fukurokumaru",
+    "translation": "福禄丸"
+   },
+   "skillName": {
+    "source": "Invocação: Fukurokumaru",
+    "translation": "通灵兽·福禄丸"
+   },
+   "desc": {
+    "source": "Persegue inimigos com <font color=\"#4dc831\">Repelimento</font> e causa <font color=\"#4dc831\">Voo</font>, sendo lançado 2 vezes por rodada.",
+    "translation": "追打<font color=\"#4dc831\">击退</font>造成<font color=\"#4dc831\">大浮空</font>,每回合触发2次。"
+   }
+  },
+  "20000028": {
+   "name": {
+    "source": "Raposa",
+    "translation": "妖狐"
+   },
+   "skillName": {
+    "source": "Invocação: Raposa",
+    "translation": "通灵兽·妖狐"
+   },
+   "desc": {
+    "source": "Persegue inimigos com <font color=\"#4dc831\">Repelimento</font> e causa <font color=\"#4dc831\">Flutuação</font>, sendo lançado 2 vezes por rodada.",
+    "translation": "追打<font color=\"#4dc831\">击退</font>造成<font color=\"#4dc831\">小浮空</font>,每回合触发2次。"
+   }
+  },
+  "20000029": {
+   "name": {
+    "source": "Cérbero",
+    "translation": "地狱之犬"
+   },
+   "skillName": {
+    "source": "Invocação: Cérbero",
+    "translation": "通灵兽·地狱之犬"
+   },
+   "desc": {
+    "source": "Persegue inimigos com <font color=\"#4dc831\">Flutuação</font> e causa <font color=\"#4dc831\">Repelimento</font>, sendo lançado 2 vezes por rodada.",
+    "translation": "追打<font color=\"#4dc831\">小浮空</font>造成<font color=\"#4dc831\">击退</font>,每回合触发2次。"
+   }
+  },
+  "20000030": {
+   "name": {
+    "source": "Kirin",
+    "translation": "麒麟"
+   },
+   "skillName": {
+    "source": "Invocação: Kirin",
+    "translation": "通灵兽·麒麟"
+   },
+   "desc": {
+    "source": "Persegue inimigos com <font color=\"#4dc831\">Flutuação</font> e causa <font color=\"#4dc831\">Queda</font>, sendo lançado 2 vezes por rodada.",
+    "translation": "追打<font color=\"#4dc831\">小浮空</font>造成<font color=\"#4dc831\">倒地</font>,每回合触发2次。"
+   }
+  },
+  "20000031": {
+   "name": {
+    "source": "Tubarão Dragão",
+    "translation": "龙鲛"
+   },
+   "skillName": {
+    "source": "Invocação: Tubarão Dragão",
+    "translation": "通灵兽·龙鲛"
+   },
+   "desc": {
+    "source": "Persegue inimigos com <font color=\"#4dc831\">Flutuação</font> e causa <font color=\"#4dc831\">Voo</font>, sendo lançado 2 vezes por rodada.",
+    "translation": "追打<font color=\"#4dc831\">小浮空</font>造成<font color=\"#4dc831\">大浮空</font>,每回合触发2次。"
+   }
+  },
+  "20000033": {
+   "name": {
+    "source": "Ningame de Guy",
+    "translation": "凯の忍龟"
+   },
+   "skillName": {
+    "source": "Invocação: Ningame de Guy",
+    "translation": "通灵兽·凯の忍龟"
+   },
+   "desc": {
+    "source": "Persegue <font color=\"#4dc831\">combos de 10 golpes</font>, causa dano a 6 inimigos.",
+    "translation": "追打<font color=\"#4dc831\">10连击</font>,对敌方阵营6体造成伤害。"
+   }
+  },
+  "20000034": {
+   "name": {
+    "source": "Caranguejo Gigante",
+    "translation": "地狱蟹"
+   },
+   "skillName": {
+    "source": "Invocação: Caranguejo Gigante",
+    "translation": "通灵兽·地狱蟹"
+   },
+   "desc": {
+    "source": "Persegue <font color=\"#4dc831\">combos de 10 golpes</font>, causa dano a 4 inimigos da equipe adversária.",
+    "translation": "追打<font color=\"#4dc831\">10连击</font>,对敌方小队4体造成伤害。"
+   }
+  },
+  "20000035": {
+   "name": {
+    "source": "Gerotora",
+    "translation": "蛤蟆寅"
+   },
+   "skillName": {
+    "source": "Invocação: Gerotora",
+    "translation": "通灵兽·蛤蟆寅"
+   },
+   "desc": {
+    "source": "Persegue <font color=\"#4dc831\">combos de 10 golpes</font>, causa dano a 2 inimigos e <font color=\"#4dc831\">Chamas</font>.",
+    "translation": "追打<font color=\"#4dc831\">10连击</font>,对2体造成伤害，并附带<font color=\"#4dc831\">点燃</font>。"
+   }
+  },
+  "20000036": {
+   "name": {
+    "source": "Salamandra",
+    "translation": "山椒鱼"
+   },
+   "skillName": {
+    "source": "Invocação: Salamandra",
+    "translation": "通灵兽·山椒鱼"
+   },
+   "desc": {
+    "source": "Persegue <font color=\"#4dc831\">Combo de 10 golpes</font>, causa dano a 2 inimigos e <font color=\"#4dc831\">Veneno</font>.",
+    "translation": "追打<font color=\"#4dc831\">10连击</font>，对2体造成伤害，并附带<font color=\"#4dc831\">中毒</font>。"
+   }
+  },
+  "20000037": {
+   "name": {
+    "source": "Baku",
+    "translation": "梦貘"
+   },
+   "skillName": {
+    "source": "Invocação: Baku",
+    "translation": "通灵兽·梦貘"
+   },
+   "desc": {
+    "source": "Persegue <font color=\"#4dc831\">Combo de 10</font> e causa dano a 2 inimigos e <font color=\"#4dc831\">Cegueira</font> a 1 deles.",
+    "translation": "追打<font color=\"#4dc831\">10连击</font>，对2体造成伤害，并使其中1体附带<font color=\"#4dc831\">目盲</font>。"
+   }
+  },
+  "20000038": {
+   "name": {
+    "source": "Ostra",
+    "translation": "蜃"
+   },
+   "skillName": {
+    "source": "Invocação: Ostra",
+    "translation": "通灵兽·蜃"
+   },
+   "desc": {
+    "source": "Persegue <font color=\"#4dc831\">combos de 10</font>, causa dano a 3 inimigos e <font color=\"#4dc831\">Marca</font>.",
+    "translation": "追打<font color=\"#4dc831\">10连击</font>，对3体造成伤害，并附带<font color=\"#4dc831\">标记</font>。"
+   }
+  },
+  "20000039": {
+   "name": {
+    "source": "Gamariki",
+    "translation": "蛤蟆力"
+   },
+   "skillName": {
+    "source": "Invocação: Gamariki",
+    "translation": "通灵兽·蛤蟆力"
+   },
+   "desc": {
+    "source": "Persegue <font color=\"#4dc831\">combos de 10</font>, causa dano a 3 inimigos e diminui a Resistência do alvo em 20%, podendo acumular.",
+    "translation": "追打<font color=\"#4dc831\">10连击</font>，对3体造成伤害，并降低目标20%抗性（可叠加）。"
+   }
+  },
+  "20000040": {
+   "name": {
+    "source": "Gamahiro",
+    "translation": "蛤蟆广"
+   },
+   "skillName": {
+    "source": "Gamahiro: Estilo Duas Espadas",
+    "translation": "蛤蟆广·二刀流"
+   },
+   "desc": {
+    "source": "Persegue inimigos com <font color=\"#4dc831\">Flutuação</font>, <font color=\"#4dc831\">Voo</font> ou <font color=\"#4dc831\">Queda</font> e causa <font color=\"#4dc831\">Repelimento</font>, podendo ser lançado 2 vezes por rodada.",
+    "translation": "<font color=\"#4dc831\">追打小浮空</font>、<font color=\"#4dc831\">大浮空</font>或<font color=\"#4dc831\">倒地</font>的敌人，造成<font color=\"#4dc831\">击退</font>。每回合至多触发2次。"
+   }
+  },
+  "20000041": {
+   "name": {
+    "source": "Aranha gigante",
+    "translation": "大蜘蛛"
+   },
+   "skillName": {
+    "source": "Aranha gigante: Pinças",
+    "translation": "大蜘蛛·蜘蛛钳击"
+   },
+   "desc": {
+    "source": "Persegue inimigos com <font color=\"#4dc831\">Flutuação</font>, <font color=\"#4dc831\">Voo</font> ou <font color=\"#4dc831\">Repelimento</font> e causa <font color=\"#4dc831\">Queda</font>, podendo ser lançado 2 vezes por rodada.",
+    "translation": "<font color=\"#4dc831\">追打小浮空</font>、<font color=\"#4dc831\">大浮空</font>或<font color=\"#4dc831\">击退</font>的敌人，造成<font color=\"#4dc831\">倒地</font>。每回合至多触发2次。"
+   }
+  },
+  "20000042": {
+   "name": {
+    "source": "Shima",
+    "translation": "志麻仙人"
+   },
+   "skillName": {
+    "source": "Shima: Ataque de Língua",
+    "translation": "志麻仙人·舌攻击"
+   },
+   "desc": {
+    "source": "Persegue inimigos com <font color=\"#4dc831\">Repelimento</font>, <font color=\"#4dc831\">Voo</font> ou <font color=\"#4dc831\">Queda</font> e causa <font color=\"#4dc831\">Flutuação</font>, podendo ser lançado 2 vezes por rodada.",
+    "translation": "<font color=\"#4dc831\">追打击退</font>、<font color=\"#4dc831\">大浮空</font>或<font color=\"#4dc831\">倒地</font>的敌人，造成<font color=\"#4dc831\">小浮空</font>。每回合至多触发2次。"
+   }
+  },
+  "20000043": {
+   "name": {
+    "source": "Fukasaku",
+    "translation": "深作仙人"
+   },
+   "skillName": {
+    "source": "Fukasaku: Estilo Água: Fenda de Água",
+    "translation": "深作仙人·水遁·水斩"
+   },
+   "desc": {
+    "source": "Persegue inimigos com <font color=\"#4dc831\">Repelimento</font>, <font color=\"#4dc831\">Flutuação</font> ou <font color=\"#4dc831\">Queda</font> e causa <font color=\"#4dc831\">Voo</font>, podendo ser lançado 2 vezes por rodada.",
+    "translation": "<font color=\"#4dc831\">追打击退</font>、<font color=\"#4dc831\">小浮空</font>或<font color=\"#4dc831\">倒地</font>的敌人，造成<font color=\"#4dc831\">大浮空</font>。每回合至多触发2次。"
+   }
+  },
+  "20000044": {
+   "name": {
+    "source": "Aoda",
+    "translation": "青蛇"
+   },
+   "skillName": {
+    "source": "Aoda: Golpe de Cauda",
+    "translation": "青蛇·蛇尾拍击"
+   },
+   "desc": {
+    "source": "<font color=\"#4dc831\">Lançado com combo de 10</font>, causa dano e reduz em <font color=\"#4dc831\">20%</font> a <font color=\"#4dc831\">Defesa</font> de uma linha de inimigos aleatória (pode acumular).",
+    "translation": "<font color=\"#4dc831\">至少10连击时触发</font>，对敌小队随机一横行敌人造成伤害并降低<font color=\"#4dc831\">20%</font>的<font color=\"#4dc831\">防御</font>（可叠加）。"
+   }
+  },
+  "20000045": {
+   "name": {
+    "source": "Gamakichi [Grande Guerra Ninja]",
+    "translation": "蛤蟆吉[忍界大战]"
+   },
+   "skillName": {
+    "source": "Gamakichi [Grande Guerra Ninja]: Golpe da Espada Curta do Gama",
+    "translation": "蛤蟆吉[忍界大战]·蛤蟆短刀斩"
+   },
+   "desc": {
+    "source": "Persegue inimigos e suas equipes em uma coluna vertical que estejam sob <font color=\"#4dc831\">Imobilidade</font>, <font color=\"#4dc831\">Tortura</font>, <font color=\"#4dc831\">Sonho</font> ou <font color=\"#4dc831\">Sono</font>, causando <font color=\"#4dc831\">Repelimento</font> e <font color=\"#4dc831\">Laceração</font>.",
+    "translation": "追打<font color=\"#4dc831\">定身</font>、<font color=\"#4dc831\">拷问</font>、<font color=\"#4dc831\">梦境</font>或者<font color=\"#4dc831\">睡眠</font>的敌人及其小队一竖排所有敌人，造成<font color=\"#4dc831\">击退</font>及<font color=\"#4dc831\">裂伤</font>。"
+   }
+  },
+  "20000046": {
+   "name": {
+    "source": "Centopeia",
+    "translation": "蜈蚣"
+   },
+   "skillName": {
+    "source": "Centopeia: Varredura",
+    "translation": "蜈蚣·横扫"
+   },
+   "desc": {
+    "source": "<font color=\"#4dc831\">Lançado com combo de 10</font>, causa dano a inimigos de 1 linha vertical aleatória de uma equipe inimiga. Também aumenta o <font color=\"#4dc831\">Crítico</font> da equipe aliada em <font color=\"#4dc831\">25%</font> (o efeito dura até o final da rodada e não pode acumular).",
+    "translation": "<font color=\"#4dc831\">至少10连击时触发</font>，对敌小队随机一竖排敌人造成伤害。同时提升己方小队<font color=\"#4dc831\">25%</font>的<font color=\"#4dc831\">暴击</font>（持续至回合结束，不可叠加）。"
+   }
+  },
+  "20000047": {
+   "name": {
+    "source": "Manda II",
+    "translation": "万蛇[二世]"
+   },
+   "skillName": {
+    "source": "Manda II: Patada",
+    "translation": "万蛇[二世]·爪击"
+   },
+   "desc": {
+    "source": "<font color=\"#4dc831\">Lançado com combo de 10</font>, causa dano e <font color=\"#4dc831\">Fraqueza</font> a inimigos em uma linha vertical aleatória (o efeito dura 1 rodada).",
+    "translation": "<font color=\"#4dc831\">至少10连击时触发</font>，对敌小队随机一竖排敌人造成伤害及<font color=\"#4dc831\">虚弱</font>（持续1回合）。"
+   }
+  },
+  "20000048": {
+   "name": {
+    "source": "Hai",
+    "translation": "鲛鲨"
+   },
+   "skillName": {
+    "source": "Hai: Colisão",
+    "translation": "鲛鲨·冲撞"
+   },
+   "desc": {
+    "source": "<font color=\"#4dc831\">Lançado com combo de 10</font>, causa dano a inimigos em uma linha horizontal aleatória, e aumenta o dano de habilidade <font color=\"#4dc831\">Esotérica</font> da equipe aliada em <font color=\"#4dc831\">30%</font> (o efeito não acumula e dura até o final da próxima rodada).",
+    "translation": "<font color=\"#4dc831\">至少10连击时触发</font>，对敌小队随机一横排敌人造成伤害，并提升己方小队<font color=\"#4dc831\">30%</font>的<font color=\"#4dc831\">奥义</font>类技能伤害（不可叠加，持续至下回合结束）。"
+   }
+  },
+  "20000049": {
+   "name": {
+    "source": "Rashomon Quíntuplo",
+    "translation": "五重罗生门"
+   },
+   "skillName": {
+    "source": "Rashomon Quíntuplo: Ataque Rashomon",
+    "translation": "五重罗生门·罗生门攻击"
+   },
+   "desc": {
+    "source": "<font color=\"#4dc831\">Lançado com combo de 10</font>, causa dano à equipe inimiga, dispersa todos os <font color=\"#4dc831\">Escudo</font> e <font color=\"#4dc831\">status positivos</font> e inflige <font color=\"#4dc831\">Debilidade</font>.",
+    "translation": "<font color=\"#4dc831\">至少10连击时触发</font>，对敌小队造成伤害并驱散全部<font color=\"#4dc831\">护盾</font>及<font color=\"#4dc831\">时效增益</font>，并造成<font color=\"#4dc831\">卸力</font>。"
+   }
+  },
+  "20000050": {
+   "name": {
+    "source": "Rashomon Triplo",
+    "translation": "三重罗生门"
+   },
+   "skillName": {
+    "source": "Rashomon Triplo: Ataque Rashomon",
+    "translation": "三重罗生门·罗生门攻击"
+   },
+   "desc": {
+    "source": "<font color=\"#4dc831\">Lançado com combo de 20</font>, causa dano à equipe inimiga, dispersando todo o <font color=\"#4dc831\">Escudo</font> e <font color=\"#4dc831\">status positivos</font>.",
+    "translation": "<font color=\"#4dc831\">至少20连击时触发</font>，对敌小队造成伤害并驱散全部<font color=\"#4dc831\">护盾</font>及<font color=\"#4dc831\">时效增益</font>。"
+   }
+  },
+  "20000051": {
+   "name": {
+    "source": "Gamatatsu",
+    "translation": "蛤蟆龙"
+   },
+   "skillName": {
+    "source": "Gamatatsu: Pistola de Água do Sapo",
+    "translation": "蛤蟆龙·蛤蟆铁炮"
+   },
+   "desc": {
+    "source": "<font color=\"#4dc831\">Lançado com combo de 10</font>, causa dano de <font color=\"#4dc831\">Água</font> no inimigo à frente e dispersa todo o <font color=\"#4dc831\">Escudo</font> e todos os <font color=\"#4dc831\">status positivos</font>. Esta habilidade <font color=\"#4dc831\">sempre acerta</font>.",
+    "translation": "<font color=\"#4dc831\">至少10连击时触发</font>，对正面敌人造成<font color=\"#4dc831\">水</font>属性伤害并驱散全部<font color=\"#4dc831\">护盾</font>及<font color=\"#4dc831\">增益</font>状态。此技能<font color=\"#4dc831\">必中</font>。"
+   }
+  },
+  "20000052": {
+   "name": {
+    "source": "Rashomon",
+    "translation": "罗生门"
+   },
+   "skillName": {
+    "source": "Rashomon: Ataque Rashomon",
+    "translation": "罗生门·罗生门攻击"
+   },
+   "desc": {
+    "source": "<font color=\"#4dc831\">Lançado com combo de 20</font>, causa dano à linha vertical, dispersando todo o <font color=\"#4dc831\">Escudo</font> e <font color=\"#4dc831\">status positivos</font>.",
+    "translation": "<font color=\"#4dc831\">至少20连击时触发</font>，对敌小队随机一竖排造成伤害并驱散全部<font color=\"#4dc831\">护盾</font>及<font color=\"#4dc831\">时效增益</font>。"
+   }
+  },
+  "20000053": {
+   "name": {
+    "source": "Katsuyu Colossal",
+    "translation": "巨大蛞蝓"
+   },
+   "skillName": {
+    "source": "Katsuyu Colossal: Cura de Lesma",
+    "translation": "巨大蛞蝓·蛞蝓治愈"
+   },
+   "desc": {
+    "source": "Cada vez que receber dano de Taijutsu, recupera a vida equivalente a <font color=\"#4dc831\">2%</font> do próprio limite máximo de vida. Na hora de derrota, aciona <font color=\"#4dc831\">Golpe Mortal</font>: Katsuyu Colossal: Cura de Lesma</font>. Sofre derrota após o acionamento.",
+    "translation": "每次受到体术伤害时恢复自身最大生命上限<font color=\"#4dc831\">2%</font>的生命，战败时将触发<font color=\"#4dc831\">绝杀</font>--<font color=\"#4dc831\">巨大蛞蝓·蛞蝓治愈</font>，触发后战败。"
+   }
+  },
+  "20000054": {
+   "name": {
+    "source": "Kurama [Infância]",
+    "translation": "九喇嘛[幼年]"
+   },
+   "skillName": {
+    "source": "Kurama [Infância]: Ataque das Caudas",
+    "translation": "九喇嘛[幼年]·尾袭"
+   },
+   "desc": {
+    "source": "Persegue inimigos com <font color=\"#4dc831\">Flutuação</font> e causa <font color=\"#4dc831\">Repelimento</font>, com um máximo de 2 ativações por rodada. Esta habilidade <font color=\"#4dc831\">sempre acerta</font>.",
+    "translation": "<font color=\"#4dc831\">追打小浮空</font>的敌人造成<font color=\"#4dc831\">击退</font>，每回合可触发2次。此技能<font color=\"#4dc831\">必中</font>。"
+   }
+  }
+ }
+}
