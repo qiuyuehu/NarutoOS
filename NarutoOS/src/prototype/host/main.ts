@@ -58,7 +58,7 @@ if (!app.requestSingleInstanceLock()) { app.quit(); } else {
 }
 async function start() {
   app.setAboutPanelOptions({ applicationName: resolveText(msg('ui.naruto_os_game')), applicationVersion: app.getVersion(),
-    copyright: 'by Qiuyue', credits: 'github.com/qiuyuehu/NarutoOS' });
+    copyright: 'Qiuyue · Codex', credits: 'github.com/qiuyuehu/NarutoOS' });
   const instance = crypto.randomBytes(16).toString('hex');
   const runtimePath = path.join(root, 'host-receipts.json');
   let prefs: any = (await core('snapshot')).preferences;

@@ -228,7 +228,7 @@ final class Center:NSObject,NSApplicationDelegate,NSWindowDelegate,WKNavigationD
   if dirty || pendingWrites>0 {let alert=NSAlert();alert.messageText=localized(msg("ui.there_are_unfinished_edits_or_saves_close"));alert.addButton(withTitle:localized(msg("ui.continue_editing")));alert.addButton(withTitle:localized(msg("ui.close_214")));return alert.runModal() == .alertSecondButtonReturn};return true
  }
  @objc func showAboutPanel(){
-  let credits=NSMutableAttributedString(string:"by Qiuyue",attributes:[.font:NSFont.systemFont(ofSize:11)])
+  let credits=NSMutableAttributedString(string:"Qiuyue · Codex",attributes:[.font:NSFont.systemFont(ofSize:11)])
   credits.append(NSAttributedString(string:"\ngithub.com/qiuyuehu/NarutoOS",attributes:[.font:NSFont.systemFont(ofSize:10),.foregroundColor:NSColor.secondaryLabelColor]))
   NSApp.orderFrontStandardAboutPanel(options:[.applicationName:"Naruto OS",.credits:credits])
  }

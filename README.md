@@ -6,6 +6,8 @@
 
 <p align="center">我为 Mac 做了一个《火影忍者 Online》启动器，支持国服和巴西服。</p>
 
+<p align="center"><a href="README.md">简体中文</a> · <a href="README.en.md">English</a> · <a href="README.pt-BR.md">Português (Brasil)</a></p>
+
 <p align="center">
   <a href="https://github.com/qiuyuehu/NarutoOS/releases/latest"><strong>下载最新版本</strong></a> ·
   <a href="#安装与使用">安装说明</a> ·
