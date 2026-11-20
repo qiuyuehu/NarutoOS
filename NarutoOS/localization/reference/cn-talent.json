@@ -1,0 +1,425 @@
+{
+ "source": "CN NarutoBeta11.38Build301 item1.pkg",
+ "rows": [
+  {
+   "id": "50000104",
+   "pt_name": "Jutsu de Cura: Super",
+   "cn_name": "掌仙术·极",
+   "pt_desc": "Cura os 2 companheiros com menor vida e dispersa todos os seus <font color=\"#4dc831\">status negativos</font>. A cura desta habilidade é aumentada em <font color=\"#4dc831\">25%</font>. Se sua própria Vida cair abaixo de <font color=\"#4dc831\">60%</font>, esta habilidade estende seu alcance a todos os ninjas e remove o status de <font color=\"#4dc831\">Chamas</font>.",
+   "cn_desc": "医疗本队生命最低的2体忍者，并驱散目标身上所有<font color=\"#4dc831\">不良状态</font>。此技能治疗量提升<font color=\"#4dc831\">25%</font>。若自身血量低于<font color=\"#4dc831\">60%</font>，此技能范围扩大至全小队忍者，并可取消<font color=\"#4dc831\">点燃</font>状态。"
+  },
+  {
+   "id": "50000105",
+   "pt_name": "Jutsu de Cura: Super",
+   "cn_name": "掌仙术·极",
+   "pt_desc": "Cura os 2 companheiros com menor vida e dispersa todos os seus <font color=\"#4dc831\">status negativos</font>. A cura desta habilidade é aumentada em <font color=\"#4dc831\">25%</font>. Se sua própria Vida cair abaixo de <font color=\"#4dc831\">60%</font>, esta habilidade estende seu alcance a todos os ninjas e remove o status de <font color=\"#4dc831\">Chamas</font>.",
+   "cn_desc": "医疗本队生命最低的2体忍者，并驱散目标身上所有<font color=\"#4dc831\">不良状态</font>。此技能治疗量提升<font color=\"#4dc831\">25%</font>。若自身血量低于<font color=\"#4dc831\">60%</font>，此技能范围扩大至全小队忍者，并可取消<font color=\"#4dc831\">点燃</font>状态。"
+  },
+  {
+   "id": "50000106",
+   "pt_name": "Jutsu de Cura: Super",
+   "cn_name": "掌仙术·极",
+   "pt_desc": "Cura os 2 companheiros com menor vida e dispersa todos os seus <font color=\"#4dc831\">status negativos</font>. A cura desta habilidade é aumentada em <font color=\"#4dc831\">25%</font>. Se sua própria Vida cair abaixo de <font color=\"#4dc831\">60%</font>, esta habilidade estende seu alcance a todos os ninjas e remove o status de <font color=\"#4dc831\">Chamas</font>.",
+   "cn_desc": "医疗本队生命最低的2体忍者，并驱散目标身上所有<font color=\"#4dc831\">不良状态</font>。此技能治疗量提升<font color=\"#4dc831\">25%</font>。若自身血量低于<font color=\"#4dc831\">60%</font>，此技能范围扩大至全小队忍者，并可取消<font color=\"#4dc831\">点燃</font>状态。"
+  },
+  {
+   "id": "50000107",
+   "pt_name": "Estilo Relâmpago: Laço Relâmpago",
+   "cn_name": "雷遁·雷鞭",
+   "pt_desc": "Ataca o inimigo à frente, causando dano de <font color=\"#4dc831\">Relâmpago</font> e com grande chance de lançar um <font color=\"#4dc831\">Combo de 3</font>, <font color=\"#4dc831\">Paralisia</font> que não pode ser evitada ou dispersada (1 rodada), <font color=\"#4dc831\">Selamento</font> (3 rodadas) e <font color=\"#4dc831\">Queda</font>. Esta habilidade ignora parte da <font color=\"#4dc831\">Defesa</font> e <font color=\"#4dc831\">Resistência</font>.",
+   "cn_desc": "攻击正面敌人造成<font color=\"#4dc831\">雷</font>属性伤害，大概率发动3连击并造成不可免疫及驱散的<font color=\"#4dc831\">麻痹</font>（持续1回合）、<font color=\"#4dc831\">封穴</font>（持续3回合）及<font color=\"#4dc831\">倒地</font>，此技能无视一定<font color=\"#4dc831\">防御</font>与<font color=\"#4dc831\">抗性</font>。"
+  },
+  {
+   "id": "50000108",
+   "pt_name": "Estilo Relâmpago: Laço Relâmpago",
+   "cn_name": "雷遁·雷鞭",
+   "pt_desc": "Ataca o inimigo à frente, causando dano de <font color=\"#4dc831\">Relâmpago</font> e com grande chance de lançar um <font color=\"#4dc831\">Combo de 3</font>, <font color=\"#4dc831\">Paralisia</font> que não pode ser evitada ou dispersada (1 rodada), <font color=\"#4dc831\">Selamento</font> (3 rodadas) e <font color=\"#4dc831\">Queda</font>. Esta habilidade ignora parte da <font color=\"#4dc831\">Defesa</font> e <font color=\"#4dc831\">Resistência</font>.",
+   "cn_desc": "攻击正面敌人造成<font color=\"#4dc831\">雷</font>属性伤害，大概率发动3连击并造成不可免疫及驱散的<font color=\"#4dc831\">麻痹</font>（持续1回合）、<font color=\"#4dc831\">封穴</font>（持续3回合）及<font color=\"#4dc831\">倒地</font>，此技能无视一定<font color=\"#4dc831\">防御</font>与<font color=\"#4dc831\">抗性</font>。"
+  },
+  {
+   "id": "50000109",
+   "pt_name": "Estilo Relâmpago: Laço Relâmpago",
+   "cn_name": "雷遁·雷鞭",
+   "pt_desc": "Ataca o inimigo à frente, causando dano de <font color=\"#4dc831\">Relâmpago</font> e com grande chance de lançar um <font color=\"#4dc831\">Combo de 3</font>, <font color=\"#4dc831\">Paralisia</font> que não pode ser evitada ou dispersada (1 rodada), <font color=\"#4dc831\">Selamento</font> (3 rodadas) e <font color=\"#4dc831\">Queda</font>. Esta habilidade ignora parte da <font color=\"#4dc831\">Defesa</font> e <font color=\"#4dc831\">Resistência</font>.",
+   "cn_desc": "攻击正面敌人造成<font color=\"#4dc831\">雷</font>属性伤害，大概率发动3连击并造成不可免疫及驱散的<font color=\"#4dc831\">麻痹</font>（持续1回合）、<font color=\"#4dc831\">封穴</font>（持续3回合）及<font color=\"#4dc831\">倒地</font>，此技能无视一定<font color=\"#4dc831\">防御</font>与<font color=\"#4dc831\">抗性</font>。"
+  },
+  {
+   "id": "50000111",
+   "pt_name": "Névoa do Relâmpago",
+   "cn_name": "雷光毒雾",
+   "pt_desc": "Causa dano de <font color=\"#4dc831\">Relâmpago</font> e <font color=\"#4dc831\">Água</font>, <font color=\"#4dc831\">Veneno</font> que não pode ser evitado ou dispersado e <font color=\"#4dc831\">Paralisia</font> por 1 rodada ao inimigo selecionado.",
+   "cn_desc": "对选定敌小队造成<font color=\"#4dc831\">雷</font>及<font color=\"#4dc831\">水</font>属性的伤害，并附带不可免疫及驱散的<font color=\"#4dc831\">中毒</font>，及持续1回合的<font color=\"#4dc831\">麻痹</font>。"
+  },
+  {
+   "id": "50000112",
+   "pt_name": "Tubarão de Dentes Relâmpago",
+   "cn_name": "雷牙鲛",
+   "pt_desc": "Causa dano de Relâmpago a até 4 inimigos, <font color=\"#4dc831\">Paralisia</font> por 1 rodada e <font color=\"#4dc831\">Queda</font> ao inimigo selecionado, absorvendo todo o seu Chakra. Esta habilidade tem dano e chance de Crítico extras.",
+   "cn_desc": "对至多4体敌人造成雷属性伤害和持续1回合的<font color=\"#4dc831\">麻痹</font>，选定敌人附带<font color=\"#4dc831\">倒地</font>，并吸收对手全部查克拉。此技能拥有额外暴击和暴伤加成。"
+  },
+  {
+   "id": "50000115",
+   "pt_name": "Sabedoria de Cura: Super",
+   "cn_name": "医疗心得·极",
+   "pt_desc": "A cura recebida por todos os seus companheiros aumenta em 50%. (Pode ser acumulado com a Sabedoria de Cura de outros ninjas)",
+   "cn_desc": "己方小队受治疗量提升<font color=\"#4dc831\">50%</font>，且每回合首次技能击败敌人时，击败者恢复<font color=\"#4dc831\">20%</font>的生命。"
+  },
+  {
+   "id": "50000121",
+   "pt_name": "Fortalecimento de Relâmpago e Água",
+   "cn_name": "雷水强化",
+   "pt_desc": "O Ninjutsu e Ataque de até 3 ninjas de Relâmpago e Água do grupo aumenta em 40% por 5 rodadas.",
+   "cn_desc": "本队至多3体雷、水属性忍者的忍术与攻击提升40%，持续5回合。"
+  },
+  {
+   "id": "50000130",
+   "pt_name": "Pesquisa de jutsu: Super",
+   "cn_name": "忍术研究·极",
+   "pt_desc": "Aciona antes da primeira ação de cada rodada; causa uma pequena quantidade de dano a si mesmo e ganha 1 Ataque Comum extra, além de dispersar todos os <font color=\"#4dc831\">Status negativos</font> e reduzir o Resfriamento da <font color=\"#4dc831\">Esotérica</font> em 1. Depois remove o status de <font color=\"#4dc831\">Chamas</font> dos aliados e aumenta <font color=\"#4dc831\">10%</font> de <font color=\"#4dc831\">Crítico</font>.",
+   "cn_desc": "每回合首次行动前触发，对自身造成少量伤害并获得1次额外普攻次数，并驱散全部<font color=\"#4dc831\">不良状态</font>且降低自身<font color=\"#4dc831\">奥义冷却</font>1回合，之后取消己方小队<font color=\"#4dc831\">点燃</font>状态，同时提升<font color=\"#4dc831\">10%</font>的<font color=\"#4dc831\">暴击</font>。"
+  },
+  {
+   "id": "50000204",
+   "pt_name": "Estilo Fogo: Jutsu Chamas Azuis: Super",
+   "cn_name": "火遁·苍炎术·极",
+   "pt_desc": "Causa <font color=\"#4dc831\">Chamas</font> não pode ser imune ou dispersada ao inimigo à frente, e tem grande chance de lançar um <font color=\"#4dc831\">Combo de 10</font>.",
+   "cn_desc": "攻击正面敌人造成不可被免疫及驱散的<font color=\"#4dc831\">点燃</font>，必中并大概率发动<font color=\"#4dc831\">10连击</font>。"
+  },
+  {
+   "id": "50000205",
+   "pt_name": "Estilo Fogo: Jutsu Chamas Azuis: Super",
+   "cn_name": "火遁·苍炎术·极",
+   "pt_desc": "Causa <font color=\"#4dc831\">Chamas</font> não pode ser imune ou dispersada ao inimigo à frente, e tem grande chance de lançar um <font color=\"#4dc831\">Combo de 10</font>.",
+   "cn_desc": "攻击正面敌人造成不可被免疫及驱散的<font color=\"#4dc831\">点燃</font>，必中并大概率发动<font color=\"#4dc831\">10连击</font>。"
+  },
+  {
+   "id": "50000206",
+   "pt_name": "Estilo Fogo: Jutsu Chamas Azuis: Super",
+   "cn_name": "火遁·苍炎术·极",
+   "pt_desc": "Causa <font color=\"#4dc831\">Chamas</font> não pode ser imune ou dispersada ao inimigo à frente, e tem grande chance de lançar um <font color=\"#4dc831\">Combo de 10</font>.",
+   "cn_desc": "攻击正面敌人造成不可被免疫及驱散的<font color=\"#4dc831\">点燃</font>，必中并大概率发动<font color=\"#4dc831\">10连击</font>。"
+  },
+  {
+   "id": "50000210",
+   "pt_name": "Rocha Explosiva",
+   "cn_name": "爆岩阵",
+   "pt_desc": "Causa dano de <font color=\"#4dc831\">Terra</font> ao inimigo selecionado e mais 1 inimigo, além de <font color=\"#4dc831\">Interrupção</font> e <font color=\"#4dc831\">Chamas</font>. Também tem grande chance de se esquivar do Ataque Comum seguinte. Se houver algum Clone de Nevoeiro na equipe, não causa <font color=\"#4dc831\">Chamas</font>, e faz com que o <font color=\"#4dc831\">Resfriamento</font> do alvo aumente em 1 rodada.",
+   "cn_desc": "对选定敌人及随机1体造成<font color=\"#4dc831\">土</font>属性伤害，并附带<font color=\"#4dc831\">打断</font>和<font color=\"#4dc831\">点燃</font>，自身大概率闪避下次攻击。当小队内存在胧分身时，将不造成<font color=\"#4dc831\">点燃</font>，额外使目标<font color=\"#4dc831\">奥义冷却</font>增加1回合。"
+  },
+  {
+   "id": "50000212",
+   "pt_name": "Pistola Quebra-Rocha",
+   "cn_name": "裂岩枪",
+   "pt_desc": "Causa dano de <font color=\"#4dc831\">Terra</font> a até 7 inimigos, além de <font color=\"#4dc831\">Voo</font> e <font color=\"#4dc831\">Supressão de Imunidade a Perseguição</font> ao inimigo escolhido até o fim da rodada. Tem grande chance de se esquivar do Ataque Comum seguinte e, caso haja Clones de Nevoeiro em combate, o Resfriamento cai em 1.",
+   "cn_desc": "对敌方阵营至多7体造成<font color=\"#4dc831\">土</font>属性伤害，选定敌人附带<font color=\"#4dc831\">大浮空</font>并<font color=\"#4dc831\">压制追打状态免疫</font>至回合结束，自身大概率闪避下次攻击。小队内存在胧分身时，冷却降低1。"
+  },
+  {
+   "id": "50000240",
+   "pt_name": "Visão do Inferno: Super",
+   "cn_name": "奈落见·极",
+   "pt_desc": "A cada rodada antes de sua ação o Ninjutsu de 3 inimigos reduz em 10% e o Crítico em 15%.",
+   "cn_desc": "每回合首次行动前，降低敌方小队随机3体目标10%的忍术和15%的暴击。"
+  },
+  {
+   "id": "50000247",
+   "pt_name": "Estímulo Ninjutsu: Super",
+   "cn_name": "忍术激励·极",
+   "pt_desc": "Quando o personagem está em combate, seus companheiros têm o Ninjutsu aumentado e ao realizar um ataque Ninjutsu eles curam 15% de Vida.",
+   "cn_desc": "主角存活时，己方阵营忍者忍术提升20%，且己方阵营忍者忍术攻击时以15%的比率医疗自己。"
+  },
+  {
+   "id": "50000304",
+   "pt_name": "Jutsu Clone das Sombras: Super",
+   "cn_name": "影分身术·极",
+   "pt_desc": "Invoca 1 a 3 Clones das Sombras com 20% de sua Vida. Eles podem atacar com Taijutsu e tem grande chance de causar <font color=\"#4dc831\">Flutuação</font>.",
+   "cn_desc": "召唤1到3体继承本体20%生命的影分身。其可以使用<font color=\"#4dc831\">体术攻击·极</font>进行普攻，大概率造成<font color=\"#4dc831\">小浮空</font>。"
+  },
+  {
+   "id": "50000305",
+   "pt_name": "Jutsu Clone das Sombras: Super",
+   "cn_name": "影分身术·极",
+   "pt_desc": "Invoca 1 a 3 Clones das Sombras com 20% de sua Vida. Eles podem atacar com Taijutsu e tem grande chance de causar <font color=\"#4dc831\">Flutuação</font>.",
+   "cn_desc": "召唤1到3体继承本体20%生命的影分身。其可以使用<font color=\"#4dc831\">体术攻击·极</font>进行普攻，大概率造成<font color=\"#4dc831\">小浮空</font>。"
+  },
+  {
+   "id": "50000306",
+   "pt_name": "Jutsu Clone das Sombras: Super",
+   "cn_name": "影分身术·极",
+   "pt_desc": "Invoca 1 a 3 Clones das Sombras com 20% de sua Vida. Eles podem atacar com Taijutsu e tem grande chance de causar <font color=\"#4dc831\">Flutuação</font>.",
+   "cn_desc": "召唤1到3体继承本体20%生命的影分身。其可以使用<font color=\"#4dc831\">体术攻击·极</font>进行普攻，大概率造成<font color=\"#4dc831\">小浮空</font>。"
+  },
+  {
+   "id": "50000307",
+   "pt_name": "Onda de Vento Flamejante",
+   "cn_name": "炎烈风波",
+   "pt_desc": "Ataca até 3 inimigos da coluna da frente e causa <font color=\"#4dc831\">Chamas</font>, com grande chance de causar <font color=\"#4dc831\">Repelimento</font>, o inimigo repelido causa dano à coluna atrás.",
+   "cn_desc": "攻击最前排至多3体并造成<font color=\"#4dc831\">点燃</font>，大概率造成<font color=\"#4dc831\">击退</font>，被击退的敌人会伤及后排。"
+  },
+  {
+   "id": "50000308",
+   "pt_name": "Onda de Vento Flamejante",
+   "cn_name": "炎烈风波",
+   "pt_desc": "Ataca até 3 inimigos da coluna da frente e causa <font color=\"#4dc831\">Chamas</font>, com grande chance de causar <font color=\"#4dc831\">Repelimento</font>, o inimigo repelido causa dano à coluna atrás.",
+   "cn_desc": "攻击最前排至多3体并造成<font color=\"#4dc831\">点燃</font>，大概率造成<font color=\"#4dc831\">击退</font>，被击退的敌人会伤及后排。"
+  },
+  {
+   "id": "50000309",
+   "pt_name": "Onda de Vento Flamejante",
+   "cn_name": "炎烈风波",
+   "pt_desc": "Ataca até 3 inimigos da coluna da frente e causa <font color=\"#4dc831\">Chamas</font>, com grande chance de causar <font color=\"#4dc831\">Repelimento</font>, o inimigo repelido causa dano à coluna atrás.",
+   "cn_desc": "攻击最前排至多3体并造成<font color=\"#4dc831\">点燃</font>，大概率造成<font color=\"#4dc831\">击退</font>，被击退的敌人会伤及后排。"
+  },
+  {
+   "id": "50000310",
+   "pt_name": "Bomba Redemoinho",
+   "cn_name": "旋风炎弹",
+   "pt_desc": "Causa dano de Fogo e Vento ao inimigo escolhido e a 1 inimigo aleatório, além de <font color=\"#4dc831\">Cegueira</font> e <font color=\"#4dc831\">Chamas</font>. Se houver pelo menos 2 Clones das Sombras Dançarina dos Ventos na equipe, os status desta habilidade não poderão ser evitados ou dispersados.",
+   "cn_desc": "对选定和敌小队随机1体敌人造成火属性和风属性伤害，并附带<font color=\"#4dc831\">目盲</font>和<font color=\"#4dc831\">点燃</font>。小队内存在至少2体疾风舞者的影分身时，此技能造成状态将不可免疫及驱散。"
+  },
+  {
+   "id": "50000312",
+   "pt_name": "Bola Flamejante",
+   "cn_name": "大玉炎丸",
+   "pt_desc": "Causa dano Ninjutsu e Taijutsu e <font color=\"#4dc831\">Chamas</font> a pelo menos 7 inimigos e <font color=\"#4dc831\">Repelimento</font> ao inimigo escolhido. Caso haja pelo menos 2 Clones das Sombras da Dançarina dos Ventos em combate o Resfriamento cai em 1.",
+   "cn_desc": "对敌方阵营至多7体造成忍术和体术伤害和<font color=\"#4dc831\">点燃</font>，选定敌人附带<font color=\"#4dc831\">击退</font>。小队内存在至少2体疾风舞者的影分身时，冷却降低1。"
+  },
+  {
+   "id": "50000320",
+   "pt_name": "Fortalecimento de Vento e Fogo",
+   "cn_name": "风火强化",
+   "pt_desc": "O Ninjutsu e Ataque de até 3 ninjas de Vento e Fogo do grupo aumentam em 40% por 5 rodadas.",
+   "cn_desc": "本队至多3体风、火属性忍者的忍术与攻击提升40%，持续5回合。"
+  },
+  {
+   "id": "50000321",
+   "pt_name": "Super Sexy: Jutsu do Harém: Super",
+   "cn_name": "超级色诱·后宫术·极",
+   "pt_desc": "Antes da primeira ação de cada rodada, dissipa o <font color=\"#4dc831\">status positivo</font> e o <font color=\"#4dc831\">Escudo</font> de 2 inimigos masculinos e causa <font color=\"#4dc831\">Cegueira</font> e <font color=\"#4dc831\">Fraqueza</font>.",
+   "cn_desc": "每回合首次使用<font color=\"#4dc831\">奥义</font>类技能后触发，对随机<font color=\"#4dc831\">2</font>名男性忍者<font color=\"#4dc831\">压制不良状态免疫</font>并造成<font color=\"#4dc831\">虚弱</font>，自身在回合内无法被施加<font color=\"#4dc831\">压制不良状态免疫</font>。"
+  },
+  {
+   "id": "50000335",
+   "pt_name": "Ajuste de Chakra: Super",
+   "cn_name": "查克拉协调·极",
+   "pt_desc": "Quando está em combate e os outros ninjas de sua equipe recuperam Chakra, estes também recuperam <font color=\"#4dc831\">15%</font> de Vida. Quando você morre, revive após sua equipe lançar 2 <font color=\"#4dc831\">Esotéricas</font>, com <font color=\"#4dc831\">40%</font> de Vida.",
+   "cn_desc": "此忍者存活，己方小队<font color=\"#4dc831\">忍者</font>回复查克拉时，为其自身（恢复查克拉的忍者）恢复<font color=\"#4dc831\">15%</font>生命。此忍者战败时，小队忍者释放2次<font color=\"#4dc831\">奥义</font>此忍者将复活，拥有<font color=\"#4dc831\">40%</font>的血量。"
+  },
+  {
+   "id": "50000404",
+   "pt_name": "Ventania: Flash",
+   "cn_name": "疾风·一闪",
+   "pt_desc": "Ataca o inimigo à frente causando <font color=\"#4dc831\">Combo de 4</font>, e com grande chance de causar <font color=\"#4dc831\">Queda</font> e <font color=\"#4dc831\">Crítico</font>.",
+   "cn_desc": "攻击正面敌人并造成<font color=\"#4dc831\">4连击</font>，大概率造成<font color=\"#4dc831\">倒地</font>和<font color=\"#4dc831\">暴击</font>。"
+  },
+  {
+   "id": "50000405",
+   "pt_name": "Ventania: Flash",
+   "cn_name": "疾风·一闪",
+   "pt_desc": "Ataca o inimigo à frente causando <font color=\"#4dc831\">Combo de 4</font>, e com grande chance de causar <font color=\"#4dc831\">Queda</font> e <font color=\"#4dc831\">Crítico</font>.",
+   "cn_desc": "攻击正面敌人并造成<font color=\"#4dc831\">4连击</font>，大概率造成<font color=\"#4dc831\">倒地</font>和<font color=\"#4dc831\">暴击</font>。"
+  },
+  {
+   "id": "50000406",
+   "pt_name": "Ventania: Flash",
+   "cn_name": "疾风·一闪",
+   "pt_desc": "Ataca o inimigo à frente causando <font color=\"#4dc831\">Combo de 4</font>, e com grande chance de causar <font color=\"#4dc831\">Queda</font> e <font color=\"#4dc831\">Crítico</font>.",
+   "cn_desc": "攻击正面敌人并造成<font color=\"#4dc831\">4连击</font>，大概率造成<font color=\"#4dc831\">倒地</font>和<font color=\"#4dc831\">暴击</font>。"
+  },
+  {
+   "id": "50000407",
+   "pt_name": "Lâmina Assassina da Ventania",
+   "cn_name": "疾风暗杀剑",
+   "pt_desc": "Ataca o inimigo com menos Vida e causa <font color=\"#4dc831\">Combo de 4</font>, com grande chance de causar <font color=\"#4dc831\">Voo</font> e ignorando parte da Resistência e Defesa.",
+   "cn_desc": "攻击生命最低的敌人并造成<font color=\"#4dc831\">4连击</font>，一定概率造成<font color=\"#4dc831\">大浮空</font>，此技能无视一定抗性与防御。"
+  },
+  {
+   "id": "50000408",
+   "pt_name": "Lâmina Assassina da Ventania",
+   "cn_name": "疾风暗杀剑",
+   "pt_desc": "Ataca o inimigo com menos Vida e causa <font color=\"#4dc831\">Combo de 4</font>, com grande chance de causar <font color=\"#4dc831\">Voo</font> e ignorando parte da Resistência e Defesa.",
+   "cn_desc": "攻击生命最低的敌人并造成<font color=\"#4dc831\">4连击</font>，一定概率造成<font color=\"#4dc831\">大浮空</font>，此技能无视一定抗性与防御。"
+  },
+  {
+   "id": "50000409",
+   "pt_name": "Lâmina Assassina da Ventania",
+   "cn_name": "疾风暗杀剑",
+   "pt_desc": "Ataca o inimigo com menos Vida e causa <font color=\"#4dc831\">Combo de 4</font>, com grande chance de causar <font color=\"#4dc831\">Voo</font> e ignorando parte da Resistência e Defesa.",
+   "cn_desc": "攻击生命最低的敌人并造成<font color=\"#4dc831\">4连击</font>，一定概率造成<font color=\"#4dc831\">大浮空</font>，此技能无视一定抗性与防御。"
+  },
+  {
+   "id": "50000410",
+   "pt_name": "Corte da Ventania",
+   "cn_name": "疾风斩",
+   "pt_desc": "Causa dano de Vento e <font color=\"#4dc831\">Selamento</font> ao alvo e dispersa todos os seus <font color=\"#4dc831\">Escudos</font> e <font color=\"#4dc831\">Status positivos</font>. Quando o alvo é selecionado é um aliado, esta habilidade não tem Resfriamento, e causa um Pouco de Dano <font color=\"#4dc831\">Na Certa</font>, remove o status de <font color=\"#4dc831\">Paralisia</font> do alvo, além de aumentar o seu <font color=\"#4dc831\">Crítico</font> em <font color=\"#4dc831\">10%</font> (pode acumular).",
+   "cn_desc": "对选定敌人造成风属性伤害，驱散其全部<font color=\"#4dc831\">护盾</font>和<font color=\"#4dc831\">时效增益</font>并附带<font color=\"#4dc831\">封穴</font>。当选定目标为己方时此技能无冷却，将造成<font color=\"#4dc831\">必中</font>少量伤害且取消目标<font color=\"#4dc831\">麻痹</font>状态，并使其<font color=\"#4dc831\">暴击</font>提升<font color=\"#4dc831\">10%</font>（可叠加）。"
+  },
+  {
+   "id": "50000411",
+   "pt_name": "Arte Ninja: Ataque Relâmpago Tornado",
+   "cn_name": "忍法·旋风雷击",
+   "pt_desc": "Causa dano que ignora <font color=\"#4dc831\">Escudo</font> a pelo menos 7 inimigos e <font color=\"#4dc831\">Paralisia</font> por 1 rodada. Causa <font color=\"#4dc831\">Queda</font> ao inimigo selecionado. Quando o Chakra do adversário é 0, o alvo selecionado aumenta o <font color=\"#4dc831\">Resfriamento da Esotérica</font> em 1 rodada.",
+   "cn_desc": "对敌方阵营至多7体造成<font color=\"#4dc831\">无视护盾</font>的伤害，并附带1回合的<font color=\"#4dc831\">麻痹</font>。选定敌人附带<font color=\"#4dc831\">倒地</font>。当对方查克拉为0时，选定目标额外增加1回合<font color=\"#4dc831\">奥义冷却</font>。"
+  },
+  {
+   "id": "50000414",
+   "pt_name": "Jutsu de Infiltração Anbu: Super",
+   "cn_name": "暗部奇袭战术·极",
+   "pt_desc": "Quando o personagem está em combate, seus companheiros têm o Ataque aumentado em 25% e ao realizar um ataque Taijutsu eles curam 30% de Vida. Além disse, obtém a marca Anbu.",
+   "cn_desc": "主角在存活时，己方阵营攻击提升25%，且己方阵营<font color=\"#4dc831\">忍者</font>及<font color=\"#4dc831\">非忍者</font>体术攻击时以30%的比率医疗自己。此外，黑夜之刃获得暗部标签。"
+  },
+  {
+   "id": "50000416",
+   "pt_name": "Fortalecimento de Vento e Relâmpago",
+   "cn_name": "风雷强化",
+   "pt_desc": "O Ninjutsu e Ataque de até 3 ninjas de Vento e Relâmpago do grupo aumentam em 40% por 5 rodadas.",
+   "cn_desc": "本队至多3体风、雷属性忍者的忍术与攻击提升40%，持续5回合。"
+  },
+  {
+   "id": "50000423",
+   "pt_name": "Jutsu Ataque de Clones: Super",
+   "cn_name": "分身同击战术·极",
+   "pt_desc": "Aciona antes de lançar a Esotérica; invoca 1 clone de Relâmpago com <font color=\"#4dc831\">45%</font> de sua Vida, e este pode usar <font color=\"#4dc831\">Concentração</font> com facilidade de Recuperar 40 de <font color=\"#4dc831\">Chakra</font> como Ataque Comum e diminui o resfriamento do personagem principal em 2.",
+   "cn_desc": "释放奥义前触发，召唤1体继承本体<font color=\"#4dc831\">45%</font>生命的雷分身，其可以使用更易恢复40点<font color=\"#4dc831\">查克拉</font>的的<font color=\"#4dc831\">凝神</font>进行普攻，并使主角奥义冷却减2。"
+  },
+  {
+   "id": "50000437",
+   "pt_name": "Lâmina Assassina da Ventania",
+   "cn_name": "疾风暗杀剑",
+   "pt_desc": "Ataca o inimigo com menos Vida e causa <font color=\"#4dc831\">Combo de 4</font>, com grande chance de causar <font color=\"#4dc831\">Voo</font> e ignorando parte da Resistência e Defesa.",
+   "cn_desc": "攻击生命最低的敌人并造成<font color=\"#4dc831\">4连击</font>，大概率造成<font color=\"#4dc831\">大浮空</font>，此技能无视一定抗性与防御。"
+  },
+  {
+   "id": "50000438",
+   "pt_name": "Lâmina Assassina da Ventania",
+   "cn_name": "疾风暗杀剑",
+   "pt_desc": "Ataca o inimigo com menos Vida e causa <font color=\"#4dc831\">Combo de 4</font>, com grande chance de causar <font color=\"#4dc831\">Voo</font> e ignorando parte da Resistência e Defesa.",
+   "cn_desc": "攻击生命最低的敌人并造成<font color=\"#4dc831\">4连击</font>，大概率造成<font color=\"#4dc831\">大浮空</font>，此技能无视一定抗性与防御。"
+  },
+  {
+   "id": "50000439",
+   "pt_name": "Lâmina Assassina da Ventania",
+   "cn_name": "疾风暗杀剑",
+   "pt_desc": "Ataca o inimigo com menos Vida e causa <font color=\"#4dc831\">Combo de 4</font>, com grande chance de causar <font color=\"#4dc831\">Voo</font> e ignorando parte da Resistência e Defesa.",
+   "cn_desc": "攻击生命最低的敌人并造成<font color=\"#4dc831\">4连击</font>，大概率造成<font color=\"#4dc831\">大浮空</font>，此技能无视一定抗性与防御。"
+  },
+  {
+   "id": "50000502",
+   "pt_name": "Maré Poderosa",
+   "cn_name": "水涌潮流",
+   "pt_desc": "Causa dano de Água em até 9 inimigos, além de <font color=\"#4dc831\">Queda</font> e <font color=\"#4dc831\">Lentidão</font> ao inimigo escolhido e um <font color=\"#4dc831\">Escudo</font> de 30% de sua Resistência à sua equipe.",
+   "cn_desc": "对敌方阵营至多9体造成水属性伤害，选定目标附带<font color=\"#4dc831\">倒地</font>和<font color=\"#4dc831\">减速</font>，之后为己方全小队施加一个基于自身30%基础抗性的<font color=\"#4dc831\">护盾</font>。"
+  },
+  {
+   "id": "50000503",
+   "pt_name": "Redemoinho do Dragão da Água",
+   "cn_name": "水龙卷",
+   "pt_desc": "Causa dano de Vento ao inimigo escolhido, <font color=\"#4dc831\">Interrupção</font> e <font color=\"#4dc831\">Lentidão</font> por 1 rodada, caso o personagem principal tenha um Escudo o resfriamento diminui em 1.",
+   "cn_desc": "对选定敌人造成水属性伤害，并附带<font color=\"#4dc831\">打断</font>和持续1回合的<font color=\"#4dc831\">减速</font>，当主角身上存在<font color=\"#4dc831\">护盾</font>时，减少1回合<font color=\"#4dc831\">奥义冷却</font>。"
+  },
+  {
+   "id": "50000508",
+   "pt_name": "Estilo Terra: Técnica de Endurecimento: Super",
+   "cn_name": "土遁·硬化术·极",
+   "pt_desc": "Um escudo de 15% de sua Resistência é lançado sobre os 2 companheiros com menor Vida, com chance de ser de 25%.",
+   "cn_desc": "为己方小队生命最低<font color=\"#4dc831\">2</font>体目标施加一个基于自身<font color=\"#4dc831\">15%</font>基础<font color=\"#4dc831\">抗性</font>的<font color=\"#4dc831\">护盾</font>并降低每个目标<font color=\"#4dc831\">10</font>点查克拉消耗（至多<font color=\"#4dc831\">10</font>层），一定概率护盾量提升至<font color=\"#4dc831\">25%</font>，降低<font color=\"#4dc831\">20</font>点查克拉消耗（至多<font color=\"#4dc831\">5</font>层）。"
+  },
+  {
+   "id": "50000509",
+   "pt_name": "Estilo Terra: Técnica de Endurecimento: Super",
+   "cn_name": "土遁·硬化术·极",
+   "pt_desc": "Um escudo de 15% de sua Resistência é lançado sobre os 2 companheiros com menor Vida, com chance de ser de 25%.",
+   "cn_desc": "为己方小队生命最低<font color=\"#4dc831\">2</font>体目标施加一个基于自身<font color=\"#4dc831\">15%</font>基础<font color=\"#4dc831\">抗性</font>的<font color=\"#4dc831\">护盾</font>并降低每个目标<font color=\"#4dc831\">10</font>点查克拉消耗（至多<font color=\"#4dc831\">10</font>层），一定概率护盾量提升至<font color=\"#4dc831\">25%</font>，降低<font color=\"#4dc831\">20</font>点查克拉消耗（至多<font color=\"#4dc831\">5</font>层）。"
+  },
+  {
+   "id": "50000510",
+   "pt_name": "Estilo Terra: Técnica de Endurecimento: Super",
+   "cn_name": "土遁·硬化术·极",
+   "pt_desc": "Um escudo de 15% de sua Resistência é lançado sobre os 2 companheiros com menor Vida, com chance de ser de 25%.",
+   "cn_desc": "为己方小队生命最低<font color=\"#4dc831\">2</font>体目标施加一个基于自身<font color=\"#4dc831\">15%</font>基础<font color=\"#4dc831\">抗性</font>的<font color=\"#4dc831\">护盾</font>并降低每个目标<font color=\"#4dc831\">10</font>点查克拉消耗（至多<font color=\"#4dc831\">10</font>层），一定概率护盾量提升至<font color=\"#4dc831\">25%</font>，降低<font color=\"#4dc831\">20</font>点查克拉消耗（至多<font color=\"#4dc831\">5</font>层）。"
+  },
+  {
+   "id": "50000511",
+   "pt_name": "Furacão da Folha: Super",
+   "cn_name": "木叶旋风·极",
+   "pt_desc": "Ataca até 3 inimigos da coluna da frente, com grande chance de causar <font color=\"#4dc831\">Repelimento</font>.",
+   "cn_desc": "攻击最前排至多3体，大概率造成<font color=\"#4dc831\">击退</font>。"
+  },
+  {
+   "id": "50000512",
+   "pt_name": "Furacão da Folha: Super",
+   "cn_name": "木叶旋风·极",
+   "pt_desc": "Ataca até 3 inimigos da coluna da frente, com grande chance de causar <font color=\"#4dc831\">Repelimento</font>.",
+   "cn_desc": "攻击最前排至多3体，大概率造成<font color=\"#4dc831\">击退</font>。"
+  },
+  {
+   "id": "50000513",
+   "pt_name": "Furacão da Folha: Super",
+   "cn_name": "木叶旋风·极",
+   "pt_desc": "Ataca até 3 inimigos da coluna da frente, com grande chance de causar <font color=\"#4dc831\">Repelimento</font>.",
+   "cn_desc": "攻击最前排至多3体，大概率造成<font color=\"#4dc831\">击退</font>。"
+  },
+  {
+   "id": "50000516",
+   "pt_name": "Fortalecimento de Água e Terra",
+   "cn_name": "水土强化",
+   "pt_desc": "O Ninjutsu e Ataque de até 3 ninjas de Água e Terra do grupo aumentam em 40% por 5 rodadas.",
+   "cn_desc": "本队至多3体水、土属性忍者的忍术与攻击提升40%，持续5回合。"
+  },
+  {
+   "id": "50000524",
+   "pt_name": "Fraqueza: Super",
+   "cn_name": "底力·极",
+   "pt_desc": "Ao receber dano, aumenta sua <font color=\"#4dc831\">Defesa</font> em <font color=\"#4dc831\">7%</font> e recupera <font color=\"#4dc831\">1%</font> de sua Vida máxima. A partir do turno após a derrota, ressuscita no segundo turno com <font color=\"#4dc831\">40%</font> de Vida e reativa a habilidade de entrada.",
+   "cn_desc": "受到伤害时，成长自身<font color=\"#4dc831\">7%</font>的<font color=\"#4dc831\">防御</font>，并恢复最大生命上限<font color=\"#4dc831\">1%</font>的生命。从战败的回合开始，第二回合开始时复活，拥有<font color=\"#4dc831\">40%</font>的血量，并重新释放进场技。"
+  },
+  {
+   "id": "50000535",
+   "pt_name": "Aprendizado da Defesa: Super",
+   "cn_name": "防御心得·极",
+   "pt_desc": "Enquanto estiver em combate, aumenta a <font color=\"#4dc831\">Defesa</font> e <font color=\"#4dc831\">Resistência</font> de ninjas de <font color=\"#4dc831\">Terra</font> em sua equipe em <font color=\"#4dc831\">25%</font>.",
+   "cn_desc": "此忍者存活时，提升己方小队<font color=\"#4dc831\">土</font>属性忍者<font color=\"#4dc831\">25%</font>的<font color=\"#4dc831\">防御</font>及<font color=\"#4dc831\">抗性</font>。"
+  },
+  {
+   "id": "50001210",
+   "pt_name": "Rocha Explosiva",
+   "cn_name": "爆岩阵",
+   "pt_desc": "Causa dano de Fogo, <font color=\"#4dc831\">Interrupção</font> e <font color=\"#4dc831\">Chamas</font> a 2 inimigos, além de causar <font color=\"#4dc831\">Interrupção</font> e fazer com que o <font color=\"#4dc831\">Resfriamento da Esotérica</font> do alvo aumente em 1 rodada.",
+   "cn_desc": "对两个敌人造成<font color=\"#4dc831\">土</font>属性伤害，并附带<font color=\"#4dc831\">打断</font>并增加目标<font color=\"#4dc831\">奥义冷却</font>1回合。"
+  },
+  {
+   "id": "50001212",
+   "pt_name": "Pistola Quebra-Rocha",
+   "cn_name": "裂岩枪",
+   "pt_desc": "Causa dano de Terra a até 7 inimigos e <font color=\"#4dc831\">Voo</font> ao inimigo escolhido até o fim da rodada. Caso haja Clones de Nevoeiro em combate o Resfriamento cai em 1.",
+   "cn_desc": "对敌方阵营至多7体造成土属性伤害，选定敌人附带<font color=\"#4dc831\">大浮空</font>，自身大概率闪避下次攻击。替换用。"
+  },
+  {
+   "id": "50001220",
+   "pt_name": "Fortalecimento de Fogo e Terra",
+   "cn_name": "火土强化",
+   "pt_desc": "O Ninjutsu e Ataque de até 3 ninjas de Fogo e Terra do grupo aumentam em 40% por 5 rodadas.",
+   "cn_desc": "本队至多3体火、土属性忍者的忍术与攻击提升40%，持续5回合。"
+  },
+  {
+   "id": "50001225",
+   "pt_name": "Jutsu de Ilusão de Penas: Super",
+   "cn_name": "涅槃精舍术·极",
+   "pt_desc": "Ataca o inimigo à frente e causa <font color=\"#4dc831\">Sono</font>, com chance de acertar mais outro inimigo. Esta habilidade não pode ser impedida por habilidades de proteção do inimigo.",
+   "cn_desc": "攻击正面敌人并造成<font color=\"#4dc831\">睡眠</font>，一定概率随机再对1名敌人造成<font color=\"#4dc831\">睡眠</font>。此技能不受对方守护技能影响。"
+  },
+  {
+   "id": "50001226",
+   "pt_name": "Jutsu de Ilusão de Penas: Super",
+   "cn_name": "涅槃精舍术·极",
+   "pt_desc": "Ataca o inimigo à frente e causa <font color=\"#4dc831\">Sono</font>, com chance de acertar mais outro inimigo. Esta habilidade não pode ser impedida por habilidades de proteção do inimigo.",
+   "cn_desc": "攻击正面敌人并造成<font color=\"#4dc831\">睡眠</font>，一定概率随机再对1名敌人造成<font color=\"#4dc831\">睡眠</font>。此技能不受对方守护技能影响。"
+  },
+  {
+   "id": "50001227",
+   "pt_name": "Jutsu de Ilusão de Penas: Super",
+   "cn_name": "涅槃精舍术·极",
+   "pt_desc": "Ataca o inimigo à frente e causa <font color=\"#4dc831\">Sono</font>, com chance de acertar mais outro inimigo. Esta habilidade não pode ser impedida por habilidades de proteção do inimigo.",
+   "cn_desc": "攻击正面敌人并造成<font color=\"#4dc831\">睡眠</font>，一定概率随机再对1名敌人造成<font color=\"#4dc831\">睡眠</font>。此技能不受对方守护技能影响。"
+  }
+ ]
+}

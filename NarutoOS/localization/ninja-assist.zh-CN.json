@@ -1,0 +1,456 @@
+{
+  "id": "naruto-ninja-assist-zh-CN-v1",
+  "ninjaInfo": {
+    "class": "NinjaInfoCFG",
+    "rows": {
+      "11000251": {
+        "name": {
+          "source": "Sasuke",
+          "translation": "佐助"
+        },
+        "title": {
+          "source": "[Susano’o]",
+          "translation": "[须佐能乎]"
+        }
+      },
+      "11000611": {
+        "name": {
+          "source": "Tenten",
+          "translation": "天天"
+        }
+      },
+      "11000841": {
+        "name": {
+          "source": "Shikamaru",
+          "translation": "鹿丸"
+        },
+        "title": {
+          "source": "[Grande Guerra Ninja]",
+          "translation": "[忍界大战]"
+        }
+      },
+      "11001331": {
+        "name": {
+          "source": "Gaara",
+          "translation": "我爱罗"
+        },
+        "title": {
+          "source": "[Quinto Kazekage]",
+          "translation": "[五代风影]"
+        }
+      },
+      "11001451": {
+        "name": {
+          "source": "Temari",
+          "translation": "手鞠"
+        },
+        "title": {
+          "source": "[Cúpula dos Cinco Kage]",
+          "translation": "[五影会谈]"
+        }
+      },
+      "11001851": {
+        "name": {
+          "source": "Haku",
+          "translation": "白"
+        },
+        "title": {
+          "source": "[Ronin]",
+          "translation": "[漂泊武士]"
+        }
+      },
+      "11002001": {
+        "name": {
+          "source": "Kabuto",
+          "translation": "兜"
+        }
+      },
+      "11002101": {
+        "name": {
+          "source": "Orochimaru",
+          "translation": "大蛇丸"
+        },
+        "title": {
+          "source": "[Ninja Patife da Aldeia da Folha]",
+          "translation": "[木叶的叛忍]"
+        }
+      },
+      "11002301": {
+        "name": {
+          "source": "Tsunade",
+          "translation": "纲手"
+        },
+        "title": {
+          "source": "[Quinta Hokage]",
+          "translation": "[五代火影]"
+        }
+      },
+      "11002601": {
+        "name": {
+          "source": "Kimimaro",
+          "translation": "君麻吕"
+        }
+      },
+      "11002701": {
+        "name": {
+          "source": "Jirobo",
+          "translation": "次郎坊"
+        }
+      },
+      "11003201": {
+        "name": {
+          "source": "Kisame Hoshigaki",
+          "translation": "干柿鬼鲛"
+        }
+      },
+      "11004201": {
+        "name": {
+          "source": "Shizune",
+          "translation": "静音"
+        }
+      },
+      "11004301": {
+        "name": {
+          "source": "Baki",
+          "translation": "马基"
+        }
+      },
+      "11004401": {
+        "name": {
+          "source": "Minato Namikaze",
+          "translation": "波风水门"
+        },
+        "title": {
+          "source": "[Quarto Hokage]",
+          "translation": "[四代火影]"
+        }
+      },
+      "11004901": {
+        "name": {
+          "source": "Deidara",
+          "translation": "迪达拉"
+        }
+      },
+      "11005011": {
+        "name": {
+          "source": "Chiyo",
+          "translation": "千代婆婆"
+        },
+        "title": {
+          "source": "[Marionetes de Chikamatsu]",
+          "translation": "[近松十人卫]"
+        }
+      },
+      "11005131": {
+        "name": {
+          "source": "Karin",
+          "translation": "香燐"
+        },
+        "title": {
+          "source": "[Time Taka]",
+          "translation": "[鹰小队]"
+        }
+      },
+      "11005211": {
+        "name": {
+          "source": "Suigetsu",
+          "translation": "水月"
+        },
+        "title": {
+          "source": "[Time Taka]",
+          "translation": "[鹰小队]"
+        }
+      },
+      "11005311": {
+        "name": {
+          "source": "Jugo",
+          "translation": "重吾"
+        },
+        "title": {
+          "source": "[Time Taka]",
+          "translation": "[鹰小队]"
+        }
+      },
+      "11005501": {
+        "name": {
+          "source": "Hidan",
+          "translation": "飞段"
+        }
+      },
+      "11005701": {
+        "name": {
+          "source": "Yamato",
+          "translation": "大和"
+        }
+      },
+      "11006401": {
+        "name": {
+          "source": "Pain: Caminho Preta",
+          "translation": "佩恩·饿鬼道"
+        }
+      },
+      "11006801": {
+        "name": {
+          "source": "Hanzo da Salamandra",
+          "translation": "山椒鱼半藏"
+        }
+      },
+      "11006901": {
+        "name": {
+          "source": "Mei Terumi",
+          "translation": "照美冥"
+        },
+        "title": {
+          "source": "[Quinto Mizukage]",
+          "translation": "[五代水影]"
+        }
+      },
+      "11006921": {
+        "name": {
+          "source": "Mei Terumi",
+          "translation": "照美冥"
+        },
+        "title": {
+          "source": "[Traje de Banho]",
+          "translation": "[泳装]"
+        }
+      },
+      "11007001": {
+        "name": {
+          "source": "Ay",
+          "translation": "艾"
+        },
+        "title": {
+          "source": "[Quarto Raikage]",
+          "translation": "[四代雷影]"
+        }
+      },
+      "11007101": {
+        "name": {
+          "source": "Ohnoki",
+          "translation": "大野木"
+        },
+        "title": {
+          "source": "[Terceiro Tsuchikage]",
+          "translation": "[三代土影]"
+        }
+      },
+      "11007201": {
+        "name": {
+          "source": "Danzou Shimura",
+          "translation": "志村团藏"
+        }
+      },
+      "11007501": {
+        "name": {
+          "source": "Killer B",
+          "translation": "奇拉比"
+        },
+        "title": {
+          "source": "[Com Sete Espadas]",
+          "translation": "[七刀流]"
+        }
+      },
+      "11007701": {
+        "name": {
+          "source": "Fuu Yamanaka",
+          "translation": "山中风"
+        }
+      },
+      "11007801": {
+        "name": {
+          "source": "Torune Aburame",
+          "translation": "油女取根"
+        }
+      },
+      "11008201": {
+        "name": {
+          "source": "Akatsuchi",
+          "translation": "赤土"
+        }
+      },
+      "11008401": {
+        "name": {
+          "source": "Mabui",
+          "translation": "麻布依"
+        }
+      },
+      "11008511": {
+        "name": {
+          "source": "Itachi Uchiha",
+          "translation": "宇智波鼬"
+        },
+        "title": {
+          "source": "[Anbu]",
+          "translation": "[暗部]"
+        }
+      },
+      "11008701": {
+        "name": {
+          "source": "Shikaku Nara",
+          "translation": "奈良鹿久"
+        }
+      },
+      "11008801": {
+        "name": {
+          "source": "Inoichi Yamanaka",
+          "translation": "山中亥一"
+        }
+      },
+      "11009701": {
+        "name": {
+          "source": "Gengetsu Hozuki",
+          "translation": "鬼灯幻月"
+        },
+        "title": {
+          "source": "[Segundo Mizukage - Reanimação]",
+          "translation": "[二代水影·秽土转生]"
+        }
+      },
+      "11009901": {
+        "name": {
+          "source": "Mu",
+          "translation": "无"
+        },
+        "title": {
+          "source": "[Segundo Tsuchikage - Reanimação]",
+          "translation": "[二代土影·秽土转生]"
+        }
+      },
+      "11010301": {
+        "name": {
+          "source": "A",
+          "translation": "艾"
+        },
+        "title": {
+          "source": "[Terceiro Raikage - Reanimação]",
+          "translation": "[三代雷影·秽土转生]"
+        }
+      },
+      "11010501": {
+        "name": {
+          "source": "Rasa",
+          "translation": "罗砂"
+        },
+        "title": {
+          "source": "[Quarto Kazekage- Reanimação]",
+          "translation": "[四代风影·秽土转生]"
+        }
+      },
+      "11010621": {
+        "name": {
+          "source": "Kushina Uzumaki",
+          "translation": "漩涡玖辛奈"
+        },
+        "title": {
+          "source": "[Pimenta Vermelha]",
+          "translation": "[血红辣椒]"
+        }
+      },
+      "11011011": {
+        "name": {
+          "source": "Fuguki Suikazan",
+          "translation": "西瓜山河豚鬼"
+        },
+        "title": {
+          "source": "[Samehada]",
+          "translation": "[鲛肌]"
+        }
+      },
+      "11011101": {
+        "name": {
+          "source": "Jinin Akebino",
+          "translation": "通草野饵人"
+        },
+        "title": {
+          "source": "[Reanimação]",
+          "translation": "[秽土转生]"
+        }
+      },
+      "11011201": {
+        "name": {
+          "source": "Jinpachi Munashi",
+          "translation": "无梨甚八"
+        },
+        "title": {
+          "source": "[Reanimação]",
+          "translation": "[秽土转生]"
+        }
+      },
+      "11011501": {
+        "name": {
+          "source": "Ameyuri Ringo",
+          "translation": "林檎雨由利"
+        },
+        "title": {
+          "source": "[Reanimação]",
+          "translation": "[秽土转生]"
+        }
+      },
+      "11011801": {
+        "name": {
+          "source": "Shisui Uchiha",
+          "translation": "宇智波止水"
+        },
+        "title": {
+          "source": "[Kotoamatsukami]",
+          "translation": "[别天神]"
+        }
+      },
+      "11012201": {
+        "name": {
+          "source": "Chiriku",
+          "translation": "地陆"
+        }
+      },
+      "11012401": {
+        "name": {
+          "source": "Might Duy",
+          "translation": "迈特戴"
+        }
+      },
+      "11012901": {
+        "name": {
+          "source": "Izuna Uchiha",
+          "translation": "宇智波泉奈"
+        }
+      },
+      "11013601": {
+        "name": {
+          "source": "Hiashi Hyuga",
+          "translation": "日向日足"
+        }
+      },
+      "11013801": {
+        "name": {
+          "source": "Kotetsu Hagane",
+          "translation": "钢子铁"
+        }
+      },
+      "11013901": {
+        "name": {
+          "source": "Yuugao Uzuki",
+          "translation": "卯月夕颜"
+        }
+      },
+      "11014311": {
+        "name": {
+          "source": "Rin Nohara",
+          "translation": "野原琳"
+        },
+        "title": {
+          "source": "[Traje de Banho]",
+          "translation": "[泳装]"
+        }
+      }
+    }
+  },
+  "skills": {
+    "class": "SkillCFG",
+    "rows": {}
+  },
+  "skillDetails": {
+    "class": "SkillKeyDescCFG",
+    "rows": {}
+  }
+}

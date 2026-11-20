@@ -1,0 +1,209 @@
+{
+  "id": "naruto-ninja-target-14-zh-CN-v1",
+  "rootId": "11012181",
+  "ninjaInfo": {
+    "class": "NinjaInfoCFG",
+    "rows": {
+      "11012181": {
+        "name": {
+          "source": "Naruto",
+          "translation": "漩涡鸣人"
+        },
+        "title": {
+          "source": "[Sasuke Shinden]",
+          "translation": "【佐助真传】"
+        }
+      }
+    }
+  },
+  "skills": {
+    "class": "SkillCFG",
+    "rows": {
+      "21012181": {
+        "name": {
+          "source": "Ataque Taijutsu",
+          "translation": "体术攻击"
+        },
+        "desc": {
+          "source": "Ataca inimigos aleatórios, com chance de causar <font color=\"#4dc831\">Repelimento</font> e <font color=\"#4dc831\">Supressão de Imunidade a Perseguição</font>. Esta habilidade tem bônus extra de <font color=\"#4dc831\">Crítico</font>.",
+          "translation": "攻击随机敌人，有概率造成击退和追打免疫压制。本技能拥有额外暴击加成。"
+        }
+      },
+      "21012182": {
+        "name": {
+          "source": "Ataque Taijutsu",
+          "translation": "体术攻击"
+        },
+        "desc": {
+          "source": "Ataca inimigos aleatórios, com chance de causar <font color=\"#4dc831\">Repelimento</font> e <font color=\"#4dc831\">Supressão de Imunidade a Perseguição</font>. Esta habilidade tem bônus extra de <font color=\"#4dc831\">Crítico</font>.",
+          "translation": "攻击随机敌人，有概率造成击退和追打免疫压制。本技能拥有额外暴击加成。"
+        }
+      },
+      "21012183": {
+        "name": {
+          "source": "Ataque Taijutsu",
+          "translation": "体术攻击"
+        },
+        "desc": {
+          "source": "Ataca inimigos aleatórios, com chance de causar <font color=\"#4dc831\">Repelimento</font> e <font color=\"#4dc831\">Supressão de Imunidade a Perseguição</font>. Esta habilidade tem bônus extra de <font color=\"#4dc831\">Crítico</font>.",
+          "translation": "攻击随机敌人，有概率造成击退和追打免疫压制。本技能拥有额外暴击加成。"
+        }
+      },
+      "21012184": {
+        "name": {
+          "source": "Grande Rasengan",
+          "translation": "大玉螺旋丸"
+        },
+        "desc": {
+          "source": "Ativado no início das rodadas pares, ataca inimigos a uma linha aleatória, causando dano que <font color=\"#4dc831\">sempre acerta</font> e <font color=\"#4dc831\">Supressão de Imunidade a Perseguição</font>, e aplicando <font color=\"#4dc831\">Interrupção</font> e <font color=\"#4dc831\">Repelimento</font> em 1 alvo aleatório.",
+          "translation": "偶数回合开始时触发，随机攻击敌方一横排，造成必定命中的伤害和追打免疫压制，并对1名随机目标造成打断和击退。"
+        }
+      },
+      "21012185": {
+        "name": {
+          "source": "Arte Eremita: Super Bijuu: Rasenshuriken",
+          "translation": "仙法·超尾兽螺旋手里剑"
+        },
+        "desc": {
+          "source": "<font color=\"#4dc831\">Lançado com combo de 30</font>, ataca 7 inimigos com <font color=\"#4dc831\">Combo de 3</font> e causa dano de <font color=\"#4dc831\">Vento</font>, <font color=\"#4dc831\">Relâmpago</font>. Causa <font color=\"#4dc831\">Interrupção</font> ao 1 inimigo aleatório e <font color=\"#4dc831\">Selamento</font> que não pode ser imunizado e dispersado. Esta habilidade <font color=\"#4dc831\">sempre acerta</font>, e os inimigos derrotados por esta habilidade não podem ser ressuscitados. Esta habilidade <font color=\"#4dc831\">sempre acerta</font> e a partir de <font color=\"#4dc831\">Shukaku</font>, concede sequencialmente diferentes efeitos de <font color=\"#4dc831\">Matatabi</font>, <font color=\"#4dc831\">Isobu</font>, <font color=\"#4dc831\">Son Goku</font>, <font color=\"#4dc831\">Kokuo</font>, <font color=\"#4dc831\">Saiken</font>, <font color=\"#4dc831\">Chomei</font>, <font color=\"#4dc831\">Gyuki</font> e <font color=\"#4dc831\">Kurama</font>.",
+          "translation": "连击达到30时触发，攻击7名敌人，造成3连击和风、雷属性伤害，对1名随机敌人造成打断和无法免疫或驱散的封穴。本技能必定命中，被击败的敌人无法复活。从守鹤开始，依次赋予又旅、矶抚、孙悟空、穆王、犀犬、重明、牛鬼和九喇嘛的不同效果。"
+        }
+      },
+      "21012186": {
+        "name": {
+          "source": "Jutsu Clone das Sombras",
+          "translation": "影分身之术"
+        },
+        "desc": {
+          "source": "Ao usar habilidades de <font color=\"#4dc831\">Perseguição</font>, Naruto ganha <font color=\"#4dc831\">20%</font> de <font color=\"#4dc831\">Ninjutsu</font>. A cada rodada, ganha 1 chance de uso de habilidades de <font color=\"#4dc831\">Perseguição</font> (até 6 vezes). No início do combate e após usar <font color=\"#4dc831\">Arte Eremita: Super Rasenrengan Gigante</font>, ativa a habilidade <font color=\"#4dc831\">Jutsu Clone das Sombras</font> (o que é ativado pela <font color=\"#4dc831\">Esotérica</font> é <font color=\"#4dc831\">Habilidade adicional</font>)",
+          "translation": "鸣人使用追打技能时，忍术提高20%。每回合获得1次额外追打机会，最多6次。战斗开始时及使用仙法·超大玉螺旋连丸后，发动影分身之术；由奥义触发时视为追加技能。"
+        }
+      },
+      "21012187": {
+        "name": {
+          "source": "Arte Eremita: Super Rasenrengan Gigante",
+          "translation": "仙法·超大玉螺旋连丸"
+        },
+        "desc": {
+          "source": "Ataca até 7 inimigos e causa dano de <font color=\"#4dc831\">Combo de 6</font> e <font color=\"#4dc831\">Interrupção</font>. Caso o alvo selecionado tenha mais de 1 <font color=\"#4dc831\">Ponto de Habilidade</font>, a habilidade <font color=\"#4dc831\">sempre acerta</font>, e causa adicionalmente <font color=\"#4dc831\">Queda</font> e <font color=\"#4dc831\">Ruptura</font> no alvo selecionado.",
+          "translation": "攻击最多7名敌人，造成6连击伤害和打断。若选定目标的技能点多于1点，本技能必定命中，并对选定目标额外造成倒地和破碎。"
+        }
+      },
+      "21012188": {
+        "name": {
+          "source": "Jutsu Clone das Sombras",
+          "translation": "影分身之术"
+        },
+        "desc": {
+          "source": "No início do combate, invoca 2 clones das sombras no campo e, ao usar habilidades, aumenta em <font color=\"#4dc831\">10%</font> o dano das habilidades de <font color=\"#4dc831\">Perseguição</font> (com aumento máximo de <font color=\"#4dc831\">200%</font>, o efeito dura até a derrota ou o fim do combate). O clone das sombras possui a habilidade <font color=\"#4dc831\">Grande Rasengan</font>. Enquanto os clones estiverem presentes, o corpo original ganha <font color=\"#4dc831\">Imunidade a Status negativos nv. 2</font> e reduz em 1 rodada o <font color=\"#4dc831\">Resfriamento da Esotérica</font> ao receber dano. Cada clone das sombras presente aumenta em <font color=\"#4dc831\">20%</font> o dano das habilidades de <font color=\"#4dc831\">Perseguição</font> do corpo original.",
+          "translation": "战斗开始时召唤2个影分身。使用技能时，追打技能伤害提高10%，最多200%，持续至被击败或战斗结束。影分身拥有大玉螺旋丸技能。影分身在场时，本体获得2级负面状态免疫，受到伤害时奥义冷却减少1回合。每个在场影分身使本体追打技能伤害提高20%。"
+        }
+      }
+    }
+  },
+  "skillDetails": {
+    "class": "SkillKeyDescCFG",
+    "rows": {
+      "444": {
+        "keys": {
+          "source": "Jutsu Clone das Sombras",
+          "translation": "影分身之术"
+        },
+        "desc": {
+          "source": "Invoca 2 clones das sombras no campo e, ao usar habilidades, aumenta em [10%] o dano das habilidades de [Perseguição] (com aumento máximo de [200%], o efeito dura até a derrota ou o fim da batalha). O clone das sombras possui a habilidade [Grande Rasengan]: ativa no início e no final de cada rodada, atacando uma linha horizontal aleatória de inimigos com dano que [sempre acerta] e aplicando [Supressão de Imunidade a Perseguição]. Enquanto os clones estiverem presentes, o corpo original ganha [Imunidade a Status negativos nv. 2] (imune a status negativos, e não pode ser afetado por [Supressão de Imunidade a Status negativos], exceto versões de nível mais alto de [Supressão de Imunidade a Status negativos]), reduz em 1 rodada o [Resfriamento da Esotérica] ao receber dano. Cada clone das sombras presente aumenta em [20%] o dano das habilidades de [Perseguição] do corpo original.",
+          "translation": "召唤2个影分身。使用技能时，[追打]技能伤害提高[10%]，最多[200%]，持续至被击败或战斗结束。影分身拥有[大玉螺旋丸]：每回合开始和结束时触发，随机攻击敌方一横排，造成[必定命中]的伤害和[追打免疫压制]。影分身在场时，本体获得[2级负面状态免疫]（免疫负面状态，且不受[负面状态免疫压制]影响，更高级的压制除外），受到伤害时[奥义冷却]减少1回合。每个在场影分身使本体[追打]技能伤害提高[20%]。"
+        }
+      },
+      "445": {
+        "keys": {
+          "source": "Shukaku",
+          "translation": "守鹤"
+        },
+        "desc": {
+          "source": "[Lançado com combo de 30], ataca 7 inimigos com [Combo de 3] e causa dano de [Vento], [Relâmpago]. Causa [Interrupção] ao 1 inimigo aleatório e [Selamento] que não pode ser imunizado e dispersado. Esta habilidade [sempre acerta], e os inimigos derrotados por esta habilidade não podem ser ressuscitados.",
+          "translation": "[连击达到30时触发]，攻击7名敌人，造成[3连击]和[风]、[雷]属性伤害，对1名随机敌人造成[打断]和无法免疫或驱散的[封穴]。本技能[必定命中]，被击败的敌人无法复活。"
+        }
+      },
+      "446": {
+        "keys": {
+          "source": "Matatabi",
+          "translation": "又旅"
+        },
+        "desc": {
+          "source": "[Lançado com combo de 30], ataca todos os inimigos com [Combo de 3] e causa dano de [Fogo]. Causa dano de [Chamas] que não podem ser imunizado e dispersado. Esta habilidade [sempre acerta].",
+          "translation": "[连击达到30时触发]，攻击敌方全体，造成[3连击]、[火]属性伤害和无法免疫或驱散的[烈焰]。本技能[必定命中]。"
+        }
+      },
+      "447": {
+        "keys": {
+          "source": "Isobu",
+          "translation": "矶抚"
+        },
+        "desc": {
+          "source": "[Lançado com combo de 30], ataca todos os inimigos com [Combo de 3] e causa dano de [Água] e dispersa [Escudo] e [status positivos] de todos. Esta habilidade [sempre acerta].",
+          "translation": "[连击达到30时触发]，攻击敌方全体，造成[3连击]和[水]属性伤害，并驱散所有目标的[护盾]和[增益状态]。本技能[必定命中]。"
+        }
+      },
+      "448": {
+        "keys": {
+          "source": "Son Goku",
+          "translation": "孙悟空"
+        },
+        "desc": {
+          "source": "[Lançado com combo de 30], ataca 7 inimigos com [Combo de 3] e causa dano de [Fogo], [Terra] e [Queimadura]. Esta habilidade [sempre acerta].",
+          "translation": "[连击达到30时触发]，攻击7名敌人，造成[3连击]、[火]和[土]属性伤害及[灼烧]。本技能[必定命中]。"
+        }
+      },
+      "449": {
+        "keys": {
+          "source": "Kokuo",
+          "translation": "穆王"
+        },
+        "desc": {
+          "source": "[Lançado com combo de 30], ataca 7 inimigos com [Combo de 3] e causa dano de [Água] e [Fogo]. Esta habilidade [sempre acerta] e tem bônus adicional de [Crítico].",
+          "translation": "[连击达到30时触发]，攻击7名敌人，造成[3连击]和[水]、[火]属性伤害。本技能[必定命中]，拥有额外[暴击]加成。"
+        }
+      },
+      "450": {
+        "keys": {
+          "source": "Saiken",
+          "translation": "犀犬"
+        },
+        "desc": {
+          "source": "[Lançado com combo de 30], ataca 7 inimigos com [Combo de 3], causando dano de [Terra] e [Água] aplicando [Dissolução]. Esta habilidade [sempre acerta].",
+          "translation": "[连击达到30时触发]，攻击7名敌人，造成[3连击]、[土]和[水]属性伤害，并施加[溶解]。本技能[必定命中]。"
+        }
+      },
+      "451": {
+        "keys": {
+          "source": "Chomei",
+          "translation": "重明"
+        },
+        "desc": {
+          "source": "[Lançado com combo de 30], ataca 7 inimigos com [Combo de 3] e [Cegueira] que não pode ser evitada ou dispersada. Esta habilidade [sempre acerta].",
+          "translation": "[连击达到30时触发]，攻击7名敌人，造成[3连击]和无法免疫或驱散的[目盲]。本技能[必定命中]。"
+        }
+      },
+      "452": {
+        "keys": {
+          "source": "Touro",
+          "translation": "牛鬼"
+        },
+        "desc": {
+          "source": "[Lançado com combo de 30], ataca 7 inimigos com [Combo de 3] e causa dano de [Água]. Causa [Interrupção] a 1 inimigo aleatório e [Mancha] que não pode ser imunizada ou dispersada. Esta habilidade [sempre acerta], os inimigos derrotados por esta habilidade não podem ser ressuscitados.",
+          "translation": "[连击达到30时触发]，攻击7名敌人，造成[3连击]和[水]属性伤害，对1名随机敌人造成[打断]和无法免疫或驱散的[墨迹]。本技能[必定命中]，被击败的敌人无法复活。"
+        }
+      },
+      "453": {
+        "keys": {
+          "source": "Kurama",
+          "translation": "九喇嘛"
+        },
+        "desc": {
+          "source": "[Lançado com combo de 30], ataca 7 inimigos com [Combo de 3] e [Interrupção]. Esta habilidade [sempre acerta] e ignora o [Escudo].",
+          "translation": "[连击达到30时触发]，攻击7名敌人，造成[3连击]和[打断]。本技能[必定命中]，无视[护盾]。"
+        }
+      }
+    }
+  }
+}

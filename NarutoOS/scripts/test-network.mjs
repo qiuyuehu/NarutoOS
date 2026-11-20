@@ -1,0 +1,12 @@
+import { build } from 'esbuild';
+import { spawnSync } from 'node:child_process';
+import { mkdirSync, mkdtempSync } from 'node:fs';
+import path from 'node:path';
+import electron from 'electron';
+mkdirSync('.test-artifacts', { recursive: true });
+await build({ entryPoints: ['src/main/game.ts'], outfile: 'dist/main/game.network-test.cjs', bundle: true, platform: 'node', target: 'node12', external: ['electron'] });
+const env = { ...process.env, NARUTO_NETWORK_TEST_PROFILE: mkdtempSync(path.resolve('.test-artifacts/network-profile-')) };
+delete env.ELECTRON_RUN_AS_NODE;
+const result = spawnSync(electron, ['tests/network-window.cjs'], { env, stdio: 'inherit', timeout: 40000, killSignal: 'SIGKILL' });
+if (result.status !== 0) console.error('Network fixture process failed', { status: result.status, signal: result.signal, error: result.error?.message });
+process.exitCode = result.status ?? 1;

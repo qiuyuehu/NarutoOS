@@ -1,0 +1,793 @@
+{
+  "resourceURL": "https://cdnnaruto-pt.oasgames.com/PT_NarutoAlpha9.33Build300/config/i18n/TranslatedKeyCFG.cfg",
+  "entries": {
+    "as_friend_2057b0664d379a10c4f687a17ce4a03c": {
+      "source": "Ver detalhes",
+      "translation": "详情"
+    },
+    "as_friend_e9d70f6d4b3e63d762bec9a8eb0eb76b": {
+      "source": "Ver detalhes",
+      "translation": "详情"
+    },
+    "as_friend_b504b3781de6529e5ce52003a953c064": {
+      "source": "Remover amigo",
+      "translation": "删除好友"
+    },
+    "as_friend_1a8127eaf3a16c6c200fd4ea99859d3d": {
+      "source": "Remover amigo",
+      "translation": "删除好友"
+    },
+    "as_friend_14119abc3fc12a91f8eacb8d464877fc": {
+      "source": "Tem a certeza de que deseja remover o amigo %1?",
+      "translation": "确定删除好友 %1 吗？"
+    },
+    "as_friend_8ef686f7b4c454cc08a92eeb226ec374": {
+      "source": "Enviar Mensagem Privada",
+      "translation": "发送私信"
+    },
+    "as_friend_3a7cc21ab942941a7c9a6788109cf02f": {
+      "source": "Enviar Mensagem Privada",
+      "translation": "发送私信"
+    },
+    "as_friend_d790d08dddadc96d375c84aeeb4650ce": {
+      "source": "Entrar no Grupo",
+      "translation": "加入队伍"
+    },
+    "as_friend_53904dee517893b8db2f19e4fee035a3": {
+      "source": "Entrar no Grupo",
+      "translation": "加入队伍"
+    },
+    "as_friend_f04c3eb5a7ab227fe81e509b07b6f4be": {
+      "source": "Convidar para grupo",
+      "translation": "邀请入队"
+    },
+    "as_friend_1021f33c33eacc051a2caef21866f67a": {
+      "source": "Convidar para grupo",
+      "translation": "邀请入队"
+    },
+    "as_friend_afa1864330b8f612913c001636226423": {
+      "source": "Oferecer presente",
+      "translation": "赠送礼物"
+    },
+    "as_friend_e5d6074308b750ff64d732607385b8ed": {
+      "source": "Oferecer presente",
+      "translation": "赠送礼物"
+    },
+    "as_friend_38737dbc1a6edef90f23a3681e344ca9": {
+      "source": "Seguir amigo",
+      "translation": "关注好友"
+    },
+    "as_friend_e573974a3695b0a063dcdee10f265773": {
+      "source": "Seguir amigo",
+      "translation": "关注好友"
+    },
+    "as_friend_203e024215870aa1011d70e15d935720": {
+      "source": "Não seguir",
+      "translation": "取消关注"
+    },
+    "as_friend_781cbb9c8fcc3acb1e4fc56929d1e62e": {
+      "source": "Não seguir",
+      "translation": "取消关注"
+    },
+    "as_friend_9e2e025e180b428908a82f09ab63c1f4": {
+      "source": "Bloqueios",
+      "translation": "黑名单"
+    },
+    "as_friend_3294839dc989c3abe12086d34567061c": {
+      "source": "Bloqueios",
+      "translation": "黑名单"
+    },
+    "as_friend_3a0e28eccfe4156895e1d3f3940e7002": {
+      "source": "Lista negra",
+      "translation": "黑名单"
+    },
+    "as_friend_2c2cd1cab7825d0bce66610cf45b7012": {
+      "source": "Nome do jogador a buscar",
+      "translation": "搜索玩家名"
+    },
+    "as_friend_895fb79b086142a64192e29bbe69d2b4": {
+      "source": "Insira nome do jogador",
+      "translation": "输入玩家名"
+    },
+    "as_friend_f2e8f78d60331e29809b302c0ffa79e9": {
+      "source": "Insira nome do jogador",
+      "translation": "输入玩家名"
+    },
+    "as_friend_e15cdfdaff5e8efad314d5e883225510": {
+      "source": "Insira nome do jogador",
+      "translation": "输入玩家名"
+    },
+    "as_friend_9c0ed88877b38520bb1dd857d2893583": {
+      "source": "Insira o nome do amigo a ser buscado",
+      "translation": "输入好友名搜索"
+    },
+    "as_friend_a8e4b3e13c66c9befd6108b6a7c415c5": {
+      "source": "Insira o nome do amigo a ser buscado",
+      "translation": "输入好友名搜索"
+    },
+    "as_friend_9d4c2d98c7fa787a294f6c8092231d90": {
+      "source": "Insira o nome do amigo a ser buscado",
+      "translation": "输入好友名搜索"
+    },
+    "as_friend_f1918083f419c650546deb45c7521589": {
+      "source": "Este jogador não está online, não pode ver os dados dele.",
+      "translation": "对方不在线，无法查看资料。"
+    },
+    "as_friend_a89cee38bdf4b49cd2615af0a3ab092f": {
+      "source": "Não há lista negra por enquanto",
+      "translation": "黑名单为空"
+    },
+    "as_friend_504e06e33882388642920b0011e312e3": {
+      "source": "Não há amigos, não há como gerenciar",
+      "translation": "当前没有好友，无法管理"
+    },
+    "as_friend_ab8926b55896af8d859fc68768359b86": {
+      "source": "Não há como enviar Pedidos de Amizade agora",
+      "translation": "暂时无法发送好友申请"
+    },
+    "as_friend_8385fff88999f0e91320e54c5ccb683e": {
+      "source": "Ele(a) não está online!",
+      "translation": "对方当前不在线！"
+    },
+    "as_friend_a6cbd828b62068108f05352d1d9846fe": {
+      "source": "O pedido de amizade já foi enviado.",
+      "translation": "好友申请已发送。"
+    },
+    "as_friend_d95488ca65935a6096b89c2c35513848": {
+      "source": "Não se pode adicionar a si mesmo como amigo",
+      "translation": "不能添加自己为好友。"
+    },
+    "as_friend_0f328e2da868a358004fcea9786eda63": {
+      "source": "Amigo adicionado com sucesso.",
+      "translation": "好友添加成功。"
+    },
+    "as_friend_9f11c5c7982639c51bac40cfcfaa7c4a": {
+      "source": "Amigo removido com sucesso.",
+      "translation": "好友已删除。"
+    },
+    "as_friend_ea23651f976b59dce263f76be2b60249": {
+      "source": "Está em sua lista negra, deseja retirar?",
+      "translation": "对方在你的黑名单中，是否解除拉黑？"
+    },
+    "as_friend_a59b7112fe5e757be1fd70111d9689c7": {
+      "source": "Você está numa fase, não pode realizar ações de grupos!",
+      "translation": "当前在副本中，无法进行组队操作！"
+    },
+    "as_friend_3e34d5a490a9c15c4b50376e1db2bfb0": {
+      "source": "Você está num combate, não pode realizar ações de grupos!",
+      "translation": "当前在战斗中，无法进行组队操作！"
+    },
+    "as_friend_678509226019fa9376279e83691b1b23": {
+      "source": "Ambos têm o seu próprio grupo!",
+      "translation": "双方都已有队伍！"
+    },
+    "as_friend_c35cd9977bb937a12e04948cd31af7ed": {
+      "source": "Vocês já são companheiros de grupo!",
+      "translation": "你们已经在同一队伍中！"
+    },
+    "as_chat_9d6d74ecd94272d40741e6aab2f2a841": {
+      "source": "Ver detalhes",
+      "translation": "详情"
+    },
+    "as_guild_028e3039e0d4d660e26a4782e053de3b": {
+      "source": "Ver detalhes",
+      "translation": "详情"
+    },
+    "as_worldBoss_0e53896bd38c4cb29a3a9072b329ab51": {
+      "source": "Ver detalhes",
+      "translation": "详情"
+    },
+    "as_worldBoss_09adff23f393096c4eddb499f45ccf72": {
+      "source": "Ver detalhes",
+      "translation": "详情"
+    },
+    "as_rank_403daeae9e0736e47ba79ca1db2c5900": {
+      "source": "Ver detalhes",
+      "translation": "详情"
+    },
+    "as_chat_f96bc543cf20d5d48605ab1630d2545e": {
+      "source": "Ver detalhes",
+      "translation": "详情"
+    },
+    "as_guild_d0991e58a707c81fb1ade3c16ce841a7": {
+      "source": "Ver detalhes",
+      "translation": "详情"
+    },
+    "as_guild_d7fbaeff3b23d317f8c4df8170316903": {
+      "source": "Ver detalhes",
+      "translation": "详情"
+    },
+    "as_ninja_d28b4ab1f8d7a84e72416f445049810c": {
+      "source": "Ver detalhes",
+      "translation": "详情"
+    },
+    "as_crew_99161dfae72c76863dcdd3ccd183bfbe": {
+      "source": "Ver detalhes",
+      "translation": "详情"
+    },
+    "as_guild_727095377dbdc57eac4aea03542607ce": {
+      "source": "Ver detalhes",
+      "translation": "详情"
+    },
+    "as_battlefield_1f210680cc6000932a4833137a9de6eb": {
+      "source": "Ver detalhes",
+      "translation": "详情"
+    },
+    "as_chat_f4791e8b792e22c18143837033d60aae": {
+      "source": "Ver detalhes",
+      "translation": "详情"
+    },
+    "as_friend_f5865a6531bb37379b7f7acc43c875f7": {
+      "source": "Ver detalhes",
+      "translation": "详情"
+    },
+    "as_friend_108e8b0c1f651784fcd5d22393448cfc": {
+      "source": "Ver detalhes",
+      "translation": "详情"
+    },
+    "as_friend_339e1f403c5928a1a4f24d80d5213e39": {
+      "source": "Ver detalhes",
+      "translation": "详情"
+    },
+    "as_guild_28c3fc380290a4d9a557cd09f7ce3a6c": {
+      "source": "Ver detalhes",
+      "translation": "详情"
+    },
+    "as_battlefield_467da3c96e65c0f2ba385cb9b9aa81c9": {
+      "source": "Ver detalhes",
+      "translation": "详情"
+    },
+    "as_chat_0224674fb5d16197fe1f19895faa8518": {
+      "source": "Bloqueios",
+      "translation": "黑名单"
+    },
+    "as_chat_07aabb6b70ada7d2cc6edf304a032445": {
+      "source": "Bloqueios",
+      "translation": "黑名单"
+    },
+    "as_chat_25c08c78d8457bb444bbae927ec4073e": {
+      "source": "Bloqueios",
+      "translation": "黑名单"
+    },
+    "as_friend_000000000003": {
+      "source": "Bloqueios",
+      "translation": "黑名单"
+    },
+    "as_chat_bcd2e2b73244608540b9d92bdc7720ac": {
+      "source": "Bloqueios",
+      "translation": "黑名单"
+    },
+    "as_chat_12228be919e485f210106ce64bed0ff5": {
+      "source": "Entrar no Grupo",
+      "translation": "加入队伍"
+    },
+    "as_chatBox_1f43c0dd648086dc96a13680a134d7fe": {
+      "source": "Entrar no Grupo",
+      "translation": "加入队伍"
+    },
+    "as_chatBox_79180e732b8eb5663da59f567d9cf2c6": {
+      "source": "Entrar no Grupo",
+      "translation": "加入队伍"
+    },
+    "as_chat_f9ca4ff7db919b004c2a0f5aa6a2e8ef": {
+      "source": "Entrar no Grupo",
+      "translation": "加入队伍"
+    },
+    "as_friend_c7df2dc9f7c630afd101ac9abe784dfe": {
+      "source": "Entrar no Grupo",
+      "translation": "加入队伍"
+    },
+    "as_chat_8aea347f33efb0fcddf1fd9273bd87ac": {
+      "source": "Entrar no Grupo",
+      "translation": "加入队伍"
+    },
+    "as_chatBox_35cc78268b52880cef7f550709a7b730": {
+      "source": "Entrar no Grupo",
+      "translation": "加入队伍"
+    },
+    "as_guild_0a1d81debb9b9f6be7c49f5a0c4cc44c": {
+      "source": "Convidar para grupo",
+      "translation": "邀请入队"
+    },
+    "as_chat_b8786fd6d4827af0b1bf5576423eb117": {
+      "source": "Convidar para grupo",
+      "translation": "邀请入队"
+    },
+    "as_chatBox_b1e70318db2e7d4bc388e4d154785e8e": {
+      "source": "Convidar para grupo",
+      "translation": "邀请入队"
+    },
+    "as_chat_a7d7a7bde74b8da0d49860ea782b3ad6": {
+      "source": "Convidar para grupo",
+      "translation": "邀请入队"
+    },
+    "as_chatBox_6fe3f4a99bbb6a8b1a6092e7a052f713": {
+      "source": "Convidar para grupo",
+      "translation": "邀请入队"
+    },
+    "as_chat_584b5b657369b8fd1f9b0262395cf15b": {
+      "source": "Convidar para grupo",
+      "translation": "邀请入队"
+    },
+    "as_chat_45fc06dc24f82cc9c9e58274d17665d3": {
+      "source": "Convidar para grupo",
+      "translation": "邀请入队"
+    },
+    "as_friend_c290b49983ae5e7251f86400d0039312": {
+      "source": "Convidar para grupo",
+      "translation": "邀请入队"
+    },
+    "as_friend_a66a896680910584cb1317778376d2bd": {
+      "source": "Convidar para grupo",
+      "translation": "邀请入队"
+    },
+    "as_friend_464031831791440e329b48be73ec2cd0": {
+      "source": "Convidar para grupo",
+      "translation": "邀请入队"
+    },
+    "as_guild_57711c66519fb229c06e75bc944ca0bd": {
+      "source": "Convidar para grupo",
+      "translation": "邀请入队"
+    },
+    "as_chat_776637086c81d93c9a9d152c23d4e652": {
+      "source": "Convidar para grupo",
+      "translation": "邀请入队"
+    },
+    "as_guild_2501f2f3b87f7db1e540848ae3e04bab": {
+      "source": "Convidar para grupo",
+      "translation": "邀请入队"
+    },
+    "as_chat_18caeedbfeda428ca0ca16c38b2874bb": {
+      "source": "Você está numa fase, não pode realizar ações de grupos!",
+      "translation": "当前在副本中，无法进行组队操作！"
+    },
+    "as_chatBox_4a6a18493fefc1775caa54615c249aca": {
+      "source": "Você está numa fase, não pode realizar ações de grupos!",
+      "translation": "当前在副本中，无法进行组队操作！"
+    },
+    "as_chatBox_37ca0bcea5aabbd64bc676858e39c44b": {
+      "source": "Você está numa fase, não pode realizar ações de grupos!",
+      "translation": "当前在副本中，无法进行组队操作！"
+    },
+    "as_chat_25a3ec122663203caa03aa358677f532": {
+      "source": "Não seguir",
+      "translation": "取消关注"
+    },
+    "as_chat_d2f05986fd0e91fd3e738db8ef105450": {
+      "source": "Não seguir",
+      "translation": "取消关注"
+    },
+    "as_chat_2ae46f48824abbdcd3975cbfeafc2ac6": {
+      "source": "Ambos têm o seu próprio grupo!",
+      "translation": "双方都已有队伍！"
+    },
+    "as_chatBox_4847e0a77a2af5e07206df695ec978d9": {
+      "source": "Ambos têm o seu próprio grupo!",
+      "translation": "双方都已有队伍！"
+    },
+    "as_chatBox_cf80378de19d30b4d0a8a43b0bacf729": {
+      "source": "Ambos têm o seu próprio grupo!",
+      "translation": "双方都已有队伍！"
+    },
+    "as_chat_2baec3b8b884211e3d1ecb48e3deaac6": {
+      "source": "Oferecer presente",
+      "translation": "赠送礼物"
+    },
+    "as_friend_d3b0360d12a8c6e437ed07bdc3f5da5f": {
+      "source": "Oferecer presente",
+      "translation": "赠送礼物"
+    },
+    "as_hud_238543cbb54e987f63035a0cac14be4d": {
+      "source": "Oferecer presente",
+      "translation": "赠送礼物"
+    },
+    "as_chat_30fcdb10956af0d0f597c8287eaad1ed": {
+      "source": "Oferecer presente",
+      "translation": "赠送礼物"
+    },
+    "as_chat_4bc3acb9471ee4e0addc59d447f1d11f": {
+      "source": "Oferecer presente",
+      "translation": "赠送礼物"
+    },
+    "as_guild_d28f1cb613e8c36b0cf1b8957a76aef2": {
+      "source": "Enviar Mensagem Privada",
+      "translation": "发送私信"
+    },
+    "as_friend_97054562bac4ad90ff63108151ad7418": {
+      "source": "Enviar Mensagem Privada",
+      "translation": "发送私信"
+    },
+    "as_guild_3b193f4b59b91a0b7e1a72c54fd9cd3e": {
+      "source": "Enviar Mensagem Privada",
+      "translation": "发送私信"
+    },
+    "as_guild_c78bb675af58047a6629a4aecc0c2576": {
+      "source": "Enviar Mensagem Privada",
+      "translation": "发送私信"
+    },
+    "as_chat_caa24aafd4d5440f577e48d6dd9ddf88": {
+      "source": "Enviar Mensagem Privada",
+      "translation": "发送私信"
+    },
+    "as_guild_3f276fa84bd33e3c421393f8c0c9d903": {
+      "source": "Enviar Mensagem Privada",
+      "translation": "发送私信"
+    },
+    "as_chatBox_77a4eee6c29b2a3ccd447694a531ef72": {
+      "source": "Enviar Mensagem Privada",
+      "translation": "发送私信"
+    },
+    "as_chatBox_75d282b3074c3261409197cb2a0db7b7": {
+      "source": "Enviar Mensagem Privada",
+      "translation": "发送私信"
+    },
+    "as_hud_f2c0efc38facec4c67501a50b75b3cd0": {
+      "source": "Enviar Mensagem Privada",
+      "translation": "发送私信"
+    },
+    "as_friend_33e59ce6f9a2a3d4bf6733e0118af76f": {
+      "source": "Enviar Mensagem Privada",
+      "translation": "发送私信"
+    },
+    "as_chat_baa3142fa9dd041207344630873d3770": {
+      "source": "Enviar Mensagem Privada",
+      "translation": "发送私信"
+    },
+    "as_guild_3da419dbbeaf3acea0fab37dc1b81973": {
+      "source": "Enviar Mensagem Privada",
+      "translation": "发送私信"
+    },
+    "as_friend_51b5cde2c534ca5827cfcf7e9dcabafd": {
+      "source": "Enviar Mensagem Privada",
+      "translation": "发送私信"
+    },
+    "as_chat_4c9247cc5a1442b4cc8ddb647d38a6ea": {
+      "source": "Enviar Mensagem Privada",
+      "translation": "发送私信"
+    },
+    "as_friend_d3e6c5906337d9b09d2150620edce016": {
+      "source": "Tem a certeza de que deseja remover o amigo %1?",
+      "translation": "确定删除好友 %1 吗？"
+    },
+    "as_friend_1ee7f38aedf796af83fb80996eab3a58": {
+      "source": "Remover amigo",
+      "translation": "删除好友"
+    },
+    "as_friend_a07f5b16c8c657304dc0fa1a1453fa4a": {
+      "source": "Remover amigo",
+      "translation": "删除好友"
+    },
+    "as_friend_cf7717c1073a320eefac242bf669fb80": {
+      "source": "Seguir amigo",
+      "translation": "关注好友"
+    },
+    "as_chat_68bcf2b698afb7c6710c2864e4a82c3c": {
+      "source": "Seguir amigo",
+      "translation": "关注好友"
+    },
+    "as_chat_9c8397132aa0b7c7c2f637f9430c6b41": {
+      "source": "Seguir amigo",
+      "translation": "关注好友"
+    },
+    "as_chatBox_fbc0ef4e789e5b06fb57a1a63980491c": {
+      "source": "Você está num combate, não pode realizar ações de grupos!",
+      "translation": "当前在战斗中，无法进行组队操作！"
+    },
+    "as_chatBox_d86c939773efdf910c2b84ded5c110b3": {
+      "source": "Você está num combate, não pode realizar ações de grupos!",
+      "translation": "当前在战斗中，无法进行组队操作！"
+    },
+    "as_chat_83c3afc3990c483cf6a11735e1d8e5b8": {
+      "source": "Você está num combate, não pode realizar ações de grupos!",
+      "translation": "当前在战斗中，无法进行组队操作！"
+    },
+    "as_guild_a64e68bf66caac8ea87981e994a3a155": {
+      "source": "Insira nome do jogador",
+      "translation": "输入玩家名"
+    },
+    "as_chatBox_dc2b5078871a686621af551cd3f23f0d": {
+      "source": "Ele(a) não está online!",
+      "translation": "对方当前不在线！"
+    },
+    "as_chatBox_efc463e28da8db5587ad04674f991249": {
+      "source": "Ele(a) não está online!",
+      "translation": "对方当前不在线！"
+    },
+    "as_chatBox_760d1274afa5b685df0d7212217ffda6": {
+      "source": "Este jogador não está online, não pode ver os dados dele.",
+      "translation": "对方不在线，无法查看资料。"
+    },
+    "as_friend_9c65b7ee5a7b94a2ae53c4a05320cef4": {
+      "source": "Não se pode adicionar a si mesmo como amigo",
+      "translation": "不能添加自己为好友。"
+    },
+    "as_friend_f3c71bc66b777db368ebe44a5378f78e": {
+      "source": "Não há amigos, não há como gerenciar",
+      "translation": "当前没有好友，无法管理"
+    },
+    "as_chatBox_b23678c1831d0606b0eb0d702cba057a": {
+      "source": "Vocês já são companheiros de grupo!",
+      "translation": "你们已经在同一队伍中！"
+    },
+    "as_chatBox_cbdbf3e207316cbdc1a7aebfb6312539": {
+      "source": "Vocês já são companheiros de grupo!",
+      "translation": "你们已经在同一队伍中！"
+    },
+    "as_chat_6ba31d4f33c2dba4cbe420989900b496": {
+      "source": "Vocês já são companheiros de grupo!",
+      "translation": "你们已经在同一队伍中！"
+    },
+    "as_friend_f8ae1e15c8d49bb0d7d19585879328ee": {
+      "source": "Online",
+      "translation": "在线"
+    },
+    "as_friend_fdf43ead830d35b7a1905eb0ed68be55": {
+      "source": "Deseja remover o %2 jogadores %1, etc. da lista negra?",
+      "translation": "确定将以下%2名玩家从黑名单移除吗：%1等？"
+    },
+    "as_friend_3abc024d0117b01369dbe34cba66bea5": {
+      "source": "Nível de amizade: %1",
+      "translation": "好感度等级：%1"
+    },
+    "as_friend_373ae954c60b6e0b9ad9c5adcf5a3f3d": {
+      "source": "Nível de amizade: %1",
+      "translation": "好感度等级：%1"
+    },
+    "as_friend_4802f00798364fbb2de2e588a1d29fef": {
+      "source": "\\nExperiência do nível de amizade: %1",
+      "translation": "\\n好感度经验：%1"
+    },
+    "as_friend_a34827f42f09b2e846238bb3918e1b2d": {
+      "source": "Mais de 14 dias",
+      "translation": "超过14天"
+    },
+    "as_friend_a7508772ec362b0b93ead08ddde466c8": {
+      "source": "Jogador “Retorno à aldeia”",
+      "translation": "回归玩家"
+    },
+    "as_friend_91e8c7c6c311f85d3b9da036d8a6c3e3": {
+      "source": "Deseja remover o bloqueio a %1?",
+      "translation": "确定解除对 %1 的拉黑吗？"
+    },
+    "as_friend_ae6ba84bf919cb5704d7944731b59ce5": {
+      "source": "Adicionar amigo da Guilda",
+      "translation": "添加公会好友"
+    },
+    "as_friend_aeee96e85ec43902cf74e9b495020192": {
+      "source": "Cancelamento de seguimento bem-sucedido",
+      "translation": "已取消关注。"
+    },
+    "as_friend_b334b493928966b147524de5a44c474b": {
+      "source": "%1 foi bloqueado com sucesso",
+      "translation": "已拉黑 %1。"
+    },
+    "as_friend_cef0a6b1769309850a592ad0a66f8272": {
+      "source": "Nível de amizade: %1",
+      "translation": "好感度等级：%1"
+    },
+    "as_friend_8b9ab0638100954ee53068bb04fca628": {
+      "source": "Recebimento dos dados de cenário falhou:%1",
+      "translation": "获取场景数据失败：%1"
+    },
+    "as_friend_d12144652d0fe530c770822e665a4859": {
+      "source": "%1 dias atrás",
+      "translation": "%1天前"
+    },
+    "as_friend_dea5e335b3a06b113c7c1187ad9cde2f": {
+      "source": "Deseja bloquear %1?",
+      "translation": "确定拉黑 %1 吗？"
+    },
+    "as_friend_e1164811079606f97b662a264e02ced8": {
+      "source": "Nível de amizade: %1",
+      "translation": "好感度等级：%1"
+    },
+    "as_friend_9f914774edcb29ae380e2647edcd45fe": {
+      "source": "Não há amigos que não tenham conectado nos últimos 14 dias",
+      "translation": "没有超过14天未登录的好友"
+    },
+    "as_friend_e255c1dd5ffeed858f2e16855e3c1ffc": {
+      "source": "Não há jogador que não tenha conectado nos últimos 14 dias",
+      "translation": "没有超过14天未登录的玩家"
+    },
+    "as_friend_eeb088d53be8392d0bdcd46e87c83aa1": {
+      "source": "Companheiro de Combate",
+      "translation": "助战伙伴"
+    },
+    "as_friend_30884846664fec94beaa556015af4dad": {
+      "source": "Mais de 14 dias",
+      "translation": "超过14天"
+    },
+    "as_friend_3a08e03b2137b0507cc9cde679208c20": {
+      "source": "Modo “Não Incomodar”: Impedir que os outros jogadores enviem pedidos de amizade para você.",
+      "translation": "免打扰模式：阻止其他玩家向你发送好友申请。"
+    },
+    "as_friend_26a666565d27ff5a2674579dc3168690": {
+      "source": "\\nExperiência do nível de amizade: %1/%2",
+      "translation": "\\n好感度经验：%1/%2"
+    },
+    "as_friend_4460b4f689ccc742ac5246278816a2b3": {
+      "source": "Pedido da lista de companheiros de combate selecionados ao servidor falhou!",
+      "translation": "获取已选助战伙伴列表失败！"
+    },
+    "as_friend_4ce45ff7af28e3f22fa0b758f591cacc": {
+      "source": "Online",
+      "translation": "在线"
+    },
+    "as_friend_4d26542d2c404ca035309bf5f517fe0d": {
+      "source": "A função de Amigos é ativada no nível 16",
+      "translation": "好友功能将在16级开启。"
+    },
+    "as_friend_3f56fc955da076784d7bef767aed50df": {
+      "source": "Amigo seguido com sucesso",
+      "translation": "已关注好友。"
+    },
+    "as_friend_50c5f492cd759518f9aab55fa9809ae1": {
+      "source": "\\nPode obter pontos de experiência do nível de amizade através de rega, envio de amigos,combate em grupo e envio de presentes.",
+      "translation": "\\n可通过浇水、赠送好友、组队战斗和赠礼获得好感度经验。"
+    },
+    "as_friend_22a6d02269af3a673e5422412b88921c": {
+      "source": "Adicionar amigos online",
+      "translation": "添加在线好友"
+    },
+    "as_friend_6154224872e5893f7b005a93eca0e175": {
+      "source": "dias atrás",
+      "translation": "天前"
+    },
+    "as_friend_2baaeb94913275bbb951198fff71750b": {
+      "source": "Recomendação de amigo",
+      "translation": "好友推荐"
+    },
+    "as_friend_67764addab8b177d5e0b6493af933f0b": {
+      "source": "Hoje",
+      "translation": "今天"
+    },
+    "as_friend_626db1a891e187604594070fbd555d01": {
+      "source": "A função de Amigos é ativada no nível 16",
+      "translation": "好友功能将在16级开启。"
+    },
+    "as_friend_6c267bebac9e5673f2bf68c559f6ab20": {
+      "source": "Desbloqueado com sucesso",
+      "translation": "已解除拉黑。"
+    },
+    "as_friend_7035dfbb3d8a7d7a7519a5155b1f621b": {
+      "source": "Adicionar",
+      "translation": "添加"
+    },
+    "as_friend_287d62847b0b274407558da3c8655f24": {
+      "source": "Amigo a ser excluído não selecionado",
+      "translation": "尚未选择要删除的好友"
+    },
+    "as_friend_7bd2a61a5014b06790e82c21f6d3cdfe": {
+      "source": "Selecione os amigos a excluir",
+      "translation": "请选择要删除的好友"
+    },
+    "as_friend_7dadfbf2f5118a35bbb4811b782ae994": {
+      "source": "\\nSe participar em fases de grupo com amigos com um nível de amizade igual ou superior a 5,\\npode obter um prêmio de fase de grupo adicional por dia.",
+      "translation": "\\n与好感度达到5级的好友组队通关，\\n每天可额外获得一次组队副本奖励。"
+    },
+    "as_friend_83d264111da7ef8de87f3dea18aa6255": {
+      "source": "Caso bloqueie um amigo seu Nível de Amizade cairá para 0, deseja fazer isso?",
+      "translation": "拉黑好友会将好感度重置为0，确定继续吗？"
+    },
+    "as_friend_29182bc7b193917ee410e1b6af6a3daa": {
+      "source": "Após ativar o modo “Não Incomodar”, os outros jogadores não poderão enviar pedidos de amizade para você. Confirma que deseja ativar?<br>(Desmarcando a opção pode encerrar mo modo “Não Incomodar”)",
+      "translation": "开启免打扰模式后，其他玩家将无法向你发送好友申请。确定开启吗？<br>（取消勾选即可关闭免打扰模式）"
+    },
+    "as_friend_848d250a32421c95d7a130bb975388d5": {
+      "source": "Não se pode bloquear a si mesmo",
+      "translation": "不能拉黑自己。"
+    },
+    "as_friend_5ade26d3f15f5398596d10e2c1b5156e": {
+      "source": "\\nPode obter pontos de experiência do nível de amizade através de rega, \\nenvio de amigos,combate em grupo, envio de presentes e ajuda.",
+      "translation": "\\n可通过浇水、赠送好友、组队战斗、\\n赠礼和助战获得好感度经验。"
+    },
+    "as_friend_01b3ea1e307d36a22200d5071390f6ca": {
+      "source": "\\nExperiência do nível de amizade: %1",
+      "translation": "\\n好感度经验：%1"
+    },
+    "as_friend_06520a624e20f2d3885b57048c3e7fe1": {
+      "source": "\\nExperiência do nível de amizade: %1/%2",
+      "translation": "\\n好感度经验：%1/%2"
+    },
+    "as_friend_07982879b0a0a0670f6df1f37e297102": {
+      "source": "Hoje",
+      "translation": "今天"
+    },
+    "as_friend_06520a624e20f2d3885b57048c3e7fe2": {
+      "source": "\\nExperiência do nível de amizade: %1",
+      "translation": "\\n好感度经验：%1"
+    },
+    "as_friend_0f10db4bee3d8da409fa9aa881e44ada": {
+      "source": "Todos os amigos que você marcou serão excluídos",
+      "translation": "将删除所有已选好友"
+    },
+    "as_friend_0b14e8305447e7c57e096b0bab8be754": {
+      "source": "Selecionar todos os jogadores que não tenham conectado nos últimos 14 dias",
+      "translation": "全选超过14天未登录的玩家"
+    },
+    "as_friend_13f04a2d1648ffce669b78cce063b1c1": {
+      "source": "%1 É seu amigo, deseja bloquear?",
+      "translation": "%1是你的好友，确定要拉黑吗？"
+    },
+    "as_friend_15264ce5c1378ed546c82f5c389a5096": {
+      "source": "\\nSe participar em fases de grupo com amigos com um nível de amizade igual ou superior a 5,\\npode obter um prêmio de fase de grupo adicional por dia.",
+      "translation": "\\n与好感度达到5级的好友组队通关，\\n每天可额外获得一次组队副本奖励。"
+    },
+    "as_friend_1ac5d7f4302787c880dbd383664425af": {
+      "source": "\\nPode obter pontos de experiência do nível de amizade através de rega, \\nenvio de amigos,combate em grupo, envio de presentes e ajuda.",
+      "translation": "\\n可通过浇水、赠送好友、组队战斗、\\n赠礼和助战获得好感度经验。"
+    },
+    "as_friend_1c5b28b0ede0db7ada525774f4ba16c7": {
+      "source": "Selecione os jogadores a serem expulsos",
+      "translation": "请选择要移除的玩家"
+    },
+    "as_friend_1ffa8988ec5801ff3fe948955b83b4bd": {
+      "source": "Selecionar todos os amigos que não tenham conectado nos últimos 14 dias",
+      "translation": "全选超过14天未登录的好友"
+    },
+    "as_friend_2019c75562078b886cbef1be10437606": {
+      "source": "Não há nenhum jogador selecionado",
+      "translation": "尚未选择玩家"
+    },
+    "as_friend_76d1c98ac8194604644788add6e0b889": {
+      "source": "\\nSe participar em fases de grupo com amigos com um nível de amizade igual ou superior a 5,\\npode obter um prêmio de fase de grupo adicional por dia.",
+      "translation": "\\n与好感度达到5级的好友组队通关，\\n每天可额外获得一次组队副本奖励。"
+    },
+    "as_friend_2120b005a4c3de4f7b4aa08e158b4d4e": {
+      "source": "\\nPode obter pontos de experiência do nível de amizade através de rega, envio de amigos,combate em grupo e envio de presentes.",
+      "translation": "\\n可通过浇水、赠送好友、组队战斗和赠礼获得好感度经验。"
+    },
+    "as_ninja_c9271295e2705487b975de5976501a24": {
+      "source": "Hoje",
+      "translation": "今天"
+    },
+    "as_ninja_72a3f7610ea112218bcabf4c7a4e9816": {
+      "source": "Hoje",
+      "translation": "今天"
+    },
+    "as_rankingStore_f94b1f1e204b018793c03fb5b234a362": {
+      "source": "Hoje",
+      "translation": "今天"
+    },
+    "as_ninja_aaa837bc1ee68d3323ca697b5212203c": {
+      "source": "Hoje",
+      "translation": "今天"
+    },
+    "as_chatBox_907dfae43c7ed64dbcc05b325414863e": {
+      "source": "Adicionar",
+      "translation": "添加"
+    },
+    "as_chatBox_9d6ad44f148a0cca55918dc8877b472b": {
+      "source": "Adicionar",
+      "translation": "添加"
+    },
+    "as_chatBox_eff958aa549eba0a19f6eb34f384afec": {
+      "source": "Adicionar",
+      "translation": "添加"
+    },
+    "as_chatBox_065f513d3e952d379d822a0e596c2d26": {
+      "source": "Adicionar",
+      "translation": "添加"
+    },
+    "as_operatingActivity_7fa7dddadc7bf5fab48431834d9a9941": {
+      "source": "Online",
+      "translation": "在线"
+    },
+    "as_operatingActivity_250eeec1731a97cb8151c031bf49f3b1": {
+      "source": "Online",
+      "translation": "在线"
+    },
+    "as_guild_a801a1a91120a16d77264539e7b4cb46": {
+      "source": "Online",
+      "translation": "在线"
+    },
+    "as_guild_532ee2c9b15d8a05d92e1bb3dec652d6": {
+      "source": "Mais de 14 dias",
+      "translation": "超过14天"
+    },
+    "as_guild_50605578acadd00f37cc9a3b148a997f": {
+      "source": "Jogador “Retorno à aldeia”",
+      "translation": "回归玩家"
+    }
+  }
+}

@@ -1,0 +1,409 @@
+{
+  "id": "naruto-ninja-target-18-zh-CN-v1",
+  "rootId": "11014001",
+  "ninjaInfo": {
+    "class": "NinjaInfoCFG",
+    "rows": {
+      "11014001": {
+        "name": {
+          "source": "Ashura Otsutsuki",
+          "translation": "大筒木阿修罗"
+        },
+        "title": {
+          "source": "",
+          "translation": ""
+        }
+      }
+    }
+  },
+  "skills": {
+    "class": "SkillCFG",
+    "rows": {
+      "21014001": {
+        "name": {
+          "source": "Bolas de Vento Múltiplas",
+          "translation": "多重风球"
+        },
+        "desc": {
+          "source": "Ataca 3 a 4 alvos, causando <font color=\"#4dc831\">Combo de 3</font>, reduzindo sua <font color=\"#4dc831\">Defesa</font> e <font color=\"#4dc831\">Resistência</font> em <font color=\"#4dc831\">8%</font> (pode acumular) e com chance de causar <font color=\"#4dc831\">Flutação</font> a 1 alvo.",
+          "translation": "攻击3至4名目标，造成3连击，使防御和抗性降低8%（可叠加），并有概率使1名目标浮空。"
+        }
+      },
+      "21014002": {
+        "name": {
+          "source": "Bolas de Vento Múltiplas",
+          "translation": "多重风球"
+        },
+        "desc": {
+          "source": "Ataca 3 a 4 alvos, causando <font color=\"#4dc831\">Combo de 3</font>, reduzindo sua <font color=\"#4dc831\">Defesa</font> e <font color=\"#4dc831\">Resistência</font> em <font color=\"#4dc831\">8%</font> (pode acumular) e com chance de causar <font color=\"#4dc831\">Flutação</font> a 1 alvo.",
+          "translation": "攻击3至4名目标，造成3连击，使防御和抗性降低8%（可叠加），并有概率使1名目标浮空。"
+        }
+      },
+      "21014003": {
+        "name": {
+          "source": "Bolas de Vento Múltiplas",
+          "translation": "多重风球"
+        },
+        "desc": {
+          "source": "Ataca 3 a 4 alvos, causando <font color=\"#4dc831\">Combo de 3</font>, reduzindo sua <font color=\"#4dc831\">Defesa</font> e <font color=\"#4dc831\">Resistência</font> em <font color=\"#4dc831\">8%</font> (pode acumular) e com chance de causar <font color=\"#4dc831\">Flutação</font> a 1 alvo.",
+          "translation": "攻击3至4名目标，造成3连击，使防御和抗性降低8%（可叠加），并有概率使1名目标浮空。"
+        }
+      },
+      "21014004": {
+        "name": {
+          "source": "Ataque da Esfera da Busca da Verdade",
+          "translation": "求道玉攻击"
+        },
+        "desc": {
+          "source": "Persegue inimigos com <font color=\"#4dc831\">Repelimento</font>, causando <font color=\"#4dc831\">Imobilidade</font> e ignorando parte da <font color=\"#4dc831\">Defesa</font> e <font color=\"#4dc831\">Resistência</font>. A partir da 2ª rodada, o número máximo de Perseguições de cada rodada para cada ninja aumenta em 1 (cada Perseguição pode ser usada no máximo 5 vezes por rodada).",
+          "translation": "追打击退敌人，造成定身，无视部分防御和抗性。从第2回合起，每名忍者每回合追打次数上限增加1次，每个追打每回合最多5次。"
+        }
+      },
+      "21014005": {
+        "name": {
+          "source": "Esfera da Busca da Verdade - Defesa",
+          "translation": "求道玉·防御"
+        },
+        "desc": {
+          "source": "Ashura tem <font color=\"#4dc831\">Imunidade a Status negativos nv. 2</font> e, ao se esquivar de ataques, causa ao atacante <font color=\"#4dc831\">15%</font> de sua própria Vida de dano.",
+          "translation": "阿修罗获得2级负面状态免疫，闪避攻击时，对攻击者造成相当于自身生命15%的伤害。"
+        }
+      },
+      "21014006": {
+        "name": {
+          "source": "Força dos Seis Caminhos",
+          "translation": "六道之力"
+        },
+        "desc": {
+          "source": "No início de cada rodada, Ashura dá à sua equipe <font color=\"#4dc831\">10%</font> de Redução de Dano. Sempre que um companheiro recebe um ataque, seu próprio <font color=\"#4dc831\">Ninjutsu</font> e <font color=\"#4dc831\">Resistência</font> aumentam <font color=\"#4dc831\">15%</font> (não pode ser dispersado, é resetado a cada rodada e segue em efeito mesmo após sua morte). Ashura também recebe <font color=\"#4dc831\">Vontade Inquebrável</font>.",
+          "translation": "每回合开始时，阿修罗使己方小队伤害减免提高10%。队友每次受到攻击时，自身忍术和抗性提高15%，无法驱散，每回合重置，阿修罗被击败后仍有效。阿修罗还获得不屈意志。"
+        }
+      },
+      "21014007": {
+        "name": {
+          "source": "Laços: Mil Mãos Verdadeiras",
+          "translation": "羁绊·真数千手"
+        },
+        "desc": {
+          "source": "Causa dano de <font color=\"#4dc831\">Terra</font> e <font color=\"#4dc831\">Água</font> <font color=\"#4dc831\">na certa</font> a todos os inimigos, <font color=\"#4dc831\">Combo de 3</font> e <font color=\"#4dc831\">Interrupção</font>. Também causa <font color=\"#4dc831\">Queda</font> e <font color=\"#4dc831\">Fraqueza</font> ao inimigo selecionado, assim como <font color=\"#4dc831\">Supressão de Imunidade a Status negativos</font> até o fim da rodada seguinte.",
+          "translation": "对敌方全体造成必定命中的土、水属性伤害、3连击和打断，并对选定目标额外造成倒地、虚弱和持续至下回合结束的负面状态免疫压制。"
+        }
+      },
+      "21014008": {
+        "name": {
+          "source": "Ataque da Esfera da Busca da Verdade",
+          "translation": "求道玉攻击"
+        },
+        "desc": {
+          "source": "A partir da 2ª rodada, o número máximo de Perseguições de cada rodada para cada ninja aumenta em 1 (cada Perseguição pode ser usada no máximo 5 vezes por rodada).",
+          "translation": "从第2回合起，每名忍者每回合追打次数上限增加1次，每个追打每回合最多5次。"
+        }
+      },
+      "21014009": {
+        "name": {
+          "source": "Força dos Seis Caminhos",
+          "translation": "六道之力"
+        },
+        "desc": {
+          "source": "No início de cada rodada, Ashura dá à sua equipe <font color=\"#4dc831\">10%</font> de Redução de Dano. Sempre que um companheiro recebe um ataque, seu próprio <font color=\"#4dc831\">Ninjutsu</font> e <font color=\"#4dc831\">Resistência</font> aumentam <font color=\"#4dc831\">15%</font> (não pode ser dispersado, é resetado a cada rodada e segue em efeito mesmo após sua morte). Ashura também recebe <font color=\"#4dc831\">Vontade Inquebrável</font>.",
+          "translation": "每回合开始时，阿修罗使己方小队伤害减免提高10%。队友每次受到攻击时，自身忍术和抗性提高15%，无法驱散，每回合重置，阿修罗被击败后仍有效。阿修罗还获得不屈意志。"
+        }
+      },
+      "21214001": {
+        "name": {
+          "source": "Bolas de Vento Múltiplas",
+          "translation": "多重风球"
+        },
+        "desc": {
+          "source": "Ataca 3 a 4 alvos, causando <font color=\"#4dc831\">Combo de 3</font>, reduzindo sua <font color=\"#4dc831\">Defesa</font> e <font color=\"#4dc831\">Resistência</font> em <font color=\"#4dc831\">8%</font> (pode acumular) e com chance de causar <font color=\"#4dc831\">Flutação</font> a 1 alvo.",
+          "translation": "攻击3至4名目标，造成3连击，使防御和抗性降低8%（可叠加），并有概率使1名目标浮空。"
+        }
+      },
+      "21214002": {
+        "name": {
+          "source": "Bolas de Vento Múltiplas",
+          "translation": "多重风球"
+        },
+        "desc": {
+          "source": "Ataca 3 a 4 alvos, causando <font color=\"#4dc831\">Combo de 3</font>, reduzindo sua <font color=\"#4dc831\">Defesa</font> e <font color=\"#4dc831\">Resistência</font> em <font color=\"#4dc831\">8%</font> (pode acumular) e com chance de causar <font color=\"#4dc831\">Flutação</font> a 1 alvo.",
+          "translation": "攻击3至4名目标，造成3连击，使防御和抗性降低8%（可叠加），并有概率使1名目标浮空。"
+        }
+      },
+      "21214003": {
+        "name": {
+          "source": "Bolas de Vento Múltiplas",
+          "translation": "多重风球"
+        },
+        "desc": {
+          "source": "Ataca 3 a 4 alvos, causando <font color=\"#4dc831\">Combo de 3</font>, reduzindo sua <font color=\"#4dc831\">Defesa</font> e <font color=\"#4dc831\">Resistência</font> em <font color=\"#4dc831\">8%</font> (pode acumular) e com chance de causar <font color=\"#4dc831\">Flutação</font> a 1 alvo.",
+          "translation": "攻击3至4名目标，造成3连击，使防御和抗性降低8%（可叠加），并有概率使1名目标浮空。"
+        }
+      },
+      "21214004": {
+        "name": {
+          "source": "Ataque da Esfera da Busca da Verdade",
+          "translation": "求道玉攻击"
+        },
+        "desc": {
+          "source": "Persegue inimigos com <font color=\"#4dc831\">Repelimento</font>, causando dano <font color=\"#4dc831\">na certa</font>, <font color=\"#4dc831\">Imobilidade</font> e ignorando parte da <font color=\"#4dc831\">Defesa</font> e <font color=\"#4dc831\">Resistência</font>. A partir da 2ª rodada, o número máximo de Perseguições de cada rodada para cada ninja aumenta em 2 (cada Perseguição pode ser usada no máximo 5 vezes por rodada).",
+          "translation": "追打击退敌人，造成必定命中的伤害和定身，无视部分防御和抗性。从第2回合起，每名忍者每回合追打次数上限增加2次，每个追打每回合最多5次。"
+        }
+      },
+      "21214005": {
+        "name": {
+          "source": "Esfera da Busca da Verdade - Defesa",
+          "translation": "求道玉·防御"
+        },
+        "desc": {
+          "source": "Ashura tem <font color=\"#4dc831\">Imunidade a Status negativos nv. 2</font> e, ao se esquivar de ataques, recupera <font color=\"#4dc831\">20</font> pontos de Chakra e causa ao atacante <font color=\"#4dc831\">15%</font> de sua própria Vida de dano.",
+          "translation": "阿修罗获得2级负面状态免疫，闪避攻击时恢复20点查克拉，并对攻击者造成相当于自身生命15%的伤害。"
+        }
+      },
+      "21214006": {
+        "name": {
+          "source": "Força dos Seis Caminhos",
+          "translation": "六道之力"
+        },
+        "desc": {
+          "source": "No início de cada rodada, Ashura dá à sua equipe <font color=\"#4dc831\">10%</font> de Redução de Dano (até 2 vezes). Sempre que um companheiro recebe um ataque, seu próprio <font color=\"#4dc831\">Ninjutsu</font> e <font color=\"#4dc831\">Resistência</font> aumentam <font color=\"#4dc831\">15%</font> (não pode ser dispersado, é resetado a cada rodada e segue em efeito mesmo após sua morte). Ashura também recebe <font color=\"#4dc831\">Vontade Inquebrável</font>.",
+          "translation": "每回合开始时，阿修罗使己方小队伤害减免提高10%，最多2次。队友每次受到攻击时，自身忍术和抗性提高15%，无法驱散，每回合重置，阿修罗被击败后仍有效。阿修罗还获得不屈意志。"
+        }
+      },
+      "21214007": {
+        "name": {
+          "source": "Laços: Mil Mãos Verdadeiras",
+          "translation": "羁绊·真数千手"
+        },
+        "desc": {
+          "source": "Causa dano aumentado em <font color=\"#4dc831\">30%</font> de <font color=\"#4dc831\">Terra</font> e <font color=\"#4dc831\">Água</font> <font color=\"#4dc831\">na certa</font> a todos os inimigos, <font color=\"#4dc831\">Combo de 3</font> e <font color=\"#4dc831\">Interrupção</font>. Também causa <font color=\"#4dc831\">Queda</font> e <font color=\"#4dc831\">Fraqueza</font> ao inimigo selecionado, assim como <font color=\"#4dc831\">Supressão de Imunidade a Status negativos</font> até o fim da rodada seguinte.",
+          "translation": "对敌方全体造成提高30%且必定命中的土、水属性伤害、3连击和打断，并对选定目标额外造成倒地、虚弱和持续至下回合结束的负面状态免疫压制。"
+        }
+      },
+      "21214008": {
+        "name": {
+          "source": "Ataque da Esfera da Busca da Verdade",
+          "translation": "求道玉攻击"
+        },
+        "desc": {
+          "source": "A partir da 2ª rodada, o número máximo de Perseguições de cada rodada para cada ninja aumenta em 2 (cada Perseguição pode ser usada no máximo 6 vezes por rodada).",
+          "translation": "从第2回合起，每名忍者每回合追打次数上限增加2次，每个追打每回合最多6次。"
+        }
+      },
+      "21214009": {
+        "name": {
+          "source": "Força dos Seis Caminhos",
+          "translation": "六道之力"
+        },
+        "desc": {
+          "source": "Além disso, sempre que um companheiro recebe um ataque, seu próprio <font color=\"#4dc831\">Ninjutsu</font> e <font color=\"#4dc831\">Resistência</font> aumentam <font color=\"#4dc831\">15%</font> (não pode ser dispersado, é resetado a cada rodada e segue em efeito mesmo após sua morte).",
+          "translation": "此外，队友每次受到攻击时，自身忍术和抗性提高15%，无法驱散，每回合重置，阿修罗被击败后仍有效。"
+        }
+      },
+      "21314001": {
+        "name": {
+          "source": "Bolas de Vento Múltiplas",
+          "translation": "多重风球"
+        },
+        "desc": {
+          "source": "Ataca a equipe inimiga, causando <font color=\"#4dc831\">Combo de 3</font>, reduzindo sua <font color=\"#4dc831\">Defesa</font> e <font color=\"#4dc831\">Resistência</font> em <font color=\"#4dc831\">8%</font> (pode acumular) e com chance de causar <font color=\"#4dc831\">Flutação</font> a 1 alvo.",
+          "translation": "攻击敌方小队，造成3连击，使防御和抗性降低8%（可叠加），并有概率使1名目标浮空。"
+        }
+      },
+      "21314002": {
+        "name": {
+          "source": "Bolas de Vento Múltiplas",
+          "translation": "多重风球"
+        },
+        "desc": {
+          "source": "Ataca a equipe inimiga, causando <font color=\"#4dc831\">Combo de 3</font>, reduzindo sua <font color=\"#4dc831\">Defesa</font> e <font color=\"#4dc831\">Resistência</font> em <font color=\"#4dc831\">8%</font> (pode acumular) e com chance de causar <font color=\"#4dc831\">Flutação</font> a 1 alvo.",
+          "translation": "攻击敌方小队，造成3连击，使防御和抗性降低8%（可叠加），并有概率使1名目标浮空。"
+        }
+      },
+      "21314003": {
+        "name": {
+          "source": "Bolas de Vento Múltiplas",
+          "translation": "多重风球"
+        },
+        "desc": {
+          "source": "Ataca a equipe inimiga, causando <font color=\"#4dc831\">Combo de 3</font>, reduzindo sua <font color=\"#4dc831\">Defesa</font> e <font color=\"#4dc831\">Resistência</font> em <font color=\"#4dc831\">8%</font> (pode acumular) e com chance de causar <font color=\"#4dc831\">Flutação</font> a 1 alvo.",
+          "translation": "攻击敌方小队，造成3连击，使防御和抗性降低8%（可叠加），并有概率使1名目标浮空。"
+        }
+      },
+      "21314004": {
+        "name": {
+          "source": "Ataque da Esfera da Busca da Verdade",
+          "translation": "求道玉攻击"
+        },
+        "desc": {
+          "source": "Persegue inimigos com <font color=\"#4dc831\">Repelimento</font>, causando dano <font color=\"#4dc831\">na certa</font>, <font color=\"#4dc831\">Imobilidade</font>, <font color=\"#4dc831\">40%</font> de dano de Choque aos inimigos ao redor do alvo e ignorando parte da <font color=\"#4dc831\">Defesa</font> e <font color=\"#4dc831\">Resistência</font>. A partir da 2ª rodada, o número máximo de Perseguições de cada rodada para cada ninja aumenta em 2 (cada Perseguição pode ser usada no máximo 5 vezes por rodada).",
+          "translation": "追打击退敌人，造成必定命中的伤害和定身，对目标周围敌人造成40%震荡伤害，无视部分防御和抗性。从第2回合起，每名忍者每回合追打次数上限增加2次，每个追打每回合最多5次。"
+        }
+      },
+      "21314005": {
+        "name": {
+          "source": "Esfera da Busca da Verdade - Defesa",
+          "translation": "求道玉·防御"
+        },
+        "desc": {
+          "source": "Ashura tem <font color=\"#4dc831\">Imunidade a Status negativos nv. 2</font> e, ao se esquivar de ataques, recupera <font color=\"#4dc831\">20</font> pontos de Chakra e causa ao atacante <font color=\"#4dc831\">15%</font> de sua própria Vida de dano. Além disso, sempre que lança <font color=\"#4dc831\">Ataque da Esfera da Busca da Verdade +2</font>, também lança <font color=\"#4dc831\">Super Ataque da Esfera da Busca da Verdade</font> 1 vez.",
+          "translation": "阿修罗获得2级负面状态免疫，闪避攻击时恢复20点查克拉，并对攻击者造成相当于自身生命15%的伤害。此外，每次释放求道玉攻击+2时，额外释放1次超·求道玉攻击。"
+        }
+      },
+      "21314006": {
+        "name": {
+          "source": "Força dos Seis Caminhos",
+          "translation": "六道之力"
+        },
+        "desc": {
+          "source": "No início de cada rodada, Ashura dá à sua equipe <font color=\"#4dc831\">10%</font> de Redução de Dano (até 2 vezes). Sempre que recebe um ataque, seu próprio <font color=\"#4dc831\">Ninjutsu</font> e <font color=\"#4dc831\">Resistência</font> aumentam <font color=\"#4dc831\">20%</font> (não pode ser dispersado, é resetado a cada rodada e segue em efeito mesmo após sua morte). Além disso, a <font color=\"#4dc831\">Esotérica</font> de ninjas <font color=\"#4dc831\">Senjutsu</font> sempre acerta e Ashura recebe <font color=\"#4dc831\">Vontade Inquebrável</font>.",
+          "translation": "每回合开始时，阿修罗使己方小队伤害减免提高10%，最多2次。每次受到攻击时，自身忍术和抗性提高20%，无法驱散，每回合重置，被击败后仍有效。此外，己方仙术忍者的奥义必定命中，阿修罗获得不屈意志。"
+        }
+      },
+      "21314007": {
+        "name": {
+          "source": "Laços: Mil Mãos Verdadeiras",
+          "translation": "羁绊·真数千手"
+        },
+        "desc": {
+          "source": "Causa <font color=\"#4dc831\">30%</font> a mais de dano que <font color=\"#4dc831\">sempre acerta</font> de <font color=\"#4dc831\">Terra</font> e <font color=\"#4dc831\">Água</font> a todos os inimigos, com um <font color=\"#4dc831\">Combo de 3</font> e <font color=\"#4dc831\">Interrupção</font>. O alvo selecionado sofre adicionalmente <font color=\"#4dc831\">Queda</font> e <font color=\"#4dc831\">Selamento de Fraqueza</font>, aplicando <font color=\"#4dc831\">Supressão de Imunidade a Status negativos</font> até o final da próxima rodada. Se a vida estiver acima de <font color=\"#4dc831\">70%</font>, o alcance do efeito se estende a toda a formação.",
+          "translation": "对敌方全体造成提高30%且必定命中的土、水属性伤害、3连击和打断。选定目标额外受到倒地、虚弱封印和持续至下回合结束的负面状态免疫压制。若生命高于70%，效果范围扩展至整个阵营。"
+        }
+      },
+      "21314008": {
+        "name": {
+          "source": "Ataque da Esfera da Busca da Verdade",
+          "translation": "求道玉攻击"
+        },
+        "desc": {
+          "source": "A partir da 2ª rodada, o número máximo de Perseguições de cada rodada para cada ninja aumenta em 2 (cada Perseguição pode ser usada no máximo 6 vezes por rodada).",
+          "translation": "从第2回合起，每名忍者每回合追打次数上限增加2次，每个追打每回合最多6次。"
+        }
+      },
+      "21314009": {
+        "name": {
+          "source": "Força dos Seis Caminhos",
+          "translation": "六道之力"
+        },
+        "desc": {
+          "source": "Além disso, sempre que um companheiro recebe um ataque, seu próprio <font color=\"#4dc831\">Ninjutsu</font> e <font color=\"#4dc831\">Resistência</font> aumentam <font color=\"#4dc831\">20%</font> (não pode ser dispersado, é resetado a cada rodada e segue em efeito mesmo após sua morte).",
+          "translation": "此外，队友每次受到攻击时，自身忍术和抗性提高20%，无法驱散，每回合重置，阿修罗被击败后仍有效。"
+        }
+      },
+      "21414001": {
+        "name": {
+          "source": "Bolas de Vento Múltiplas",
+          "translation": "多重风球"
+        },
+        "desc": {
+          "source": "Ataca 3 a 4 alvos, causando <font color=\"#4dc831\">Combo de 3</font>, reduzindo sua <font color=\"#4dc831\">Defesa</font> e <font color=\"#4dc831\">Resistência</font> em <font color=\"#4dc831\">12%</font> (pode acumular) e com chance de causar <font color=\"#4dc831\">Flutação</font> a 1 alvo.",
+          "translation": "攻击3至4名目标，造成3连击，使防御和抗性降低12%（可叠加），并有概率使1名目标浮空。"
+        }
+      },
+      "21414002": {
+        "name": {
+          "source": "Bolas de Vento Múltiplas",
+          "translation": "多重风球"
+        },
+        "desc": {
+          "source": "Ataca 3 a 4 alvos, causando <font color=\"#4dc831\">Combo de 3</font>, reduzindo sua <font color=\"#4dc831\">Defesa</font> e <font color=\"#4dc831\">Resistência</font> em <font color=\"#4dc831\">12%</font> (pode acumular) e com chance de causar <font color=\"#4dc831\">Flutação</font> a 1 alvo.",
+          "translation": "攻击3至4名目标，造成3连击，使防御和抗性降低12%（可叠加），并有概率使1名目标浮空。"
+        }
+      },
+      "21414003": {
+        "name": {
+          "source": "Bolas de Vento Múltiplas",
+          "translation": "多重风球"
+        },
+        "desc": {
+          "source": "Ataca 3 a 4 alvos, causando <font color=\"#4dc831\">Combo de 3</font>, reduzindo sua <font color=\"#4dc831\">Defesa</font> e <font color=\"#4dc831\">Resistência</font> em <font color=\"#4dc831\">12%</font> (pode acumular) e com chance de causar <font color=\"#4dc831\">Flutação</font> a 1 alvo.",
+          "translation": "攻击3至4名目标，造成3连击，使防御和抗性降低12%（可叠加），并有概率使1名目标浮空。"
+        }
+      },
+      "21414004": {
+        "name": {
+          "source": "Ataque da Esfera da Busca da Verdade",
+          "translation": "求道玉攻击"
+        },
+        "desc": {
+          "source": "Persegue inimigos com <font color=\"#4dc831\">Repelimento</font>, <font color=\"#4dc831\">Queda</font>, <font color=\"#4dc831\">Flutuação</font> ou <font color=\"#4dc831\">Voo</font>, causando dano <font color=\"#4dc831\">na certa</font>, <font color=\"#4dc831\">Imobilidade</font> e ignorando parte da <font color=\"#4dc831\">Defesa</font> e <font color=\"#4dc831\">Resistência</font>. A partir da 2ª rodada, o número máximo de Perseguições de cada rodada para cada ninja aumenta em 2 (cada Perseguição pode ser usada no máximo 6 vezes por rodada).",
+          "translation": "追打击退、倒地、浮空或高浮空敌人，造成必定命中的伤害和定身，无视部分防御和抗性。从第2回合起，每名忍者每回合追打次数上限增加2次，每个追打每回合最多6次。"
+        }
+      },
+      "21414005": {
+        "name": {
+          "source": "Esfera da Busca da Verdade - Defesa",
+          "translation": "求道玉·防御"
+        },
+        "desc": {
+          "source": "Ashura tem <font color=\"#4dc831\">Imunidade a Status negativos nv. 2</font> e, ao se esquivar de ataques, recupera <font color=\"#4dc831\">20</font> pontos de Chakra e causa ao atacante <font color=\"#4dc831\">15%</font> de sua própria Vida de dano. Além disso, sempre que lança <font color=\"#4dc831\">Ataque da Esfera da Busca da Verdade Y</font>, também lança <font color=\"#4dc831\">Super Ataque da Esfera da Busca da Verdade Y</font> 1 vez.",
+          "translation": "阿修罗获得2级负面状态免疫，闪避攻击时恢复20点查克拉，并对攻击者造成相当于自身生命15%的伤害。此外，每次释放求道玉攻击·Y时，额外释放1次超·求道玉攻击·Y。"
+        }
+      },
+      "21414006": {
+        "name": {
+          "source": "Força dos Seis Caminhos",
+          "translation": "六道之力"
+        },
+        "desc": {
+          "source": "No início de cada rodada, o Combo de sua equipe aumenta em <font color=\"#4dc831\">40%</font> e a <font color=\"#4dc831\">Esotérica</font> de ninjas <font color=\"#4dc831\">Senjutsu</font> sempre acerta. Além disso, Ashura recebe <font color=\"#4dc831\">Vontade Inquebrável</font>, sempre que recebe um ataque, recupera <font color=\"#4dc831\">2%</font> de Vida e, sempre que usa habilidades tipo <font color=\"#4dc831\">gatilho</font>, seu próprio <font color=\"#4dc831\">Ninjutsu</font> e <font color=\"#4dc831\">Ataque</font> aumentam <font color=\"#4dc831\">5%</font>.",
+          "translation": "每回合开始时，己方小队连击率提高40%，仙术忍者的奥义必定命中。此外，阿修罗获得不屈意志，每次受到攻击时恢复2%生命，每次使用触发型技能时，自身忍术和攻击提高5%。"
+        }
+      },
+      "21414007": {
+        "name": {
+          "source": "Laços: Mil Mãos Verdadeiras",
+          "translation": "羁绊·真数千手"
+        },
+        "desc": {
+          "source": "Causa dano que <font color=\"#4dc831\">sempre acerta</font> de <font color=\"#4dc831\">Terra</font> e <font color=\"#4dc831\">Água</font> a todos os inimigos, com um <font color=\"#4dc831\">Combo de 3</font> e <font color=\"#4dc831\">Interrupção</font>. O alvo selecionado sofre adicionalmente <font color=\"#4dc831\">Queda</font> e <font color=\"#4dc831\">Selamento de Fraqueza Y</font>, aplicando <font color=\"#4dc831\">Supressão de Imunidade a Status negativos</font> até o final da próxima rodada. Se a vida estiver acima de <font color=\"#4dc831\">70%</font>, o alcance do efeito se estende a toda a formação.",
+          "translation": "对敌方全体造成必定命中的土、水属性伤害、3连击和打断。选定目标额外受到倒地、虚弱封印·Y和持续至下回合结束的负面状态免疫压制。若生命高于70%，效果范围扩展至整个阵营。"
+        }
+      },
+      "21414008": {
+        "name": {
+          "source": "Ataque da Esfera da Busca da Verdade",
+          "translation": "求道玉攻击"
+        },
+        "desc": {
+          "source": "A partir da 2ª rodada, o número máximo de Perseguições de cada rodada para cada ninja aumenta em 2 (cada Perseguição pode ser usada no máximo 6 vezes por rodada).",
+          "translation": "从第2回合起，每名忍者每回合追打次数上限增加2次，每个追打每回合最多6次。"
+        }
+      },
+      "21414009": {
+        "name": {
+          "source": "Força dos Seis Caminhos",
+          "translation": "六道之力"
+        },
+        "desc": {
+          "source": "Sempre que Ashura recebe um ataque, recupera <font color=\"#4dc831\">2%</font> de Vida e, sempre que usa habilidades tipo <font color=\"#4dc831\">gatilho</font>, seu próprio <font color=\"#4dc831\">Ninjutsu</font> e <font color=\"#4dc831\">Ataque</font> aumentam <font color=\"#4dc831\">5%</font>.",
+          "translation": "阿修罗每次受到攻击时恢复2%生命，每次使用触发型技能时，自身忍术和攻击提高5%。"
+        }
+      }
+    }
+  },
+  "skillDetails": {
+    "class": "SkillKeyDescCFG",
+    "rows": {
+      "280": {
+        "keys": {
+          "source": "Super Ataque da Esfera da Busca da Verdade",
+          "translation": "超·求道玉攻击"
+        },
+        "desc": {
+          "source": "[Habilidade adicional]: Ataca o [ninja] com menos Vida, causando dano [na certa], [Queda] e roubando suas chances de ataque comum. Também zera seu próprio [Resfriamento] até o fim da rodada. Esta habilidade ignora parte da [Defesa] e [Resistência] e não permite que o alvo ressuscite.",
+          "translation": "[追加技能]：攻击生命最低的[忍者]，造成[必定命中]的伤害、[倒地]，并夺取其普攻次数，同时清除自身[冷却]，持续至回合结束。本技能无视部分[防御]和[抗性]，被击败的目标无法复活。"
+        }
+      },
+      "281": {
+        "keys": {
+          "source": "Super Ataque da Esfera da Busca da Verdade Y",
+          "translation": "超·求道玉攻击·Y"
+        },
+        "desc": {
+          "source": "[Habilidade adicional]: Ataca o [ninja] com menos Vida, causando dano [na certa] e [Queda]. Ashura também entra no status de [Violência] e tem seu próprio [Resfriamento] zerado até o fim da rodada. Esta habilidade ignora parte da [Defesa] e [Resistência] e não permite que o alvo ressuscite.",
+          "translation": "[追加技能]：攻击生命最低的[忍者]，造成[必定命中]的伤害和[倒地]。阿修罗进入[暴怒]状态并清除自身[冷却]，持续至回合结束。本技能无视部分[防御]和[抗性]，被击败的目标无法复活。"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "version": "9.40Build300",
+  "resourceURL": "https://cdnnaruto-pt.oasgames.com/PT_NarutoAlpha9.40Build300/flash/operatingActivity/OperatingActivityPlugin.swf",
+  "baseSha256": "2b80bb73e8baf884f52ea029f38a59afd8358aeac14b1f4b26d562e73b23ea85",
+  "outputFile": "OperatingActivityPlugin.activity-assist.swf",
+  "patches": [
+    {
+      "id": "damo",
+      "directory": "damo-yuandanji-9.39Build301",
+      "files": [
+        "com/tencent/morefun/naruto/plugin/operatingActivity/activitys/yuanDanJi/pageView/DaMoPage.as",
+        "com/tencent/morefun/naruto/plugin/operatingActivity/activitys/yuanDanJi/pageView/daMo/DaMoGame.as"
+      ]
+    },
+    {
+      "id": "ninjutsu-train",
+      "directory": "ninjutsu-train-9.40Build300",
+      "activityTypes": [
+        800223,
+        800264
+      ],
+      "files": [
+        "com/tencent/morefun/naruto/plugin/operatingActivity/activitys/ninjutsuTrain/TrainView.as",
+        "com/tencent/morefun/naruto/plugin/operatingActivity/activitys/ninjutsuTrain2/TrainView.as"
+      ]
+    }
+  ],
+  "localizationPatches": [
+    {
+      "id": "celebration-turntable-zh-CN",
+      "directory": "celebration-localization-diagnostic-no-renderer",
+      "files": [
+        "com/tencent/morefun/naruto/plugin/operatingActivity/activitys/turntable_old/TurntableView.as",
+        "com/tencent/morefun/naruto/plugin/operatingActivity/activitys/turntable_old/ruleView.as"
+      ]
+    }
+  ]
+}

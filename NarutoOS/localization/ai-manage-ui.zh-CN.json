@@ -1,0 +1,74 @@
+{
+  "id": "naruto-ai-manage-ui-zh-CN-v1",
+  "resourceURL": "https://cdnnaruto-pt.oasgames.com/PT_NarutoAlpha9.39Build301/flash/ai/AIManageUI.swf",
+  "file": "AIManageUI.zh-CN.swf",
+  "textFields": {
+    "15": { "source": "(Quando o tempo de recuperação de Saúde do Onsen chega a zero, se para no sul da Aldeia da Folha)", "translation": "（温泉冷却时间结束后，角色会停在木叶村南侧）" },
+    "16": { "source": "(Válido apenas durante este login)", "translation": "（仅本次登录有效）" },
+    "18": { "source": "Benefícios diários", "translation": "每日福利" },
+    "19": { "source": "Missões Diárias", "translation": "每日任务" },
+    "20": { "source": "Raid", "translation": "扫荡" },
+    "21": { "source": "Recrutar", "translation": "招募" },
+    "22": { "source": "Troca automática", "translation": "自动兑换" },
+    "23": { "source": "Guilda", "translation": "组织" },
+    "24": { "source": "Jardim", "translation": "家园" },
+    "25": { "source": "Configurar outras funções", "translation": "其他功能设置" },
+    "26": { "source": "Quando a Saúde cair para -------------, fazer raid nestas fases. Parar quando cair para ---------", "translation": "生命值降至-------------时，扫荡这些关卡；降至---------时停止" },
+    "35": { "source": "Cartões Automáticos possuídos:", "translation": "自动模式卡片：" },
+    "42": { "source": "1) É necessário nível 58 para usar o Modo Automático. 2) É preciso gastar 1 Cartão Automático para entrar no modo automático pela primeira vez no dia, para as vezes seguintes não é preciso. 3) Obtenha até 1 Cartão Automático por dia completando missões. 4) Não se pode entrar em modo automático estando em grupo. 5) Caso se realize alguma ação manual o modo automático é interrompido (com exceção de mensagem e configuração do modo automático)", "translation": "1）达到58级后可使用自动模式。2）每天首次进入需消耗1张自动模式卡，之后再次进入无需消耗。3）完成任务每天最多可获得1张自动模式卡。4）组队时无法进入自动模式。5）手动操作会中断自动模式，聊天和修改自动模式设置除外。" },
+    "51": { "source": "Atinja o nível xx para liberar os seguintes módulos", "translation": "达到等级 xx 后解锁以下功能" },
+    "84": { "source": "Anbu do modo automático", "translation": "自动模式暗部" }
+  },
+  "scriptStrings": {
+    "scripts/ui/ai/AIManageUI.as": {
+      "Modo Automático ": "自动模式",
+      "Configurações": "设置",
+      "Obtenção do cartão": "获取卡片",
+      "Log": "记录",
+      "Iniciar Modo Automático ": "开始自动模式",
+      "Sair do Modo<br/> Automático": "退出自动模式"
+    },
+    "scripts/ui/ai/TrusteeshipMiniUI.as": {
+      "Sair do Modo Automático ": "退出自动模式",
+      "Modo Automático ativado ": "自动模式已开启"
+    },
+    "scripts/ui/ai/RaidersPanelUI.as": {
+      "Descrição do Modo Automático ": "自动模式说明"
+    },
+    "scripts/ui/ai/SettingPageUI.as": {
+      "Raid da Ilusão Infinita": "无限幻境扫荡",
+      "Raid no Teste Shinobi": "忍者考试扫荡",
+      "Baús Ninja": "忍者宝箱",
+      "Baú de Invocação": "通灵宝箱",
+      "Baú de Descoberta": "探索宝箱",
+      "Caverna Misteriosa": "神秘洞窟",
+      "Raid ": "扫荡",
+      "Sala da Abundância": "丰饶之间",
+      "Sala do Tesouro": "藏宝之间",
+      "Fases de Elite": "精英副本",
+      "Fases da História": "剧情副本",
+      "Configurações ": "设置",
+      "Compra no \\nComerciante": "商人购买",
+      "Troca da Dimensão \\nParalela": "平行空间兑换",
+      "Compra no Vendedor": "商店购买",
+      "Trocar ": "兑换",
+      "Girar a Roleta da Guilda        vezes": "转动组织转盘        次",
+      "Aceitar automaticamente pedidos de ajuda de transporte": "自动接受护送求助",
+      "Contribuir à Guilda com Ryos diariamente": "每日捐献铜币",
+      "Contribuir conjuntos de chakra automaticamente": "自动捐赠查克拉套装",
+      "Cumprimentar a todos": "向所有人问好",
+      "Completar automaticamente \\nMissões Ninja": "自动完成忍者任务",
+      "Comprar presentes com ryos": "使用铜币购买礼物",
+      "Colher na Árvore dos Desejos": "采摘愿望之树",
+      "Regar automaticamente": "自动浇水",
+      "Entrar no Onsen quando ocioso": "空闲时进入温泉",
+      "Entrar no modo automático em caso de \\ninatividade por               minutos": "闲置               分钟后\\n进入自动模式",
+      "Eventos de privilégio": "特权活动",
+      "Baú de Pergaminhos \\nde Habilidade": "忍术卷轴宝箱",
+      "Criar Artefato": "制作宝具",
+      "Prêmios de Atividade": "活跃度奖励",
+      "Escavar e retirar \\nautomaticamente": "自动挖掘并回收",
+      "Raid do Teste \\nShinobi de grupo": "组队忍者考试\\n扫荡"
+    }
+  }
+}

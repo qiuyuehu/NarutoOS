@@ -1,0 +1,19 @@
+#lobby-dock{max-width:calc(100% - 32px)}#lobby .lobby-start{width:auto;min-width:88px;font-size:14px;padding:0 16px;white-space:nowrap}#selection-summary{font:12px system-ui;color:var(--ink-2);margin:10px 12px;max-width:580px;max-height:95px;overflow:auto;line-height:1.7}#runtime-summary{font:12px system-ui;margin-left:12px;color:var(--ink-2)}#profile-deck .lobby-option[aria-selected=true]{background:var(--wash-2)}#profile-deck .lobby-option[aria-selected=true] .lobby-tick{opacity:1}#settings-panel{max-height:calc(100vh - 42px);overflow:auto}.preferences{padding-bottom:30px}#lobby .lobby-character{pointer-events:none}#prototype-mode{position:absolute;top:6px;left:18px;font:12px system-ui;color:#777;pointer-events:none}
+#selection-summary:empty,#runtime-summary:empty{display:none}
+#profile-deck:not([hidden]) ~ #selection-summary,#profile-deck:not([hidden]) ~ #runtime-summary{visibility:hidden}
+
+/* Keep optional batch details outside the dock's intrinsic height. */
+#selection-summary{position:absolute;bottom:calc(100% + 12px);left:0;width:100%;margin:0;max-height:95px}
+#runtime-summary{position:absolute;top:calc(100% + 12px);left:12px;margin:0;white-space:nowrap}
+/* Keep runtime and batch details above the wordmark, clear of launch errors below. */
+#selection-summary{bottom:calc(100% + 36px)}
+#runtime-summary{top:auto;bottom:calc(100% + 12px)}
+
+/* Keep this personal launcher quiet; retain labels and actionable confirmation UI. */
+.chrome .status,#selection-summary,#runtime-summary,#profile-choice-note,.hint,.profile-help{display:none !important}
+
+/* Keep the whole launch control proportional to the fixed-size center. */
+#lobby .lobby-dock { left:7.2%; bottom:13%; transform:scale(var(--dock-scale,1)); transform-origin:left bottom; }
+#lobby.leaving .lobby-dock { transform:translateY(8px) scale(var(--dock-scale,1)); }
+html:not([data-center-settings="true"]) .chrome { border-bottom:0; box-shadow:none; }
+#localization-detail { display:block !important; }

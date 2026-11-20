@@ -1,0 +1,2527 @@
+{
+  "ui.new_login_profile": {
+    "zh-CN": "新建登录档案",
+    "en": "New login profile",
+    "pt-BR": "Novo perfil de login"
+  },
+  "ui.edit_login_profile": {
+    "zh-CN": "编辑登录档案",
+    "en": "Edit login profile",
+    "pt-BR": "Editar perfil de login"
+  },
+  "ui.profile_name": {
+    "zh-CN": "档案名称",
+    "en": "Profile name",
+    "pt-BR": "Nome do perfil"
+  },
+  "ui.usual_server_note_reminder_only": {
+    "zh-CN": "常用区服备注（仅供提醒）",
+    "en": "Usual server note (reminder only)",
+    "pt-BR": "Servidor habitual (apenas lembrete)"
+  },
+  "ui.create": {
+    "zh-CN": "创建",
+    "en": "Create",
+    "pt-BR": "Criar"
+  },
+  "common.save": {
+    "zh-CN": "保存",
+    "en": "Save",
+    "pt-BR": "Salvar"
+  },
+  "ui.delete_login_profile": {
+    "zh-CN": "删除登录档案",
+    "en": "Delete login profile",
+    "pt-BR": "Excluir perfil de login"
+  },
+  "ui.delete_local_cookies_website_data_and_login": {
+    "zh-CN": "将清除{p0}「{p1}」在本机保存的 Cookie、网站数据和会话登录快照。不会注销官网账号，已保存的密码会保留。此操作无法撤销。",
+    "en": "Delete local cookies, website data and login snapshots for “{p1}” on {p0}? The website account and saved passwords will remain. This cannot be undone.",
+    "pt-BR": "Excluir cookies, dados de sites e sessões locais de “{p1}” em {p0}? A conta no site e as senhas salvas serão mantidas. Esta ação é irreversível."
+  },
+  "ui.delete_profile": {
+    "zh-CN": "删除档案",
+    "en": "Delete profile",
+    "pt-BR": "Excluir perfil"
+  },
+  "ui.login_identity_needs_confirmation": {
+    "zh-CN": "登录身份待自行确认",
+    "en": "Login identity needs confirmation",
+    "pt-BR": "Identidade de login a confirmar"
+  },
+  "ui.usual_server": {
+    "zh-CN": "常用区服：{p0}",
+    "en": "Usual server: {p0}",
+    "pt-BR": "Servidor habitual: {p0}"
+  },
+  "ui.cleaning_up": {
+    "zh-CN": "正在清理…",
+    "en": "Cleaning up…",
+    "pt-BR": "Limpando…"
+  },
+  "ui.cleanup_incomplete_click_to_retry": {
+    "zh-CN": "清理未完成 · 点击重试清理",
+    "en": "Cleanup incomplete · Click to retry",
+    "pt-BR": "Limpeza incompleta · Clique para tentar novamente"
+  },
+  "ui.no_server_note": {
+    "zh-CN": "区服备注未设置",
+    "en": "No server note",
+    "pt-BR": "Sem nota de servidor"
+  },
+  "ui.cleaning": {
+    "zh-CN": "清理中…",
+    "en": "Cleaning…",
+    "pt-BR": "Limpando…"
+  },
+  "ui.retry_cleanup": {
+    "zh-CN": "重试清理",
+    "en": "Retry cleanup",
+    "pt-BR": "Repetir limpeza"
+  },
+  "ui.edit": {
+    "zh-CN": "编辑",
+    "en": "Edit",
+    "pt-BR": "Editar"
+  },
+  "ui.delete": {
+    "zh-CN": "删除",
+    "en": "Delete",
+    "pt-BR": "Excluir"
+  },
+  "ui.no_login_profiles_yet": {
+    "zh-CN": "还没有登录档案",
+    "en": "No login profiles yet",
+    "pt-BR": "Nenhum perfil de login"
+  },
+  "ui.open_account_profile": {
+    "zh-CN": "打开账号档案",
+    "en": "Open account profile",
+    "pt-BR": "Abrir perfil de conta"
+  },
+  "ui.select_login_profile": {
+    "zh-CN": "选择登录档案",
+    "en": "Select login profile",
+    "pt-BR": "Selecionar perfil de login"
+  },
+  "ui.each_profile_keeps_its_own_login_session": {
+    "zh-CN": "{p0} · 每个档案保留独立登录状态",
+    "en": "{p0} · Each profile keeps its own login session",
+    "pt-BR": "{p0} · Cada perfil mantém sua própria sessão"
+  },
+  "ui.reading_local_login_profiles_and_old_slots": {
+    "zh-CN": "正在读取本地登录档案和历史槽位…",
+    "en": "Reading local login profiles and old slots…",
+    "pt-BR": "Lendo perfis locais e espaços antigos…"
+  },
+  "ui.selected": {
+    "zh-CN": " · 当前选择",
+    "en": " · Selected",
+    "pt-BR": " · Selecionado"
+  },
+  "ui.cleanup_incomplete_retry_in_settings": {
+    "zh-CN": "清理未完成，请在设置中重试",
+    "en": "Cleanup incomplete. Retry in Settings.",
+    "pt-BR": "Limpeza incompleta. Tente novamente nos Ajustes."
+  },
+  "ui.select": {
+    "zh-CN": "选择",
+    "en": "Select",
+    "pt-BR": "Selecionar"
+  },
+  "ui.open": {
+    "zh-CN": "打开",
+    "en": "Open",
+    "pt-BR": "Abrir"
+  },
+  "ui.no_login_profiles_in_this_region_yet": {
+    "zh-CN": "这个地区还没有登录档案",
+    "en": "No login profiles in this region yet",
+    "pt-BR": "Nenhum perfil de login nesta região"
+  },
+  "ui.double_click_to_edit_note": {
+    "zh-CN": "{p0} · {p1}{p2} · 双击修改备注",
+    "en": "{p0} · {p1}{p2} · Double-click to edit note",
+    "pt-BR": "{p0} · {p1}{p2} · Clique duas vezes para editar a nota"
+  },
+  "ui.game": {
+    "zh-CN": "游戏 {p0}",
+    "en": "Game {p0}",
+    "pt-BR": "Jogo {p0}"
+  },
+  "ui.tab_note": {
+    "zh-CN": " · 标签备注：{p0}",
+    "en": " · Tab note: {p0}",
+    "pt-BR": " · Nota da aba: {p0}"
+  },
+  "ui.close_tab": {
+    "zh-CN": "关闭标签",
+    "en": "Close tab",
+    "pt-BR": "Fechar aba"
+  },
+  "ui.close": {
+    "zh-CN": "关闭{p0}",
+    "en": "Close {p0}",
+    "pt-BR": "Fechar {p0}"
+  },
+  "ui.cancel_recovery_before_closing_the_original_game": {
+    "zh-CN": "请先取消恢复，再关闭原游戏",
+    "en": "Cancel recovery before closing the original game",
+    "pt-BR": "Cancele a recuperação antes de fechar o jogo original"
+  },
+  "ui.loading": {
+    "zh-CN": "正在加载…",
+    "en": "Loading…",
+    "pt-BR": "Carregando…"
+  },
+  "ui.load_failed": {
+    "zh-CN": "加载失败",
+    "en": "Load failed",
+    "pt-BR": "Falha ao carregar"
+  },
+  "ui.display_stopped": {
+    "zh-CN": "画面已停止",
+    "en": "Display stopped",
+    "pt-BR": "A imagem parou"
+  },
+  "ui.getting_game_entry": {
+    "zh-CN": "正在获取游戏入口…",
+    "en": "Getting game entry…",
+    "pt-BR": "Obtendo acesso ao jogo…"
+  },
+  "ui.re_entering": {
+    "zh-CN": "正在重新进入…",
+    "en": "Re-entering…",
+    "pt-BR": "Entrando novamente…"
+  },
+  "ui.please_confirm_the_new_game": {
+    "zh-CN": "请确认新游戏",
+    "en": "Please confirm the new game",
+    "pt-BR": "Confirme o novo jogo"
+  },
+  "ui.unmute_all_m": {
+    "zh-CN": "取消总静音 ⇧⌘M",
+    "en": "Unmute all ⇧⌘M",
+    "pt-BR": "Ativar som geral ⇧⌘M"
+  },
+  "ui.mute_all_m": {
+    "zh-CN": "总静音 ⇧⌘M",
+    "en": "Mute all ⇧⌘M",
+    "pt-BR": "Silenciar tudo ⇧⌘M"
+  },
+  "ui.brazil_saved_applies_after_restarting_the_app": {
+    "zh-CN": "巴西服 · 已保存，重启应用后生效",
+    "en": "Brazil · Saved; applies after restarting the app",
+    "pt-BR": "Brasil · Salvo; aplicado após reiniciar o app"
+  },
+  "ui.brazil_applies_after_restarting_the_app": {
+    "zh-CN": "巴西服 · 重启应用后生效",
+    "en": "Brazil · Applies after restarting the app",
+    "pt-BR": "Brasil · Aplicado após reiniciar o app"
+  },
+  "ui.the_password_for_in_keychain": {
+    "zh-CN": "{p0} {p1} 的密码到钥匙串？",
+    "en": "{p0} the password for {p1} in Keychain?",
+    "pt-BR": "{p0} a senha de {p1} nas Chaves?"
+  },
+  "ui.update": {
+    "zh-CN": "更新",
+    "en": "Update",
+    "pt-BR": "Atualizar"
+  },
+  "ui.game_display_stopped": {
+    "zh-CN": "游戏画面已停止",
+    "en": "Game display stopped",
+    "pt-BR": "A imagem do jogo parou"
+  },
+  "ui.game_page_failed_to_load": {
+    "zh-CN": "游戏页面加载失败",
+    "en": "Game page failed to load",
+    "pt-BR": "Falha ao carregar a página do jogo"
+  },
+  "ui.re_enter_the_game_to_get_a": {
+    "zh-CN": "可以重新进入游戏获取新的登录入口。",
+    "en": "Re-enter the game to get a new login entry.",
+    "pt-BR": "Entre novamente no jogo para obter um novo acesso."
+  },
+  "ui.refresh_the_page_and_try_again": {
+    "zh-CN": "请刷新页面重试。",
+    "en": "Refresh the page and try again.",
+    "pt-BR": "Atualize a página e tente novamente."
+  },
+  "ui.component_not_ready": {
+    "zh-CN": "组件尚未准备",
+    "en": "Component not ready",
+    "pt-BR": "Componente indisponível"
+  },
+  "ui.applies_on_next_launch": {
+    "zh-CN": "下次启动生效",
+    "en": "Applies on next launch",
+    "pt-BR": "Aplicado na próxima abertura"
+  },
+  "ui.reading": {
+    "zh-CN": "读取中…",
+    "en": "Reading…",
+    "pt-BR": "Lendo…"
+  },
+  "ui.no_accounts_yet": {
+    "zh-CN": "暂无账号",
+    "en": "No accounts yet",
+    "pt-BR": "Nenhuma conta"
+  },
+  "ui.update_saved_password": {
+    "zh-CN": "更新已保存密码？",
+    "en": "Update saved password?",
+    "pt-BR": "Atualizar senha salva?"
+  },
+  "ui.already_has_a_record_on_confirm_to": {
+    "zh-CN": "“{p0}”在{p1}已有记录。确认后会用当前输入替换旧密码。",
+    "en": "“{p0}” already has a record on {p1}. Confirm to replace its password with the one entered.",
+    "pt-BR": "“{p0}” já tem um registro em {p1}. Confirme para substituir a senha pela informada."
+  },
+  "ui.confirm_update": {
+    "zh-CN": "确认更新",
+    "en": "Confirm update",
+    "pt-BR": "Confirmar atualização"
+  },
+  "common.cancel": {
+    "zh-CN": "取消",
+    "en": "Cancel",
+    "pt-BR": "Cancelar"
+  },
+  "ui.this_password_record_changed_while_you_were": {
+    "zh-CN": "这条密码记录在确认期间发生了变化。请再次确认是否用当前输入覆盖。",
+    "en": "This password record changed while you were confirming. Confirm again to replace it with the entered password.",
+    "pt-BR": "Este registro foi alterado durante a confirmação. Confirme novamente para substituí-lo pela senha informada."
+  },
+  "ui.the_original_record_was_deleted_cancel_and": {
+    "zh-CN": "原记录已被删除，请取消后重新新增。",
+    "en": "The original record was deleted. Cancel and add it again.",
+    "pt-BR": "O registro original foi excluído. Cancele e adicione novamente."
+  },
+  "ui.this_site_already_has_the_same_password": {
+    "zh-CN": "该网站已保存相同密码",
+    "en": "This site already has the same password saved",
+    "pt-BR": "Este site já tem a mesma senha salva"
+  },
+  "ui.password_updated": {
+    "zh-CN": "密码已更新",
+    "en": "Password updated",
+    "pt-BR": "Senha atualizada"
+  },
+  "ui.no_login_sites_are_available_for_adding": {
+    "zh-CN": "当前没有可新增密码的登录站点",
+    "en": "No login sites are available for adding a password",
+    "pt-BR": "Nenhum site de login disponível para adicionar senha"
+  },
+  "ui.add_saved_password": {
+    "zh-CN": "新增已保存密码",
+    "en": "Add saved password",
+    "pt-BR": "Adicionar senha salva"
+  },
+  "ui.username": {
+    "zh-CN": "用户名",
+    "en": "Username",
+    "pt-BR": "Nome de usuário"
+  },
+  "ui.this_site": {
+    "zh-CN": "该网站",
+    "en": "this site",
+    "pt-BR": "este site"
+  },
+  "ui.password_records_changed_reopen_the_form": {
+    "zh-CN": "密码记录已变化，请重新打开新增表单",
+    "en": "Password records changed. Reopen the form.",
+    "pt-BR": "Os registros de senha mudaram. Reabra o formulário."
+  },
+  "ui.saved_to_macos_keychain": {
+    "zh-CN": "已保存到 macOS 钥匙串",
+    "en": "Saved to macOS Keychain",
+    "pt-BR": "Salvo nas Chaves do macOS"
+  },
+  "ui.show": {
+    "zh-CN": "查看",
+    "en": "Show",
+    "pt-BR": "Mostrar"
+  },
+  "ui.hide": {
+    "zh-CN": "隐藏",
+    "en": "Hide",
+    "pt-BR": "Ocultar"
+  },
+  "ui.modify": {
+    "zh-CN": "修改",
+    "en": "Modify",
+    "pt-BR": "Alterar"
+  },
+  "ui.edit_saved_account": {
+    "zh-CN": "修改已保存的账号",
+    "en": "Edit saved account",
+    "pt-BR": "Editar conta salva"
+  },
+  "ui.account": {
+    "zh-CN": "账号",
+    "en": "Account",
+    "pt-BR": "Conta"
+  },
+  "ui.delete_this_saved_account": {
+    "zh-CN": "删除这个已保存账号？",
+    "en": "Delete this saved account?",
+    "pt-BR": "Excluir esta conta salva?"
+  },
+  "ui.usual_server_note": {
+    "zh-CN": "常用区服备注",
+    "en": "Usual server note",
+    "pt-BR": "Nota do servidor habitual"
+  },
+  "ui.tab_note_75": {
+    "zh-CN": "标签备注",
+    "en": "Tab note",
+    "pt-BR": "Nota da aba"
+  },
+  "ui.note_leave_blank_for_default": {
+    "zh-CN": "备注 · 留空恢复默认",
+    "en": "Note · Leave blank for default",
+    "pt-BR": "Nota · Deixe em branco para usar o padrão"
+  },
+  "ui.version_mit_license": {
+    "zh-CN": "版本 {p0} · MIT 许可",
+    "en": "Version {p0} · MIT License",
+    "pt-BR": "Versão {p0} · Licença MIT"
+  },
+  "ui.paper_white": {
+    "zh-CN": "纸白",
+    "en": "Paper white",
+    "pt-BR": "Branco papel"
+  },
+  "ui.rice_paper": {
+    "zh-CN": "宣纸",
+    "en": "Rice paper",
+    "pt-BR": "Papel de arroz"
+  },
+  "ui.mist_gray": {
+    "zh-CN": "雾灰",
+    "en": "Mist gray",
+    "pt-BR": "Cinza névoa"
+  },
+  "ui.cherry_pink": {
+    "zh-CN": "樱粉",
+    "en": "Cherry pink",
+    "pt-BR": "Rosa cerejeira"
+  },
+  "ui.matcha": {
+    "zh-CN": "抹茶",
+    "en": "Matcha",
+    "pt-BR": "Matcha"
+  },
+  "ui.sky_blue": {
+    "zh-CN": "天青",
+    "en": "Sky blue",
+    "pt-BR": "Azul céu"
+  },
+  "ui.mustard": {
+    "zh-CN": "芥黄",
+    "en": "Mustard",
+    "pt-BR": "Mostarda"
+  },
+  "ui.slate_blue": {
+    "zh-CN": "灰蓝",
+    "en": "Slate blue",
+    "pt-BR": "Azul acinzentado"
+  },
+  "ui.ink_black": {
+    "zh-CN": "夜墨",
+    "en": "Ink black",
+    "pt-BR": "Preto tinta"
+  },
+  "ui.navy": {
+    "zh-CN": "藏青",
+    "en": "Navy",
+    "pt-BR": "Azul marinho"
+  },
+  "ui.pine_charcoal": {
+    "zh-CN": "松烟",
+    "en": "Pine charcoal",
+    "pt-BR": "Carvão de pinho"
+  },
+  "ui.current_region_click_to_switch": {
+    "zh-CN": "当前{p0}，点击切换地区",
+    "en": "Current region: {p0}. Click to switch.",
+    "pt-BR": "Região atual: {p0}. Clique para trocar."
+  },
+  "ui.current_account_click_to_switch": {
+    "zh-CN": "当前账号{p0}{p1}，点击切换账号",
+    "en": "Current account: {p0}{p1}. Click to switch.",
+    "pt-BR": "Conta atual: {p0}{p1}. Clique para trocar."
+  },
+  "ui.usual_server_91": {
+    "zh-CN": "，常用区服：{p0}",
+    "en": ", usual server: {p0}",
+    "pt-BR": ", servidor habitual: {p0}"
+  },
+  "ui.failed_to_read_login_profiles": {
+    "zh-CN": "登录档案读取失败",
+    "en": "Failed to read login profiles",
+    "pt-BR": "Falha ao ler perfis de login"
+  },
+  "ui.no_account_profiles": {
+    "zh-CN": "暂无账号档案",
+    "en": "No account profiles",
+    "pt-BR": "Nenhum perfil de conta"
+  },
+  "ui.account_profiles_are_being_cleaned_up": {
+    "zh-CN": "账号档案正在清理",
+    "en": "Account profiles are being cleaned up",
+    "pt-BR": "Os perfis estão sendo limpos"
+  },
+  "ui.start_game": {
+    "zh-CN": "开始游戏：{p0}{p1}",
+    "en": "Start game: {p0}{p1}",
+    "pt-BR": "Iniciar jogo: {p0}{p1}"
+  },
+  "ui.starting_selected_accounts": {
+    "zh-CN": "正在启动所选账号…",
+    "en": "Starting selected accounts…",
+    "pt-BR": "Iniciando contas selecionadas…"
+  },
+  "ui.reading_local_login_profiles": {
+    "zh-CN": "正在读取本地登录档案…",
+    "en": "Reading local login profiles…",
+    "pt-BR": "Lendo perfis de login locais…"
+  },
+  "ui.read_failed_please_retry": {
+    "zh-CN": "读取失败，请重试",
+    "en": "Read failed. Please retry.",
+    "pt-BR": "Falha na leitura. Tente novamente."
+  },
+  "ui.no_login_profiles_in_the_current_region": {
+    "zh-CN": "当前地区还没有登录档案",
+    "en": "No login profiles in the current region",
+    "pt-BR": "Nenhum perfil de login na região atual"
+  },
+  "ui.finish_pending_cleanup_or_create_a_new": {
+    "zh-CN": "请先完成待清理档案，或新建一个档案",
+    "en": "Finish pending cleanup or create a new profile",
+    "pt-BR": "Conclua a limpeza pendente ou crie um perfil"
+  },
+  "ui.read_failed": {
+    "zh-CN": "读取失败",
+    "en": "Read failed",
+    "pt-BR": "Falha na leitura"
+  },
+  "ui.reading_102": {
+    "zh-CN": "正在读取…",
+    "en": "Reading…",
+    "pt-BR": "Lendo…"
+  },
+  "ui.cleanup_incomplete": {
+    "zh-CN": "清理未完成",
+    "en": "Cleanup incomplete",
+    "pt-BR": "Limpeza incompleta"
+  },
+  "ui.launch_request_had_no_effect_click_again": {
+    "zh-CN": "启动请求未生效，请再点一次",
+    "en": "Launch request had no effect. Click again.",
+    "pt-BR": "A solicitação não teve efeito. Clique novamente."
+  },
+  "ui.launch_request_incomplete_please_retry": {
+    "zh-CN": "启动请求未完成，请重试",
+    "en": "Launch request incomplete. Please retry.",
+    "pt-BR": "Solicitação de abertura incompleta. Tente novamente."
+  },
+  "ui.no_response_yet_please_try_again_later": {
+    "zh-CN": "暂未响应，请稍后重试",
+    "en": "No response yet. Please try again later.",
+    "pt-BR": "Sem resposta. Tente novamente mais tarde."
+  },
+  "ui.operation_incomplete": {
+    "zh-CN": "操作未完成",
+    "en": "Operation incomplete",
+    "pt-BR": "Operação incompleta"
+  },
+  "ui.refresh": {
+    "zh-CN": "刷新",
+    "en": "Refresh",
+    "pt-BR": "Atualizar"
+  },
+  "ui.not_accepted": {
+    "zh-CN": "未接管：",
+    "en": "Not accepted: ",
+    "pt-BR": "Não aceito: "
+  },
+  "ui.profile_missing_or_being_cleaned_up": {
+    "zh-CN": "档案不存在或正在清理",
+    "en": "Profile missing or being cleaned up",
+    "pt-BR": "Perfil inexistente ou em limpeza"
+  },
+  "ui.request_not_accepted": {
+    "zh-CN": "请求未接受",
+    "en": "Request not accepted",
+    "pt-BR": "Solicitação não aceita"
+  },
+  "ui.started_accounts": {
+    "zh-CN": "已启动 {p0} 个账号",
+    "en": "Started {p0} accounts",
+    "pt-BR": "{p0} contas iniciadas"
+  },
+  "ui.the_previous_batch_is_still_starting_try": {
+    "zh-CN": "上一批账号仍在启动，请稍后重试",
+    "en": "The previous batch is still starting. Try again later.",
+    "pt-BR": "O lote anterior ainda está iniciando. Tente mais tarde."
+  },
+  "region.br": {
+    "zh-CN": "巴西服",
+    "en": "Brazil",
+    "pt-BR": "Brasil"
+  },
+  "region.cn": {
+    "zh-CN": "国服",
+    "en": "China",
+    "pt-BR": "China"
+  },
+  "ui.record_no_longer_exists": {
+    "zh-CN": "记录已不存在",
+    "en": "Record no longer exists",
+    "pt-BR": "O registro não existe mais"
+  },
+  "ui.starting": {
+    "zh-CN": "正在启动…",
+    "en": "Starting…",
+    "pt-BR": "Iniciando…"
+  },
+  "ui.launch": {
+    "zh-CN": "出发",
+    "en": "Launch",
+    "pt-BR": "Jogar"
+  },
+  "ui.starting_game": {
+    "zh-CN": "正在启动游戏",
+    "en": "Starting game",
+    "pt-BR": "Iniciando jogo"
+  },
+  "ui.launch_accounts": {
+    "zh-CN": "出发，启动 {p0} 个账号",
+    "en": "Launch {p0} accounts",
+    "pt-BR": "Iniciar {p0} contas"
+  },
+  "ui.clear_selection": {
+    "zh-CN": "清空所选",
+    "en": "Clear selection",
+    "pt-BR": "Limpar seleção"
+  },
+  "ui.host_running": {
+    "zh-CN": "宿主运行中 · ",
+    "en": "Host running · ",
+    "pt-BR": "Jogo em execução · "
+  },
+  "ui.accounts": {
+    "zh-CN": " 个账号",
+    "en": " accounts",
+    "pt-BR": " contas"
+  },
+  "ui.applies_after_restarting_the_game": {
+    "zh-CN": "重启游戏后生效",
+    "en": "Applies after restarting the game",
+    "pt-BR": "Aplicado após reiniciar o jogo"
+  },
+  "ui.once_the_new_game_works_correctly_complete": {
+    "zh-CN": "确认新游戏可以正常操作后，完成切换。",
+    "en": "Once the new game works correctly, complete the switch.",
+    "pt-BR": "Quando o novo jogo funcionar corretamente, conclua a troca."
+  },
+  "ui.cancel_recovery": {
+    "zh-CN": "取消恢复",
+    "en": "Cancel recovery",
+    "pt-BR": "Cancelar recuperação"
+  },
+  "ui.retry_save": {
+    "zh-CN": "重试保存",
+    "en": "Retry save",
+    "pt-BR": "Tentar salvar novamente"
+  },
+  "ui.the_password_for": {
+    "zh-CN": "{p0} {p1} 的密码？",
+    "en": "{p0} the password for {p1}?",
+    "pt-BR": "{p0} a senha de {p1}?"
+  },
+  "ui.queued": {
+    "zh-CN": "等待启动",
+    "en": "Queued",
+    "pt-BR": "Na fila"
+  },
+  "ui.waiting_for_login_server_selection": {
+    "zh-CN": "等待登录／选服",
+    "en": "Waiting for login / server selection",
+    "pt-BR": "Aguardando login / seleção de servidor"
+  },
+  "ui.loading_131": {
+    "zh-CN": "加载中",
+    "en": "Loading",
+    "pt-BR": "Carregando"
+  },
+  "ui.in_game": {
+    "zh-CN": "游戏中",
+    "en": "In game",
+    "pt-BR": "No jogo"
+  },
+  "ui.incomplete": {
+    "zh-CN": "未完成",
+    "en": "Incomplete",
+    "pt-BR": "Incompleto"
+  },
+  "ui.retry": {
+    "zh-CN": "重试",
+    "en": "Retry",
+    "pt-BR": "Tentar novamente"
+  },
+  "ui.close_cancel": {
+    "zh-CN": "关闭／取消 {p0}",
+    "en": "Close / cancel {p0}",
+    "pt-BR": "Fechar / cancelar {p0}"
+  },
+  "ui.invalid_startup_data_directory": {
+    "zh-CN": "启动资料目录无效",
+    "en": "Invalid startup data directory",
+    "pt-BR": "Diretório de dados de inicialização inválido"
+  },
+  "ui.naruto_os_game": {
+    "zh-CN": "Naruto OS 游戏",
+    "en": "Naruto OS Game",
+    "pt-BR": "Naruto OS Jogo"
+  },
+  "ui.flash_component_not_ready": {
+    "zh-CN": "Flash 组件未准备",
+    "en": "Flash component not ready",
+    "pt-BR": "Componente Flash indisponível"
+  },
+  "ui.installed_version": {
+    "zh-CN": "安装版",
+    "en": "Installed version",
+    "pt-BR": "Versão instalada"
+  },
+  "ui.development_version": {
+    "zh-CN": "开发版{p0}",
+    "en": "Development version{p0}",
+    "pt-BR": "Versão de desenvolvimento{p0}"
+  },
+  "ui.synthetic_save_failure": {
+    "zh-CN": "合成保存失败",
+    "en": "Synthetic save failure",
+    "pt-BR": "Falha de gravação simulada"
+  },
+  "ui.session_save_failed_keep_the_window_open": {
+    "zh-CN": "会话保存失败，请保留窗口并重试",
+    "en": "Session save failed. Keep the window open and retry.",
+    "pt-BR": "Falha ao salvar sessão. Mantenha a janela aberta e tente novamente."
+  },
+  "ui.could_not_open_the_launch_center_try": {
+    "zh-CN": "启动中心未能打开，请稍后重试",
+    "en": "Could not open the launch center. Try again later.",
+    "pt-BR": "Não foi possível abrir a central. Tente mais tarde."
+  },
+  "ui.refresh_current_page": {
+    "zh-CN": "刷新当前页面",
+    "en": "Refresh current page",
+    "pt-BR": "Atualizar página atual"
+  },
+  "ui.refresh_login_server_selection_page": {
+    "zh-CN": "刷新登录／选服页面",
+    "en": "Refresh login / server selection page",
+    "pt-BR": "Atualizar página de login / seleção de servidor"
+  },
+  "ui.re_enter_game": {
+    "zh-CN": "重新进入游戏",
+    "en": "Re-enter game",
+    "pt-BR": "Entrar novamente no jogo"
+  },
+  "ui.re_entry_queued": {
+    "zh-CN": "重新进入已排队",
+    "en": "Re-entry queued",
+    "pt-BR": "Nova entrada na fila"
+  },
+  "ui.original_game": {
+    "zh-CN": "原游戏",
+    "en": "Original game",
+    "pt-BR": "Jogo original"
+  },
+  "ui.new_game": {
+    "zh-CN": "新游戏",
+    "en": "New game",
+    "pt-BR": "Novo jogo"
+  },
+  "ui.re_entering_150": {
+    "zh-CN": "重新进入…",
+    "en": "Re-entering…",
+    "pt-BR": "Entrando novamente…"
+  },
+  "ui.selection_expired": {
+    "zh-CN": "选择已失效",
+    "en": "Selection expired",
+    "pt-BR": "Seleção expirada"
+  },
+  "ui.page_changed": {
+    "zh-CN": "页面已变化",
+    "en": "Page changed",
+    "pt-BR": "A página mudou"
+  },
+  "ui.task_ended": {
+    "zh-CN": "任务已结束",
+    "en": "Task ended",
+    "pt-BR": "Tarefa encerrada"
+  },
+  "ui.invalid_game_request": {
+    "zh-CN": "游戏请求无效",
+    "en": "Invalid game request",
+    "pt-BR": "Solicitação de jogo inválida"
+  },
+  "ui.invalid_query": {
+    "zh-CN": "查询无效",
+    "en": "Invalid query",
+    "pt-BR": "Consulta inválida"
+  },
+  "ui.recovery_incomplete_the_original_tab_was_kept": {
+    "zh-CN": "恢复未完成，原标签保留",
+    "en": "Recovery incomplete. The original tab was kept.",
+    "pt-BR": "Recuperação incompleta. A aba original foi mantida."
+  },
+  "ui.profile_changed": {
+    "zh-CN": "档案已变化",
+    "en": "Profile changed",
+    "pt-BR": "O perfil mudou"
+  },
+  "ui.game_page_timed_out_and_is_still": {
+    "zh-CN": "游戏页面加载超时，仍在尝试加载，请稍候",
+    "en": "Game page timed out and is still loading. Please wait.",
+    "pt-BR": "A página excedeu o tempo e continua carregando. Aguarde."
+  },
+  "ui.this_account_could_not_start_close_it": {
+    "zh-CN": "该账号未能启动，可关闭后从启动中心重试",
+    "en": "This account could not start. Close it and retry from the launch center.",
+    "pt-BR": "Esta conta não iniciou. Feche e tente novamente pela central."
+  },
+  "ui.profile_is_busy": {
+    "zh-CN": "档案忙碌",
+    "en": "Profile is busy",
+    "pt-BR": "Perfil em uso"
+  },
+  "ui.this_window_lost_control_of_the_game": {
+    "zh-CN": "当前窗口已失去游戏接管，请从启动中心重新进入",
+    "en": "This window lost control of the game. Re-enter from the launch center.",
+    "pt-BR": "Esta janela perdeu o controle do jogo. Entre novamente pela central."
+  },
+  "ui.reconnecting_existing_games_can_keep_running": {
+    "zh-CN": "正在重新连接，已有游戏可继续运行",
+    "en": "Reconnecting. Existing games can keep running.",
+    "pt-BR": "Reconectando. Os jogos abertos podem continuar."
+  },
+  "ui.ok": {
+    "zh-CN": "知道了",
+    "en": "OK",
+    "pt-BR": "OK"
+  },
+  "ui.password_saved": {
+    "zh-CN": "密码已保存",
+    "en": "Password saved",
+    "pt-BR": "Senha salva"
+  },
+  "ui.password_not_saved_retry_or_skip_for": {
+    "zh-CN": "密码未保存，可重试或暂不保存",
+    "en": "Password not saved. Retry or skip for now.",
+    "pt-BR": "Senha não salva. Tente novamente ou ignore por enquanto."
+  },
+  "ui.muted": {
+    "zh-CN": "已静音",
+    "en": "Muted",
+    "pt-BR": "Som desativado"
+  },
+  "ui.unmuted": {
+    "zh-CN": "已取消静音",
+    "en": "Unmuted",
+    "pt-BR": "Som ativado"
+  },
+  "ui.about_naruto_os_game": {
+    "zh-CN": "关于 Naruto OS 游戏",
+    "en": "About Naruto OS Game",
+    "pt-BR": "Sobre o Naruto OS Jogo"
+  },
+  "ui.open_launch_center": {
+    "zh-CN": "打开启动中心",
+    "en": "Open launch center",
+    "pt-BR": "Abrir central de inicialização"
+  },
+  "ui.settings": {
+    "zh-CN": "设置…",
+    "en": "Settings…",
+    "pt-BR": "Ajustes…"
+  },
+  "ui.toggle_full_screen": {
+    "zh-CN": "切换全屏",
+    "en": "Toggle full screen",
+    "pt-BR": "Alternar tela cheia"
+  },
+  "ui.quit_all_games": {
+    "zh-CN": "退出全部游戏",
+    "en": "Quit all games",
+    "pt-BR": "Sair de todos os jogos"
+  },
+  "ui.quit_all_games_173": {
+    "zh-CN": "确定退出全部游戏？",
+    "en": "Quit all games?",
+    "pt-BR": "Sair de todos os jogos?"
+  },
+  "ui.quit": {
+    "zh-CN": "退出",
+    "en": "Quit",
+    "pt-BR": "Sair"
+  },
+  "ui.session_has_not_been_saved_retry_saving": {
+    "zh-CN": "会话尚未保存，请重试保存并退出",
+    "en": "Session has not been saved. Retry saving and quit.",
+    "pt-BR": "A sessão não foi salva. Tente salvar e sair novamente."
+  },
+  "ui.session_has_not_been_saved": {
+    "zh-CN": "会话尚未保存",
+    "en": "Session has not been saved",
+    "pt-BR": "A sessão não foi salva"
+  },
+  "ui.check_keychain_access_then_click_retry_save": {
+    "zh-CN": "请检查钥匙串访问后，点击“重试保存并退出”或再次关闭窗口。",
+    "en": "Check Keychain access, then click “Retry save and quit” or close the window again.",
+    "pt-BR": "Verifique o acesso às Chaves e clique em “Salvar e sair novamente” ou feche a janela outra vez."
+  },
+  "ui.keep_window_open": {
+    "zh-CN": "保留窗口",
+    "en": "Keep window open",
+    "pt-BR": "Manter janela aberta"
+  },
+  "error.coreTimeout": {
+    "zh-CN": "核心连接超时",
+    "en": "Core connection timed out",
+    "pt-BR": "A conexão com o núcleo expirou"
+  },
+  "ui.message_too_large": {
+    "zh-CN": "消息过大",
+    "en": "Message too large",
+    "pt-BR": "Mensagem grande demais"
+  },
+  "ui.core_did_not_accept_the_request": {
+    "zh-CN": "核心未接受请求",
+    "en": "Core did not accept the request",
+    "pt-BR": "O núcleo não aceitou a solicitação"
+  },
+  "error.coreClosed": {
+    "zh-CN": "核心连接已结束",
+    "en": "Core connection ended",
+    "pt-BR": "A conexão com o núcleo terminou"
+  },
+  "ui.naruto_online": {
+    "zh-CN": "火影忍者 Online",
+    "en": "Naruto Online",
+    "pt-BR": "Naruto Online"
+  },
+  "ui.file_downloads_are_not_supported_yet": {
+    "zh-CN": "暂不支持文件下载",
+    "en": "File downloads are not supported yet",
+    "pt-BR": "Downloads de arquivos ainda indisponíveis"
+  },
+  "ui.game_entry_returned_http_403_during_recovery": {
+    "zh-CN": "游戏入口返回根路径 403；这是恢复阶段信号，不代表已确认故障原因，可尝试“重新获取游戏入口”",
+    "en": "Game entry returned HTTP 403 during recovery. Try getting a new game entry.",
+    "pt-BR": "O acesso ao jogo retornou HTTP 403 durante a recuperação. Tente obter um novo acesso."
+  },
+  "ui.this_link_cannot_be_opened_as_a": {
+    "zh-CN": "此链接不是网页，无法在启动器内打开",
+    "en": "This link cannot be opened as a web page in the launcher",
+    "pt-BR": "Este link não pode ser aberto como página no inicializador"
+  },
+  "ui.resource_bridge_initialization_failed": {
+    "zh-CN": "实验资源桥初始化失败",
+    "en": "Resource bridge initialization failed",
+    "pt-BR": "Falha ao iniciar a ponte de recursos"
+  },
+  "ui.direct_game_session_initialization_failed": {
+    "zh-CN": "游戏直连测试会话初始化失败",
+    "en": "Direct game session initialization failed",
+    "pt-BR": "Falha ao iniciar a sessão direta do jogo"
+  },
+  "ui.developer_tools_will_open_with_the_next": {
+    "zh-CN": "下次打开游戏时将自动打开开发者工具",
+    "en": "Developer tools will open with the next game",
+    "pt-BR": "As ferramentas de desenvolvedor abrirão no próximo jogo"
+  },
+  "ui.automatic_developer_tools_opening_cancelled": {
+    "zh-CN": "已取消下次自动打开开发者工具",
+    "en": "Automatic developer tools opening cancelled",
+    "pt-BR": "Abertura automática das ferramentas cancelada"
+  },
+  "ui.the_new_game_page_failed_to_load": {
+    "zh-CN": "新游戏页面随后加载失败，原游戏标签仍保留；可重新获取入口",
+    "en": "The new game page failed to load. The original tab remains; get a new entry to retry.",
+    "pt-BR": "A nova página falhou ao carregar. A aba original foi mantida; obtenha um novo acesso."
+  },
+  "ui.the_new_game_tab_closed_the_original": {
+    "zh-CN": "新游戏标签已关闭，原游戏标签仍保留",
+    "en": "The new game tab closed. The original tab remains.",
+    "pt-BR": "A nova aba foi fechada. A aba original foi mantida."
+  },
+  "ui.getting_a_new_game_entry": {
+    "zh-CN": "重新获取游戏入口…",
+    "en": "Getting a new game entry…",
+    "pt-BR": "Obtendo um novo acesso ao jogo…"
+  },
+  "ui.the_previous_login_or_recovery_is_ending": {
+    "zh-CN": "上一项登录或恢复流程正在结束，请稍后重试",
+    "en": "The previous login or recovery is ending. Try again shortly.",
+    "pt-BR": "O login ou a recuperação anterior está encerrando. Tente em instantes."
+  },
+  "ui.another_account_is_logging_in_or_recovering": {
+    "zh-CN": "另一个账号正在登录或恢复，请先完成或取消当前流程",
+    "en": "Another account is logging in or recovering. Finish or cancel it first.",
+    "pt-BR": "Outra conta está entrando ou recuperando. Conclua ou cancele primeiro."
+  },
+  "ui.could_not_reuse_this_game_session_the": {
+    "zh-CN": "无法沿用当前游戏会话；原游戏标签仍保留",
+    "en": "Could not reuse this game session. The original tab remains.",
+    "pt-BR": "Não foi possível reutilizar a sessão. A aba original foi mantida."
+  },
+  "ui.could_not_keep_this_account_session_the": {
+    "zh-CN": "无法保留当前账号会话；原游戏标签仍保留",
+    "en": "Could not keep this account session. The original tab remains.",
+    "pt-BR": "Não foi possível manter a sessão desta conta. A aba original foi mantida."
+  },
+  "ui.the_login_server_page_returned_follow_its": {
+    "zh-CN": "官网登录/选服页返回 {p0}；请按页面提示重新登录或选择区服，取消后原游戏标签仍保留",
+    "en": "The login / server page returned {p0}. Follow its instructions to log in or choose a server. Cancelling keeps the original tab.",
+    "pt-BR": "A página de login / servidor retornou {p0}. Siga as instruções para entrar ou escolher um servidor. Cancelar mantém a aba original."
+  },
+  "ui.the_website_returned_check_the_network_and": {
+    "zh-CN": "官网返回 {p0}，可检查网络后手动刷新",
+    "en": "The website returned {p0}. Check the network and refresh manually.",
+    "pt-BR": "O site retornou {p0}. Verifique a rede e atualize manualmente."
+  },
+  "ui.the_new_game_did_not_start_successfully": {
+    "zh-CN": "新游戏页面未成功启动，原游戏标签仍保留；可检查网络后重试",
+    "en": "The new game did not start successfully. The original tab remains; check the network and retry.",
+    "pt-BR": "O novo jogo não iniciou. A aba original foi mantida; verifique a rede e tente novamente."
+  },
+  "ui.getting_a_new_entry_did_not_complete": {
+    "zh-CN": "重新获取游戏入口未完成；原游戏标签仍保留，可再次尝试或取消",
+    "en": "Getting a new entry did not complete. The original tab remains; retry or cancel.",
+    "pt-BR": "Não foi possível obter um novo acesso. A aba original foi mantida; tente novamente ou cancele."
+  },
+  "ui.brazil_login_incomplete_reopen_the_login_window": {
+    "zh-CN": "巴西服登录未完成，请重新打开登录窗口",
+    "en": "Brazil login incomplete. Reopen the login window.",
+    "pt-BR": "Login do Brasil incompleto. Reabra a janela de login."
+  },
+  "ui.about_naruto_os": {
+    "zh-CN": "关于 Naruto OS",
+    "en": "About Naruto OS",
+    "pt-BR": "Sobre o Naruto OS"
+  },
+  "ui.close_launch_center": {
+    "zh-CN": "关闭启动中心",
+    "en": "Close launch center",
+    "pt-BR": "Fechar central de inicialização"
+  },
+  "ui.quit_launch_center": {
+    "zh-CN": "退出启动中心",
+    "en": "Quit launch center",
+    "pt-BR": "Sair da central de inicialização"
+  },
+  "ui.cut": {
+    "zh-CN": "剪切",
+    "en": "Cut",
+    "pt-BR": "Recortar"
+  },
+  "ui.copy": {
+    "zh-CN": "复制",
+    "en": "Copy",
+    "pt-BR": "Copiar"
+  },
+  "ui.paste": {
+    "zh-CN": "粘贴",
+    "en": "Paste",
+    "pt-BR": "Colar"
+  },
+  "ui.select_all": {
+    "zh-CN": "全选",
+    "en": "Select all",
+    "pt-BR": "Selecionar tudo"
+  },
+  "ui.operation_incomplete_refresh_and_retry": {
+    "zh-CN": "操作未完成，请刷新后重试",
+    "en": "Operation incomplete. Refresh and retry.",
+    "pt-BR": "Operação incompleta. Atualize e tente novamente."
+  },
+  "ui.not_started": {
+    "zh-CN": "未启动",
+    "en": "Not started",
+    "pt-BR": "Não iniciado"
+  },
+  "ui.there_are_unfinished_edits_or_saves_close": {
+    "zh-CN": "还有未完成的编辑或保存，确定关闭启动中心？",
+    "en": "There are unfinished edits or saves. Close the launch center?",
+    "pt-BR": "Há edições ou gravações pendentes. Fechar a central?"
+  },
+  "ui.continue_editing": {
+    "zh-CN": "继续编辑",
+    "en": "Continue editing",
+    "pt-BR": "Continuar editando"
+  },
+  "ui.close_214": {
+    "zh-CN": "关闭",
+    "en": "Close",
+    "pt-BR": "Fechar"
+  },
+  "ui.naruto_os_could_not_start": {
+    "zh-CN": "Naruto OS 未能启动",
+    "en": "Naruto OS could not start",
+    "pt-BR": "Não foi possível iniciar o Naruto OS"
+  },
+  "ui.check_the_app_and_startup_data_then": {
+    "zh-CN": "请检查应用和启动资料后重试",
+    "en": "Check the app and startup data, then retry",
+    "pt-BR": "Verifique o app e os dados de inicialização e tente novamente"
+  },
+  "ui.only_isolated_prototype_directories_are_allowed": {
+    "zh-CN": "仅允许原型隔离目录",
+    "en": "Only isolated prototype directories are allowed",
+    "pt-BR": "Somente diretórios isolados do protótipo são permitidos"
+  },
+  "ui.the_isolated_path_must_not_contain_links": {
+    "zh-CN": "隔离路径不可含链接或跳转",
+    "en": "The isolated path must not contain links or redirects",
+    "pt-BR": "O caminho isolado não pode conter links ou redirecionamentos"
+  },
+  "ui.management_data_is_damaged_the_original_file": {
+    "zh-CN": "管理资料损坏，保留原文件",
+    "en": "Management data is damaged. The original file was kept.",
+    "pt-BR": "Os dados de gerenciamento estão corrompidos. O arquivo original foi mantido."
+  },
+  "ui.brazil_account": {
+    "zh-CN": "巴西服账号",
+    "en": "Brazil account",
+    "pt-BR": "Conta do Brasil"
+  },
+  "ui.china_account": {
+    "zh-CN": "国服账号",
+    "en": "China account",
+    "pt-BR": "Conta da China"
+  },
+  "ui.invalid_historical_batch_id_original_records_were": {
+    "zh-CN": "历史批次ID无效，原记录保留",
+    "en": "Invalid historical batch ID. Original records were kept.",
+    "pt-BR": "ID de lote histórico inválido. Os registros originais foram mantidos."
+  },
+  "ui.invalid_batch_id": {
+    "zh-CN": "批次ID无效",
+    "en": "Invalid batch ID",
+    "pt-BR": "ID de lote inválido"
+  },
+  "ui.could_not_read_batch_receipt": {
+    "zh-CN": "批次收据读取失败",
+    "en": "Could not read batch receipt",
+    "pt-BR": "Falha ao ler recibo do lote"
+  },
+  "ui.close_this_account_s_game_login_or": {
+    "zh-CN": "请先关闭该账号的游戏／登录／排队任务",
+    "en": "Close this account's game, login or queued tasks first",
+    "pt-BR": "Feche primeiro o jogo, login ou tarefas na fila desta conta"
+  },
+  "ui.authentication_or_protocol_failed": {
+    "zh-CN": "认证或协议失败",
+    "en": "Authentication or protocol failed",
+    "pt-BR": "Falha de autenticação ou protocolo"
+  },
+  "error.preferenceConflict": {
+    "zh-CN": "配置版本已变化",
+    "en": "Configuration revision changed",
+    "pt-BR": "A versão da configuração mudou"
+  },
+  "ui.missing_field": {
+    "zh-CN": "无字段",
+    "en": "Missing field",
+    "pt-BR": "Campo ausente"
+  },
+  "ui.missing_field_value": {
+    "zh-CN": "无字段值",
+    "en": "Missing field value",
+    "pt-BR": "Valor do campo ausente"
+  },
+  "ui.invalid_import_request_or_reconciliation_state": {
+    "zh-CN": "导入请求或对账状态无效",
+    "en": "Invalid import request or reconciliation state",
+    "pt-BR": "Solicitação de importação ou estado de conciliação inválido"
+  },
+  "ui.import_request_id_conflict": {
+    "zh-CN": "导入请求ID冲突",
+    "en": "Import request ID conflict",
+    "pt-BR": "Conflito de ID de importação"
+  },
+  "ui.invalid_import_format_or_revision": {
+    "zh-CN": "导入资料格式或版本无效",
+    "en": "Invalid import format or revision",
+    "pt-BR": "Formato ou versão da importação inválido"
+  },
+  "ui.imported_slot_is_duplicate_deleted_or_invalid": {
+    "zh-CN": "导入槽位重复、已删除或无效",
+    "en": "Imported slot is duplicate, deleted or invalid",
+    "pt-BR": "Espaço importado duplicado, excluído ou inválido"
+  },
+  "ui.imported_profile_is_being_cleaned_up": {
+    "zh-CN": "导入档案正在清理",
+    "en": "Imported profile is being cleaned up",
+    "pt-BR": "O perfil importado está sendo limpo"
+  },
+  "ui.invalid_request_id_or_reconciliation_state": {
+    "zh-CN": "请求ID或对账状态无效",
+    "en": "Invalid request ID or reconciliation state",
+    "pt-BR": "ID de solicitação ou estado de conciliação inválido"
+  },
+  "ui.request_id_conflict": {
+    "zh-CN": "请求ID冲突",
+    "en": "Request ID conflict",
+    "pt-BR": "Conflito de ID de solicitação"
+  },
+  "error.profileConflict": {
+    "zh-CN": "档案已更新，请重试",
+    "en": "Profiles changed. Please retry.",
+    "pt-BR": "Os perfis mudaram. Tente novamente."
+  },
+  "ui.invalid_region": {
+    "zh-CN": "地区无效",
+    "en": "Invalid region",
+    "pt-BR": "Região inválida"
+  },
+  "ui.profile_no_longer_exists": {
+    "zh-CN": "档案已不存在",
+    "en": "Profile no longer exists",
+    "pt-BR": "O perfil não existe mais"
+  },
+  "ui.cleanup_is_not_finished": {
+    "zh-CN": "清理尚未完成",
+    "en": "Cleanup is not finished",
+    "pt-BR": "A limpeza ainda não terminou"
+  },
+  "ui.this_profile_has_game_login_or_queued": {
+    "zh-CN": "该档案有游戏、登录或排队任务，请先关闭",
+    "en": "This profile has game, login or queued tasks. Close them first.",
+    "pt-BR": "Este perfil tem jogo, login ou tarefas na fila. Feche-os primeiro."
+  },
+  "ui.insufficient_permissions": {
+    "zh-CN": "权限不足",
+    "en": "Insufficient permissions",
+    "pt-BR": "Permissões insuficientes"
+  },
+  "ui.missing_batch_id": {
+    "zh-CN": "无批次ID",
+    "en": "Missing batch ID",
+    "pt-BR": "ID de lote ausente"
+  },
+  "ui.invalid_launch_parameters_or_reconciliation_state": {
+    "zh-CN": "启动参数或对账状态无效",
+    "en": "Invalid launch parameters or reconciliation state",
+    "pt-BR": "Parâmetros de abertura ou estado de conciliação inválido"
+  },
+  "ui.request_id_was_reused": {
+    "zh-CN": "请求ID重复使用",
+    "en": "Request ID was reused",
+    "pt-BR": "ID de solicitação reutilizado"
+  },
+  "ui.host_identity_or_window_is_not_ready": {
+    "zh-CN": "宿主身份或窗口未就绪",
+    "en": "Host identity or window is not ready",
+    "pt-BR": "A identidade ou janela do jogo não está pronta"
+  },
+  "error.staleHost": {
+    "zh-CN": "过期宿主实例",
+    "en": "Stale host instance",
+    "pt-BR": "Instância do jogo expirada"
+  },
+  "ui.initial_takeover_window_is_not_visible": {
+    "zh-CN": "首次接管窗口未显示",
+    "en": "Initial takeover window is not visible",
+    "pt-BR": "A janela inicial de controle não está visível"
+  },
+  "ui.cleanup_incomplete_you_can_retry": {
+    "zh-CN": "清理未完成，可重试",
+    "en": "Cleanup incomplete. You can retry.",
+    "pt-BR": "Limpeza incompleta. Tente novamente."
+  },
+  "ui.stale_exit_request": {
+    "zh-CN": "过期退出",
+    "en": "Stale exit request",
+    "pt-BR": "Solicitação de saída expirada"
+  },
+  "ui.no_valid_login_task": {
+    "zh-CN": "无有效登录任务",
+    "en": "No valid login task",
+    "pt-BR": "Nenhuma tarefa de login válida"
+  },
+  "ui.invalid_save_task": {
+    "zh-CN": "保存任务无效",
+    "en": "Invalid save task",
+    "pt-BR": "Tarefa de gravação inválida"
+  },
+  "ui.command_or_role_is_not_available": {
+    "zh-CN": "命令或角色未开放",
+    "en": "Command or role is not available",
+    "pt-BR": "Comando ou função indisponível"
+  },
+  "ui.read_or_write_incomplete_original_data_was": {
+    "zh-CN": "读写未完成，原资料保留",
+    "en": "Read or write incomplete. Original data was kept.",
+    "pt-BR": "Leitura ou gravação incompleta. Os dados originais foram mantidos."
+  },
+  "ui.quality_must_be_low_medium_or_high": {
+    "zh-CN": "画质需为低、中或高",
+    "en": "Quality must be low, medium or high",
+    "pt-BR": "A qualidade deve ser baixa, média ou alta"
+  },
+  "ui.invalid_flash_version": {
+    "zh-CN": "Flash版本无效",
+    "en": "Invalid Flash version",
+    "pt-BR": "Versão do Flash inválida"
+  },
+  "ui.invalid_theme": {
+    "zh-CN": "主题无效",
+    "en": "Invalid theme",
+    "pt-BR": "Tema inválido"
+  },
+  "ui.invalid_switch_value": {
+    "zh-CN": "开关值无效",
+    "en": "Invalid switch value",
+    "pt-BR": "Valor de interruptor inválido"
+  },
+  "ui.invalid_color": {
+    "zh-CN": "颜色无效",
+    "en": "Invalid color",
+    "pt-BR": "Cor inválida"
+  },
+  "ui.setting_field_is_not_available": {
+    "zh-CN": "设置字段未开放",
+    "en": "Setting field is not available",
+    "pt-BR": "Campo de ajuste indisponível"
+  },
+  "ui.name_must_be_1_40_characters_note": {
+    "zh-CN": "名称需为1–40字，备注最多40字",
+    "en": "Name must be 1–40 characters; note up to 40",
+    "pt-BR": "O nome deve ter de 1 a 40 caracteres; a nota, até 40"
+  },
+  "ui.password_vault_could_not_be_read_original": {
+    "zh-CN": "密码库读取失败；原内容保留",
+    "en": "Password vault could not be read. Original contents were kept.",
+    "pt-BR": "Falha ao ler o cofre de senhas. O conteúdo original foi mantido."
+  },
+  "ui.password_could_not_be_saved_to_keychain": {
+    "zh-CN": "密码未能保存到钥匙串",
+    "en": "Password could not be saved to Keychain",
+    "pt-BR": "Não foi possível salvar a senha nas Chaves"
+  },
+  "ui.invalid_password_update_time": {
+    "zh-CN": "密码更新时间无效",
+    "en": "Invalid password update time",
+    "pt-BR": "Data de atualização da senha inválida"
+  },
+  "ui.invalid_legacy_password_data_format": {
+    "zh-CN": "旧密码资料格式无效",
+    "en": "Invalid legacy password data format",
+    "pt-BR": "Formato dos dados antigos de senha inválido"
+  },
+  "ui.invalid_site": {
+    "zh-CN": "站点无效",
+    "en": "Invalid site",
+    "pt-BR": "Site inválido"
+  },
+  "ui.invalid_username_or_password": {
+    "zh-CN": "账号密码无效",
+    "en": "Invalid username or password",
+    "pt-BR": "Usuário ou senha inválido"
+  },
+  "ui.record_was_deleted_reopen_the_password_list": {
+    "zh-CN": "记录已删除，请重新打开密码列表",
+    "en": "Record was deleted. Reopen the password list.",
+    "pt-BR": "O registro foi excluído. Reabra a lista de senhas."
+  },
+  "ui.this_site_already_has_an_account_with": {
+    "zh-CN": "该网站已保存同名账号",
+    "en": "This site already has an account with this username",
+    "pt-BR": "Este site já tem uma conta com este nome de usuário"
+  },
+  "ui.password_record_changed_reopen_it_before_saving": {
+    "zh-CN": "密码记录已更新，请重新打开编辑后再保存",
+    "en": "Password record changed. Reopen it before saving.",
+    "pt-BR": "O registro de senha mudou. Reabra antes de salvar."
+  },
+  "ui.app_files_are_incomplete_please_reinstall": {
+    "zh-CN": "应用文件不完整，请重新安装",
+    "en": "App files are incomplete. Please reinstall.",
+    "pt-BR": "Os arquivos do app estão incompletos. Reinstale."
+  },
+  "ui.invalid_test_data_directory": {
+    "zh-CN": "检查资料目录无效",
+    "en": "Invalid test data directory",
+    "pt-BR": "Diretório de teste inválido"
+  },
+  "ui.test_directory_must_be_empty_existing_data": {
+    "zh-CN": "检查目录必须为空，现有资料已保留",
+    "en": "Test directory must be empty. Existing data was kept.",
+    "pt-BR": "O diretório de teste deve estar vazio. Os dados existentes foram mantidos."
+  },
+  "ui.invalid_test_directory_marker": {
+    "zh-CN": "检查目录标记无效",
+    "en": "Invalid test directory marker",
+    "pt-BR": "Marcador do diretório de teste inválido"
+  },
+  "ui.test_mode_cannot_use_production_data": {
+    "zh-CN": "检查模式不可使用正式资料",
+    "en": "Test mode cannot use production data",
+    "pt-BR": "O modo de teste não pode usar dados reais"
+  },
+  "ui.original_startup_data_not_found_reinstall_existing": {
+    "zh-CN": "找不到原有启动资料，请重新安装；原资料会保留",
+    "en": "Original startup data not found. Reinstall; existing data will be kept.",
+    "pt-BR": "Dados originais de inicialização não encontrados. Reinstale; os dados serão mantidos."
+  },
+  "ui.invalid_startup_data_location_reinstall_existing_data": {
+    "zh-CN": "启动资料位置配置无效，请重新安装；原资料会保留",
+    "en": "Invalid startup data location. Reinstall; existing data will be kept.",
+    "pt-BR": "Local dos dados de inicialização inválido. Reinstale; os dados serão mantidos."
+  },
+  "ui.invalid_startup_data_directory_original_data_was": {
+    "zh-CN": "启动资料目录无效，原资料已保留",
+    "en": "Invalid startup data directory. Original data was kept.",
+    "pt-BR": "Diretório de inicialização inválido. Os dados originais foram mantidos."
+  },
+  "ui.contents_helpers_naruto_os_app_contents_macos": {
+    "zh-CN": "Contents/Helpers/Naruto OS 游戏.app/Contents/MacOS/Naruto OS 游戏",
+    "en": "Contents/Helpers/Naruto OS 游戏.app/Contents/MacOS/Naruto OS 游戏",
+    "pt-BR": "Contents/Helpers/Naruto OS 游戏.app/Contents/MacOS/Naruto OS 游戏"
+  },
+  "ui.app_build_information_missing_please_reinstall": {
+    "zh-CN": "应用构建信息缺失，请重新安装",
+    "en": "App build information missing. Please reinstall.",
+    "pt-BR": "Informações da compilação ausentes. Reinstale."
+  },
+  "ui.could_not_read_startup_data": {
+    "zh-CN": "启动资料读取失败",
+    "en": "Could not read startup data",
+    "pt-BR": "Falha ao ler dados de inicialização"
+  },
+  "ui.quit_the_old_game_and_launch_center": {
+    "zh-CN": "请先正常退出旧版游戏和启动中心，等待约十秒后重开",
+    "en": "Quit the old game and launch center normally, wait about ten seconds, then reopen.",
+    "pt-BR": "Encerre normalmente o jogo e a central antigos, aguarde cerca de dez segundos e reabra."
+  },
+  "ui.startup_incomplete_original_data_was_kept_try": {
+    "zh-CN": "启动未完成，原资料已保留；请稍后重试",
+    "en": "Startup incomplete. Original data was kept; try again later.",
+    "pt-BR": "Inicialização incompleta. Os dados originais foram mantidos; tente mais tarde."
+  },
+  "error.coreDisconnected": {
+    "zh-CN": "核心暂未连接",
+    "en": "Core is not connected yet",
+    "pt-BR": "O núcleo ainda não está conectado"
+  },
+  "ui.connection_ended": {
+    "zh-CN": "连接已结束",
+    "en": "Connection ended",
+    "pt-BR": "Conexão encerrada"
+  },
+  "ui.send_failed": {
+    "zh-CN": "发送失败",
+    "en": "Send failed",
+    "pt-BR": "Falha no envio"
+  },
+  "ui.invalid_response": {
+    "zh-CN": "响应无效",
+    "en": "Invalid response",
+    "pt-BR": "Resposta inválida"
+  },
+  "ui.request_was_not_accepted": {
+    "zh-CN": "请求未获接受",
+    "en": "Request was not accepted",
+    "pt-BR": "A solicitação não foi aceita"
+  },
+  "ui.this_role_is_already_running": {
+    "zh-CN": "该角色已运行",
+    "en": "This role is already running",
+    "pt-BR": "Esta função já está em execução"
+  },
+  "ui.launch_page_h": {
+    "zh-CN": "启动页 ⇧⌘H",
+    "en": "Launch page ⇧⌘H",
+    "pt-BR": "Página inicial ⇧⌘H"
+  },
+  "ui.launch_page": {
+    "zh-CN": "启动页",
+    "en": "Launch page",
+    "pt-BR": "Página inicial"
+  },
+  "ui.game_tabs": {
+    "zh-CN": "游戏标签",
+    "en": "Game tabs",
+    "pt-BR": "Abas de jogo"
+  },
+  "ui.select_or_open_another_account_t": {
+    "zh-CN": "选择或打开其他账号 ⌘T",
+    "en": "Select or open another account ⌘T",
+    "pt-BR": "Selecionar ou abrir outra conta ⌘T"
+  },
+  "ui.select_or_open_another_account": {
+    "zh-CN": "选择或打开其他账号",
+    "en": "Select or open another account",
+    "pt-BR": "Selecionar ou abrir outra conta"
+  },
+  "ui.refresh_current_page_r": {
+    "zh-CN": "刷新当前页面 ⌘R",
+    "en": "Refresh current page ⌘R",
+    "pt-BR": "Atualizar página atual ⌘R"
+  },
+  "ui.mute_all": {
+    "zh-CN": "总静音",
+    "en": "Mute all",
+    "pt-BR": "Silenciar tudo"
+  },
+  "ui.settings_297": {
+    "zh-CN": "设置 ⌘,",
+    "en": "Settings ⌘,",
+    "pt-BR": "Ajustes ⌘,"
+  },
+  "settings.title": {
+    "zh-CN": "设置",
+    "en": "Settings",
+    "pt-BR": "Ajustes"
+  },
+  "ui.not_now": {
+    "zh-CN": "暂不",
+    "en": "Not now",
+    "pt-BR": "Agora não"
+  },
+  "ui.complete_switch": {
+    "zh-CN": "完成切换",
+    "en": "Complete switch",
+    "pt-BR": "Concluir troca"
+  },
+  "ui.launch_301": {
+    "zh-CN": "启动",
+    "en": "Launch",
+    "pt-BR": "Iniciar"
+  },
+  "ui.select_launch_account": {
+    "zh-CN": "选择启动账号",
+    "en": "Select launch account",
+    "pt-BR": "Selecionar conta para iniciar"
+  },
+  "ui.current_region_brazil_click_to_switch": {
+    "zh-CN": "当前巴西服，点击切换地区",
+    "en": "Current region: Brazil. Click to switch.",
+    "pt-BR": "Região atual: Brasil. Clique para trocar."
+  },
+  "ui.new_profile": {
+    "zh-CN": "新建档案",
+    "en": "New profile",
+    "pt-BR": "Novo perfil"
+  },
+  "ui.settings_categories": {
+    "zh-CN": "设置分类",
+    "en": "Settings categories",
+    "pt-BR": "Categorias dos ajustes"
+  },
+  "ui.game_306": {
+    "zh-CN": "游戏",
+    "en": "Game",
+    "pt-BR": "Jogo"
+  },
+  "ui.appearance": {
+    "zh-CN": "外观",
+    "en": "Appearance",
+    "pt-BR": "Aparência"
+  },
+  "ui.about": {
+    "zh-CN": "关于",
+    "en": "About",
+    "pt-BR": "Sobre"
+  },
+  "ui.done": {
+    "zh-CN": "完成",
+    "en": "Done",
+    "pt-BR": "Concluído"
+  },
+  "ui.mute": {
+    "zh-CN": "静音",
+    "en": "Mute",
+    "pt-BR": "Silenciar"
+  },
+  "ui.chinese_game_translation": {
+    "zh-CN": "游戏汉化",
+    "en": "Chinese game translation",
+    "pt-BR": "Tradução do jogo para chinês"
+  },
+  "ui.default_quality": {
+    "zh-CN": "默认画质",
+    "en": "Default quality",
+    "pt-BR": "Qualidade padrão"
+  },
+  "ui.low": {
+    "zh-CN": "低",
+    "en": "Low",
+    "pt-BR": "Baixa"
+  },
+  "ui.medium": {
+    "zh-CN": "中",
+    "en": "Medium",
+    "pt-BR": "Média"
+  },
+  "ui.high": {
+    "zh-CN": "高",
+    "en": "High",
+    "pt-BR": "Alta"
+  },
+  "ui.theme": {
+    "zh-CN": "主题",
+    "en": "Theme",
+    "pt-BR": "Tema"
+  },
+  "ui.follow_system": {
+    "zh-CN": "跟随系统",
+    "en": "Follow system",
+    "pt-BR": "Seguir sistema"
+  },
+  "ui.light": {
+    "zh-CN": "浅色",
+    "en": "Light",
+    "pt-BR": "Claro"
+  },
+  "ui.dark": {
+    "zh-CN": "深色",
+    "en": "Dark",
+    "pt-BR": "Escuro"
+  },
+  "ui.title_bar": {
+    "zh-CN": "标题栏",
+    "en": "Title bar",
+    "pt-BR": "Barra de título"
+  },
+  "ui.title_bar_color": {
+    "zh-CN": "标题栏颜色",
+    "en": "Title bar color",
+    "pt-BR": "Cor da barra de título"
+  },
+  "ui.default": {
+    "zh-CN": "默认",
+    "en": "Default",
+    "pt-BR": "Padrão"
+  },
+  "ui.custom_color": {
+    "zh-CN": "自定义颜色",
+    "en": "Custom color",
+    "pt-BR": "Cor personalizada"
+  },
+  "ui.launch_page_background": {
+    "zh-CN": "启动页背景",
+    "en": "Launch page background",
+    "pt-BR": "Fundo da página inicial"
+  },
+  "ui.custom_launch_page_background": {
+    "zh-CN": "自定义启动页背景",
+    "en": "Custom launch page background",
+    "pt-BR": "Fundo personalizado da página inicial"
+  },
+  "ui.follow_theme": {
+    "zh-CN": "跟随主题",
+    "en": "Follow theme",
+    "pt-BR": "Seguir tema"
+  },
+  "ui.launch_page_animation": {
+    "zh-CN": "启动页动态效果",
+    "en": "Launch page animation",
+    "pt-BR": "Animação da página inicial"
+  },
+  "ui.login_profiles": {
+    "zh-CN": "登录档案",
+    "en": "Login profiles",
+    "pt-BR": "Perfis de login"
+  },
+  "ui.recheck_old_login_slots": {
+    "zh-CN": "重新检查旧登录槽位",
+    "en": "Recheck old login slots",
+    "pt-BR": "Verificar espaços antigos de login"
+  },
+  "ui.saved_passwords_qr_login_recommended_for_china": {
+    "zh-CN": "已保存的密码（国服推荐扫码登录）",
+    "en": "Saved passwords (QR login recommended for China)",
+    "pt-BR": "Senhas salvas (QR recomendado para a China)"
+  },
+  "ui.add": {
+    "zh-CN": "新增",
+    "en": "Add",
+    "pt-BR": "Adicionar"
+  },
+  "ui.login_site": {
+    "zh-CN": "登录站点",
+    "en": "Login site",
+    "pt-BR": "Site de login"
+  },
+  "ui.note": {
+    "zh-CN": "备注",
+    "en": "Note",
+    "pt-BR": "Nota"
+  },
+  "ui.password": {
+    "zh-CN": "密码",
+    "en": "Password",
+    "pt-BR": "Senha"
+  },
+  "ui.window_mode": {
+    "zh-CN": "窗口模式",
+    "en": "Window mode",
+    "pt-BR": "Modo janela"
+  },
+  "ui.view_notice_details": {
+    "zh-CN": "查看提示详情",
+    "en": "View notice details",
+    "pt-BR": "Ver detalhes do aviso"
+  },
+  "ui.retry_save_and_quit": {
+    "zh-CN": "重试保存并退出",
+    "en": "Retry save and quit",
+    "pt-BR": "Salvar e sair novamente"
+  },
+  "ui.refresh_recover_current_game": {
+    "zh-CN": "刷新／恢复当前游戏",
+    "en": "Refresh / recover current game",
+    "pt-BR": "Atualizar / recuperar jogo atual"
+  },
+  "settings.language": {
+    "zh-CN": "界面语言",
+    "en": "Interface language",
+    "pt-BR": "Idioma da interface"
+  },
+  "error.invalidLanguage": {
+    "zh-CN": "界面语言无效",
+    "en": "Invalid interface language",
+    "pt-BR": "Idioma da interface inválido"
+  },
+  "launch.started.one": {
+    "zh-CN": "已启动 {count} 个账号",
+    "en": "Started {count} account",
+    "pt-BR": "{count} conta iniciada"
+  },
+  "launch.started.other": {
+    "zh-CN": "已启动 {count} 个账号",
+    "en": "Started {count} accounts",
+    "pt-BR": "{count} contas iniciadas"
+  },
+  "launch.action.one": {
+    "zh-CN": "出发，启动 {count} 个账号",
+    "en": "Launch {count} account",
+    "pt-BR": "Iniciar {count} conta"
+  },
+  "launch.action.other": {
+    "zh-CN": "出发，启动 {count} 个账号",
+    "en": "Launch {count} accounts",
+    "pt-BR": "Iniciar {count} contas"
+  },
+  "runtime.accounts.one": {
+    "zh-CN": "宿主运行中 · {count} 个账号",
+    "en": "Host running · {count} account",
+    "pt-BR": "Jogo em execução · {count} conta"
+  },
+  "runtime.accounts.other": {
+    "zh-CN": "宿主运行中 · {count} 个账号",
+    "en": "Host running · {count} accounts",
+    "pt-BR": "Jogo em execução · {count} contas"
+  },
+  "password.savePrompt": {
+    "zh-CN": "保存 {username} 的密码？",
+    "en": "Save the password for {username}?",
+    "pt-BR": "Salvar a senha de {username}?"
+  },
+  "password.updatePrompt": {
+    "zh-CN": "更新 {username} 的密码？",
+    "en": "Update the password for {username}?",
+    "pt-BR": "Atualizar a senha de {username}?"
+  },
+  "password.saveKeychainPrompt": {
+    "zh-CN": "保存 {username} 的密码到钥匙串？",
+    "en": "Save the password for {username} in Keychain?",
+    "pt-BR": "Salvar a senha de {username} nas Chaves?"
+  },
+  "password.updateKeychainPrompt": {
+    "zh-CN": "更新 {username} 的密码到钥匙串？",
+    "en": "Update the password for {username} in Keychain?",
+    "pt-BR": "Atualizar a senha de {username} nas Chaves?"
+  },
+  "launch.rejected": {
+    "zh-CN": "未接管：{details}",
+    "en": "Not accepted: {details}",
+    "pt-BR": "Não aceito: {details}"
+  },
+  "settings.autoClose": {
+    "zh-CN": "启动游戏后关闭启动中心",
+    "en": "Close launch center after starting games",
+    "pt-BR": "Fechar central após iniciar os jogos"
+  },
+  "error.keychainTimeout": {
+    "zh-CN": "钥匙串响应超时，请重试",
+    "en": "Keychain timed out. Please retry.",
+    "pt-BR": "As Chaves não responderam. Tente novamente."
+  },
+  "error.keychainStart": {
+    "zh-CN": "无法启动钥匙串组件，请先构建项目",
+    "en": "Could not start the Keychain helper. Build the project first.",
+    "pt-BR": "Não foi possível iniciar o auxiliar de Chaves. Compile o projeto primeiro."
+  },
+  "error.keychainAccess": {
+    "zh-CN": "无法访问钥匙串，请检查系统授权后重试",
+    "en": "Could not access Keychain. Check system permissions and retry.",
+    "pt-BR": "Não foi possível acessar as Chaves. Verifique as permissões e tente novamente."
+  },
+  "error.keychainFormat": {
+    "zh-CN": "钥匙串数据格式异常",
+    "en": "Invalid Keychain data format",
+    "pt-BR": "Formato inválido dos dados das Chaves"
+  },
+  "error.accountSite": {
+    "zh-CN": "账号或网站信息无效",
+    "en": "Invalid account or site information",
+    "pt-BR": "Informações de conta ou site inválidas"
+  },
+  "error.accountMissing": {
+    "zh-CN": "账号已不存在",
+    "en": "Account no longer exists",
+    "pt-BR": "A conta não existe mais"
+  },
+  "error.loginSlot": {
+    "zh-CN": "账号登录槽位无效",
+    "en": "Invalid account login slot",
+    "pt-BR": "Espaço de login da conta inválido"
+  },
+  "error.cleanupFirst": {
+    "zh-CN": "该账号档案正在清理，请先完成清理",
+    "en": "This profile is being cleaned up. Finish cleanup first.",
+    "pt-BR": "Este perfil está sendo limpo. Conclua a limpeza primeiro."
+  },
+  "error.tabOpen": {
+    "zh-CN": "该账号档案已有打开中的标签",
+    "en": "This profile already has an open tab",
+    "pt-BR": "Este perfil já tem uma aba aberta"
+  },
+  "error.cleanupWait": {
+    "zh-CN": "该账号档案正在清理，请稍后重试",
+    "en": "This profile is being cleaned up. Try again later.",
+    "pt-BR": "Este perfil está sendo limpo. Tente mais tarde."
+  },
+  "error.finishLoginFirst": {
+    "zh-CN": "该账号档案仍有打开中的标签或登录任务，请先结束后重试",
+    "en": "Close this profile's open tabs or login tasks, then retry",
+    "pt-BR": "Feche as abas ou tarefas de login deste perfil e tente novamente"
+  },
+  "error.loginBusy": {
+    "zh-CN": "该账号档案仍有打开中的标签或登录任务",
+    "en": "This profile still has open tabs or login tasks",
+    "pt-BR": "Este perfil ainda tem abas ou tarefas de login abertas"
+  },
+  "cleanup.website": {
+    "zh-CN": "清理 Chromium 网站数据",
+    "en": "Clearing Chromium website data",
+    "pt-BR": "Limpando dados de sites do Chromium"
+  },
+  "cleanup.snapshots": {
+    "zh-CN": "清理钥匙串登录快照",
+    "en": "Clearing Keychain login snapshots",
+    "pt-BR": "Limpando sessões de login nas Chaves"
+  },
+  "error.unknown": {
+    "zh-CN": "未知错误",
+    "en": "Unknown error",
+    "pt-BR": "Erro desconhecido"
+  },
+  "cleanup.failed": {
+    "zh-CN": "{p0}失败：{p1}",
+    "en": "{p0} failed: {p1}",
+    "pt-BR": "Falha em {p0}: {p1}"
+  },
+  "error.loginFormat": {
+    "zh-CN": "登录状态格式异常",
+    "en": "Invalid login session format",
+    "pt-BR": "Formato da sessão de login inválido"
+  },
+  "error.cookiesUnsaved": {
+    "zh-CN": "登录状态仍有尚未保存的 Cookie 变更",
+    "en": "Login session has unsaved cookie changes",
+    "pt-BR": "A sessão de login tem alterações de cookies não salvas"
+  },
+  "error.requestIncomplete": {
+    "zh-CN": "请求未完成",
+    "en": "Request incomplete",
+    "pt-BR": "Solicitação incompleta"
+  },
+  "password.savedAccounts": {
+    "zh-CN": "已保存的账号",
+    "en": "Saved accounts",
+    "pt-BR": "Contas salvas"
+  },
+  "password.caption": {
+    "zh-CN": "NARUTO OS · 已保存的账号",
+    "en": "NARUTO OS · Saved accounts",
+    "pt-BR": "NARUTO OS · Contas salvas"
+  },
+  "password.fillHint": {
+    "zh-CN": "选择后填充，不会自动登录",
+    "en": "Select to fill. Login remains manual.",
+    "pt-BR": "Selecione para preencher. O login continua manual."
+  },
+  "password.noMatch": {
+    "zh-CN": "没有匹配的已保存账号",
+    "en": "No matching saved accounts",
+    "pt-BR": "Nenhuma conta salva correspondente"
+  },
+  "password.none": {
+    "zh-CN": "尚无已保存账号，登录后可选择保存",
+    "en": "No saved accounts yet. You can save one after logging in.",
+    "pt-BR": "Nenhuma conta salva. Você poderá salvar após o login."
+  },
+  "error.loginComponent": {
+    "zh-CN": "登录组件未能加载，请刷新页面重试。",
+    "en": "Login component failed to load. Refresh and retry.",
+    "pt-BR": "Falha ao carregar o login. Atualize e tente novamente."
+  },
+  "error.passwordRead": {
+    "zh-CN": "读取已保存账号失败，请检查钥匙串后重试",
+    "en": "Could not read saved accounts. Check Keychain and retry.",
+    "pt-BR": "Falha ao ler contas salvas. Verifique as Chaves e tente novamente."
+  },
+  "error.passwordSelection": {
+    "zh-CN": "账号已失效，请重新选择",
+    "en": "Account selection expired. Select again.",
+    "pt-BR": "A seleção da conta expirou. Selecione novamente."
+  },
+  "password.trigger": {
+    "zh-CN": "已保存账号",
+    "en": "Saved accounts",
+    "pt-BR": "Contas salvas"
+  },
+  "password.siteAccounts": {
+    "zh-CN": "当前网站的已保存账号",
+    "en": "Saved accounts for this site",
+    "pt-BR": "Contas salvas deste site"
+  },
+  "password.currentSite": {
+    "zh-CN": "当前网站",
+    "en": "This site",
+    "pt-BR": "Este site"
+  },
+  "password.reading": {
+    "zh-CN": "正在读取钥匙串…",
+    "en": "Reading Keychain…",
+    "pt-BR": "Lendo Chaves…"
+  },
+  "password.noMatchShort": {
+    "zh-CN": "没有匹配的账号",
+    "en": "No matching accounts",
+    "pt-BR": "Nenhuma conta correspondente"
+  },
+  "password.noneSite": {
+    "zh-CN": "这个网站还没有保存账号",
+    "en": "No accounts saved for this site",
+    "pt-BR": "Nenhuma conta salva neste site"
+  },
+  "login.title": {
+    "zh-CN": "Naruto OS · 巴西服登录",
+    "en": "Naruto OS · Brazil login",
+    "pt-BR": "Naruto OS · Login Brasil"
+  },
+  "login.prototype": {
+    "zh-CN": "Naruto 登录原型",
+    "en": "Naruto login prototype",
+    "pt-BR": "Protótipo de login Naruto"
+  },
+  "login.close": {
+    "zh-CN": "关闭登录窗口",
+    "en": "Close login window",
+    "pt-BR": "Fechar janela de login"
+  },
+  "login.quitPrototype": {
+    "zh-CN": "退出原型",
+    "en": "Quit prototype",
+    "pt-BR": "Sair do protótipo"
+  },
+  "login.page": {
+    "zh-CN": "页面",
+    "en": "Page",
+    "pt-BR": "Página"
+  },
+  "login.isolated": {
+    "zh-CN": "隔离会话",
+    "en": "Isolated session",
+    "pt-BR": "Sessão isolada"
+  },
+  "login.cooldown": {
+    "zh-CN": "请求过于频繁，请在 {seconds} 秒后重试。",
+    "en": "Too many requests. Try again in {seconds} seconds.",
+    "pt-BR": "Muitas solicitações. Tente novamente em {seconds} segundos."
+  },
+  "login.retryHint": {
+    "zh-CN": "{detail}可重新登录，或稍后手动刷新。",
+    "en": "{detail} Log in again or refresh manually later.",
+    "pt-BR": "{detail} Entre novamente ou atualize manualmente mais tarde."
+  },
+  "login.statusTimeout": {
+    "zh-CN": "登录状态读取超时。",
+    "en": "Reading login status timed out.",
+    "pt-BR": "A leitura do status de login expirou."
+  },
+  "login.statusFailed": {
+    "zh-CN": "登录状态读取失败{status}。",
+    "en": "Failed to read login status{status}.",
+    "pt-BR": "Falha ao ler o status de login{status}."
+  },
+  "login.serversTimeout": {
+    "zh-CN": "登录已通过，区服列表加载超时。",
+    "en": "Login succeeded; loading the server list timed out.",
+    "pt-BR": "Login concluído; o carregamento da lista de servidores expirou."
+  },
+  "login.serversFailed": {
+    "zh-CN": "登录已通过，区服列表加载失败{status}。",
+    "en": "Login succeeded; the server list failed to load{status}.",
+    "pt-BR": "Login concluído; falha ao carregar a lista de servidores{status}."
+  },
+  "login.requestTimeout": {
+    "zh-CN": "登录请求超时，请稍后重试。",
+    "en": "Login request timed out. Try again later.",
+    "pt-BR": "A solicitação de login expirou. Tente mais tarde."
+  },
+  "login.requestRefused": {
+    "zh-CN": "登录请求被拒绝（403），请稍后重试。",
+    "en": "Login request was refused (403). Try again later.",
+    "pt-BR": "Solicitação de login recusada (403). Tente mais tarde."
+  },
+  "login.requestFailed": {
+    "zh-CN": "登录请求未完成，请稍后重试。",
+    "en": "Login request incomplete. Try again later.",
+    "pt-BR": "Solicitação de login incompleta. Tente mais tarde."
+  },
+  "login.restoring": {
+    "zh-CN": "正在读取登录状态…",
+    "en": "Reading login status…",
+    "pt-BR": "Lendo status de login…"
+  },
+  "login.loggingIn": {
+    "zh-CN": "正在登录…",
+    "en": "Logging in…",
+    "pt-BR": "Entrando…"
+  },
+  "login.expired": {
+    "zh-CN": "登录状态已失效，请重新登录。",
+    "en": "Login session expired. Log in again.",
+    "pt-BR": "Sessão de login expirada. Entre novamente."
+  },
+  "login.noAccount": {
+    "zh-CN": "账号不存在，请检查。",
+    "en": "Account not found. Check the username.",
+    "pt-BR": "Conta não encontrada. Verifique o usuário."
+  },
+  "login.badPassword": {
+    "zh-CN": "密码不正确，请重试。",
+    "en": "Incorrect password. Try again.",
+    "pt-BR": "Senha incorreta. Tente novamente."
+  },
+  "login.authFailed": {
+    "zh-CN": "登录未成功，请检查账号或稍后重试。",
+    "en": "Login failed. Check the account or try again later.",
+    "pt-BR": "Falha no login. Verifique a conta ou tente mais tarde."
+  },
+  "login.loadingServers": {
+    "zh-CN": "正在加载区服…",
+    "en": "Loading servers…",
+    "pt-BR": "Carregando servidores…"
+  },
+  "login.pageUnchanged": {
+    "zh-CN": "登录已通过，区服页面未能更新。",
+    "en": "Login succeeded; the server page did not update.",
+    "pt-BR": "Login concluído; a página de servidores não atualizou."
+  },
+  "login.preparing": {
+    "zh-CN": "正在准备登录…",
+    "en": "Preparing login…",
+    "pt-BR": "Preparando login…"
+  },
+  "login.enterAccount": {
+    "zh-CN": "请输入账号。",
+    "en": "Enter your username.",
+    "pt-BR": "Informe seu usuário."
+  },
+  "login.enterPassword": {
+    "zh-CN": "请输入密码。",
+    "en": "Enter your password.",
+    "pt-BR": "Informe sua senha."
+  },
+  "launch.selectedAccount": {
+    "zh-CN": "当前账号：{name}，点击切换账号",
+    "en": "Current account: {name}. Click to switch.",
+    "pt-BR": "Conta atual: {name}. Clique para trocar."
+  },
+  "launch.selectedAccountWithServer": {
+    "zh-CN": "当前账号：{name}，常用区服：{server}，点击切换账号",
+    "en": "Current account: {name}, usual server: {server}. Click to switch.",
+    "pt-BR": "Conta atual: {name}, servidor habitual: {server}. Clique para trocar."
+  },
+  "launch.startRegion": {
+    "zh-CN": "开始游戏：{region}",
+    "en": "Start game: {region}",
+    "pt-BR": "Iniciar jogo: {region}"
+  },
+  "launch.startAccount": {
+    "zh-CN": "开始游戏：{region}，{name}",
+    "en": "Start game: {region}, {name}",
+    "pt-BR": "Iniciar jogo: {region}, {name}"
+  },
+  "profiles.selectedName": {
+    "zh-CN": "{name} · 当前选择",
+    "en": "{name} · Selected",
+    "pt-BR": "{name} · Selecionado"
+  },
+  "login.statusCode": {
+    "zh-CN": "（{status}）",
+    "en": " ({status})",
+    "pt-BR": " ({status})"
+  },
+  "login.cooldown.one": {
+    "zh-CN": "请求过于频繁，请在 {seconds} 秒后重试。",
+    "en": "Too many requests. Try again in {seconds} second.",
+    "pt-BR": "Muitas solicitações. Tente novamente em {seconds} segundo."
+  },
+  "login.cooldown.other": {
+    "zh-CN": "请求过于频繁，请在 {seconds} 秒后重试。",
+    "en": "Too many requests. Try again in {seconds} seconds.",
+    "pt-BR": "Muitas solicitações. Tente novamente em {seconds} segundos."
+  },
+  "ui.assist_scripts": {
+    "zh-CN": "辅助脚本",
+    "en": "Assist scripts",
+    "pt-BR": "Scripts de assistência"
+  },
+  "ui.assist_scripts_reenter_hint": {
+    "zh-CN": "完整退出游戏窗口后重新进入生效",
+    "en": "Takes effect after closing the game window and entering again",
+    "pt-BR": "Passa a valer após fechar a janela do jogo e entrar novamente"
+  },
+  "ui.assist_scripts_saved_reenter_hint": {
+    "zh-CN": "已保存，完整退出游戏窗口后重新进入生效",
+    "en": "Saved. Takes effect after closing the game window and entering again",
+    "pt-BR": "Salvo. Passa a valer após fechar a janela do jogo e entrar novamente"
+  },
+  "ui.assist_scripts_description": {
+    "zh-CN": "随应用提供的游戏辅助功能，可统一开启或关闭；游戏汉化不受影响。",
+    "en": "Game assist features bundled with the app can be switched on or off together; the translation switch is independent.",
+    "pt-BR": "Recursos de assistência incluídos no app podem ser ligados ou desligados em conjunto; a tradução é independente."
+  },
+  "ui.assist_chakra_batch": {
+    "zh-CN": "查克拉修行批量修炼",
+    "en": "Chakra practice batch",
+    "pt-BR": "Prática de chakra em lote"
+  },
+  "update.menu_check": {
+    "zh-CN": "检查更新…",
+    "en": "Check for Updates…",
+    "pt-BR": "Verificar atualizações…"
+  },
+  "update.up_to_date_title": {
+    "zh-CN": "已是最新版本",
+    "en": "You're up to date",
+    "pt-BR": "Você está atualizado"
+  },
+  "update.up_to_date_detail": {
+    "zh-CN": "当前版本 {p0}，没有可用的新版本。",
+    "en": "Current version {p0}. No newer release is available.",
+    "pt-BR": "Versão atual {p0}. Não há versão mais nova disponível."
+  },
+  "update.available_title": {
+    "zh-CN": "发现新版本 {p0}",
+    "en": "New version {p0} available",
+    "pt-BR": "Nova versão {p0} disponível"
+  },
+  "update.available_detail": {
+    "zh-CN": "当前版本 {p0}。下载完成后会保存并退出全部游戏，然后替换应用并重新启动。\n\n更新说明：\n{p1}",
+    "en": "Current version {p0}. After the download, all games are saved and closed, then the app is replaced and restarted.\n\nRelease notes:\n{p1}",
+    "pt-BR": "Versão atual {p0}. Após o download, todos os jogos serão salvos e fechados; o aplicativo será substituído e reiniciado.\n\nNotas da versão:\n{p1}"
+  },
+  "update.release_notes_empty": {
+    "zh-CN": "（本次发布未提供更新说明）",
+    "en": "(No release notes were provided.)",
+    "pt-BR": "(Esta versão não traz notas.)"
+  },
+  "update.notes_truncated": {
+    "zh-CN": "（更新说明过长，已截断）",
+    "en": "(Release notes were truncated.)",
+    "pt-BR": "(As notas foram truncadas.)"
+  },
+  "update.download_button": {
+    "zh-CN": "下载更新",
+    "en": "Download Update",
+    "pt-BR": "Baixar atualização"
+  },
+  "update.later_button": {
+    "zh-CN": "稍后",
+    "en": "Later",
+    "pt-BR": "Depois"
+  },
+  "update.cancel_button": {
+    "zh-CN": "取消",
+    "en": "Cancel",
+    "pt-BR": "Cancelar"
+  },
+  "update.close_button": {
+    "zh-CN": "关闭",
+    "en": "Close",
+    "pt-BR": "Fechar"
+  },
+  "update.retry_button": {
+    "zh-CN": "重试",
+    "en": "Retry",
+    "pt-BR": "Tentar novamente"
+  },
+  "update.manual_button": {
+    "zh-CN": "打开下载页",
+    "en": "Open Download Page",
+    "pt-BR": "Abrir página de download"
+  },
+  "update.downloading": {
+    "zh-CN": "正在下载更新…",
+    "en": "Downloading update…",
+    "pt-BR": "Baixando atualização…"
+  },
+  "update.downloading_detail": {
+    "zh-CN": "{p0} / {p1}",
+    "en": "{p0} / {p1}",
+    "pt-BR": "{p0} / {p1}"
+  },
+  "update.preparing": {
+    "zh-CN": "正在准备更新…",
+    "en": "Preparing update…",
+    "pt-BR": "Preparando atualização…"
+  },
+  "update.preparing_detail": {
+    "zh-CN": "正在校验并准备新版本 {p0}。",
+    "en": "Verifying and preparing version {p0}.",
+    "pt-BR": "Verificando e preparando a versão {p0}."
+  },
+  "update.handoff": {
+    "zh-CN": "正在保存并退出全部游戏…",
+    "en": "Saving and closing all games…",
+    "pt-BR": "Salvando e fechando todos os jogos…"
+  },
+  "update.handoff_detail": {
+    "zh-CN": "保存完成后将替换应用并重新启动。",
+    "en": "The app will be replaced and restarted once saving completes.",
+    "pt-BR": "O aplicativo será substituído e reiniciado quando o salvamento terminar."
+  },
+  "update.submitting": {
+    "zh-CN": "正在替换应用…",
+    "en": "Replacing the app…",
+    "pt-BR": "Substituindo o aplicativo…"
+  },
+  "update.submitting_detail": {
+    "zh-CN": "此阶段无法取消，请稍候。",
+    "en": "This step cannot be cancelled. Please wait.",
+    "pt-BR": "Esta etapa não pode ser cancelada. Aguarde."
+  },
+  "update.failed_title": {
+    "zh-CN": "更新未完成",
+    "en": "Update Not Completed",
+    "pt-BR": "Atualização não concluída"
+  },
+  "update.check_failed": {
+    "zh-CN": "检查更新失败：{p0}",
+    "en": "Could not check for updates: {p0}",
+    "pt-BR": "Falha ao verificar atualizações: {p0}"
+  },
+  "update.download_failed": {
+    "zh-CN": "下载或校验失败：{p0}",
+    "en": "Download or verification failed: {p0}",
+    "pt-BR": "Falha no download ou na verificação: {p0}"
+  },
+  "update.prepare_failed": {
+    "zh-CN": "准备更新失败。",
+    "en": "Preparing the update failed.",
+    "pt-BR": "Falha ao preparar a atualização."
+  },
+  "update.prepare_failed_with_reason": {
+    "zh-CN": "准备更新失败：{p0}",
+    "en": "Preparing the update failed: {p0}",
+    "pt-BR": "Falha ao preparar a atualização: {p0}"
+  },
+  "update.handoff_cancelled": {
+    "zh-CN": "已取消退出，本次更新已停止。",
+    "en": "The quit was cancelled, so this update stopped.",
+    "pt-BR": "A saída foi cancelada; a atualização foi interrompida."
+  },
+  "update.handoff_failed": {
+    "zh-CN": "退出交接未完成：{p0}",
+    "en": "The exit handoff did not complete: {p0}",
+    "pt-BR": "A transferência de saída não foi concluída: {p0}"
+  },
+  "update.handoff_timeout": {
+    "zh-CN": "等待游戏退出超时，本次更新已停止。",
+    "en": "Timed out waiting for games to close; this update stopped.",
+    "pt-BR": "Tempo esgotado aguardando os jogos fecharem; a atualização foi interrompida."
+  },
+  "update.host_save_failed": {
+    "zh-CN": "游戏未能保存并退出，本次更新已停止。",
+    "en": "The game could not save and exit, so this update stopped.",
+    "pt-BR": "O jogo não conseguiu salvar e sair; a atualização foi interrompida."
+  },
+  "update.manual_install_required": {
+    "zh-CN": "请从发布页面手动下载并安装：{p0}",
+    "en": "Download and install manually from the release page: {p0}",
+    "pt-BR": "Baixe e instale manualmente pela página de lançamentos: {p0}"
+  },
+  "update.target_not_standard": {
+    "zh-CN": "当前应用不在标准安装位置（/Applications/Naruto OS.app），无法自动更新。",
+    "en": "The app is not in its standard location (/Applications/Naruto OS.app), so it cannot update automatically.",
+    "pt-BR": "O aplicativo não está no local padrão (/Applications/Naruto OS.app); não é possível atualizar automaticamente."
+  },
+  "update.no_space": {
+    "zh-CN": "磁盘空间不足，无法准备更新。",
+    "en": "There is not enough disk space to prepare the update.",
+    "pt-BR": "Não há espaço em disco suficiente para preparar a atualização."
+  },
+  "update.not_writable": {
+    "zh-CN": "应用目录不可写，无法自动更新。",
+    "en": "The application folder is not writable, so it cannot update automatically.",
+    "pt-BR": "A pasta do aplicativo não permite gravação; não é possível atualizar automaticamente."
+  },
+  "update.cancelled": {
+    "zh-CN": "已取消本次更新。",
+    "en": "This update was cancelled.",
+    "pt-BR": "Esta atualização foi cancelada."
+  },
+  "update.in_progress": {
+    "zh-CN": "更新正在进行，暂时无法启动游戏。",
+    "en": "An update is in progress; games cannot start right now.",
+    "pt-BR": "Uma atualização está em andamento; não é possível iniciar jogos agora."
+  },
+  "update.not_in_progress": {
+    "zh-CN": "当前没有正在进行的更新。",
+    "en": "No update is in progress.",
+    "pt-BR": "Nenhuma atualização em andamento."
+  },
+  "update.success_title": {
+    "zh-CN": "更新完成",
+    "en": "Update Complete",
+    "pt-BR": "Atualização concluída"
+  },
+  "update.previous_failed_title": {
+    "zh-CN": "上次更新未完成",
+    "en": "The Previous Update Did Not Finish",
+    "pt-BR": "A atualização anterior não foi concluída"
+  },
+  "update.previous_interrupted": {
+    "zh-CN": "上次更新在退出前中断，当前应用保持不变，临时文件已清理。",
+    "en": "The previous update stopped before exiting. The installed app is unchanged and temporary files were removed.",
+    "pt-BR": "A atualização anterior parou antes de sair. O aplicativo instalado não mudou e os arquivos temporários foram removidos."
+  },
+  "update.recovery_title": {
+    "zh-CN": "更新需要手动恢复",
+    "en": "Update Needs Manual Recovery",
+    "pt-BR": "A atualização precisa de recuperação manual"
+  },
+  "update.recovery_detail": {
+    "zh-CN": "当前应用状态异常。原版本备份位于：{p0}\n目标路径：{p1}\n请将备份移回目标路径后重新打开应用。",
+    "en": "The app is in an unexpected state. The previous version is backed up at: {p0}\nTarget path: {p1}\nMove the backup back to the target path, then reopen the app.",
+    "pt-BR": "O aplicativo está em um estado inesperado. O backup da versão anterior está em: {p0}\nCaminho de destino: {p1}\nMova o backup de volta para o caminho de destino e reabra o aplicativo."
+  },
+  "update.helper_new_not_confirmed": {
+    "zh-CN": "新版本启动后未完成确认。已保留旧版本备份 {p0} 和当前应用 {p1}，请手动检查或恢复。",
+    "en": "The new version started but did not confirm. The previous version backup {p0} and current app {p1} were kept; check or restore manually.",
+    "pt-BR": "A nova versão iniciou mas não confirmou. O backup da versão anterior {p0} e o aplicativo atual {p1} foram mantidos; verifique ou restaure manualmente."
+  },
+  "update.helper_restore_failed": {
+    "zh-CN": "更新失败且无法恢复原版本。旧版本备份：{p0}；目标路径：{p1}。请手动将备份移回目标路径。",
+    "en": "The update failed and the previous version could not be restored. Previous version backup: {p0}; target path: {p1}. Move the backup back to the target path manually.",
+    "pt-BR": "A atualização falhou e não foi possível restaurar a versão anterior. Backup da versão anterior: {p0}; caminho de destino: {p1}. Mova o backup de volta manualmente."
+  },
+  "update.helper_restored": {
+    "zh-CN": "更新失败，已恢复原版本 {p0}。",
+    "en": "The update failed; version {p0} was restored.",
+    "pt-BR": "A atualização falhou; a versão {p0} foi restaurada."
+  },
+  "update.helper_wait_timeout": {
+    "zh-CN": "等待旧进程退出超时，本次更新已取消，当前应用未改动。",
+    "en": "Timed out waiting for the old processes to exit. The update was cancelled and the installed app is unchanged.",
+    "pt-BR": "Tempo esgotado aguardando os processos antigos saírem. A atualização foi cancelada e o aplicativo não mudou."
+  },
+  "update.helper_staging_invalid": {
+    "zh-CN": "新版本准备文件校验失败，本次更新已取消。",
+    "en": "The prepared update files failed verification; the update was cancelled.",
+    "pt-BR": "Os arquivos preparados falharam na verificação; a atualização foi cancelada."
+  },
+  "update.helper_target_changed": {
+    "zh-CN": "当前应用在更新前发生了变化，本次更新已取消。",
+    "en": "The installed app changed before the update; the update was cancelled.",
+    "pt-BR": "O aplicativo instalado mudou antes da atualização; a atualização foi cancelada."
+  },
+  "update.helper_backup_failed": {
+    "zh-CN": "无法备份当前应用，本次更新已取消。",
+    "en": "The installed app could not be backed up; the update was cancelled.",
+    "pt-BR": "Não foi possível fazer backup do aplicativo; a atualização foi cancelada."
+  },
+  "update.helper_place_failed": {
+    "zh-CN": "无法将新版本移动到正式路径。",
+    "en": "The new version could not be moved into place.",
+    "pt-BR": "Não foi possível mover a nova versão para o local final."
+  },
+  "update.helper_placed_invalid": {
+    "zh-CN": "替换后的应用校验失败。",
+    "en": "The replaced app failed verification.",
+    "pt-BR": "O aplicativo substituído falhou na verificação."
+  },
+  "update.helper_launch_failed": {
+    "zh-CN": "无法启动新版本。",
+    "en": "The new version could not be started.",
+    "pt-BR": "Não foi possível iniciar a nova versão."
+  },
+  "update.acknowledge_button": {
+    "zh-CN": "我知道了",
+    "en": "OK",
+    "pt-BR": "Entendi"
+  },
+  "update.check_http": {
+    "zh-CN": "服务器返回 {p0}，请稍后重试。",
+    "en": "The server returned {p0}. Try again later.",
+    "pt-BR": "O servidor retornou {p0}. Tente novamente mais tarde."
+  },
+  "update.check_network": {
+    "zh-CN": "网络连接失败，请检查网络后重试。",
+    "en": "The network request failed. Check your connection and try again.",
+    "pt-BR": "A conexão falhou. Verifique a rede e tente novamente."
+  },
+  "update.release_invalid": {
+    "zh-CN": "更新信息格式不正确。",
+    "en": "The release information is invalid.",
+    "pt-BR": "As informações da versão são inválidas."
+  },
+  "update.release_not_stable": {
+    "zh-CN": "预发布版本不参与自动更新。",
+    "en": "Pre-release versions are not used for automatic updates.",
+    "pt-BR": "Versões de pré-lançamento não são usadas para atualização automática."
+  },
+  "update.asset_missing": {
+    "zh-CN": "没有找到适用于 macOS Apple Silicon 的安装包。",
+    "en": "No macOS Apple Silicon package was found.",
+    "pt-BR": "Nenhum pacote para macOS Apple Silicon foi encontrado."
+  },
+  "update.asset_size_invalid": {
+    "zh-CN": "发布包大小不在允许范围内。",
+    "en": "The package size is outside the allowed range.",
+    "pt-BR": "O tamanho do pacote está fora do limite permitido."
+  },
+  "update.asset_digest_missing": {
+    "zh-CN": "发布包缺少校验摘要，无法自动安装。请手动下载。",
+    "en": "The release has no checksum, so automatic install is unavailable. Please download manually.",
+    "pt-BR": "A versão não tem checksum; não é possível instalar automaticamente. Baixe manualmente."
+  },
+  "update.asset_url_invalid": {
+    "zh-CN": "发布包下载地址不正确。",
+    "en": "The package download address is invalid.",
+    "pt-BR": "O endereço de download do pacote é inválido."
+  },
+  "update.asset_size_mismatch": {
+    "zh-CN": "下载大小与发布信息不一致。",
+    "en": "The downloaded size does not match the release information.",
+    "pt-BR": "O tamanho baixado não corresponde às informações da versão."
+  },
+  "update.asset_digest_mismatch": {
+    "zh-CN": "下载文件校验失败。",
+    "en": "The downloaded file failed verification.",
+    "pt-BR": "A verificação do arquivo baixado falhou."
+  },
+  "update.redirect_rejected": {
+    "zh-CN": "下载被重定向到不允许的主机。",
+    "en": "The download was redirected to a host that is not allowed.",
+    "pt-BR": "O download foi redirecionado para um host não permitido."
+  },
+  "update.download_timeout": {
+    "zh-CN": "下载超时，请重试。",
+    "en": "The download timed out. Try again.",
+    "pt-BR": "O download expirou. Tente novamente."
+  },
+  "update.extract_failed": {
+    "zh-CN": "解压新版本失败。",
+    "en": "Extracting the new version failed.",
+    "pt-BR": "Falha ao extrair a nova versão."
+  },
+  "update.bundle_invalid": {
+    "zh-CN": "新版本应用信息不完整。",
+    "en": "The new version application is incomplete.",
+    "pt-BR": "O aplicativo da nova versão está incompleto."
+  },
+  "update.bundle_identity": {
+    "zh-CN": "新版本的应用标识不正确。",
+    "en": "The new version has the wrong bundle identifier.",
+    "pt-BR": "O identificador do pacote da nova versão está incorreto."
+  },
+  "update.bundle_incomplete": {
+    "zh-CN": "新版本缺少必要文件。",
+    "en": "The new version is missing required files.",
+    "pt-BR": "A nova versão não tem os arquivos necessários."
+  },
+  "update.version_mismatch": {
+    "zh-CN": "新版本号与发布信息不一致。",
+    "en": "The new version number does not match the release.",
+    "pt-BR": "O número da nova versão não corresponde à versão publicada."
+  },
+  "update.unsupported_system": {
+    "zh-CN": "新版本需要更高版本的 macOS。",
+    "en": "The new version requires a newer macOS.",
+    "pt-BR": "A nova versão requer um macOS mais recente."
+  },
+  "update.unsupported_arch": {
+    "zh-CN": "新版本不适用于当前 Mac。",
+    "en": "The new version is not compatible with this Mac.",
+    "pt-BR": "A nova versão não é compatível com este Mac."
+  },
+  "update.signature_invalid": {
+    "zh-CN": "新版本签名校验失败。",
+    "en": "The new version signature failed verification.",
+    "pt-BR": "A assinatura da nova versão falhou na verificação."
+  },
+  "update.tool_missing": {
+    "zh-CN": "找不到系统工具 {p0}。",
+    "en": "System tool {p0} was not found.",
+    "pt-BR": "Ferramenta do sistema {p0} não encontrada."
+  },
+  "update.tool_timeout": {
+    "zh-CN": "系统工具执行超时。",
+    "en": "A system tool timed out.",
+    "pt-BR": "Uma ferramenta do sistema expirou."
+  },
+  "update.directory_invalid": {
+    "zh-CN": "更新目录无效或不可写。",
+    "en": "The update directory is invalid or not writable.",
+    "pt-BR": "O diretório de atualização é inválido ou não permite gravação."
+  },
+  "update.record_invalid": {
+    "zh-CN": "更新任务记录无效。",
+    "en": "The update task record is invalid.",
+    "pt-BR": "O registro da tarefa de atualização é inválido."
+  },
+  "update.unknown_error": {
+    "zh-CN": "未知错误。",
+    "en": "Unknown error.",
+    "pt-BR": "Erro desconhecido."
+  },
+  "update.system_requirement_missing": {
+    "zh-CN": "新版本缺少最低 macOS 版本信息。",
+    "en": "The new version does not declare a minimum macOS version.",
+    "pt-BR": "A nova versão não declara a versão mínima do macOS."
+  },
+  "update.host_save_unconfirmed": {
+    "zh-CN": "游戏退出时未确认保存完成，本次更新已停止。",
+    "en": "The game exit did not confirm a completed save, so this update stopped.",
+    "pt-BR": "A saída do jogo não confirmou o salvamento; a atualização foi interrompida."
+  }
+}

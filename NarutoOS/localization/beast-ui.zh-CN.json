@@ -1,0 +1,113 @@
+{
+ "id": "naruto-beast-ui-zh-CN-v1",
+ "resourceURL": "https://cdnnaruto-pt.oasgames.com/PT_NarutoAlpha6.93Build300/flash/throughTheBeast/throughTheBeastUI.swf",
+ "file": "throughTheBeastUI.zh-CN.swf",
+ "font": "PingFang SC",
+ "textFields": {
+  "23": {
+   "source": "Selecione a quantidade para vender",
+   "translation": "选择出售数量"
+  },
+  "73": {
+   "source": "Ataque",
+   "translation": "攻击"
+  },
+  "75": {
+   "source": "Vida",
+   "translation": "生命"
+  },
+  "76": {
+   "source": "Ninjutsu",
+   "translation": "忍术"
+  },
+  "77": {
+   "source": "Defesa",
+   "translation": "防御"
+  },
+  "78": {
+   "source": "Resistência",
+   "translation": "抗性"
+  },
+  "98": {
+   "source": "Pakkun",
+   "translation": "帕克"
+  },
+  "103": {
+   "source": "Trocar",
+   "translation": "兑换"
+  },
+  "135": {
+   "source": "Mesmo sem estar em combate as invocações podem dar bônus de treino aos ninjas em formação. ",
+   "translation": "通灵兽无需上阵即可为所有上阵忍者提供修炼属性加成。"
+  },
+  "215": {
+   "source": "Invocações em batalha dão bônus de runas de contrato a todos os ninjas. ",
+   "translation": "通灵兽上阵可以为所有忍者增加契约符文加成。"
+  },
+  "220": {
+   "source": "Insira o nome da Invocação",
+   "translation": "输入通灵兽忍者名字"
+  }
+ },
+ "scriptStrings": {
+  "<b>Cancelar</b>": "<b>取消</b>",
+  "<b>Trocar</b>": "<b>兑换</b>",
+  "Incrustar Runas ": "镶嵌符文 ",
+  "Invocação": "通灵兽",
+  "Troca por Pontos": "积分兑换"
+ },
+ "pendingGlyphText": {
+  "24": {
+   "source": "Pode ser trocado por:",
+   "translation": "可兑换"
+  },
+  "94": {
+   "source": "Runas",
+   "translation": "符文"
+  },
+  "136": {
+   "source": "Ninjutsu",
+   "translation": "忍术"
+  },
+  "137": {
+   "source": "Resistência",
+   "translation": "抗性"
+  },
+  "139": {
+   "source": "Vida",
+   "translation": "生命"
+  },
+  "140": {
+   "source": "Ataque",
+   "translation": "攻击"
+  },
+  "141": {
+   "source": "Defesa",
+   "translation": "防御"
+  },
+  "142": {
+   "source": "Ataque Crítico",
+   "translation": "暴击"
+  },
+  "143": {
+   "source": "Combo ",
+   "translation": "连击"
+  },
+  "144": {
+   "source": "Controle",
+   "translation": "控制"
+  },
+  "145": {
+   "source": "Dano Crítico",
+   "translation": "暴伤"
+  },
+  "146": {
+   "source": "1° ataque",
+   "translation": "先攻"
+  },
+  "204": {
+   "source": "Ninjutsu",
+   "translation": "忍术"
+  }
+ }
+}

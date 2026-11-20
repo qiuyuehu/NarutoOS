@@ -1,0 +1,189 @@
+{
+  "id": "naruto-ninja-target-23-zh-CN-v1",
+  "rootId": "11011761",
+  "ninjaInfo": {
+    "class": "NinjaInfoCFG",
+    "rows": {
+      "11011761": {
+        "name": {
+          "source": "Madara Uchiha",
+          "translation": "宇智波斑"
+        },
+        "title": {
+          "source": "[Olho da Lua]",
+          "translation": "【月之眼】"
+        }
+      }
+    }
+  },
+  "skills": {
+    "class": "SkillCFG",
+    "rows": {
+      "21011764": {
+        "name": {
+          "source": "Arte Sábia: Relâmpago Yin",
+          "translation": "仙法·阴遁雷派"
+        },
+        "desc": {
+          "source": "<font color=\"#4dc831\">Lançado com combo de 30</font>, ataca 7 inimigos e causa dano de <font color=\"#4dc831\">Relâmpago</font> e <font color=\"#4dc831\">Paralisia</font> que não pode ser imunizada ou dispersada, além de remover o status de <font color=\"#4dc831\">Obstinação</font>. Esta habilidade tem bônus extra de <font color=\"#4dc831\">Crítico</font>. Quando o próprio Chakra cair abaixo de <font color=\"#4dc831\">60</font>, passa a liberar <font color=\"#4dc831\">Limbo: Estilo de Relâmpago Sombro</font>.",
+          "translation": "连击达到30时触发，攻击7名敌人，造成雷属性伤害和无法免疫或驱散的麻痹，并移除坚毅状态。本技能拥有额外暴击加成。自身查克拉低于60时，改为释放轮墓·阴雷派。"
+        }
+      },
+      "21011765": {
+        "name": {
+          "source": "Árvore Divina: Nascimento da Floresta Extensa",
+          "translation": "神·树界降诞"
+        },
+        "desc": {
+          "source": "Lançado ao ativar Tsukuyomi Infinito, desenrola o Plano <font color=\"#4dc831\">Árvore Divina: Nascimento da Floresta Extensa</font> com duração de <font color=\"#4dc831\">2</font> rodadas. Além disso, na primeira rodada após a abertura do Plano, os inimigos não podem recuperar Chakra extra, e terão sua capacidade de regeneração reduzida em <font color=\"#4dc831\">80%</font>.",
+          "translation": "发动无限月读时触发，展开神·树界降诞结界，持续2回合。结界展开后的首回合，敌人无法额外恢复查克拉，恢复能力降低80%。"
+        }
+      },
+      "21011766": {
+        "name": {
+          "source": "Absorção de Selamento",
+          "translation": "封术吸印"
+        },
+        "desc": {
+          "source": "Há alta chance para esquivar o primeiro ataque em cada rodada, recupera <font color=\"#4dc831\">100</font> de Chakra e ativa uma vez a habilidade <font color=\"#4dc831\">Limbo: Estilo de Relâmpago Sombro</font>.",
+          "translation": "有较高概率闪避每回合首次攻击，恢复100点查克拉，并触发1次轮墓·阴雷派。"
+        }
+      },
+      "21011767": {
+        "name": {
+          "source": "Jinchuuriki da Dez Caudas",
+          "translation": "十尾人柱力"
+        },
+        "desc": {
+          "source": "Madara possui <font color=\"#4dc831\">Imunidade a Status negativos nv. 2</font> e <font color=\"#4dc831\">Absorção de Selamento</font>. E ressuscita com <font color=\"#4dc831\">80%</font> de Vida na 3ª rodada contada a partir da rodada após a morte. Além disso, toda vez que os ninjas presentes usarem habilidades, Madara ganhará <font color=\"#4dc831\">10%</font> de <font color=\"#4dc831\">Ataque</font> e <font color=\"#4dc831\">Ninjutsu</font> (até 8 vezes por rodada).",
+          "translation": "斑获得2级负面状态免疫，并拥有封术吸印技能。被击败后的下一回合起计，第3回合以80%生命复活。此外，场上忍者每次使用技能时，斑攻击和忍术提高10%，每回合最多8次。"
+        }
+      },
+      "21011768": {
+        "name": {
+          "source": "Tsukuyomi Infinito",
+          "translation": "无限月读"
+        },
+        "desc": {
+          "source": "Causa <font color=\"#4dc831\">na certa</font> em todos os inimigos um efeito de controle que <font color=\"#4dc831\">sempre acerta</font>. Durante a rodada, ao usar habilidade, aplica a si mesmo(a) <font color=\"#4dc831\">Adormecido</font> e causa adicionalmente <font color=\"#4dc831\">Interrupção</font> no alvo escolhido. Esta habilidade pode ser usada alternadamente com <font color=\"#4dc831\">Limbo: Perfectivo: Susano'o</font>.",
+          "translation": "对敌方全体施加必定命中的控制效果。本回合使用技能时，对自身施加沉睡，并对选定目标额外造成打断。本技能与轮墓·完全体须佐能乎交替使用。"
+        }
+      },
+      "21011771": {
+        "name": {
+          "source": "Limbo: Cadeia",
+          "translation": "轮墓·连锁"
+        },
+        "desc": {
+          "source": "Ataca a equipe inimiga aleatória e rouba vezes de ataques comuns do alvo. Causa <font color=\"#4dc831\">Repelimento</font> a 1 inimigo aleatório. Esta habilidade <font color=\"#4dc831\">sempre acerta</font>, e depois, usa de <font color=\"#4dc831\">Estilo das Sombras: Relâmpago Giratório</font>.",
+          "translation": "随机攻击敌方一支小队，夺取目标普攻次数，使1名随机敌人击退。本技能必定命中，随后使用阴遁·回转雷。"
+        }
+      },
+      "21011772": {
+        "name": {
+          "source": "Limbo: Cadeia",
+          "translation": "轮墓·连锁"
+        },
+        "desc": {
+          "source": "Ataca a equipe inimiga aleatória e rouba vezes de ataques comuns do alvo. Causa <font color=\"#4dc831\">Repelimento</font> a 1 inimigo aleatório. Esta habilidade <font color=\"#4dc831\">sempre acerta</font>, e depois, usa de <font color=\"#4dc831\">Estilo das Sombras: Relâmpago Giratório</font>.",
+          "translation": "随机攻击敌方一支小队，夺取目标普攻次数，使1名随机敌人击退。本技能必定命中，随后使用阴遁·回转雷。"
+        }
+      },
+      "21011773": {
+        "name": {
+          "source": "Estilo das Sombras: Relâmpago Giratório",
+          "translation": "阴遁·回转雷"
+        },
+        "desc": {
+          "source": "Ataca 1 inimigo aleatório e causa dano de <font color=\"#4dc831\">Relâmpago</font>, com chance de causar <font color=\"#4dc831\">Queda</font> e <font color=\"#4dc831\">Paralisia</font> que não pode ser imunizada ou dispersada. Os inimigos derrotados por esta habilidade não podem ressuscitar. Ao lançar o primeiro ataque em cada rodada, libera <font color=\"#4dc831\">Limbo: Cadeia</font>.",
+          "translation": "随机攻击1名敌人，造成雷属性伤害，有概率造成倒地和无法免疫或驱散的麻痹。被本技能击败的敌人无法复活。每回合首次攻击时，释放轮墓·连锁。"
+        }
+      },
+      "21211767": {
+        "name": {
+          "source": "Jinchuuriki da Dez Caudas",
+          "translation": "十尾人柱力"
+        },
+        "desc": {
+          "source": "Toda vez que os ninjas presentes usarem habilidades, Madara ganhará <font color=\"#4dc831\">10%</font> de <font color=\"#4dc831\">Ataque</font> e <font color=\"#4dc831\">Ninjutsu</font> (até 8 vezes por rodada). Enquanto <font color=\"#4dc831\">Árvore Divina: Nascimento da Floresta Extensa</font> estiver presente, os aliados não sofrem <font color=\"#4dc831\">Paralisia</font> ou <font color=\"#4dc831\">Adormecido</font>, e os inimigos não recebem o status <font color=\"#4dc831\">Violência</font>. O plano dura 2 rodadas.",
+          "translation": "场上忍者每次使用技能时，斑攻击和忍术提高10%，每回合最多8次。神·树界降诞存在时，己方免疫麻痹和沉睡，敌方无法获得暴怒状态。结界持续2回合。"
+        }
+      }
+    }
+  },
+  "skillDetails": {
+    "class": "SkillKeyDescCFG",
+    "rows": {
+      "28": {
+        "keys": {
+          "source": "Adormecido",
+          "translation": "沉睡"
+        },
+        "desc": {
+          "source": "Status especial: neste status, não é possível realizar ações, e o efeito dura até o final da rodada. Este status não pode ser imunizado nem dispersado.",
+          "translation": "特殊状态：无法行动，持续至回合结束，无法免疫或驱散。"
+        }
+      },
+      "116": {
+        "keys": {
+          "source": "Imunidade a Status negativos nv. 2",
+          "translation": "2级负面状态免疫"
+        },
+        "desc": {
+          "source": "Exclusivo para Madara Uchiha com o [Olho da Lua], imune a status negativos, e não pode ser afetado por [Supressão de Imunidade a Status negativos] (exceto versões de nível mais alto de [Supressão de Imunidade a Status negativos]).",
+          "translation": "宇智波斑【月之眼】专属：免疫负面状态，不受[负面状态免疫压制]影响，更高级的压制除外。"
+        }
+      },
+      "504": {
+        "keys": {
+          "source": "Limbo: Cadeia",
+          "translation": "轮墓·连锁"
+        },
+        "desc": {
+          "source": "Ataca a equipe inimiga aleatória e rouba vezes de ataques comuns do alvo. Causa [Repelimento] a 1 inimigo aleatório. Esta habilidade [sempre acerta], e depois, usa de [Estilo das Sombras: Relâmpago Giratório].",
+          "translation": "随机攻击敌方一支小队，夺取目标普攻次数，使1名随机敌人[击退]。本技能[必定命中]，随后使用[阴遁·回转雷]。"
+        }
+      },
+      "505": {
+        "keys": {
+          "source": "Limbo: Estilo de Relâmpago Sombro",
+          "translation": "轮墓·阴雷派"
+        },
+        "desc": {
+          "source": "[Lançado com combo de 30], causa dano de [Relâmpago] a 12 inimigos e [Paralisia] que não pode ser imunizada e dispersada, e remove o status de [Obstinação]. Esta habilidade [sempre acerta] e ignora parte da [Resistência].",
+          "translation": "[连击达到30时触发]，对12名敌人造成[雷]属性伤害和无法免疫或驱散的[麻痹]，并移除[坚毅]。本技能[必定命中]，无视部分[抗性]。"
+        }
+      },
+      "506": {
+        "keys": {
+          "source": "Árvore Divina: Nascimento da Floresta Extensa",
+          "translation": "神·树界降诞"
+        },
+        "desc": {
+          "source": "Enquanto [Árvore Divina: Nascimento da Floresta Extensa] está ativa, os aliados não sofrem [Paralisia] ou [Adormecido], e os inimigos não recebem o status [Violência]. O plano dura 2 rodadas.",
+          "translation": "[神·树界降诞]生效期间，己方免疫[麻痹]和[沉睡]，敌方无法获得[暴怒]状态。结界持续2回合。"
+        }
+      },
+      "507": {
+        "keys": {
+          "source": "Limbo: Perfectivo: Susano'o",
+          "translation": "轮墓·完全体须佐能乎"
+        },
+        "desc": {
+          "source": "(Resfriamento inicial: [0 rodada] / Resfriamento da Esotérica: [1 rodada] / Chakra: [40]) Causa dano em 12 inimigos da formação inimiga e aplica [Supressão de Imunidade a Perseguição] (o efeito dura até o final da próxima rodada), remove o status [Violência] e causa ao alvo selecionado [Ruptura] (é um status negativo, sob este status, o portador tem 60% de chance de lançar 2 vezes de perseguição ao atacador ao receber dano de ninjutsu (não acumula). O status dura até o final da rodada e não pode ser imunizado nem dispersado.) e [Queda]. Esta habilidade deve ser usada com [Tsukuyomi Infinito].",
+          "translation": "（进场冷却：[0回合]／奥义冷却：[1回合]／查克拉：[40]）对敌方阵营12名敌人造成伤害和持续至下回合结束的[追打免疫压制]，移除[暴怒]状态，并对选定目标施加[破碎]（负面状态：受到忍术伤害时，持有者有60%概率对攻击者发动2次追打，不叠加，持续至回合结束，无法免疫或驱散）和[倒地]。本技能与[无限月读]交替使用。"
+        }
+      },
+      "508": {
+        "keys": {
+          "source": "Absorção de Selamento",
+          "translation": "封术吸印"
+        },
+        "desc": {
+          "source": "Há alta chance para esquivar o primeiro ataque a cada rodada, restaura [100] de Chakra e ativa uma vez a habilidade [Limbo: Estilo de Relâmpago Sombro], atacando 12 inimigos da formação inimiga com dano de [Relâmpago] e aplicando [Paralisia] que não pode ser imunizada ou dispersada. Também remove o status [Obstinação]. Esta habilidade é [sempre acerta] e ignora parte da [Resistência]. Após o uso, a habilidade Esotérica será redefinida para [Pronta para Uso].",
+          "translation": "有较高概率闪避每回合首次攻击，恢复[100]点查克拉，并触发1次[轮墓·阴雷派]：对敌方阵营12名敌人造成[雷]属性伤害和无法免疫或驱散的[麻痹]，移除[坚毅]。本技能[必定命中]，无视部分[抗性]。使用后，奥义重置为[可使用]。"
+        }
+      }
+    }
+  }
+}

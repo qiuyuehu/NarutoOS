@@ -1,0 +1,70 @@
+{
+ "id": "naruto-talent-ui-zh-CN-v1",
+ "resourceURL": "https://cdnnaruto-pt.oasgames.com/PT_NarutoAlpha9.05Build306/flash/majorRole/ui.talent.swf",
+ "file": "ui.talent.zh-CN.swf",
+ "font": "PingFang SC",
+ "textFields": {
+  "114": {
+   "source": "Disponível",
+   "translation": "可使用"
+  },
+  "122": {
+   "source": "Liberado no nível 60",
+   "translation": "LV60解锁"
+  },
+  "123": {
+   "source": "Liberado no nível 60",
+   "translation": "LV60解锁"
+  },
+  "124": {
+   "source": "abrir em breve",
+   "translation": "即将开放"
+  },
+  "129": {
+   "source": "Disponível",
+   "translation": "可使用"
+  },
+  "88": {
+   "source": "Aberto em breve",
+   "translation": "即将开放"
+  },
+  "95": {
+   "source": "Aberto em breve",
+   "translation": "即将开放"
+  },
+  "184": {
+   "source": "-Escolha de Talentos-Apenas uma habilidade pode ser selecionado por linha.Algumas habilidades requerem que o personagem atinja certo nível-Invocações-Ao ativar o sistema de Invocações você pode selecionar Perseguição e Esotérica de InvocaçãoA Perseguição da Invocação pode ser usada para formar combos melhores com a equipeA Esotérica da Invocação também tem resfriamento, quando o resfriamento acaba ela é lançada antes da Esotérica do personagem-Ajuda Ninja-Ao ativar esta função pode-se selecionar um ninja de Ajuda-Elemento Secundário-Ao ativar o sistema de Treino de Elementos pode-se selecionar um Elemento SecundárioSó se pode selecionar 1 Elemento Secundário por vezAo selecionar, os talentos são alterados de acordo com as habilidades novas que já tenham sido treinadasCaso não selecione Elemento Secundário, os talentos não mudam",
+   "paragraphs": [
+    "天赋的选择",
+    "每排只能选择一个技能",
+    "部分技能需要主角达到一定等级才可开启",
+    "通灵兽",
+    "开启通灵兽系统可以选择通灵兽追打和通灵兽奥义",
+    "通灵兽追打可用于完善阵容追打搭配",
+    "通灵兽奥义存在冷却，当冷却结束时，主角释放奥义前会先释放通灵兽奥义",
+    "忍者协助",
+    "开启忍者协助后可以选择忍者协助",
+    "第二遁术选择",
+    "开启遁术修行系统后可以选择第二遁术",
+    "一次只能选择一个第二遁术",
+    "选择第二遁术后，天赋将全部切换为该遁术下已修行完成的所有技能；未完成修行或者未开启修行的技能则维持原始技能不变",
+    "不选择第二遁术则将维持主角原始技能",
+    "追打详情",
+    "使用追打详情配置天赋时，点击通灵兽即替换通灵兽追打"
+   ]
+  }
+ },
+ "scriptStrings": {
+  "ui/majorRole/TalentPanelUI2": {
+   "Talentos": "天赋",
+   "Perseguição Detalhes": "追打详情",
+   "Escolha a ajuda de ninja": "忍者协助",
+   "Invocações": "通灵兽",
+   "<font color=\"#9C8A64\">Escolher Estilo Secundário</font>": "<font color=\"#9C8A64\">第二遁术</font>",
+   "<font color=\"#9C8A64\">Talentos recomendados</font> ": "<font color=\"#9C8A64\">推荐天赋</font> "
+  },
+  "ui/majorRole/ChasePaneUI": {
+   "Perseguição Detalhes": "追打详情"
+  }
+ }
+}

@@ -1,0 +1,409 @@
+{
+ "id": "naruto-beast-skills-zh-CN-v1",
+ "class": "BeastDevelopSkillCFG",
+ "resourceURL": "https://cdnnaruto-pt.oasgames.com/PT_NarutoAlpha9.31Build300/config/throughTheBeast/BeastDevelopSkillCFG.cfgx",
+ "rows": {
+  "0": {
+   "promp": {
+    "source": "Aumento da Marca",
+    "translation": "印记强化"
+   }
+  },
+  "1": {
+   "promp": {
+    "source": "Aumento da Marca",
+    "translation": "目标数提升"
+   }
+  },
+  "2": {
+   "promp": {
+    "source": "Aumento da Marca",
+    "translation": "增加标记"
+   }
+  },
+  "3": {
+   "promp": {
+    "source": "Diminuição resfr. inicial",
+    "translation": "初始冷却减少"
+   }
+  },
+  "4": {
+   "promp": {
+    "source": "Diminuição resfr. inicial",
+    "translation": "目标数提升"
+   }
+  },
+  "5": {
+   "promp": {
+    "source": "Diminuição resfr. inicial",
+    "translation": "进场冷却降低"
+   }
+  },
+  "6": {
+   "promp": {
+    "source": "Diminuição resfr. inicial",
+    "translation": "初始冷却减少"
+   }
+  },
+  "7": {
+   "promp": {
+    "source": "Diminuição resfr. inicial",
+    "translation": "目标数提升"
+   }
+  },
+  "8": {
+   "promp": {
+    "source": "Diminuição resfr. inicial",
+    "translation": "进场冷却降低"
+   }
+  },
+  "12": {
+   "promp": {
+    "source": "Aumento da Resistência",
+    "translation": "抗性提升"
+   }
+  },
+  "13": {
+   "promp": {
+    "source": "Aumento da Resistência",
+    "translation": "抗性提升"
+   }
+  },
+  "14": {
+   "promp": {
+    "source": "Aumento da Resistência",
+    "translation": "抗性提升"
+   }
+  },
+  "15": {
+   "promp": {
+    "source": "Diminuição resfr. inicial",
+    "translation": "初始冷却减少"
+   }
+  },
+  "16": {
+   "promp": {
+    "source": "Diminuição resfr. inicial",
+    "translation": "目标数提升"
+   }
+  },
+  "17": {
+   "promp": {
+    "source": "Diminuição resfr. inicial",
+    "translation": "进场冷却降低"
+   }
+  },
+  "18": {
+   "promp": {
+    "source": "Diminuição resfr. inicial",
+    "translation": "初始冷却减少"
+   }
+  },
+  "19": {
+   "promp": {
+    "source": "Diminuição resfr. inicial",
+    "translation": "冷却降低"
+   }
+  },
+  "20": {
+   "promp": {
+    "source": "Diminuição resfr. inicial",
+    "translation": "进场冷却降低"
+   }
+  },
+  "21": {
+   "promp": {
+    "source": "Remoção de status neg.",
+    "translation": "移除负面状态"
+   }
+  },
+  "22": {
+   "promp": {
+    "source": "Remoção de status neg.",
+    "translation": "回复量提升"
+   }
+  },
+  "23": {
+   "promp": {
+    "source": "Remoção de status neg.",
+    "translation": "解除不良状态"
+   }
+  },
+  "27": {
+   "promp": {
+    "source": "Diminuição resfr. inicial",
+    "translation": "初始冷却减少"
+   }
+  },
+  "28": {
+   "promp": {
+    "source": "Diminuição resfr. inicial",
+    "translation": "目标数提升"
+   }
+  },
+  "29": {
+   "promp": {
+    "source": "Diminuição resfr. inicial",
+    "translation": "进场冷却降低"
+   }
+  },
+  "30": {
+   "promp": {
+    "source": "Supressão de Armadura",
+    "translation": "护甲压制"
+   }
+  },
+  "31": {
+   "promp": {
+    "source": "Supressão de Armadura",
+    "translation": "增加震伤"
+   }
+  },
+  "32": {
+   "promp": {
+    "source": "Supressão de Armadura",
+    "translation": "压制霸体"
+   }
+  },
+  "33": {
+   "promp": {
+    "source": "Eliminuje Inicjatywę",
+    "translation": "消除先攻"
+   }
+  },
+  "34": {
+   "promp": {
+    "source": "Eliminuje Inicjatywę",
+    "translation": "压制先攻"
+   }
+  },
+  "35": {
+   "promp": {
+    "source": "Eliminuje Inicjatywę",
+    "translation": "压制更多先攻"
+   }
+  },
+  "36": {
+   "promp": {
+    "source": "Causa Cagueira extra",
+    "translation": "额外造成腹泻"
+   }
+  },
+  "37": {
+   "promp": {
+    "source": "Causa Cagueira extra",
+    "translation": "降低普攻次数"
+   }
+  },
+  "38": {
+   "promp": {
+    "source": "Causa Cagueira extra",
+    "translation": "额外造成目盲"
+   }
+  },
+  "39": {
+   "promp": {
+    "source": "Causa Confusão Grave",
+    "translation": "造成重度混乱"
+   }
+  },
+  "40": {
+   "promp": {
+    "source": "Causa Confusão Grave",
+    "translation": "压制免疫不良"
+   }
+  },
+  "41": {
+   "promp": {
+    "source": "Causa Confusão Grave",
+    "translation": "造成极度混乱"
+   }
+  },
+  "42": {
+   "promp": {
+    "source": "Quebrar defesa",
+    "translation": "破防"
+   }
+  },
+  "43": {
+   "promp": {
+    "source": "Quebrar defesa",
+    "translation": "必中"
+   }
+  },
+  "44": {
+   "promp": {
+    "source": "Quebrar defesa",
+    "translation": "造成破防"
+   }
+  },
+  "45": {
+   "promp": {
+    "source": "Reduzir Dano de Habilidade Esotérica",
+    "translation": "降低奥义伤害"
+   }
+  },
+  "46": {
+   "promp": {
+    "source": "Reduzir Dano de Habilidade Esotérica",
+    "translation": "降低奥义伤害"
+   }
+  },
+  "47": {
+   "promp": {
+    "source": "Reduzir Dano de Habilidade Esotérica",
+    "translation": "降低奥义伤害"
+   }
+  },
+  "48": {
+   "promp": {
+    "source": "Causa Toxicidade extra",
+    "translation": "额外造成中毒"
+   }
+  },
+  "49": {
+   "promp": {
+    "source": "Causa Toxicidade extra",
+    "translation": "额外造成中毒"
+   }
+  },
+  "50": {
+   "promp": {
+    "source": "Causa Toxicidade extra",
+    "translation": "额外造成剧毒"
+   }
+  },
+  "51": {
+   "promp": {
+    "source": "Perseguição da equipe sempre acerta",
+    "translation": "小队追打必定命中"
+   }
+  },
+  "52": {
+   "promp": {
+    "source": "Perseguição da equipe sempre acerta",
+    "translation": "造成麻痹"
+   }
+  },
+  "53": {
+   "promp": {
+    "source": "Perseguição da equipe sempre acerta",
+    "translation": "小队追打必中"
+   }
+  },
+  "54": {
+   "promp": {
+    "source": "Absorver Chakra",
+    "translation": "吸收查克拉"
+   }
+  },
+  "55": {
+   "promp": {
+    "source": "Absorver Chakra",
+    "translation": "必中"
+   }
+  },
+  "56": {
+   "promp": {
+    "source": "Absorver Chakra",
+    "translation": "吸取查克拉"
+   }
+  },
+  "57": {
+   "promp": {
+    "source": "Redução de Dano Esotérico",
+    "translation": "奥义伤害减免"
+   }
+  },
+  "58": {
+   "promp": {
+    "source": "Redução de Dano Esotérico",
+    "translation": "驱散不良状态"
+   }
+  },
+  "59": {
+   "promp": {
+    "source": "Redução de Dano Esotérico",
+    "translation": "减免奥义伤害"
+   }
+  },
+  "60": {
+   "promp": {
+    "source": "Redução de Dano Esotérico",
+    "translation": "奥义伤害减免"
+   }
+  },
+  "61": {
+   "promp": {
+    "source": "Redução de Dano Esotérico",
+    "translation": "驱散不良状态"
+   }
+  },
+  "62": {
+   "promp": {
+    "source": "Redução de Dano Esotérico",
+    "translation": "减免奥义伤害"
+   }
+  },
+  "63": {
+   "promp": {
+    "source": "Causa Lentidão Extrema",
+    "translation": "造成极减速"
+   }
+  },
+  "64": {
+   "promp": {
+    "source": "Causa Lentidão Extrema",
+    "translation": "必中"
+   }
+  },
+  "65": {
+   "promp": {
+    "source": "Causa Lentidão Extrema",
+    "translation": "造成极度减速"
+   }
+  },
+  "67": {
+   "promp": {
+    "source": "驱散不良状态",
+    "translation": "驱散不良状态"
+   }
+  },
+  "68": {
+   "promp": {
+    "source": "减免奥义伤害",
+    "translation": "减免奥义伤害"
+   }
+  },
+  "70": {
+   "promp": {
+    "source": "必中",
+    "translation": "必中"
+   }
+  },
+  "71": {
+   "promp": {
+    "source": "造成溶解",
+    "translation": "造成溶解"
+   }
+  },
+  "72": {
+   "promp": {
+    "source": "Causa Lentidão",
+    "translation": "造成减速"
+   }
+  },
+  "73": {
+   "promp": {
+    "source": "Causa Lentidão",
+    "translation": "必中"
+   }
+  },
+  "74": {
+   "promp": {
+    "source": "Causa Lentidão",
+    "translation": "造成迟缓"
+   }
+  }
+ }
+}

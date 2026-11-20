@@ -1,0 +1,30 @@
+{
+  "id": "naruto-activity-assist-v1",
+  "version": "9.39Build301",
+  "resourceURL": "https://cdnnaruto-pt.oasgames.com/PT_NarutoAlpha9.39Build301/flash/operatingActivity/OperatingActivityPlugin.swf",
+  "baseSha256": "43ddf0dafa8bfb8be1bcf6e83b144bba0847ba4b149c067a60db996b6b86656e",
+  "file": "OperatingActivityPlugin.activity-assist.swf",
+  "patchedSha256": "163f3bc4ad4403b6883d047a20ee77bc3271a54720c4abc74e63b3189bca0fb8",
+  "patches": [
+    {
+      "id": "damo",
+      "directory": "damo-yuandanji-9.39Build301",
+      "files": [
+        "com/tencent/morefun/naruto/plugin/operatingActivity/activitys/yuanDanJi/pageView/DaMoPage.as",
+        "com/tencent/morefun/naruto/plugin/operatingActivity/activitys/yuanDanJi/pageView/daMo/DaMoGame.as"
+      ]
+    },
+    {
+      "id": "ninjutsu-train",
+      "directory": "ninjutsu-train-9.39Build301",
+      "activityTypes": [
+        800223,
+        800264
+      ],
+      "files": [
+        "com/tencent/morefun/naruto/plugin/operatingActivity/activitys/ninjutsuTrain/TrainView.as",
+        "com/tencent/morefun/naruto/plugin/operatingActivity/activitys/ninjutsuTrain2/TrainView.as"
+      ]
+    }
+  ]
+}

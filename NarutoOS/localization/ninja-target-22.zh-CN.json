@@ -1,0 +1,129 @@
+{
+  "id": "naruto-ninja-target-22-zh-CN-v1",
+  "rootId": "11008571",
+  "ninjaInfo": {
+    "class": "NinjaInfoCFG",
+    "rows": {
+      "11008571": {
+        "name": {
+          "source": "Itachi Uchiha",
+          "translation": "宇智波鼬"
+        },
+        "title": {
+          "source": "[Ronin]",
+          "translation": "【漂泊武士】"
+        }
+      }
+    }
+  },
+  "skills": {
+    "class": "SkillCFG",
+    "rows": {
+      "21008571": {
+        "name": {
+          "source": "Quatro Estações Furiosas",
+          "translation": "四季狂岚"
+        },
+        "desc": {
+          "source": "Ataca uma linha vertical aleatória de inimigos, com chance de causar <font color=\"#4dc831\">Repelimento</font>. Com <font color=\"#4dc831\">2</font> ninjas de <font color=\"#4dc831\">Uchiha</font> aliados ou mais, esta habilidade <font color=\"#4dc831\">sempre acerta</font> e tem bônus extra de <font color=\"#4dc831\">Crítico</font>.",
+          "translation": "随机攻击敌方一纵排，有概率造成击退。己方有至少2名宇智波忍者时，本技能必定命中并拥有额外暴击加成。"
+        }
+      },
+      "21008572": {
+        "name": {
+          "source": "Quatro Estações Furiosas",
+          "translation": "四季狂岚"
+        },
+        "desc": {
+          "source": "Ataca uma linha vertical aleatória de inimigos, com chance de causar <font color=\"#4dc831\">Repelimento</font>. Com <font color=\"#4dc831\">2</font> ninjas de <font color=\"#4dc831\">Uchiha</font> aliados ou mais, esta habilidade <font color=\"#4dc831\">sempre acerta</font> e tem bônus extra de <font color=\"#4dc831\">Crítico</font>.",
+          "translation": "随机攻击敌方一纵排，有概率造成击退。己方有至少2名宇智波忍者时，本技能必定命中并拥有额外暴击加成。"
+        }
+      },
+      "21008573": {
+        "name": {
+          "source": "Quatro Estações Furiosas",
+          "translation": "四季狂岚"
+        },
+        "desc": {
+          "source": "Ataca uma linha vertical aleatória de inimigos, com chance de causar <font color=\"#4dc831\">Repelimento</font>. Com <font color=\"#4dc831\">2</font> ninjas de <font color=\"#4dc831\">Uchiha</font> aliados ou mais, esta habilidade <font color=\"#4dc831\">sempre acerta</font> e tem bônus extra de <font color=\"#4dc831\">Crítico</font>.",
+          "translation": "随机攻击敌方一纵排，有概率造成击退。己方有至少2名宇智波忍者时，本技能必定命中并拥有额外暴击加成。"
+        }
+      },
+      "21008574": {
+        "name": {
+          "source": "Vulto: Moinho de vento",
+          "translation": "幻影·风车"
+        },
+        "desc": {
+          "source": "Persegue inimigos com <font color=\"#4dc831\">Flutuação</font> e causa <font color=\"#4dc831\">Queda</font>, roubando chances de ataque comum do alvo. Esta habilidade ignora parte da <font color=\"#4dc831\">Defesa</font>. Com <font color=\"#4dc831\">2</font> ninjas de <font color=\"#4dc831\">Uchiha</font> aliados ou mais, reduz o próprio <font color=\"#4dc831\">Resfriamento da Esotérica</font> em 1 rodada e diminui em <font color=\"#4dc831\">20</font> pontos o <font color=\"#4dc831\">Consumo de Chakra</font> durante a rodada.",
+          "translation": "追打浮空敌人，造成倒地并夺取目标普攻次数，无视部分防御。己方有至少2名宇智波忍者时，自身奥义冷却减少1回合，本回合查克拉消耗降低20点。"
+        }
+      },
+      "21008575": {
+        "name": {
+          "source": "Katana Única",
+          "translation": "一刀流"
+        },
+        "desc": {
+          "source": "Lançado antes das primeiras 4 ações em cada rodada, ganha imunidade a <font color=\"#4dc831\">Interrupção</font> e remove o próprio status <font color=\"#4dc831\">Selamento</font>, causando uma pequena quantidade de <font color=\"#4dc831\">dano</font> aos ninjas <font color=\"#4dc831\">Espadachim</font> de <font color=\"#4dc831\">Uchiha</font> aliados e aumentando em <font color=\"#4dc831\">10%</font> o dano das habilidades de <font color=\"#4dc831\">Perseguição</font> (até <font color=\"#4dc831\">100%</font>).",
+          "translation": "每回合前4次行动前触发，免疫打断并移除自身封穴，对己方宇智波剑士忍者造成少量伤害，追打技能伤害提高10%，最多100%。"
+        }
+      },
+      "21008576": {
+        "name": {
+          "source": "Revelação Ocular",
+          "translation": "瞳之启示"
+        },
+        "desc": {
+          "source": "Removendo os próprios <font color=\"#4dc831\">Status negativos</font> (exceto status que não podem ser imunizados e dispersados), com grande chance de se esquivar dos primeiros 2 ataques <font color=\"#4dc831\">Esotérico</font> por rodada, lança <font color=\"#4dc831\">Habilidade adicional</font>: <font color=\"#4dc831\">Super: Katana Única</font> ao receber dano 3 vezes durante a rodada (até 1 vez por rodada).",
+          "translation": "移除自身负面状态（无法免疫或驱散的状态除外），有较高概率闪避每回合前2次奥义攻击。单回合受到3次伤害时，触发追加技能：超·一刀流，每回合最多1次。"
+        }
+      },
+      "21008577": {
+        "name": {
+          "source": "Amaterasu: Luz da Lua",
+          "translation": "天照·月光"
+        },
+        "desc": {
+          "source": "Removendo os status <font color=\"#4dc831\">Terror</font>, <font color=\"#4dc831\">Paralisia</font> e <font color=\"#4dc831\">Selamento de Ninjutsu</font> dos aliados, aplica <font color=\"#4dc831\">Interrupção</font> aos <font color=\"#4dc831\">9</font> inimigos e ativa o plano <font color=\"#4dc831\">Luz da Lua</font>.",
+          "translation": "移除己方队友的恐惧、麻痹和忍术封印，对9名敌人造成打断，并展开月光结界。"
+        }
+      },
+      "21008579": {
+        "name": {
+          "source": "Amaterasu: Luz da Lua",
+          "translation": "天照·月光"
+        },
+        "desc": {
+          "source": "Enquanto o plano de <font color=\"#4dc831\">Luz da Lua</font> estiver ativo, o ninja <font color=\"#4dc831\">Espadachim</font> de <font color=\"#4dc831\">Uchiha</font> aliado não pode ser afetado pelos status <font color=\"#4dc831\">Terror</font>, <font color=\"#4dc831\">Paralisia</font> e <font color=\"#4dc831\">Selamento de Ninjutsu</font>.",
+          "translation": "月光结界生效期间，己方宇智波剑士忍者无法受到恐惧、麻痹和忍术封印。"
+        }
+      }
+    }
+  },
+  "skillDetails": {
+    "class": "SkillKeyDescCFG",
+    "rows": {
+      "580": {
+        "keys": {
+          "source": "Luz da Lua",
+          "translation": "月光"
+        },
+        "desc": {
+          "source": "Enquanto o plano de [Luz da Lua] estiver ativo, o ninja [Espadachim] de [Uchiha] aliado não pode ser afetado pelos status [Terror] e [Paralisia]. O plano dura 2 rodadas.",
+          "translation": "[月光]结界生效期间，己方[宇智波][剑士]忍者无法受到[恐惧]和[麻痹]。结界持续2回合。"
+        }
+      },
+      "581": {
+        "keys": {
+          "source": "Super: Katana Única",
+          "translation": "超·一刀流"
+        },
+        "desc": {
+          "source": "[Habilidade adicional]: removendo o próprio status de [Selamento], seu [Resfriamento da Esotérica] é zerado e causa uma pequena quantidade de [dano] aos ninjas [Espadachim] de [Uchiha] aliados. Durante a rodada, ganha [2] chances das habilidades de [Perseguição], ao causar um [Crítico], aumentando em [12%] seu próprio [Ninjutsu] (até [120%] por rodada) e em [5%] o [Crítico] (até [40%] por rodada).",
+          "translation": "[追加技能]：移除自身[封穴]，清除自身[奥义冷却]，对己方[宇智波][剑士]忍者造成少量[伤害]。本回合额外获得[2]次[追打]机会；造成[暴击]时，自身[忍术]提高[12%]，每回合最多[120%]，[暴击]率提高[5%]，每回合最多[40%]。"
+        }
+      }
+    }
+  }
+}

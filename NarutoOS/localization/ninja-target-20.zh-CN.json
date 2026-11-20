@@ -1,0 +1,959 @@
+{
+  "id": "naruto-ninja-target-20-zh-CN-v1",
+  "rootId": "11003341",
+  "ninjaInfo": {
+    "class": "NinjaInfoCFG",
+    "rows": {
+      "11003341": {
+        "name": {
+          "source": "Hashirama Senju",
+          "translation": "千手柱间"
+        },
+        "title": {
+          "source": "[Vale do Fim]",
+          "translation": "【终焉之战】"
+        }
+      },
+      "11003342": {
+        "name": {
+          "source": "Hashirama Senju",
+          "translation": "千手柱间"
+        },
+        "title": {
+          "source": "[Vale do Fim]",
+          "translation": "【终焉之战】"
+        }
+      },
+      "11003343": {
+        "name": {
+          "source": "Hashirama Senju",
+          "translation": "千手柱间"
+        },
+        "title": {
+          "source": "[Vale do Fim]",
+          "translation": "【终焉之战】"
+        }
+      },
+      "11003344": {
+        "name": {
+          "source": "Hashirama Senju",
+          "translation": "千手柱间"
+        },
+        "title": {
+          "source": "[Vale do Fim]",
+          "translation": "【终焉之战】"
+        }
+      },
+      "11003345": {
+        "name": {
+          "source": "Hashirama Senju",
+          "translation": "千手柱间"
+        },
+        "title": {
+          "source": "[Vale do Fim]",
+          "translation": "【终焉之战】"
+        }
+      },
+      "11003351": {
+        "name": {
+          "source": "Hashirama Senju",
+          "translation": "千手柱间"
+        },
+        "title": {
+          "source": "[Vale do Fim]",
+          "translation": "【终焉之战】"
+        }
+      },
+      "11003352": {
+        "name": {
+          "source": "Hashirama Senju",
+          "translation": "千手柱间"
+        },
+        "title": {
+          "source": "[Vale do Fim]",
+          "translation": "【终焉之战】"
+        }
+      },
+      "11003353": {
+        "name": {
+          "source": "Hashirama Senju",
+          "translation": "千手柱间"
+        },
+        "title": {
+          "source": "[Vale do Fim]",
+          "translation": "【终焉之战】"
+        }
+      },
+      "11003354": {
+        "name": {
+          "source": "Hashirama Senju",
+          "translation": "千手柱间"
+        },
+        "title": {
+          "source": "[Vale do Fim]",
+          "translation": "【终焉之战】"
+        }
+      },
+      "11003355": {
+        "name": {
+          "source": "Hashirama Senju",
+          "translation": "千手柱间"
+        },
+        "title": {
+          "source": "[Vale do Fim]",
+          "translation": "【终焉之战】"
+        }
+      }
+    }
+  },
+  "skills": {
+    "class": "SkillCFG",
+    "rows": {
+      "21003341": {
+        "name": {
+          "source": "Ataque Taijutsu",
+          "translation": "体术攻击"
+        },
+        "desc": {
+          "source": "Ataca o inimigo à frente, causando dano <font color=\"#4dc831\">na certa</font> e com chance de causar <font color=\"#4dc831\">Voo</font>. Esta habilidade tem bônus extra de <font color=\"#4dc831\">Crítico</font> e recupera <font color=\"#4dc831\">35%</font> do dano causado de Vida. Caso sua Vida esteja acima de <font color=\"#4dc831\">60%</font>, a habilidade lançada é a <font color=\"#4dc831\">Espada Forte: Destruidor de Elmos</font>.",
+          "translation": "攻击前方敌人，造成必定命中的伤害，有概率造成高浮空，拥有额外暴击加成，恢复相当于造成伤害35%的生命。自身生命高于60%时，改为使用刚刀·破盔。"
+        }
+      },
+      "21003342": {
+        "name": {
+          "source": "Ataque Taijutsu",
+          "translation": "体术攻击"
+        },
+        "desc": {
+          "source": "Ataca o inimigo à frente, causando dano <font color=\"#4dc831\">na certa</font> e com chance de causar <font color=\"#4dc831\">Voo</font>. Esta habilidade tem bônus extra de <font color=\"#4dc831\">Crítico</font> e recupera <font color=\"#4dc831\">35%</font> do dano causado de Vida. Caso sua Vida esteja acima de <font color=\"#4dc831\">61%</font>, a habilidade lançada é a <font color=\"#4dc831\">Espada Forte: Destruidor de Elmos</font>.",
+          "translation": "攻击前方敌人，造成必定命中的伤害，有概率造成高浮空，拥有额外暴击加成，恢复相当于造成伤害35%的生命。自身生命高于61%时，改为使用刚刀·破盔。"
+        }
+      },
+      "21003343": {
+        "name": {
+          "source": "Ataque Taijutsu",
+          "translation": "体术攻击"
+        },
+        "desc": {
+          "source": "Ataca o inimigo à frente, causando dano <font color=\"#4dc831\">na certa</font> e com chance de causar <font color=\"#4dc831\">Voo</font>. Esta habilidade tem bônus extra de <font color=\"#4dc831\">Crítico</font> e recupera <font color=\"#4dc831\">35%</font> do dano causado de Vida. Caso sua Vida esteja acima de <font color=\"#4dc831\">62%</font>, a habilidade lançada é a <font color=\"#4dc831\">Espada Forte: Destruidor de Elmos</font>.",
+          "translation": "攻击前方敌人，造成必定命中的伤害，有概率造成高浮空，拥有额外暴击加成，恢复相当于造成伤害35%的生命。自身生命高于62%时，改为使用刚刀·破盔。"
+        }
+      },
+      "21003344": {
+        "name": {
+          "source": "Mão Severa",
+          "translation": "重掌"
+        },
+        "desc": {
+          "source": "Persegue inimigos com <font color=\"#4dc831\">Flutuação</font> ou <font color=\"#4dc831\">Queda</font>, causa dano <font color=\"#4dc831\">na certa</font>, <font color=\"#4dc831\">Queda</font> e <font color=\"#4dc831\">Interrupção</font>, recupera <font color=\"#4dc831\">35%</font> do dano causado em Vida, pode ser ativada 2 vezes por rodada. Se a Vida de Hashirama estiver acima de <font color=\"#4dc831\">60%</font>, a habilidade muda para <font color=\"#4dc831\">Estilo Madeira: Mil Mãos Severas</font>.",
+          "translation": "追打浮空或倒地敌人，造成必定命中的伤害、倒地和打断，恢复相当于伤害35%的生命，每回合最多2次。柱间生命高于60%时，替换为木遁·千重掌。"
+        }
+      },
+      "21003346": {
+        "name": {
+          "source": "Corpo Sennin",
+          "translation": "仙人体"
+        },
+        "desc": {
+          "source": "Hashirama tem <font color=\"#4dc831\">Imunidade a Status Negativos</font>. Sempre que for atacado, recupera <font color=\"#4dc831\">5%</font> de Vida e diminui o próprio <font color=\"#4dc831\">Resfriamento da Esotérica</font> em 1. Se a Vida de Hashirama estiver acima de <font color=\"#4dc831\">60%</font>, após usar <font color=\"#4dc831\">Portões Divinos: Investida do Dragão de Madeira</font>, lança o <font color=\"#4dc831\">Estilo Madeira: Jutsu do Boneco de Madeira</font>.",
+          "translation": "柱间免疫负面状态。每次受到攻击时恢复5%生命，自身奥义冷却减少1回合。生命高于60%时，使用明神门·木龙突进后，额外释放木遁·木人之术。"
+        }
+      },
+      "21003348": {
+        "name": {
+          "source": "Explosão de Chakra",
+          "translation": "查克拉爆发"
+        },
+        "desc": {
+          "source": "Após sofrer dano pela primeira vez em cada rodada, Hashirama recebe <font color=\"#4dc831\">Excitação</font> (até o final da rodada). Hashirama pode acumular até 2 <font color=\"#4dc831\">Pontos de Habilidade</font> e cada ponto acumulado aumenta sua <font color=\"#4dc831\">Defesa</font> em <font color=\"#4dc831\">20%</font>. Sempre que sofrer dano, recebe <font color=\"#4dc831\">0,5</font> <font color=\"#4dc831\">Pontos de Habilidade</font>. Após acumular 2 <font color=\"#4dc831\">Pontos de Habilidade</font>, Hashirama consome todos, recupera <font color=\"#4dc831\">40</font> Pontos de Chakra e entra no modo <font color=\"#4dc831\">Explosão de Chakra</font>.",
+          "translation": "每回合首次受到伤害后获得亢奋，持续至回合结束。最多积累2个技能点，每点使防御提高20%。每次受到伤害获得0.5个技能点，达到2点时消耗全部技能点，恢复40点查克拉，并进入查克拉爆发状态。"
+        }
+      },
+      "21003351": {
+        "name": {
+          "source": "Ataque Taijutsu",
+          "translation": "体术攻击"
+        },
+        "desc": {
+          "source": "Causa dano <font color=\"#4dc831\">na certa</font> ao inimigo à frente e recupera <font color=\"#4dc831\">35%</font> do dano causado em Vida, com chance de causar <font color=\"#4dc831\">Voo</font>. Esta habilidade tem bônus adicional de <font color=\"#4dc831\">Crítico</font>. Se a Vida de Hashirama estiver acima de <font color=\"#4dc831\">60%</font>, a habilidade muda para <font color=\"#4dc831\">Espada Forte: Destruidor de Elmos</font>.",
+          "translation": "攻击前方敌人，造成必定命中的伤害，有概率造成高浮空，拥有额外暴击加成，恢复相当于造成伤害35%的生命。自身生命高于60%时，改为使用刚刀·破盔。"
+        }
+      },
+      "21003352": {
+        "name": {
+          "source": "Ataque Taijutsu",
+          "translation": "体术攻击"
+        },
+        "desc": {
+          "source": "Causa dano <font color=\"#4dc831\">na certa</font> ao inimigo à frente e recupera <font color=\"#4dc831\">35%</font> do dano causado em Vida, com chance de causar <font color=\"#4dc831\">Voo</font>. Esta habilidade tem bônus adicional de <font color=\"#4dc831\">Crítico</font>. Se a Vida de Hashirama estiver acima de <font color=\"#4dc831\">60%</font>, a habilidade muda para <font color=\"#4dc831\">Espada Forte: Destruidor de Elmos</font>.",
+          "translation": "攻击前方敌人，造成必定命中的伤害，有概率造成高浮空，拥有额外暴击加成，恢复相当于造成伤害35%的生命。自身生命高于60%时，改为使用刚刀·破盔。"
+        }
+      },
+      "21003353": {
+        "name": {
+          "source": "Ataque Taijutsu",
+          "translation": "体术攻击"
+        },
+        "desc": {
+          "source": "Causa dano <font color=\"#4dc831\">na certa</font> ao inimigo à frente e recupera <font color=\"#4dc831\">35%</font> do dano causado em Vida, com chance de causar <font color=\"#4dc831\">Voo</font>. Esta habilidade tem bônus adicional de <font color=\"#4dc831\">Crítico</font>. Se a Vida de Hashirama estiver acima de <font color=\"#4dc831\">60%</font>, a habilidade muda para <font color=\"#4dc831\">Espada Forte: Destruidor de Elmos</font>.",
+          "translation": "攻击前方敌人，造成必定命中的伤害，有概率造成高浮空，拥有额外暴击加成，恢复相当于造成伤害35%的生命。自身生命高于60%时，改为使用刚刀·破盔。"
+        }
+      },
+      "21003354": {
+        "name": {
+          "source": "Mão Severa",
+          "translation": "重掌"
+        },
+        "desc": {
+          "source": "Persegue inimigos com <font color=\"#4dc831\">Flutuação</font> ou <font color=\"#4dc831\">Queda</font>, causa dano <font color=\"#4dc831\">na certa</font>, <font color=\"#4dc831\">Queda</font> e <font color=\"#4dc831\">Interrupção</font>, recupera <font color=\"#4dc831\">35%</font> do dano causado em Vida, pode ser ativada 2 vezes por rodada. Esta habilidade ignora uma certa quantidade de <font color=\"#4dc831\">Defesa</font>. Se a Vida de Hashirama estiver acima de <font color=\"#4dc831\">60%</font>, a habilidade muda para <font color=\"#4dc831\">Estilo Madeira: Mil Mãos Severas</font>.",
+          "translation": "追打浮空或倒地敌人，造成必定命中的伤害、倒地和打断，恢复相当于伤害35%的生命，每回合最多2次，无视部分防御。柱间生命高于60%时，替换为木遁·千重掌。"
+        }
+      },
+      "21003355": {
+        "name": {
+          "source": "Explosão de Chakra",
+          "translation": "查克拉爆发"
+        },
+        "desc": {
+          "source": "Durante este modo, o dano de Hashirama é aumentado, <font color=\"#4dc831\">Mão Severa</font> ignora uma certa quantidade de <font color=\"#4dc831\">Defesa</font>, <font color=\"#4dc831\">Estilo Madeira: Mil Mãos Severas</font> ignora uma certa quantidade de <font color=\"#4dc831\">Defesa</font> e <font color=\"#4dc831\">Resistência</font> e, se o alvo estiver sob <font color=\"#4dc831\">Fraqueza</font>, limite a chance de esquiva deste para <font color=\"#4dc831\">20%</font> (dura até ser derrotado ou até o final do combate). <font color=\"#4dc831\">Passiva: Corpo Sennin</font> muda para: Hashirama tem <font color=\"#4dc831\">Imunidade a Status negativos nv. 2</font> e é imune a dano de <font color=\"#4dc831\">Fogo</font>. Enquanto Hashirama estiver vivo, sempre que algum ninja da equipe aliada causar dano <font color=\"#4dc831\">Taijutsu</font> ou <font color=\"#4dc831\">Ninjutsu</font>, aumenta o próprio <font color=\"#4dc831\">Ataque</font> ou <font color=\"#4dc831\">Ninjutsu</font> deste em <font color=\"#4dc831\">3%</font> (acumulável). No final da rodada, Hashirama sai do modo <font color=\"#4dc831\">Explosão de Chakra</font> e troca todas as suas habilidades para as suas versões <font color=\"#4dc831\">Sem Descoberta</font>. Sempre que entrar ou sair deste modo, Hashirama aumenta seu próprio dano de <font color=\"#4dc831\">Esotérica</font> em <font color=\"#4dc831\">10%</font> (acumulável).",
+          "translation": "此状态下柱间伤害提高，重掌无视部分防御，木遁·千重掌无视部分防御和抗性；若目标带有虚弱，将其闪避率限制为20%，持续至被击败或战斗结束。被动仙人体替换为：获得2级负面状态免疫，免疫火属性伤害；柱间存活时，己方忍者造成体术或忍术伤害时，分别使其自身攻击或忍术提高3%，可叠加。回合结束时退出查克拉爆发，全部技能恢复未突破版本。每次进入或退出此状态，自身奥义伤害提高10%，可叠加。"
+        }
+      },
+      "21003356": {
+        "name": {
+          "source": "Corpo Sennin",
+          "translation": "仙人体"
+        },
+        "desc": {
+          "source": "Hashirama tem <font color=\"#4dc831\">Imunidade a Status negativos nv. 2</font> e é imune a dano de <font color=\"#4dc831\">Fogo</font>. Enquanto Hashirama estiver vivo, sempre que algum ninja da equipe aliada causar dano <font color=\"#4dc831\">Taijutsu</font> ou <font color=\"#4dc831\">Ninjutsu</font>, aumenta o próprio <font color=\"#4dc831\">Ataque</font> ou <font color=\"#4dc831\">Ninjutsu</font> deste em <font color=\"#4dc831\">3%</font> (acumulável).",
+          "translation": "柱间获得2级负面状态免疫，免疫火属性伤害。柱间存活时，己方忍者造成体术或忍术伤害时，分别使其自身攻击或忍术提高3%，可叠加。"
+        }
+      },
+      "21003357": {
+        "name": {
+          "source": "Estilo Madeira: Jutsu do Dragão de Madeira",
+          "translation": "木遁·木龙之术"
+        },
+        "desc": {
+          "source": "Causa dano <font color=\"#4dc831\">na certa</font> de <font color=\"#4dc831\">Terra</font> e <font color=\"#4dc831\">Água</font>, <font color=\"#4dc831\">Supressão de Imunidade a Status Negativos</font> (até o final da rodada) e absorve todo o Chakra a até 12 inimigos do campo adversário, causa <font color=\"#4dc831\">Flutuação</font> e <font color=\"#4dc831\">Fraqueza Irremovível</font> (até o final da próxima rodada) ao alvo selecionado.",
+          "translation": "对敌方最多12名敌人造成必定命中的土、水属性伤害、持续至回合结束的负面状态免疫压制，并吸收全部查克拉，对选定目标造成浮空和无法移除的虚弱，持续至下回合结束。"
+        }
+      },
+      "21003358": {
+        "name": {
+          "source": "Corpo Sennin",
+          "translation": "仙人体"
+        },
+        "desc": {
+          "source": "Enquanto Hashirama estiver vivo, sempre que algum ninja da equipe aliada causar dano <font color=\"#4dc831\">Taijutsu</font> ou <font color=\"#4dc831\">Ninjutsu</font>, aumenta o próprio <font color=\"#4dc831\">Ataque</font> ou <font color=\"#4dc831\">Ninjutsu</font> deste em <font color=\"#4dc831\">3%</font> (acumulável).",
+          "translation": "柱间存活时，己方忍者造成体术或忍术伤害时，分别使其自身攻击或忍术提高3%，可叠加。"
+        }
+      },
+      "21003364": {
+        "name": {
+          "source": "Estilo Madeira: Advento do Mundo das Árvores Floridas",
+          "translation": "木遁·花树界降临"
+        },
+        "desc": {
+          "source": "Ao entrar no modo <font color=\"#4dc831\">Explosão de Chakra</font>, ativa o plano <font color=\"#4dc831\">Emergência do Mundo das Árvores Floridas</font> .",
+          "translation": "进入查克拉爆发状态时，展开花树界降临结界。"
+        }
+      },
+      "21003365": {
+        "name": {
+          "source": "Estilo Madeira: Advento do Mundo das Árvores",
+          "translation": "木遁·树界降临"
+        },
+        "desc": {
+          "source": "Lançado no início do combate ou após sair do modo <font color=\"#4dc831\">Explosão de Chakra</font>, ativa o plano <font color=\"#4dc831\">Emergência do Mundo das Árvores</font> (por 2 rodadas) e Hashirama recebe <font color=\"#4dc831\">Violência</font>.",
+          "translation": "战斗开始时或退出查克拉爆发后，展开树界降临结界，持续2回合，柱间获得暴怒。"
+        }
+      },
+      "21003367": {
+        "name": {
+          "source": "Portões Divinos: Investida do Dragão de Madeira",
+          "translation": "明神门·木龙突进"
+        },
+        "desc": {
+          "source": "Causa dano de <font color=\"#4dc831\">Terra</font> e <font color=\"#4dc831\">Água</font> e <font color=\"#4dc831\">Interrupção</font> a até 7 inimigos do campo adversário, e causa <font color=\"#4dc831\">Selo Portão Divino +2</font> ao alvo selecionado. Durante o modo <font color=\"#4dc831\">Explosão de Chakra</font>, a habilidade muda para <font color=\"#4dc831\">Estilo Madeira: Jutsu do Dragão de Madeira</font>.",
+          "translation": "对敌方最多7名敌人造成土、水属性伤害和打断，对选定目标施加明神门封印+2。查克拉爆发状态下替换为木遁·木龙之术。"
+        }
+      },
+      "21003368": {
+        "name": {
+          "source": "As Verdadeiras Mil Mãos: Apogeu do Buda Transformado",
+          "translation": "真数千手·顶上化佛"
+        },
+        "desc": {
+          "source": "Causa dano <font color=\"#4dc831\">na certa</font> de <font color=\"#4dc831\">Terra</font> e <font color=\"#4dc831\">Água</font>, <font color=\"#4dc831\">Interrupção</font> e <font color=\"#4dc831\">Supressão de Imunidade a Perseguição</font> (até o final da próxima rodada) a todos os inimigos do campo adversário, causa <font color=\"#4dc831\">Queda</font> e <font color=\"#4dc831\">Supressão de Imunidade a Perseguição nv. 2</font> (até o final da próxima rodada) ao alvo selecionado. Se o alvo selecionado for um aliado, a habilidade muda para <font color=\"#4dc831\">Estilo Madeira: Técnica Hobi</font>.",
+          "translation": "对敌方全体造成必定命中的土、水属性伤害、打断和持续至下回合结束的追打免疫压制，对选定目标造成倒地和2级追打免疫压制，持续至下回合结束。若选定己方目标，替换为木遁·榜排之术。"
+        }
+      },
+      "21003371": {
+        "name": {
+          "source": "Espada Forte Explosiva: Destruidor de Elmos",
+          "translation": "爆发·刚刀·破盔"
+        },
+        "desc": {
+          "source": "Causa dano <font color=\"#4dc831\">na certa</font>, <font color=\"#4dc831\">Queda</font> e diminui a quantia de Ataques Comuns em 1 à linha de inimigos do ninja com menos Vida. Caso esta habilidade derrote um inimigo, lança a <font color=\"#4dc831\">Espada Forte Explosiva: Destruidor de Elmos Extremo</font> (<font color=\"#4dc831\">Habilidade Adicional</font>: Causa dano <font color=\"#4dc831\">na certa</font>, <font color=\"#4dc831\">Queda</font> e diminui a quantia de Ataques Comuns em 1 à linha de inimigos do ninja com menos Vida. Após utilizar esta habilidade, Hashirama aumenta o próprio dano de <font color=\"#4dc831\">Gatilho</font> em <font color=\"#4dc831\">10%</font> (acumulável). Caso esta habilidade derrote um inimigo, lança a <font color=\"#4dc831\">Espada Forte Explosiva: Destruidor de Elmos Extremo</font>.).",
+          "translation": "攻击生命最低的忍者所在一排，造成必定命中的伤害、倒地，并减少1次普攻机会。击败敌人时，触发追加技能：超·爆发·刚刀·破盔，对生命最低的忍者所在一排造成必定命中的伤害、倒地并减少1次普攻机会；使用后柱间触发型技能伤害提高10%，可叠加；若再次击败敌人，继续触发该追加技能。"
+        }
+      },
+      "21003372": {
+        "name": {
+          "source": "Espada Forte Explosiva: Destruidor de Elmos",
+          "translation": "爆发·刚刀·破盔"
+        },
+        "desc": {
+          "source": "Causa dano <font color=\"#4dc831\">na certa</font>, <font color=\"#4dc831\">Queda</font> e diminui a quantia de Ataques Comuns em 1 à linha de inimigos do ninja com menos Vida. Caso esta habilidade derrote um inimigo, lança a <font color=\"#4dc831\">Espada Forte Explosiva: Destruidor de Elmos Extremo</font> (<font color=\"#4dc831\">Habilidade Adicional</font>: Causa dano <font color=\"#4dc831\">na certa</font>, <font color=\"#4dc831\">Queda</font> e diminui a quantia de Ataques Comuns em 1 à linha de inimigos do ninja com menos Vida. Após utilizar esta habilidade, Hashirama aumenta o próprio dano de <font color=\"#4dc831\">Gatilho</font> em <font color=\"#4dc831\">10%</font> (acumulável). Caso esta habilidade derrote um inimigo, lança a <font color=\"#4dc831\">Espada Forte Explosiva: Destruidor de Elmos Extremo</font>.).",
+          "translation": "攻击生命最低的忍者所在一排，造成必定命中的伤害、倒地，并减少1次普攻机会。击败敌人时，触发追加技能：超·爆发·刚刀·破盔，对生命最低的忍者所在一排造成必定命中的伤害、倒地并减少1次普攻机会；使用后柱间触发型技能伤害提高10%，可叠加；若再次击败敌人，继续触发该追加技能。"
+        }
+      },
+      "21003373": {
+        "name": {
+          "source": "Espada Forte Explosiva: Destruidor de Elmos",
+          "translation": "爆发·刚刀·破盔"
+        },
+        "desc": {
+          "source": "Causa dano <font color=\"#4dc831\">na certa</font>, <font color=\"#4dc831\">Queda</font> e diminui a quantia de Ataques Comuns em 1 à linha de inimigos do ninja com menos Vida. Caso esta habilidade derrote um inimigo, lança a <font color=\"#4dc831\">Espada Forte Explosiva: Destruidor de Elmos Extremo</font> (<font color=\"#4dc831\">Habilidade Adicional</font>: Causa dano <font color=\"#4dc831\">na certa</font>, <font color=\"#4dc831\">Queda</font> e diminui a quantia de Ataques Comuns em 1 à linha de inimigos do ninja com menos Vida. Após utilizar esta habilidade, Hashirama aumenta o próprio dano de <font color=\"#4dc831\">Gatilho</font> em <font color=\"#4dc831\">10%</font> (acumulável). Caso esta habilidade derrote um inimigo, lança a <font color=\"#4dc831\">Espada Forte Explosiva: Destruidor de Elmos Extremo</font>.).",
+          "translation": "攻击生命最低的忍者所在一排，造成必定命中的伤害、倒地，并减少1次普攻机会。击败敌人时，触发追加技能：超·爆发·刚刀·破盔，对生命最低的忍者所在一排造成必定命中的伤害、倒地并减少1次普攻机会；使用后柱间触发型技能伤害提高10%，可叠加；若再次击败敌人，继续触发该追加技能。"
+        }
+      },
+      "21003375": {
+        "name": {
+          "source": "Explosão de Chakra",
+          "translation": "查克拉爆发"
+        },
+        "desc": {
+          "source": "Durante este modo, o dano de Hashirama é aumentado e seu conjunto de habilidades muda. No final da rodada, Hashirama sai do modo <font color=\"#4dc831\">Explosão de Chakra +2</font>, restaura o Limite de Chakra para <font color=\"#4dc831\">100</font>, troca todas as suas habilidades para <font color=\"#4dc831\">+1</font> e sua <font color=\"#4dc831\">Passiva: Explosão de Chakra</font> para <font color=\"#4dc831\">+2</font>. Sempre que entrar ou sair deste modo, Hashirama aumenta seu próprio dano de <font color=\"#4dc831\">Esotérica</font> em <font color=\"#4dc831\">10%</font> (acumulável).",
+          "translation": "此状态下柱间伤害提高，技能组合改变。回合结束时，退出查克拉爆发+2，将查克拉上限恢复至100，全部技能替换为+1，查克拉爆发被动为+2。每次进入或退出此状态，奥义伤害提高10%，可叠加。"
+        }
+      },
+      "21003378": {
+        "name": {
+          "source": "Explosão de Chakra",
+          "translation": "查克拉爆发"
+        },
+        "desc": {
+          "source": "Durante este modo, o dano de Hashirama é aumentado e seu conjunto de habilidades muda. No final da rodada, Hashirama sai do modo <font color=\"#4dc831\">Explosão de Chakra +2</font>, restaura o Limite de Chakra para <font color=\"#4dc831\">100</font>, troca todas as suas habilidades para <font color=\"#4dc831\">+1</font> e sua <font color=\"#4dc831\">Passiva: Explosão de Chakra</font> para <font color=\"#4dc831\">+2</font>. Sempre que entrar ou sair deste modo, Hashirama aumenta seu próprio dano de <font color=\"#4dc831\">Esotérica</font> em <font color=\"#4dc831\">10%</font> (acumulável).",
+          "translation": "此状态下柱间伤害提高，技能组合改变。回合结束时，退出查克拉爆发+2，将查克拉上限恢复至100，全部技能替换为+1，查克拉爆发被动为+2。每次进入或退出此状态，奥义伤害提高10%，可叠加。"
+        }
+      },
+      "21203346": {
+        "name": {
+          "source": "Corpo Sennin",
+          "translation": "仙人体"
+        },
+        "desc": {
+          "source": "Hashirama tem <font color=\"#4dc831\">Imunidade a Status negativos nv. 2</font>. Sempre que for atacado, recupera <font color=\"#4dc831\">5%</font> de Vida e diminui o próprio <font color=\"#4dc831\">Resfriamento da Esotérica</font> em 1. Se a Vida de Hashirama estiver acima de <font color=\"#4dc831\">60%</font>, após usar <font color=\"#4dc831\">Portões Divinos: Investida do Dragão de Madeira +1</font>, lança o <font color=\"#4dc831\">Estilo Madeira: Jutsu do Boneco de Madeira +1</font>. Durante o modo <font color=\"#4dc831\">Explosão de Chakra +1, +2 ou Y, Y+1</font>, a habilidade muda para <font color=\"#4dc831\">Corpo Sennin Explosivo</font>.",
+          "translation": "柱间获得2级负面状态免疫。每次受到攻击时恢复5%生命，奥义冷却减少1回合。生命高于60%时，使用明神门·木龙突进+1后，额外释放木遁·木人之术+1。查克拉爆发+1、+2、Y或Y+1状态下，替换为爆发·仙人体。"
+        }
+      },
+      "21203348": {
+        "name": {
+          "source": "Explosão de Chakra",
+          "translation": "查克拉爆发"
+        },
+        "desc": {
+          "source": "Após sofrer dano pela primeira vez em cada rodada, Hashirama recebe <font color=\"#4dc831\">Excitação</font> (até o final da rodada). Sempre que sofrer dano, aumenta a própria <font color=\"#4dc831\">Defesa</font> em <font color=\"#4dc831\">15%</font> (acumulável, dura até o final da rodada). Após sofrer dano 4 vezes em uma rodada, Hashirama restaura seu Limite de Chakra para <font color=\"#4dc831\">100</font>, recupera <font color=\"#4dc831\">40</font> Pontos de Chakra e entra no modo <font color=\"#4dc831\">Explosão de Chakra +1</font>.",
+          "translation": "每回合首次受到伤害后获得亢奋，持续至回合结束。每次受到伤害时防御提高15%，可叠加，持续至回合结束。单回合受到4次伤害后，将查克拉上限恢复至100，恢复40点查克拉，并进入查克拉爆发+1。"
+        }
+      },
+      "21203374": {
+        "name": {
+          "source": "Estilo Madeira Explosivo: Mil Mãos Severas",
+          "translation": "爆发·木遁·千重掌"
+        },
+        "desc": {
+          "source": "Persegue inimigos com <font color=\"#4dc831\">Flutuação</font> ou <font color=\"#4dc831\">Queda</font>, causa dano <font color=\"#4dc831\">na certa</font> de <font color=\"#4dc831\">Terra</font> e <font color=\"#4dc831\">Água</font>, <font color=\"#4dc831\">Combo de 10</font>, <font color=\"#4dc831\">Queda</font>, <font color=\"#4dc831\">Interrupção</font>, <font color=\"#4dc831\">Fraqueza Irremovível</font> (até o final da rodada) e trava o próprio <font color=\"#4dc831\">Resfriamento da Esotérica</font> em 0 (até o final da rodada), pode ser ativada 2 vezes por rodada. Esta habilidade ignora uma certa quantidade de <font color=\"#4dc831\">Defesa</font> e <font color=\"#4dc831\">Resistência</font>.",
+          "translation": "追打浮空或倒地敌人，造成必定命中的土、水属性伤害、10连击、倒地、打断及无法移除的虚弱，持续至回合结束，将自身奥义冷却锁定为0，持续至回合结束。每回合最多2次，无视部分防御和抗性。"
+        }
+      },
+      "21203375": {
+        "name": {
+          "source": "Explosão de Chakra",
+          "translation": "查克拉爆发"
+        },
+        "desc": {
+          "source": "Durante este modo, o dano de Hashirama é aumentado e seu conjunto de habilidades muda. No final da rodada, Hashirama sai do modo <font color=\"#4dc831\">Explosão de Chakra Y+1</font>, restaura o Limite de Chakra para <font color=\"#4dc831\">100</font>, troca todas as suas habilidades para <font color=\"#4dc831\">Y</font> e sua <font color=\"#4dc831\">Passiva: Explosão de Chakra</font> para <font color=\"#4dc831\">Y+1</font>. Sempre que entrar ou sair deste modo, Hashirama aumenta seu próprio dano de <font color=\"#4dc831\">Esotérica</font> em <font color=\"#4dc831\">10%</font> (acumulável).",
+          "translation": "此状态下柱间伤害提高，技能组合改变。回合结束时，退出查克拉爆发·Y+1，将查克拉上限恢复至100，全部技能替换为Y，查克拉爆发被动为Y+1。每次进入或退出此状态，奥义伤害提高10%，可叠加。"
+        }
+      },
+      "21203376": {
+        "name": {
+          "source": "Corpo Sennin Explosivo",
+          "translation": "爆发·仙人体"
+        },
+        "desc": {
+          "source": "Hashirama tem <font color=\"#4dc831\">Imunidade a Status negativos nv. 2</font> e é imune a dano de <font color=\"#4dc831\">Fogo</font>. Após causar o primeiro <font color=\"#4dc831\">Crítico</font> de cada rodada, eleva seu <font color=\"#4dc831\">Crítico</font> em <font color=\"#4dc831\">20%</font>. Após usar <font color=\"#4dc831\">As Verdadeiras Mil Mãos: Apogeu do Buda Transformado</font> ou <font color=\"#4dc831\">Estilo Madeira: Técnica Hobi</font>, lança o <font color=\"#4dc831\">Estilo Madeira: Jutsu do Dragão de Madeira</font> (<font color=\"#4dc831\">Habilidade Adicional</font>: Causa dano <font color=\"#4dc831\">na certa</font> de <font color=\"#4dc831\">Terra</font> e <font color=\"#4dc831\">Água</font>, <font color=\"#4dc831\">Supressão de Imunidade a Status negativos</font> (até o final da rodada) e absorve todo o Chakra a até 12 inimigos do campo adversário, causa <font color=\"#4dc831\">Flutuação</font> e <font color=\"#4dc831\">Fraqueza Irremovível</font> (até o final da próxima rodada) ao alvo com menos Vida.). Sempre que algum companheiro da equipe aliada realizar alguma ação, eleva o <font color=\"#4dc831\">Ataque</font> e <font color=\"#4dc831\">Ninjutsu</font> de Hashirama em <font color=\"#4dc831\">15%</font> (acumulável até 10x por rodada).",
+          "translation": "柱间获得2级负面状态免疫，免疫火属性伤害。每回合首次造成暴击后，暴击率提高20%。使用真数千手·顶上化佛或木遁·榜排之术后，触发追加技能：木遁·木龙之术，对敌方最多12名敌人造成必定命中的土、水属性伤害、持续至回合结束的负面状态免疫压制并吸收全部查克拉，对生命最低的目标造成浮空和无法移除的虚弱，持续至下回合结束。己方队友每次行动时，柱间攻击和忍术提高15%，每回合最多10次。"
+        }
+      },
+      "21203378": {
+        "name": {
+          "source": "Explosão de Chakra",
+          "translation": "查克拉爆发"
+        },
+        "desc": {
+          "source": "Durante este modo, o dano de Hashirama é aumentado e seu conjunto de habilidades muda. No final da rodada, Hashirama sai do modo <font color=\"#4dc831\">Explosão de Chakra Y+1</font>, restaura o Limite de Chakra para <font color=\"#4dc831\">100</font>, troca todas as suas habilidades para <font color=\"#4dc831\">Y</font> e sua <font color=\"#4dc831\">Passiva: Explosão de Chakra</font> para <font color=\"#4dc831\">Y+1</font>. Sempre que entrar ou sair deste modo, Hashirama aumenta seu próprio dano de <font color=\"#4dc831\">Esotérica</font> em <font color=\"#4dc831\">10%</font> (acumulável).",
+          "translation": "此状态下柱间伤害提高，技能组合改变。回合结束时，退出查克拉爆发·Y+1，将查克拉上限恢复至100，全部技能替换为Y，查克拉爆发被动为Y+1。每次进入或退出此状态，奥义伤害提高10%，可叠加。"
+        }
+      },
+      "21303341": {
+        "name": {
+          "source": "Ataque Taijutsu",
+          "translation": "体术攻击"
+        },
+        "desc": {
+          "source": "Causa dano <font color=\"#4dc831\">na certa</font> aumentado em <font color=\"#4dc831\">40%</font> ao inimigo à frente e recupera <font color=\"#4dc831\">35%</font> do dano causado em Vida, com grande chance de causar <font color=\"#4dc831\">Voo</font>. Esta habilidade tem bônus adicional de <font color=\"#4dc831\">Crítico</font>. Se a Vida de Hashirama estiver acima de <font color=\"#4dc831\">60%</font>, a habilidade muda para <font color=\"#4dc831\">Espada Forte: Destruidor de Elmos +1</font>. Durante o modo <font color=\"#4dc831\">Explosão de Chakra +1, +2 ou Y, Y+1</font>, a habilidade muda para <font color=\"#4dc831\">Espada Forte Explosiva: Destruidor de Elmos</font>.",
+          "translation": "攻击前方敌人，造成提高40%且必定命中的伤害，恢复相当于伤害35%的生命，有较高概率造成高浮空，拥有额外暴击加成。生命高于60%时替换为刚刀·破盔+1。查克拉爆发+1、+2、Y或Y+1状态下，替换为爆发·刚刀·破盔。"
+        }
+      },
+      "21303342": {
+        "name": {
+          "source": "Ataque Taijutsu",
+          "translation": "体术攻击"
+        },
+        "desc": {
+          "source": "Causa dano <font color=\"#4dc831\">na certa</font> aumentado em <font color=\"#4dc831\">40%</font> ao inimigo à frente e recupera <font color=\"#4dc831\">35%</font> do dano causado em Vida, com grande chance de causar <font color=\"#4dc831\">Voo</font>. Esta habilidade tem bônus adicional de <font color=\"#4dc831\">Crítico</font>. Se a Vida de Hashirama estiver acima de <font color=\"#4dc831\">60%</font>, a habilidade muda para <font color=\"#4dc831\">Espada Forte: Destruidor de Elmos +1</font>. Durante o modo <font color=\"#4dc831\">Explosão de Chakra +1, +2 ou Y, Y+1</font>, a habilidade muda para <font color=\"#4dc831\">Espada Forte Explosiva: Destruidor de Elmos</font>.",
+          "translation": "攻击前方敌人，造成提高40%且必定命中的伤害，恢复相当于伤害35%的生命，有较高概率造成高浮空，拥有额外暴击加成。生命高于60%时替换为刚刀·破盔+1。查克拉爆发+1、+2、Y或Y+1状态下，替换为爆发·刚刀·破盔。"
+        }
+      },
+      "21303343": {
+        "name": {
+          "source": "Ataque Taijutsu",
+          "translation": "体术攻击"
+        },
+        "desc": {
+          "source": "Causa dano <font color=\"#4dc831\">na certa</font> aumentado em <font color=\"#4dc831\">40%</font> ao inimigo à frente e recupera <font color=\"#4dc831\">35%</font> do dano causado em Vida, com grande chance de causar <font color=\"#4dc831\">Voo</font>. Esta habilidade tem bônus adicional de <font color=\"#4dc831\">Crítico</font>. Se a Vida de Hashirama estiver acima de <font color=\"#4dc831\">60%</font>, a habilidade muda para <font color=\"#4dc831\">Espada Forte: Destruidor de Elmos +1</font>. Durante o modo <font color=\"#4dc831\">Explosão de Chakra +1, +2 ou Y, Y+1</font>, a habilidade muda para <font color=\"#4dc831\">Espada Forte Explosiva: Destruidor de Elmos</font>.",
+          "translation": "攻击前方敌人，造成提高40%且必定命中的伤害，恢复相当于伤害35%的生命，有较高概率造成高浮空，拥有额外暴击加成。生命高于60%时替换为刚刀·破盔+1。查克拉爆发+1、+2、Y或Y+1状态下，替换为爆发·刚刀·破盔。"
+        }
+      },
+      "21303344": {
+        "name": {
+          "source": "Mão Severa",
+          "translation": "重掌"
+        },
+        "desc": {
+          "source": "Persegue inimigos com <font color=\"#4dc831\">Flutuação</font> ou <font color=\"#4dc831\">Queda</font>, causa dano <font color=\"#4dc831\">na certa</font>, <font color=\"#4dc831\">Queda</font> e <font color=\"#4dc831\">Interrupção</font>, recupera <font color=\"#4dc831\">35%</font> do dano causado em Vida, pode ser ativada 2 vezes por rodada. Após utilizar esta habilidade, Hashirama cancela qualquer <font color=\"#4dc831\">Chamas</font> de si. Se a Vida de Hashirama estiver acima de <font color=\"#4dc831\">60%</font>, a habilidade muda para <font color=\"#4dc831\">Estilo Madeira: Mil Mãos Severas +1</font>. Durante o modo <font color=\"#4dc831\">Explosão de Chakra +1, +2 ou Y, Y+1</font>, a habilidade muda para <font color=\"#4dc831\">Estilo Madeira Explosivo: Mil Mãos Severas</font>.",
+          "translation": "追打浮空或倒地敌人，造成必定命中的伤害、倒地和打断，恢复相当于伤害35%的生命，每回合最多2次。使用后移除自身烈焰。生命高于60%时替换为木遁·千重掌+1。查克拉爆发+1、+2、Y或Y+1状态下，替换为爆发·木遁·千重掌。"
+        }
+      },
+      "21303346": {
+        "name": {
+          "source": "Corpo Sennin",
+          "translation": "仙人体"
+        },
+        "desc": {
+          "source": "Hashirama tem <font color=\"#4dc831\">Imunidade a Status negativos nv. 2</font>. Sempre que for atacado, recupera <font color=\"#4dc831\">5%</font> de Vida e diminui o próprio <font color=\"#4dc831\">Resfriamento da Esotérica</font> em 1. Se a Vida de Hashirama estiver acima de <font color=\"#4dc831\">60%</font>, após usar <font color=\"#4dc831\">Portões Divinos: Investida do Dragão de Madeira Y</font>, lança o <font color=\"#4dc831\">Estilo Madeira: Jutsu do Boneco de Madeira Y</font>. Durante o modo <font color=\"#4dc831\">Explosão de Chakra +1, +2 ou Y, Y+1</font>, a habilidade muda para <font color=\"#4dc831\">Corpo Sennin Explosivo</font>.",
+          "translation": "柱间获得2级负面状态免疫。每次受到攻击时恢复5%生命，奥义冷却减少1回合。生命高于60%时，使用明神门·木龙突进·Y后，额外释放木遁·木人之术·Y。查克拉爆发+1、+2、Y或Y+1状态下，替换为爆发·仙人体。"
+        }
+      },
+      "21303348": {
+        "name": {
+          "source": "Explosão de Chakra",
+          "translation": "查克拉爆发"
+        },
+        "desc": {
+          "source": "Após sofrer dano pela primeira vez em cada rodada, Hashirama recebe <font color=\"#4dc831\">Excitação</font> (até o final da rodada). Sempre que sofrer dano, aumenta a própria <font color=\"#4dc831\">Defesa</font> em <font color=\"#4dc831\">15%</font> (acumulável, dura até o final da rodada). Após sofrer dano 4 vezes em uma rodada, Hashirama restaura seu Limite de Chakra para <font color=\"#4dc831\">100</font>, recupera <font color=\"#4dc831\">40</font> Pontos de Chakra e entra no modo <font color=\"#4dc831\">Explosão de Chakra Y</font>.",
+          "translation": "每回合首次受到伤害后获得亢奋，持续至回合结束。每次受到伤害时防御提高15%，可叠加，持续至回合结束。单回合受到4次伤害后，将查克拉上限恢复至100，恢复40点查克拉，并进入查克拉爆发·Y。"
+        }
+      },
+      "21303365": {
+        "name": {
+          "source": "Estilo Madeira: Advento do Mundo das Árvores",
+          "translation": "木遁·树界降临"
+        },
+        "desc": {
+          "source": "Lançado no início do combate ou após sair do modo <font color=\"#4dc831\">Explosão de Chakra +1 ou +2</font>, ativa o plano <font color=\"#4dc831\">Emergência do Mundo das Árvores</font> (por 2 rodadas), os companheiros da equipe aliada recebem <font color=\"#4dc831\">Violência</font> e Hashirama recebe <font color=\"#4dc831\">Violência nv. 2</font>. Durante o modo <font color=\"#4dc831\">Explosão de Chakra +1, +2 ou Y, Y+1</font>, a habilidade muda para <font color=\"#4dc831\">Estilo Madeira: Advento do Mundo das Árvores Floridas</font>.",
+          "translation": "战斗开始时或退出查克拉爆发+1、+2后，展开树界降临结界，持续2回合；己方队友获得暴怒，柱间获得2级暴怒。查克拉爆发+1、+2、Y或Y+1状态下，替换为木遁·花树界降临。"
+        }
+      },
+      "21303367": {
+        "name": {
+          "source": "Portões Divinos: Investida do Dragão de Madeira",
+          "translation": "明神门·木龙突进"
+        },
+        "desc": {
+          "source": "Causa dano <font color=\"#4dc831\">na certa</font> de <font color=\"#4dc831\">Terra</font> e <font color=\"#4dc831\">Água</font> e <font color=\"#4dc831\">Interrupção</font> a até 7 inimigos do campo adversário, e causa <font color=\"#4dc831\">Selo Portão Divino +3</font> ao alvo selecionado. Se a Vida de Hashirama estiver acima de <font color=\"#4dc831\">60%</font>, inimigos derrotados por esta habilidade não podem reviver. Durante o modo <font color=\"#4dc831\">Explosão de Chakra +1, +2 ou Y, Y+1</font>, a habilidade muda para <font color=\"#4dc831\">As Verdadeiras Mil Mãos: Apogeu do Buda Transformado</font> ou <font color=\"#4dc831\">Estilo Madeira: Técnica Hobi</font>.",
+          "translation": "对敌方最多7名敌人造成必定命中的土、水属性伤害和打断，对选定目标施加明神门封印+3。柱间生命高于60%时，被本技能击败的敌人无法复活。查克拉爆发+1、+2、Y或Y+1状态下，替换为真数千手·顶上化佛或木遁·榜排之术。"
+        }
+      },
+      "21303378": {
+        "name": {
+          "source": "Explosão de Chakra",
+          "translation": "查克拉爆发"
+        },
+        "desc": {
+          "source": "Durante este modo, o dano de Hashirama é aumentado e seu conjunto de habilidades muda. Após sofrer dano de <font color=\"#4dc831\">Esotérica</font> 5 vezes em uma rodada, Hashirama sai do modo <font color=\"#4dc831\">Explosão de Chakra +1</font>, restaura o Limite de Chakra para <font color=\"#4dc831\">100</font> e troca todas as suas habilidades para as suas versões <font color=\"#4dc831\">+1</font>. Sempre que entrar ou sair deste modo, Hashirama aumenta seu próprio dano de <font color=\"#4dc831\">Esotérica</font> em <font color=\"#4dc831\">10%</font> (acumulável).",
+          "translation": "此状态下柱间伤害提高，技能组合改变。单回合受到5次奥义伤害后，退出查克拉爆发+1，将查克拉上限恢复至100，全部技能替换为+1。每次进入或退出此状态，奥义伤害提高10%，可叠加。"
+        }
+      },
+      "21403348": {
+        "name": {
+          "source": "Explosão de Chakra",
+          "translation": "查克拉爆发"
+        },
+        "desc": {
+          "source": "Após sofrer dano pela primeira vez em cada rodada, Hashirama recebe <font color=\"#4dc831\">Excitação</font> (até o final da rodada). Sempre que sofrer dano, aumenta a própria <font color=\"#4dc831\">Defesa</font> em <font color=\"#4dc831\">15%</font> (acumulável, dura até o final da rodada). Após sofrer dano 4 vezes em uma rodada, Hashirama restaura seu Limite de Chakra para <font color=\"#4dc831\">100</font>, recupera <font color=\"#4dc831\">40</font> Pontos de Chakra e entra no modo <font color=\"#4dc831\">Explosão de Chakra +2</font>.",
+          "translation": "每回合首次受到伤害后获得亢奋，持续至回合结束。每次受到伤害时防御提高15%，可叠加，持续至回合结束。单回合受到4次伤害后，将查克拉上限恢复至100，恢复40点查克拉，并进入查克拉爆发+2。"
+        }
+      },
+      "21403378": {
+        "name": {
+          "source": "Explosão de Chakra",
+          "translation": "查克拉爆发"
+        },
+        "desc": {
+          "source": "Durante este modo, o dano de Hashirama é aumentado e seu conjunto de habilidades muda. Após sofrer dano de <font color=\"#4dc831\">Esotérica</font> 5 vezes em uma rodada, Hashirama sai do modo <font color=\"#4dc831\">Explosão de Chakra Y</font>, restaura o Limite de Chakra para <font color=\"#4dc831\">100</font> e troca todas as suas habilidades para as suas versões <font color=\"#4dc831\">Y</font>. Sempre que entrar ou sair deste modo, Hashirama aumenta seu próprio dano de <font color=\"#4dc831\">Esotérica</font> em <font color=\"#4dc831\">10%</font> (acumulável).",
+          "translation": "此状态下柱间伤害提高，技能组合改变。单回合受到5次奥义伤害后，退出查克拉爆发·Y，将查克拉上限恢复至100，全部技能替换为Y。每次进入或退出此状态，奥义伤害提高10%，可叠加。"
+        }
+      },
+      "21503341": {
+        "name": {
+          "source": "Ataque Taijutsu",
+          "translation": "体术攻击"
+        },
+        "desc": {
+          "source": "Causa dano <font color=\"#4dc831\">na certa</font> ao ninja inimigo com menos Vida, rouba a quantia atual de Ataques Comuns deste e recupera <font color=\"#4dc831\">35%</font> do dano causado em Vida, com chance de causar <font color=\"#4dc831\">Voo</font>. Esta habilidade tem bônus adicional de <font color=\"#4dc831\">Crítico</font>. Se a Vida de Hashirama estiver acima de <font color=\"#4dc831\">60%</font>, a habilidade muda para <font color=\"#4dc831\">Espada Forte: Destruidor de Elmos Y</font>. Durante o modo <font color=\"#4dc831\">Explosão de Chakra +1, +2 ou Y, Y+1</font>, a habilidade muda para <font color=\"#4dc831\">Espada Forte Explosiva: Destruidor de Elmos</font>.",
+          "translation": "攻击生命最低的敌方忍者，造成必定命中的伤害，夺取其当前普攻次数，恢复相当于伤害35%的生命，有概率造成高浮空，拥有额外暴击加成。生命高于60%时替换为刚刀·破盔·Y。查克拉爆发+1、+2、Y或Y+1状态下，替换为爆发·刚刀·破盔。"
+        }
+      },
+      "21503342": {
+        "name": {
+          "source": "Ataque Taijutsu",
+          "translation": "体术攻击"
+        },
+        "desc": {
+          "source": "Causa dano <font color=\"#4dc831\">na certa</font> ao ninja inimigo com menos Vida, rouba a quantia atual de Ataques Comuns deste e recupera <font color=\"#4dc831\">35%</font> do dano causado em Vida, com chance de causar <font color=\"#4dc831\">Voo</font>. Esta habilidade tem bônus adicional de <font color=\"#4dc831\">Crítico</font>. Se a Vida de Hashirama estiver acima de <font color=\"#4dc831\">60%</font>, a habilidade muda para <font color=\"#4dc831\">Espada Forte: Destruidor de Elmos Y</font>. Durante o modo <font color=\"#4dc831\">Explosão de Chakra +1, +2 ou Y, Y+1</font>, a habilidade muda para <font color=\"#4dc831\">Espada Forte Explosiva: Destruidor de Elmos</font>.",
+          "translation": "攻击生命最低的敌方忍者，造成必定命中的伤害，夺取其当前普攻次数，恢复相当于伤害35%的生命，有概率造成高浮空，拥有额外暴击加成。生命高于60%时替换为刚刀·破盔·Y。查克拉爆发+1、+2、Y或Y+1状态下，替换为爆发·刚刀·破盔。"
+        }
+      },
+      "21503343": {
+        "name": {
+          "source": "Ataque Taijutsu",
+          "translation": "体术攻击"
+        },
+        "desc": {
+          "source": "Causa dano <font color=\"#4dc831\">na certa</font> ao ninja inimigo com menos Vida, rouba a quantia atual de Ataques Comuns deste e recupera <font color=\"#4dc831\">35%</font> do dano causado em Vida, com chance de causar <font color=\"#4dc831\">Voo</font>. Esta habilidade tem bônus adicional de <font color=\"#4dc831\">Crítico</font>. Se a Vida de Hashirama estiver acima de <font color=\"#4dc831\">60%</font>, a habilidade muda para <font color=\"#4dc831\">Espada Forte: Destruidor de Elmos Y</font>. Durante o modo <font color=\"#4dc831\">Explosão de Chakra +1, +2 ou Y, Y+1</font>, a habilidade muda para <font color=\"#4dc831\">Espada Forte Explosiva: Destruidor de Elmos</font>.",
+          "translation": "攻击生命最低的敌方忍者，造成必定命中的伤害，夺取其当前普攻次数，恢复相当于伤害35%的生命，有概率造成高浮空，拥有额外暴击加成。生命高于60%时替换为刚刀·破盔·Y。查克拉爆发+1、+2、Y或Y+1状态下，替换为爆发·刚刀·破盔。"
+        }
+      },
+      "21503344": {
+        "name": {
+          "source": "Mão Severa",
+          "translation": "重掌"
+        },
+        "desc": {
+          "source": "Persegue inimigos com <font color=\"#4dc831\">Flutuação</font> ou <font color=\"#4dc831\">Queda</font>, causa dano <font color=\"#4dc831\">na certa</font>, <font color=\"#4dc831\">Queda</font>, <font color=\"#4dc831\">Interrupção</font> e aumenta o <font color=\"#4dc831\">Resfriamento da Esotérica</font> em 1. Se a Vida de Hashirama estiver acima de <font color=\"#4dc831\">60%</font>, a habilidade muda para <font color=\"#4dc831\">Estilo Madeira: Mil Mãos Severas Y</font>. Durante o modo <font color=\"#4dc831\">Explosão de Chakra +1, +2 ou Y, Y+1</font>, a habilidade muda para <font color=\"#4dc831\">Estilo Madeira Explosivo: Mil Mãos Severas</font>.",
+          "translation": "追打浮空或倒地敌人，造成必定命中的伤害、倒地、打断，使奥义冷却增加1回合。生命高于60%时替换为木遁·千重掌·Y。查克拉爆发+1、+2、Y或Y+1状态下，替换为爆发·木遁·千重掌。"
+        }
+      },
+      "21503348": {
+        "name": {
+          "source": "Explosão de Chakra",
+          "translation": "查克拉爆发"
+        },
+        "desc": {
+          "source": "Após sofrer dano pela primeira vez em cada rodada, Hashirama recebe <font color=\"#4dc831\">Excitação</font> (até o final da rodada). Sempre que sofrer dano, aumenta a própria <font color=\"#4dc831\">Defesa</font> em <font color=\"#4dc831\">15%</font> (acumulável, dura até o final da rodada). Após sofrer dano 4 vezes em uma rodada, Hashirama restaura seu Limite de Chakra para <font color=\"#4dc831\">100</font>, recupera <font color=\"#4dc831\">40</font> Pontos de Chakra e entra no modo <font color=\"#4dc831\">Explosão de Chakra Y+1</font>.",
+          "translation": "每回合首次受到伤害后获得亢奋，持续至回合结束。每次受到伤害时防御提高15%，可叠加，持续至回合结束。单回合受到4次伤害后，将查克拉上限恢复至100，恢复40点查克拉，并进入查克拉爆发·Y+1。"
+        }
+      },
+      "21503365": {
+        "name": {
+          "source": "Estilo Madeira: Advento do Mundo das Árvores",
+          "translation": "木遁·树界降临"
+        },
+        "desc": {
+          "source": "Lançado no início do combate ou após sair do modo <font color=\"#4dc831\">Explosão de Chakra Y ou Y+1</font>, ativa o plano <font color=\"#4dc831\">Emergência do Mundo das Árvores</font> (por 2 rodadas) e causa <font color=\"#4dc831\">Restrição</font> a todos os inimigos do campo adversário. Durante o modo <font color=\"#4dc831\">Explosão de Chakra +1, +2 ou Y, Y+1</font>, a habilidade muda para <font color=\"#4dc831\">Estilo Madeira: Advento do Mundo das Árvores Floridas</font>.",
+          "translation": "战斗开始时或退出查克拉爆发·Y、Y+1后，展开树界降临结界，持续2回合，对敌方全阵营施加限制。查克拉爆发+1、+2、Y或Y+1状态下，替换为木遁·花树界降临。"
+        }
+      },
+      "21503367": {
+        "name": {
+          "source": "Portões Divinos: Investida do Dragão de Madeira",
+          "translation": "明神门·木龙突进"
+        },
+        "desc": {
+          "source": "Causa dano <font color=\"#4dc831\">na certa</font> de <font color=\"#4dc831\">Terra</font> e <font color=\"#4dc831\">Água</font>, <font color=\"#4dc831\">Interrupção</font> e absorve <font color=\"#4dc831\">20</font> Pontos de Chakra a até 7 inimigos do campo adversário, causa <font color=\"#4dc831\">Selo Portão Divino: Submissão</font> e diminui o Limite de Chakra para <font color=\"#4dc831\">40</font> (até o final da próxima rodada) ao alvo selecionado. Se a Vida de Hashirama estiver acima de <font color=\"#4dc831\">60%</font>, inimigos derrotados por esta habilidade não podem reviver. Durante o modo <font color=\"#4dc831\">Explosão de Chakra +1, +2 ou Y, Y+1</font>, a habilidade muda para <font color=\"#4dc831\">As Verdadeiras Mil Mãos: Apogeu do Buda Transformado</font> ou <font color=\"#4dc831\">Estilo Madeira: Técnica Hobi</font>.",
+          "translation": "对敌方最多7名敌人造成必定命中的土、水属性伤害和打断，吸收20点查克拉，对选定目标施加明神门封印·镇压，查克拉上限降至40，持续至下回合结束。柱间生命高于60%时，被本技能击败的敌人无法复活。查克拉爆发+1、+2、Y或Y+1状态下，替换为真数千手·顶上化佛或木遁·榜排之术。"
+        }
+      }
+    }
+  },
+  "skillDetails": {
+    "class": "SkillKeyDescCFG",
+    "rows": {
+      "70": {
+        "keys": {
+          "source": "Excitação",
+          "translation": "亢奋"
+        },
+        "desc": {
+          "source": "Status positivos: o ataque e ninjutsu do ninja aumenta 60% e a Defesa e Resistência reduzem 30% (não acumula).",
+          "translation": "增益状态：攻击和忍术提高60%，防御和抗性降低30%，不叠加。"
+        }
+      },
+      "71": {
+        "keys": {
+          "source": "Excitação",
+          "translation": "亢奋"
+        },
+        "desc": {
+          "source": "Status positivos: o ataque e ninjutsu do ninja aumenta 60% e a Defesa e Resistência reduzem 30% (não acumula).",
+          "translation": "增益状态：攻击和忍术提高60%，防御和抗性降低30%，不叠加。"
+        }
+      },
+      "72": {
+        "keys": {
+          "source": "Excitação",
+          "translation": "亢奋"
+        },
+        "desc": {
+          "source": "Status positivos: o ataque e ninjutsu do ninja aumenta 60% e a Defesa e Resistência reduzem 30% (não acumula).",
+          "translation": "增益状态：攻击和忍术提高60%，防御和抗性降低30%，不叠加。"
+        }
+      },
+      "113": {
+        "keys": {
+          "source": "Imunidade a Status negativos nv. 2",
+          "translation": "2级负面状态免疫"
+        },
+        "desc": {
+          "source": "Exclusivo para Hashirama Senju em [Vale do Fim], imune a status negativos, e não pode ser afetado por [Supressão de Imunidade a Status negativos] (exceto versões de nível mais alto de [Supressão de Imunidade a Status negativos]).",
+          "translation": "千手柱间【终焉之战】专属：免疫负面状态，不受[负面状态免疫压制]影响，更高级的压制除外。"
+        }
+      },
+      "114": {
+        "keys": {
+          "source": "Imunidade a Status negativos nv. 2",
+          "translation": "2级负面状态免疫"
+        },
+        "desc": {
+          "source": "Exclusivo para Hashirama Senju em [Vale do Fim], imune a status negativos, e não pode ser afetado por [Supressão de Imunidade a Status negativos] (exceto versões de nível mais alto de [Supressão de Imunidade a Status negativos]).",
+          "translation": "千手柱间【终焉之战】专属：免疫负面状态，不受[负面状态免疫压制]影响，更高级的压制除外。"
+        }
+      },
+      "465": {
+        "keys": {
+          "source": "Modo de Explosão de Força",
+          "translation": "查克拉爆发"
+        },
+        "desc": {
+          "source": "Exclusivo de Hashirama Senju em [Vale do Fim]. Sob este status, todas as habilidades de Hashirama causam mais dano. Sua Esotérica passa a ser o [Estilo Madeira: Jutsu do Dragão de Madeira] (Resfriamento inicial: [0 rodada] / Resfriamento da Esotérica: [2 rodadas] / Chakra: [40]). Causa dano de Terra e Água que [sempre acerta] a 12 inimigos aleatórios e absorve todo o Chakra deles, além de causar [Supressão de Imunidade a Status negativos] até o final da rodada. O inimigo selecionado recebe [Flutuação] e [Fraqueza] que não pode ser dispersada e imunizada e o efeito dura até o final da próxima rodada. [Mão Severa] ignora parte da [Defesa] inimiga, [Estilo Madeira: Mil Mãos Severas] ignora parte da [Defesa] e [Resistência] inimiga. Além disso, caso o alvo de ataque já esteja sujeito a [Fraqueza] (excluindo Selamento de Fraqueza), sua taxa de esquiva é reduzida para [20%] até ser derrotado ou o fim de batalha. O efeito de [Corpo Sennin] será alterado para o seguinte: Hashirama tem [Imunidade a Status negativos nv. 2] e imune o dano de [Fogo]. Além disso, sempre que ninjas de equipe aliada realizam ataques Taijutsu, seu próprio [Ataque] aumenta em [3%]. Sempre que realizam ataques ninjutsu, seu próprio [Ninjutsu] aumenta em [3%]. Este status termina no final da rodada, e as habilidades de Hashirama voltam ao status inicial [Não Descoberto]. Cada vez Explosão ou Remoção ativada, o dano da [Esotérica] de Hashirama aumenta em [10%] (pode acumular). As descrições acima são relacionadas às habilidades iniciais do Hashirama Senju em [Vale do Fim].",
+          "translation": "千手柱间【终焉之战】专属：所有技能伤害提高，奥义替换为[木遁·木龙之术]（进场冷却：[0回合]／奥义冷却：[2回合]／查克拉：[40]）：对12名随机敌人造成[必定命中]的土、水属性伤害，吸收全部查克拉，施加持续至回合结束的[负面状态免疫压制]，对选定目标造成[浮空]和无法免疫或驱散的[虚弱]，持续至下回合结束。[重掌]无视部分[防御]，[木遁·千重掌]无视部分[防御]和[抗性]。若目标已有[虚弱]（不包括虚弱封印），将其闪避率限制为[20%]，持续至被击败或战斗结束。[仙人体]改为：获得[2级负面状态免疫]，免疫[火]伤害；己方忍者造成体术或忍术伤害时，分别使其自身[攻击]或[忍术]提高[3%]。状态在回合结束时解除，技能恢复[未突破]版本。每次爆发或解除时，柱间[奥义]伤害提高[10%]，可叠加。以上为基础版本效果。"
+        }
+      },
+      "466": {
+        "keys": {
+          "source": "Espada Forte: Destruidor de Elmos",
+          "translation": "刚刀·破盔"
+        },
+        "desc": {
+          "source": "Ataca uma linha inimiga aleatória, causa [Queda] e reduz sua quantia de ataques comuns em . O dano a ninjas com [Imunidade a Perseguição] é aumentado em [30%], e tem uma certa chance de obter1 ataque comum extra (até o máximo de 5 por rodada).",
+          "translation": "随机攻击敌方一排，造成[倒地]并减少普攻机会。对带有[追打免疫]的忍者伤害提高[30%]，有一定概率额外获得1次普攻机会，每回合最多5次。"
+        }
+      },
+      "467": {
+        "keys": {
+          "source": "Espada Forte: Destruidor de Elmos",
+          "translation": "刚刀·破盔"
+        },
+        "desc": {
+          "source": "Ataca uma linha inimiga aleatória, causa [Queda] e reduz sua quantia de ataques comuns em 1. O dano a ninjas com [Imunidade a Perseguição] é aumentado em [30%], e tem uma certa chance de obter 1 ataque comum extra (até o máximo de 5 por rodada).",
+          "translation": "随机攻击敌方一排，造成[倒地]并减少1次普攻机会。对带有[追打免疫]的忍者伤害提高[30%]，有一定概率额外获得1次普攻机会，每回合最多5次。"
+        }
+      },
+      "468": {
+        "keys": {
+          "source": "Estilo Madeira: Mil Mãos Severas",
+          "translation": "木遁·千重掌"
+        },
+        "desc": {
+          "source": "Persegue inimigos com [Flutuação] ou [Queda], causa [Combo de 10] com dano de Terra e Água, [Queda] e [Imobilidade], além de [Fraqueza] que não pode ser evitada ou dispersada até o fim da rodada. Esta habilidade pode ser lançada até 2 vezes por rodada, sempre acerta e reduz seu [Resfriamento] em 1.",
+          "translation": "追打[浮空]或[倒地]敌人，造成[10连击]、土水属性伤害、[倒地]、[定身]及无法免疫或驱散的[虚弱]，持续至回合结束。每回合最多2次，必定命中，自身[冷却]减少1回合。"
+        }
+      },
+      "469": {
+        "keys": {
+          "source": "Estilo Madeira: Mil Mãos Severas",
+          "translation": "木遁·千重掌"
+        },
+        "desc": {
+          "source": "Persegue inimigos com [Flutuação] ou [Queda], causa [Combo de 10] com dano de Terra e Água, [Queda] e [Imobilidade], além de [Fraqueza] que não pode ser evitada ou dispersada até o fim da rodada. Esta habilidade pode ser lançada até 2 vezes por rodada, sempre acerta e reduz seu [Resfriamento] em 1.",
+          "translation": "追打[浮空]或[倒地]敌人，造成[10连击]、土水属性伤害、[倒地]、[定身]及无法免疫或驱散的[虚弱]，持续至回合结束。每回合最多2次，必定命中，自身[冷却]减少1回合。"
+        }
+      },
+      "472": {
+        "keys": {
+          "source": "Espada Forte: Destruidor de Elmos +1",
+          "translation": "刚刀·破盔+1"
+        },
+        "desc": {
+          "source": "Ataca uma linha horizontal inimiga aleatória, remove [20] pontos de Chakra, causa [Queda] e reduz a quantidade de ataques comuns em 1. Esta habilidade [sempre acerta]. O dano a ninjas com [Imunidade a Perseguição] é aumentado em [30%], e tem uma certa chance de fazer Hashirama ganhar 1 ataque comum extra (até o máximo de 5 por rodada).",
+          "translation": "随机攻击敌方一横排，扣除[20]点查克拉，造成[倒地]并减少1次普攻机会。本技能[必定命中]，对带有[追打免疫]的忍者伤害提高[30%]，有一定概率使柱间额外获得1次普攻机会，每回合最多5次。"
+        }
+      },
+      "473": {
+        "keys": {
+          "source": "Espada Forte: Destruidor de Elmos Y",
+          "translation": "刚刀·破盔·Y"
+        },
+        "desc": {
+          "source": "Ataca o ninja com menos vida e a linha horizontal inimiga em que estiver, causa [Supressão de Imunidade a Perseguição] (o efeito dura até o final da rodada) e [Queda]. Derrotar o inimigo com esta habilidade ativa [Super: Espada Forte: Destruidor de Elmos] ([Habilidade adicional]: ataca o ninja com menos vida e a linha horizontal inimiga que estiver, causa [Supressão de Imunidade a Perseguição] (o efeito até o final da rodada) e [Queda]. Ganha [10%] de dano de habilidade de tipo [gatilho] (pode acumular e dura até o final da rodada). Derrotar o inimigo com esta habilidade ativa novamente [Super: Espada Forte: Destruidor de Elmos].).",
+          "translation": "攻击生命最低的忍者及其所在一横排，造成持续至回合结束的[追打免疫压制]和[倒地]。击败敌人时触发[超·刚刀·破盔]：[追加技能]，攻击生命最低的忍者及其所在一横排，造成持续至回合结束的[追打免疫压制]和[倒地]，触发型技能伤害提高[10%]，可叠加，持续至回合结束；再次击败敌人时继续触发[超·刚刀·破盔]。"
+        }
+      },
+      "474": {
+        "keys": {
+          "source": "Espada Forte: Destruidor de Elmos",
+          "translation": "刚刀·破盔"
+        },
+        "desc": {
+          "source": "Habilidades de Hashirama Senju em [Vale do Fim] no Modo de Explosão de Força +1, +2 ou Y+1: ataca o [ninjas] com menos vida e a linha horizontal inimiga em que estiver, causa [Queda] e reduz a quantidade de ataques comuns em 1. Esta habilidade [sempre acerta]. Derrotar o inimigo com esta habilidade ativa [Super: Espada Forte: Destruidor de Elmos] ([Habilidade adicional]: ataca o ninja com menos vida e a linha horizontal inimiga em que estiver, causa [Queda] e reduz a quantidade de ataques comuns em 1. Esta habilidade [sempre acerta]. Ganha [10%] de dano de habilidade de tipo [gatilho] (pode acumular e dura até o final da rodada). Derrotar o inimigo com esta habilidade ativa novamente [Super: Espada Forte: Destruidor de Elmos]).",
+          "translation": "千手柱间【终焉之战】爆发+1、+2或Y+1状态的技能：攻击生命最低的[忍者]及其所在一横排，造成[倒地]，减少1次普攻机会，本技能[必定命中]。击败敌人时触发[超·刚刀·破盔]：[追加技能]，攻击生命最低的忍者及其所在一横排，造成[倒地]并减少1次普攻机会，[必定命中]，触发型技能伤害提高[10%]，可叠加，持续至回合结束；再次击败敌人时继续触发该追加技能。"
+        }
+      },
+      "475": {
+        "keys": {
+          "source": "Espada Forte: Destruidor de Elmos",
+          "translation": "刚刀·破盔"
+        },
+        "desc": {
+          "source": "Habilidades de Hashirama Senju em [Vale do Fim] no Modo de Explosão de Força +1, +2 ou Y+1: ataca o [ninjas] com menos vida e a linha horizontal inimiga em que estiver, causa [Queda] e reduz a quantidade de ataques comuns em 1. Esta habilidade [sempre acerta]. Derrotar o inimigo com esta habilidade ativa [Super: Espada Forte: Destruidor de Elmos] ([Habilidade adicional]: ataca o ninja com menos vida e a linha horizontal inimiga em que estiver, causa [Queda] e reduz a quantidade de ataques comuns em 1. Esta habilidade [sempre acerta]. Ganha [10%] de dano de habilidade de tipo [gatilho] (pode acumular e dura até o final da rodada). Derrotar o inimigo com esta habilidade ativa novamente [Super: Espada Forte: Destruidor de Elmos]).",
+          "translation": "千手柱间【终焉之战】爆发+1、+2或Y+1状态的技能：攻击生命最低的[忍者]及其所在一横排，造成[倒地]，减少1次普攻机会，本技能[必定命中]。击败敌人时触发[超·刚刀·破盔]：[追加技能]，攻击生命最低的忍者及其所在一横排，造成[倒地]并减少1次普攻机会，[必定命中]，触发型技能伤害提高[10%]，可叠加，持续至回合结束；再次击败敌人时继续触发该追加技能。"
+        }
+      },
+      "476": {
+        "keys": {
+          "source": "Estilo Madeira: Mil Mãos Severas +1",
+          "translation": "木遁·千重掌+1"
+        },
+        "desc": {
+          "source": "Persegue inimigos com [Flutuação] ou [Queda], causa [Combo de 10] com dano de [Terra] e [Água], [Interrupção] e [Queda], além de [Fraqueza] que não pode ser imunizada e dispersada até o final da rodada. Esta habilidade pode ser lançada até 2 vezes por rodada. Esta habilidade [sempre acerta], ao o usar, reduz [Resfriamento da Esotérica] de Hashirama em 1 rodada e remove o próprio status de [Chamas].",
+          "translation": "追打[浮空]或[倒地]敌人，造成[10连击]、[土]和[水]属性伤害、[打断]、[倒地]及无法免疫或驱散的[虚弱]，持续至回合结束。每回合最多2次，[必定命中]，使用后自身[奥义冷却]减少1回合并移除自身[烈焰]。"
+        }
+      },
+      "477": {
+        "keys": {
+          "source": "Estilo Madeira: Mil Mãos Severas Y",
+          "translation": "木遁·千重掌·Y"
+        },
+        "desc": {
+          "source": "Persegue inimigos com [Flutuação] ou [Queda], causa [Combo de 10] com dano de [Terra] e [Água], [Interrupção] e [Queda], além de bloquear o [Resfriamento da Esotérica] do alvo em 1 rodada (o efeito dura até o final da rodada). Esta habilidade [sempre acerta].",
+          "translation": "追打[浮空]或[倒地]敌人，造成[10连击]、[土]和[水]属性伤害、[打断]及[倒地]，将目标[奥义冷却]锁定为1回合，持续至回合结束。本技能[必定命中]。"
+        }
+      },
+      "478": {
+        "keys": {
+          "source": "Estilo Madeira: Mil Mãos Severas",
+          "translation": "木遁·千重掌"
+        },
+        "desc": {
+          "source": "Habilidades de Hashirama Senju em [Vale do Fim] no Modo de Explosão de Força +1, +2 ou Y+1: persegue inimigos com [Flutuação] ou [Queda], causa [Combo de 10] com dano de [Terra] e [Água], [Interrupção] e [Queda], além de [Fraqueza] que não pode ser imunizada e dispersada (o efeito dura até o final da rodada). Esta habilidade pode ser lançada até 2 vezes por rodada. A habilidade [sempre acerta], e ignora parte da [Defesa] e [Resistência]. Também bloqueia seu próprio [Resfriamento da Esotérica] em 0 durante a rodada após o uso.",
+          "translation": "千手柱间【终焉之战】爆发+1、+2或Y+1状态的技能：追打[浮空]或[倒地]敌人，造成[10连击]、[土]和[水]属性伤害、[打断]、[倒地]及无法免疫或驱散的[虚弱]，持续至回合结束。每回合最多2次，[必定命中]，无视部分[防御]和[抗性]；使用后将自身[奥义冷却]锁定为0，持续至回合结束。"
+        }
+      },
+      "479": {
+        "keys": {
+          "source": "Estilo Madeira: Mil Mãos Severas",
+          "translation": "木遁·千重掌"
+        },
+        "desc": {
+          "source": "Habilidades de Hashirama Senju em [Vale do Fim] no Modo de Explosão de Força +1, +2 ou Y+1: persegue inimigos com [Flutuação] ou [Queda], causa [Combo de 10] com dano de [Terra] e [Água], [Interrupção] e [Queda], além de [Fraqueza] que não pode ser imunizada e dispersada (o efeito dura até o final da rodada). Esta habilidade pode ser lançada até 2 vezes por rodada. A habilidade [sempre acerta], e ignora parte da [Defesa] e [Resistência]. Também bloqueia seu próprio [Resfriamento da Esotérica] em 0 durante a rodada após o uso.",
+          "translation": "千手柱间【终焉之战】爆发+1、+2或Y+1状态的技能：追打[浮空]或[倒地]敌人，造成[10连击]、[土]和[水]属性伤害、[打断]、[倒地]及无法免疫或驱散的[虚弱]，持续至回合结束。每回合最多2次，[必定命中]，无视部分[防御]和[抗性]；使用后将自身[奥义冷却]锁定为0，持续至回合结束。"
+        }
+      },
+      "480": {
+        "keys": {
+          "source": "Modo de Explosão de Força +1",
+          "translation": "查克拉爆发+1"
+        },
+        "desc": {
+          "source": "Habilidades de Hashirama Senju em [Vale do Fim] no Modo de Explosão de Força +1: na mesma rodada, após Hashirama receber 5 vezes dano de habilidade de tipo [Esotérico], ajusta o limite máximo de Chakra para [100], removendo o [Modo de Explosão de Força +1]. Ao remover o status, todas as habilidades de Hashirama recebem o efeito [+1]. A cada [Explosão] e [Remoção], aumenta o dano de habilidades [Esotérica] em [10%] (pode acumular).",
+          "translation": "千手柱间【终焉之战】查克拉爆发+1状态：单回合受到5次[奥义]伤害后，将查克拉上限调整为[100]，解除[查克拉爆发+1]，全部技能获得[+1]效果。每次[爆发]或[解除]时，[奥义]伤害提高[10%]，可叠加。"
+        }
+      },
+      "481": {
+        "keys": {
+          "source": "Modo de Explosão de Força Y",
+          "translation": "查克拉爆发·Y"
+        },
+        "desc": {
+          "source": "Habilidades de Hashirama Senju em [Vale do Fim] no Modo de Explosão de Força Y: durante uma rodada, após Hashirama receber 5 vezes dano de habilidade [Esotérica], ajusta o limite máximo de Chakra para [100], removendo o [Modo de Explosão de Força Y]. Ao remover o status, todas as habilidades de Hashirama recebem o efeito [Y]. A cada [Explosão] e [Remoção], aumenta o dano de habilidade de tipo [Esotérico] em [10%] (pode acumular).",
+          "translation": "千手柱间【终焉之战】查克拉爆发·Y状态：单回合受到5次[奥义]伤害后，将查克拉上限调整为[100]，解除[查克拉爆发·Y]，全部技能获得[Y]效果。每次[爆发]或[解除]时，[奥义]伤害提高[10%]，可叠加。"
+        }
+      },
+      "482": {
+        "keys": {
+          "source": "Modo de Explosão de Força +2",
+          "translation": "查克拉爆发+2"
+        },
+        "desc": {
+          "source": "Habilidades de Hashirama Senju em [Vale do Fim] no Modo de Explosão de Força +2: no final de cada rodada, Hashirama ajusta o limite máximo de Chakra para [100], removendo o [Modo de Explosão de Força +2]. Ao remover o status, todas as habilidades de Hashirama recebem o efeito [+1], exceto o efeito [Explosão de Força], que é [+2]. A cada [Explosão] e [Remoção], aumenta o dano de habilidade de [Esotérico] em [10%] (pode acumular).",
+          "translation": "千手柱间【终焉之战】查克拉爆发+2状态：每回合结束时，将查克拉上限调整为[100]，解除[查克拉爆发+2]，全部技能获得[+1]效果，[查克拉爆发]除外，仍为[+2]。每次[爆发]或[解除]时，[奥义]伤害提高[10%]，可叠加。"
+        }
+      },
+      "483": {
+        "keys": {
+          "source": "Modo de Explosão de Força Y+1",
+          "translation": "查克拉爆发·Y+1"
+        },
+        "desc": {
+          "source": "Habilidades de Hashirama Senju em [Vale do Fim] no Modo de Explosão de Força Y+1: no final de cada rodada, Hashirama, ajusta o limite máximo de Chakra para [100], removendo o [Modo Explosão de Força Y+1]. Ao remover o status, todas as habilidades de Hashirama recebem o efeito [Y], exceto [Explosão de Força], que é [Y+1]. A cada [Explosão] e [Remoção], aumenta o dano de habilidade de tipo [Esotérico] em [10%] (pode acumular).",
+          "translation": "千手柱间【终焉之战】查克拉爆发·Y+1状态：每回合结束时，将查克拉上限调整为[100]，解除[查克拉爆发·Y+1]，全部技能获得[Y]效果，[查克拉爆发]除外，仍为[Y+1]。每次[爆发]或[解除]时，[奥义]伤害提高[10%]，可叠加。"
+        }
+      },
+      "484": {
+        "keys": {
+          "source": "Estilo Madeira: Jutsu do Boneco de Madeira",
+          "translation": "木遁·木人之术"
+        },
+        "desc": {
+          "source": "[Habilidade adicional]: causa dano de [Terra] e [Água] a 12 inimigos e [25%] de dano de Tremor aos inimigos a 1 espaço ao redor do alvo.",
+          "translation": "[追加技能]：对12名敌人造成[土]和[水]属性伤害，对目标周围1格的敌人造成[25%]震荡伤害。"
+        }
+      },
+      "485": {
+        "keys": {
+          "source": "Estilo Madeira: Jutsu do Boneco de Madeira +1",
+          "translation": "木遁·木人之术+1"
+        },
+        "desc": {
+          "source": "[Habilidade adicional]: causa dano de [Terra] e [Água] a 12 inimigos e [25%] de dano de Tremor aos inimigos a 1 espaço ao redor do alvo. Também dispersa todos os escudos e status positivos do alvo.",
+          "translation": "[追加技能]：对12名敌人造成[土]和[水]属性伤害，对目标周围1格的敌人造成[25%]震荡伤害，并驱散目标全部护盾和增益状态。"
+        }
+      },
+      "486": {
+        "keys": {
+          "source": "Estilo Madeira: Jutsu do Boneco de Madeira Y",
+          "translation": "木遁·木人之术·Y"
+        },
+        "desc": {
+          "source": "[Habilidade adicional]: ataca toda a unidade não-ninja inimiga, causando grande dano. Se derrotar clones com este habilidade, ativa novamente [Arte Eremita: Dragão de Portão Divino Y]. Ataca 7 inimigos e causa dano de [Terra] e [Água] que [sempre acerta] e [Interrupção], além de absorver [20] de Chakra de cada alvo. Reduz o limite de Chakra do ninja com menos vida para [40] até o final da rodada, e causa [Selo Portão Divino] ao ninja com menos vida. (Não pode lançar Esotérica até o final da rodada).",
+          "translation": "[追加技能]：攻击敌方全部非忍者单位，造成大量伤害。若击败分身，则再次触发[仙法·明神门木龙·Y]：攻击7名敌人，造成[必定命中]的[土]、[水]属性伤害和[打断]，从每个目标吸收[20]点查克拉。将生命最低的忍者查克拉上限降至[40]，持续至回合结束，并施加[明神门封印]，使其本回合无法释放奥义。"
+        }
+      },
+      "487": {
+        "keys": {
+          "source": "Corpo Sennin",
+          "translation": "仙人体"
+        },
+        "desc": {
+          "source": "Novo efeito [Corpo Sennin] de Hashirama Senju em [Vale do Fim] no Modo de Explosão de Força +1, +2: Hashirama possui [Imunidade a Status negativos nv. 2] e imune contra dano de [Fogo], o primeiro [Crítico] de cada rodada, o [Crítico] é aumentado em [20%]. Usar [Estilo Madeira de Arte Eremita: Mil Mãos Verdadeiras: Buda do Cume] ou [Estilo Madeira: Arte da Classificação] ativa adicionalmente [Habilidade adicional]: [Estilo Madeira: Jutsu do Dragão de Madeira] (causa dano de [Terra] e [Água] que [sempre acerta] a [12] inimigos da equipe inimiga, aplica [Supressão de Imunidade a Status negativos] até o final da rodada e absorve todo o Chakra dele. O inimigo com a menor vida recebe adicionalmente [Fraqueza] que não pode ser imunizada e dispersada e [Flutuação] até o final da próxima rodada.), toda vez que a equipe aliada usar habilidades, aumenta o [Ataque] e [Ninjutsu] de Hashirama em [15%] (até 10 vezes por rodada).",
+          "translation": "千手柱间【终焉之战】爆发+1、+2状态的[仙人体]新效果：获得[2级负面状态免疫]，免疫[火]伤害；每回合首次[暴击]后，[暴击]率提高[20%]。使用[仙法·木遁·真数千手·顶上化佛]或[木遁·榜排之术]时，触发[追加技能]：[木遁·木龙之术]，对[12]名敌人造成[必定命中]的[土]、[水]属性伤害、持续至回合结束的[负面状态免疫压制]，吸收全部查克拉，并对生命最低的敌人造成无法免疫或驱散的[虚弱]和[浮空]，持续至下回合结束。己方小队每次使用技能时，柱间[攻击]和[忍术]提高[15%]，每回合最多10次。"
+        }
+      },
+      "488": {
+        "keys": {
+          "source": "Corpo Sennin",
+          "translation": "仙人体"
+        },
+        "desc": {
+          "source": "Novo efeito [Corpo Sennin] de Hashirama Senju em [Vale do Fim] no Modo de Explosão de Força Y, Y+1: Hashirama possui [Imunidade a Status negativos nv. 2] e imune o dano de [Fogo], o primeiro [Crítico] de cada rodada, o [Crítico] é aumentado em [20%]. Usar [Estilo Madeira de Arte Eremita: Mil Mãos Verdadeiras: Buda do Cume] ou [Estilo Madeira: Arte da Classificação] ativa adicionalmente [Habilidade adicional]: [Estilo Madeira: Jutsu do Dragão de Madeira] (causa dano de [Terra] e [Água] que [sempre acerta] a [12] inimigos, aplica [Supressão de Imunidade a Status negativos] até o final da rodada e absorve todo o Chakra. O inimigo com a menor vida recebe adicionalmente [Fraqueza] que não pode ser dispersada e imunizada e [Flutuação] até o final da próxima rodada.). Toda vez que a equipe usar habilidades, aumenta o [Ataque] e [Ninjutsu] de Hashirama em [15%] (até 10 vezes por rodada).",
+          "translation": "千手柱间【终焉之战】爆发Y、Y+1状态的[仙人体]新效果：获得[2级负面状态免疫]，免疫[火]伤害；每回合首次[暴击]后，[暴击]率提高[20%]。使用[仙法·木遁·真数千手·顶上化佛]或[木遁·榜排之术]时，触发[追加技能]：[木遁·木龙之术]，对[12]名敌人造成[必定命中]的[土]、[水]属性伤害、持续至回合结束的[负面状态免疫压制]，吸收全部查克拉，并对生命最低的敌人造成无法免疫或驱散的[虚弱]和[浮空]，持续至下回合结束。己方小队每次使用技能时，柱间[攻击]和[忍术]提高[15%]，每回合最多10次。"
+        }
+      },
+      "489": {
+        "keys": {
+          "source": "Estilo Madeira: Jutsu do Dragão de Madeira",
+          "translation": "木遁·木龙之术"
+        },
+        "desc": {
+          "source": "Hashirama Senju em [Vale do Fim] no Modo de Explosão de Força: (Resfriamento inicial: [0 rodada] / Resfriamento da Esotérica: [2 rodadas] / Chakra: [40]) causa dano de Terra e Água que [sempre acerta] a 12 inimigos aleatórios da formação inimiga e absorve todo o Chakra deles, além de causar [Supressão de Imunidade a Status negativos] até o final da rodada. O inimigo selecionado recebe [Fraqueza] que não pode ser imunizada e dispersada e [Flutuação] até o final da próxima rodada.",
+          "translation": "千手柱间【终焉之战】查克拉爆发状态的技能（进场冷却：[0回合]／奥义冷却：[2回合]／查克拉：[40]）：随机攻击敌方阵营12名敌人，造成[必定命中]的土、水属性伤害，吸收全部查克拉，施加持续至回合结束的[负面状态免疫压制]，对选定目标额外造成无法免疫或驱散的[虚弱]和[浮空]，持续至下回合结束。"
+        }
+      },
+      "490": {
+        "keys": {
+          "source": "Estilo Madeira de Arte Eremita: Mil Mãos Verdadeiras: Buda do Cume",
+          "translation": "仙法·木遁·真数千手·顶上化佛"
+        },
+        "desc": {
+          "source": "Habilidades de Hashirama Senju em [Vale do Fim] no Modo de Explosão de Força +1, +2 ou Y, Y+1: (Resfriamento inicial: [0 rodada] / Resfriamento da Esotérica: [3 rodadas] / Chakra: [40]) causa dano de [Terra] e [Água] que [sempre acerta] a todas as formações, além de causar [Interrupção] e [Supressão de Imunidade a Perseguição]. O inimigo selecionado recebe [Imunidade a Perseguição Nv.2] e [Queda] até o final da próxima rodada. Se selecionar um aliado, usa [Estilo Madeira: Arte da Classificação].",
+          "translation": "千手柱间【终焉之战】查克拉爆发+1、+2、Y或Y+1状态的技能（进场冷却：[0回合]／奥义冷却：[3回合]／查克拉：[40]）：对所有阵营造成[必定命中]的[土]、[水]属性伤害、[打断]和[追打免疫压制]，选定敌人受到[2级追打免疫]和[倒地]，持续至下回合结束。若选定己方目标，改为使用[木遁·榜排之术]。"
+        }
+      },
+      "491": {
+        "keys": {
+          "source": "Estilo Madeira: Arte da Classificação",
+          "translation": "木遁·榜排之术"
+        },
+        "desc": {
+          "source": "Habilidades de Hashirama Senju em [Vale do Fim] no Modo de Explosão de Força +1, +2 ou Y, Y+1: (Resfriamento inicial: [0 rodada] / Resfriamento da Esotérica: [3 rodadas] / Chakra: [40]) a equipe selecionada, ao sofrer dano letal pela primeira vez na rodada, recupera imediatamente [30%] de vida. Ao causar dano [Crítico] pela primeira vez na rodada, recupera adicionalmente [20%] da vida. Hashirama recebe o status [Obstinação] até o final da rodada. Enquanto estiver sob o efeito de [Obstinação] ao usar esta habilidade, ele não pode ser alvo de habilidades de tipo [Esotérico]. Ao selecionar um inimigo, usa [Estilo Madeira de Arte Eremita: Mil Mãos Verdadeiras: Buda do Cume] em vez disso.",
+          "translation": "千手柱间【终焉之战】查克拉爆发+1、+2、Y或Y+1状态的技能（进场冷却：[0回合]／奥义冷却：[3回合]／查克拉：[40]）：选定小队本回合首次受到致命伤害时，立即恢复[30%]生命；本回合首次造成[暴击]伤害时，额外恢复[20%]生命。柱间获得[坚毅]，持续至回合结束。处于[坚毅]状态使用本技能时，无法被[奥义]选为目标。若选定敌人，改为使用[仙法·木遁·真数千手·顶上化佛]。"
+        }
+      },
+      "492": {
+        "keys": {
+          "source": "Novas Habilidades",
+          "translation": "新技能"
+        },
+        "desc": {
+          "source": "Habilidades de Hashirama Senju em [Vale do Fim] no Modo de Explosão de Força +1, +2 ou Y, Y+1: [Estilo Madeira de Arte Eremita: Mil Mãos Verdadeiras: Buda do Cume]: (Resfriamento inicial: [0 rodada] / Resfriamento da Esotérica: [3 rodadas] / Chakra: [40]) causa dano de [Terra] e [Água] que [sempre acerta] a todos os inimigos, além de causar [Interrupção] e [Supressão de Imunidade a Perseguição] e o inimigo selecionado recebe [Imunidade a Perseguição Nv.2] e [Queda] até o final da próxima rodada. Se selecionar um aliado, usa [Estilo Madeira: Arte da Classificação]. [Estilo Madeira: Arte da Classificação]: (Resfriamento inicial: [0 rodada] / Resfriamento da Esotérica: [3 rodadas] / Chakra: [40]) Os aliados selecionados, ao sofrerem dano letal pela primeira vez na rodada, recuperam imediatamente [30%] de vida, ao causarem dano [Crítico] pela primeira vez na rodada, recuperam adicionalmente [20%] de vida. Hashirama recebe o status [Obstinação] até o final da rodada. Enquanto estiver sob o efeito de [Obstinação] ao usar esta habilidade, ele não pode ser alvo de habilidades de tipo [Esotérico]. Ao selecionar um inimigo, usa [Estilo Madeira de Arte Eremita: Mil Mãos Verdadeiras: Buda do Cume] em vez disso.",
+          "translation": "千手柱间【终焉之战】查克拉爆发+1、+2、Y或Y+1的新技能：千手柱间【终焉之战】查克拉爆发+1、+2、Y或Y+1状态的技能（进场冷却：[0回合]／奥义冷却：[3回合]／查克拉：[40]）：对所有阵营造成[必定命中]的[土]、[水]属性伤害、[打断]和[追打免疫压制]，选定敌人受到[2级追打免疫]和[倒地]，持续至下回合结束。若选定己方目标，改为使用[木遁·榜排之术]。 千手柱间【终焉之战】查克拉爆发+1、+2、Y或Y+1状态的技能（进场冷却：[0回合]／奥义冷却：[3回合]／查克拉：[40]）：选定小队本回合首次受到致命伤害时，立即恢复[30%]生命；本回合首次造成[暴击]伤害时，额外恢复[20%]生命。柱间获得[坚毅]，持续至回合结束。处于[坚毅]状态使用本技能时，无法被[奥义]选为目标。若选定敌人，改为使用[仙法·木遁·真数千手·顶上化佛]。"
+        }
+      },
+      "493": {
+        "keys": {
+          "source": "Estilo Madeira: Nascimento da Floresta Florida",
+          "translation": "木遁·花树界降临"
+        },
+        "desc": {
+          "source": "Toda vez que entrar no [Modo de Explosão de Força +1, +2 ou Y, Y+1], abre o plano [Estilo Madeira: Nascimento da Floresta Florida] por [2] rodadas, ataca os inimigos das formações inimigas e causa um [pouco] de dano que [sempre acerta], dispersa todos os [Escudo] e [Pólen Venenoso] por causa de [status positivos] (neste status, pode remover [Obstinação] e reduzir a taxa de esquiva em [25%]. Enquanto o [Estilo Madeira: Nascimento da Floresta Florida] estiver ativado, [Ataque] e [Ninjutsu] são reduzidos em [100%] do atributo dos valores exibidos por 2 rodadas).",
+          "translation": "每次进入[查克拉爆发+1、+2、Y或Y+1]时，展开[木遁·花树界降临]结界，持续[2]回合。攻击敌方所有阵营，造成[必定命中]的[少量]伤害，驱散全部[护盾]和[增益状态]，施加[毒花粉]：移除[坚毅]，闪避率降低[25%]；在[木遁·花树界降临]中，[攻击]和[忍术]降低相当于面板值[100%]的数值，持续2回合。"
+        }
+      },
+      "494": {
+        "keys": {
+          "source": "Estilo Madeira: Nascimento da Floresta Florida",
+          "translation": "木遁·花树界降临"
+        },
+        "desc": {
+          "source": "Toda vez que entrar no [Modo de Explosão de Força +1, +2 ou Y, Y+1], abre o plano [Estilo Madeira: Nascimento da Floresta Florida] por [2] rodadas, ataca os inimigos das formações inimigas e causa um [pouco] de dano que [sempre acerta], dispersa todos os [Escudo] e [Pólen Venenoso] por causa de [status positivos] (neste status, pode remover [Obstinação] e reduzir a taxa de esquiva em [25%]. Enquanto o [Estilo Madeira: Nascimento da Floresta Florida] estiver ativado, [Ataque] e [Ninjutsu] são reduzidos em [100%] do atributo dos valores exibidos por 2 rodadas).",
+          "translation": "每次进入[查克拉爆发+1、+2、Y或Y+1]时，展开[木遁·花树界降临]结界，持续[2]回合。攻击敌方所有阵营，造成[必定命中]的[少量]伤害，驱散全部[护盾]和[增益状态]，施加[毒花粉]：移除[坚毅]，闪避率降低[25%]；在[木遁·花树界降临]中，[攻击]和[忍术]降低相当于面板值[100%]的数值，持续2回合。"
+        }
+      },
+      "495": {
+        "keys": {
+          "source": "Violência",
+          "translation": "暴怒"
+        },
+        "desc": {
+          "source": "Exclusivo de Hashirama Senju [Vale do Fim] o status dura [2] rodadas. Durante o status, se usar habilidade de tipo [Esotérico] dentro de [Estilo Madeira: Nascimento da Floresta Extensa], causará adicionalmente no [alvo] [Amarração Raiz] (o efeito não pode ser imunizado e dispersado, não pode usar ataque comum neste status. E sua [Defesa] e [Resistência] dentro de [Estilo Madeira: Nascimento da Floresta Extensa] aumenta em [100%] do atributo dos valores exibidos por 1 rodada).",
+          "translation": "千手柱间【终焉之战】专属，持续[2]回合。此状态下，在[木遁·树界降临]内使用[奥义]时，对[目标]额外施加[根缚]（无法免疫或驱散，无法普攻；在[木遁·树界降临]内，[防御]和[抗性]提高相当于面板值[100%]的数值，持续1回合）。"
+        }
+      },
+      "496": {
+        "keys": {
+          "source": "Violência",
+          "translation": "暴怒"
+        },
+        "desc": {
+          "source": "Exclusivo de Hashirama Senju [Vale do Fim] o status dura [2] rodadas. Durante o status, se usar habilidade de tipo [Esotérico] dentro de [Estilo Madeira: Nascimento da Floresta Extensa], causará adicionalmente no [alvo] [Amarração Raiz] (o efeito não pode ser imunizado e dispersado, não pode usar ataque comum neste status. E sua [Defesa] e [Resistência] dentro de [Estilo Madeira: Nascimento da Floresta Extensa] aumenta em [100%] do atributo dos valores exibidos por 1 rodada).",
+          "translation": "千手柱间【终焉之战】专属，持续[2]回合。此状态下，在[木遁·树界降临]内使用[奥义]时，对[目标]额外施加[根缚]（无法免疫或驱散，无法普攻；在[木遁·树界降临]内，[防御]和[抗性]提高相当于面板值[100%]的数值，持续1回合）。"
+        }
+      },
+      "497": {
+        "keys": {
+          "source": "Violência nv. 2",
+          "translation": "2级暴怒"
+        },
+        "desc": {
+          "source": "Exclusivo de Hashirama Senju [Vale do Fim], o status dura [2] rodadas. Neste status, se usar habilidade do tipo [Esotérico] dentro de [Estilo Madeira: Nascimento da Floresta Extensa], causará adicionalmente no [alvo] [Amarração Raiz] (o efeito não pode ser imunizado e dispersado, não pode usar ataque comum neste status. E sua [Defesa] e [Resistência] dentro de [Estilo Madeira: Nascimento da Floresta Extensa] aumenta em [100%] do atributo dos valores exibidos por 1 rodada) e removerá [Amarração Raiz] dos aliados.",
+          "translation": "千手柱间【终焉之战】专属，持续[2]回合。此状态下，在[木遁·树界降临]内使用[奥义]时，对[目标]额外施加[根缚]（无法免疫或驱散，无法普攻；在[木遁·树界降临]内，[防御]和[抗性]提高相当于面板值[100%]的数值，持续1回合）。同时移除己方队友的[根缚]。"
+        }
+      },
+      "498": {
+        "keys": {
+          "source": "Limitado",
+          "translation": "限制"
+        },
+        "desc": {
+          "source": "Exclusivo de Hashirama Senju [Vale do Fim], o status dura [2] rodadas. Neste status, quando usa habilidade [Esotérica], causa adicionalmente a [si mesmo] [Amarração Raiz] (não pode ser imunizada e dispersada, não pode usar ataque comum, a sua [Defesa] e [Resistência] dentro de [Estilo Madeira: Nascimento da Floresta Extensa] aumenta em [100%] do atributo dos valores exibidos por 1 rodada).",
+          "translation": "千手柱间【终焉之战】专属，持续[2]回合。此状态下使用[奥义]时，对[自身]额外施加[根缚]（无法免疫或驱散，无法普攻；在[木遁·树界降临]内，[防御]和[抗性]提高相当于面板值[100%]的数值，持续1回合）。"
+        }
+      }
+    }
+  }
+}

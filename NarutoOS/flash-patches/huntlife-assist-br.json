@@ -1,0 +1,13 @@
+{
+    "id": "huntlife-batch-br",
+    "nameKey": "ui.assist_chakra_batch",
+    "region": "br",
+    "version": "PT_NarutoAlpha8.65Build300",
+    "resourceURL": "https://cdnnaruto-pt.oasgames.com/PT_NarutoAlpha8.65Build300/flash/huntLife/HuntLifePlugin.swf",
+    "baseSha256": "e4160a0f8354221cf436f7055ea268ef7d08bf324b2095c053214b4428e33956",
+    "outputFile": "huntlife/HuntLifePlugin.batch-assist-br.swf",
+    "patchDirectory": "huntlife-batch-8.65Build300",
+    "files": [
+        "com/tencent/morefun/naruto/plugin/huntlife/view/PracticePanel.as"
+    ]
+}
