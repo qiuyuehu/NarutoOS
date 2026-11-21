@@ -4,7 +4,7 @@ const internalHosts = ['naruto.narutowebgame.com', 'naruto.oasgames.com', 'passp
 const gameServerHost = /^(?:s\d+-naruto(?:pt|br)?|naruto-(?:pt|br)(?:-s?\d+)?)\.oasgames\.com$/;
 const manualCredentialSites = [
   { id: 'br', label: REGIONS.br.label, origin: new URL(REGIONS.br.url).origin },
-  { id: 'cn', label: REGIONS.cn.label, origin: new URL(REGIONS.cn.url).origin },
+  { id: 'cn', label: REGIONS.cn.label, origin: new URL(REGIONS.cn.officialUrl).origin },
 ] as const;
 export function webURL(value: string): URL | null {
   try { const url = new URL(value); return /^https?:$/.test(url.protocol) && !url.username && !url.password ? url : null; }

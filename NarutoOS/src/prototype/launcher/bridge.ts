@@ -85,7 +85,7 @@ async function command(input:Command):Promise<void|boolean>{
     case 'overlay':return;
     case 'open-github':await request('about.open');return;
     case 'check-update':await request('update.check');return;
-    case 'language':case 'quality':case 'localization':case 'assists':case 'theme':await mutate('preferences.patch',{key:input.type==='assists'?'assistsEnabled':input.type,value:input.value});return;
+    case 'language':case 'quality':case 'localization':case 'assists':case 'theme':case 'cn-entry':await mutate('preferences.patch',{key:input.type==='assists'?'assistsEnabled':input.type==='cn-entry'?'cnEntry':input.type,value:input.value});return;
     case 'flash':await mutate('preferences.patch',{key:'flash',value:input.version});return;
     case 'mute':await mutate('preferences.patch',{key:'muted',value:!snapshot.preferences.muted});return;
     case 'title-color':await mutate('preferences.patch',{key:'titleBarColor',value:input.value});return;

@@ -42,18 +42,23 @@ final class Center:NSObject,NSApplicationDelegate,NSWindowDelegate,WKNavigationD
    self.logCenter("hide")
   })
  }
- func showWindow(){
+ func showWindow(_ cause:String="userRevealed"){
   hideGeneration += 1
   hidden=false;hiddenIdle=0;userRevealed=true;fading=false
   if let activity=activity {ProcessInfo.processInfo.endActivity(activity);self.activity=nil}
   NSApp.unhide(nil)
   window.alphaValue=1
-  logCenter("show","userRevealed hostPid=\(hostPid)")
+  logCenter("show","\(cause) hostPid=\(hostPid)")
   window.makeKeyAndOrderFront(nil);NSApp.activate(ignoringOtherApps:true)
  }
  var revision=0;var ownBatch:String?;var timer:Timer?;var refreshing=false;var autoSubmitted=false
  var dirty=false;var managementOpen=false;var pendingWrites=0;var failures=0
  var hidden=false;var hostPid=0;var hiddenIdle=0;var activity:NSObjectProtocol?
+ // The centre is revealed from SIGUSR1 only after a post-signal snapshot has been
+ // applied to the page, so a settings intent never flashes the launcher first.
+ // snapshotReveals marks the one paint that owns the reveal: its completion handler
+ // captured the flag at paint time, so an older snapshot's late callback cannot show.
+ var pendingReveal=false;var revealRequestedAt:Date?;var snapshotReveals=false
  // A user who brings the launch centre back is using it on purpose; do not hide it again
  // for the same batch. hideGeneration invalidates an in-flight fade-out animation.
  var userRevealed=false;var hideGeneration=0
@@ -71,7 +76,7 @@ final class Center:NSObject,NSApplicationDelegate,NSWindowDelegate,WKNavigationD
   do{lock=try roleLock(root,"center")}catch{logCenter("terminate","role-lock-failed");_ = try? rpc(root,"center",token,"center.ensure");NSApp.terminate(nil);return}
   let initialState=try? rpc(root,"center",token,"center.open",["pid":getpid()])
   if let preferences=initialState?["preferences"] as? [String:Any] {interfaceLanguage=normalizedLanguage(preferences["language"])} else {interfaceLanguage=startupLanguage()}
-  signal(SIGUSR1,SIG_IGN);source=DispatchSource.makeSignalSource(signal:SIGUSR1,queue:.main);source?.setEventHandler{[weak self] in self?.showWindow()};source?.resume()
+  signal(SIGUSR1,SIG_IGN);source=DispatchSource.makeSignalSource(signal:SIGUSR1,queue:.main);source?.setEventHandler{[weak self] in self?.pendingReveal=true;self?.revealRequestedAt=Date();self?.refresh()};source?.resume()
   let screen=NSScreen.main?.visibleFrame ?? NSRect(x:0,y:0,width:1000,height:732)
   let smallCheck=ProcessInfo.processInfo.environment["NARUTO_C_FIXTURE"]=="1" && ["launcher","i18n"].contains(ProcessInfo.processInfo.environment["NARUTO_C_UI_CHECKS"] ?? "") && ProcessInfo.processInfo.environment["NARUTO_C_LAUNCHER_SMALL"]=="1"
   window=NSWindow(contentRect:NSRect(x:0,y:0,width:min(smallCheck ? 700 : 1000,screen.width),height:min(smallCheck ? 490 : 700,max(300,screen.height-32))),styleMask:[.titled,.closable,.miniaturizable,.fullSizeContentView],backing:.buffered,defer:false)
@@ -162,15 +167,27 @@ final class Center:NSObject,NSApplicationDelegate,NSWindowDelegate,WKNavigationD
   if refreshing{return};refreshing=true
   work.async{
    var payload:[String:Any]=["pid":getpid()];if let batch=self.ownBatch{payload["batchId"]=batch}
+   let started=Date()
    let state=try? rpc(self.root,"center",self.token,"center.open",payload)
    DispatchQueue.main.async{
     self.refreshing=false
     guard let state=state else{
      self.failures+=1
+     if self.pendingReveal{self.pendingReveal=false;self.revealRequestedAt=nil;self.showWindow()}
      if self.failures==3 || self.failures%20==0 {let process=Process();process.executableURL=URL(fileURLWithPath:self.project+"/dist/prototype/native/core");process.environment=ProcessInfo.processInfo.environment;process.standardInput=FileHandle.nullDevice;process.standardOutput=FileHandle.nullDevice;process.standardError=FileHandle.nullDevice;try? process.run()}
      return
     }
-    self.failures=0;self.paint(state)
+    // A poll already in flight when the centre was signalled may predate the intent
+    // Core stored with it; started is captured right before the rpc, so a poll that
+    // began after the signal is guaranteed to carry the intent.
+    if self.pendingReveal && self.revealRequestedAt != nil && started < self.revealRequestedAt! {self.refresh();return}
+    self.failures=0
+    // This snapshot is the first one guaranteed to carry the wake's intent, so only
+    // its paint may reveal the window. Consume the pending reveal here, not at JS
+    // completion, so a failure to run the page script cannot leave the wake stuck.
+    self.snapshotReveals=self.pendingReveal
+    if self.pendingReveal{self.pendingReveal=false;self.revealRequestedAt=nil}
+    self.paint(state)
    }
   }
  }
@@ -183,7 +200,13 @@ final class Center:NSObject,NSApplicationDelegate,NSWindowDelegate,WKNavigationD
   hiddenIdle=0
   let language=normalizedLanguage((state["preferences"] as? [String:Any])?["language"])
   if language != interfaceLanguage {interfaceLanguage=language;updateMenu()}
-  if let text=String(data:(try? json(state)) ?? Data(),encoding:.utf8){web.evaluateJavaScript("window.__narutoSnapshot?.(\(text))",completionHandler:nil)}
+  if let text=String(data:(try? json(state)) ?? Data(),encoding:.utf8){
+   let reveals=snapshotReveals
+   web.evaluateJavaScript("window.__narutoSnapshot?.(\(text))",completionHandler:{[weak self] _,_ in
+    guard let self=self else{return}
+    if reveals{self.snapshotReveals=false;self.showWindow("reveal")}
+   })
+  }
   let batches=state["batches"] as? [[String:Any]] ?? []
   var rows=[String:String]()
   for profile in state["profiles"] as? [[String:Any]] ?? [] {let id=profile["id"] as! String;let status=profile["runtimeStatus"] as? String ?? localized(msg("ui.not_started"));rows[id]="\(profile["name"] as! String) · \(id) · \(status)"}
@@ -232,7 +255,7 @@ final class Center:NSObject,NSApplicationDelegate,NSWindowDelegate,WKNavigationD
   credits.append(NSAttributedString(string:"\ngithub.com/qiuyuehu/NarutoOS",attributes:[.font:NSFont.systemFont(ofSize:10),.foregroundColor:NSColor.secondaryLabelColor]))
   NSApp.orderFrontStandardAboutPanel(options:[.applicationName:"Naruto OS",.credits:credits])
  }
- @objc func openSettings(){showWindow();web.evaluateJavaScript("if(document.getElementById('settings-panel').hidden)window.naruto.command({type:'settings'})",completionHandler:nil)}
+ @objc func openSettings(){web.evaluateJavaScript("if(document.getElementById('settings-panel').hidden)window.naruto.command({type:'settings'})",completionHandler:{[weak self] _,_ in self?.showWindow()})}
  @objc func checkForUpdates(){updates.manualCheck()}
  func applicationShouldHandleReopen(_ sender:NSApplication,hasVisibleWindows flag:Bool)->Bool{showWindow();return true}
  // Clicking the Dock icon or switching back may only unhide the app without a reopen

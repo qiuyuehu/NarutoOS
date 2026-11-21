@@ -2,7 +2,7 @@ import { msg } from '../shared/i18n';
 import { app, BrowserView, BrowserWindow, nativeTheme } from 'electron';
 import fs from 'fs';
 import path from 'path';
-import { LoadState, SavedTab, TabInfo, CHROME_HEIGHT, REGIONS, validRegion } from '../shared/model';
+import { LoadState, SavedTab, TabInfo, CHROME_HEIGHT, REGIONS, validRegion, cnEntryURL, CnEntry } from '../shared/model';
 import { ENTRY_URL, webURL } from './policy';
 import { GameLifecycle } from './extensions';
 import { isBrazilLoginPage, loginRequestKey, retryAfterSeconds } from '../shared/brazil-login';
@@ -16,6 +16,7 @@ export class GameSessions {
   muted = false;
   hidden = false;
   top = CHROME_HEIGHT;
+  cnEntry: CnEntry = 'qq';
   readonly lifecycle = new GameLifecycle();
   private inspectNextGame = false;
   private refreshIntents = new Map<number, ReturnType<typeof setTimeout>>();
@@ -33,7 +34,7 @@ export class GameSessions {
     const inspectOnStart = this.inspectNextGame;
     this.inspectNextGame = false;
     const region = validRegion(saved.region) ? saved.region : 'br';
-    const initialURL = entry ?? (this.entry === ENTRY_URL ? REGIONS[region].url : this.entry);
+    const initialURL = entry ?? (this.entry === ENTRY_URL ? region === 'cn' ? cnEntryURL(this.cnEntry) : REGIONS[region].url : this.entry);
     const profile = preparedProfile ?? (profileSlot === undefined ? this.loginSessions?.acquire(region) : this.loginSessions?.acquireSlot(region, profileSlot));
     const view = new BrowserView({ webPreferences: {
       partition: profile?.partition ?? `naruto-${saved.id}`, plugins: true, preload: path.join(__dirname, '../preload/game.js'),

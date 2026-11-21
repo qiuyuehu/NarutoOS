@@ -1564,6 +1564,26 @@
     "en": "Default quality",
     "pt-BR": "Qualidade padrão"
   },
+  "ui.cn_entry": {
+    "zh-CN": "国服入口",
+    "en": "CN server entry",
+    "pt-BR": "Entrada do servidor chinês"
+  },
+  "ui.cn_entry_qq": {
+    "zh-CN": "QQ游戏大厅",
+    "en": "QQ Game Lobby",
+    "pt-BR": "Lobby de Jogos QQ"
+  },
+  "ui.cn_entry_official": {
+    "zh-CN": "官网",
+    "en": "Official site",
+    "pt-BR": "Site oficial"
+  },
+  "ui.invalid_cn_entry": {
+    "zh-CN": "国服入口无效",
+    "en": "Invalid CN server entry",
+    "pt-BR": "Entrada do servidor chinês inválida"
+  },
   "ui.low": {
     "zh-CN": "低",
     "en": "Low",

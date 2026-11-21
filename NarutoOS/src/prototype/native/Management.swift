@@ -3,7 +3,7 @@ import Security
 import CryptoKit
 
 func defaultPreferences()->[String:Any] {
- ["language":"zh-CN","quality":"high","muted":false,"localization":false,"assistsEnabled":false,"flash":"34","autoClose":true,"theme":"system","titleBarColor":NSNull(),"region":"br","lobbyBackground":NSNull(),"lobbyMotion":true]
+ ["language":"zh-CN","quality":"high","muted":false,"localization":false,"assistsEnabled":false,"flash":"34","autoClose":true,"theme":"system","titleBarColor":NSNull(),"region":"br","lobbyBackground":NSNull(),"lobbyMotion":true,"cnEntry":"qq"]
 }
 
 func validatePreference(_ key:String, _ value:Any) throws {
@@ -13,6 +13,7 @@ func validatePreference(_ key:String, _ value:Any) throws {
  case "flash": guard let s=value as? String,["31","34"].contains(s) else {throw ProtoError.failure(msg("ui.invalid_flash_version"))}
  case "theme": guard let s=value as? String,["system","light","dark"].contains(s) else {throw ProtoError.failure(msg("ui.invalid_theme"))}
  case "region": guard let s=value as? String,["br","cn"].contains(s) else {throw ProtoError.failure(msg("ui.invalid_region"))}
+ case "cnEntry": guard let s=value as? String,["qq","official"].contains(s) else {throw ProtoError.failure(msg("ui.invalid_cn_entry"))}
  case "autoClose","muted","localization","assistsEnabled","lobbyMotion": guard let n=value as? NSNumber,CFGetTypeID(n)==CFBooleanGetTypeID() else {throw ProtoError.failure(msg("ui.invalid_switch_value"))}
  case "lobbyBackground","titleBarColor": guard value is NSNull || ((value as? String)?.range(of:"^#[0-9a-fA-F]{6}$",options:.regularExpression) != nil) else {throw ProtoError.failure(msg("ui.invalid_color"))}
  default: throw ProtoError.failure(msg("ui.setting_field_is_not_available"))

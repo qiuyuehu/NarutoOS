@@ -4,7 +4,7 @@ import { svg } from './icons';
 import { installFocusModality } from './focus';
 import { LOBBY_PRESETS, LobbyView } from './lobby';
 import { titlePalette } from '../shared/appearance';
-import { AppState, Command, CredentialInfo, CredentialSiteOption, Preferences, Theme, REGIONS, CHROME_HEIGHT, SAVE_PROMPT_HEIGHT } from '../shared/model';
+import { AppState, Command, CredentialInfo, CredentialSiteOption, Preferences, Theme, REGIONS, CHROME_HEIGHT, SAVE_PROMPT_HEIGHT, CnEntry } from '../shared/model';
 installFocusModality();
 const $ = <T extends HTMLElement = HTMLElement>(id: string) => document.getElementById(id) as T;
 function fitSettingSelect(select: HTMLSelectElement) {
@@ -266,6 +266,7 @@ function render(state: AppState) {
   lobby.render(state);
   renderLobbyPreferences(state);
   ($('quality-select') as HTMLSelectElement).value = state.preferences.quality;
+  ($('cn-entry-select') as HTMLSelectElement).value = state.preferences.cnEntry ?? 'qq';
   ($('flash-select') as HTMLSelectElement).value = state.preferences.flash;
   const flashChanged = state.preferences.flash !== state.flash.version.split('.')[0];
   setText($('flash-detail'), !state.flash.available ? msg('ui.component_not_ready') : flashChanged ? msg('ui.applies_on_next_launch') : '');
@@ -532,6 +533,7 @@ $('about-check-update').addEventListener('click', () => { void command({ type: '
 selectSettingsPage(activeSettingsPage);
 
 $('quality-select').addEventListener('change', event => void command({ type: 'quality', value: (event.target as HTMLSelectElement).value as 'low' | 'medium' | 'high' }));
+$('cn-entry-select').addEventListener('change', event => void command({ type: 'cn-entry', value: (event.target as HTMLSelectElement).value as CnEntry }));
 
 $('language-select').addEventListener('change', async event => {
   const select = event.target as HTMLSelectElement;

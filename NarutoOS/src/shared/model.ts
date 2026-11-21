@@ -2,10 +2,13 @@ import { msg, Language } from './i18n';
 export const ENTRY_URL = 'https://naruto.narutowebgame.com/pt/serverlist';
 export const REGIONS = {
   br: { label: msg('region.br'), url: ENTRY_URL },
-  cn: { label: msg('region.cn'), url: 'https://minigame.qq.com/plat/social_hall/app_frame/index_v4.html?appid=10190' }
+  cn: { label: msg('region.cn'), url: 'https://minigame.qq.com/plat/social_hall/app_frame/index_v4.html?appid=10190', officialUrl: 'https://huoying.qq.com/server/website/' }
 } as const;
 export type Region = keyof typeof REGIONS;
 export const validRegion = (value: unknown): value is Region => value === 'br' || value === 'cn';
+export type CnEntry = 'qq' | 'official';
+export const validCnEntry = (value: unknown): value is CnEntry => value === 'qq' || value === 'official';
+export const cnEntryURL = (cnEntry: CnEntry): string => cnEntry === 'official' ? REGIONS.cn.officialUrl : REGIONS.cn.url;
 export type LoadState = 'idle' | 'loading' | 'ready' | 'failed' | 'crashed';
 export type RecoveryStage = 'login' | 'loading' | 'confirming';
 export interface SavedTab { id: string; name: string; region?: Region; profileId?: string }
@@ -17,6 +20,7 @@ export type FlashQuality = 'low' | 'medium' | 'high';
 export interface Preferences {
   language: Language; muted: boolean; flash: '34' | '31'; theme: Theme; titleBarColor: string | null; region: Region;
   lobbyBackground: string | null; lobbyMotion: boolean; localization: boolean; assistsEnabled: boolean; quality: FlashQuality;
+  cnEntry: CnEntry;
 }
 export interface Layout {
   version: 1; tabs: SavedTab[]; activeId: string | null; preferences: Preferences;
@@ -59,6 +63,7 @@ export type Command =
   | { type: 'localization'; value: boolean }
   | { type: 'assists'; value: boolean }
   | { type: 'quality'; value: FlashQuality }
+  | { type: 'cn-entry'; value: CnEntry }
   | { type: 'overlay'; shown: boolean };
 export interface ShellAPI {
   state(): Promise<AppState>;

@@ -132,9 +132,14 @@ try{
  check('WK traffic lights are centered in the 42px bar',read('center-view.json').trafficLightCenters.length===3&&read('center-view.json').trafficLightCenters.every(y=>Math.abs(y-21)<1));
  check('WK center integrates the native titlebar into one chrome row',read('center-view.json').integratedTitlebar===true);
  }
+ // The centre is revealed only by the post-signal settings snapshot: exactly one
+ // show event, tagged reveal, between the intent request and the settings page.
+ const showOffset=fs.statSync(path.join(root,'center-events.log')).size;
  await request('center.ensure',{page:'settings'});
  await until(()=>read('center-view.json').settingsOpen===true);
  check('core settings intent opens the existing WK management page',true);
+ const wakeShows=fs.readFileSync(path.join(root,'center-events.log')).slice(showOffset).toString('utf8').split('\n').filter(line=>line.includes(' show '));
+ check('the centre is revealed by the settings snapshot itself, never by an earlier callback',wakeShows.length===1&&wakeShows[0].includes(' reveal '));
 
  if (!process.env.NARUTO_C_SKIP_MEASURE) await sample('two-accounts-center-reopened');
  const fresh=async(command,payload={})=>{const state=await request('snapshot');return request(command,{requestId:crypto.randomUUID(),revision:state.revision,...payload})};

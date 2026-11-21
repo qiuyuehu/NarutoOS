@@ -1,7 +1,7 @@
 {
   "name": "naruto-os",
   "productName": "Naruto OS",
-  "version": "0.3.11",
+  "version": "0.3.12",
   "private": true,
   "description": "个人 macOS 火影 Online 启动器",
   "scripts": {

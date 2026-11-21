@@ -68,7 +68,7 @@ test('normalizeLayout repairs invalid configuration values and selects a valid a
 
   assert.deepEqual(normalized.tabs, [{ id: tabId('a'), name: 'valid tab', region: 'br' }]);
   assert.equal(normalized.activeId, tabId('a'));
-  assert.deepEqual(normalized.preferences, { language: 'zh-CN', muted: false, flash: '34', theme: 'system', titleBarColor: null, region: 'br', lobbyBackground: null, lobbyMotion: true, localization: false, quality: 'high' });
+  assert.deepEqual(normalized.preferences, { language: 'zh-CN', muted: false, flash: '34', theme: 'system', titleBarColor: null, region: 'br', lobbyBackground: null, lobbyMotion: true, localization: false, assistsEnabled: false, quality: 'high', cnEntry: 'qq' });
   assert.deepEqual(normalized.bounds, { width: 800, height: 2160 });
   assert.equal(normalized.maximized, false);
 
@@ -90,6 +90,13 @@ test('legacy layouts default launcher appearance and normalize invalid backgroun
     preferences: { lobbyBackground: 'url(https://invalid.test)', lobbyMotion: 'off' } });
   assert.equal(invalid.preferences.lobbyBackground, null);
   assert.equal(invalid.preferences.lobbyMotion, true);
+});
+
+test('the CN server entry preference keeps the lobby default and only accepts the official alternative', () => {
+  const preserved = config.normalizeLayout({ version: 1, tabs: [], activeId: null, preferences: { cnEntry: 'official' } });
+  assert.equal(preserved.preferences.cnEntry, 'official');
+  const invalid = config.normalizeLayout({ version: 1, tabs: [], activeId: null, preferences: { cnEntry: 'sideloaded' } });
+  assert.equal(invalid.preferences.cnEntry, 'qq');
 });
 
 test('a blank tab label stays blank so the UI can restore its generated default label', () => {
@@ -287,7 +294,7 @@ test('window restoration retains fullscreen and rounds native window coordinates
 
 test('appearance preferences migrate old files and reject malformed colors and themes', () => {
   const old = config.normalizeLayout({ version: 1, tabs: [], preferences: { muted: true, flash: '31' } });
-  assert.deepEqual(old.preferences, { language: 'zh-CN', muted: true, flash: '31', theme: 'system', titleBarColor: null, region: 'br', lobbyBackground: null, lobbyMotion: true, localization: false, quality: 'high' });
+  assert.deepEqual(old.preferences, { language: 'zh-CN', muted: true, flash: '31', theme: 'system', titleBarColor: null, region: 'br', lobbyBackground: null, lobbyMotion: true, localization: false, assistsEnabled: false, quality: 'high', cnEntry: 'qq' });
   const invalid = config.normalizeLayout({ version: 1, tabs: [], preferences: { theme: 'purple', titleBarColor: 'url(https://invalid.test)' } });
   assert.equal(invalid.preferences.theme, 'system');
   assert.equal(invalid.preferences.titleBarColor, null);
@@ -302,7 +309,7 @@ test('appearance preferences survive configuration write and restore', () => {
     const layout = config.defaultLayout();
     layout.preferences.theme = 'dark'; layout.preferences.titleBarColor = '#B7C4D4';
     store.write(layout);
-    assert.deepEqual(store.read().preferences, { language: 'zh-CN', muted: false, flash: '34', theme: 'dark', titleBarColor: '#b7c4d4', region: 'br', lobbyBackground: null, lobbyMotion: true, localization: false, quality: 'high' });
+    assert.deepEqual(store.read().preferences, { language: 'zh-CN', muted: false, flash: '34', theme: 'dark', titleBarColor: '#b7c4d4', region: 'br', lobbyBackground: null, lobbyMotion: true, localization: false, assistsEnabled: false, quality: 'high', cnEntry: 'qq' });
     layout.preferences.titleBarColor = null; store.write(layout);
     assert.equal(store.read().preferences.titleBarColor, null);
   } finally { fs.rmSync(directory, { recursive: true, force: true }); }

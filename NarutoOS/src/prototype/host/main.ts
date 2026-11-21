@@ -15,6 +15,7 @@ import { createActivityAssist } from '../../main/activity-assist';
 import { createAssistManager } from '../../main/assist-manager';
 import { ResourceProbe } from '../../main/resource-probe';
 import { newTab } from '../../main/config';
+import { validCnEntry } from '../../shared/model';
 import { credentialOrigin, savePromptDestination } from '../../main/policy';
 import { core, root, project } from './client';
 import { createExitGuard } from './exit-guard';
@@ -285,6 +286,7 @@ async function start() {
   games = new GameSessions(win, runtimeChanged, report, undefined, directGameSession, sessions, () => {}, prepareGame);
   navigation = new Navigation(games);
   games.muted = prefs.muted; games.syncAudio();
+  games.cnEntry = validCnEntry(prefs.cnEntry) ? prefs.cnEntry : 'qq';
   const fixtureEntry=fixture && /^http:\/\/127\.0\.0\.1:\d+\/$/.test(process.env.NARUTO_C_LOGIN_FIXTURE || '') ? process.env.NARUTO_C_LOGIN_FIXTURE : undefined;
   login = makeLogin();
   function makeLogin(owner?:Task) {
@@ -437,6 +439,7 @@ async function start() {
 
       if (response.preferences.quality !== prefs.quality) for (const tab of games.tabs) tab.view.webContents.send('game:quality', response.preferences.quality);
       if (response.preferences.muted !== prefs.muted) {games.muted = response.preferences.muted; games.syncAudio();}
+      if (response.preferences.cnEntry !== prefs.cnEntry && validCnEntry(response.preferences.cnEntry)) games.cnEntry = response.preferences.cnEntry;
       const languageChanged = prefs.language !== response.preferences.language;
       prefs = response.preferences;
       if(languageChanged){setLanguage(prefs.language);app.setName(resolveText(msg('ui.naruto_os_game')));for(const tab of games.tabs)tab.view.webContents.send('game:language',prefs.language);updateMenu();win.setTitle(resolveText(`Naruto OS · ${buildLabel}`));}
