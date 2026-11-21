@@ -16,6 +16,6 @@
 
 最终签名包：`release/builds.noindex/NarutoOS-0.1.11-local-L4xaOa/Naruto OS.app`；66 项实际应用检查通过（`.test-artifacts/package-check-MCnxku/`），使用包内已签名 helper 的40项现代登录检查通过（`.test-artifacts/web-login-n1U2U6/`）。
 
-已安装 `/Applications/Naruto OS.app`，版本0.1.11；深度签名及19项关键文件与签名构建一致。旧0.1.10保留在 `/Users/youye/.Trash/Naruto OS 0.1.10 replaced-8f56130b09.app`。实机冷启动已通过CUA确认只显示巴西服主页，无游戏标签，原生登录进程为0。交付记录在 `release/delivery.json`。未提交、上传或公开发布。
+已安装 `/Applications/Naruto OS.app`，版本0.1.11；深度签名及19项关键文件与签名构建一致。实机冷启动确认只显示巴西服主页，无游戏标签，原生登录进程为0。
 
 状态：接入、检查、安装完成；正式版真实账号登录、选区和退出重开后的登录保留待用户体验验收。之前原型真实登录和进入游戏已获用户确认。

@@ -17,7 +17,7 @@
 开发环境：Node.js 22+、pnpm 11、macOS Command Line Tools、Rosetta。终端首次准备：
 
 ```sh
-cd "/Users/youye/Documents/ChatGPT/Naruto online启动器/NarutoOS"
+cd <克隆到本地的 NarutoOS 目录>
 npm_config_arch=x64 pnpm install
 python3 scripts/prepare-runtime.py --fallback31
 pnpm dev
