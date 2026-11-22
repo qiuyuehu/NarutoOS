@@ -68,9 +68,18 @@ for (const item of checks.slice(1)) {
   }
 }
 // The actual release archive must pass the same pre-scan (UTF-8 bundle names).
-const releaseZip = fs.readdirSync(project).find(name => /^NarutoOS-.*-macOS-AppleSilicon\.zip$/.test(name));
+// Archives live in release/ so the project root stays clean; validate the newest one.
+const releaseDir = path.join(project, 'release');
+const versionOf = name => /^NarutoOS-(\d+)\.(\d+)\.(\d+)-macOS-AppleSilicon\.zip$/.exec(name)?.slice(1).map(Number);
+const releaseZip = fs.existsSync(releaseDir)
+  ? fs.readdirSync(releaseDir).filter(versionOf).sort((a, b) => {
+      const va = versionOf(a), vb = versionOf(b);
+      for (let i = 0; i < 3; i++) if (va[i] !== vb[i]) return vb[i] - va[i];
+      return 0;
+    })[0]
+  : undefined;
 if (releaseZip) {
-  const real = runZipCheck('real-release-archive', path.join(project, releaseZip));
+  const real = runZipCheck('real-release-archive', path.join(releaseDir, releaseZip));
   if (!real.result.ok) throw new Error('real release archive rejected: ' + JSON.stringify(real.result));
   checks.push(real);
 }
