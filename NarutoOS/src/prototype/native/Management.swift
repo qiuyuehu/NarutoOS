@@ -15,7 +15,7 @@ func validatePreference(_ key:String, _ value:Any) throws {
  case "region": guard let s=value as? String,["br","cn"].contains(s) else {throw ProtoError.failure(msg("ui.invalid_region"))}
  case "cnEntry": guard let s=value as? String,["qq","official"].contains(s) else {throw ProtoError.failure(msg("ui.invalid_cn_entry"))}
  case "autoClose","muted","localization","assistsEnabled","lobbyMotion","gameSpeed": guard let n=value as? NSNumber,CFGetTypeID(n)==CFBooleanGetTypeID() else {throw ProtoError.failure(msg("ui.invalid_switch_value"))}
- case "gameSpeedRate": guard let r=value as? Int,[1,2].contains(r) else {throw ProtoError.failure(msg("ui.invalid_switch_value"))}
+ case "gameSpeedRate": guard let r=value as? Int,r>=1,r<=10 else {throw ProtoError.failure(msg("ui.invalid_switch_value"))}
  case "lobbyBackground","titleBarColor": guard value is NSNull || ((value as? String)?.range(of:"^#[0-9a-fA-F]{6}$",options:.regularExpression) != nil) else {throw ProtoError.failure(msg("ui.invalid_color"))}
  default: throw ProtoError.failure(msg("ui.setting_field_is_not_available"))
  }

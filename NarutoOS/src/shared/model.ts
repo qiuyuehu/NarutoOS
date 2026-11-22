@@ -19,7 +19,7 @@ export type Theme = 'system' | 'light' | 'dark';
 export type FlashQuality = 'low' | 'medium' | 'high';
 export interface Preferences {
   language: Language; muted: boolean; flash: '34' | '31'; theme: Theme; titleBarColor: string | null; region: Region;
-  lobbyBackground: string | null; lobbyMotion: boolean; localization: boolean; assistsEnabled: boolean; gameSpeed: boolean; gameSpeedRate: 1 | 2; quality: FlashQuality;
+  lobbyBackground: string | null; lobbyMotion: boolean; localization: boolean; assistsEnabled: boolean; gameSpeed: boolean; gameSpeedRate: number; quality: FlashQuality;
   cnEntry: CnEntry;
 }
 export interface Layout {

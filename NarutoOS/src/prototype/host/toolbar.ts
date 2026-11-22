@@ -24,10 +24,11 @@ $('settings').innerHTML = svg('settings');
 $('new-tab').innerHTML = svg('plus');
 $('new-tab').onclick = () => api.command('center');
 $('notice').onclick=()=>api.command('notice-details');
+$('speed').onclick = () => api.command('speed');
 $('placeholder-recover').onclick=()=>api.command('refresh');
 api.onFullscreen?.((value: boolean) => {document.documentElement.classList.toggle('fullscreen', value);const exit=document.getElementById('exit-fullscreen') as HTMLButtonElement|null;if(exit)exit.hidden=!value;});
 (document.getElementById('exit-fullscreen') as HTMLButtonElement).onclick=()=>api.command('fullscreen-exit');
-for (const type of ['center','settings','refresh','mute','speed','save','dismiss','retry-exit']) $(type).onclick = () => api.command(type);
+for (const type of ['center','settings','refresh','mute','save','dismiss','retry-exit']) $(type).onclick = () => api.command(type);
 for(const type of ['complete','cancel-recovery']) $(type).onclick=()=>{if(latest?.recovery)void api.command(type,latest.recovery.candidateId);};
 api.onState((state: any) => {
   latest = state; setLanguage(state.preferences?.language); applyLanguage(); appearance();
@@ -56,7 +57,10 @@ api.onState((state: any) => {
   $('mute').setAttribute('aria-pressed', String(!!state.muted));
   const speed = $('speed') as HTMLButtonElement;
   speed.hidden = !state.speed?.available;
-  if (state.speed?.available) { setText(speed, state.speed.rate === 2 ? '2×' : '1×'); setAttr(speed, 'aria-label', msg('ui.speed_rate_toggle', { p0: String(state.speed.rate) })); }
+  if (state.speed?.available) {
+    setText(speed, `${state.speed.rate}×`);
+    setAttr(speed, 'aria-label', msg('ui.speed_rate_toggle', { p0: String(state.speed.rate) }));
+  }
   ($('refresh') as HTMLButtonElement).disabled = !state.refresh.enabled;
   setAttr($('refresh'), 'aria-label', state.refresh.label);
   const tabs = $('tabs');

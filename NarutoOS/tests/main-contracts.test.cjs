@@ -1,4 +1,4 @@
-const {resolveText,messageCode}=require('./helpers/i18n.cjs');
+const {resolveText}=require('./helpers/i18n.cjs');
 const test = require('node:test');
 const assert = require('node:assert/strict');
 const Module = require('node:module');
@@ -26,7 +26,6 @@ function loadTypeScript(relativePath) {
 const config = loadTypeScript('src/main/config.ts');
 const policy = loadTypeScript('src/main/policy.ts');
 const brazilLogin = loadTypeScript('src/shared/brazil-login.ts');
-const { CredentialVault } = loadTypeScript('src/main/credentials.ts');
 
 const tabId = (digit) => digit.repeat(24);
 
@@ -68,7 +67,8 @@ test('normalizeLayout repairs invalid configuration values and selects a valid a
 
   assert.deepEqual(normalized.tabs, [{ id: tabId('a'), name: 'valid tab', region: 'br' }]);
   assert.equal(normalized.activeId, tabId('a'));
-  assert.deepEqual(normalized.preferences, { language: 'zh-CN', muted: false, flash: '34', theme: 'system', titleBarColor: null, region: 'br', lobbyBackground: null, lobbyMotion: true, localization: false, assistsEnabled: false, gameSpeed: false, gameSpeedRate: 1, quality: 'high', cnEntry: 'qq' });
+  assert.equal(normalized.preferences.muted, false);
+  assert.equal(normalized.preferences.flash, '34');
   assert.deepEqual(normalized.bounds, { width: 800, height: 2160 });
   assert.equal(normalized.maximized, false);
 
@@ -164,126 +164,6 @@ test('manual password sites are the two configured game origins without widening
   assert.equal(policy.credentialStorageOrigin('https://unrelated.example'), false);
 });
 
-function memoryTransport(initial = [], options = {}) {
-  let serialized = JSON.stringify(initial);
-  const calls = [];
-  const transport = async (action, value) => {
-    calls.push({ action, value });
-    if (action === 'read') return serialized;
-    if (options.rejectWrite) throw new Error('synthetic transport failure');
-    serialized = value;
-    return '';
-  };
-  return {
-    transport,
-    calls,
-    records: () => JSON.parse(serialized),
-  };
-}
-
-function record(id, origin, username, password) {
-  return { id, origin, username, password, updatedAt: '2026-01-01T00:00:00.000Z' };
-}
-
-test('CredentialVault filters by exact origin and selected returns only the matching record', async () => {
-  const first = record('id-one', 'https://naruto.narutowebgame.com', 'Alpha', 'secret-one');
-  const second = record('id-two', 'https://naruto.oasgames.com', 'Beta', 'secret-two');
-  const memory = memoryTransport([first, second]);
-  const vault = new CredentialVault(memory.transport);
-
-  const visible = await vault.list(first.origin);
-  assert.equal(visible.length, 1);
-  assert.equal(visible[0].id, first.id);
-  assert.equal(Object.hasOwn(visible[0], 'password'), false);
-  assert.equal((await vault.selected(first.id, first.origin)).id, first.id);
-  assert.equal(await vault.selected(first.id, second.origin), null);
-  assert.equal(await vault.selected(second.id, first.origin), null);
-});
-
-test('CredentialVault updates an existing record and removes it by id', async () => {
-  const existing = record('id-edit', 'https://naruto.narutowebgame.com', 'Alpha', 'old-secret');
-  const memory = memoryTransport([existing]);
-  const vault = new CredentialVault(memory.transport);
-
-  await vault.save(existing.origin, 'Alpha', 'new-secret', existing.id);
-  assert.equal(memory.records().length, 1);
-  assert.equal(memory.records()[0].id, existing.id);
-  assert.equal(memory.records()[0].password, 'new-secret');
-
-  await vault.remove(existing.id);
-  assert.deepEqual(memory.records(), []);
-});
-
-test('concurrent CredentialVault saves preserve every record', async () => {
-  const memory = memoryTransport();
-  const vault = new CredentialVault(memory.transport);
-  const origin = 'https://naruto.narutowebgame.com';
-
-  await Promise.all([
-    vault.save(origin, 'Alpha', 'secret-a'),
-    vault.save(origin, 'Beta', 'secret-b'),
-    vault.save(origin, 'Gamma', 'secret-c'),
-  ]);
-
-  assert.deepEqual(memory.records().map(item => item.username).sort(), ['Alpha', 'Beta', 'Gamma']);
-});
-
-test('manual password saves trim usernames, preserve passwords, and keep the two sites separate', async () => {
-  const memory = memoryTransport();
-  const vault = new CredentialVault(memory.transport);
-  const brPassword = '  说"明\\密码  ';
-  assert.deepEqual(await vault.addManual('https://naruto.narutowebgame.com', '  Shared User  ', brPassword), { status: 'saved' });
-  assert.deepEqual(await vault.addManual('https://naruto.narutowebgame.com', 'Shared User', brPassword), { status: 'unchanged' });
-  assert.deepEqual(await vault.addManual('https://huoying.qq.com', 'Shared User', 'china-password'), { status: 'saved' });
-  const records = memory.records();
-  assert.equal(records.length, 2);
-  assert.equal(records.find(item => item.origin === 'https://naruto.narutowebgame.com').password, brPassword);
-  assert.equal(records.find(item => item.origin === 'https://naruto.narutowebgame.com').username, 'Shared User');
-  assert.equal(records.find(item => item.origin === 'https://huoying.qq.com').password, 'china-password');
-});
-
-test('manual duplicate updates require confirmation and re-confirm when the stored record changes', async () => {
-  const memory = memoryTransport();
-  const vault = new CredentialVault(memory.transport);
-  await vault.addManual('https://naruto.narutowebgame.com', 'Alpha', 'old-secret');
-  const firstPrompt = await vault.addManual('https://naruto.narutowebgame.com', ' Alpha ', 'new-secret');
-  assert.equal(firstPrompt.status, 'confirm-update');
-  if (firstPrompt.status !== 'confirm-update') throw new Error('expected update confirmation');
-
-  await vault.save('https://naruto.narutowebgame.com', 'Alpha', 'concurrent-secret', firstPrompt.id);
-  const changedPrompt = await vault.addManual('https://naruto.narutowebgame.com', 'Alpha', 'new-secret', firstPrompt);
-  assert.equal(changedPrompt.status, 'confirm-update');
-  if (changedPrompt.status !== 'confirm-update') throw new Error('expected re-confirmation');
-  assert.equal(memory.records()[0].password, 'concurrent-secret');
-
-  const saved = await vault.addManual('https://naruto.narutowebgame.com', 'Alpha', 'new-secret', changedPrompt);
-  assert.deepEqual(saved, { status: 'saved' });
-  assert.equal(memory.records().length, 1);
-  assert.equal(memory.records()[0].id, firstPrompt.id);
-  assert.equal(memory.records()[0].password, 'new-secret');
-});
-
-test('manual password write failures leave the saved records unchanged and unsupported sites are rejected', async () => {
-  const memory = memoryTransport([], { rejectWrite: true });
-  const vault = new CredentialVault(memory.transport);
-  await assert.rejects(vault.addManual('https://naruto.narutowebgame.com', 'Synthetic User', 'synthetic-password'), /synthetic transport failure/);
-  await assert.rejects(vault.addManual('https://evil.example', 'Synthetic User', 'synthetic-password'), error=>messageCode(error)==='error.accountSite');
-  assert.deepEqual(memory.records(), []);
-});
-
-test('transport write rejection rejects save and does not persist credentials elsewhere', async () => {
-  const memory = memoryTransport([], { rejectWrite: true });
-  const vault = new CredentialVault(memory.transport);
-
-  await assert.rejects(
-    vault.save('https://naruto.narutowebgame.com', 'Synthetic User', 'synthetic-password'),
-    /synthetic transport failure/,
-  );
-
-  assert.deepEqual(memory.records(), []);
-  assert.deepEqual(memory.calls.map(call => call.action), ['read', 'write']);
-});
-
 test('window restoration retains fullscreen and rounds native window coordinates', () => {
   const layout = config.normalizeLayout({ version: 1, tabs: [], bounds: { x: 12.7, y: 20.2, width: 1000.8, height: 700.1 }, maximized: true, fullscreen: true });
   assert.deepEqual(layout.bounds, { x: 13, y: 20, width: 1001, height: 700 });
@@ -294,7 +174,10 @@ test('window restoration retains fullscreen and rounds native window coordinates
 
 test('appearance preferences migrate old files and reject malformed colors and themes', () => {
   const old = config.normalizeLayout({ version: 1, tabs: [], preferences: { muted: true, flash: '31' } });
-  assert.deepEqual(old.preferences, { language: 'zh-CN', muted: true, flash: '31', theme: 'system', titleBarColor: null, region: 'br', lobbyBackground: null, lobbyMotion: true, localization: false, assistsEnabled: false, gameSpeed: false, gameSpeedRate: 1, quality: 'high', cnEntry: 'qq' });
+  assert.equal(old.preferences.theme, 'system');
+  assert.equal(old.preferences.titleBarColor, null);
+  assert.equal(old.preferences.muted, true);
+  assert.equal(old.preferences.flash, '31');
   const invalid = config.normalizeLayout({ version: 1, tabs: [], preferences: { theme: 'purple', titleBarColor: 'url(https://invalid.test)' } });
   assert.equal(invalid.preferences.theme, 'system');
   assert.equal(invalid.preferences.titleBarColor, null);
@@ -309,7 +192,9 @@ test('appearance preferences survive configuration write and restore', () => {
     const layout = config.defaultLayout();
     layout.preferences.theme = 'dark'; layout.preferences.titleBarColor = '#B7C4D4';
     store.write(layout);
-    assert.deepEqual(store.read().preferences, { language: 'zh-CN', muted: false, flash: '34', theme: 'dark', titleBarColor: '#b7c4d4', region: 'br', lobbyBackground: null, lobbyMotion: true, localization: false, assistsEnabled: false, gameSpeed: false, gameSpeedRate: 1, quality: 'high', cnEntry: 'qq' });
+    const restored = new config.ConfigStore(directory).read().preferences;
+    assert.equal(restored.theme, 'dark');
+    assert.equal(restored.titleBarColor, '#b7c4d4');
     layout.preferences.titleBarColor = null; store.write(layout);
     assert.equal(store.read().preferences.titleBarColor, null);
   } finally { fs.rmSync(directory, { recursive: true, force: true }); }

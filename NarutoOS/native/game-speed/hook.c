@@ -226,17 +226,33 @@ static int caller_should_scale(void *pc) {
   return decision;
 }
 
-// 定向切档：SIGUSR1 设为倍率档，SIGUSR2 设回 1 倍。信号幂等且不落盘，
-// 因此对 ppapi 的 seatbelt 沙箱免疫；宿主无需读取插件状态即可确定目标。
-// 采样真实时间、更新基准和计算虚拟时间共用同一把锁。
+// 多档定向切档：每个档位对应一个信号（信号由内核投递，对 seatbelt 沙箱免疫；
+// 文件通道经实测在沙箱收紧后不可读，已放弃）。信号幂等且不落盘，宿主无需读取
+// 插件状态即可确定目标。采样真实时间、更新基准和计算虚拟时间共用同一把锁。
 static volatile sig_atomic_t switch_target = 0;
 static pthread_mutex_t switch_mutex = PTHREAD_MUTEX_INITIALIZER;
 
+static int signal_rate(int signo) {
+  switch (signo) {
+    case SIGUSR2: return 1;
+    case SIGUSR1: return 2;
+    case SIGEMT: return 3;
+    case SIGWINCH: return 4;
+    case SIGINFO: return 5;
+    case SIGTSTP: return 6;
+    case SIGTTIN: return 7;
+    case SIGTTOU: return 8;
+    case SIGURG: return 9;
+    case SIGXCPU: return 10;
+  }
+  return 0;
+}
+
 static void apply_pending_switch(struct timeval real_now) {
   // 原子交换取走并清零：读取与清零若为两步，落在中间的新信号会被清零覆盖。
-  int target = __atomic_exchange_n(&switch_target, 0, __ATOMIC_RELAXED);
-  if (!target) return;
-  double new_speed = (target == 2) ? rate_setting : 1.0;
+  int chosen = __atomic_exchange_n(&switch_target, 0, __ATOMIC_RELAXED);
+  if (!chosen) return;
+  double new_speed = (double)chosen;
   if (new_speed == speed) return;
   int64_t current_virtual = virtual_base_us
       + (int64_t)((double)(tv_to_us(real_now) - tv_to_us(real_base)) * speed);
@@ -360,7 +376,7 @@ static int hooked_poll(struct pollfd *fds, nfds_t nfds, int timeout_ms) {
 }
 
 static void handle_switch_signal(int signo) {
-  __atomic_store_n(&switch_target, signo == SIGUSR1 ? 2 : 1, __ATOMIC_RELAXED);
+  __atomic_store_n(&switch_target, signal_rate(signo), __ATOMIC_RELAXED);
 }
 
 __attribute__((constructor)) static void install_hook(void) {
@@ -393,6 +409,12 @@ __attribute__((constructor)) static void install_hook(void) {
   if (signal_switch) {
     const char *start = getenv("NARUTO_GSCALE_START");
     if (start && strcmp(start, "1") == 0) speed = 1.0;
+    struct sigaction action;
+    memset(&action, 0, sizeof action);
+    action.sa_handler = handle_switch_signal;
+    for (int signo = 1; signo < 32; signo++) {
+      if (signal_rate(signo) > 0) sigaction(signo, &action, NULL);
+    }
   }
   struct rebinding bindings[5];
   size_t count = 0;

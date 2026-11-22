@@ -2164,6 +2164,11 @@
     "en": "Toggle game rate (now {p0}×)",
     "pt-BR": "Alternar velocidade do jogo (agora {p0}×)"
   },
+  "ui.speed_pick_rate": {
+    "zh-CN": "选择游戏倍率",
+    "en": "Choose game rate",
+    "pt-BR": "Escolher velocidade do jogo"
+  },
   "ui.speed_plugin_not_running": {
     "zh-CN": "Flash 插件尚未运行，进入游戏后再试",
     "en": "The Flash plugin is not running yet; enter the game first",

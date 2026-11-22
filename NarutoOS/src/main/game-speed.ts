@@ -43,10 +43,19 @@ export function speedSites() {
   return 'PepperFlashPlayer@1a7143,PepperFlashPlayer@1a70f5';
 }
 
+// 档位信号表（与 native/game-speed/hook.c 的 signal_rate 一一对应）。
+// 信号由内核投递，对插件进程沙箱免疫；文件通道经实测被 seatbelt 阻断，已弃用。
+// 3×=SIGEMT 不在 Node 的信号名表内（macOS 值 7），必须以数字发出。
+export function speedSignal(rate: number): string | number | undefined {
+  const table: Record<number, string | number> = { 1: 'SIGUSR2', 2: 'SIGUSR1', 3: 7, 4: 'SIGWINCH',
+    5: 'SIGINFO', 6: 'SIGTSTP', 7: 'SIGTTIN', 8: 'SIGTTOU', 9: 'SIGURG', 10: 'SIGXCPU' };
+  return table[rate];
+}
+
 export type SpeedPolicyState = {
   activePages: ResourceOverrideStatus[];
   suspended: boolean;
-  rate: 1 | 2;
+  rate: number;
 };
 
 export type SpeedDecision = { allowRaise: boolean; revertToOne: boolean };
@@ -55,5 +64,5 @@ export type SpeedDecision = { allowRaise: boolean; revertToOne: boolean };
 export function speedPolicy(state: SpeedPolicyState): SpeedDecision {
   const raiseable = !state.suspended && state.activePages.length > 0
     && state.activePages.every(status => status === 'verified');
-  return { allowRaise: raiseable, revertToOne: state.rate === 2 && !raiseable };
+  return { allowRaise: raiseable, revertToOne: state.rate > 1 && !raiseable };
 }

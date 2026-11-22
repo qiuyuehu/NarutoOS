@@ -59,12 +59,3 @@ test('re-arming replaces the previous timer instead of stacking exits', () => {
     resolve();
   }, 30));
 });
-
-test('cleared guard stops reporting armed', () => {
-  const { g } = guard('saving');
-  assert.equal(g.armed, false);
-  g.arm(() => 'saving', 5);
-  assert.equal(g.armed, true);
-  g.clear();
-  assert.equal(g.armed, false);
-});

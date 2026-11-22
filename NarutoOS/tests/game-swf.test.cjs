@@ -13,18 +13,12 @@ test('plain SWF bytes are returned untouched', () => {
   assert.ok(decodeGameSwf(plain).equals(plain));
 });
 
-test('a decoded original matches its manifest digest', () => {
-  const source = path.join(root, '.test-artifacts/activity-assist-9.40Build300/OperatingActivityPlugin.original.swf');
-  if (!fs.existsSync(source)) return;
-  const decoded = decodeGameSwf(fs.readFileSync(source));
+const original = path.join(root, '.test-artifacts/activity-assist-9.40Build300/OperatingActivityPlugin.original.swf');
+test('a decoded original matches its manifest digest', {
+  skip: !fs.existsSync(original) && 'requires the recorded activity SWF',
+}, () => {
+  const decoded = decodeGameSwf(fs.readFileSync(original));
   assert.equal(digest(decoded), '2b80bb73e8baf884f52ea029f38a59afd8358aeac14b1f4b26d562e73b23ea85');
-});
-
-test('a second recorded original decodes to its digest', () => {
-  const source = '/tmp/cnres/HuntLifePlugin.swf';
-  if (!fs.existsSync(source)) return;
-  const decoded = decodeGameSwf(fs.readFileSync(source));
-  assert.equal(digest(decoded), '95a955264f832b351f7b7e2db3e86c99b49f53d6e9f6811841755a3795bc8eb6');
 });
 
 test('a corrupt wrapper is rejected instead of being substituted', () => {

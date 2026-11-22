@@ -146,6 +146,7 @@ import Security
                     // 记忆倍率不直接作为启动档：核心恒以 1 倍启动，宿主在确认移动补丁
                     // 资源就绪后发信号恢复记忆档位，资源缺失或失配的会话保持 1 倍。
                     childEnv["NARUTO_GSCALE_START"]="1"
+
                     childEnv["NARUTO_SIGNAL_SWITCH"]="1"
                     childEnv["NARUTO_C_SPEED"]="1"
                 }
@@ -267,7 +268,7 @@ import Security
                 let old=preferences;preferences[key]=value;revision+=1
                 do {try save()} catch {preferences=old;revision-=1;throw error};output=snapshot()
             case "host.speedRate" where role=="host":
-                guard let rate=payload["rate"] as? Int,[1,2].contains(rate) else {throw ProtoError.failure(msg("ui.invalid_switch_value"))}
+                guard let rate=payload["rate"] as? Int,rate>=1,rate<=10 else {throw ProtoError.failure(msg("ui.invalid_switch_value"))}
                 let oldRate=preferences;preferences["gameSpeedRate"]=rate
                 do {try save()} catch {preferences=oldRate;throw error};output=snapshot()
             case "catalog.importLocal" where role=="center":

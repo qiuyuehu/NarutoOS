@@ -28,7 +28,7 @@ export function normalizeLayout(raw: unknown): Layout {
       lobbyMotion: value.preferences?.lobbyMotion !== false, localization: value.preferences?.localization === true,
       assistsEnabled: value.preferences?.assistsEnabled === true,
       gameSpeed: value.preferences?.gameSpeed === true,
-      gameSpeedRate: value.preferences?.gameSpeedRate === 2 ? 2 : 1,
+      gameSpeedRate: Math.max(1, Math.min(10, Math.round(Number(value.preferences?.gameSpeedRate) || 1))),
       quality: value.preferences?.quality === 'low' || value.preferences?.quality === 'medium' ? value.preferences.quality : 'high',
       cnEntry: validCnEntry(value.preferences?.cnEntry) ? value.preferences.cnEntry : 'qq' },
     bounds: { width: Math.round(Math.max(800, Math.min(3840, Number(bounds?.width) || 1280))), height: Math.round(Math.max(560, Math.min(2160, Number(bounds?.height) || 850))),

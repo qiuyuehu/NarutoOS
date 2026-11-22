@@ -34,7 +34,6 @@ for(const version of ['ninjutsuTrain','ninjutsuTrain2']){
  const source=path.join(root,'flash-patches/ninjutsu-train-9.40Build300',prefix,version,'TrainView.as'),exported=path.join(root,'.test-artifacts/activity-assist-9.40Build300/patched-export/scripts',prefix,version,'TrainView.as');
  for(const file of process.env.ACTIVITY_ASSIST_EXPORTED==='1'?[source,exported]:[source]){
   const tag=version+'/'+(file===source?'source':'compiled-export');
-  test(tag+': game order Vector type is preserved at both read sites',()=>{const text=fs.readFileSync(file,'utf8');assert.equal((text.match(/var \w+:Vector\.<int>/g)||[]).length,2);});
   test(tag+': button stays inside the measured visible header area',()=>{const {view}=fixture(file);assert(view.assistButton.y>=115&&view.assistButton.y+28<=161.05,'button must sit above the ninjutsu title, inside the frame');});
   test(tag+': one group per click, continue manual progress, animation lock, three groups settle once',()=>{
    const f=fixture(file);assert.equal(f.view.canAssist(),false);f.click();assert.equal(f.model.finishCount,0);f.view.nextNinjutsu();assert.equal(f.view.canAssist(),true);

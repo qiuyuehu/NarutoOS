@@ -14,7 +14,7 @@ import { createGameLocalization } from '../../main/localization-experiment';
 import { createActivityAssist } from '../../main/activity-assist';
 import { createAssistManager } from '../../main/assist-manager';
 import { ResourceProbe } from '../../main/resource-probe';
-import { loadSpeedPatches, speedPolicy, SPEED_PATCH_ID } from '../../main/game-speed';
+import { loadSpeedPatches, speedPolicy, speedSignal, SPEED_PATCH_ID } from '../../main/game-speed';
 import { BattleMemoryBridge } from '../../main/battle-memory-experiment';
 import { newTab } from '../../main/config';
 import { validCnEntry } from '../../shared/model';
@@ -165,12 +165,29 @@ async function start() {
   const speedPatches = speedEnabled ? loadSpeedPatches(project) : [];
   if (speedEnabled && !speedPatches.length) hostEvent('speed-patches-unavailable');
   const speedOverrides = new Map(speedPatches.map(patch => [patch.region, patch.override] as const));
-  const speedRemembered: 1 | 2 = startupPrefs.gameSpeedRate === 2 ? 2 : 1;
-  let speedRate: 1 | 2 = 1;
-  let speedAutoRaise = speedRemembered === 2;
+  const speedRemembered: number = Math.max(1, Math.min(10, Math.round(Number(startupPrefs.gameSpeedRate) || 1)));
+  let speedRate: number = 1;
+  let speedAutoRaise = speedRemembered > 1;
+  // 回退前档位：页面暂未验证的回退在验证通过后自动恢复到该档；资源失配不恢复。
+  let speedRestoreRate = 0;
   let speedSuspended = false;
   let speedMismatchReported = false;
   const speedExtras = speedPatches.map(patch => patch.override);
+  // 多档定向信号：每个档位一个信号（内核投递、沙箱免疫），幂等不落盘。
+  const speedRetryMs = 2000;
+  let speedAttemptAt = 0;
+  function wakeAllPpapi(pids: number[], rate: number): number {
+    const signo = speedSignal(rate);
+    if (!signo) return 0;
+    let delivered = 0;
+    for (const pid of pids) { try { process.kill(pid, signo); delivered++; } catch {} }
+    return delivered;
+  }
+  function pushSpeed(rate: number): number {
+    const pids = findPpapiPIDs();
+    if (!pids.length) return 0;
+    return wakeAllPpapi(pids, rate);
+  }
   function currentSpeedDecision() {
     const activePages = games.tabs.filter(tab => !tab.view.webContents.isDestroyed()).map(tab => {
       const status = gameBridge?.trackedOverrideStatus(tab.view.webContents) ?? 'pending';
@@ -192,51 +209,55 @@ async function start() {
     } catch {}
     return [];
   }
-  // 定向信号：SIGUSR1=设为 2 倍，SIGUSR2=设回 1 倍。信号幂等，插件状态无需回读，
-  // 也因此对插件进程沙箱免疫；全部插件进程一起对齐（多开共享同一倍率）。
-  const speedRetryMs = 2000;
-  let speedAttemptAt = 0;
-  function signalAllPpapi(pids: number[], rate: 1 | 2): number {
-    let delivered = 0;
-    for (const pid of pids) { try { process.kill(pid, rate === 2 ? 'SIGUSR1' : 'SIGUSR2'); delivered++; } catch {} }
-    return delivered;
-  }
   // 插件可能晚于页面出现，也可能重启。周期补发当前允许的档位。
   function applySpeed() {
     if (!speedEnabled || !games || shutting) return;
     const decision = currentSpeedDecision();
     if (decision.revertToOne) {
+      const leavingRate = speedRate;
       speedRate = 1;
-      speedAutoRaise = false;
+      if (speedSuspended) {
+        // 资源失配的回退：本会话不恢复（资源修复后的下个会话重新验证）。
+        speedRestoreRate = 0;
+        speedAutoRaise = false;
+        if (!speedMismatchReported) { speedMismatchReported = true; report(msg('ui.speed_resource_mismatch_reverted'), 'error'); }
+      } else {
+        // 页面暂未验证的回退：保留回退前档位，验证通过后自动恢复。
+        speedRestoreRate = leavingRate;
+        speedAutoRaise = true;
+      }
       speedAttemptAt = 0;
-      if (speedSuspended && !speedMismatchReported) { speedMismatchReported = true; report(msg('ui.speed_resource_mismatch_reverted'), 'error'); }
       hostEvent('speed-revert', { suspended: speedSuspended });
       paint();
     }
     if ((!games.tabs.length && !decision.revertToOne) || Date.now() - speedAttemptAt < speedRetryMs) return;
     speedAttemptAt = Date.now();
-    const target = decision.allowRaise && speedAutoRaise ? 2 : speedRate;
-    if (signalAllPpapi(findPpapiPIDs(), target) > 0 && target !== speedRate) {
-      speedRate = 2;
+    const target = decision.allowRaise && speedAutoRaise ? (speedRestoreRate || speedRemembered) : speedRate;
+    // 周期重推当前档：插件重生、页内刷新的漂移由这一拍收敛。
+    if (pushSpeed(target) > 0 && target !== speedRate) {
+      speedRate = target;
       speedAutoRaise = false;
-      hostEvent('speed-restore', { rate: 2 });
+      speedRestoreRate = 0;
+      hostEvent(target === speedRemembered ? 'speed-restore' : 'speed-rate', { rate: target });
       paint();
     }
   }
   // 手动切档：降档始终允许，升档须等所有当前游戏页通过验证。
-  // 确认信号送达后才更新档位与记忆值；手动选择后不再自动恢复记忆档。
-  async function setSpeed(rate: 1 | 2) {
-    if (!speedEnabled || speedRate === rate) return;
-    const decision = currentSpeedDecision();
-    if (rate === 2 && !decision.allowRaise) { report(msg('ui.speed_resource_mismatch_reverted'), 'error'); paint(); return; }
-    const pids = findPpapiPIDs();
-    if (!pids.length) { report(msg('ui.speed_plugin_not_running')); paint(); return; }
-    if (signalAllPpapi(pids, rate) === 0) { report(msg('ui.speed_plugin_not_running')); paint(); return; }
-    speedRate = rate;
+  // 任何手动选择都取消自动恢复（含回退停在 1× 后再选 1× 的取消场景），确认
+  // 信号送达后才更新档位与记忆值。
+  async function setSpeed(rate: number) {
+    if (!speedEnabled) return;
+    const chosen = Math.max(1, Math.min(10, Math.round(Number(rate) || 1)));
     speedAutoRaise = false;
+    speedRestoreRate = 0;
+    if (speedRate === chosen) { paint(); return; }
+    const decision = currentSpeedDecision();
+    if (chosen > 1 && !decision.allowRaise) { report(msg('ui.speed_resource_mismatch_reverted'), 'error'); paint(); return; }
+    if (pushSpeed(chosen) === 0) { report(msg('ui.speed_plugin_not_running')); paint(); return; }
+    speedRate = chosen;
     speedAttemptAt = Date.now();
-    hostEvent('speed-rate', { rate });
-    try { await core('host.speedRate', { rate }); } catch { /* 偏好保存失败不影响本次切换 */ }
+    hostEvent('speed-rate', { rate: chosen });
+    try { await core('host.speedRate', { rate: chosen }); } catch { /* 偏好保存失败不影响本次切换 */ }
     paint();
   }
   const activityAssist = createActivityAssist(project, localizationEnabled, assistsEnabled);
@@ -361,7 +382,7 @@ async function start() {
     const saveVisible=!!pendingSave&&pendingSave.expires>Date.now()&&pendingSave.tabId===games.activeId&&!loginVisible;
     games.top=42+(saveVisible?44:0);
     games.hidden = loginVisible; for(const page of loginPages.values())page.hide(page!==foreground); login?.hide(login!==foreground); games.layout();
-    const state = { notice, noticeKind, stopping: shutting, exitState, muted: games.muted, speed: { available: speedEnabled, rate: speedRate }, preferences: { language: prefs.language, theme: prefs.theme, titleBarColor: prefs.titleBarColor }, loginActive:!!login?.operation, savePrompt: saveVisible ? {username:pendingSave.username,update:pendingSave.update,failed:!!pendingSave.saveFailed} : null, tabs: visibleTabs(), failedPage: games.active && ['failed','crashed'].includes(games.active.state) && !loginVisible ? {id:games.active.id,state:games.active.state,region:games.active.region} : null, refresh: refreshState(), recovery: operation?.stage === 'confirming' && games.activeId === operation.candidateId ? { candidateId: operation.candidateId } : null, tasks: Array.from(tasks.values()).filter(t => !['cancelled', 'closed'].includes(t.status)).map(t => ({ ...t, active: loginVisible ? operation?.profileId === t.profileId : games.activeId === t.tabId })) };
+    const state = { notice, noticeKind, stopping: shutting, exitState, muted: games.muted, speed: { available: speedEnabled, rate: speedRate, allowRaise: speedEnabled && currentSpeedDecision().allowRaise }, preferences: { language: prefs.language, theme: prefs.theme, titleBarColor: prefs.titleBarColor }, loginActive:!!login?.operation, savePrompt: saveVisible ? {username:pendingSave.username,update:pendingSave.update,failed:!!pendingSave.saveFailed} : null, tabs: visibleTabs(), failedPage: games.active && ['failed','crashed'].includes(games.active.state) && !loginVisible ? {id:games.active.id,state:games.active.state,region:games.active.region} : null, refresh: refreshState(), recovery: operation?.stage === 'confirming' && games.activeId === operation.candidateId ? { candidateId: operation.candidateId } : null, tasks: Array.from(tasks.values()).filter(t => !['cancelled', 'closed'].includes(t.status)).map(t => ({ ...t, active: loginVisible ? operation?.profileId === t.profileId : games.activeId === t.tabId })) };
     const serialized = JSON.stringify(state);
     if (serialized === lastToolbarState) return;
     win.webContents.send('prototype:state', state);
@@ -643,7 +664,16 @@ async function start() {
     }
     if (input.type === 'center' || input.type === 'settings') { await openCenter(input.type === 'settings'); return; }
     if (input.type === 'mute') { games.muted = !games.muted; games.syncAudio(); report(games.muted?msg('ui.muted'):msg('ui.unmuted'),'info'); return; }
-    if (input.type === 'speed') { await setSpeed(speedRate === 2 ? 1 : 2); return; }
+    if (input.type === 'speed') {
+      // 原生弹出菜单：系统级窗口，永远在游戏画面之上（DOM 菜单会被 BrowserView 遮挡）。
+      const decision = currentSpeedDecision();
+      Menu.buildFromTemplate(Array.from({ length: 10 }, (_, index) => {
+        const rate = index + 1;
+        return { label: `${rate}×`, type: 'radio' as const, checked: speedRate === rate,
+          enabled: rate === 1 || decision.allowRaise, click: () => { void setSpeed(rate); } };
+      })).popup({ window: win });
+      return;
+    }
     if (input.type === 'complete' && login.operation) { if(input.id!==login.operation.candidateId||games.activeId!==input.id)return; if(login.completeRecovery(input.id)){clearNotice();if(executingRecovery&&!recoveryAwait){executing=undefined;executingRecovery=false;void executeNext();}paint();}return; }
     if (input.type === 'refresh') {
       const page=foregroundLogin();if(page?.operation?.stage==='login'){page.refresh();return;}

@@ -49,6 +49,18 @@ test('关闭最后一个游戏页后应回到 1 倍', () => {
     { allowRaise: false, revertToOne: true });
 });
 
+test('3–10 倍遇未验证页同样回退到 1 倍', () => {
+  // 多档扩展后的回退边界：任何大于 1 倍的档位都受未验证页约束，不限于 2 倍。
+  assert.deepEqual(speedPolicy({ activePages: ['verified', 'pending'], suspended: false, rate: 5 }),
+    { allowRaise: false, revertToOne: true });
+  assert.deepEqual(speedPolicy({ activePages: ['verified', 'pending'], suspended: false, rate: 10 }),
+    { allowRaise: false, revertToOne: true });
+  assert.deepEqual(speedPolicy({ activePages: [], suspended: false, rate: 5 }),
+    { allowRaise: false, revertToOne: true });
+  assert.deepEqual(speedPolicy({ activePages: ['verified'], suspended: false, rate: 5 }),
+    { allowRaise: true, revertToOne: false });
+});
+
 test('未验证页触发回退后，继续向晚出现的插件补发 1 倍', () => {
   const filename = path.join(root, 'src/prototype/host/main.ts');
   const source = ts.createSourceFile(filename, fs.readFileSync(filename, 'utf8'), ts.ScriptTarget.Latest, true);
@@ -59,12 +71,11 @@ test('未验证页触发回退后，继续向晚出现的插件补发 1 倍', ()
   let pids = [];
   const context = vm.createContext({
     Date: { now: () => now }, games: { tabs: [{}] }, shutting: false, speedEnabled: true, speedRate: 2,
-    speedAutoRaise: false, speedSuspended: false, speedAttemptAt: now, speedRetryMs: 2000,
+    speedAutoRaise: false, speedRestoreRate: 0, speedSuspended: false, speedRemembered: 2, speedAttemptAt: now, speedRetryMs: 2000,
     currentSpeedDecision: () => speedPolicy({ activePages: ['pending'], suspended: false, rate: context.speedRate }),
-    findPpapiPIDs: () => pids,
-    signalAllPpapi: (targets, rate) => {
-      signals.push(...targets.map(pid => [pid, rate]));
-      return targets.length;
+    pushSpeed: rate => {
+      signals.push(...pids.map(pid => [pid, rate]));
+      return pids.length;
     },
     hostEvent() {}, paint() {},
   });
