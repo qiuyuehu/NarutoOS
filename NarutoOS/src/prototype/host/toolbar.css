@@ -21,6 +21,7 @@
 #notice:disabled { opacity:1; cursor:default; }
 .tools { gap:4px; }
 .tools .small { font-size:11px; padding-left:7px; padding-right:7px; }
+.speed-rate { font-size:12px; font-weight:600; letter-spacing:.02em; font-variant-numeric:tabular-nums; }
 #notice { min-width:0; flex-shrink:1; }
 #tabs { min-width:60px; }
 #save-text { flex:1; }

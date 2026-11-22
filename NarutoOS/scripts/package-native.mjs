@@ -32,6 +32,9 @@ await fs.cp('assets/activity-assist-9.40Build300',path.join(application,'assets/
 await fs.cp('assets/assists',path.join(application,'assets/assists'),{recursive:true});
 for(const version of ['34','31'])await fs.cp(`runtime/flash-${version}`,path.join(application,`runtime/flash-${version}`),{recursive:true});
 await copy('tests/fixtures/native-core/quality.swf',path.join(application,'assets/checks/quality.swf'));
+// 游戏变速：挂钩动态库与两区移动补丁随包分发；缺失时核心跳过注入、功能按 1 倍降级。
+await fs.cp('assets/game-speed',path.join(application,'assets/game-speed'),{recursive:true});
+await fs.cp('assets/assists',path.join(application,'assets/assists'),{recursive:true});
 await copy('assets/app-icon.png',path.join(application,'assets/app-icon.png'));
 const gamePNG=path.join(directory,'game-icon.png');run('/usr/bin/xcrun',['swift','native/PrepareGameIcon.swift',path.resolve('assets/app-icon.png'),gamePNG]);
 await copy(gamePNG,path.join(application,'assets/game-icon.png'));

@@ -5,8 +5,10 @@ import { decodeGameSwf } from './game-swf';
 import { prefetchCfgx, registerCfgxWebRequestOverrides, resourceKey, type CfgxResource } from './localization-cfgx-webrequest';
 
 export const BATTLE_PATCH_ID = 'naruto-load-manager-gc-v2';
-type BridgeState = { contents: Electron.WebContents; attached: boolean; overrides: number; contexts: Set<number>; busy: boolean; eligible: boolean };
+type BridgeState = { contents: Electron.WebContents; attached: boolean; overrides: number; contexts: Set<number>; busy: boolean; eligible: boolean;
+  trackedStatus: ResourceOverrideStatus };
 export type ResourceOverride = { url: string; bytes: Buffer; contentType: string; baseSha256?: string };
+export type ResourceOverrideStatus = 'pending' | 'verified' | 'mismatch';
 type ResourceBridgeOptions = { patchId?: string; observeOnly?: boolean; observeTiming?: boolean; observeNinjaRequests?: boolean; entryBaseSha256?: string; resourceOverrides?: ResourceOverride[]; cfgxOverrides?: CfgxResource[] };
 
 // Replaces selected game-resource responses while Chromium handles every other
@@ -65,17 +67,35 @@ export class BattleMemoryBridge {
     const event = { time: new Date().toISOString(), kind, patchId: this.options.patchId || BATTLE_PATCH_ID, swfSha256: this.digest, ...data };
     fs.writeFileSync(path.join(this.output, `${Date.now()}-${++this.sequence}-${kind}.json`), JSON.stringify(event, null, 2), { mode: 0o600 });
   }
-  async attach(contents: Electron.WebContents) {
+  async attach(contents: Electron.WebContents, trackedOverride?: ResourceOverride) {
     if (this.states.has(contents.id)) return;
     // Electron 11 has no renderer for a fresh BrowserView yet. Runtime.enable
     // can otherwise wait forever while the game navigation waits for this hook.
     if (!contents.getURL()) await contents.loadURL('about:blank');
-    const state: BridgeState = { contents, attached: false, overrides: 0, contexts: new Set(), busy: false, eligible: false };
+    const state: BridgeState = { contents, attached: false, overrides: 0, contexts: new Set(), busy: false, eligible: false, trackedStatus: 'pending' };
+    const candidate = trackedOverride && this.resource(trackedOverride.url);
+    const tracked = trackedOverride && candidate?.baseSha256 && candidate.baseSha256 === trackedOverride.baseSha256
+      && candidate.bytes.equals(trackedOverride.bytes) ? candidate : undefined;
+    const trackedURL = tracked && resourceKey(tracked.url);
+    const trackedRequests = new Set<string>();
+    let generation = 0;
+    let documentCommitted = false;
     const debug = contents.debugger;
     debug.attach('1.3');
     this.states.set(contents.id, state);
     const timing = new Map<string, { started: number; cached: boolean }>();
     const message = (_event: Electron.Event, method: string, params: any) => {
+      if (trackedURL) {
+        if (method === 'Page.frameNavigated' && !params.frame.parentId) documentCommitted = true;
+        if (method === 'Network.requestWillBeSent') {
+          trackedRequests.delete(params.requestId);
+          if (documentCommitted && params.request.method === 'GET' && params.request.url.startsWith(trackedURL)
+            && this.resource(params.request.url) === tracked) {
+            trackedRequests.add(params.requestId);
+          }
+        }
+        if (method === 'Network.loadingFailed' || method === 'Network.loadingFinished') trackedRequests.delete(params.requestId);
+      }
       if (this.options.observeTiming) {
         if (this.options.observeNinjaRequests && method === 'Network.requestWillBeSent') {
           try {
@@ -100,10 +120,15 @@ export class BattleMemoryBridge {
       if (method === 'Runtime.executionContextsCleared') state.contexts.clear();
       if (method !== 'Fetch.requestPaused') return;
       void (async () => {
-        const { requestId, request } = params;
+        const { requestId, request, networkId } = params;
         const started = process.hrtime.bigint();
+        const resource = this.resource(request.url);
+        const requestGeneration = generation;
+        // Use the request's start as well as its completion. An old response
+        // can arrive after a reload has already started.
+        const track = tracked && resource === tracked && trackedRequests.delete(networkId);
+        let outcome: ResourceOverrideStatus = 'pending';
         try {
-          const resource = this.resource(request.url);
           if (request.method !== 'GET' || !resource) {
             await debug.sendCommand('Fetch.continueRequest', { requestId }); return;
           }
@@ -114,7 +139,7 @@ export class BattleMemoryBridge {
               await debug.sendCommand('Fetch.continueRequest', { requestId }).catch(() => {}); return;
             }
             const verified = await this.verifyOriginal(debug, requestId, resource, contents.id);
-            if (!verified) return;
+            if (!verified) { outcome = 'mismatch'; return; }
           }
           await debug.sendCommand('Fetch.fulfillRequest', { requestId, responseCode: 200,
             responseHeaders: [
@@ -122,16 +147,23 @@ export class BattleMemoryBridge {
               { name: 'Content-Length', value: String(resource.bytes.length) },
               { name: 'Cache-Control', value: 'no-store' }
             ], body: resource.bytes.toString('base64') });
+          outcome = 'verified';
           state.overrides++;
           this.save('override', { webContentsId: contents.id, overrides: state.overrides,
             resourceURL: new URL(resource.url).origin + new URL(resource.url).pathname,
             resourceSha256: createHash('sha256').update(resource.bytes).digest('hex'),
             fulfillMilliseconds: Number(process.hrtime.bigint() - started) / 1e6 });
-          this.changed();
         } catch {
           this.save('override-error', { webContentsId: contents.id });
           // A failed override must not leave the original request paused.
           await debug.sendCommand('Fetch.continueRequest', { requestId }).catch(() => {});
+        } finally {
+          if (track && state.attached && generation === requestGeneration && state.trackedStatus !== 'mismatch') {
+            state.trackedStatus = outcome;
+            this.changed();
+          } else if (outcome === 'verified') {
+            this.changed();
+          }
         }
       })();
     };
@@ -141,14 +173,22 @@ export class BattleMemoryBridge {
       this.save('detached', { webContentsId: contents.id }); this.changed();
     });
     contents.on('did-start-navigation', (_event, _url, inPlace, mainFrame) => {
-      if (mainFrame && !inPlace) { state.eligible = false; state.overrides = 0; this.changed(); }
+      if (!mainFrame || inPlace) return;
+      generation++;
+      documentCommitted = false;
+      trackedRequests.clear();
+      state.trackedStatus = 'pending';
+      state.eligible = false;
+      state.overrides = 0;
+      this.changed();
     });
     contents.once('destroyed', () => {
       debug.removeListener('message', message); this.states.delete(contents.id); this.changed();
     });
     try {
       await debug.sendCommand('Runtime.enable');
-      if (this.options.observeTiming) {
+      if (tracked) await debug.sendCommand('Page.enable');
+      if (tracked || this.options.observeTiming) {
         await debug.sendCommand('Network.enable');
         if (this.options.observeNinjaRequests) await debug.sendCommand('Network.setCacheDisabled', { cacheDisabled: true });
       }
@@ -175,6 +215,10 @@ export class BattleMemoryBridge {
     } catch (error) {
       debug.detach(); this.states.delete(contents.id); throw error;
     }
+  }
+  trackedOverrideStatus(contents: Electron.WebContents): ResourceOverrideStatus {
+    const state = this.states.get(contents.id);
+    return state?.attached ? state.trackedStatus : 'pending';
   }
   // Sends a small command to a page this bridge is already attached to. Used by
   // the host to tell an assist script that its game tab lost focus.

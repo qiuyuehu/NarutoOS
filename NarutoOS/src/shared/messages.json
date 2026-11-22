@@ -2144,6 +2144,36 @@
     "en": "Chakra practice batch",
     "pt-BR": "Prática de chakra em lote"
   },
+  "ui.game_speed": {
+    "zh-CN": "游戏变速",
+    "en": "Game speed",
+    "pt-BR": "Velocidade do jogo"
+  },
+  "ui.game_speed_reenter_hint": {
+    "zh-CN": "国服/巴西 · Flash 34 · 完整退出游戏窗口后重新进入生效",
+    "en": "CN & BR servers · Flash 34 · Takes effect after closing the game window and entering again",
+    "pt-BR": "Servidores CN e BR · Flash 34 · Passa a valer após fechar a janela do jogo e entrar novamente"
+  },
+  "ui.game_speed_saved_reenter_hint": {
+    "zh-CN": "已保存，完整退出游戏窗口后重新进入生效",
+    "en": "Saved. Takes effect after closing the game window and entering again",
+    "pt-BR": "Salvo. Passa a valer após fechar a janela do jogo e entrar novamente"
+  },
+  "ui.speed_rate_toggle": {
+    "zh-CN": "切换游戏倍率（当前 {p0}×）",
+    "en": "Toggle game rate (now {p0}×)",
+    "pt-BR": "Alternar velocidade do jogo (agora {p0}×)"
+  },
+  "ui.speed_plugin_not_running": {
+    "zh-CN": "Flash 插件尚未运行，进入游戏后再试",
+    "en": "The Flash plugin is not running yet; enter the game first",
+    "pt-BR": "O plug-in Flash ainda não está em execução; entre no jogo primeiro"
+  },
+  "ui.speed_resource_mismatch_reverted": {
+    "zh-CN": "游戏资源版本不匹配，本次按 1 倍运行",
+    "en": "Game resource version mismatch; running at 1× this time",
+    "pt-BR": "Versão de recurso do jogo incompatível; executando em 1× desta vez"
+  },
   "update.menu_check": {
     "zh-CN": "检查更新…",
     "en": "Check for Updates…",

@@ -135,6 +135,21 @@ import Security
         if role=="host" {
             process.executableURL=URL(fileURLWithPath:electron)
             process.arguments=env["NARUTO_C_PACKAGED"]=="1" ? [] : [project+"/dist/prototype/host.js"]
+            // 游戏变速：开关开启且使用 Flash 34 时，向宿主进程树注入时间挂钩（仅 ppapi 子进程激活）。
+            if (preferences["gameSpeed"] as? Bool)==true,(preferences["flash"] as? String ?? "34")=="34" {
+                let dylib=project+"/assets/game-speed/libgame-speed.dylib"
+                if FileManager.default.fileExists(atPath:dylib) {
+                    childEnv["DYLD_INSERT_LIBRARIES"]=dylib
+                    childEnv["NARUTO_GSCALE_MODE"]="sites"
+                    childEnv["NARUTO_GSCALE_SITES"]="PepperFlashPlayer@1a7143,PepperFlashPlayer@1a70f5"
+                    childEnv["NARUTO_GSCALE_RATE"]="2"
+                    // 记忆倍率不直接作为启动档：核心恒以 1 倍启动，宿主在确认移动补丁
+                    // 资源就绪后发信号恢复记忆档位，资源缺失或失配的会话保持 1 倍。
+                    childEnv["NARUTO_GSCALE_START"]="1"
+                    childEnv["NARUTO_SIGNAL_SWITCH"]="1"
+                    childEnv["NARUTO_C_SPEED"]="1"
+                }
+            }
         } else {
             process.executableURL=URL(fileURLWithPath:env["NARUTO_C_CENTER_EXECUTABLE"] ?? project+"/dist/prototype/native/center")
             process.arguments=env["NARUTO_C_PACKAGED"]=="1" && env["NARUTO_C_FIXTURE"]=="1" ? ["--fixture-root",root] : []
@@ -251,6 +266,10 @@ import Security
                 try validatePreference(key,value)
                 let old=preferences;preferences[key]=value;revision+=1
                 do {try save()} catch {preferences=old;revision-=1;throw error};output=snapshot()
+            case "host.speedRate" where role=="host":
+                guard let rate=payload["rate"] as? Int,[1,2].contains(rate) else {throw ProtoError.failure(msg("ui.invalid_switch_value"))}
+                let oldRate=preferences;preferences["gameSpeedRate"]=rate
+                do {try save()} catch {preferences=oldRate;throw error};output=snapshot()
             case "catalog.importLocal" where role=="center":
                 guard !reconciling,let requestID=payload["requestId"] as? String,UUID(uuidString:requestID) != nil else{throw ProtoError.failure(msg("ui.invalid_import_request_or_reconciliation_state"))}
                 if let receipt=mutations[requestID] {guard receipt["command"] as? String==command else{throw ProtoError.failure(msg("ui.import_request_id_conflict"))};output=receipt;break}

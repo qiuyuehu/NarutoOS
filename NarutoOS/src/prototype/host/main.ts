@@ -14,6 +14,8 @@ import { createGameLocalization } from '../../main/localization-experiment';
 import { createActivityAssist } from '../../main/activity-assist';
 import { createAssistManager } from '../../main/assist-manager';
 import { ResourceProbe } from '../../main/resource-probe';
+import { loadSpeedPatches, speedPolicy, SPEED_PATCH_ID } from '../../main/game-speed';
+import { BattleMemoryBridge } from '../../main/battle-memory-experiment';
 import { newTab } from '../../main/config';
 import { validCnEntry } from '../../shared/model';
 import { credentialOrigin, savePromptDestination } from '../../main/policy';
@@ -157,11 +159,100 @@ async function start() {
   const sessions = new LoginSessions((action,value) => fixture && action==='write' && fs.existsSync(path.join(root,'fixture-fail-session-write')) ? Promise.reject(new Error(msg('ui.synthetic_save_failure'))) : sessionTransport(action,value), () => report(msg('ui.session_save_failed_keep_the_window_open')));
   const assistsEnabled = startupPrefs.assistsEnabled === true;
   const localizationEnabled = startupPrefs.localization === true;
+  // 游戏变速：核心在宿主生成时注入了时间挂钩（NARUTO_C_SPEED=1 为注入凭据）。
+  // 会话从 1 倍起步。所有打开的游戏页都须确认本次加载已替换对应补丁。
+  const speedEnabled = startupPrefs.gameSpeed === true && process.env.NARUTO_C_SPEED === '1';
+  const speedPatches = speedEnabled ? loadSpeedPatches(project) : [];
+  if (speedEnabled && !speedPatches.length) hostEvent('speed-patches-unavailable');
+  const speedOverrides = new Map(speedPatches.map(patch => [patch.region, patch.override] as const));
+  const speedRemembered: 1 | 2 = startupPrefs.gameSpeedRate === 2 ? 2 : 1;
+  let speedRate: 1 | 2 = 1;
+  let speedAutoRaise = speedRemembered === 2;
+  let speedSuspended = false;
+  let speedMismatchReported = false;
+  const speedExtras = speedPatches.map(patch => patch.override);
+  function currentSpeedDecision() {
+    const activePages = games.tabs.filter(tab => !tab.view.webContents.isDestroyed()).map(tab => {
+      const status = gameBridge?.trackedOverrideStatus(tab.view.webContents) ?? 'pending';
+      return tab.state === 'ready' || status === 'mismatch' ? status : 'pending';
+    });
+    if (activePages.includes('mismatch')) speedSuspended = true;
+    return speedPolicy({ activePages, suspended: speedSuspended, rate: speedRate });
+  }
+  function findPpapiPIDs(): number[] {
+    try {
+      const out = execFileSync('ps', ['-axo', 'pid=,ppid=,etime=,command='], { encoding: 'utf8' });
+      const pids: number[] = [];
+      for (const line of out.split('\n')) {
+        const columns = line.trim().split(/\s+/);
+        // Leave newly spawned plugins time to install their signal handlers.
+        if (columns[1] === String(process.pid) && columns[2] !== '00:00' && line.includes('--type=ppapi')) pids.push(Number(columns[0]));
+      }
+      return pids;
+    } catch {}
+    return [];
+  }
+  // 定向信号：SIGUSR1=设为 2 倍，SIGUSR2=设回 1 倍。信号幂等，插件状态无需回读，
+  // 也因此对插件进程沙箱免疫；全部插件进程一起对齐（多开共享同一倍率）。
+  const speedRetryMs = 2000;
+  let speedAttemptAt = 0;
+  function signalAllPpapi(pids: number[], rate: 1 | 2): number {
+    let delivered = 0;
+    for (const pid of pids) { try { process.kill(pid, rate === 2 ? 'SIGUSR1' : 'SIGUSR2'); delivered++; } catch {} }
+    return delivered;
+  }
+  // 插件可能晚于页面出现，也可能重启。周期补发当前允许的档位。
+  function applySpeed() {
+    if (!speedEnabled || !games || shutting) return;
+    const decision = currentSpeedDecision();
+    if (decision.revertToOne) {
+      speedRate = 1;
+      speedAutoRaise = false;
+      speedAttemptAt = 0;
+      if (speedSuspended && !speedMismatchReported) { speedMismatchReported = true; report(msg('ui.speed_resource_mismatch_reverted'), 'error'); }
+      hostEvent('speed-revert', { suspended: speedSuspended });
+      paint();
+    }
+    if ((!games.tabs.length && !decision.revertToOne) || Date.now() - speedAttemptAt < speedRetryMs) return;
+    speedAttemptAt = Date.now();
+    const target = decision.allowRaise && speedAutoRaise ? 2 : speedRate;
+    if (signalAllPpapi(findPpapiPIDs(), target) > 0 && target !== speedRate) {
+      speedRate = 2;
+      speedAutoRaise = false;
+      hostEvent('speed-restore', { rate: 2 });
+      paint();
+    }
+  }
+  // 手动切档：降档始终允许，升档须等所有当前游戏页通过验证。
+  // 确认信号送达后才更新档位与记忆值；手动选择后不再自动恢复记忆档。
+  async function setSpeed(rate: 1 | 2) {
+    if (!speedEnabled || speedRate === rate) return;
+    const decision = currentSpeedDecision();
+    if (rate === 2 && !decision.allowRaise) { report(msg('ui.speed_resource_mismatch_reverted'), 'error'); paint(); return; }
+    const pids = findPpapiPIDs();
+    if (!pids.length) { report(msg('ui.speed_plugin_not_running')); paint(); return; }
+    if (signalAllPpapi(pids, rate) === 0) { report(msg('ui.speed_plugin_not_running')); paint(); return; }
+    speedRate = rate;
+    speedAutoRaise = false;
+    speedAttemptAt = Date.now();
+    hostEvent('speed-rate', { rate });
+    try { await core('host.speedRate', { rate }); } catch { /* 偏好保存失败不影响本次切换 */ }
+    paint();
+  }
   const activityAssist = createActivityAssist(project, localizationEnabled, assistsEnabled);
+  // 只开汉化时活动模块也返回纯汉化资源，必须原样传递给汉化桥（回归修复）。
+  const activityResource = activityAssist ? activityAssist.resource : undefined;
+  const assistExtras = [...(activityResource ? [activityResource] : []), ...speedExtras];
   const assistManager = createAssistManager(project, app.isPackaged, assistsEnabled,
-    path.join(app.getPath('userData'), 'assists'), () => {}, activityAssist && assistsEnabled ? [activityAssist.resource] : []);
-  const localization = createGameLocalization(project, localizationEnabled, () => {},
-    assistManager ? assistManager.resources : (activityAssist ? [activityAssist.resource] : []));
+    path.join(app.getPath('userData'), 'assists'), applySpeed, assistExtras);
+  const localization = createGameLocalization(project, localizationEnabled, applySpeed,
+    assistManager ? assistManager.resources : assistExtras);
+  // 无其它桥时（汉化与辅助都关），变速补丁走独立资源桥。
+  const speedBridge = speedPatches.length && !localization && !assistManager?.bridge
+    ? new BattleMemoryBridge(speedPatches[0].override.url, speedPatches[0].override.bytes, path.join(app.getPath('userData'), 'assists'),
+        applySpeed,
+        { patchId: SPEED_PATCH_ID, entryBaseSha256: speedPatches[0].override.baseSha256, resourceOverrides: speedPatches.slice(1).map(patch => patch.override) })
+    : undefined;
   let noticeTimer: ReturnType<typeof setTimeout> | undefined;
   let noticeKind: 'info' | 'error' = 'info', noticeScope = '';
   function clearNotice(scope?: string) {
@@ -226,6 +317,7 @@ async function start() {
       if (tab?.state === 'ready') clearNotice(JSON.stringify(['startup',task.profileId,task.generation,task.ownerOperationId??task.operationId,tab.id]));
       if (tab) { task.tabId = tab.id; if (!['cancelled', 'closed'].includes(task.status)) task.status = tab.state === 'ready' ? 'ready' : ['failed', 'crashed'].includes(tab.state) ? 'failed' : 'loading'; }
     }
+    applySpeed();
     paint();
   }
   function foregroundLogin() {
@@ -269,7 +361,7 @@ async function start() {
     const saveVisible=!!pendingSave&&pendingSave.expires>Date.now()&&pendingSave.tabId===games.activeId&&!loginVisible;
     games.top=42+(saveVisible?44:0);
     games.hidden = loginVisible; for(const page of loginPages.values())page.hide(page!==foreground); login?.hide(login!==foreground); games.layout();
-    const state = { notice, noticeKind, stopping: shutting, exitState, muted: games.muted, preferences: { language: prefs.language, theme: prefs.theme, titleBarColor: prefs.titleBarColor }, loginActive:!!login?.operation, savePrompt: saveVisible ? {username:pendingSave.username,update:pendingSave.update,failed:!!pendingSave.saveFailed} : null, tabs: visibleTabs(), failedPage: games.active && ['failed','crashed'].includes(games.active.state) && !loginVisible ? {id:games.active.id,state:games.active.state,region:games.active.region} : null, refresh: refreshState(), recovery: operation?.stage === 'confirming' && games.activeId === operation.candidateId ? { candidateId: operation.candidateId } : null, tasks: Array.from(tasks.values()).filter(t => !['cancelled', 'closed'].includes(t.status)).map(t => ({ ...t, active: loginVisible ? operation?.profileId === t.profileId : games.activeId === t.tabId })) };
+    const state = { notice, noticeKind, stopping: shutting, exitState, muted: games.muted, speed: { available: speedEnabled, rate: speedRate }, preferences: { language: prefs.language, theme: prefs.theme, titleBarColor: prefs.titleBarColor }, loginActive:!!login?.operation, savePrompt: saveVisible ? {username:pendingSave.username,update:pendingSave.update,failed:!!pendingSave.saveFailed} : null, tabs: visibleTabs(), failedPage: games.active && ['failed','crashed'].includes(games.active.state) && !loginVisible ? {id:games.active.id,state:games.active.state,region:games.active.region} : null, refresh: refreshState(), recovery: operation?.stage === 'confirming' && games.activeId === operation.candidateId ? { candidateId: operation.candidateId } : null, tasks: Array.from(tasks.values()).filter(t => !['cancelled', 'closed'].includes(t.status)).map(t => ({ ...t, active: loginVisible ? operation?.profileId === t.profileId : games.activeId === t.tabId })) };
     const serialized = JSON.stringify(state);
     if (serialized === lastToolbarState) return;
     win.webContents.send('prototype:state', state);
@@ -278,12 +370,19 @@ async function start() {
   // 国服主线：游戏会话在应用内部直连；系统代理仍留给其他应用使用。
   const directGameSession = true;
   const resourceProbe = process.env.NARUTO_RESOURCE_PROBE === '1' ? new ResourceProbe(path.join(root, 'host', 'resource-probe')) : undefined;
+  const gameBridge = resourceProbe ? undefined : localization ?? assistManager?.bridge ?? speedBridge;
   const prepareGame = resourceProbe ? (wc: Electron.WebContents) => resourceProbe.attach(wc)
-    : localization ? (wc: Electron.WebContents) => localization.attach(wc)
-    : assistManager && assistManager.bridge ? (wc: Electron.WebContents) => assistManager.attach(wc)
+    : gameBridge ? (wc: Electron.WebContents) => {
+      const tab = games.fromSender(wc.id);
+      return gameBridge.attach(wc, tab?.region && speedOverrides.get(tab.region));
+    }
     : activityAssist ? (wc: Electron.WebContents) => activityAssist.attach(wc)
     : undefined;
   games = new GameSessions(win, runtimeChanged, report, undefined, directGameSession, sessions, () => {}, prepareGame);
+  if (speedEnabled) {
+    games.lifecycle.on('opened', applySpeed);
+    setInterval(applySpeed, speedRetryMs).unref();
+  }
   navigation = new Navigation(games);
   games.muted = prefs.muted; games.syncAudio();
   games.cnEntry = validCnEntry(prefs.cnEntry) ? prefs.cnEntry : 'qq';
@@ -419,7 +518,7 @@ async function start() {
       }
       runtimeChanged(); persist();
       pollPhase = 'rpc';
-      const response = await core('host.poll', { pid: process.pid, instance, windowShown: win.isVisible(), runtime:{preferences:startupPrefs,localizationActive:!!localization,assistsEnabled,assistsActive:assistsEnabled,assists:assistManager ? assistManager.status() : null,flash:flashRuntimeVersion(),loginOperation:login.operation||null,slots:[...new Set([...knownSlots,...(fs.existsSync(path.join(root,'host','Partitions'))?fs.readdirSync(path.join(root,'host','Partitions'),{withFileTypes:true}):[]).filter(d=>d.isDirectory()&&/^naruto-(br|cn)-[1-9]\d*$/.test(d.name)).map(d=>'persist:'+d.name)])]},deletionResults, tasks: Array.from(tasks.values()).map(t => ({ operationId: t.operationId, profileId: t.profileId, status: t.status })) });
+      const response = await core('host.poll', { pid: process.pid, instance, windowShown: win.isVisible(), runtime:{preferences:startupPrefs,localizationActive:!!localization,assistsEnabled,assistsActive:assistsEnabled,speedActive:speedEnabled,assists:assistManager ? assistManager.status() : null,flash:flashRuntimeVersion(),loginOperation:login.operation||null,slots:[...new Set([...knownSlots,...(fs.existsSync(path.join(root,'host','Partitions'))?fs.readdirSync(path.join(root,'host','Partitions'),{withFileTypes:true}):[]).filter(d=>d.isDirectory()&&/^naruto-(br|cn)-[1-9]\d*$/.test(d.name)).map(d=>'persist:'+d.name)])]},deletionResults, tasks: Array.from(tasks.values()).map(t => ({ operationId: t.operationId, profileId: t.profileId, status: t.status })) });
       pollPhase = 'apply';
       if(shutting)return;
       failures = 0;clearNotice('connection');
@@ -506,7 +605,7 @@ async function start() {
     if(everHadTask&&!executing&&!queue.some(t=>t.status==='queued')&&!games.tabs.length&&!login.busy&&!loginPages.size)void shutdown();
   }
   ipcMain.handle('prototype:command', async (event, input) => {
-    if (event.sender !== win.webContents || !['center','settings','focus','cancel','refresh','mute','complete','cancel-recovery','retry','save','dismiss','retry-exit','notice-details','fullscreen-exit'].includes(input?.type)) return;
+    if (event.sender !== win.webContents || !['center','settings','focus','cancel','refresh','mute','speed','complete','cancel-recovery','retry','save','dismiss','retry-exit','notice-details','fullscreen-exit'].includes(input?.type)) return;
     const ownPage = loginPages.get(input.id);
     if(ownPage && !shutting && (input.type==='focus'||input.type==='cancel')){
       if(input.type==='focus'){navigation.selectLogin(input.id);ownPage.focus();paint();}
@@ -544,6 +643,7 @@ async function start() {
     }
     if (input.type === 'center' || input.type === 'settings') { await openCenter(input.type === 'settings'); return; }
     if (input.type === 'mute') { games.muted = !games.muted; games.syncAudio(); report(games.muted?msg('ui.muted'):msg('ui.unmuted'),'info'); return; }
+    if (input.type === 'speed') { await setSpeed(speedRate === 2 ? 1 : 2); return; }
     if (input.type === 'complete' && login.operation) { if(input.id!==login.operation.candidateId||games.activeId!==input.id)return; if(login.completeRecovery(input.id)){clearNotice();if(executingRecovery&&!recoveryAwait){executing=undefined;executingRecovery=false;void executeNext();}paint();}return; }
     if (input.type === 'refresh') {
       const page=foregroundLogin();if(page?.operation?.stage==='login'){page.refresh();return;}

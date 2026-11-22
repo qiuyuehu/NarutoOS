@@ -45,3 +45,5 @@ NarutoOS/MAPPING.md
 /NarutoOS/docs/GAME-REFRESH*.md
 /NarutoOS/docs/ARCHITECTURE-OVERVIEW.md
 /NarutoOS/docs/LAUNCHER-TEMPLATE.md
+# 游戏变速挂钩为构建产物，由 build-native-prototype.mjs 编译再生
+NarutoOS/assets/game-speed/

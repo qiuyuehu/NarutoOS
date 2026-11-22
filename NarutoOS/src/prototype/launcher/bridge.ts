@@ -23,7 +23,7 @@ function state():AppState {
   const preferences={...snapshot.preferences,region:selectedRegion} as Preferences;
   const profiles=snapshot.profiles;
   const runtime=snapshot?.runtime||{};
-  return {preferences,tabs:[],activeId:null,settingsOpen,prompt:null,recovery:null,refresh:{enabled:false,label:msg('ui.refresh')},flash:{version:snapshot?.hostPID?(runtime.flash||preferences.flash):preferences.flash,available:true},localizationActive:!!runtime.localizationActive,assistsActive:!!runtime.assistsActive,notice,
+  return {preferences,tabs:[],activeId:null,settingsOpen,prompt:null,recovery:null,refresh:{enabled:false,label:msg('ui.refresh')},flash:{version:snapshot?.hostPID?(runtime.flash||preferences.flash):preferences.flash,available:true},localizationActive:!!runtime.localizationActive,assistsActive:!!runtime.assistsActive,speedActive:!!runtime.speedActive,notice,
     profiles,selectedProfileId:[...checked].find(id=>profiles.some((p:any)=>p.id===id&&p.region===selectedRegion))||snapshot.selectedByRegion[selectedRegion]||null,profileDiscovery:snapshot?'ready':'loading',profileError:'',canCreateProfile:snapshot.canCreateProfile,profilePickerOpen,profilePickerIntent:pickerIntent};
 }
 function emit(){if(!snapshot)return;document.documentElement.dataset.centerSettings=String(settingsOpen);for(const fn of listeners)fn(state());paintSelection();}
@@ -85,7 +85,7 @@ async function command(input:Command):Promise<void|boolean>{
     case 'overlay':return;
     case 'open-github':await request('about.open');return;
     case 'check-update':await request('update.check');return;
-    case 'language':case 'quality':case 'localization':case 'assists':case 'theme':case 'cn-entry':await mutate('preferences.patch',{key:input.type==='assists'?'assistsEnabled':input.type==='cn-entry'?'cnEntry':input.type,value:input.value});return;
+    case 'language':case 'quality':case 'localization':case 'assists':case 'game-speed':case 'theme':case 'cn-entry':await mutate('preferences.patch',{key:input.type==='assists'?'assistsEnabled':input.type==='game-speed'?'gameSpeed':input.type==='cn-entry'?'cnEntry':input.type,value:input.value});return;
     case 'flash':await mutate('preferences.patch',{key:'flash',value:input.version});return;
     case 'mute':await mutate('preferences.patch',{key:'muted',value:!snapshot.preferences.muted});return;
     case 'title-color':await mutate('preferences.patch',{key:'titleBarColor',value:input.value});return;

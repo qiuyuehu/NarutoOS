@@ -18,6 +18,15 @@ const targets = [
 for (const [name, files] of targets) {
   execFileSync('/usr/bin/xcrun', ['swiftc', '-target', nativeTarget, '-O', '-module-cache-path', moduleCache, ...files.map(file => `src/prototype/native/${file}`), '-o', `dist/prototype/native/${name}`], { stdio: 'inherit' });
 }
+// 游戏变速挂钩：双架构 dylib，由原生核心在「游戏变速」开启时注入宿主进程树（仅 ppapi 子进程激活）。
+// 编译失败只降级功能（核心注入前会确认文件存在），不阻断构建。
+mkdirSync('assets/game-speed', { recursive: true });
+try {
+  execFileSync('/usr/bin/clang', ['-arch', 'arm64', '-arch', 'x86_64', '-shared', '-O2', '-fPIC',
+    '-o', 'assets/game-speed/libgame-speed.dylib', 'native/game-speed/hook.c', 'native/game-speed/fishhook/fishhook.c']);
+} catch (error) {
+  console.warn(`游戏变速挂钩编译失败，该功能将保持 1 倍：${error instanceof Error ? error.message : String(error)}`);
+}
 await build({ entryPoints: ['src/prototype/host/main.ts'], outfile: 'dist/prototype/host.js', bundle: true, platform: 'node', target: 'node12', external: ['electron'] });
 await build({ entryPoints: ['src/prototype/host/preload.ts'], outfile: 'dist/prototype/host-preload.js', bundle: true, platform: 'node', target: 'node12', external: ['electron'] });
 await build({ entryPoints: ['src/prototype/host/toolbar.ts'], outfile: 'dist/prototype/toolbar.js', bundle: true, platform: 'browser', target: 'chrome87' });

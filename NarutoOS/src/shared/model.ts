@@ -19,7 +19,7 @@ export type Theme = 'system' | 'light' | 'dark';
 export type FlashQuality = 'low' | 'medium' | 'high';
 export interface Preferences {
   language: Language; muted: boolean; flash: '34' | '31'; theme: Theme; titleBarColor: string | null; region: Region;
-  lobbyBackground: string | null; lobbyMotion: boolean; localization: boolean; assistsEnabled: boolean; quality: FlashQuality;
+  lobbyBackground: string | null; lobbyMotion: boolean; localization: boolean; assistsEnabled: boolean; gameSpeed: boolean; gameSpeedRate: 1 | 2; quality: FlashQuality;
   cnEntry: CnEntry;
 }
 export interface Layout {
@@ -39,7 +39,7 @@ export interface AppState {
   tabs: TabInfo[]; activeId: string | null; preferences: Preferences; settingsOpen: boolean;
   prompt: SavePrompt | null; recovery: { originalId: string; candidateId: string } | null;
   refresh: { enabled: boolean; label: string };
-  flash: { version: string; available: boolean }; localizationActive: boolean; assistsActive: boolean; notice: string;
+  flash: { version: string; available: boolean }; localizationActive: boolean; assistsActive: boolean; speedActive: boolean; notice: string;
   profiles: Array<{ id: string; region: Region; name: string; serverNote: string; identityNeedsConfirmation: boolean;
     cleanupStatus: 'deleting' | 'pending' | null; cleanupStage: string; deleteBlockedReason: string }>;
   selectedProfileId: string | null; profileDiscovery: 'idle' | 'loading' | 'ready' | 'failed';
@@ -62,6 +62,7 @@ export type Command =
   | { type: 'lobby-motion'; value: boolean }
   | { type: 'localization'; value: boolean }
   | { type: 'assists'; value: boolean }
+  | { type: 'game-speed'; value: boolean }
   | { type: 'quality'; value: FlashQuality }
   | { type: 'cn-entry'; value: CnEntry }
   | { type: 'overlay'; shown: boolean };

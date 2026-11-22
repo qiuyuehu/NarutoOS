@@ -238,6 +238,9 @@ function render(state: AppState) {
   $('settings-assists').setAttribute('aria-checked', String(state.preferences.assistsEnabled));
   setText($('assists-detail'), state.preferences.assistsEnabled !== state.assistsActive
     ? msg('ui.assist_scripts_saved_reenter_hint') : msg('ui.assist_scripts_reenter_hint'));
+  $('settings-game-speed').setAttribute('aria-checked', String(state.preferences.gameSpeed));
+  setText($('game-speed-detail'), state.preferences.gameSpeed !== state.speedActive
+    ? msg('ui.game_speed_saved_reenter_hint') : msg('ui.game_speed_reenter_hint'));
   $('settings').setAttribute('aria-expanded', String(state.settingsOpen));
   const showSavePrompt = !!state.prompt && !state.settingsOpen;
   $('save-prompt').hidden = !showSavePrompt;
@@ -519,6 +522,9 @@ $('settings-localization').addEventListener('click', () => {
 });
 $('settings-assists').addEventListener('click', () => {
   if (latest) void command({ type: 'assists', value: !latest.preferences.assistsEnabled });
+});
+$('settings-game-speed').addEventListener('click', () => {
+  if (latest) void command({ type: 'game-speed', value: !latest.preferences.gameSpeed });
 });
 
 for (const button of document.querySelectorAll<HTMLButtonElement>('[data-settings-page]')) {

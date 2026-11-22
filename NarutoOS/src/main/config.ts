@@ -7,7 +7,7 @@ import { validTheme, validTitleColor } from '../shared/appearance';
 
 export const newTab = (region: Region = 'br'): SavedTab => ({ id: crypto.randomBytes(12).toString('hex'), name: '', region });
 export function defaultLayout(): Layout {
-  return { version: 1, tabs: [], activeId: null, preferences: { language: 'zh-CN', muted: false, flash: '34', theme: 'system', titleBarColor: null, region: 'br', lobbyBackground: null, lobbyMotion: true, localization: false, assistsEnabled: false, quality: 'high', cnEntry: 'qq' }, bounds: { width: 1280, height: 850 }, maximized: false, fullscreen: false };
+  return { version: 1, tabs: [], activeId: null, preferences: { language: 'zh-CN', muted: false, flash: '34', theme: 'system', titleBarColor: null, region: 'br', lobbyBackground: null, lobbyMotion: true, localization: false, assistsEnabled: false, gameSpeed: false, gameSpeedRate: 1, quality: 'high', cnEntry: 'qq' }, bounds: { width: 1280, height: 850 }, maximized: false, fullscreen: false };
 }
 export function normalizeLayout(raw: unknown): Layout {
   if (!raw || typeof raw !== 'object' || (raw as Layout).version !== 1) return defaultLayout();
@@ -27,6 +27,8 @@ export function normalizeLayout(raw: unknown): Layout {
       lobbyBackground: validTitleColor(value.preferences?.lobbyBackground) ? value.preferences.lobbyBackground.toLowerCase() : null,
       lobbyMotion: value.preferences?.lobbyMotion !== false, localization: value.preferences?.localization === true,
       assistsEnabled: value.preferences?.assistsEnabled === true,
+      gameSpeed: value.preferences?.gameSpeed === true,
+      gameSpeedRate: value.preferences?.gameSpeedRate === 2 ? 2 : 1,
       quality: value.preferences?.quality === 'low' || value.preferences?.quality === 'medium' ? value.preferences.quality : 'high',
       cnEntry: validCnEntry(value.preferences?.cnEntry) ? value.preferences.cnEntry : 'qq' },
     bounds: { width: Math.round(Math.max(800, Math.min(3840, Number(bounds?.width) || 1280))), height: Math.round(Math.max(560, Math.min(2160, Number(bounds?.height) || 850))),
