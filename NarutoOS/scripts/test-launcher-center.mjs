@@ -20,18 +20,36 @@ try{
  const patch=async(command,payload)=>{const state=await request('snapshot');return request(command,{requestId:crypto.randomUUID(),revision:state.revision,...payload})};
  await patch('preferences.patch',{key:'autoClose',value:false});await patch('preferences.patch',{key:'lobbyMotion',value:false});
  await patch('catalog.update',{id:'br-1',name:'首选甲',serverNote:''});const second=await patch('catalog.create',{region:'br',name:'首选乙',serverNote:''});
+ const windowFile=path.join(root,'center-window.json');
+ const offscreen={x:-100_000,y:-100_000};
+ fs.writeFileSync(windowFile,JSON.stringify(offscreen));
  for(const small of [false,true]){
+  const mode=small?'small':'normal';
   await patch('preferences.patch',{key:'theme',value:small?'dark':'light'});
   const resultFile=path.join(root,'ui-check.json');if(fs.existsSync(resultFile))fs.unlinkSync(resultFile);
   center=start('center',small?{NARUTO_C_LAUNCHER_SMALL:'1'}:{});
   const ui=await until(()=>fs.existsSync(resultFile)&&JSON.parse(fs.readFileSync(resultFile)));
-  check((small?'small':'normal')+' WK launcher UI: '+(ui.error||'passed'),ui.ok);
+  check(mode+' WK launcher UI: '+(ui.error||'passed'),ui.ok);
+  const view=await until(()=>{
+   const value=JSON.parse(fs.readFileSync(path.join(root,'center-view.json')));
+   return value.pid===center.pid&&value;
+  });
+  check(mode+' window keeps one title bar and all three traffic lights centered',
+    view.integratedTitlebar&&view.trafficLightCenters.length===3&&view.trafficLightCenters.every(y=>Math.abs(y-21)<1));
+  check(mode+' window frame matches the WK viewport',view.width===ui.width&&view.height===ui.height);
+  if(!small){
+   const position=JSON.parse(fs.readFileSync(windowFile));
+   check('normal window restores an offscreen position to the display',
+     Number.isFinite(position.x)&&Number.isFinite(position.y)&&position.x>offscreen.x&&position.y>offscreen.y);
+  }
   await until(()=>fs.existsSync(path.join(root,'ui-center.png')));
-  fs.renameSync(path.join(root,'ui-center.png'),path.join(root,small?'small.png':'normal.png'));
-  fs.writeFileSync(path.join(root,small?'small.json':'normal.json'),JSON.stringify(ui,null,2));
-  const state=await request('snapshot');check('first selected account persists after '+(small?'small':'normal')+' launch',state.selectedByRegion.br===ui.primary);
+  fs.renameSync(path.join(root,'ui-center.png'),path.join(root,mode+'.png'));
+  fs.writeFileSync(path.join(root,mode+'.json'),JSON.stringify(ui,null,2));
+  fs.writeFileSync(path.join(root,mode+'-window.json'),JSON.stringify(view,null,2));
+  const state=await request('snapshot');check('first selected account persists after '+mode+' launch',state.selectedByRegion.br===ui.primary);
   const batch=state.batches.at(-1);check('batch preserves click order',batch.profileIds[0]===ui.primary&&batch.profileIds.length===2);
   await stop(center);center=undefined;
+  if(!small)fs.renameSync(windowFile,path.join(root,'normal-window-position.json'));
  }
  const before=await request('snapshot'),batch=before.batches.at(-1);
  await patch('catalog.select',{id:'br-1'});await request('batch.start',{requestId:batch.id,profileIds:batch.profileIds});

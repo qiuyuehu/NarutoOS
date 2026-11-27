@@ -42,8 +42,4 @@ export function savePromptDestination(origin: string, value: string): boolean {
   return ['https://naruto.narutowebgame.com', 'https://naruto.oasgames.com'].includes(origin) &&
     !target.port && gameServerHost.test(target.hostname);
 }
-export function fitRectangle(width: number, height: number, ratio: number) {
-  const w = Math.min(width, height * ratio); const h = w / ratio;
-  return { x: Math.round((width - w) / 2), y: Math.round((height - h) / 2), width: Math.floor(w), height: Math.floor(h) };
-}
 export { ENTRY_URL };

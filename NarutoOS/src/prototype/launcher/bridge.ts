@@ -4,9 +4,18 @@ import type { AppState, Command, Preferences } from '../../shared/model';
 // The browser receives fixed business commands only; role credentials remain native.
 const browser = window as any;
 const pending = new Map<string, { resolve: (value:any)=>void; reject:(reason:Error)=>void; timer:ReturnType<typeof setTimeout> }>();
+// Earlier Monterey WebKit versions expose getRandomValues but lack randomUUID.
+function requestUUID(): string {
+  if (typeof crypto.randomUUID === 'function') return crypto.randomUUID();
+  const bytes = crypto.getRandomValues(new Uint8Array(16));
+  bytes[6] = (bytes[6] & 0x0f) | 0x40;
+  bytes[8] = (bytes[8] & 0x3f) | 0x80;
+  const hex = Array.from(bytes, value => value.toString(16).padStart(2, '0')).join('');
+  return [hex.slice(0, 8), hex.slice(8, 12), hex.slice(12, 16), hex.slice(16, 20), hex.slice(20)].join('-');
+}
 function request(command:string,payload:object={}):Promise<any>{
   return new Promise((resolve,reject)=>{
-    const id=crypto.randomUUID();const timer=setTimeout(()=>{pending.delete(id);reject(new Error(msg('ui.no_response_yet_please_try_again_later')));},5000);
+    const id=requestUUID();const timer=setTimeout(()=>{pending.delete(id);reject(new Error(msg('ui.no_response_yet_please_try_again_later')));},5000);
     pending.set(id,{resolve,reject,timer});browser.webkit.messageHandlers.narutoCore.postMessage({id,command,payload});
   });
 }
@@ -39,7 +48,7 @@ browser.__narutoSnapshot=(value:any)=>{
 if(browser.__narutoInitialState)browser.__narutoSnapshot(browser.__narutoInitialState);
 async function sync(){browser.__narutoSnapshot(await request('snapshot'));return state();}
 const mutationIds=new Map<string,{requestId:string;revision:number}>();
-async function mutate(command:string,payload:object={}){const key=JSON.stringify([command,payload]);let identity=mutationIds.get(key);if(!identity){identity={requestId:crypto.randomUUID(),revision:snapshot.revision};mutationIds.set(key,identity)}try{const result=await request(command,{...identity,...payload});mutationIds.delete(key);await sync();return result;}catch(error){await sync().catch(()=>{});if(['error.preferenceConflict','error.profileConflict'].includes(messageCode(error)))mutationIds.delete(key);throw error;}}
+async function mutate(command:string,payload:object={}){const key=JSON.stringify([command,payload]);let identity=mutationIds.get(key);if(!identity){identity={requestId:requestUUID(),revision:snapshot.revision};mutationIds.set(key,identity)}try{const result=await request(command,{...identity,...payload});mutationIds.delete(key);await sync();return result;}catch(error){await sync().catch(()=>{});if(['error.preferenceConflict','error.profileConflict'].includes(messageCode(error)))mutationIds.delete(key);throw error;}}
 async function waitForReconcile(ms=2500){const end=Date.now()+ms;while(snapshot?.reconciling&&Date.now()<end){await new Promise(resolve=>setTimeout(resolve,150));await sync().catch(()=>{});}}
 async function launch(ids:string[]){
   const selected=[...new Set(ids)];
@@ -51,7 +60,7 @@ async function launch(ids:string[]){
     // The old request is either resolved or confirmed absent before a new selection is submitted.
     requestBatch=undefined;
   }
-  requestBatch??={id:crypto.randomUUID(),ids:selected};
+  requestBatch??={id:requestUUID(),ids:selected};
   const batch=requestBatch;lastBatchId=batch.id;
   const response=await request('batch.start',{requestId:batch.id,profileIds:batch.ids});
   if(requestBatch===batch)requestBatch=undefined;
@@ -113,7 +122,6 @@ function paintSelection(){
   }
   const auto=document.getElementById('center-auto-close');if(auto)auto.setAttribute('aria-checked',String(snapshot?.preferences.autoClose!==false));
   const runtime=document.getElementById('runtime-summary');if(runtime){const count=snapshot?.runningAccountCount||0;setText(runtime, count?pluralMessage('runtime.accounts',count):'');}
-  const detail=document.getElementById('localization-detail');if(detail)setText(detail, msg('ui.applies_after_restarting_the_game'));
   const launchStatus=document.getElementById('profile-launch-status');if(launchStatus&&!launchStatus.textContent.trim())setText(launchStatus, notice);
 }
 window.addEventListener('DOMContentLoaded',()=>{
@@ -122,10 +130,11 @@ window.addEventListener('DOMContentLoaded',()=>{
   deck.addEventListener('click',e=>{if(toggle(e.target)){e.stopImmediatePropagation();e.preventDefault()}},true);
   deck.addEventListener('keydown',e=>{if(e.key===' '||e.key==='Enter'){const id=deck.getAttribute('aria-activedescendant');if(id&&toggle(document.getElementById(id))){e.stopImmediatePropagation();e.preventDefault()}}},true);
   document.getElementById('center-auto-close')!.onclick=async()=>{try{await mutate('preferences.patch',{key:'autoClose',value:!snapshot.preferences.autoClose})}catch(error){notice=String(error);emit()}};
+  const dialog=document.getElementById('dialog-backdrop')!,settingsPanel=document.getElementById('settings-panel')!;
   const observer=new MutationObserver(()=>{
-    const dirty=!document.getElementById('dialog-backdrop')!.hidden;
-    browser.webkit.messageHandlers.narutoCore.postMessage({command:'ui.state',payload:{dirty,settingsOpen:!document.getElementById('settings-panel')!.hidden}});
-  });observer.observe(document.getElementById('dialog-backdrop')!,{attributes:true,attributeFilter:['hidden']});observer.observe(document.getElementById('settings-panel')!,{attributes:true,attributeFilter:['hidden']});
+    const dirty=!dialog.hidden||settingsPanel.hasAttribute('data-lobby-background-pending');
+    browser.webkit.messageHandlers.narutoCore.postMessage({command:'ui.state',payload:{dirty,settingsOpen:!settingsPanel.hidden}});
+  });observer.observe(dialog,{attributes:true,attributeFilter:['hidden']});observer.observe(settingsPanel,{attributes:true,attributeFilter:['hidden','data-lobby-background-pending']});
   const fitDock=()=>document.documentElement.style.setProperty('--dock-scale',String(Math.min(1,window.innerWidth/1000,window.innerHeight/700)));
   window.addEventListener('resize',fitDock);fitDock();
   paintSelection();

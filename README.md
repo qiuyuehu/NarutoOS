@@ -11,7 +11,7 @@
 <p align="center">
   <a href="https://github.com/qiuyuehu/NarutoOS/releases/latest"><strong>下载最新版本</strong></a> ·
   <a href="#安装与使用">安装说明</a> ·
-  <a href="NarutoOS/docs/INSTALL.md#从源码运行">从源码运行</a> ·
+  <a href="NarutoOS/README.md#运行">从源码运行</a> ·
   <a href="https://github.com/qiuyuehu/NarutoOS/issues">反馈问题</a>
 </p>
 
@@ -21,7 +21,14 @@
 
 前往 **[GitHub Releases](https://github.com/qiuyuehu/NarutoOS/releases)**，在发布版本的 **Assets** 中下载 macOS 应用安装包。免费使用，应用包内置 Flash，日常使用无需安装 Node.js 或开发工具。
 
-适用于 **Apple Silicon Mac 和 macOS 15 或更新版本**。游戏运行部分基于 Intel 版 Electron，在 Apple Silicon 上通过 Rosetta 运行。
+在苹果菜单的「关于本机」查看芯片，然后选择对应的 ZIP。
+
+| Mac | 下载文件后缀 | 系统要求 |
+|---|---|---|
+| Apple Silicon（M 系列） | `-macOS-AppleSilicon.zip` | macOS 15 或更新版本，游戏通过 Rosetta 运行 |
+| Intel | `-macOS-Intel-Test.zip` | 最低部署版本 macOS 12.0，面向 Monterey 的测试构建 |
+
+从 0.3.14 开始，应用内更新会自动选择与当前安装版相同架构的包。使用 0.3.13 Intel 测试版的用户请先手动安装一次新版。
 
 ## 安装与使用
 
@@ -32,7 +39,7 @@
 
 应用目前采用本地签名，未做 Apple 公证。首次打开遇到系统拦截时，请核对下载来源，并参照 [Apple 的应用打开说明](https://support.apple.com/zh-cn/102445)处理。
 
-终端下载、开发环境准备和源码运行见[其他安装方式](NarutoOS/docs/INSTALL.md)。
+开发环境准备和源码运行见[开发说明](NarutoOS/README.md#运行)。
 
 ## 功能
 
@@ -70,9 +77,8 @@
 
 遇到问题，请在 [Issues](https://github.com/qiuyuehu/NarutoOS/issues) 中说明 macOS 版本、芯片型号、应用版本、所在地区和复现步骤。截图请遮住账号、邮箱和聊天等个人信息。
 
-- [安装与源码运行](NarutoOS/docs/INSTALL.md)
+- [安装与源码运行](NarutoOS/README.md#运行)
 - [开发说明与专项检查](NarutoOS/README.md)
-- [实现记录](NarutoOS/docs/IMPLEMENTATION.md)
 
 源码位于 `NarutoOS/`。启动管理界面使用 Swift，Flash 游戏宿主使用 Intel Electron；Apple Silicon 上通过 Rosetta 执行。
 

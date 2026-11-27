@@ -44,20 +44,55 @@ const reconcileOnly=process.argv.includes('--reconcile-only');
 const maintenanceOnly=process.argv.includes('--maintenance-only');
 const uiOnly=process.argv.includes('--ui-only');
 const historyOnly=process.argv.includes('--history-only');let legacyHistory=[];let legacyBytes=0;
+const historyWriteFailure=process.argv.includes('--history-write-failure');
+function finishedBatch(profileId='br-1'){
+ return {id:crypto.randomUUID(),profileIds:[profileId],autoClose:true,items:[{
+  operationId:crypto.randomUUID(),profileId,generation:1,status:'closed',accepted:true,reason:''
+ }]};
+}
+function historyManagement(batches){
+ return {version:1,revision:1,profiles:[{id:'br-1',region:'br',slot:1,generation:1,name:'合成巴西账号'},
+  {id:'cn-1',region:'cn',slot:1,generation:1,name:'合成国服账号'}],preferences:{},batches,hostPID:0};
+}
 if(historyOnly){
- legacyHistory=Array.from({length:1800},()=>({id:crypto.randomUUID(),profileIds:['br-1'],autoClose:true,items:[{operationId:crypto.randomUUID(),profileId:'br-1',generation:1,status:'closed',accepted:true,reason:''}]}));
- const legacy={version:1,revision:1,profiles:[{id:'br-1',region:'br',slot:1,generation:1,name:'合成巴西账号'},{id:'cn-1',region:'cn',slot:1,generation:1,name:'合成国服账号'}],preferences:{},batches:legacyHistory,hostPID:0};
- const serialized=JSON.stringify(legacy);legacyBytes=Buffer.byteLength(serialized);fs.writeFileSync(path.join(root,'management.json'),serialized);
+ legacyHistory=Array.from({length:1800},()=>finishedBatch());
+ const serialized=JSON.stringify(historyManagement(legacyHistory));legacyBytes=Buffer.byteLength(serialized);fs.writeFileSync(path.join(root,'management.json'),serialized);
 }
 
 if(reconcileOnly)fs.writeFileSync(path.join(root,'management.json'),JSON.stringify({version:1,revision:1,profiles:[{id:'br-1',region:'br',slot:1,generation:1,name:'合成巴西账号'},{id:'cn-1',region:'cn',slot:1,generation:1,name:'合成国服账号'}],preferences:{},batches:[{id:crypto.randomUUID(),items:[{operationId:crypto.randomUUID(),profileId:'br-1',generation:1,status:'failed',accepted:true}]}],hostPID:0}));
 try{
+ let blockedBatches;
+ if(historyWriteFailure){
+  blockedBatches=[finishedBatch(),finishedBatch('cn-1')];
+  const managementFile=path.join(root,'management.json');
+  const management=Buffer.from(JSON.stringify(historyManagement(blockedBatches)));
+  fs.writeFileSync(managementFile,management);
+  const blockedPath=path.join(root,'batch-receipts',blockedBatches[1].id+'.json');
+  fs.mkdirSync(blockedPath,{recursive:true});
+  fs.writeFileSync(path.join(blockedPath,'blocker'),'synthetic receipt blocker');
+  const failedCore=start('core');corePID=failedCore.pid;
+  await until(()=>failedCore.exitCode!==null||failedCore.signalCode!==null);
+  check('second receipt write failure aborts startup before serving IPC',failedCore.exitCode!==0&&!fs.existsSync(socket));
+  assert.deepEqual(read('batch-receipts/'+blockedBatches[0].id+'.json'),blockedBatches[0]);
+  check('first receipt is readable after the second write fails',true);
+  check('partial receipt writes leave management unchanged byte for byte',fs.readFileSync(managementFile).equals(management));
+  fs.renameSync(blockedPath,path.join(root,'blocked-receipt-fixture'));
+ }
  const firstCore=start('core');corePID=firstCore.pid;await until(()=>request('snapshot'));
  check('core has native management authority and isolated synthetic profiles',(await request('snapshot')).profiles.length===2);
  check('wrong capability is rejected',(await request('snapshot',{}, {bad:true,allowError:true})).ok===false);
  check('wrong protocol major is rejected',(await request('snapshot',{}, {v:2,allowError:true})).ok===false);
  check('center cannot submit host state',(await request('host.poll',{pid:process.pid,instance:'forged',tasks:[],windowShown:true},{allowError:true})).ok===false);
- if(loginTabs){
+ if(blockedBatches){
+  for(const batch of blockedBatches){
+   assert.deepEqual(read('batch-receipts/'+batch.id+'.json'),batch);
+   assert.deepEqual(await request('batch.get',{id:batch.id}),{found:true,batch});
+   const replay=await request('batch.start',{requestId:batch.id,profileIds:batch.profileIds});
+   assert.deepEqual(replay,batch);
+  }
+  check('archive retry writes both original receipts and replays the original operation IDs',read('management.json').batches.length===0);
+  check('replaying either recovered receipt does not start Host',(await request('snapshot')).hostPID===0);
+ }else if(loginTabs){
   const center=start('center');second=center.pid;
   await until(()=>arrivals.length===1);
   let state=await request('snapshot');hostPID=state.hostPID;
@@ -89,6 +124,8 @@ try{
  check('archived old batch remains queryable by ID',(await request('batch.get',{id:old.id})).batch.id===old.id);
  await request('batch.start',{requestId:old.id,profileIds:old.profileIds});
  check('historical replay does not launch a host',(await request('snapshot')).hostPID===0);
+ const conflict=await request('batch.start',{requestId:old.id,profileIds:['cn-1']},{allowError:true});
+ check('archived request ID rejects a different account',conflict.ok===false&&conflict.code==='ui.request_id_was_reused');
  const live=crypto.randomUUID();await request('batch.start',{requestId:live,profileIds:['br-1','cn-1']});
  await until(()=>{const f=read('fixture-status.json');hostPID=f.pid;return f.tasks.filter(t=>t.status==='ready').length===2});
  const center=start('center');second=center.pid;

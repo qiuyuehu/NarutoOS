@@ -11,7 +11,7 @@
 <p align="center">
   <a href="https://github.com/qiuyuehu/NarutoOS/releases/latest"><strong>Baixar para macOS</strong></a> ·
   <a href="#download-e-instalação">Instalação</a> ·
-  <a href="NarutoOS/docs/INSTALL.md#从源码运行">Executar a partir do código</a> ·
+  <a href="NarutoOS/README.md#运行">Executar a partir do código</a> ·
   <a href="https://github.com/qiuyuehu/NarutoOS/issues">Relatar um problema</a>
 </p>
 
@@ -19,17 +19,12 @@
 
 ## Download e instalação
 
-Baixe o arquivo mais recente `NarutoOS-*-macOS-AppleSilicon.zip` em [GitHub Releases](https://github.com/qiuyuehu/NarutoOS/releases). Descompacte-o e arraste **Naruto OS.app** para a pasta Aplicativos. O Flash já está incluído; para usar o app normalmente, não é necessário instalar Node.js nem ferramentas de desenvolvimento.
+Baixe o ZIP para o seu Mac em [GitHub Releases](https://github.com/qiuyuehu/NarutoOS/releases/latest). Consulte **Sobre Este Mac** para identificar o chip.
 
-Se você tiver o GitHub CLI instalado, também pode baixar e abrir o app pelo Terminal:
+- **Apple Silicon (série M), macOS 15 ou posterior** — escolha `-macOS-AppleSilicon.zip`. Instale o Rosetta se o sistema solicitar ao abrir o jogo.
+- **Intel, macOS 12 ou posterior** — escolha `-macOS-Intel-Test.zip`. Esta é a versão de teste para Intel com suporte previsto para o Monterey.
 
-```sh
-gh release download --repo qiuyuehu/NarutoOS --pattern 'NarutoOS-*-macOS-AppleSilicon.zip'
-ditto -xk NarutoOS-*-macOS-AppleSilicon.zip .
-open "Naruto OS.app"
-```
-
-É necessário ter um Mac com Apple Silicon e macOS 15 ou posterior. O jogo usa uma versão do Electron para Intel e roda por meio do Rosetta. Se o macOS pedir para instalar o Rosetta, siga as instruções na tela.
+Descompacte o ZIP e arraste **Naruto OS.app** para a pasta Aplicativos. O Flash já está incluído. A partir da versão 0.3.14, o app seleciona a atualização para a arquitetura instalada. Quem usa a versão de teste 0.3.13 para Intel precisa instalar a nova versão manualmente uma vez.
 
 O app é assinado localmente, mas ainda não passou pela notarização da Apple. Se o macOS bloquear a primeira abertura, confirme que o app veio deste repositório e siga as [instruções da Apple](https://support.apple.com/pt-br/102445) para abri-lo.
 

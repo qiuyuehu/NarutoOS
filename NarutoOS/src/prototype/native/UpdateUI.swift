@@ -2,102 +2,6 @@ import AppKit
 import Foundation
 import Darwin
 
-// MARK: - Progress panel
-
-final class UpdateProgressPanel: NSObject {
-    private let window: NSWindow
-    private let titleLabel = NSTextField(labelWithString: "")
-    private let detailLabel = NSTextField(labelWithString: "")
-    private let progress = NSProgressIndicator()
-    private let cancelButton = NSButton()
-    var onCancel: (() -> Void)?
-
-    override init() {
-        window = NSWindow(contentRect: NSRect(x: 0, y: 0, width: 480, height: 168),
-                          styleMask: [.titled, .fullSizeContentView], backing: .buffered, defer: false)
-        super.init()
-        window.title = UpdateContract.applicationName
-        window.titleVisibility = .hidden
-        window.titlebarAppearsTransparent = true
-        window.isMovableByWindowBackground = true
-        window.isReleasedWhenClosed = false
-        window.level = .floating
-        window.standardWindowButton(.closeButton)?.isHidden = true
-        window.standardWindowButton(.miniaturizeButton)?.isHidden = true
-        window.standardWindowButton(.zoomButton)?.isHidden = true
-        let content = NSView(frame: NSRect(x: 0, y: 0, width: 480, height: 168))
-        window.contentView = content
-        titleLabel.frame = NSRect(x: 24, y: 118, width: 432, height: 22)
-        titleLabel.font = .systemFont(ofSize: 15, weight: .semibold)
-        detailLabel.frame = NSRect(x: 24, y: 64, width: 432, height: 44)
-        detailLabel.font = .systemFont(ofSize: 12)
-        detailLabel.textColor = .secondaryLabelColor
-        detailLabel.lineBreakMode = .byWordWrapping
-        detailLabel.maximumNumberOfLines = 2
-        progress.frame = NSRect(x: 24, y: 46, width: 432, height: 12)
-        progress.isIndeterminate = false
-        progress.minValue = 0
-        progress.maxValue = 1
-        cancelButton.frame = NSRect(x: 360, y: 12, width: 96, height: 26)
-        cancelButton.bezelStyle = .rounded
-        cancelButton.target = self
-        cancelButton.action = #selector(cancelTapped)
-        content.addSubview(titleLabel)
-        content.addSubview(detailLabel)
-        content.addSubview(progress)
-        content.addSubview(cancelButton)
-    }
-
-    @objc private func cancelTapped() {
-        onCancel?()
-    }
-
-    func show(title: String, detail: String, determinate: Bool, cancelVisible: Bool) {
-        titleLabel.stringValue = title
-        detailLabel.stringValue = detail
-        progress.isIndeterminate = !determinate
-        if determinate {
-            progress.doubleValue = 0
-        } else {
-            progress.startAnimation(nil)
-        }
-        cancelButton.isHidden = !cancelVisible
-        cancelButton.isEnabled = cancelVisible
-        cancelButton.title = localized(msg("update.cancel_button"))
-        window.center()
-        window.makeKeyAndOrderFront(nil)
-        NSApp.activate(ignoringOtherApps: true)
-    }
-
-    func setTitle(_ title: String) {
-        titleLabel.stringValue = title
-    }
-
-    func setDetail(_ detail: String) {
-        detailLabel.stringValue = detail
-    }
-
-    func setProgress(_ value: Double) {
-        progress.isIndeterminate = false
-        progress.doubleValue = min(1, max(0, value))
-    }
-
-    func setDeterminate(_ determinate: Bool) {
-        progress.isIndeterminate = !determinate
-        if determinate { progress.stopAnimation(nil) } else { progress.startAnimation(nil) }
-    }
-
-    func setCancelEnabled(_ enabled: Bool) {
-        cancelButton.isHidden = !enabled
-        cancelButton.isEnabled = enabled
-    }
-
-    func close() {
-        progress.stopAnimation(nil)
-        window.orderOut(nil)
-    }
-}
-
 // MARK: - Update controller
 
 final class UpdateController: NSObject {
@@ -131,6 +35,10 @@ final class UpdateController: NSObject {
         Bundle.main.bundleIdentifier == UpdateContract.outerBundleID
     }
 
+    private var updateChannel: UpdateChannel {
+        UpdateChannel.installed(info: Bundle.main.infoDictionary ?? [:])
+    }
+
     private var isFixture: Bool {
         ProcessInfo.processInfo.environment["NARUTO_C_FIXTURE"] == "1"
     }
@@ -139,8 +47,14 @@ final class UpdateController: NSObject {
 
     func bootstrap(_ center: Center) {
         self.center = center
-        guard isPackagedApplication, !isFixture else { return }
-        reconcileAtLaunch()
+        guard isPackagedApplication, !isFixture, updateChannel == .current else { return }
+        UpdateReconciliation(
+            updateRoot: updateRootPath(),
+            currentVersion: Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "",
+            bundlePath: Bundle.main.bundleURL.standardizedFileURL.path,
+            showNotice: { title, message, button in self.showInfo(title, message, buttonTitle: button) },
+            log: center.logCenter
+        ).reconcileAtLaunch()
         // A centre that starts while the core still remembers an update attempt
         // means the previous centre stopped before the handoff finished.
         _ = try? coreRPC("update.cancel")
@@ -169,6 +83,11 @@ final class UpdateController: NSObject {
 
     private func startCheck(manual: Bool) {
         guard phase == .idle else { return }
+        guard updateChannel.matchesCurrentArchitecture else {
+            center?.logCenter("update-check-blocked", "installed channel differs from updater architecture")
+            if manual { showFailure(localized(msg("update.check_failed", ["p0": localized(msg("update.unsupported_arch"))]))) }
+            return
+        }
         phase = .checking
         center?.logCenter("update-check-start", "manual=\(manual)")
         // A silent startup check must not bring the centre forward or reset the
@@ -200,7 +119,8 @@ final class UpdateController: NSObject {
                     return
                 }
                 do {
-                    let asset = try parseReleaseAsset(payload.object, version: payload.header.version, allowLocal: false)
+                    let asset = try parseReleaseAsset(payload.object, version: payload.header.version,
+                                                      allowLocal: false, channel: self.updateChannel)
                     let release = UpdateRelease(releaseID: payload.header.releaseID, tag: payload.header.tag,
                                                 version: payload.header.version, notes: payload.header.notes, asset: asset)
                     self.release = release
@@ -359,8 +279,12 @@ final class UpdateController: NSObject {
                 guard extracted.status == 0 else { throw updateFailure("update.extract_failed") }
                 try validateExtractionRoot(extraction)
                 let newApplication = try locateApplication(in: extraction)
-                try validateApplication(newApplication, expected: release.version)
                 let target = try inspectUpdateTarget(standardPathOnly: true)
+                let targetInfo = readInfoPlist(target.appPath) ?? [:]
+                let channel = UpdateChannel.installed(info: targetInfo)
+                guard channel == self.updateChannel else { throw updateFailure("update.unsupported_arch") }
+                try validateApplication(newApplication, expected: release.version,
+                                        options: BundleValidationOptions(expectedChannel: channel))
                 guard checkParentWritable(target.parentDirectory) else { throw updateFailure("update.not_writable") }
                 let applicationBytes = directoryBytes(newApplication) ?? 0
                 if let capacity = availableCapacity(target.parentDirectory), capacity < applicationBytes + 256 * 1024 * 1024 {
@@ -374,7 +298,8 @@ final class UpdateController: NSObject {
                 let staged = directory + "/" + UpdateContract.applicationName + ".app"
                 let copied = try runTool("/usr/bin/ditto", [newApplication, staged], timeout: UpdateContract.extractTimeout)
                 guard copied.status == 0 else { throw updateFailure("update.prepare_failed") }
-                try validateApplication(staged, expected: release.version)
+                try validateApplication(staged, expected: release.version,
+                                        options: BundleValidationOptions(expectedChannel: channel))
                 DispatchQueue.main.async {
                     guard generation == self.prepareGeneration, !self.cancelRequested else {
                         removeItemIfExists(directory)
@@ -406,6 +331,9 @@ final class UpdateController: NSObject {
             let updaterSource = resources + "/dist/prototype/native/updater"
             let messagesSource = resources + "/dist/shared/messages.json"
             guard pathExists(updaterSource), pathExists(messagesSource) else { throw updateFailure("update.bundle_incomplete") }
+            guard machOArchitectures(updaterSource).contains(updateChannel.architecture) else {
+                throw updateFailure("update.unsupported_arch")
+            }
             let updaterPath = taskDir + "/naruto-updater"
             let messagesPath = taskDir + "/messages.json"
             try FileManager.default.copyItem(atPath: updaterSource, toPath: updaterPath)
@@ -619,12 +547,12 @@ final class UpdateController: NSObject {
 
     // MARK: - Dialogs
 
-    private func showInfo(_ title: String, _ message: String) {
+    private func showInfo(_ title: String, _ message: String, buttonTitle: String? = nil) {
         center?.showWindow()
         let alert = NSAlert()
         alert.messageText = title
         alert.informativeText = message
-        alert.addButton(withTitle: localized(msg("update.close_button")))
+        alert.addButton(withTitle: buttonTitle ?? localized(msg("update.close_button")))
         _ = alert.runModal()
     }
 
@@ -690,136 +618,5 @@ final class UpdateController: NSObject {
         alert.addButton(withTitle: localized(msg("update.close_button")))
         if alert.runModal() == .alertFirstButtonReturn { openReleasePage() }
         phase = .idle
-    }
-
-    // MARK: - Startup reconciliation
-
-    private func reconcileAtLaunch() {
-        let updateRoot = updateRootPath()
-        guard pathExists(updateRoot), !pathIsSymlink(updateRoot) else { return }
-        let resultPath = updateRoot + "/result.json"
-        if let result = (try? JSONDecoder().decode(UpdateResultRecord.self, from: Data(contentsOf: URL(fileURLWithPath: resultPath)))) {
-            handlePreviousResult(result, at: resultPath)
-        }
-        let taskPath = updateRoot + "/task.json"
-        if let record = try? UpdateTaskRecord.load(taskPath) {
-            handlePreviousTask(record, at: taskPath)
-        }
-    }
-
-    private func handlePreviousResult(_ result: UpdateResultRecord, at path: String) {
-        if result.status == "success" {
-            removeItemIfExists(path)
-            return
-        }
-        let message = result.messageRef.hasPrefix("\u{E000}")
-            ? localized(result.messageRef)
-            : localized(msg(result.messageRef, result.params))
-        if result.status == "restore-failed" {
-            if !result.acknowledged {
-                var updated = result
-                updated.acknowledged = true
-                if let data = try? JSONEncoder().encode(updated) { try? data.write(to: URL(fileURLWithPath: path), options: .atomic) }
-                center?.showWindow()
-                let alert = NSAlert()
-                alert.messageText = localized(msg("update.recovery_title"))
-                alert.informativeText = message
-                alert.addButton(withTitle: localized(msg("update.acknowledge_button")))
-                _ = alert.runModal()
-            }
-            return
-        }
-        removeItemIfExists(path)
-        center?.showWindow()
-        let alert = NSAlert()
-        alert.messageText = localized(msg("update.failed_title"))
-        alert.informativeText = message
-        alert.addButton(withTitle: localized(msg("update.close_button")))
-        _ = alert.runModal()
-    }
-
-    private func handlePreviousTask(_ record: UpdateTaskRecord, at path: String) {
-        let version = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? ""
-        let bundlePath = Bundle.main.bundleURL.standardizedFileURL.path
-        let updateRoot = updateRootPath()
-        let submittedStages: Set<String> = [UpdateStage.oldMoved, UpdateStage.newPlaced, UpdateStage.launched, UpdateStage.confirmed]
-        if submittedStages.contains(record.stage), record.toVersion == version, record.targetApp == bundlePath {
-            // The replacement happened and this process is the new centre. Confirm
-            // the launch so the helper can clean up.
-            let confirmation: [String: Any] = ["updateID": record.updateID, "version": version, "targetApp": bundlePath]
-            try? atomicWriteJSON(confirmation, updateRoot + "/confirm.json")
-            cleanupConfirmedTaskIfHelperGone(record)
-            return
-        }
-        if (record.stage == UpdateStage.prepared || record.stage == UpdateStage.oldMoved),
-           record.fromVersion == version, record.targetApp == bundlePath {
-            // A live helper may still be waiting for the old core to exit; never
-            // delete its staging or task record from under it.
-            if helperLockHeld(record) {
-                center?.logCenter("update-cleanup-deferred", "helper-running")
-                return
-            }
-            // Nothing was submitted. Remove this attempt's temporary artefacts and
-            // keep the installed application untouched.
-            removeItemIfExists(record.stagingDir)
-            removeItemIfExists(record.downloadFile)
-            removeItemIfExists(record.taskDir)
-            removeItemIfExists(updateRoot + "/task.json")
-            removeItemIfExists(updateRoot + "/recovery-acknowledged")
-            center?.showWindow()
-            let alert = NSAlert()
-            alert.messageText = localized(msg("update.previous_failed_title"))
-            alert.informativeText = localized(msg("update.previous_interrupted"))
-            alert.addButton(withTitle: localized(msg("update.acknowledge_button")))
-            _ = alert.runModal()
-            return
-        }
-        if record.stage == UpdateStage.restored || record.stage == UpdateStage.failed {
-            removeItemIfExists(record.taskDir)
-            removeItemIfExists(updateRoot + "/task.json")
-            return
-        }
-        // A replacement started but this process cannot prove the new version is
-        // healthy. Keep every recoverable file and explain the manual steps once.
-        let acknowledgedPath = updateRoot + "/recovery-acknowledged"
-        if let data = FileManager.default.contents(atPath: acknowledgedPath),
-           String(data: data, encoding: .utf8) == record.updateID { return }
-        try? record.updateID.write(toFile: acknowledgedPath, atomically: true, encoding: .utf8)
-        center?.showWindow()
-        let alert = NSAlert()
-        alert.messageText = localized(msg("update.recovery_title"))
-        alert.informativeText = localized(msg("update.recovery_detail", ["p0": record.backupApp, "p1": record.targetApp]))
-        alert.addButton(withTitle: localized(msg("update.acknowledge_button")))
-        _ = alert.runModal()
-    }
-
-    private func helperLockHeld(_ record: UpdateTaskRecord) -> Bool {
-        let descriptor = open(record.taskDir + "/updater.lock", O_RDWR)
-        guard descriptor >= 0 else { return false }
-        defer { close(descriptor) }
-        return flock(descriptor, LOCK_EX | LOCK_NB) != 0
-    }
-
-    private func cleanupConfirmedTaskIfHelperGone(_ record: UpdateTaskRecord) {
-        let lockPath = record.taskDir + "/updater.lock"
-        let descriptor = open(lockPath, O_RDWR)
-        guard descriptor >= 0 else { return }
-        defer { close(descriptor) }
-        guard flock(descriptor, LOCK_EX | LOCK_NB) == 0 else { return }
-        removeItemIfExists(record.backupApp)
-        removeItemIfExists(record.stagingDir)
-        removeItemIfExists(record.downloadFile)
-        removeItemIfExists(record.taskDir)
-        removeItemIfExists(updateRootPath() + "/task.json")
-        removeItemIfExists(updateRootPath() + "/recovery-acknowledged")
-        let result = UpdateResultRecord(schema: 1, updateID: record.updateID, status: "success",
-                                        stage: UpdateStage.confirmed, fromVersion: record.fromVersion,
-                                        toVersion: record.toVersion, targetApp: record.targetApp,
-                                        backupApp: record.backupApp, stagingApp: record.stagingApp,
-                                        messageRef: "", params: [:], acknowledged: false,
-                                        at: ISO8601DateFormatter().string(from: Date()))
-        if let data = try? JSONEncoder().encode(result) {
-            try? data.write(to: URL(fileURLWithPath: updateRootPath() + "/result.json"), options: .atomic)
-        }
     }
 }

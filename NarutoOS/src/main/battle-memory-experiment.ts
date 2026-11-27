@@ -19,7 +19,7 @@ export class BattleMemoryBridge {
   private readonly digest: string;
   private readonly resources: ResourceOverride[];
   get observeOnly() { return this.options.observeOnly === true; }
-  constructor(private entryURL: string, private swf: Buffer, private output: string,
+  constructor(entryURL: string, swf: Buffer, private output: string,
     private changed: () => void = () => {}, private options: ResourceBridgeOptions = {}) {
     this.digest = createHash('sha256').update(swf).digest('hex');
     // The entry resource is the first module of an assist pack; it must go through

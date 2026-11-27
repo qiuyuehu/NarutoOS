@@ -1,0 +1,1 @@
+package serverProto.fight {public class FightStartType {public static const FIGHT_START_TYPE_NPC:int=1;}}

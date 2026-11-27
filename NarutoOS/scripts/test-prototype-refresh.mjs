@@ -4,7 +4,9 @@ import path from 'node:path';
 import { spawnSync } from 'node:child_process';
 import electron from 'electron';
 // Run after prototype:build so the toolbar and embedded WK helper match source.
-await build({ entryPoints: ['src/shared/i18n.ts', 'src/main/web-login.ts', 'src/main/navigation.ts', 'src/main/game.ts', 'src/main/login-sessions.ts', 'src/preload/game.ts'], outdir: 'dist/web-login-test', outbase: 'src', bundle: true, platform: 'node', target: 'node12', external: ['electron'] });
+await build({ entryPoints: ['src/shared/i18n.ts', 'src/prototype/host/speed-coordinator.ts', 'src/prototype/host/task-queue.ts',
+  'src/prototype/host/toolbar-state.ts', 'src/main/web-login.ts', 'src/main/navigation.ts', 'src/main/game.ts', 'src/main/login-sessions.ts',
+  'src/preload/game.ts'], outdir: 'dist/web-login-test', outbase: 'src', bundle: true, platform: 'node', target: 'node12', external: ['electron'] });
 const root = mkdtempSync(path.resolve('.test-artifacts/prototype-refresh-'));
 const env = { ...process.env, NARUTO_REFRESH_CHECK_ROOT: root };
 delete env.ELECTRON_RUN_AS_NODE;

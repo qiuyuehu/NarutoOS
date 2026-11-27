@@ -2,6 +2,7 @@
 // with its test harness; no network access and no production release source.
 import fs from 'node:fs';
 import path from 'node:path';
+import { updateSourcePaths } from './update-sources.mjs';
 import { execFileSync } from 'node:child_process';
 const project = path.resolve(import.meta.dirname, '..');
 const artifacts = path.join(project, '.test-artifacts/update-logic');
@@ -15,7 +16,8 @@ const binary = path.join(artifacts, 'update-tests');
 swiftc(binary, [
   'src/prototype/native/Transport.swift',
   'src/prototype/native/I18n.swift',
-  'src/prototype/native/Update.swift',
+  ...updateSourcePaths,
+  'src/prototype/native/UpdateReconciliation.swift',
   'tests/update-tests.swift'
 ]);
 // A real x86_64 Mach-O fixture for the architecture reader.

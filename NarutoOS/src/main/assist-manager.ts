@@ -8,44 +8,42 @@ import { readAssistPack } from './assist-pack';
 // single debugger bridge that session may use.
 export type AssistModuleState = 'ready' | 'unavailable' | 'conflict';
 export type AssistModuleStatus = { id: string; nameKey?: string; state: AssistModuleState; reason?: string; regions: string[]; builds: string[] };
+export type AssistExtraResourceLoadResult = { moduleId: string; region: 'br' | 'cn'; variant?: string; target: string }
+  & ({ resource: ResourceOverride; failure?: never } | { resource?: never; failure: string });
+export type AssistExtraResourceState = 'accepted' | 'unavailable' | 'conflict';
+export type AssistExtraResourceStatus = { moduleId: string; region: 'br' | 'cn'; variant?: string; target: string;
+  state: AssistExtraResourceState; reason?: string; occupiedBy?: string };
 export type AssistManagerStatus = { enabled: boolean; bridge: boolean; resources: number; modules: AssistModuleStatus[];
-  rejected: { moduleId: string; reason: string }[] };
+  rejected: { moduleId: string; reason: string }[]; extraResources: AssistExtraResourceStatus[] };
 
 const PATCH_ID = 'naruto-assists-v1';
 
 export class AssistManager {
+  readonly enabled: boolean;
   readonly resources: ResourceOverride[];
   readonly bridge?: BattleMemoryBridge;
   readonly statuses: AssistModuleStatus[];
   readonly rejected: { moduleId: string; reason: string }[];
+  readonly extraResources: AssistExtraResourceStatus[];
 
-  constructor(private readonly root: string, private readonly packaged: boolean, enabled: boolean,
-    receipts: string, changed: () => void, extra: ResourceOverride[] = []) {
-    const directory = path.join(root, packaged ? 'assets/assists' : '.test-artifacts/assists');
+  constructor(root: string, packaged: boolean, enabled: boolean,
+    receipts: string, changed: () => void, extra: AssistExtraResourceLoadResult[] = []) {
+    this.enabled = enabled;
     const modules: AssistModuleStatus[] = [];
     const rejected: { moduleId: string; reason: string }[] = [];
+    const extraResources: AssistExtraResourceStatus[] = [];
     const resources: ResourceOverride[] = [];
     const claimed = new Map<string, string>();
-    if (!enabled) {
-      this.resources = [];
-      this.statuses = modules;
-      this.rejected = rejected;
-      return;
-    }
     let pack = undefined;
-    try {
-      pack = readAssistPack(directory);
-    } catch (error) {
-      rejected.push({ moduleId: '(manifest)', reason: error instanceof Error ? error.message : String(error) });
+    if (enabled) {
+      try {
+        pack = readAssistPack(assistDirectory(root, packaged));
+      } catch (error) {
+        rejected.push({ moduleId: '(manifest)', reason: error instanceof Error ? error.message : String(error) });
+      }
     }
     if (pack) {
       for (const module of pack.modules) {
-        const conflicts = module.targets.filter(target => claimed.has(target.identity));
-        if (conflicts.length) {
-          modules.push({ id: module.id, nameKey: module.nameKey, state: 'conflict', regions: [], builds: [],
-            reason: `资源已被其他模块占用：${conflicts.map(item => item.identity).join('、')}` });
-          continue;
-        }
         for (const target of module.targets) {
           claimed.set(target.identity, module.id);
           resources.push({ url: target.url, bytes: target.bytes, contentType: target.contentType, baseSha256: target.baseSha256 });
@@ -56,35 +54,52 @@ export class AssistManager {
       }
       rejected.push(...pack.rejected);
     }
-    for (const resource of extra) {
+    for (const item of extra) {
+      const detail = { moduleId: item.moduleId, region: item.region, ...(item.variant ? { variant: item.variant } : {}), target: item.target };
+      if ('failure' in item) {
+        const reason = item.failure;
+        extraResources.push({ ...detail, state: 'unavailable', reason });
+        rejected.push({ moduleId: item.moduleId, reason: `${item.target}：${reason}` });
+        continue;
+      }
       try {
-        const identity = new URL(resource.url);
+        const identity = new URL(item.resource.url);
         const key = identity.origin + identity.pathname;
         if (claimed.has(key)) {
-          rejected.push({ moduleId: '(activity-assist)', reason: `资源冲突：${key} 已属于 ${claimed.get(key)}` });
+          const occupiedBy = claimed.get(key)!;
+          const reason = `资源冲突：${key}；${item.moduleId} 与 ${occupiedBy}`;
+          extraResources.push({ ...detail, state: 'conflict', reason, occupiedBy });
+          rejected.push({ moduleId: item.moduleId, reason });
           continue;
         }
-        claimed.set(key, '(activity-assist)');
-        resources.push(resource);
-      } catch {
-        rejected.push({ moduleId: '(activity-assist)', reason: '资源 URL 无效' });
+        claimed.set(key, item.moduleId);
+        resources.push(item.resource);
+        extraResources.push({ ...detail, state: 'accepted' });
+      } catch (error) {
+        const reason = `资源 URL 无效：${error instanceof Error ? error.message : String(error)}`;
+        extraResources.push({ ...detail, state: 'unavailable', reason });
+        rejected.push({ moduleId: item.moduleId, reason: `${item.target}：${reason}` });
       }
     }
     this.resources = resources;
     this.statuses = modules;
     this.rejected = rejected;
-    for (const item of rejected) console.warn(`辅助模块不可用：${item.moduleId}：${item.reason}`);
+    this.extraResources = extraResources;
     if (resources.length) {
-      this.bridge = new BattleMemoryBridge(resources[0].url, resources[0].bytes, receipts, changed,
-        { patchId: PATCH_ID, entryBaseSha256: resources[0].baseSha256, resourceOverrides: resources.slice(1) });
+      try {
+        this.bridge = new BattleMemoryBridge(resources[0].url, resources[0].bytes, receipts, changed,
+          { patchId: PATCH_ID, entryBaseSha256: resources[0].baseSha256, resourceOverrides: resources.slice(1) });
+      } catch (error) {
+        // The localization bridge can still serve the accepted resources.
+        rejected.push({ moduleId: PATCH_ID, reason: error instanceof Error ? error.message : String(error) });
+      }
     }
+    for (const item of rejected) console.warn(`辅助模块不可用：${item.moduleId}：${item.reason}`);
   }
-
-  get enabled() { return this.resources.length > 0; }
 
   status(): AssistManagerStatus {
     return { enabled: this.enabled, bridge: !!this.bridge, resources: this.resources.length,
-      modules: this.statuses, rejected: this.rejected };
+      modules: this.statuses, rejected: this.rejected, extraResources: this.extraResources };
   }
 
   attach(contents: Electron.WebContents) {
@@ -94,8 +109,8 @@ export class AssistManager {
 }
 
 export function createAssistManager(root: string, packaged: boolean, enabled: boolean, receipts: string,
-  changed: () => void, extra: ResourceOverride[] = []): AssistManager | undefined {
-  if (!enabled) return undefined;
+  changed: () => void, extra: AssistExtraResourceLoadResult[] = []): AssistManager | undefined {
+  if (!enabled && !extra.length) return undefined;
   try {
     return new AssistManager(root, packaged, enabled, receipts, changed, extra);
   } catch (error) {
@@ -106,11 +121,7 @@ export function createAssistManager(root: string, packaged: boolean, enabled: bo
 }
 
 export function assistDirectory(root: string, packaged: boolean) {
-  return path.join(root, packaged ? 'assets/assists' : '.test-artifacts/assists');
-}
-
-export function assistsPresent(root: string, packaged: boolean) {
-  try {
-    return fs.statSync(assistDirectory(root, packaged)).isDirectory();
-  } catch { return false; }
+  const development = path.join(root, '.test-artifacts/assists');
+  if (!packaged && fs.existsSync(path.join(development, 'manifest.json'))) return development;
+  return path.join(root, 'assets/assists');
 }

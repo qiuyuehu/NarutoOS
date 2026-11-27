@@ -24,7 +24,6 @@ static int (*original_kevent64)(int, const struct kevent64_s *, int, struct keve
 static int (*original_poll)(struct pollfd *, nfds_t, int);
 static int (*original_pthread_cond_timedwait)(pthread_cond_t *, pthread_mutex_t *, const struct timespec *);
 
-static volatile int ready;
 static __thread int in_hook;
 
 static int trace_gtod;

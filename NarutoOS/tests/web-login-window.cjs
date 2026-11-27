@@ -2,6 +2,7 @@ const { app, BrowserWindow, ipcMain, session } = require('electron');
 const { createServer } = require('http');
 const { once } = require('events');
 const fs = require('fs'), path = require('path');
+const { resolveText } = require('../dist/web-login-test/shared/i18n.js');
 const { WebLogin, reconcileCookies } = require('../dist/web-login-test/main/web-login.js');
 const { GameSessions } = require('../dist/web-login-test/main/game.js');
 const { LoginSessions } = require('../dist/web-login-test/main/login-sessions.js');
@@ -94,16 +95,31 @@ app.whenReady().then(async () => {
       return waitForReady(id);
     };
     let reports = [];
-    login = new WebLogin(win, games, profiles, navigation, helper, message => reports.push(message), { fixture, visible: false, timeout: 12000 }, () => login?.hide(games.activeId !== null));
+    login = new WebLogin(win, games, profiles, navigation, helper, message => reports.push(resolveText(message)), { fixture, visible: false, timeout: 12000 }, () => login?.hide(games.activeId !== null));
     check('home does not create game tabs or spawn login', games.tabs.length === 0 && !login.pending);
     const native = require(helper), windowCount = native.windows();
+    if (phase === 'seed') {
+      const rejected = native.create(), events = [];
+      const cookie = { name: 'synthetic_seed', value: 'fixture', domain: '127.0.0.1', path: '/',
+        secure: false, httpOnly: false, hostOnly: true, session: true };
+      const before = roots.length;
+      try {
+        rejected.open(win.getNativeWindowHandle(), JSON.stringify({
+          fixture, cookies: [cookie, { ...cookie, name: 'synthetic_invalid_seed', hostOnly: false }]
+        }), message => events.push(JSON.parse(message)));
+        await until(() => events.some(event => event.type === 'cancelled'));
+        check('invalid seed batch emits error and cancels before navigation or snapshot',
+          roots.length === before && events.length === 2 && events[0].type === 'error'
+          && events[0].code === 'invalid-seed' && events[1].type === 'cancelled' && !('cookies' in events[1]));
+      } finally { rejected.dispose(); }
+    }
     const firstLogin = { id: 'a'.repeat(24), name: '', region: 'br' };
     navigation.selectLogin(firstLogin.id);
     const task = login.open(firstLogin);
     check('repeated start reuses the same pending attempt', task === login.open(firstLogin));
     let competingStartRejected = false;
     try { login.open({ id: 'b'.repeat(24), name: '', region: 'br' }); }
-    catch (error) { competingStartRejected = /另一个账号/.test(error.message); }
+    catch (error) { competingStartRejected = /另一个账号/.test(resolveText(error.message)); }
     check('a different login cannot silently reuse the pending task', competingStartRejected && login.pending?.saved.id === firstLogin.id);
     await until(() => !!login.pending?.handle);
     check('WK attaches to existing window without adding NSWindow', native.attached() && native.windows() === windowCount);
@@ -247,7 +263,7 @@ app.whenReady().then(async () => {
       check('cancel releases only the pending slot', slot.partition === 'persist:naruto-br-2');
       check('cancelled window saves completed login', (await slot.session.cookies.get({ name: 'fixture_auth' }))[0]?.value === 'cancel-saved');
       slot.release();
-      const backgroundWebLogin = new WebLogin(win, games, profiles, navigation, helper, message => reports.push(message), { fixture, visible: false, timeout: 12000 });
+      const backgroundWebLogin = new WebLogin(win, games, profiles, navigation, helper, message => reports.push(resolveText(message)), { fixture, visible: false, timeout: 12000 });
       backgroundWebLogin.hide(true); navigation.selectGame(replacement.id); mode = 'login';
       const backgroundLogin = backgroundWebLogin.open({ id: 'd'.repeat(24), name: 'background B', region: 'br' }, 3);
       await backgroundLogin;
@@ -268,7 +284,7 @@ app.whenReady().then(async () => {
       await backgroundWebLogin.close();
       const backgroundFailureReports = [];
       const failingLogin = new WebLogin(win, games, profiles, navigation, path.join(directory, 'missing-login-helper.node'),
-        message => backgroundFailureReports.push(message), { fixture, visible: false });
+        message => backgroundFailureReports.push(resolveText(message)), { fixture, visible: false });
       navigation.selectGame(replacement.id);
       await failingLogin.open({ id: 'e'.repeat(24), name: 'background failure', region: 'br' }, 4);
       check('background login failure reports completion without changing A focus or tabs',
@@ -277,7 +293,7 @@ app.whenReady().then(async () => {
       await failingLogin.close();
       const closingOriginal = games.create({ id: 'f'.repeat(24), name: 'closing original', region: 'br' }, fixture + 'idle');
       await games.waitForReady(closingOriginal.id);
-      const closingLogin = new WebLogin(win, games, profiles, navigation, helper, message => reports.push(message), { fixture, visible: false, timeout: 12000 });
+      const closingLogin = new WebLogin(win, games, profiles, navigation, helper, message => reports.push(resolveText(message)), { fixture, visible: false, timeout: 12000 });
       mode = 'cancel-preserve'; const idleBeforeClosingOriginal = idle;
       const closingOriginalRecovery = closingLogin.recover(closingOriginal);
       await until(() => idle > idleBeforeClosingOriginal);
@@ -286,7 +302,7 @@ app.whenReady().then(async () => {
       await Promise.all([closingOriginalRecovery, cancelAfterOriginalClose]);
       check('closing the original during cancellation never reselects its stale id', !games.tabs.some(tab => tab.id === closingOriginal.id) && games.activeId !== closingOriginal.id);
       await closingLogin.close();
-      const exitLogin = new WebLogin(win, games, profiles, navigation, helper, message => reports.push(message), { fixture, visible: false, timeout: 12000 });
+      const exitLogin = new WebLogin(win, games, profiles, navigation, helper, message => reports.push(resolveText(message)), { fixture, visible: false, timeout: 12000 });
       mode = 'cancel-preserve'; const idleBeforeExit = idle;
       const exitRecovery = exitLogin.recover(replacement);
       await until(() => idle > idleBeforeExit);

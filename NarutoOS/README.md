@@ -1,12 +1,14 @@
 # Naruto OS 开发说明
 
-应用介绍与下载见[仓库首页](../README.md)，新环境准备与运行步骤见[安装与源码运行](docs/INSTALL.md)。下方保留开发过程与专项检查记录。
+应用介绍与下载见[仓库首页](../README.md)，新环境准备与运行步骤见[安装与源码运行](#运行)。下方保留开发过程与专项检查记录。
 
-为 macOS / Apple Silicon 制作的个人火影 Online 启动器。正式界面由 Swift Native Core 承载，游戏页由 Electron 11.5.0 Intel 宿主承载，并经 Rosetta 运行；默认入口为巴西服。旧项目和 360 浏览器均未修改。
+为 Apple Silicon 和 Intel Mac 制作的个人火影 Online 启动器。正式界面由 Swift Native Core 承载，游戏页由 Electron 11.5.0 Intel 宿主承载，在 Apple Silicon 上经 Rosetta 运行；默认入口为巴西服。旧项目和 360 浏览器均未修改。
 
 ## 运行
 
-本地试用版可直接双击桌面试用目录中的 **Naruto OS.app**。自带 Flash，0.1.10 起默认跟随系统网络设置，不需要开发环境。打包、图标与数据说明见 [本地试用包](docs/LOCAL-PACKAGE.md)。
+本地试用版可直接双击桌面试用目录中的 **Naruto OS.app**。自带 Flash，0.1.10 起默认跟随系统网络设置，不需要开发环境。常规版使用 `pnpm package:local` 构建。
+
+在已备好 Intel Electron 和两版 Flash 的开发机上，运行 `pnpm package:intel-test` 可单独编译面向 macOS 12.7.6 的 Intel 测试包（最低部署版本 12.0）。脚本在全新目录构建，解压 ZIP 复核签名与每个 Intel 二进制的最低系统版本，产物位于 `release/intel-test/NarutoOS-<版本>-macOS-Intel-Test.zip`。0.3.14 起，启动器从同一 GitHub Release 选择匹配当前架构的 ZIP。旧 Intel 0.3.13 需手动安装一次。
 
 系统 WebKit 登录/选区嵌在启动器原窗口中，选区后原位置进入 Flash 游戏标签。登录 Cookie 由该账号槽位保存，下次点击开始前恢复；关闭待登录标签也会保存已完成的登录。国服沿用现有流程。应用启动时只显示主页。
 

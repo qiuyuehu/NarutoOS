@@ -83,11 +83,12 @@
     .settings-nav-item:hover { background: var(--hover); color: var(--text); }
     .settings-nav-item[aria-current="page"] { background: var(--selected); color: var(--text); }
     .settings-main { min-width: 0; overflow: auto; background: var(--settings-content); }
-    .preferences { max-width: 900px; margin: 0 auto 40px; padding: 28px 32px 40px; }
-    .settings-page:not([data-settings-content="accounts"]) { width: 100%; max-width: 600px; margin-inline: auto; }
+    .preferences { --settings-card-width: 600px; max-width: 900px; margin: 0 auto 40px; padding: 28px 32px 40px; }
+    .settings-page:not([data-settings-content="accounts"]) { width: 100%; max-width: var(--settings-card-width); margin-inline: auto; }
     .settings-page:not([data-settings-content="accounts"]) > .section > .section-head { margin-bottom: 16px; }
     .settings-page:not([data-settings-content="accounts"]) > .section > .section-head h2 { color: var(--text); font-size: 22px; line-height: 28px; font-weight: 600; }
     .settings-head { display: flex; justify-content: flex-end; align-items: center; margin-bottom: 24px; }
+    #game-settings-note { margin: 0 auto 0 max(0px, calc((100% - var(--settings-card-width)) / 2)); padding-right: 12px; color: var(--muted); font-size: 12px; line-height: 18px; }
     .settings-head h1 { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
     h1 { font-size: 16px; line-height: 24px; font-weight: 600; margin: 0; }
     .settings-head .quiet { background: var(--control); border: 1px solid var(--line); padding: 5px 13px; border-radius: 6px; font-size: 12px; line-height: 18px; }
@@ -214,7 +215,6 @@ button.small { padding: 3px 10px; }
 @media (max-width: 800px) { .settings-panel { grid-template-columns: 150px minmax(0, 1fr); }.preferences { padding: 23px 22px 32px; }.tab { width: 132px; flex-basis: 132px; }.status { max-width: 130px; } }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition: none !important; animation: none !important; } }
 
-#localization-label .hint { display: block; margin-top: 4px; font-size: 12px; font-weight: 400; opacity: .65; }
 
 /* Long English/Portuguese labels wrap without squeezing the controls. */
 .row > label { min-width:0; overflow-wrap:anywhere; }

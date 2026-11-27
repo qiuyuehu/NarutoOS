@@ -77,9 +77,8 @@ final class Center:NSObject,NSApplicationDelegate,NSWindowDelegate,WKNavigationD
   let initialState=try? rpc(root,"center",token,"center.open",["pid":getpid()])
   if let preferences=initialState?["preferences"] as? [String:Any] {interfaceLanguage=normalizedLanguage(preferences["language"])} else {interfaceLanguage=startupLanguage()}
   signal(SIGUSR1,SIG_IGN);source=DispatchSource.makeSignalSource(signal:SIGUSR1,queue:.main);source?.setEventHandler{[weak self] in self?.pendingReveal=true;self?.revealRequestedAt=Date();self?.refresh()};source?.resume()
-  let screen=NSScreen.main?.visibleFrame ?? NSRect(x:0,y:0,width:1000,height:732)
   let smallCheck=ProcessInfo.processInfo.environment["NARUTO_C_FIXTURE"]=="1" && ["launcher","i18n"].contains(ProcessInfo.processInfo.environment["NARUTO_C_UI_CHECKS"] ?? "") && ProcessInfo.processInfo.environment["NARUTO_C_LAUNCHER_SMALL"]=="1"
-  window=NSWindow(contentRect:NSRect(x:0,y:0,width:min(smallCheck ? 700 : 1000,screen.width),height:min(smallCheck ? 490 : 700,max(300,screen.height-32))),styleMask:[.titled,.closable,.miniaturizable,.fullSizeContentView],backing:.buffered,defer:false)
+  window=NSWindow(contentRect:CenterWindowLayout.initialContentRect(small:smallCheck),styleMask:[.titled,.closable,.miniaturizable,.fullSizeContentView],backing:.buffered,defer:false)
   updateMenu()
   window.title="Naruto OS";window.titleVisibility = .hidden;window.titlebarAppearsTransparent=true;window.isMovableByWindowBackground=false;window.center();window.delegate=self;window.collectionBehavior=[.fullScreenNone]
   let config=WKWebViewConfiguration();config.websiteDataStore = .nonPersistent();config.userContentController.add(self,name:"narutoCore")
@@ -114,10 +113,7 @@ final class Center:NSObject,NSApplicationDelegate,NSWindowDelegate,WKNavigationD
   }
  }
  @objc func fitWindow(){
-  guard let window=window,let screen=window.screen ?? NSScreen.main else{return}
-  let area=screen.visibleFrame;let title=window.frame.height-(window.contentView?.frame.height ?? 0)
-  window.setContentSize(NSSize(width:min(1000,area.width),height:min(700,max(200,area.height-title))))
-  var frame=window.frame;frame.origin.x=min(max(frame.minX,area.minX),max(area.minX,area.maxX-frame.width));frame.origin.y=min(max(frame.minY,area.minY),max(area.minY,area.maxY-frame.height));window.setFrame(frame,display:true)
+  if let window=window{CenterWindowLayout.fitWindow(window)}
  }
  func windowDidChangeScreen(_ notification:Notification){fitWindow();alignTrafficLights()}
  func windowDidResize(_ notification:Notification){alignTrafficLights()}
@@ -127,21 +123,7 @@ final class Center:NSObject,NSApplicationDelegate,NSWindowDelegate,WKNavigationD
  func windowDidBecomeKey(_ notification:Notification){alignTrafficLights()}
  func windowDidUpdate(_ notification:Notification){alignTrafficLights()}
  func alignTrafficLights(){
-  guard let window=window,let content=window.contentView else{return}
-  for (index,type) in [NSWindow.ButtonType.closeButton,.miniaturizeButton,.zoomButton].enumerated(){
-   guard let button=window.standardWindowButton(type),let parent=button.superview else{continue}
-   let size=button.frame.size;let y=content.isFlipped ? CGFloat(21) : content.bounds.height-21
-   let frame=parent.convert(NSRect(x:21+CGFloat(index)*22-size.width/2,y:y-size.height/2,width:size.width,height:size.height),from:content)
-   if abs(button.frame.minX-frame.minX)>0.1 || abs(button.frame.minY-frame.minY)>0.1{button.setFrameOrigin(frame.origin)}
-  }
- }
- func trafficLightCenters()->[CGFloat]{
-  guard let content=window.contentView else{return []}
-  return [NSWindow.ButtonType.closeButton,.miniaturizeButton,.zoomButton].compactMap{type in
-   guard let button=window.standardWindowButton(type),let parent=button.superview else{return nil}
-   let frame=content.convert(button.frame,from:parent)
-   return content.isFlipped ? frame.midY : content.bounds.height-frame.midY
-  }
+  if let window=window{CenterWindowLayout.alignTrafficLights(in:window)}
  }
  func userContentController(_ controller:WKUserContentController,didReceive message:WKScriptMessage){
   guard message.frameInfo.isMainFrame,message.frameInfo.request.url?.standardizedFileURL==page,let body=message.body as? [String:Any],let command=body["command"] as? String else{return}
@@ -210,7 +192,7 @@ final class Center:NSObject,NSApplicationDelegate,NSWindowDelegate,WKNavigationD
   let batches=state["batches"] as? [[String:Any]] ?? []
   var rows=[String:String]()
   for profile in state["profiles"] as? [[String:Any]] ?? [] {let id=profile["id"] as! String;let status=profile["runtimeStatus"] as? String ?? localized(msg("ui.not_started"));rows[id]="\(profile["name"] as! String) · \(id) · \(status)"}
-  try? atomic(["pid":getpid(),"hostPID":state["hostPID"] ?? 0,"rows":rows,"width":window.frame.width,"height":window.frame.height,"engine":"WKWebView","language":interfaceLanguage,"menuTitles":NSApp.mainMenu?.items.flatMap{$0.submenu?.items.map{$0.title} ?? []} ?? [],"settingsOpen":managementOpen,"dragAreaInstalled":window.contentView?.subviews.contains(where:{$0 is CenterDragArea}) == true,"trafficLightCenters":trafficLightCenters(),"integratedTitlebar":window.styleMask.contains(.fullSizeContentView) && window.titleVisibility == .hidden],root+"/center-view.json")
+  try? atomic(["pid":getpid(),"hostPID":state["hostPID"] ?? 0,"rows":rows,"width":window.frame.width,"height":window.frame.height,"engine":"WKWebView","language":interfaceLanguage,"menuTitles":NSApp.mainMenu?.items.flatMap{$0.submenu?.items.map{$0.title} ?? []} ?? [],"settingsOpen":managementOpen,"dragAreaInstalled":window.contentView?.subviews.contains(where:{$0 is CenterDragArea}) == true,"trafficLightCenters":CenterWindowLayout.trafficLightCenters(in:window),"integratedTitlebar":window.styleMask.contains(.fullSizeContentView) && window.titleVisibility == .hidden],root+"/center-view.json")
   if let id=ownBatch,let batch=batches.first(where:{$0["id"] as? String==id}){
    let all=batch["items"] as! [[String:Any]]
    let accepted=all.allSatisfy{$0["accepted"] as? Bool==true}
@@ -246,9 +228,19 @@ final class Center:NSObject,NSApplicationDelegate,NSWindowDelegate,WKNavigationD
  }
  func webView(_ webView:WKWebView,decidePolicyFor navigationAction:WKNavigationAction,decisionHandler:@escaping(WKNavigationActionPolicy)->Void){decisionHandler(navigationAction.request.url?.standardizedFileURL==page ? .allow:.cancel)}
  func webView(_ webView:WKWebView,createWebViewWith configuration:WKWebViewConfiguration,for navigationAction:WKNavigationAction,windowFeatures:WKWindowFeatures)->WKWebView?{nil}
+ var hasUnfinishedEditsOrSaves:Bool { dirty || pendingWrites>0 }
+ func confirmClose()->Bool{
+  guard hasUnfinishedEditsOrSaves else{return true}
+  let alert=NSAlert();alert.messageText=localized(msg("ui.there_are_unfinished_edits_or_saves_close"))
+  alert.addButton(withTitle:localized(msg("ui.continue_editing")));alert.addButton(withTitle:localized(msg("ui.close_214")))
+  return alert.runModal() == .alertSecondButtonReturn
+ }
  func windowShouldClose(_ sender:NSWindow)->Bool{
   if !hidden && hostPid != 0 { logCenter("hide","window-close hostPid=\(hostPid)"); fadeAndHide(); return false }
-  if dirty || pendingWrites>0 {let alert=NSAlert();alert.messageText=localized(msg("ui.there_are_unfinished_edits_or_saves_close"));alert.addButton(withTitle:localized(msg("ui.continue_editing")));alert.addButton(withTitle:localized(msg("ui.close_214")));return alert.runModal() == .alertSecondButtonReturn};return true
+  guard hasUnfinishedEditsOrSaves else{return true}
+  // Keep the window alive while AppKit asks once whether to discard pending changes.
+  DispatchQueue.main.async { NSApp.terminate(nil) }
+  return false
  }
  @objc func showAboutPanel(){
   let credits=NSMutableAttributedString(string:"Qiuyue · Codex",attributes:[.font:NSFont.systemFont(ofSize:11)])
@@ -272,9 +264,9 @@ final class Center:NSObject,NSApplicationDelegate,NSWindowDelegate,WKNavigationD
   // The update handoff already asked the host to save and exit; the centre must
   // terminate instead of being converted into a hide.
   if updateTerminating { logCenter("terminate","update-handoff"); return .terminateNow }
-  if hidden { return .terminateNow }
-  if hostPid != 0 && ProcessInfo.processInfo.environment["NARUTO_C_FIXTURE"] != "1" { logCenter("hide","app-terminate hostPid=\(hostPid)"); fadeAndHide(); return .terminateCancel }
-  if dirty || pendingWrites>0 {return windowShouldClose(window) ? .terminateNow:.terminateCancel};return .terminateNow
+  if !hidden && hostPid != 0 && ProcessInfo.processInfo.environment["NARUTO_C_FIXTURE"] != "1" { logCenter("hide","app-terminate hostPid=\(hostPid)"); fadeAndHide(); return .terminateCancel }
+  if hidden && hasUnfinishedEditsOrSaves { showWindow() }
+  return confirmClose() ? .terminateNow:.terminateCancel
  }
  func applicationWillTerminate(_ n:Notification){logCenter("will-terminate","hidden=\(hidden) hostPid=\(hostPid)");timer?.invalidate();web?.configuration.userContentController.removeScriptMessageHandler(forName:"narutoCore");if lock>=0{_ = try? rpc(root,"center",token,"center.closed",["pid":getpid()]);close(lock)}}
 }

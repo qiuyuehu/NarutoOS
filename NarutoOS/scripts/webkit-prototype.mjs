@@ -3,6 +3,7 @@ import { execFileSync, spawn } from 'node:child_process';
 import { mkdirSync, mkdtempSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
 import electron from 'electron';
+import { webLoginSources } from './web-login-sources.mjs';
 
 mkdirSync('.test-artifacts', { recursive: true });
 const directory = mkdtempSync(path.resolve('.test-artifacts/webkit-prototype-'));
@@ -18,7 +19,7 @@ writeFileSync(path.join(bundle, 'Contents/Info.plist'), `<?xml version="1.0" enc
 <key>NSHighResolutionCapable</key><true/>
 </dict></plist>`);
 const helper = path.join(bundle, 'Contents/MacOS/WebLoginPrototype');
-execFileSync('/usr/bin/xcrun', ['swiftc', '-parse-as-library', 'native/WebLoginPrototype.swift', '-O', '-o', helper], { stdio: 'inherit' });
+execFileSync('/usr/bin/xcrun', ['swiftc', '-parse-as-library', ...webLoginSources, '-O', '-o', helper], { stdio: 'inherit' });
 await build({ entryPoints: ['src/main/game.ts', 'src/main/flash.ts', 'src/preload/game.ts'], outdir: directory, outbase: 'src', bundle: true,
   platform: 'node', target: 'node12', external: ['electron'] });
 const env = { ...process.env, NARUTO_WEBKIT_DIRECTORY: directory, NARUTO_WEBKIT_HELPER: helper };

@@ -1,0 +1,1 @@
+package task.defs {public class TaskTypeDef {public static const WANTED:int=10;}}

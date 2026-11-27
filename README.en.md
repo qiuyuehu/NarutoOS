@@ -11,7 +11,7 @@
 <p align="center">
   <a href="https://github.com/qiuyuehu/NarutoOS/releases/latest"><strong>Download for macOS</strong></a> ·
   <a href="#download-and-installation">Installation</a> ·
-  <a href="NarutoOS/docs/INSTALL.md#从源码运行">Run from source</a> ·
+  <a href="NarutoOS/README.md#运行">Run from source</a> ·
   <a href="https://github.com/qiuyuehu/NarutoOS/issues">Report an issue</a>
 </p>
 
@@ -19,17 +19,12 @@
 
 ## Download and Installation
 
-Download the latest `NarutoOS-*-macOS-AppleSilicon.zip` from [GitHub Releases](https://github.com/qiuyuehu/NarutoOS/releases). Unzip it and drag **Naruto OS.app** into Applications. Flash is included; you do not need to install Node.js or developer tools for normal use.
+Download the ZIP for your Mac from [GitHub Releases](https://github.com/qiuyuehu/NarutoOS/releases/latest). Check **About This Mac** to find your chip.
 
-If you have GitHub CLI installed, you can download and open it from Terminal:
+- **Apple Silicon (M series), macOS 15 or later** — choose `-macOS-AppleSilicon.zip`. Install Rosetta if prompted when opening the game.
+- **Intel, macOS 12 or later** — choose `-macOS-Intel-Test.zip`. This is the Intel test build targeting Monterey.
 
-```sh
-gh release download --repo qiuyuehu/NarutoOS --pattern 'NarutoOS-*-macOS-AppleSilicon.zip'
-ditto -xk NarutoOS-*-macOS-AppleSilicon.zip .
-open "Naruto OS.app"
-```
-
-An Apple Silicon Mac running macOS 15 or later is required. The game uses an Intel build of Electron and runs through Rosetta. Follow the system prompt if macOS asks you to install Rosetta.
+Unzip the download and drag **Naruto OS.app** into Applications. Flash is included. Starting with 0.3.14, in-app updates select the matching build automatically. Users of the 0.3.13 Intel test build need to install the new version manually once.
 
 The app is locally signed and has not been notarized by Apple. If macOS blocks it on first launch, confirm that the app came from this repository, then follow [Apple's instructions](https://support.apple.com/en-us/102445) to open it.
 
