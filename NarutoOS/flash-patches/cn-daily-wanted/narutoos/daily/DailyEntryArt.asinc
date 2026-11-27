@@ -1,0 +1,25 @@
+      private static function decorateEntry(entry:Sprite):void
+      {
+         var portrait:DailyEntryPortrait = new DailyEntryPortrait();
+         var transform:Matrix = new Matrix();
+         transform.scale(49 / portrait.width, 49 / portrait.height);
+         transform.translate(3.5, 2.5);
+
+         var g:Graphics = entry.graphics;
+         g.beginFill(0x382B22);
+         g.drawCircle(28, 27, 26.5);
+         g.endFill();
+         g.beginFill(0xD5B673);
+         g.drawCircle(28, 27, 25.5);
+         g.endFill();
+         g.beginBitmapFill(portrait, transform, false, true);
+         g.drawCircle(28, 27, 24.5);
+         g.endFill();
+
+         // The CN HUD uses Song-style captions. macOS provides Songti SC as a device font.
+         var caption:TextField = makeLabel("日常助手", -4, 50, ENTRY_WIDTH + 8, 19, 13, TextFormatAlign.CENTER);
+         caption.setTextFormat(new TextFormat("Songti SC", 13, 0xFFFFFF, false, false, false,
+                                              null, null, TextFormatAlign.CENTER));
+         caption.filters = [new GlowFilter(0x17100C, 1, 2.5, 2.5, 5, 2)];
+         entry.addChild(caption);
+      }

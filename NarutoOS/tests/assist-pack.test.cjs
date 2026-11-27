@@ -63,13 +63,18 @@ test('non-SWF payload is rejected',()=>{
 
 test('two modules claiming the same resource are both rejected, independent of order',()=>{
   const a=assistModule([target()]),b={id:'second',nameKey:'ui.assist_scripts',targets:[target()]};
-  const forward=readAssistPack(pack([a,b]));
-  const reverse=readAssistPack(pack([b,a]));
-  assert.equal(forward.modules.length,0,'no module may win a shared resource by being declared first');
-  assert.equal(reverse.modules.length,0);
-  assert.equal(forward.rejected.length,2);
-  assert.equal(reverse.rejected.length,2);
-  for(const item of forward.rejected)assert.match(item.reason,/资源冲突/);
+  const independent={id:'independent',nameKey:'ui.assist_scripts',
+    targets:[target({url:'https://example.com/independent.swf'})]};
+  for(const modules of [[a,b,independent],[independent,b,a]]){
+    const result=readAssistPack(pack(modules));
+    assert.deepEqual(result.modules.map(item=>item.id),['independent']);
+    assert.deepEqual(result.rejected.map(item=>item.moduleId).sort(),[a.id,b.id]);
+    for(const item of result.rejected){
+      assert.ok(item.reason.includes(target().url));
+      assert.ok(item.reason.includes(a.id));
+      assert.ok(item.reason.includes(b.id));
+    }
+  }
 });
 
 test('a broken module does not block a healthy one that declares the same resource',()=>{
@@ -92,4 +97,81 @@ test('shipped pack matches its manifest',()=>{
   const result=readAssistPack(path.join(root,'assets/assists'));
   assert.equal(result.rejected.length,0);
   assert.ok(result.modules.length>=1);
+});
+
+test('daily wanted is offered only on its registered CN HUD with assists enabled', () => {
+  const output = path.join(work, 'manager.cjs');
+  buildSync({entryPoints: [path.join(root, 'src/main/assist-manager.ts')], outfile: output,
+    bundle: true, platform: 'node', format: 'cjs', external: ['electron']});
+  const {createAssistManager} = require(output);
+  const checkout = fs.mkdtempSync(path.join(work, 'checkout-'));
+  fs.symlinkSync(path.join(root, 'assets'), path.join(checkout, 'assets'));
+  for (const packaged of [false, true]) {
+    assert.equal(createAssistManager(checkout, packaged, false, work, () => {}), undefined);
+    const manager = createAssistManager(checkout, packaged, true, work, () => {});
+    const module = manager.status().modules.find(item => item.id === 'cn-daily-wanted');
+    assert.equal(module.state, 'ready');
+    assert.deepEqual(module.regions, ['cn']);
+    const hud = manager.resources.find(resource => resource.url ===
+      'https://res.huoying.qq.com/NarutoBeta11.17Build302/flash/hud/HudPlugin.swf');
+    // Verified against the complete CN response body and its cache record's size and CRC.
+    assert.equal(hud?.baseSha256, '104b64041595404be4b6537023c97938deb9dd87d184db668633b3af6b0031bc');
+  }
+});
+
+test('manager records extra resource acceptance, failure and conflict by source', () => {
+  const output = path.join(work, 'manager-extra.cjs');
+  buildSync({entryPoints:[path.join(root,'src/main/assist-manager.ts')],outfile:output,
+    bundle:true,platform:'node',format:'cjs',external:['electron']});
+  const {createAssistManager} = require(output);
+  const checkout = fs.mkdtempSync(path.join(work,'checkout-extra-'));
+  fs.symlinkSync(path.join(root,'assets'),path.join(checkout,'assets'));
+  const resource = url => ({url,bytes:swf,contentType:'application/x-shockwave-flash',baseSha256:digest(swf)});
+  const bundledURL = 'https://res.huoying.qq.com/NarutoBeta11.17Build302/flash/hud/HudPlugin.swf';
+  const acceptedURL = 'https://cdnnaruto-pt.oasgames.com/PT_NarutoAlpha9.40Build300/flash/other/OtherPlugin.swf';
+  const speedURL = 'https://cdnnaruto-pt.oasgames.com/PT_NarutoAlpha9.40Build300/flash/core/naruto.core.swf';
+  const extra = [
+    {moduleId:'activity-assist',region:'br',variant:'localized-assist',target:acceptedURL,resource:resource(acceptedURL)},
+    {moduleId:'speed-assist',region:'cn',variant:'NarutoBeta11.17Build302',target:bundledURL,resource:resource(bundledURL)},
+    {moduleId:'speed-assist',region:'br',variant:'NarutoAlpha9.40Build300',target:'https://speed.invalid/cn.swf',failure:'补丁摘要不匹配'},
+    {moduleId:'speed-assist',region:'cn',variant:'cn-build',target:acceptedURL,resource:resource(acceptedURL)},
+    {moduleId:'speed-assist',region:'br',variant:'br-build',target:speedURL,resource:resource(speedURL)},
+  ];
+  const manager = createAssistManager(checkout,true,true,work,()=>{},extra);
+  const status = manager.status();
+  assert.equal(status.extraResources[0].state,'accepted');
+  assert.equal(status.extraResources[0].moduleId,'activity-assist');
+  assert.equal(status.extraResources[0].variant,'localized-assist');
+  assert.equal(status.extraResources[1].state,'conflict');
+  assert.equal(status.extraResources[1].moduleId,'speed-assist');
+  assert.equal(status.extraResources[1].occupiedBy,'cn-daily-wanted');
+  assert.match(status.extraResources[1].reason,/HudPlugin\.swf/);
+  assert.equal(status.extraResources[2].state,'unavailable');
+  assert.equal(status.extraResources[2].region,'br');
+  assert.match(status.extraResources[2].reason,/摘要不匹配/);
+  assert.equal(status.extraResources[3].state,'conflict');
+  assert.equal(status.extraResources[3].occupiedBy,'activity-assist');
+  assert.match(status.extraResources[3].reason,/speed-assist.*activity-assist|activity-assist.*speed-assist/);
+  assert.equal(status.extraResources[4].state,'accepted','the same source may keep its independent target');
+  assert.ok(manager.resources.includes(extra[0].resource),'accepted resources retain identity for speed override filtering');
+  assert.ok(!manager.resources.includes(extra[1].resource),'a conflicting resource is never registered');
+  assert.ok(manager.resources.includes(extra[4].resource));
+});
+
+test('extras remain diagnosable and register when the master assist switch is off', () => {
+  const output = path.join(work, 'manager-disabled-extra.cjs');
+  buildSync({entryPoints:[path.join(root,'src/main/assist-manager.ts')],outfile:output,
+    bundle:true,platform:'node',format:'cjs',external:['electron']});
+  const {createAssistManager} = require(output);
+  const checkout = fs.mkdtempSync(path.join(work,'checkout-disabled-extra-'));
+  const resource = {url:'https://speed.invalid/cn.swf',bytes:swf,contentType:'application/x-shockwave-flash'};
+  const manager = createAssistManager(checkout,false,false,work,()=>{},[
+    {moduleId:'game-speed',region:'cn',variant:'build-1',target:resource.url,resource},
+  ]);
+  assert.ok(manager);
+  assert.equal(manager.status().enabled,false,'status.enabled reports the master assist switch');
+  assert.equal(manager.status().modules.length,0);
+  assert.equal(manager.status().extraResources[0].state,'accepted');
+  assert.ok(manager.resources.includes(resource));
+  assert.equal(createAssistManager(checkout,false,false,work,()=>{}),undefined);
 });

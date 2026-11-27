@@ -334,7 +334,7 @@ export class LoginSessions {
   private async persist(entries: Array<[string, Profile]>) {
     entries = entries.filter(([partition, profile]) => !this.deleting.has(partition) && !this.blockedDeletes.has(partition) && this.profiles.get(partition) === profile);
     if (!entries.length) return;
-    for (const [partition, profile] of entries) {
+    for (const [, profile] of entries) {
       this.cancelTimer(profile);
       if (profile.restorePending && !profile.changes.size) continue;
       await profile.session.cookies.flushStore();

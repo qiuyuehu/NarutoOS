@@ -64,9 +64,27 @@ final class Updater {
         }
         guard acquireLock() else { log("lock-busy"); return 0 }
         log("start", "update=\(record.updateID) from=\(record.fromVersion) to=\(record.toVersion) stage=\(record.stage)")
+        do {
+            try verifyHelperContract()
+        } catch {
+            if record.stage == UpdateStage.launched || record.stage == UpdateStage.confirmed {
+                return failAfterLaunch()
+            }
+            failBeforeCommit(error)
+            return 1
+        }
         if record.stage == UpdateStage.launched || record.stage == UpdateStage.confirmed {
             // A previous helper already submitted the replacement. Only a launch
             // confirmation can decide whether the new application is healthy.
+            do {
+                guard let version = ReleaseVersion.parse(record.toVersion) else {
+                    throw updateFailure("update.record_invalid")
+                }
+                try validateApplication(record.targetApp, expected: version,
+                                        options: BundleValidationOptions(verifySignature: false, expectedChannel: .current))
+            } catch {
+                return failAfterLaunch()
+            }
             return awaitConfirmationOnly()
         }
         guard waitForOldProcesses() else {
@@ -144,12 +162,21 @@ final class Updater {
 
     // MARK: - Verification
 
+    private func verifyHelperContract() throws {
+        guard let version = ReleaseVersion.parse(record.toVersion),
+              expectedAssetName(for: version) == record.assetName,
+              machOArchitectures(CommandLine.arguments[0]).contains(UpdateChannel.current.architecture) else {
+            throw updateFailure("update.unsupported_arch")
+        }
+    }
+
     private func verifyStaging() throws {
         guard pathExists(record.stagingDir), !pathIsSymlink(record.stagingDir), fileOwnerMatches(record.stagingDir) else {
             throw updateFailure("update.helper_staging_invalid")
         }
         guard let version = ReleaseVersion.parse(record.toVersion) else { throw updateFailure("update.record_invalid") }
-        try validateApplication(record.stagingApp, expected: version)
+        try validateApplication(record.stagingApp, expected: version,
+                                options: BundleValidationOptions(expectedChannel: .current))
         log("staging-validated", record.toVersion)
     }
 
@@ -157,9 +184,12 @@ final class Updater {
         guard pathExists(record.targetApp), !pathIsSymlink(record.targetApp) else {
             throw updateFailure("update.helper_target_changed")
         }
+        guard let version = ReleaseVersion.parse(record.fromVersion) else { throw updateFailure("update.record_invalid") }
+        try validateApplication(record.targetApp, expected: version,
+                                options: BundleValidationOptions(verifySignature: false, expectedChannel: .current))
         let identity = try inspectApplication(record.targetApp)
         guard identity.bundleID == UpdateContract.outerBundleID else { throw updateFailure("update.helper_target_changed") }
-        guard let version = ReleaseVersion.parse(identity.version), version.description == record.fromVersion else {
+        guard ReleaseVersion.parse(identity.version)?.description == record.fromVersion else {
             throw updateFailure("update.helper_target_changed")
         }
         log("target-validated", record.fromVersion)
@@ -195,7 +225,9 @@ final class Updater {
         log("new-placed")
         guard let version = ReleaseVersion.parse(record.toVersion) else { throw updateFailure("update.record_invalid") }
         do {
-            try validateApplication(record.targetApp, expected: version, options: BundleValidationOptions(verifySignature: true, checkArchitecture: true, requireResources: true))
+            try validateApplication(record.targetApp, expected: version,
+                                    options: BundleValidationOptions(verifySignature: true, checkArchitecture: true,
+                                                                     requireResources: true, expectedChannel: .current))
         } catch {
             throw updateFailure("update.helper_placed_invalid")
         }

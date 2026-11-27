@@ -4,7 +4,7 @@ import { mkdirSync, mkdtempSync, readFileSync } from 'node:fs';
 import path from 'node:path';
 import electron from 'electron';
 
-await build({ entryPoints: ['src/main/game.ts', 'src/main/login-sessions.ts', 'src/main/account-profiles.ts'], outdir: 'dist/session-test', bundle: true,
+await build({ entryPoints: { game: 'src/main/game.ts', 'login-sessions': 'src/main/login-sessions.ts', 'account-profiles': 'src/main/account-profiles.ts', i18n: 'src/shared/i18n.ts' }, outdir: 'dist/session-test', bundle: true,
   platform: 'node', target: 'node12', external: ['electron'] });
 mkdirSync('.test-artifacts', { recursive: true });
 const directory = mkdtempSync(path.resolve('.test-artifacts/login-sessions-'));

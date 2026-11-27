@@ -6,6 +6,10 @@ const {GameSessions}=require('../dist/web-login-test/main/game.js');
 const {WebLogin}=require('../dist/web-login-test/main/web-login.js');
 const {Navigation}=require('../dist/web-login-test/main/navigation.js');
 const {LoginSessions}=require('../dist/web-login-test/main/login-sessions.js');
+const {attachTaskQueue}=require('./helpers/host-task-queue.cjs');
+const {TaskQueue}=require('../dist/web-login-test/prototype/host/task-queue.js');
+const toolbarState=require('../dist/web-login-test/prototype/host/toolbar-state.js');
+const {createSpeedCoordinator,SPEED_RETRY_MS}=require('../dist/web-login-test/prototype/host/speed-coordinator.js');
 app.setPath('userData',process.env.NARUTO_REFRESH_CHECK_ROOT);
 app.on('window-all-closed',()=>{});
 const pause=ms=>new Promise(r=>setTimeout(r,ms));
@@ -19,12 +23,22 @@ app.whenReady().then(async()=>{
   await new Promise(r=>server.listen(0,'127.0.0.1',r));const fixture=`http://127.0.0.1:${server.address().port}/`;
   win=new BrowserWindow({show:false,width:1100,height:760,webPreferences:{preload:path.resolve('dist/prototype/host-preload.js'),contextIsolation:true,nodeIntegration:false,sandbox:true}});
   const ast=ts.createSourceFile('host.ts',fs.readFileSync('src/prototype/host/main.ts','utf8'),ts.ScriptTarget.Latest,true);const sources=[];
-  const names=['sameAttempt','restoreRecoveryPage','clearNotice','report','visibleTabs','foregroundLogin','paint','runtimeChanged','refreshState','enqueueRecovery','executeNext','runNext'];
+  const names=['clearNotice','report','visibleTabs','foregroundLogin','paint','runtimeChanged','refreshState','openSpeedMenu'];
   function visit(n){if(ts.isFunctionDeclaration(n)&&names.includes(n.name?.text))sources.push(n.getText(ast));if(ts.isCallExpression(n)&&n.expression.getText(ast)==='ipcMain.handle'&&n.arguments[0]?.getText(ast)==="'prototype:command'")sources.push('var handler='+n.arguments[1].getText(ast));ts.forEachChild(n,visit)}visit(ast);
-  const ctx={lastToolbarState:undefined,loginPages:new Map(),noticeTimer:undefined,noticeKind:'info',noticeScope:'',setTimeout,clearTimeout,win,shutting:false,fixture:false,exitState:'running',prefs:{},notice:'',tasks:new Map(),queue:[],recoveryQueue:[],executing:undefined,executionIdle:undefined,executingRecovery:false,recoveryAwait:false,pendingSave:undefined,paint(){}};Object.assign(ctx,i18n);vm.createContext(ctx);vm.runInContext(ts.transpileModule(sources.join('\n'),{compilerOptions:{target:ts.ScriptTarget.ES2020}}).outputText,ctx);
+  const ctx={lastToolbarState:undefined,loginPages:new Map(),noticeTimer:undefined,noticeKind:'info',noticeScope:'',setTimeout,clearTimeout,win,hostShutdown:{stopping:false,state:'running'},fixture:false,prefs:{},notice:'',tasks:new Map(),queue:[],recoveryQueue:[],executing:undefined,executionIdle:undefined,executingRecovery:false,recoveryAwait:false,pendingSave:undefined,paint(){}};Object.assign(ctx,i18n,toolbarState);attachTaskQueue(ctx,TaskQueue);vm.createContext(ctx);vm.runInContext(ts.transpileModule(sources.join('\n'),{compilerOptions:{target:ts.ScriptTarget.ES2020}}).outputText,ctx);
   const sessions=new LoginSessions(async action=>action==='read'?'[]':'',()=>{});
   games=new GameSessions(win,()=>ctx.runtimeChanged(),message=>{ctx.notice=message;ctx.paint()},undefined,false,sessions);
   const navigation=new Navigation(games);ctx.games=games;ctx.navigation=navigation;
+  let speedTime=SPEED_RETRY_MS,verifiedContents,menu;
+  const speedSaves=[],speedPushes=[];
+  ctx.speed=createSpeedCoordinator({
+    enabled:true,rememberedRate:1,getTabs:()=>games.tabs,
+    trackedStatus:contents=>contents===verifiedContents?'verified':'pending',
+    isShuttingDown:()=>ctx.hostShutdown.stopping,now:()=>speedTime,
+    pushSpeed:rate=>{speedPushes.push(rate);return 1},saveRate:async rate=>{speedSaves.push(rate)},
+    report:ctx.report,paint:ctx.paint,hostEvent(){},
+  });
+  ctx.Menu={buildFromTemplate(items){menu=items;return {popup(){}}}};
   login=new WebLogin(win,games,sessions,navigation,path.resolve('dist/native/embedded-login.node'),message=>{ctx.notice=message;ctx.paint()},{fixture,visible:false},()=>ctx.runtimeChanged());ctx.login=login;
   ipcMain.handle('prototype:command',(event,input)=>ctx.handler(event,input));ipcMain.handle('game:quality',()=>({ok:true,value:'high'}));ipcMain.handle('game:form-state',()=>({ok:true}));
   await win.loadFile(path.resolve('dist/prototype/toolbar.html'));
@@ -34,6 +48,44 @@ app.whenReady().then(async()=>{
   navigation.selectGame(original.id);await games.waitForReady(original.id);ctx.runtimeChanged();
   const ui=code=>win.webContents.executeJavaScript(code);
   await until(async()=>await ui('document.querySelectorAll(".tab").length===1'));
+  const speedLabel=()=>ui('document.getElementById("speed").textContent');
+  const openSpeedMenu=async()=>{
+    menu=undefined;
+    await ui('document.getElementById("speed").click()');
+    await until(()=>menu);
+  };
+  ctx.fixture=true;
+  verifiedContents=original.view.webContents;
+  await openSpeedMenu();
+  check('verified page enables all ten rates in the host menu',menu.length===10&&menu.every(item=>item.enabled));
+  menu[4].click();
+  await until(async()=>await speedLabel()==='5×');
+
+  const refreshAtFive=async()=>{
+    verifiedContents=undefined;
+    await ui('document.getElementById("refresh").click()');
+    await until(async()=>await speedLabel()==='1×');
+    await openSpeedMenu();
+    check('refresh falls back to 1× and disables all higher rates in the host menu',
+      menu[0].checked&&menu[0].enabled&&menu.slice(1).every(item=>!item.enabled)&&speedPushes[speedPushes.length - 1]===1);
+  };
+  const verifyRefreshedPage=async()=>{
+    await games.waitForReady(original.id);
+    speedTime+=SPEED_RETRY_MS;
+    verifiedContents=original.view.webContents;
+    ctx.runtimeChanged();
+  };
+  await refreshAtFive();
+  await verifyRefreshedPage();
+  await until(async()=>await speedLabel()==='5×');
+  check('verified refresh restores 5× without another Core write',speedPushes[speedPushes.length - 1]===5&&speedSaves.join(',')==='5');
+
+  await refreshAtFive();
+  menu[0].click();
+  await verifyRefreshedPage();
+  check('choosing displayed 1× during refresh cancels restore through the host menu',
+    await speedLabel()==='1×'&&speedPushes[speedPushes.length - 1]===1&&speedSaves.join(',')==='5');
+  ctx.fixture=false;
   await original.view.webContents.executeJavaScript('document.getElementById("disconnect").click()');
   await until(()=>original.state==='failed');
   await until(async()=>await ui('!document.getElementById("placeholder").hidden'));
@@ -59,7 +111,7 @@ app.whenReady().then(async()=>{
   await until(()=>!login.busy&&games.tabs.length===1);
   check('completing switch removes only A and retains B',games.tabs[0].id===secondCandidate&&games.activeId===secondCandidate);
   await until(async()=>await ui('document.querySelectorAll(".tab").length===1'));
-  check('recovery queue drains after cancellation and completion',ctx.executing===undefined&&ctx.recoveryQueue.length===0);
+  check('recovery queue drains after cancellation and completion',ctx.taskQueue.active===undefined&&ctx.recoveryQueue.length===0);
   await ui('document.getElementById("refresh").click()');
   await until(()=>login.operation?.stage==='confirming');const thirdCandidate=login.operation.candidateId;
   await until(async()=>await ui('document.querySelectorAll(".tab").length===2'));
@@ -87,7 +139,17 @@ app.whenReady().then(async()=>{
   await until(async()=>await ui('document.getElementById("notice").textContent.includes("合成错误")'));
   check('narrow game window retains actionable error notice',await ui('getComputedStyle(document.getElementById("notice")).display!=="none"&&!document.getElementById("notice").disabled'));
   ctx.pendingSave=undefined;ctx.runtimeChanged();check('dismissing password prompt restores game height',games.top===42);
-  await login.close();games.destroy();win.destroy();server.close();clearTimeout(watchdog);
+  await login.close();
+  await surviving.view.webContents.loadURL(fixture+'game');
+  await games.waitForReady(surviving.id);
+  verifiedContents=surviving.view.webContents;
+  await openSpeedMenu();menu[4].click();
+  await until(async()=>await speedLabel()==='5×');
+  games.destroy();
+  await until(async()=>await speedLabel()==='1×');
+  check('closing the last tab resets the toolbar and delivers 1× without saving',
+    speedPushes[speedPushes.length - 1]===1&&speedSaves.join(',')==='5,5');
+  win.destroy();server.close();clearTimeout(watchdog);
   fs.writeFileSync(path.join(process.env.NARUTO_REFRESH_CHECK_ROOT,'results.json'),JSON.stringify({ok:true,results},null,2));app.exit(0);
  }catch(error){console.error(error.stack);fs.writeFileSync(path.join(process.env.NARUTO_REFRESH_CHECK_ROOT,'results.json'),JSON.stringify({ok:false,results,error:error.message},null,2));app.exit(1)}
 });

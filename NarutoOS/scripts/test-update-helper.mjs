@@ -3,6 +3,7 @@
 // no real application, account data or release source is touched.
 import fs from 'node:fs';
 import path from 'node:path';
+import { updateSourcePaths } from './update-sources.mjs';
 import crypto from 'node:crypto';
 import { execFileSync, spawn } from 'node:child_process';
 const project = path.resolve(import.meta.dirname, '..');
@@ -11,13 +12,24 @@ fs.rmSync(artifacts, { recursive: true, force: true });
 fs.mkdirSync(artifacts, { recursive: true });
 const moduleCache = path.join(project, 'dist/swift-module-cache');
 fs.mkdirSync(moduleCache, { recursive: true });
-const target = (process.arch === 'arm64' ? 'arm64' : 'x86_64') + '-apple-macos15.0';
-const updaterBinary = path.join(project, 'dist/prototype/native/updater');
-if (!fs.existsSync(updaterBinary)) {
-  execFileSync('/usr/bin/xcrun', ['swiftc', '-target', target, '-O', '-module-cache-path', moduleCache,
-    'src/prototype/native/Transport.swift', 'src/prototype/native/I18n.swift', 'src/prototype/native/Update.swift', 'src/prototype/native/Updater.swift',
-    '-o', updaterBinary], { stdio: 'inherit', cwd: project });
+const channels = {
+  appleSilicon: { name: 'AppleSilicon', arch: 'arm64', marker: false, suffix: '-macOS-AppleSilicon.zip' },
+  intelTest: { name: 'Intel-Test', arch: 'x86_64', marker: true, suffix: '-macOS-Intel-Test.zip' }
+};
+const updaterBinaries = {};
+for (const [key, channel] of Object.entries(channels)) {
+  const output = path.join(artifacts, 'updater-' + channel.arch);
+  execFileSync('/usr/bin/xcrun', ['swiftc', '-target', channel.arch + '-apple-macos15.0', '-O', '-module-cache-path', moduleCache,
+    'src/prototype/native/Transport.swift', 'src/prototype/native/I18n.swift', ...updateSourcePaths, 'src/prototype/native/Updater.swift',
+    '-o', output], { stdio: 'inherit', cwd: project });
+  updaterBinaries[key] = output;
 }
+function canExecuteArch(arch) {
+  try { execFileSync('/usr/bin/arch', ['-' + arch, '/usr/bin/true'], { stdio: 'ignore' }); return true; }
+  catch { return false; }
+}
+const intelExecutionAvailable = canExecuteArch('x86_64');
+const armExecutionAvailable = canExecuteArch('arm64');
 const messages = path.join(project, 'src/shared/messages.json');
 const results = [];
 function check(name, ok, detail = '') {
@@ -33,7 +45,9 @@ function compileC(source, output, arch) {
 }
 function plist(values) {
   const lines = ['<?xml version="1.0" encoding="UTF-8"?>', '<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">', '<plist version="1.0"><dict>'];
-  for (const [key, value] of Object.entries(values)) lines.push('<key>' + key + '</key><string>' + value + '</string>');
+  for (const [key, value] of Object.entries(values)) {
+    lines.push('<key>' + key + '</key>' + (value === true ? '<true/>' : '<string>' + value + '</string>'));
+  }
   lines.push('</dict></plist>');
   return lines.join('\n');
 }
@@ -41,17 +55,22 @@ const binDirectory = path.join(artifacts, 'bin');
 fs.mkdirSync(binDirectory, { recursive: true });
 const noopArm = compileC('int main(void){return 0;}\n', path.join(binDirectory, 'noop-arm'), 'arm64');
 const noopX86 = compileC('int main(void){return 0;}\n', path.join(binDirectory, 'noop-x86'), 'x86_64');
+const nativeUpdaterKey = process.arch === 'x64' ? 'intelTest' : 'appleSilicon';
 const confirmSource = (file, updateID, target) => '#include <stdio.h>\nint main(void){FILE*f=fopen("' + file + '","w");if(f){fputs("{\\"updateID\\":\\"' + updateID + '\\",\\"version\\":\\"9.9.9\\",\\"targetApp\\":\\"' + target + '\\"}",f);fclose(f);}return 0;}\n';
 function makeApplication(appPath, version, outerExecutable, options = {}) {
   const extraAbsoluteLink = options.extraAbsoluteLink === true;
+  const channelKey = options.channelKey || nativeUpdaterKey;
+  const channel = channels[channelKey];
   fs.rmSync(appPath, { recursive: true, force: true });
   const contents = path.join(appPath, 'Contents');
   fs.mkdirSync(path.join(contents, 'MacOS'), { recursive: true });
-  fs.writeFileSync(path.join(contents, 'Info.plist'), plist({
+  const appInfo = {
     CFBundleDisplayName: 'Naruto OS', CFBundleName: 'Naruto OS', CFBundleExecutable: 'Naruto OS',
     CFBundleIdentifier: 'cn.youye.naruto-os', CFBundleShortVersionString: version, CFBundleVersion: version,
     CFBundlePackageType: 'APPL', LSMinimumSystemVersion: '15.0'
-  }));
+  };
+  if (channel.marker) appInfo.NarutoOSIntelTest = true;
+  fs.writeFileSync(path.join(contents, 'Info.plist'), plist(appInfo));
   fs.copyFileSync(outerExecutable, path.join(contents, 'MacOS/Naruto OS'));
   const gameApp = path.join(contents, 'Helpers/Naruto OS 游戏.app');
   fs.mkdirSync(path.join(gameApp, 'Contents/MacOS'), { recursive: true });
@@ -71,8 +90,8 @@ function makeApplication(appPath, version, outerExecutable, options = {}) {
   fs.writeFileSync(path.join(resources, 'build-info.json'), JSON.stringify({ version, buildID: crypto.randomUUID() }));
   fs.writeFileSync(path.join(resources, 'package.json'), JSON.stringify({ name: 'naruto-os', version }));
   for (const file of files.slice(2)) fs.writeFileSync(path.join(resources, file), '');
-  fs.copyFileSync(noopArm, path.join(resources, 'dist/prototype/native/core'));
-  fs.copyFileSync(updaterBinary, path.join(resources, 'dist/prototype/native/updater'));
+  fs.copyFileSync(channel.arch === 'arm64' ? noopArm : noopX86, path.join(resources, 'dist/prototype/native/core'));
+  fs.copyFileSync(updaterBinaries[channelKey], path.join(resources, 'dist/prototype/native/updater'));
   if (extraAbsoluteLink) fs.symlinkSync(path.join(appPath, 'Contents/MacOS/Naruto OS'), path.join(contents, 'Resources/absolute-link'));
   execFileSync('/usr/bin/codesign', ['--force', '--deep', '--sign', '-', '--timestamp=none', appPath], { stdio: 'inherit' });
   execFileSync('/usr/bin/codesign', ['--verify', '--deep', '--strict', appPath], { stdio: 'inherit' });
@@ -89,12 +108,12 @@ function writeRecord(root, values) {
     backupApp: path.join(root, 'Applications/.NarutoOS-backup-' + values.id),
     taskDir, updateRoot, downloadFile: path.join(taskDir, 'package.zip'),
     updaterPath: path.join(taskDir, 'naruto-updater'), messagesPath: path.join(taskDir, 'messages.json'),
-    language: 'zh-CN', releaseID: 1, assetID: 2, assetName: 'NarutoOS-' + values.toVersion + '-macOS-AppleSilicon.zip', tag: 'v' + values.toVersion,
+    language: 'zh-CN', releaseID: 1, assetID: 2, assetName: 'NarutoOS-' + values.toVersion + channels[values.channelKey || nativeUpdaterKey].suffix, tag: 'v' + values.toVersion,
     centerPID: values.centerPID || 0, hostPID: 0, corePID: 0,
     centerExecutable: values.centerExecutable || '', hostExecutable: '', coreExecutable: '',
     stage: 'prepared', detail: '', createdAt: new Date().toISOString()
   };
-  fs.copyFileSync(updaterBinary, record.updaterPath);
+  fs.copyFileSync(updaterBinaries[values.channelKey || nativeUpdaterKey], record.updaterPath);
   fs.chmodSync(record.updaterPath, 0o700);
   fs.copyFileSync(messages, record.messagesPath);
   fs.writeFileSync(record.downloadFile, 'synthetic package');
@@ -102,28 +121,34 @@ function writeRecord(root, values) {
   fs.writeFileSync(recordPath, JSON.stringify(record, null, 2));
   return { record, recordPath };
 }
-function prepareScenario(name, { oldVersion = '1.0.0', newVersion = '9.9.9', confirm = true, postMoveInvalidSymlink = false, recordOverrides = {} } = {}) {
+function prepareScenario(name, { oldVersion = '1.0.0', newVersion = '9.9.9', confirm = true, postMoveInvalidSymlink = false, channelKey = nativeUpdaterKey, stagingChannelKey = channelKey, recordOverrides = {} } = {}) {
   const root = path.join(artifacts, name);
   fs.rmSync(root, { recursive: true, force: true });
   fs.mkdirSync(path.join(root, 'Applications'), { recursive: true });
   const oldApp = path.join(root, 'Applications/Naruto OS.app');
-  makeApplication(oldApp, oldVersion, noopArm);
+  const channel = channels[channelKey];
+  const oldExecutable = channel.arch === 'arm64' ? noopArm : noopX86;
+  makeApplication(oldApp, oldVersion, oldExecutable, { channelKey });
   const id = crypto.randomUUID();
   const updateRoot = path.join(root, 'update');
   const confirmFile = path.join(updateRoot, 'confirm.json');
   const newApp = path.join(root, 'Applications/.NarutoOS-update-' + id + '/Naruto OS.app');
   const targetApp = path.join(root, 'Applications/Naruto OS.app');
-  const newExecutable = confirm ? compileC(confirmSource(confirmFile, id, targetApp), path.join(binDirectory, 'confirm-' + id), 'arm64') : noopArm;
+  const stagingChannel = channels[stagingChannelKey];
+  const newExecutable = confirm ? compileC(confirmSource(confirmFile, id, targetApp), path.join(binDirectory, 'confirm-' + id), stagingChannel.arch) : oldExecutable;
   // A link that resolves inside the staging root but escapes once the bundle
   // moves: the post-move re-verification must restore the previous version.
-  makeApplication(newApp, newVersion, newExecutable, { extraAbsoluteLink: postMoveInvalidSymlink });
-  const { record, recordPath } = writeRecord(root, { id, fromVersion: recordOverrides.fromVersion || oldVersion, toVersion: newVersion, ...recordOverrides });
+  makeApplication(newApp, newVersion, newExecutable, { extraAbsoluteLink: postMoveInvalidSymlink, channelKey: stagingChannelKey });
+  const { record, recordPath } = writeRecord(root, { id, fromVersion: recordOverrides.fromVersion || oldVersion, toVersion: newVersion, channelKey, ...recordOverrides });
   return { root, oldApp, newApp, record, recordPath };
 }
 function runUpdater(recordPath, extraEnv = {}) {
   return new Promise((resolve, reject) => {
     const record = JSON.parse(fs.readFileSync(recordPath, 'utf8'));
-    const child = spawn(record.updaterPath, [recordPath], {
+    const intel = record.assetName.includes('-Intel-Test.zip');
+    const command = intel && process.arch !== 'x64' ? '/usr/bin/arch' : record.updaterPath;
+    const args = command === '/usr/bin/arch' ? ['-x86_64', record.updaterPath, recordPath] : [recordPath];
+    const child = spawn(command, args, {
       env: { ...process.env, NARUTO_UPDATE_TEST: '1', NARUTO_UPDATE_NO_UI: '1', NARUTO_C_MESSAGES: record.messagesPath, ...extraEnv },
       stdio: ['ignore', 'pipe', 'pipe']
     });
@@ -215,6 +240,35 @@ try {
     check('staging invalid: helper reports failure', code === 1, stderr);
     check('staging invalid: target untouched', versionOf(scenario.oldApp) === '1.0.0');
     check('staging invalid: staging cleaned', !fs.existsSync(scenario.record.stagingDir));
+  }
+  // Run the replacement helper as each architecture. On Apple Silicon, arch
+  // forces the x86_64 helper through Rosetta when it is installed.
+  for (const channelKey of ['appleSilicon', 'intelTest']) {
+    const channel = channels[channelKey];
+    const canRun = channel.arch === 'arm64' ? armExecutionAvailable : intelExecutionAvailable;
+    if (!canRun) {
+      console.log('SKIP helper execution ' + channel.name + ': architecture runtime unavailable');
+      continue;
+    }
+    if (channelKey === nativeUpdaterKey) continue; // The main scenarios already execute this helper.
+    const scenario = prepareScenario('cross-arch-success-' + channelKey, { channelKey });
+    const { code, stderr } = await runUpdater(scenario.recordPath);
+    check(channel.name + ' helper executes replacement', code === 0, stderr);
+    check(channel.name + ' helper leaves matching bundle installed', versionOf(scenario.oldApp) === '9.9.9');
+    const result = readResult(scenario.root);
+    check(channel.name + ' helper records successful replacement', result && result.status === 'success');
+  }
+  // A package for the other architecture must be refused before the current
+  // installation is moved, even when its signature and bundle structure pass.
+  for (const [targetChannel, wrongPackageChannel] of [['appleSilicon', 'intelTest'], ['intelTest', 'appleSilicon']]) {
+    const canRun = targetChannel === 'appleSilicon' ? armExecutionAvailable : intelExecutionAvailable;
+    if (!canRun) continue;
+    const scenario = prepareScenario('wrong-architecture-' + targetChannel, {
+      channelKey: targetChannel, stagingChannelKey: wrongPackageChannel
+    });
+    const { code, stderr } = await runUpdater(scenario.recordPath);
+    check(channels[targetChannel].name + ' helper rejects ' + channels[wrongPackageChannel].name + ' package', code === 1, stderr);
+    check(channels[targetChannel].name + ' wrong package leaves old app untouched', versionOf(scenario.oldApp) === '1.0.0');
   }
   fs.writeFileSync(path.join(artifacts, 'results.json'), JSON.stringify({ ok: true, results }, null, 2));
   console.log('更新替换流程检查通过：' + results.length + ' 项');

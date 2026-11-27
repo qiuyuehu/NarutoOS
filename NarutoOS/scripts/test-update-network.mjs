@@ -3,6 +3,7 @@
 // 127.0.0.1; the production source is never contacted.
 import fs from 'node:fs';
 import path from 'node:path';
+import { updateSourcePaths } from './update-sources.mjs';
 import http from 'node:http';
 import crypto from 'node:crypto';
 import { execFileSync, spawn } from 'node:child_process';
@@ -15,7 +16,8 @@ fs.mkdirSync(moduleCache, { recursive: true });
 const target = (process.arch === 'arm64' ? 'arm64' : 'x86_64') + '-apple-macos15.0';
 const binary = path.join(artifacts, 'update-tests');
 execFileSync('/usr/bin/xcrun', ['swiftc', '-target', target, '-O', '-module-cache-path', moduleCache,
-  'src/prototype/native/Transport.swift', 'src/prototype/native/I18n.swift', 'src/prototype/native/Update.swift', 'tests/update-tests.swift',
+  'src/prototype/native/Transport.swift', 'src/prototype/native/I18n.swift', ...updateSourcePaths,
+  'src/prototype/native/UpdateReconciliation.swift', 'tests/update-tests.swift',
   '-o', binary], { stdio: 'inherit', cwd: project });
 // A real ZIP so extraction metadata (size, digest) is exercised for real.
 const source = path.join(artifacts, 'source');
@@ -27,12 +29,14 @@ const zipBytes = fs.readFileSync(zip);
 const zipSize = zipBytes.length;
 const zipDigest = crypto.createHash('sha256').update(zipBytes).digest('hex');
 const assetName = 'NarutoOS-9.9.9-macOS-AppleSilicon.zip';
+const intelAssetName = 'NarutoOS-9.9.9-macOS-Intel-Test.zip';
+const asset = (id, name) => ({
+  id, name, size: zipSize, state: 'uploaded', digest: 'sha256:' + zipDigest,
+  browser_download_url: 'http://127.0.0.1:PORT/download/' + name
+});
 const release = (overrides = {}) => JSON.stringify({
   id: 1, tag_name: 'v9.9.9', draft: false, prerelease: false, body: 'synthetic notes',
-  assets: [{
-    id: 2, name: assetName, size: zipSize, state: 'uploaded', digest: 'sha256:' + zipDigest,
-    browser_download_url: 'http://127.0.0.1:PORT/download/' + assetName
-  }],
+  assets: [asset(2, assetName), asset(3, intelAssetName)],
   ...overrides
 });
 const results = [];
@@ -47,31 +51,44 @@ const server = http.createServer((request, response) => {
   fs.appendFileSync(path.join(artifacts, 'requests.log'), url + '\n');
   const send = (status, body, headers = {}) => { response.writeHead(status, { 'content-type': 'application/json', ...headers }); response.end(body); };
   if (url === '/latest') { const body = release().split('127.0.0.1:PORT').join('127.0.0.1:' + port); if (process.env.DEBUG_UPDATE_NET) console.log('BODY ' + body.slice(0, 300)); return send(200, body); }
+  if (url === '/latest-slow') {
+    return send(200, release().replace('127.0.0.1:PORT/download/', '127.0.0.1:' + port + '/download-slow/'));
+  }
   if (url === '/latest-bad-digest') return send(200, release({ assets: [{ id: 2, name: assetName, size: zipSize, state: 'uploaded', digest: 'sha256:' + 'a'.repeat(64), browser_download_url: 'http://127.0.0.1:PORT/download/' + assetName }] }).split('127.0.0.1:PORT').join('127.0.0.1:' + port));
   if (url === '/latest-bad-size') return send(200, release({ assets: [{ id: 2, name: assetName, size: zipSize + 1, state: 'uploaded', digest: 'sha256:' + zipDigest, browser_download_url: 'http://127.0.0.1:PORT/download/' + assetName }] }).split('127.0.0.1:PORT').join('127.0.0.1:' + port));
   if (url === '/latest-no-digest') return send(200, release({ assets: [{ id: 2, name: assetName, size: zipSize, state: 'uploaded', browser_download_url: 'http://127.0.0.1:PORT/download/' + assetName }] }).split('127.0.0.1:PORT').join('127.0.0.1:' + port));
   if (url === '/latest-no-asset') return send(200, release({ assets: [{ id: 2, name: 'NarutoOS-9.9.9-macOS.zip', size: zipSize, state: 'uploaded', digest: 'sha256:' + zipDigest, browser_download_url: 'http://127.0.0.1:PORT/download/NarutoOS-9.9.9-macOS.zip' }] }).split('127.0.0.1:PORT').join('127.0.0.1:' + port));
+  if (url === '/latest-arm-only') return send(200, release({ assets: [asset(2, assetName)] }).split('127.0.0.1:PORT').join('127.0.0.1:' + port));
   if (url === '/latest-evil-redirect') return send(200, release({ assets: [{ id: 2, name: assetName, size: zipSize, state: 'uploaded', digest: 'sha256:' + zipDigest, browser_download_url: 'http://127.0.0.1:PORT/download-evil/' + assetName }] }).split('127.0.0.1:PORT').join('127.0.0.1:' + port));
   if (url === '/latest-hop') { response.writeHead(302, { location: 'http://127.0.0.1:' + port + '/latest' }); return response.end(); }
   if (url === '/latest-meta-redirect') { response.writeHead(302, { location: 'http://127.0.0.2:' + port + '/latest' }); return response.end(); }
   if (url.startsWith('/download/')) {
-    response.writeHead(302, { location: 'http://127.0.0.1:' + port + '/objects/pkg' });
+    const name = url.slice('/download/'.length);
+    response.writeHead(302, { location: 'http://127.0.0.1:' + port + '/objects/' + name });
     return response.end();
   }
   if (url.startsWith('/download-evil/')) {
     response.writeHead(302, { location: 'http://127.0.0.2:' + port + '/objects/pkg' });
     return response.end();
   }
-  if (url === '/objects/pkg') { response.writeHead(200, { 'content-type': 'application/zip', 'content-length': String(zipSize) }); return response.end(zipBytes); }
+  if (url.startsWith('/download-slow/')) {
+    response.writeHead(200, { 'content-type': 'application/zip', 'content-length': String(zipSize) });
+    response.write(zipBytes.subarray(0, Math.floor(zipSize / 2)));
+    return; // The client cancels after receiving this chunk.
+  }
+  if (url.startsWith('/objects/')) { response.writeHead(200, { 'content-type': 'application/zip', 'content-length': String(zipSize) }); return response.end(zipBytes); }
   send(404, '{}');
 });
 await new Promise(resolve => server.listen(0, '127.0.0.1', resolve));
 port = server.address().port;
-function runCheck(name, endpoint, expect) {
+function runCheck(name, endpoint, expect, channel = 'appleSilicon') {
   return new Promise((resolve, reject) => {
     const directory = path.join(artifacts, name);
     fs.mkdirSync(directory, { recursive: true });
-    const child = spawn(binary, ['--check', 'http://127.0.0.1:' + port + endpoint, directory], { env: { ...process.env, NARUTO_C_MESSAGES: path.join(project, 'src/shared/messages.json') } });
+    const args = ['--check', 'http://127.0.0.1:' + port + endpoint, directory];
+    if (channel === 'intelTest') args.push('--intel-test');
+    if (expect.cancel) args.push('--cancel-after-progress');
+    const child = spawn(binary, args, { env: { ...process.env, NARUTO_C_MESSAGES: path.join(project, 'src/shared/messages.json') } });
     let output = '';
     child.stdout.on('data', chunk => { output += chunk; });
     child.stderr.on('data', chunk => { process.stderr.write(chunk); });
@@ -80,7 +97,9 @@ function runCheck(name, endpoint, expect) {
       try {
         const line = output.trim().split('\n').filter(row => row.startsWith('{')).pop() || '{}';
         const result = JSON.parse(line);
-        check(name + ' -> ' + (result.ok ? 'ok' : result.error), result.ok === expect.ok && (!expect.ok || (result.version === '9.9.9' && result.bytes === zipSize && result.digest === zipDigest)) && (!expect.error || result.error === expect.error), JSON.stringify(result));
+        const wantedAsset = channel === 'intelTest' ? intelAssetName : assetName;
+        check(name + ' -> ' + (result.ok ? 'ok' : result.error), result.ok === expect.ok && (!expect.ok || (result.version === '9.9.9' && result.asset === wantedAsset && result.bytes === zipSize && result.digest === zipDigest)) && (!expect.error || result.error === expect.error), JSON.stringify(result));
+        if (expect.cancel) check('cancelled download removes the partial package', !fs.existsSync(path.join(directory, 'package.zip')));
         resolve();
       } catch (error) { reject(error); }
     });
@@ -88,6 +107,9 @@ function runCheck(name, endpoint, expect) {
 }
 try {
   await runCheck('valid-release-downloads-and-verifies', '/latest', { ok: true });
+  await runCheck('intel-channel-selects-and-verifies-its-asset', '/latest', { ok: true }, 'intelTest');
+  await runCheck('legacy-arm-only-release-still-upgrades', '/latest-arm-only', { ok: true });
+  await runCheck('legacy-arm-only-release-does-not-fallback-for-intel', '/latest-arm-only', { ok: false, error: 'update.asset_missing' }, 'intelTest');
   await runCheck('digest-mismatch-is-rejected', '/latest-bad-digest', { ok: false, error: 'update.asset_digest_mismatch' });
   await runCheck('size-mismatch-is-rejected', '/latest-bad-size', { ok: false, error: 'update.asset_size_mismatch' });
   await runCheck('missing-digest-is-rejected', '/latest-no-digest', { ok: false, error: 'update.asset_digest_missing' });
@@ -95,6 +117,7 @@ try {
   await runCheck('cross-host-redirect-is-rejected', '/latest-evil-redirect', { ok: false, error: 'update.redirect_rejected' });
   await runCheck('same-host-metadata-redirect-is-followed', '/latest-hop', { ok: true });
   await runCheck('cross-host-metadata-redirect-is-rejected', '/latest-meta-redirect', { ok: false, error: 'update.redirect_rejected' });
+  await runCheck('cancelling-a-streaming-download', '/latest-slow', { ok: false, error: 'update.cancelled', cancel: true });
   fs.writeFileSync(path.join(artifacts, 'results.json'), JSON.stringify({ ok: true, results, zipSize, zipDigest }, null, 2));
   console.log('更新下载链路检查通过：' + results.length + ' 项');
 } finally {

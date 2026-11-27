@@ -47,14 +47,18 @@
     </nav>
     <div class="settings-main" id="settings-main">
       <div class="preferences">
-        <div class="settings-head"><h1 data-i18n="settings.title">设置</h1><button id="close-settings" class="quiet" data-i18n="ui.done">完成</button></div>
+        <div class="settings-head">
+          <h1 data-i18n="settings.title">设置</h1>
+          <p id="game-settings-note" data-i18n="settings.game_effective_hint">除『静音』外，本页设置在下次打开游戏页时生效。</p>
+          <button id="close-settings" class="quiet" data-i18n="ui.done">完成</button>
+        </div>
         <div class="settings-page" data-settings-content="game">
           <section class="section" aria-labelledby="game-heading">
             <div class="section-head"><h2 id="game-heading" data-i18n="ui.game_306">游戏</h2></div>
             <div class="rows">
               <!--center-auto-close-->
               <div class="row"><label id="mute-label" data-i18n="ui.mute">静音</label><button id="settings-mute" class="switch" role="switch" aria-labelledby="mute-label" aria-checked="false"><span></span></button></div>
-              <div class="row"><label id="localization-label" ><span data-i18n="ui.chinese_game_translation">游戏汉化</span><span class="hint" id="localization-detail">巴西服 · 重启应用后生效</span></label><button id="settings-localization" class="switch" role="switch" aria-labelledby="localization-label" aria-describedby="localization-detail" aria-checked="false"><span></span></button></div>
+              <div class="row"><label id="localization-label" data-i18n="ui.chinese_game_translation">游戏汉化</label><button id="settings-localization" class="switch" role="switch" aria-labelledby="localization-label" aria-checked="false"><span></span></button></div>
               <div class="row"><label id="assists-label"><span data-i18n="ui.assist_scripts">辅助脚本</span><span class="hint" id="assists-detail">重新进入游戏后生效</span></label><button id="settings-assists" class="switch" role="switch" aria-labelledby="assists-label" aria-describedby="assists-detail" aria-checked="false"><span></span></button></div>
               <div class="row"><label id="game-speed-label"><span data-i18n="ui.game_speed">游戏变速</span><span class="hint" id="game-speed-detail">国服/巴西 · Flash 34 · 重新进入游戏后生效</span></label><button id="settings-game-speed" class="switch" role="switch" aria-labelledby="game-speed-label" aria-describedby="game-speed-detail" aria-checked="false"><span></span></button></div>
               <div class="row"><label for="quality-select" data-i18n="ui.default_quality">默认画质</label><select id="quality-select"><option value="low" data-i18n="ui.low">低</option><option value="medium" data-i18n="ui.medium">中</option><option value="high" data-i18n="ui.high">高</option></select></div>

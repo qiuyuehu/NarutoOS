@@ -35,37 +35,7 @@ import Security
     }
     var batches=state["batches"] as! [[String:Any]]
     var recentBatches=state["recentBatches"] as? [[String:Any]] ?? []
-    let receiptsPath=root+"/batch-receipts"
-    try FileManager.default.createDirectory(atPath:receiptsPath,withIntermediateDirectories:true,attributes:[.posixPermissions:0o700])
-    let terminalStates=Set(["rejected","cancelled","interrupted","closed"])
-    func boundedBatches(_ candidates:[[String:Any]]) -> [[String:Any]] {
-        var result=[[String:Any]]();var ids=Set<String>();var bytes=0
-        for batch in candidates.reversed(){
-            guard let id=batch["id"] as? String,!ids.contains(id) else{continue}
-            let size=(try? json(batch).count) ?? Int.max
-            if result.count<16 && size<=65536-bytes{result.insert(batch,at:0);ids.insert(id);bytes+=size}
-        }
-        return result
-    }
-    func compactBatches() throws {
-        let finished=batches.filter{($0["items"] as! [[String:Any]]).allSatisfy{terminalStates.contains($0["status"] as? String ?? "")}}
-        guard !finished.isEmpty else{return}
-        for batch in finished{
-            guard let id=batch["id"] as? String,UUID(uuidString:id) != nil else{throw ProtoError.failure(msg("ui.invalid_historical_batch_id_original_records_were"))}
-            try atomic(batch,receiptsPath+"/"+id+".json")
-        }
-        let ids=Set(finished.compactMap{$0["id"] as? String})
-        batches.removeAll{ids.contains($0["id"] as? String ?? "")}
-        recentBatches=boundedBatches(recentBatches+finished)
-    }
-    func findBatch(_ id:String) throws -> [String:Any]? {
-        guard UUID(uuidString:id) != nil else{throw ProtoError.failure(msg("ui.invalid_batch_id"))}
-        if let batch=(batches+recentBatches).first(where:{$0["id"] as? String==id}){return batch}
-        let file=receiptsPath+"/"+id+".json"
-        guard FileManager.default.fileExists(atPath:file) else{return nil}
-        guard let batch=try JSONSerialization.jsonObject(with:Data(contentsOf:URL(fileURLWithPath:file))) as? [String:Any],batch["id"] as? String==id else{throw ProtoError.failure(msg("ui.could_not_read_batch_receipt"))}
-        return batch
-    }
+    let batchHistory = try BatchHistory(root: root)
     var profiles=state["profiles"] as! [[String:Any]]
     var preferences=state["preferences"] as! [String:Any]
     let initialLanguage=initialInterfaceLanguage(preferences)
@@ -110,7 +80,7 @@ import Security
         } else { try? data.write(to:URL(fileURLWithPath:file)) }
     }
     func save() throws {
-        try compactBatches()
+        (batches, recentBatches) = try batchHistory.compactBatches(batches, recentBatches: recentBatches)
         state["recentBatches"]=recentBatches
         state["profiles"]=profiles;state["selectedByRegion"]=selected;state["deletedIds"]=deleted;state["mutations"]=mutations;state["batches"]=batches;state["preferences"]=preferences;state["revision"]=revision;state["hostPID"]=hostPID;state["hostInstance"]=hostInstance
         let bytes=try json(state); if bytes != lastSaved {try atomic(state,statePath);lastSaved=bytes}
@@ -196,8 +166,11 @@ import Security
     }
     func snapshot(_ preferredBatch:String? = nil) -> [String:Any] {
         var display=recentBatches+batches
-        if let id=preferredBatch,let batch=try? findBatch(id){display.removeAll{$0["id"] as? String==id};display.append(batch)}
-        let visibleBatches=boundedBatches(display)
+        if let id = preferredBatch, let batch = try? batchHistory.findBatch(id, batches: batches, recentBatches: recentBatches) {
+            display.removeAll { $0["id"] as? String == id }
+            display.append(batch)
+        }
+        let visibleBatches = batchHistory.boundedBatches(display)
         let views=profiles.map{profile -> [String:Any] in
             var view=profile
             view["runtimeStatus"]=batches.reversed().flatMap{$0["items"] as! [[String:Any]]}.first(where:{$0["profileId"] as? String==profile["id"] as? String})?["status"] as? String ?? "idle"
@@ -324,12 +297,14 @@ import Security
                 guard role=="center" else {throw ProtoError.failure(msg("ui.insufficient_permissions"))};output=try vault.manage(command,payload)
             case "batch.get" where role=="center":
                 guard let id=payload["id"] as? String else{throw ProtoError.failure(msg("ui.missing_batch_id"))}
-                if let batch=try findBatch(id){output=["found":true,"batch":batch]}else{output=["found":false]}
+                if let batch = try batchHistory.findBatch(id, batches: batches, recentBatches: recentBatches) {
+                    output = ["found": true, "batch": batch]
+                } else { output = ["found": false] }
             case "batch.start" where role=="center":
                 try reconcileDeadHost()
                 guard !updateMode else {throw ProtoError.failure(msg("update.in_progress"))}
                 guard !reconciling,let id=payload["requestId"] as? String,UUID(uuidString:id) != nil,let ids=payload["profileIds"] as? [String],!ids.isEmpty,ids.count<=20 else {throw ProtoError.failure(msg("ui.invalid_launch_parameters_or_reconciliation_state"))}
-                if let old=try findBatch(id) {
+                if let old = try batchHistory.findBatch(id, batches: batches, recentBatches: recentBatches) {
                     guard old["profileIds"] as? [String]==ids else {throw ProtoError.failure(msg("ui.request_id_was_reused"))};output=old;break
                 }
                 var items=[[String:Any]]()

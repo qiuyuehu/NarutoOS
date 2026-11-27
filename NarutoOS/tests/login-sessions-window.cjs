@@ -1,4 +1,5 @@
 const { app, BrowserWindow, BrowserView, ipcMain, session } = require('electron');
+const { resolveText } = require('../dist/session-test/i18n.js');
 const { GameSessions } = require('../dist/session-test/game.js');
 const { LoginSessions } = require('../dist/session-test/login-sessions.js');
 const { AccountProfileStore } = require('../dist/session-test/account-profiles.js');
@@ -108,7 +109,7 @@ app.whenReady().then(async () => {
       check('synthetic deletion target restores localStorage before its first page is inspected',
         await disposable.view.webContents.executeJavaScript("localStorage.getItem('fixture-profile-delete')") === 'present');
       let activeLeaseBlocked = false;
-      try { await login.clearProfile('br', 7); } catch (error) { activeLeaseBlocked = /打开中的标签或登录任务/.test(error.message); }
+      try { await login.clearProfile('br', 7); } catch (error) { activeLeaseBlocked = /打开中的标签或登录任务/.test(resolveText(error.message)); }
       check('session cleanup refuses an account whose lease is still active', activeLeaseBlocked &&
         (await disposableSession.cookies.get({ name: 'fixture-delete-auth' }))[0]?.value === 'br-7');
       games.close(disposable.id); await until(() => login.leaseCount('br', 7) === 0);
@@ -116,13 +117,13 @@ app.whenReady().then(async () => {
       profileStore.beginDelete(profileStore.get('br-7'));
       denyProfileClearWrite = true;
       let interruptedCleanup = '';
-      try { await login.clearProfile('br', 7); } catch (error) { interruptedCleanup = error.message; }
+      try { await login.clearProfile('br', 7); } catch (error) { interruptedCleanup = resolveText(error.message); }
       denyProfileClearWrite = false;
       check('Keychain failure leaves the synthetic profile pending after site data was cleared',
         interruptedCleanup.includes('清理钥匙串登录快照失败') && profileStore.isPendingDelete('br-7') &&
         (await disposableSession.cookies.get({})).length === 0);
       let interruptedPartitionBlocked = false;
-      try { login.acquireSlot('br', 7); } catch (error) { interruptedPartitionBlocked = /正在清理/.test(error.message); }
+      try { login.acquireSlot('br', 7); } catch (error) { interruptedPartitionBlocked = /正在清理/.test(resolveText(error.message)); }
       check('interrupted cleanup blocks reopening the profile in the same process', interruptedPartitionBlocked);
       const snapshot = JSON.parse(await transport('read'));
       check('interrupted cleanup preserves the old target snapshot and the other region for retry',
@@ -198,9 +199,9 @@ app.whenReady().then(async () => {
         return JSON.stringify(Object.keys(chromiumStore.partitions));
       }, () => {});
       let chromiumFailure = '';
-      try { await chromiumCleanup.clearProfile('br', 10); } catch (error) { chromiumFailure = error.message; }
+      try { await chromiumCleanup.clearProfile('br', 10); } catch (error) { chromiumFailure = resolveText(error.message); }
       let chromiumPartitionBlocked = false;
-      try { chromiumCleanup.acquireSlot('br', 10); } catch (error) { chromiumPartitionBlocked = /正在清理/.test(error.message); }
+      try { chromiumCleanup.acquireSlot('br', 10); } catch (error) { chromiumPartitionBlocked = /正在清理/.test(resolveText(error.message)); }
       check('Chromium cleanup failure keeps the partition blocked and reports its stage',
         chromiumFailure.includes('清理 Chromium 网站数据失败') && Object.prototype.hasOwnProperty.call(chromiumStore.partitions, 'persist:naruto-br-10') && chromiumPartitionBlocked);
       blockedSession.clearStorageData = realClearStorageData;
@@ -218,9 +219,9 @@ app.whenReady().then(async () => {
         return JSON.stringify(Object.keys(cacheStore.partitions));
       }, () => {});
       let cacheFailure = '';
-      try { await cacheCleanup.clearProfile('br', 12); } catch (error) { cacheFailure = error.message; }
+      try { await cacheCleanup.clearProfile('br', 12); } catch (error) { cacheFailure = resolveText(error.message); }
       let cachePartitionBlocked = false;
-      try { cacheCleanup.acquireSlot('br', 12); } catch (error) { cachePartitionBlocked = /正在清理/.test(error.message); }
+      try { cacheCleanup.acquireSlot('br', 12); } catch (error) { cachePartitionBlocked = /正在清理/.test(resolveText(error.message)); }
       check('Chromium cache failure is reported and keeps the partition blocked',
         cacheFailure.includes('清理 Chromium 网站数据失败') && cachePartitionBlocked &&
         Object.prototype.hasOwnProperty.call(cacheStore.partitions, 'persist:naruto-br-12'));
@@ -241,9 +242,9 @@ app.whenReady().then(async () => {
         return JSON.stringify(Object.keys(readFailureStore.partitions));
       }, () => {});
       let readFailure = '';
-      try { await readFailureCleanup.clearProfile('br', 13); } catch (error) { readFailure = error.message; }
+      try { await readFailureCleanup.clearProfile('br', 13); } catch (error) { readFailure = resolveText(error.message); }
       let readFailurePartitionBlocked = false;
-      try { readFailureCleanup.acquireSlot('br', 13); } catch (error) { readFailurePartitionBlocked = /正在清理/.test(error.message); }
+      try { readFailureCleanup.acquireSlot('br', 13); } catch (error) { readFailurePartitionBlocked = /正在清理/.test(resolveText(error.message)); }
       check('Keychain read failure preserves snapshots and blocks the partition',
         readFailure.includes('清理钥匙串登录快照失败') && readFailurePartitionBlocked &&
         Object.prototype.hasOwnProperty.call(readFailureStore.partitions, 'persist:naruto-br-13') &&
@@ -265,9 +266,9 @@ app.whenReady().then(async () => {
         return JSON.stringify(Object.keys(keychainStore.partitions));
       }, () => {});
       let keychainFailure = '';
-      try { await keychainCleanup.clearProfile('br', 11); } catch (error) { keychainFailure = error.message; }
+      try { await keychainCleanup.clearProfile('br', 11); } catch (error) { keychainFailure = resolveText(error.message); }
       let keychainPartitionBlocked = false;
-      try { keychainCleanup.acquireSlot('br', 11); } catch (error) { keychainPartitionBlocked = /正在清理/.test(error.message); }
+      try { keychainCleanup.acquireSlot('br', 11); } catch (error) { keychainPartitionBlocked = /正在清理/.test(resolveText(error.message)); }
       check('Keychain write failure leaves deletion retryable and blocks the partition',
         keychainFailure.includes('清理钥匙串登录快照失败') && Object.prototype.hasOwnProperty.call(keychainStore.partitions, 'persist:naruto-br-11') && keychainPartitionBlocked);
       allowSnapshotWrite = true; await keychainCleanup.clearProfile('br', 11);

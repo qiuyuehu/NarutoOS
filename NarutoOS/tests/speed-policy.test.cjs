@@ -6,9 +6,8 @@ const fs = require('node:fs');
 const os = require('node:os');
 const { createHash } = require('node:crypto');
 const { EventEmitter } = require('node:events');
-const vm = require('node:vm');
 const esbuild = require('esbuild');
-const ts = require('typescript');
+const { msg } = require('./helpers/i18n.cjs');
 
 const root = path.resolve(__dirname, '..');
 
@@ -26,6 +25,7 @@ function loadTypeScript(relativePath) {
 
 const { speedPolicy } = loadTypeScript('src/main/game-speed.ts');
 const { BattleMemoryBridge } = loadTypeScript('src/main/battle-memory-experiment.ts');
+const { createSpeedCoordinator, SPEED_RETRY_MS } = loadTypeScript('src/prototype/host/speed-coordinator.ts');
 
 test('全部游戏页都要独立验证，未就绪时回退至 1 倍', () => {
   const activePages = ['verified', 'pending'];
@@ -61,32 +61,149 @@ test('3–10 倍遇未验证页同样回退到 1 倍', () => {
     { allowRaise: true, revertToOne: false });
 });
 
-test('未验证页触发回退后，继续向晚出现的插件补发 1 倍', () => {
-  const filename = path.join(root, 'src/prototype/host/main.ts');
-  const source = ts.createSourceFile(filename, fs.readFileSync(filename, 'utf8'), ts.ScriptTarget.Latest, true);
-  const start = source.statements.find(node => ts.isFunctionDeclaration(node) && node.name?.text === 'start');
-  const applySpeed = start.body.statements.find(node => ts.isFunctionDeclaration(node) && node.name?.text === 'applySpeed');
-  const signals = [];
-  let now = 2000;
-  let pids = [];
-  const context = vm.createContext({
-    Date: { now: () => now }, games: { tabs: [{}] }, shutting: false, speedEnabled: true, speedRate: 2,
-    speedAutoRaise: false, speedRestoreRate: 0, speedSuspended: false, speedRemembered: 2, speedAttemptAt: now, speedRetryMs: 2000,
-    currentSpeedDecision: () => speedPolicy({ activePages: ['pending'], suspended: false, rate: context.speedRate }),
-    pushSpeed: rate => {
-      signals.push(...pids.map(pid => [pid, rate]));
-      return pids.length;
+function speedFixture({ enabled = true, rememberedRate = 5 } = {}) {
+  const verified = { status: 'verified', destroyed: false, isDestroyed() { return this.destroyed; } };
+  const tab = { state: 'ready', view: { webContents: verified } };
+  const fixture = {
+    tab, verified, tabs: [tab], now: SPEED_RETRY_MS, shutting: false, plugins: 1,
+    pushes: [], saves: [], notices: [], saveFailed: false,
+  };
+  const speed = createSpeedCoordinator({
+    enabled, rememberedRate,
+    getTabs: () => fixture.tabs,
+    trackedStatus: contents => contents.status,
+    isShuttingDown: () => fixture.shutting,
+    now: () => fixture.now,
+    pushSpeed(rate) { fixture.pushes.push(rate); return fixture.plugins; },
+    async saveRate(rate) {
+      fixture.saves.push(rate);
+      if (fixture.saveFailed) throw Error('synthetic Core save failure');
     },
-    hostEvent() {}, paint() {},
+    report: text => fixture.notices.push(text),
+    hostEvent() {},
+    paint() {},
   });
-  vm.runInContext(ts.transpileModule(applySpeed.getText(source), {}).outputText, context);
-  context.applySpeed();
-  assert.equal(context.speedRate, 1);
-  assert.deepEqual(signals, []);
-  pids = [42];
-  now += 2000;
-  context.applySpeed();
-  assert.deepEqual(signals, [[42, 1]]);
+  return Object.assign(fixture, { speed });
+}
+
+test('会话从 1 倍起步，刷新及新页面验证结束后恢复实际档位', async () => {
+  const f = speedFixture();
+  assert.equal(f.speed.toolbarState().rate, 1);
+  await f.speed.setSpeed(7);
+  f.tab.state = 'loading';
+  f.speed.applySpeed();
+  assert.equal(f.speed.toolbarState().rate, 1);
+  assert.equal(f.pushes.at(-1), 1);
+
+  f.tab.state = 'ready';
+  const second = { ...f.verified, status: 'pending' };
+  f.tabs.push({ state: 'ready', view: { webContents: second } });
+  f.now += SPEED_RETRY_MS;
+  f.speed.applySpeed();
+  assert.equal(f.speed.toolbarState().rate, 1);
+  second.status = 'verified';
+  f.now += SPEED_RETRY_MS;
+  f.speed.applySpeed();
+  assert.equal(f.speed.toolbarState().rate, 7);
+  assert.equal(f.pushes.at(-1), 7);
+  assert.deepEqual(f.saves, [7]);
+});
+
+test('加载中手动选当前 1 倍，取消自动恢复且不写 Core', async () => {
+  const f = speedFixture();
+  f.speed.applySpeed();
+  f.tab.state = 'loading';
+  f.speed.applySpeed();
+  await f.speed.setSpeed(1);
+  f.tab.state = 'ready';
+  f.now += SPEED_RETRY_MS;
+  f.speed.applySpeed();
+  assert.deepEqual(f.pushes, [5, 1, 1]);
+  assert.equal(f.speed.toolbarState().rate, 1);
+  assert.deepEqual(f.saves, []);
+});
+
+test('关闭最后一个页面后回到 1 倍，退出确认期间暂停补发', () => {
+  const f = speedFixture();
+  f.speed.applySpeed();
+  f.shutting = true;
+  f.tabs.length = 0;
+  f.now += SPEED_RETRY_MS;
+  f.speed.applySpeed();
+  assert.equal(f.speed.toolbarState().rate, 5);
+  assert.deepEqual(f.pushes, [5]);
+  f.shutting = false;
+  f.speed.applySpeed();
+  assert.deepEqual(f.speed.toolbarState(), { available: true, rate: 1, allowRaise: false });
+  assert.deepEqual(f.pushes, [5, 1]);
+  assert.deepEqual(f.saves, []);
+});
+
+test('工具栏或菜单首先观测到失配即锁定本会话，忽略已销毁页面', () => {
+  for (const readState of ['toolbarState', 'menuState']) {
+    const f = speedFixture();
+    f.tabs.push({ state: 'loading', view: { webContents: { ...f.verified, destroyed: true, status: 'mismatch' } } });
+    f.speed.applySpeed();
+    assert.equal(f.speed.toolbarState().rate, 5);
+
+    f.tab.state = 'loading';
+    f.verified.status = 'mismatch';
+    assert.equal(f.speed[readState]().allowRaise, false);
+    f.tab.state = 'ready';
+    f.verified.status = 'verified';
+    f.speed.applySpeed();
+    assert.deepEqual(f.speed.menuState(), { rate: 1, allowRaise: false });
+    assert.deepEqual(f.notices, [msg('ui.speed_resource_mismatch_reverted')]);
+    f.now += SPEED_RETRY_MS;
+    f.speed.applySpeed();
+    assert.deepEqual(f.pushes, [5, 1, 1]);
+    assert.deepEqual(f.saves, []);
+  }
+});
+
+test('未验证页触发回退后，继续向晚出现的插件补发 1 倍', () => {
+  const f = speedFixture();
+  f.speed.applySpeed();
+  f.verified.status = 'pending';
+  f.plugins = 0;
+  f.speed.applySpeed();
+  assert.equal(f.speed.toolbarState().rate, 1);
+  f.plugins = 1;
+  f.now += SPEED_RETRY_MS - 1;
+  f.speed.applySpeed();
+  assert.deepEqual(f.pushes, [5, 1]);
+  f.now += 1;
+  f.speed.applySpeed();
+  assert.deepEqual(f.pushes, [5, 1, 1]);
+});
+
+test('手动投递失败不保存，Core 保存失败保留已投递的档位', async () => {
+  const f = speedFixture();
+  f.plugins = 0;
+  await f.speed.setSpeed(8);
+  assert.equal(f.speed.toolbarState().rate, 1);
+  assert.deepEqual(f.notices, [msg('ui.speed_plugin_not_running')]);
+  assert.deepEqual(f.saves, []);
+
+  f.plugins = 1;
+  f.saveFailed = true;
+  await f.speed.setSpeed(8);
+  assert.equal(f.speed.toolbarState().rate, 8);
+  assert.deepEqual(f.pushes, [8, 8]);
+  assert.deepEqual(f.saves, [8]);
+  const reopened = speedFixture();
+  assert.equal(reopened.speed.toolbarState().rate, 1);
+  reopened.speed.applySpeed();
+  assert.equal(reopened.speed.toolbarState().rate, 5);
+});
+
+test('功能关闭时忽略记忆档位与手动切档', async () => {
+  const f = speedFixture({ enabled: false });
+  f.speed.applySpeed();
+  await f.speed.setSpeed(5);
+  assert.deepEqual(f.speed.toolbarState(), { available: false, rate: 1, allowRaise: false });
+  assert.deepEqual(f.pushes, []);
+  assert.deepEqual(f.saves, []);
 });
 
 test('旧页面延迟到达的响应与回执都不能验证新页面', async t => {

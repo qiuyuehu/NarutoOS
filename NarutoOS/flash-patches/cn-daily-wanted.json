@@ -1,0 +1,13 @@
+{
+  "id": "cn-daily-wanted",
+  "nameKey": "ui.assist_daily_wanted",
+  "targets": [
+    {
+      "region": "cn",
+      "build": "NarutoBeta11.17Build302",
+      "url": "https://res.huoying.qq.com/NarutoBeta11.17Build302/flash/hud/HudPlugin.swf",
+      "file": "daily-wanted/HudPlugin.daily-wanted.swf",
+      "baseSha256": "104b64041595404be4b6537023c97938deb9dd87d184db668633b3af6b0031bc"
+    }
+  ]
+}

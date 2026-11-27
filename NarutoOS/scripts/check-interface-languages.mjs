@@ -22,6 +22,6 @@ function scan(directory) {
   }
 }
 scan('src');
-assert(fs.readFileSync('scripts/build.mjs','utf8').includes("cp('src/shared/messages.json', 'dist/shared/messages.json')"));
+assert(fs.readFileSync('scripts/build.mjs','utf8').includes("cp('src/shared/messages.json', dist('shared/messages.json'))"));
 assert(fs.readFileSync('scripts/package-native.mjs','utf8').includes("'shared/messages.json'"));
 console.log(`PASS ${Object.keys(catalog).length} shared messages: three languages, placeholders and resource routes`);

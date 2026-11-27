@@ -209,16 +209,6 @@
     "en": "Mute all ⇧⌘M",
     "pt-BR": "Silenciar tudo ⇧⌘M"
   },
-  "ui.brazil_saved_applies_after_restarting_the_app": {
-    "zh-CN": "巴西服 · 已保存，重启应用后生效",
-    "en": "Brazil · Saved; applies after restarting the app",
-    "pt-BR": "Brasil · Salvo; aplicado após reiniciar o app"
-  },
-  "ui.brazil_applies_after_restarting_the_app": {
-    "zh-CN": "巴西服 · 重启应用后生效",
-    "en": "Brazil · Applies after restarting the app",
-    "pt-BR": "Brasil · Aplicado após reiniciar o app"
-  },
   "ui.the_password_for_in_keychain": {
     "zh-CN": "{p0} {p1} 的密码到钥匙串？",
     "en": "{p0} the password for {p1} in Keychain?",
@@ -618,11 +608,6 @@
     "zh-CN": " 个账号",
     "en": " accounts",
     "pt-BR": " contas"
-  },
-  "ui.applies_after_restarting_the_game": {
-    "zh-CN": "重启游戏后生效",
-    "en": "Applies after restarting the game",
-    "pt-BR": "Aplicado após reiniciar o jogo"
   },
   "ui.once_the_new_game_works_correctly_complete": {
     "zh-CN": "确认新游戏可以正常操作后，完成切换。",
@@ -2139,6 +2124,11 @@
     "en": "Game assist features bundled with the app can be switched on or off together; the translation switch is independent.",
     "pt-BR": "Recursos de assistência incluídos no app podem ser ligados ou desligados em conjunto; a tradução é independente."
   },
+  "ui.assist_daily_wanted": {
+    "zh-CN": "日常助手 · 通缉任务、忍者测验、生存演习、强者降临、组队副本、SS 与 S 级押镖，杂货屋兑换、隐藏玩家及下场战斗自动＋2 倍速，结束后开启游戏托管",
+    "en": "Daily Assistant · Wanted Missions, Ninja Quiz, Survival Trial, Strong Approaching, Team Dungeon, SS- and S-Rank Escorts, Grocery exchanges, player visibility, native auto battle and 2× battle speed, followed by Auto Mode",
+    "pt-BR": "Assistente diário · Missões de captura, Quiz Ninja, Teste de Sobrevivência, Chegada dos Fortes, Masmorra em Equipe, Escoltas SS e S, trocas no Empório, visibilidade de jogadores e combate automático em 2×, com modo automático ao final"
+  },
   "ui.assist_chakra_batch": {
     "zh-CN": "查克拉修行批量修炼",
     "en": "Chakra practice batch",
@@ -2465,9 +2455,9 @@
     "pt-BR": "Versões de pré-lançamento não são usadas para atualização automática."
   },
   "update.asset_missing": {
-    "zh-CN": "没有找到适用于 macOS Apple Silicon 的安装包。",
-    "en": "No macOS Apple Silicon package was found.",
-    "pt-BR": "Nenhum pacote para macOS Apple Silicon foi encontrado."
+    "zh-CN": "没有找到适用于当前构建渠道的 macOS 安装包。",
+    "en": "No macOS package was found for this build channel.",
+    "pt-BR": "Nenhum pacote para este canal de compilação do macOS foi encontrado."
   },
   "update.asset_size_invalid": {
     "zh-CN": "发布包大小不在允许范围内。",
@@ -2578,5 +2568,10 @@
     "zh-CN": "游戏退出时未确认保存完成，本次更新已停止。",
     "en": "The game exit did not confirm a completed save, so this update stopped.",
     "pt-BR": "A saída do jogo não confirmou o salvamento; a atualização foi interrompida."
+  },
+  "settings.game_effective_hint": {
+    "zh-CN": "除『静音』外，本页设置在下次打开游戏页时生效。",
+    "en": "Except for “Mute”, these settings apply the next time you open a game tab.",
+    "pt-BR": "Exceto “Silenciar”, os ajustes valem ao abrir a próxima aba do jogo."
   }
 }

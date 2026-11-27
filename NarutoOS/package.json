@@ -1,7 +1,7 @@
 {
   "name": "naruto-os",
   "productName": "Naruto OS",
-  "version": "0.3.13",
+  "version": "0.3.14",
   "private": true,
   "description": "个人 macOS 火影 Online 启动器",
   "scripts": {
@@ -19,6 +19,7 @@
     "test:network": "node scripts/test-network.mjs",
     "test:native": "node scripts/test-native.mjs",
     "prepare:icon": "node scripts/prepare-icon.mjs",
+    "package:intel-test": "node scripts/package-intel-test.mjs",
     "package:local": "pnpm build && node scripts/build-native-prototype.mjs && node scripts/package-native.mjs",
     "test:package": "node scripts/test-native-package.mjs",
     "test:focus": "node scripts/test-focus.mjs",

@@ -42,9 +42,15 @@ void (async()=>{
   check('invalid new language rejected',rejected&&(await window.naruto.state()).preferences.language==='zh-CN');
   for(const language of ['zh-CN','en','pt-BR']){
    await original({type:'language',value:language});await until(()=>document.documentElement.lang===language);
-   for(const page of ['appearance','game','accounts']){
+   for(const page of ['appearance','game','accounts','about']){
     document.querySelector(`[data-settings-page="${page}"]`).click();await pause(20);
     const content=document.querySelector(`[data-settings-content="${page}"]`);
+    const note=$('game-settings-note');
+    check(`${language} ${page}: game settings note visibility`,!!note.getClientRects().length===(page==='game'));
+    if(page==='game'){
+     check(`${language}: single-line game settings note`,note.offsetHeight===parseFloat(getComputedStyle(note).lineHeight));
+     check(`${language}: game settings note names the mute switch`,note.textContent.includes($('mute-label').textContent));
+    }
     check(`${language} ${page}: no horizontal overflow`,content.scrollWidth<=content.clientWidth+1&&document.documentElement.scrollWidth<=innerWidth+1);
     for(const control of content.querySelectorAll('button,select')){if(!control.getClientRects().length)continue;const r=control.getBoundingClientRect();check(`${language} ${page}: control fits ${control.id}`,r.width>0&&r.left>=0&&r.right<=innerWidth+1)}
    }
