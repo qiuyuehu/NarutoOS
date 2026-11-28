@@ -6,6 +6,7 @@ package
         public var buys:Array = [];
         public var confirms:int;
         public var closes:int;
+        public var prepareCalls:int;
         public var receipt:String = "pending";
         public var hidePrompt:Boolean;
         private var scenario:String;
@@ -20,13 +21,15 @@ package
 
         public function item(id:int):Object
         {
-            return {id:id, name:id == 1 ? "洞穴密钥" : "秘卷残页", price:id == 1 ? 200 : 300,
+            return {id:id, name:id == 1 ? (scenario == "pt-name" ? "Chave da Caverna" : "洞穴密钥") : "秘卷残页", price:id == 1 ? 200 : 300,
                 currency:scenario == "currency" ? "点券" : "月之印", balance:balance,
                 stock:scenario == "stock" && id == 1 ? 4 : 20};
         }
 
         public function prepare(id:int, quantity:int):Object
         {
+            prepareCalls++;
+            if (scenario == "not-ready" && prepareCalls == 1) return null;
             order = item(id);
             order.quantity = scenario == "clamp" ? quantity - 1 : quantity;
             order.total = order.price * order.quantity + (scenario == "total" ? 1 : 0);

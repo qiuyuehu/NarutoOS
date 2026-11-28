@@ -1,0 +1,20 @@
+{
+  "id": "br-daily-wanted",
+  "nameKey": "ui.assist_daily_wanted_br",
+  "targets": [
+    {
+      "region": "br",
+      "build": "PT_NarutoAlpha9.39Build301",
+      "url": "https://cdnnaruto-pt.oasgames.com/PT_NarutoAlpha9.39Build301/flash/hud/HudPlugin.swf",
+      "file": "daily-wanted/HudPlugin.daily-wanted-br-9.39.swf",
+      "baseSha256": "7b35a42bfde4a9323752afda7890ac425b11dc2eaf09732354f3abeeb0e112af"
+    },
+    {
+      "region": "br",
+      "build": "PT_NarutoAlpha9.41Build300",
+      "url": "https://cdnnaruto-pt.oasgames.com/PT_NarutoAlpha9.41Build300/flash/hud/HudPlugin.swf",
+      "file": "daily-wanted/HudPlugin.daily-wanted-br-9.41.swf",
+      "baseSha256": "19ff52dd07cea030c9f9aaa82a56a6fb8dd13e080dc0cc41765a39f35cc02577"
+    }
+  ]
+}

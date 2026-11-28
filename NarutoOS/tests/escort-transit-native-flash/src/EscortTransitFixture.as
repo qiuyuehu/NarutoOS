@@ -6,9 +6,11 @@ package
     import flash.external.ExternalInterface;
     import narutoos.daily.EscortTransit;
     import narutoos.daily.EscortRewardPopup;
+    import narutoos.daily.EscortDeliveryNpc;
     import com.tencent.morefun.naruto.plugin.ui.box.BoxManager;
     import com.tencent.morefun.naruto.plugin.RSModel.modules.popup.system.ItemIconBox;
-import fixture.ModalCover;
+    import com.tencent.morefun.naruto.plugin.npc.views.TaskNpcDialog;
+    import fixture.ModalCover;
     import fixture.NativeRuntime;
     import base.ApplicationData;
     import task.commands.HrefEventCommand;
@@ -32,6 +34,7 @@ import fixture.ModalCover;
                 addChild(owner);
                 NativeRuntime.reset();
                 testEscortRewardPopup(owner);
+                testLocalizedDeliveryButton();
                 adapter = new EscortTransit(owner);
 
                 var unloaded:Object = adapter.read();
@@ -170,6 +173,13 @@ import fixture.ModalCover;
             assert(closer.step() && reward.clickCount == 1, "clicks the exact native OK button once it is topmost");
             assert(!closer.step() && reward.clickCount == 1, "does not repeat a completed popup click");
             closer.arm();
+            var brReward:ItemIconBox = new ItemIconBox();
+            brReward.data = [{id:1, num:1}];
+            Object(brReward.content.getChildByName("txt")).text = "Parabéns por obter prêmios extras!";
+            owner.addChild(brReward);
+            BoxManager.showingList = [brReward];
+            assert(closer.step() && brReward.clickCount == 1, "handles the localized Portuguese escort bonus title");
+            closer.arm();
             BoxManager.showingList = [];
             assert(!closer.step(), "a delivery without bonus items adds no wait to normal task flow");
             closer.disarm();
@@ -179,6 +189,26 @@ import fixture.ModalCover;
             BoxManager.showingList = [laterReward];
             assert(!closer.step() && laterReward.clickCount == 0, "does not carry popup eligibility into a later task");
             BoxManager.showingList = [];
+        }
+
+        private function testLocalizedDeliveryButton():void
+        {
+            var task:Object = {id:91, type:1, state:2, receiveTime:123,
+                cfg:{commitNpcSceneId:12, commitNpcId:99}};
+            var model:Object = {getTaskInfosByNpc:function(scene:int, npc:int):Array { return [task]; }};
+            var app:Object = {globelInfo:{sceneId:12}};
+            var labels:Array = ["完成任务", "Completar missão"];
+            for each (var label:String in labels)
+            {
+                var dialog:TaskNpcDialog = new TaskNpcDialog(label);
+                dialog.taskNpcCfg = {listId:99};
+                var delivery:EscortDeliveryNpc = new EscortDeliveryNpc();
+                var button:Object = dialog.content.yesBtn;
+                assert(delivery.step(dialog, task, model, app) && button.clicks == 1,
+                    "submits only the native delivery button for the localized label " + label);
+                assert(delivery.step(dialog, task, model, app) && button.clicks == 1,
+                    "does not repeat a localized delivery submission");
+            }
         }
 
         private function report(message:String):void

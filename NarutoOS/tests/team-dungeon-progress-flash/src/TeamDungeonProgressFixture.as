@@ -28,11 +28,16 @@ package
                 return -2;
             }
             var tasks:Array = [];
-            if (name == "zero" || name == "two" || name == "three" || name == "small-complete")
+            if (name == "zero" || name == "two" || name == "three" || name == "small-complete" ||
+                name == "pt-two" || name == "pt-saturated" || name == "pt-scope")
             {
-                var count:int = name == "zero" ? 0 : name == "two" ? 2 : name == "three" ? 3 : 1;
-                var target:int = name == "small-complete" ? 1 : 3;
-                tasks.push(task("通关组队副本" + target + "次", count, target));
+                var count:int = name == "zero" ? 0 : name == "two" ? 2 : name == "three" ? 3 :
+                    name == "pt-two" ? 2 : 1;
+                var target:int = name == "small-complete" || name == "pt-saturated" ? 1 :
+                    name == "pt-scope" ? 2 : 3;
+                var text:String = name == "pt-scope" ? "{c}Passar de fases de elite{/c}" :
+                    name.indexOf("pt-") == 0 ? "{c}Passar de fases em grupo{/c}" : "通关组队副本" + target + "次";
+                tasks.push(task(text, count, target, name.indexOf("pt-") == 0 ? 23 : 3));
             }
             else if (name == "ambiguous") tasks.push(task("组队副本3次", 2, 3));
             else if (name == "exact-with-saturated")
@@ -61,10 +66,10 @@ package
             return TeamDungeonProgress.completed();
         }
 
-        private function task(text:String, count:int, target:int):Object
+        private function task(text:String, count:int, target:int, conditionType:int = 3):Object
         {
             return {
-                cfg:{name:"组队副本", conditions:[{text:text, type:3, num:target}]},
+                cfg:{name:"组队副本", conditions:[{text:text, type:conditionType, num:target}]},
                 conditions:[{data:[count], state:count == target ? 1 : 0}]
             };
         }

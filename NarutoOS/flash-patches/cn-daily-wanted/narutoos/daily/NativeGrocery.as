@@ -94,13 +94,13 @@ package narutoos.daily
 
             row.layout.scrollTo(row.index);
             var control:Object = controls(row);
-            if (control == null || !enabled(control.button)) return UNREADABLE;
-            control.stepper.value = quantity;
-            control.stepper.drawNow();
-            snapshot.quantity = control.stepper.value;
+            if (control == null) return null;
+            if (control === UNREADABLE || !enabled(control.button)) return UNREADABLE;
+            if (!writeQuantity(control, quantity)) return UNREADABLE;
+            snapshot.quantity = readControlQuantity(control);
             snapshot.total = Number(snapshot.price) * snapshot.quantity;
-            if (readCount(control.stepper.numericUI.textField.text) !== snapshot.quantity) return UNREADABLE;
-            prepared = {row:row, control:control, quantity:quantity, total:snapshot.total};
+            if (snapshot.quantity !== quantity) return UNREADABLE;
+            prepared = {row:row, control:control, renderer:control.renderer, quantity:snapshot.quantity, total:snapshot.total};
             return snapshot;
         }
 
@@ -131,11 +131,33 @@ package narutoos.daily
             if (pending == null || dialog !== top || getQualifiedClassName(top) != TEXT_BOX) return UNREADABLE;
             if (!dialogReady || !top.isShowing) return null;
             var content:DisplayObjectContainer = top.content as DisplayObjectContainer;
-            var match:Array = /^确定购买([1-9][0-9]*)个(.+)，共花费([1-9][0-9]*)(月之印)\?$/s.exec(content["txt"].text);
-            if (match == null) return UNREADABLE;
+            var match:Array;
+            var name:String;
+            var quantity:int;
+            var total:int;
+            if (DailyRegion.isBR)
+            {
+                // The BR shop may be rendered in Portuguese or through the user's existing
+                // Chinese localization. Accept only these two verified native templates.
+                match = /^Deseja gastar\s*([1-9][0-9]*)\s+Selos? da Lua,\s*para comprar\s*([1-9][0-9]*)\s+(.+)\?$/s.exec(content["txt"].text);
+            }
+            if (match == null)
+            {
+                match = /^确定购买([1-9][0-9]*)个(.+)，共花费([1-9][0-9]*)(月之印)\?$/s.exec(content["txt"].text);
+                if (match == null) return UNREADABLE;
+                quantity = readCount(match[1]);
+                name = match[2];
+                total = readCount(match[3]);
+            }
+            else
+            {
+                total = readCount(match[1]);
+                quantity = readCount(match[2]);
+                name = match[3];
+            }
             if (!dialogButton(content, "okBtn", flags.OK) || !dialogButton(content, "cancelBtn", flags.CANCEL))
                 return UNREADABLE;
-            return {name:match[2], quantity:readCount(match[1]), currency:match[4], total:readCount(match[3])};
+            return {name:name, quantity:quantity, currency:GroceryCatalog.CURRENCY, total:total};
         }
 
         public function confirm():Boolean
@@ -353,13 +375,55 @@ package narutoos.daily
                 var renderer:DisplayObjectContainer = findRenderer(rack as DisplayObjectContainer, row.data);
                 if (renderer == null) continue;
                 var skin:Object = directChild(renderer as DisplayObjectContainer, SKIN);
-                var stepper:Object = directChild(renderer as DisplayObjectContainer, STEPPER);
-                if (skin == null || stepper == null || !stepper.visible || skin.itemBg.currentFrame != 1 ||
+                if (skin == null || skin.itemBg == null) return UNREADABLE;
+                if (skin.itemBg.currentFrame != 1 ||
                     skin.itemBg.costType.currentFrame != MOON_TAB + 1 || skin.itemNameTf.text !== row.snapshot.name ||
-                    readCount(skin.itemBg.costTf.text) !== row.snapshot.price) return null;
-                return {button:skin.itemBg.buyBtn, stepper:stepper};
+                    readCount(skin.itemBg.costTf.text) !== row.snapshot.price) return UNREADABLE;
+                var stepper:Object = directChild(renderer as DisplayObjectContainer, STEPPER);
+                if (stepper != null)
+                {
+                    if (!stepper.visible || stepper.numericUI == null || !(stepper.numericUI.textField is TextField))
+                        return UNREADABLE;
+                    return {button:skin.itemBg.buyBtn, stepper:stepper, renderer:renderer, nativeQuantity:false};
+                }
+
+                // PT9.41 moved quantity handling into StockItemRender: the skin contains a
+                // MovieClip/TextField and the renderer updates its private m_currentNum from
+                // Event.CHANGE. Require that handler before writing so the eventual native
+                // click cannot submit a stale private quantity.
+                if (!DailyRegion.isBR) return UNREADABLE;
+                var nativeStepper:Object = skin.itemBg.stepper;
+                var textField:TextField = nativeStepper == null ? null : nativeStepper.textField as TextField;
+                if (nativeStepper == null || !(nativeStepper is DisplayObject) || !nativeStepper.visible ||
+                    textField == null || !textField.hasEventListener(Event.CHANGE)) return UNREADABLE;
+                return {button:skin.itemBg.buyBtn, stepper:nativeStepper, textField:textField,
+                        renderer:renderer, nativeQuantity:true};
             }
             return null;
+        }
+
+        private function writeQuantity(control:Object, quantity:int):Boolean
+        {
+            if (control == null || control.renderer == null) return false;
+            if (control.nativeQuantity)
+            {
+                var field:TextField = control.textField as TextField;
+                if (field == null || !field.hasEventListener(Event.CHANGE)) return false;
+                field.htmlText = "<b>" + quantity + "</b>";
+                field.dispatchEvent(new Event(Event.CHANGE));
+                return field.hasEventListener(Event.CHANGE) && readCount(field.text) === quantity;
+            }
+            control.stepper.value = quantity;
+            control.stepper.drawNow();
+            return control.stepper.value === quantity &&
+                readCount(control.stepper.numericUI.textField.text) === quantity;
+        }
+
+        private function readControlQuantity(control:Object):Number
+        {
+            if (control == null) return NaN;
+            return control.nativeQuantity ? readCount(control.textField.text) :
+                readCount(control.stepper.numericUI.textField.text);
         }
 
         private static function findRenderer(branch:DisplayObjectContainer, data:Object):DisplayObjectContainer
@@ -382,8 +446,14 @@ package narutoos.daily
                 row.snapshot.name !== previous.name || row.snapshot.price !== previous.price ||
                 row.snapshot.stock < order.quantity || row.snapshot.balance < order.total) return false;
             var control:Object = controls(row);
-            if (control == null || control.button !== order.control.button || control.stepper !== order.control.stepper ||
-                control.stepper.value !== order.quantity || readCount(control.stepper.numericUI.textField.text) !== order.quantity)
+            if (control == null || control === UNREADABLE || control.renderer !== order.renderer ||
+                control.button !== order.control.button || control.stepper !== order.control.stepper ||
+                control.nativeQuantity !== order.control.nativeQuantity ||
+                (control.nativeQuantity && control.textField !== order.control.textField)) return false;
+            var liveQuantity:Number = readControlQuantity(control);
+            if (liveQuantity !== order.quantity ||
+                (control.nativeQuantity && !control.textField.hasEventListener(Event.CHANGE)) ||
+                (!control.nativeQuantity && control.stepper.value !== order.quantity))
                 return false;
             if (!inDialog) order.row = row;
             return inDialog || enabled(control.button);

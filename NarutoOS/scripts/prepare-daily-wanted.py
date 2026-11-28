@@ -1,7 +1,8 @@
-"""Compile the CN daily assistant and attach it to the verified HUD activity bar."""
+"""Compile the shared daily assistant and attach it to the verified HUD activity bar."""
 import argparse
 import hashlib
 import json
+import lzma
 from pathlib import Path
 import subprocess
 import sys
@@ -25,6 +26,21 @@ def ffdec(*args):
     subprocess.run([java, '-Djava.awt.headless=true', '-jar', TOOLS / 'ffdec/ffdec.jar', *args], check=True)
 
 
+def ffdec_swf(data):
+    # FFDec does not accept the BR ZWS wrapper's modified LZMA header. Keep the
+    # original decoded bytes for version hashing, but hand FFDec a plain FWS body.
+    if data[:3] != b'ZWS':
+        return data
+    expected = int.from_bytes(data[4:8], 'little') - 8
+    if expected < 0 or len(data) < 17:
+        raise ValueError('Invalid ZWS HUD')
+    stream = data[12:17] + expected.to_bytes(8, 'little') + data[17:]
+    body = lzma.decompress(stream, format=lzma.FORMAT_ALONE)
+    if len(body) != expected:
+        raise ValueError('ZWS HUD decompressed length mismatch')
+    return b'FWS' + data[3:8] + body
+
+
 def compile_assistant(work):
     # Only link the assistant's own ActionScript. Flash supplies playerglobal at runtime.
     library = work / 'assistant.swc'
@@ -43,9 +59,10 @@ def compile_assistant(work):
     required = {
         'DailyAssistant', 'DailyEntryPortrait', 'DailyQueue', 'IDailyTask', 'DailyActivity', 'NativeFightResult',
         'NativeAutoBattle', 'NativePlayerVisibility', 'NativeAutoMode', 'GrocerySettings', 'GroceryTask', 'GroceryCatalog', 'NativeGrocery',
-        'QuizWait', 'WantedRun', 'ExpeditionRun', 'ExpeditionMap', 'ExpeditionBattle', 'QuizRun', 'StrongRun',
+        'QuizBox', 'QuizWait', 'WantedRun', 'ExpeditionRun', 'ExpeditionMap', 'ExpeditionResetLabel', 'ExpeditionBattle', 'QuizRun', 'StrongRun',
         'TeamDungeonPanel', 'TeamDungeonProgress', 'TeamDungeonRun',
         'EscortTask', 'EscortEntry', 'EscortDeliveryNpc', 'EscortNativePanel', 'EscortTransit', 'EscortRewardPopup',
+        'DailyRegion', 'InfiniteIllusionSweep', 'NativeInfiniteIllusion',
     }
     compiled = {tag.get('name').rsplit('/', 1)[-1] for tag in tags}
     if missing := required - compiled:
@@ -86,8 +103,9 @@ def qname(constants, package, local_name):
                               namespace_index=str(ns), namespace_set_index='0', qname_index='0'))
 
 
-def patch_activity_bar(tags, assistant_tags):
-    # In this locked HUD build, updateIcons leaves the first free slot in locals 10 and 11.
+def patch_activity_bar(tags, assistant_tags, region):
+    # The verified CN 11.17 and BR 9.39 HUD layouts both use locals 10 and 11
+    # for the first free activity-bar slot in updateIcons.
     # Append before the final return so the original branches, listeners and layout stay intact.
     for tag in tags.findall('item[@type="DoABC2Tag"]'):
         abc = tag.find('abc')
@@ -109,7 +127,8 @@ def patch_activity_bar(tags, assistant_tags):
             assistant = qname(constants, 'narutoos.daily', 'DailyAssistant')
             methods = {strings[int(names[int(trait.get('name_index'))].get('name_index'))].text:
                        trait.get('method_info') for trait in owner.findall('./instance_traits/traits/item[@method_info]')}
-            for native, call, args, count in [('updateIcons', 'install', bytes.fromhex('d0 62 0a 62 0b'), 3),
+            install = 'installBR' if region == 'br' else 'install'
+            for native, call, args, count in [('updateIcons', install, bytes.fromhex('d0 62 0a 62 0b'), 3),
                                                ('hideMenu', 'hide', bytes.fromhex('d0'), 1)]:
                 body = abc.find('bodies/item[@method_info="' + methods[native] + '"]')
                 code = bytes.fromhex(body.get('codeBytes'))
@@ -139,29 +158,69 @@ def attach_portrait(tags):
     ET.SubElement(symbol.find('names'), 'item').text = 'narutoos.daily.DailyEntryPortrait'
 
 
+def build_hud(work, base, output, helpers, region):
+    (work / 'original.swf').write_bytes(ffdec_swf(base))
+    xml = work / 'hud.xml'
+    ffdec('-swf2xml', work / 'original.swf', xml)
+    tree = ET.parse(xml)
+    patch_activity_bar(tree.find('tags'), helpers, region)
+    attach_portrait(tree.find('tags'))
+    tree.write(xml, encoding='utf-8', xml_declaration=True)
+    output.parent.mkdir(parents=True, exist_ok=True)
+    ffdec('-xml2swf', xml, output)
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--hud', required=True, type=Path, help='Original CN HudPlugin.swf')
+    parser.add_argument('--hud', type=Path, help='Original CN HudPlugin.swf')
+    parser.add_argument('--br-hud', type=Path, action='append', help='Original Brazil HudPlugin.swf (repeat for multiple builds)')
     parser.add_argument('--update-asset', action='store_true')
     args = parser.parse_args()
-    target = json.loads(SPEC.read_text())['targets'][0]
-    base = decode_game_swf(args.hud.read_bytes())
-    if hashlib.sha256(base).hexdigest() != target['baseSha256']:
-        raise ValueError('HUD version mismatch')
+    builds = []
+    if args.hud:
+        builds.append(('cn', [args.hud], SPEC))
+    if args.br_hud:
+        builds.append(('br', args.br_hud, ROOT / 'flash-patches/br-daily-wanted.json'))
+    if not builds:
+        parser.error('需至少提供 --hud 或 --br-hud')
     with tempfile.TemporaryDirectory(prefix='daily-wanted-', dir=ARTIFACTS) as tmp:
         work = Path(tmp)
         helpers = compile_assistant(work)
-        (work / 'original.swf').write_bytes(base)
-        xml = work / 'hud.xml'
-        ffdec('-swf2xml', work / 'original.swf', xml)
-        tree = ET.parse(xml)
-        patch_activity_bar(tree.find('tags'), helpers)
-        attach_portrait(tree.find('tags'))
-        tree.write(xml, encoding='utf-8', xml_declaration=True)
-        output = work / target['file']
-        output.parent.mkdir(parents=True)
-        ffdec('-xml2swf', xml, output)
-        subprocess.run([sys.executable, ROOT / 'scripts/prepare-assist.py', '--prebuilt-module', SPEC, work,
+        register_args = []
+        for region, hud_files, spec_path in builds:
+            targets = json.loads(spec_path.read_text())['targets']
+            originals = {}
+            for hud in hud_files:
+                base = decode_game_swf(hud.read_bytes())
+                digest = hashlib.sha256(base).hexdigest()
+                if not any(target['baseSha256'] == digest for target in targets):
+                    raise ValueError(f'{region.upper()} HUD version mismatch: {hud.name}')
+                originals[digest] = base
+            region_work = work / region
+            region_work.mkdir()
+            for target in targets:
+                output = region_work / target['file']
+                base = originals.get(target['baseSha256'])
+                if base is None:
+                    # An incremental build retains the verified bundled sibling target.
+                    assets = ROOT / 'assets/assists'
+                    manifest = json.loads((assets / 'manifest.json').read_text())
+                    registered = next((entry for module in manifest['modules']
+                                       for entry in module['targets']
+                                       if all(entry.get(k) == v for k, v in target.items())), None)
+                    if registered is None:
+                        raise ValueError(f"Missing original HUD for {target['build']}")
+                    data = (assets / target['file']).read_bytes()
+                    if hashlib.sha256(data).hexdigest() != registered['sha256']:
+                        raise ValueError(f"Bundled HUD digest mismatch for {target['build']}")
+                    output.parent.mkdir(parents=True, exist_ok=True)
+                    output.write_bytes(data)
+                else:
+                    target_work = region_work / target['build']
+                    target_work.mkdir()
+                    build_hud(target_work, base, output, helpers, region)
+            register_args.extend(['--prebuilt-module', spec_path, region_work])
+        subprocess.run([sys.executable, ROOT / 'scripts/prepare-assist.py', *register_args,
                         *(['--update-asset'] if args.update_asset else [])], check=True)
 
 

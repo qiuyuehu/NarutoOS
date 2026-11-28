@@ -108,11 +108,13 @@ package narutoos.daily
             {
                 return false;
             }
-            var normalized:String = text.replace(/<[^>]*>/g, "").replace(/\s/g, "");
+            // TaskCfg.setData copies conditionDesc1 verbatim, including the {c} markers.
+            var normalized:String = text.replace(/<[^>]*>/g, "").replace(/\{\/?c\}/g, "").replace(/\s/g, "");
             normalized = normalized.replace(/[。！!？?]+$/g, "");
             // Keep the whole configured condition to the general clear action. This rejects
             // friend, roster, and difficulty sub-goals that are not a total clear counter.
-            return /^(?:(?:通关|完成|成功挑战)组队副本|组队副本(?:通关|完成|成功挑战))(?:%?\d+次)?$/.test(normalized);
+            return /^(?:(?:通关|完成|成功挑战)组队副本|组队副本(?:通关|完成|成功挑战))(?:%?\d+次)?$/.test(normalized) ||
+                normalized == "Passardefasesemgrupo" || normalized == "PassardeFasesemGrupo";
         }
 
         /** Fails closed unless the native player is in a walkable, unlocked, idle scene. */

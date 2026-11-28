@@ -59,6 +59,7 @@ package
                 queue.start(["grocery", "tail"]);
             }
             return {running:queue.running, opens:shop.opens, buys:shop.buys, confirms:shop.confirms, closes:shop.closes,
+                prepareCalls:shop.prepareCalls,
                 messages:messages, tail:tail, pending:shopState.groceryPending != null,
                 retryOpens:nextAdapter === shop ? 0 : nextAdapter.opens, retryBuys:nextAdapter === shop ? [] : nextAdapter.buys};
         }

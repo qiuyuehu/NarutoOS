@@ -27,6 +27,9 @@ app.whenReady().then(async () => {
     assert.equal(await run('two'), 2);
     assert.equal(await run('three'), 3);
     assert.equal(await run('small-complete'), -1);
+    assert.equal(await run('pt-two'), 2);
+    assert.equal(await run('pt-saturated'), -1);
+    assert.equal(await run('pt-scope'), -1);
     assert.equal(await run('ambiguous'), -1);
     assert.equal(await run('exact-with-saturated'), 2);
     assert.equal(await run('reward'), -1);

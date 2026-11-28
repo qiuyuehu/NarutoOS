@@ -99,7 +99,7 @@ test('shipped pack matches its manifest',()=>{
   assert.ok(result.modules.length>=1);
 });
 
-test('daily wanted is offered only on its registered CN HUD with assists enabled', () => {
+test('daily wanted registers separate CN and BR HUD targets only with assists enabled', () => {
   const output = path.join(work, 'manager.cjs');
   buildSync({entryPoints: [path.join(root, 'src/main/assist-manager.ts')], outfile: output,
     bundle: true, platform: 'node', format: 'cjs', external: ['electron']});
@@ -116,6 +116,14 @@ test('daily wanted is offered only on its registered CN HUD with assists enabled
       'https://res.huoying.qq.com/NarutoBeta11.17Build302/flash/hud/HudPlugin.swf');
     // Verified against the complete CN response body and its cache record's size and CRC.
     assert.equal(hud?.baseSha256, '104b64041595404be4b6537023c97938deb9dd87d184db668633b3af6b0031bc');
+    const brModule = manager.status().modules.find(item => item.id === 'br-daily-wanted');
+    assert.equal(brModule.state, 'ready');
+    assert.equal(brModule.nameKey, 'ui.assist_daily_wanted_br');
+    assert.deepEqual(brModule.regions, ['br']);
+    const brHud = manager.resources.find(resource => resource.url ===
+      'https://cdnnaruto-pt.oasgames.com/PT_NarutoAlpha9.39Build301/flash/hud/HudPlugin.swf');
+    assert.equal(brHud?.baseSha256, '7b35a42bfde4a9323752afda7890ac425b11dc2eaf09732354f3abeeb0e112af');
+    assert.notEqual(hud?.url, brHud?.url, 'each region keeps its own HUD resource target');
   }
 });
 

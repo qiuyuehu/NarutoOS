@@ -80,7 +80,9 @@ package narutoos.daily
             }
             if (!opening || merchant != null || sawList) return;
             var match:InteractiveObject = EscortDeliveryNpc.menuRow(top, function(data:Object):Boolean {
-                return data.type == "npcMenu" && data.text == "押镖任务" && data.param == "openui,49";
+                // The merchant dialog list id and native action identify the escort row;
+                // its visible label is localized by the game.
+                return data.type == "npcMenu" && data.param == "openui,49";
             });
             if (match)
             {

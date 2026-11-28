@@ -9,6 +9,7 @@ package
     import com.tencent.morefun.naruto.plugin.ui.layer.LayerManager;
     import hud.data.ActivityHubConfig;
     import narutoos.daily.DailyQueue;
+    import narutoos.daily.DailyAssistant;
     import narutoos.daily.IDailyTask;
     import narutoos.daily.StrongRun;
     import fixture.QueueHandoffTask;
@@ -72,6 +73,8 @@ package
                 resultKind = "";
                 observedDifficulty = null;
                 eventOrder = [];
+                if (value == "expiredBR") DailyAssistant.installBR(new Sprite(), 0, 0);
+                else if (phase == "expiredBR") DailyAssistant.install(new Sprite(), 0, 0);
                 phase = value;
                 StrongEnvironment.delayStartAck = value == "delayedStart";
                 StrongEnvironment.emptyQuery = value == "empty";
@@ -115,7 +118,7 @@ package
         public function onStartButton():void
         {
             startClicks++;
-            if (phase == "expired") StrongEnvironment.showClosedTip();
+            if (phase == "expired" || phase == "expiredBR") StrongEnvironment.showClosedTip(phase == "expiredBR");
             else StrongEnvironment.startBattle();
         }
 

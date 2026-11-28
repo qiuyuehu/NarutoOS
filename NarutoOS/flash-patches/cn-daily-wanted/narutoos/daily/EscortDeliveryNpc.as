@@ -10,6 +10,8 @@ package narutoos.daily
     {
         public static const DIALOG:String = "com.tencent.morefun.naruto.plugin.npc.views::TaskNpcDialog";
         private static const ROW:String = "com.tencent.morefun.naruto.plugin.npc.views::TaskNpcDialogMenuRenderer";
+        private static const COMPLETE_LABEL_CN:String = "完成任务";
+        private static const COMPLETE_LABEL_BR:String = "Completar missão";
         private var selectedIn:Object;
         private var submitted:Boolean;
 
@@ -27,7 +29,8 @@ package narutoos.daily
             if (submitted) return true;
 
             var button:InteractiveObject = top.content.yesBtn as InteractiveObject;
-            if (button && button.visible && button.mouseEnabled && Object(button).label == "完成任务")
+            if (button && button.visible && button.mouseEnabled &&
+                (Object(button).label == COMPLETE_LABEL_CN || Object(button).label == COMPLETE_LABEL_BR))
             {
                 var tasks:Array = model.getTaskInfosByNpc(scene, npc);
                 if (selectedIn !== top && (!tasks || tasks.length != 1 || !sameOrder(tasks[0], task))) return true;

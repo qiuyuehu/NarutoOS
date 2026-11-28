@@ -54,6 +54,18 @@ app.whenReady().then(async () => {
       assert.equal(state.pending, false, scenario);
     }
 
+    await start('not-ready');
+    await waitFor(s => s.confirms === 1);
+    state = await perform('state');
+    assert.equal(state.buys[0].quantity, 5);
+    await perform('receipt', 'success');
+    await waitFor(s => s.confirms === 2);
+    await perform('receipt', 'success');
+    state = await finished();
+    assert(state.prepareCalls >= 3);
+    assert.equal(state.tail, 1);
+    assert.match(state.messages[0], /洞穴密钥 · 已兑换 5 个/);
+
     await start();
     await waitFor(s => s.confirms === 1);
     await perform('start');
@@ -70,6 +82,15 @@ app.whenReady().then(async () => {
     state = await finished();
     assert.match(state.messages[0], /洞穴密钥 · 已兑换 5 个\n秘卷残页 · 已兑换 2 个/);
     assert.equal(state.closes, 1);
+    assert.equal(state.tail, 1);
+
+    await start('pt-name');
+    await waitFor(s => s.buys.length === 1);
+    await perform('receipt', 'success');
+    await waitFor(s => s.buys.length === 2);
+    await perform('receipt', 'success');
+    state = await finished();
+    assert.match(state.messages[0], /洞穴密钥 · 已兑换 5 个\n秘卷残页 · 已兑换 2 个/);
     assert.equal(state.tail, 1);
 
     await start('stock');

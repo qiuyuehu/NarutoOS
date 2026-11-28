@@ -4,7 +4,7 @@ package task.defs
     {
         public static function needShowCount(type:int):Boolean
         {
-            return type == 3;
+            return type == 3 || type == 23;
         }
     }
 }

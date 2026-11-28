@@ -52,6 +52,12 @@ package narutoos.daily
          return started;
       }
 
+      /** A verified native result is a battle-progress milestone, not a polling heartbeat. */
+      public function get hasResult():Boolean
+      {
+         return resultSeen;
+      }
+
       public function openMap():void
       {
          var commandType:Class = getDefinitionByName("expeditionary.command.OpenExpeditionaryCommand") as Class;

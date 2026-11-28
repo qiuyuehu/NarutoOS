@@ -15,6 +15,7 @@ package
     import flash.external.ExternalInterface;
     import flash.geom.Point;
     import narutoos.daily.GroceryCatalog;
+    import narutoos.daily.DailyRegionFixture;
     import narutoos.daily.NativeGrocery;
     import ui.command.ShowTextBoxCommand;
     import user.command.FloatItemAnimationCommand;
@@ -31,6 +32,7 @@ package
         private var buyCount:int;
         private var confirmCount:int;
         private var prompting:Boolean = true;
+        private var useNativeField:Boolean;
         private var skipNextPrompt:Boolean;
         private var stock:int = 9;
         private var closingCallback:Function;
@@ -125,15 +127,77 @@ package
                 check(adapter.prepare(ITEM, 1).total == 200, "accepts the native default zero without a presence flag");
                 renderer.skin.itemBg.costType.currentFrame = 1;
                 check(adapter.prepare(ITEM, 1).id == null && !adapter.buy(), "rejects the wrong cost icon despite the moon tab");
+                renderer.skin.itemBg.costType.currentFrame = 2;
+                adapter.close();
+                ApplicationData.singleton.selfInfo.shadowOfMoon = 6000;
+                stock = 30;
+                DailyRegionFixture.setBR(true);
+                start(true);
+                var nativeBuyCountBefore:int = buyCount;
+                var brPrepared:Object = adapter.prepare(ITEM, 20);
+                check(brPrepared != null && brPrepared.name == "Chave da Caverna" && brPrepared.quantity == 20 &&
+                      brPrepared.total == 4000,
+                      "writes and reads the PT-native text-field quantity");
+                check(adapter.buy() && !adapter.buy(), "starts only one native BR purchase confirmation");
+                check(renderer.lastSubmittedCount == 20,
+                      "the native renderer's private purchase count matches the prepared quantity");
+                prompt = adapter.confirmation();
+                check(prompt.name == "Chave da Caverna" && prompt.quantity == 20 && prompt.total == 4000 &&
+                      prompt.currency == "月之印", "reads the Portuguese moon-seal confirmation and localized item name");
+                check(adapter.confirm(), "confirms the BR purchase only after native amount and item match");
+                closingCallback();
+                award(ITEM, 20, boughtFrom);
+                check(adapter.result() == "success" && buyCount == nativeBuyCountBefore + 1 && adapter.close(),
+                      "settles exactly one BR purchase through the native receipt");
+
+                ApplicationData.singleton.selfInfo.shadowOfMoon = 6000;
+                prompting = false;
+                start(true);
+                nativeBuyCountBefore = buyCount;
+                brPrepared = adapter.prepare(ITEM, 20);
+                check(brPrepared != null && brPrepared.quantity == 20 && brPrepared.total == 4000 &&
+                      adapter.buy() && !adapter.buy() && renderer.lastSubmittedCount == 20 &&
+                      buyCount == nativeBuyCountBefore + 1,
+                      "submits the private PT-native count correctly when the prior no-prompt preference is active");
+                award(ITEM, 20, boughtFrom);
+                check(adapter.result() == "success" && buyCount == nativeBuyCountBefore + 1 && adapter.close(),
+                      "settles exactly one no-prompt PT-native purchase from its matching receipt");
+
+                prompting = true;
+                ApplicationData.singleton.selfInfo.shadowOfMoon = 6000;
+                start(true);
+                adapter.prepare(ITEM, 1);
+                var submittedBefore:int = buyCount;
+                renderer.removeNativeQuantityHandler();
+                var unreadable:Object = adapter.prepare(ITEM, 1);
+                check(unreadable.id == null && !adapter.buy() && buyCount == submittedBefore,
+                      "refuses PT-native submission when the private-count change handler is absent");
+                adapter.close();
+
+                DailyRegionFixture.setChineseText(true);
+                ApplicationData.singleton.selfInfo.shadowOfMoon = 6000;
+                start();
+                adapter.prepare(ITEM, 1);
+                check(adapter.buy(), "starts a BR purchase with the Chinese UI localization");
+                prompt = adapter.confirmation();
+                check(prompt.name == "洞穴密钥" && prompt.quantity == 1 && prompt.total == 200 &&
+                      prompt.currency == "月之印", "accepts the verified Chinese confirmation template on BR");
+                check(adapter.confirm(), "confirms the localized BR order only after item and amount match");
+                closingCallback();
+                award(ITEM, 1, boughtFrom);
+                check(adapter.result() == "success", "settles BR purchase rendered in Chinese");
+                DailyRegionFixture.setChineseText(false);
+                DailyRegionFixture.setBR(false);
             }
-            catch (error:Error) { failures.push(error.getStackTrace()); }
+            catch (error:Error) { failures.push(error.message); }
             ExternalInterface.call("groceryFixtureResult", JSON.stringify({passes:passes,failures:failures}));
             return "started";
         }
 
-        private function start():void
+        private function start(nativeField:Boolean = false):void
         {
             if (adapter != null) adapter.dispose();
+            useNativeField = nativeField;
             OpenVarietyShopCommand.opened = show;
             adapter = new NativeGrocery(this);
             if (!adapter.open() || adapter.confirmation() != null) throw new Error("failed to open expected shop");
@@ -145,7 +209,7 @@ package
             addChild(view);
             BoxManager.showingList.push(view);
             var rack:GroceryRack = new GroceryRack();
-            renderer = new StockItemRender();
+            renderer = new StockItemRender(useNativeField);
             rack.addChild(renderer);
             view.layout.addChild(rack);
             view.layout.layout.items = [rack];
@@ -168,12 +232,16 @@ package
                 shopInfo:{ currencyId:13103001, isOpen:true }
             }]];
             view.layout.render();
-            renderer.stepper.value = 1;
-            renderer.stepper.drawNow();
+            if (!useNativeField)
+            {
+                renderer.stepper.value = 1;
+                renderer.stepper.drawNow();
+            }
         }
 
         private function buy(event:MouseEvent):void
         {
+            var count:int = renderer.captureSubmittedCount();
             orderDone = function():void
             {
                 buyCount++;
@@ -184,8 +252,11 @@ package
                 orderDone();
                 return;
             }
-            var count:int = renderer.stepper.value;
-            var text:String = "<b><font color='#ffffff'>确定购买<font color='#e9e499'>" + count +
+            var text:String = DailyRegionFixture.isBR && !DailyRegionFixture.isChineseText ?
+                "<b><font color='#ffffff'>Deseja gastar<font color='#e9e499'> " + (200 * count) +
+                " Selo da Lua</font>,para comprar <font color='#e9e499'>" + count +
+                " Chave da Caverna</font>?</b>" :
+                "<b><font color='#ffffff'>确定购买<font color='#e9e499'>" + count +
                 "</font>个<font color='#e9e499'>洞穴密钥</font>，共花费<font color='#e9e499'>" +
                 200 * count + "月之印</font>?</b>";
             var command:ShowTextBoxCommand = new ShowTextBoxCommand(text,

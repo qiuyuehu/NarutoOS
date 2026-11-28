@@ -22,6 +22,7 @@ package narutoos.daily
         private static const TEXT_COMMAND:String = "ui.command::ShowTextBoxCommand";
         private static const TEXT_BOX:String = "com.tencent.morefun.naruto.plugin.RSModel.modules.popup.system::TextBox";
         private static const SOLO_PROMPT:String = "你现在为单人状态，继续进行通缉任务将无法获得双倍经验奖励，是否继续本操作？";
+        private static const BR_SOLO_PROMPT:String = "Você está solo agora, caso realize Missões de Captura não receberá prêmios em dobro. Deseja prosseguir?";
         private static const NAVIGATION_TIMEOUT:int = 30000;
         private static const START_TIMEOUT:int = 8000;
         private static const PROMPT_SETTLE_MS:int = 1200;
@@ -31,6 +32,8 @@ package narutoos.daily
         private static const AI_ABORT_BOX:String = "WantedAIAbortTextBox";
         private static const AI_TEAM_ABORT_TEXT:String = "由于你的小队人数变成了1，自动通缉任务结束，召集小伙伴再来挑战吧！";
         private static const AI_BATTLE_FAIL_TEXT:String = "很遗憾，由于你战斗失败，自动通缉任务结束，请调整好阵容后再来挑战吧！";
+        private static const BR_AI_TEAM_ABORT_TEXT:String = "Como só resta 1 pessoa em sua equipe a missão de captura foi encerrada, chame mais pessoas para prosseguir.";
+        private static const BR_AI_BATTLE_FAIL_TEXT:String = "A Missão de Captura automática terminou devido a uma derrota, reformule sua formação e tente novamente.";
         private static const TASK_RECEIVE_ABLE:int = 0;
 
         private var origin:DisplayObject;
@@ -39,6 +42,10 @@ package narutoos.daily
         private var commandEvents:IEventDispatcher;
         private var timer:Timer;
         private var monitorTimer:Timer;
+        private var uiRetryTimer:Timer;
+        private var pendingUIBox:Object;
+        private var pendingMenu:Boolean;
+        private var pendingPromptUI:Boolean;
         private var wantedType:String;
         private var promptFlags:uint;
         private var navigation:Object;
@@ -59,6 +66,15 @@ package narutoos.daily
         private var monitoring:Boolean;
         private var terminalSince:int = -1;
         private var lastRemaining:int = -1;
+        private var lastTaskState:int = -1;
+        private var lastEvidenceAt:int;
+        private var lastFightState:Boolean;
+        private var lastFightStateKnown:Boolean;
+        private var lastSceneId:Object;
+        private var lastSceneToId:Object;
+        private var lastBRPhase:String;
+        private var lastBRMilestone:String;
+        private var wantedEntryArrived:Boolean;
         private var blockedReason:String;
         private var closingNpcDialog:Object;
         private var ownsAI:Boolean;
@@ -82,7 +98,7 @@ package narutoos.daily
                 return;
             }
 
-            timer = new Timer(NAVIGATION_TIMEOUT, 1);
+            timer = new Timer(DailyRegion.networkWait(NAVIGATION_TIMEOUT), 1);
             try
             {
                 boxManager = getDefinitionByName("com.tencent.morefun.naruto.plugin.ui.box.BoxManager");
@@ -147,6 +163,7 @@ package narutoos.daily
                     var href:Class = getDefinitionByName("task.commands.HrefEventCommand") as Class;
                     navigation = new href(href.DATA_WANTED_NPC);
                     listenToCommand(navigation, onNavigationFinished);
+                    reportBRPhase("通缉 寻路中");
                     navigation.call();
                 }
             }
@@ -202,7 +219,7 @@ package narutoos.daily
             if (getQualifiedClassName(box) == TEXT_BOX)
             {
                 var text:TextField = Object(box.content).txt as TextField;
-                if (text != null && text.text == SOLO_PROMPT)
+                if (text != null && isSoloPrompt(text.text))
                 {
                     promptBox = box;
                 }
@@ -215,10 +232,14 @@ package narutoos.daily
             var box:Object = Object(event).box;
             if (box.name == NPC_BOX && !clickedNpc)
             {
+                wantedEntryArrived = true;
+                refreshBRWaitWindow("wanted-panel-arrived", "通缉 等面板");
                 clickNpcButton(box);
             }
             else if (!clickedNpc && !choseMenu && isWantedMenu(box))
             {
+                wantedEntryArrived = true;
+                refreshBRWaitWindow("wanted-menu-arrived", "通缉 等面板");
                 chooseWantedMenu(box);
             }
             else if (box === promptBox)
@@ -240,6 +261,11 @@ package narutoos.daily
         {
             return box != null && getQualifiedClassName(box) == TASK_NPC &&
                 box.taskNpcCfg != null && box.taskNpcCfg.listId == WANTED_NPC_LIST_ID;
+        }
+
+        private static function isSoloPrompt(text:String):Boolean
+        {
+            return text == SOLO_PROMPT || text == BR_SOLO_PROMPT;
         }
 
         private function readWantedState():Object
@@ -287,6 +313,14 @@ package narutoos.daily
             ownsAI = ownsStartedAI || ownsAI;
             blockedReason = initialBlock;
             terminalSince = -1;
+            lastEvidenceAt = 0;
+            lastTaskState = -1;
+            lastFightStateKnown = false;
+            lastSceneId = null;
+            lastSceneToId = null;
+            lastBRPhase = null;
+            lastBRMilestone = null;
+            wantedEntryArrived = false;
             promptBox = null;
             monitorTimer = new Timer(MONITOR_INTERVAL);
             monitorTimer.addEventListener(TimerEvent.TIMER, onMonitorTimer);
@@ -298,8 +332,10 @@ package narutoos.daily
         {
             if (!running || !monitoring) return;
             // The launcher scales getTimer and Date; the polling Timer follows the player scheduler.
+            // Keep the original CN total timeout on the Timer's own game-clock count.
             var monitoredMs:int = monitorTimer.currentCount * MONITOR_INTERVAL;
-            if (monitoredMs >= MONITOR_TIMEOUT)
+            var monitorLimit:int = DailyRegion.networkWait(MONITOR_TIMEOUT);
+            if (!DailyRegion.isBR && monitoredMs >= MONITOR_TIMEOUT)
             {
                 finish(DailyQueue.ABORT, blockedReason != null ?
                     "等待角色恢复可操作超时，通缉状态未能交接。" : "等待通缉整轮结束超时。");
@@ -311,14 +347,47 @@ package narutoos.daily
                 if (state == null || battleInfo == null)
                 {
                     terminalSince = -1;
+                    finishForNoProgress(monitoredMs, monitorLimit);
                     return;
                 }
-                if (int(state.remaining) != lastRemaining)
+                var remaining:int = int(state.remaining);
+                var highestState:int = int(state.highestState);
+                if (lastRemaining >= 0 && remaining < lastRemaining)
                 {
-                    lastRemaining = int(state.remaining);
+                    lastEvidenceAt = monitoredMs;
+                }
+                if (lastTaskState >= 0 && highestState != lastTaskState)
+                {
+                    lastEvidenceAt = monitoredMs;
+                }
+                if (remaining != lastRemaining)
+                {
+                    lastRemaining = remaining;
                     if (progress != null) progress("通缉 剩" + lastRemaining + "次");
                 }
-                if (Boolean(battleInfo.isFighting))
+                lastTaskState = highestState;
+                var fighting:Boolean = Boolean(battleInfo.isFighting);
+                var application:Object = getDefinitionByName("base.ApplicationData").singleton;
+                var global:Object = application != null ? application.globelInfo : null;
+                if (lastFightStateKnown && fighting != lastFightState)
+                {
+                    lastEvidenceAt = monitoredMs;
+                }
+                if (global != null && lastSceneId != null && lastSceneToId != null &&
+                    global.sceneId != lastSceneId && global.sceneToId != null &&
+                    global.sceneId == global.sceneToId)
+                {
+                    lastEvidenceAt = monitoredMs;
+                }
+                lastFightState = fighting;
+                lastFightStateKnown = true;
+                if (global != null)
+                {
+                    lastSceneId = global.sceneId;
+                    lastSceneToId = global.sceneToId;
+                }
+                if (finishForNoProgress(monitoredMs, monitorLimit)) return;
+                if (fighting)
                 {
                     var fightTypes:Class = getDefinitionByName("serverProto.fight.FightStartType") as Class;
                     if (int(battleInfo.type) != int(fightTypes.FIGHT_START_TYPE_NPC))
@@ -357,6 +426,55 @@ package narutoos.daily
             {
                 finish(DailyQueue.ABORT, "无法确认通缉任务是否结束。");
             }
+        }
+
+        private function finishForNoProgress(monitoredMs:int, monitorLimit:int):Boolean
+        {
+            if (!DailyRegion.isBR || monitoredMs - lastEvidenceAt < monitorLimit) return false;
+            finish(DailyQueue.ABORT, "通缉连续 15 分钟没有新进展，已停止等待。");
+            return true;
+        }
+
+        private function onUIRetryTimer(event:TimerEvent):void
+        {
+            if (!running || !DailyRegion.isBR || pendingUIBox == null) return;
+            if (pendingPromptUI) acceptSoloPrompt();
+            else if (pendingMenu) chooseWantedMenu(pendingUIBox);
+            else clickNpcButton(pendingUIBox);
+        }
+
+        private function waitForUI(box:Object, menu:Boolean):void
+        {
+            if (!DailyRegion.isBR) return;
+            pendingUIBox = box;
+            pendingMenu = menu;
+            pendingPromptUI = false;
+            if (uiRetryTimer != null) return;
+            uiRetryTimer = new Timer(MONITOR_INTERVAL);
+            uiRetryTimer.addEventListener(TimerEvent.TIMER, onUIRetryTimer);
+            uiRetryTimer.start();
+        }
+
+        private function waitForPromptUI():void
+        {
+            if (!DailyRegion.isBR || promptBox == null) return;
+            pendingUIBox = promptBox;
+            pendingMenu = false;
+            pendingPromptUI = true;
+            if (uiRetryTimer != null) return;
+            uiRetryTimer = new Timer(MONITOR_INTERVAL);
+            uiRetryTimer.addEventListener(TimerEvent.TIMER, onUIRetryTimer);
+            uiRetryTimer.start();
+        }
+
+        private function stopWaitingForUI():void
+        {
+            if (uiRetryTimer == null) return;
+            uiRetryTimer.stop();
+            uiRetryTimer.removeEventListener(TimerEvent.TIMER, onUIRetryTimer);
+            uiRetryTimer = null;
+            pendingUIBox = null;
+            pendingPromptUI = false;
         }
 
         private function isOperational():Boolean
@@ -412,8 +530,10 @@ package narutoos.daily
             if (box == null || box.name != "TextBox" || box.subName != AI_ABORT_BOX) return;
             var text:TextField = box.content != null ? Object(box.content).txt as TextField : null;
             if (text == null) return;
-            if (text.text == AI_TEAM_ABORT_TEXT || text.text == AI_BATTLE_FAIL_TEXT)
-                blockedReason = text.text;
+            if (text.text == AI_TEAM_ABORT_TEXT || text.text == BR_AI_TEAM_ABORT_TEXT)
+                blockedReason = AI_TEAM_ABORT_TEXT;
+            else if (text.text == AI_BATTLE_FAIL_TEXT || text.text == BR_AI_BATTLE_FAIL_TEXT)
+                blockedReason = AI_BATTLE_FAIL_TEXT;
             else
                 blockedReason = "游戏已中止通缉任务。";
             ownsAI = false;
@@ -423,6 +543,7 @@ package narutoos.daily
         {
             if (!box.isShow || !box.isShowing || box.stage !== origin.stage)
             {
+                waitForUI(box, true);
                 return;
             }
             // When Kai also has a quest to offer, the game displays his menu first.
@@ -437,7 +558,9 @@ package narutoos.daily
                     var row:InteractiveObject = list.getChildAt(j) as InteractiveObject;
                     if (!clickable(row) || getQualifiedClassName(row) != MENU_ROW) continue;
                     var item:Object = Object(row).getData();
-                    if (!item || item.type != "npcMenu" || item.param != "openui,51" || item.text != "通缉任务") continue;
+                    // The current NPC list id and native action parameter identify this row;
+                    // the displayed text is localized by the game and is not stable across regions.
+                    if (!item || item.type != "npcMenu" || item.param != "openui,51") continue;
                     if (match)
                     {
                         finish(DailyQueue.ABORT, "通缉任务菜单无法确定。");
@@ -448,10 +571,14 @@ package narutoos.daily
             }
             if (!match)
             {
+                waitForUI(box, true);
+                if (DailyRegion.isBR) return;
                 finish(DailyQueue.ABORT, "当前 NPC 菜单没有可用的通缉任务。");
                 return;
             }
+            stopWaitingForUI();
             choseMenu = true;
+            refreshBRWaitWindow("wanted-menu-selected", "通缉 等面板");
             click(match);
         }
 
@@ -459,6 +586,7 @@ package narutoos.daily
         {
             if (!box.isShow || !box.isShowing || box.stage !== origin.stage)
             {
+                waitForUI(box, false);
                 return;
             }
             if (isDailyComplete())
@@ -475,13 +603,17 @@ package narutoos.daily
             var button:InteractiveObject = Object(box.content).autoFinishBtn as InteractiveObject;
             if (!clickable(button))
             {
+                waitForUI(box, false);
+                if (DailyRegion.isBR) return;
                 finish(DailyQueue.ABORT, "通缉面板的自动完成按钮暂不可用。");
                 return;
             }
 
+            stopWaitingForUI();
             clickedNpc = true;
+            reportBRPhase("通缉 等确认");
             timer.reset();
-            timer.delay = START_TIMEOUT;
+            timer.delay = DailyRegion.networkWait(START_TIMEOUT);
             timer.start();
             clickingNpc = true;
             try
@@ -523,14 +655,16 @@ package narutoos.daily
             if (clickingNpc && startCommand == null && name == START_COMMAND && command.type == wantedType)
             {
                 // The game owns queued commands. Allow a retry only after this one settles.
-                restartStartTimer(START_TIMEOUT);
+                restartStartTimer(DailyRegion.networkWait(START_TIMEOUT));
                 startCommand = command;
                 listenToCommand(startCommand, onStartFinished);
             }
-            else if ((startExecuting || startCommandFinished) && promptCommand == null && name == TEXT_COMMAND &&
-                command.text == SOLO_PROMPT && command.flags == promptFlags && command.modal)
+            else if ((DailyRegion.isBR ? startExecuting : (startExecuting || startCommandFinished)) &&
+                promptCommand == null && name == TEXT_COMMAND &&
+                isSoloPrompt(command.text) && command.flags == promptFlags && command.modal)
             {
-                restartStartTimer(START_TIMEOUT);
+                reportBRPhase("通缉 等确认");
+                restartStartTimer(DailyRegion.networkWait(START_TIMEOUT));
                 promptCommand = command;
                 ownsAI = false;
                 listenToCommand(promptCommand, onPromptFinished);
@@ -577,6 +711,8 @@ package narutoos.daily
             }
             else
             {
+                if (!wantedEntryArrived && !clickedNpc && !choseMenu)
+                    refreshBRWaitWindow("navigation-receipt", "通缉 等面板");
                 var team:Object = application.singleton.getModel(models.TEAM);
                 if (team == null || (team.isJoined && team.members == null))
                 {
@@ -606,7 +742,8 @@ package narutoos.daily
                 startCommandFinished = true;
                 if (promptCommand != null || promptBox != null) ownsAI = false;
                 else ownsAI = true;
-                restartStartTimer(promptCommand == null && promptBox == null ? PROMPT_SETTLE_MS : START_TIMEOUT);
+                restartStartTimer(promptCommand == null && promptBox == null ? PROMPT_SETTLE_MS :
+                    DailyRegion.networkWait(START_TIMEOUT));
             }
         }
 
@@ -632,19 +769,31 @@ package narutoos.daily
 
         private function acceptSoloPrompt():void
         {
-            if (acceptedPrompt || !promptBox.isShow || !promptBox.isShowing || promptBox.stage !== origin.stage)
+            if (acceptedPrompt || promptBox == null) return;
+            if (!promptBox.isShow || !promptBox.isShowing || promptBox.stage !== origin.stage)
             {
+                waitForPromptUI();
                 return;
             }
 
             var content:DisplayObjectContainer = promptBox.content as DisplayObjectContainer;
+            if (content == null)
+            {
+                waitForPromptUI();
+                if (DailyRegion.isBR) return;
+                finish(DailyQueue.ABORT, "本次通缉的单人确认暂不可用。");
+                return;
+            }
             var yesButton:InteractiveObject = content.getChildByName("yesBtn") as InteractiveObject;
             if (!clickable(yesButton) || content.getChildByName("noBtn") == null)
             {
+                waitForPromptUI();
+                if (DailyRegion.isBR) return;
                 finish(DailyQueue.ABORT, "本次通缉的单人确认暂不可用。");
                 return;
             }
 
+            stopWaitingForUI();
             acceptedPrompt = true;
             try
             {
@@ -718,6 +867,7 @@ package narutoos.daily
 
         private function reset():void
         {
+            stopWaitingForUI();
             if (timer != null)
             {
                 timer.stop();
@@ -764,7 +914,30 @@ package narutoos.daily
             blockedReason = null;
             terminalSince = -1;
             lastRemaining = -1;
+            lastTaskState = -1;
+            lastEvidenceAt = 0;
+            lastFightStateKnown = false;
+            lastSceneId = null;
+            lastSceneToId = null;
+            lastBRPhase = null;
+            lastBRMilestone = null;
+            wantedEntryArrived = false;
             closingNpcDialog = null;
+        }
+
+        private function reportBRPhase(phase:String):void
+        {
+            if (!DailyRegion.isBR || progress == null || phase == lastBRPhase) return;
+            lastBRPhase = phase;
+            progress(phase);
+        }
+
+        private function refreshBRWaitWindow(milestone:String, phase:String):void
+        {
+            if (!DailyRegion.isBR || milestone == lastBRMilestone) return;
+            lastBRMilestone = milestone;
+            restartStartTimer(DailyRegion.networkWait(NAVIGATION_TIMEOUT));
+            reportBRPhase(phase);
         }
     }
 }

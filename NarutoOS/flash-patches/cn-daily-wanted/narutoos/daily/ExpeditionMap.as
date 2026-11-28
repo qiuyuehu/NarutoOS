@@ -84,8 +84,7 @@ package narutoos.daily
             }
             var resetButton:Object = view.content.bottomMC.resetBtn;
             var resetLabel:String = resetButton == null ? "" : String(resetButton.label);
-            var resetMatch:Array = /剩余\s*(\d+)\s*次/.exec(resetLabel);
-            if (resetMatch == null || int(resetMatch[1]) != int(info.remainResetCount))
+            if (!ExpeditionResetLabel.matches(resetLabel, int(info.remainResetCount), DailyRegion.isBR))
             {
                 return null;
             }
@@ -396,9 +395,12 @@ package narutoos.daily
         {
             if (pendingPrompt == "reset")
             {
-                return text == RESET_PROMPT || text == RESET_REWARD_PROMPT;
+                return text == RESET_PROMPT || text == RESET_REWARD_PROMPT ||
+                    (DailyRegion.isBR && (text == "O Treino de Sobrevivência não foi completado, caso você renove ira perder alguns prêmios. Deseja renovar?" ||
+                                          text == "Parte dos prêmios não foi retirada, deseja recomeçar do início?"));
             }
-            return pendingPrompt == "claim" && text == CLAIM_PROMPT;
+            return pendingPrompt == "claim" && (text == CLAIM_PROMPT ||
+                (DailyRegion.isBR && text == "Caso você retire os prêmios não poderá alterar a dificuldade, deseja retirar?"));
         }
 
         private function onBoxHided(event:Event):void

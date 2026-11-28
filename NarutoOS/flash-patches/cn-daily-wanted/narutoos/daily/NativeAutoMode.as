@@ -26,6 +26,8 @@ package narutoos.daily
         private static const TEXT_BOX_UI:String = "com.tencent.morefun.naruto.plugin.ui.core::TextBoxUI";
         private static const CARD_PROMPT_HTML:String = "<b>您今天为首次进入托管状态，需要<br>消耗<font color='#f0d647'>托管卡x1</font>，有效期持续到<font color='#f0d647'>次日5：00</font>，<br>是否确认进入托管状态？</b>";
         private static const CARD_PROMPT_TEXT:String = "您今天为首次进入托管状态，需要消耗托管卡x1，有效期持续到次日5：00，是否确认进入托管状态？";
+        private static const BR_CARD_PROMPT_HTML:String = "<b>Para que você entre em Modo Automático é preciso <br> gastar <font color='#f0d647'>1 Cartão Automático</font>, ele é eficaz até às <font color='#f0d647'>5:00 do próximo dia</font>. <br> Deseja entrar em Modo Automático?</b>";
+        private static const BR_CARD_PROMPT_TEXT:String = "Para que você entre em Modo Automático é preciso gastar 1 Cartão Automático, ele é eficaz até às 5:00 do próximo dia. Deseja entrar em Modo Automático?";
         private static const CARD_ITEM_ID:int = 10840007;
         private static const POLL_INTERVAL:int = 120;
         private static const TIMEOUT_MS:int = 12000;
@@ -34,7 +36,10 @@ package narutoos.daily
         private var done:Function;
         private var poll:Timer;
         private var deadline:Number;
+        private var networkDeadline:Timer;
+        private var brWait:Boolean;
         private var opened:Boolean;
+        private var panelObserved:Boolean;
         private var clicked:Boolean;
         private var startPanel:Object;
         private var dispatchingStart:Boolean;
@@ -65,11 +70,13 @@ package narutoos.daily
                 return;
             }
             opened = false;
+            panelObserved = false;
             clicked = false;
             confirmed = false;
             sawPromptBox = false;
             promptReady = false;
-            deadline = new Date().time + TIMEOUT_MS;
+            brWait = DailyRegion.isBR;
+            armDeadline();
             owner.addEventListener(Event.REMOVED_FROM_STAGE, onRemoved);
             poll = new Timer(POLL_INTERVAL);
             poll.addEventListener(TimerEvent.TIMER, onPoll);
@@ -83,6 +90,8 @@ package narutoos.daily
             poll.stop();
             poll.removeEventListener(TimerEvent.TIMER, onPoll);
             poll = null;
+            if (networkDeadline != null) networkDeadline.stop();
+            networkDeadline = null;
             owner.removeEventListener(Event.REMOVED_FROM_STAGE, onRemoved);
             detachPromptWatch();
             startPanel = null;
@@ -115,9 +124,17 @@ package narutoos.daily
             var shown:Array = boxes.showingList as Array;
             if (shown == null) return "无法确认游戏窗口状态，已跳过。";
             var panel:Object = boxes.getBoxByName(PANEL_NAME);
+            if (brWait && opened && panel != null && !panelObserved)
+            {
+                panelObserved = true;
+                armDeadline();
+            }
             var modal:Object = topModal(shown);
             if (modal != null && modal !== panel)
             {
+                // This is the card prompt requested by our start click. Keep waiting
+                // for its native command to settle before deciding it needs the player.
+                if (modal === promptBox && !promptReady && promptCommand != null && brWait && !timedOut()) return null;
                 if (modal === promptBox && promptReady && !timedOut() && state === false &&
                     panel === startPanel && topModal(shown, modal) === startPanel)
                 {
@@ -155,7 +172,7 @@ package narutoos.daily
             if (!isUsable(button) || ui.startBtn.enabled !== true) return "游戏的开始自动模式按钮当前不可用。";
 
             clicked = true;
-            deadline = new Date().time + TIMEOUT_MS;
+            armDeadline();
             startPanel = panel;
             watchStartPrompt(boxes);
             dispatchingStart = true;
@@ -168,7 +185,22 @@ package narutoos.daily
             return null;
         }
 
-        private function timedOut():Boolean { return new Date().time >= deadline; }
+        private function timedOut():Boolean
+        {
+            return brWait ? networkDeadline == null || !networkDeadline.running : new Date().time >= deadline;
+        }
+
+        private function armDeadline():void
+        {
+            if (brWait)
+            {
+                if (networkDeadline == null) networkDeadline = new Timer(DailyRegion.networkWait(TIMEOUT_MS), 1);
+                else networkDeadline.reset();
+                networkDeadline.delay = DailyRegion.networkWait(TIMEOUT_MS);
+                networkDeadline.start();
+            }
+            else deadline = new Date().time + TIMEOUT_MS;
+        }
 
         private function topModal(shown:Array, ignored:Object = null):Object
         {
@@ -205,11 +237,14 @@ package narutoos.daily
         {
             if (!running || !dispatchingStart || promptCommand != null || sawPromptBox) return;
             var command:Object = Object(event).command;
-            if (getQualifiedClassName(command) != PROMPT_COMMAND || command.text !== CARD_PROMPT_HTML ||
+            if (getQualifiedClassName(command) != PROMPT_COMMAND ||
+                (command.text !== CARD_PROMPT_HTML &&
+                 (!DailyRegion.isBR || command.text !== BR_CARD_PROMPT_HTML)) ||
                 command.flags != (okFlag | cancelFlag) || command.modal !== true || command.flagNames != null ||
                 !(command.closedFun is Function)) return;
             promptCommand = command as IEventDispatcher;
             if (promptCommand == null) return;
+            if (brWait) armDeadline();
             promptCommand.addEventListener("loadingEnd", onPromptSettled, false, int.MAX_VALUE);
             promptCommand.addEventListener("faild", onPromptSettled, false, int.MAX_VALUE);
         }
@@ -232,6 +267,7 @@ package narutoos.daily
         private function onPromptSettled(event:Event):void
         {
             promptReady = event.type == "loadingEnd" && promptBox != null;
+            if (promptReady && brWait) armDeadline();
             if (!promptReady) promptBox = null;
             detachPromptWatch();
         }
@@ -262,7 +298,10 @@ package narutoos.daily
             if (getQualifiedClassName(box) != TEXT_BOX || box.name != "TextBox" ||
                 getQualifiedClassName(box.content) != TEXT_BOX_UI) return false;
             var text:TextField = box.content.txt as TextField;
-            return text != null && text.text.replace(/\s/g, "") === CARD_PROMPT_TEXT;
+            if (text == null) return false;
+            var normalized:String = text.text.replace(/\s/g, "");
+            return normalized === CARD_PROMPT_TEXT.replace(/\s/g, "") ||
+                normalized === BR_CARD_PROMPT_TEXT.replace(/\s/g, "");
         }
 
         private function confirmCard(box:Object):String
@@ -278,7 +317,7 @@ package narutoos.daily
                 return "等待玩家处理游戏原生提示。";
             }
             confirmed = true;
-            deadline = new Date().time + TIMEOUT_MS;
+            armDeadline();
             click(ok);
             return null;
         }

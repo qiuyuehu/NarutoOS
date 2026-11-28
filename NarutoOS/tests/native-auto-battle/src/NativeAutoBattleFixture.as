@@ -22,7 +22,11 @@ package
     import narutoos.daily.DailyAssistant;
     import narutoos.daily.NativeAutoMode;
     import narutoos.daily.QuizRun;
+    import narutoos.daily.DailyRegionFixture;
+    import fixture.AutoBattleCommandEvent;
     import narutoos.daily.NativeAutoBattle;
+    import com.tencent.morefun.naruto.plugin.battle.command.RequestAutoFightCommand;
+    import com.tencent.morefun.naruto.plugin.battle.command.NotifyAutoFightCommand;
     import serverProto.fight.FightStartType;
 
     public final class NativeAutoBattleFixture extends Sprite
@@ -61,7 +65,10 @@ package
                 "speed restricted while auto remains available", "temporarily unavailable controls",
                 "cancel", "owner removed", "re-arm after completion", "new battle view resets unconfirmed clicks",
                 "Daily Assistant wanted prepares first eligible battle", "Daily Assistant quiz does not prepare battle",
-                "quiz hands off to auto mode and cancels battle preparation"];
+                "quiz hands off to auto mode and cancels battle preparation",
+                "BR auto challenge waits for its delayed native acknowledgment",
+                "Daily Assistant battle settings re-arm on a later execution in the same window",
+                "BR in-flight native auto request waits for matching success receipt"];
             passes = [];
             failures = [];
             runScenario();
@@ -197,6 +204,39 @@ package
                         step(function():void { QuizRun.complete(); }), wait(200),
                         step(function():void { expectDaily(0, 0, true); }), step(enterFight), wait(520),
                         step(function():void { expectDaily(0, 0, true); })];
+                case 15:
+                    return [step(function():void { DailyRegionFixture.setBR(true); }), step(start), step(enterFight), step(function():void {
+                            BattleData.singleton.isAutoChallenge = true;
+                            speedStatus(true);
+                        }), wait(300), expect(0, 0, 0), step(function():void {
+                            autoStatus(true);
+                        }), wait(300), expect(0, 0, 1)];
+                case 16:
+                    return [step(function():void { startDaily("quiz", true, true, true); }), wait(250),
+                        step(enterFight), wait(300), step(function():void {
+                            autoStatus(true);
+                            speedStatus(true);
+                        }), wait(300), step(function():void { expectDaily(1, 1, false); }),
+                        step(setIdle), step(function():void {
+                            autoStatus(false);
+                            speedStatus(false);
+                            QuizRun.complete();
+                        }), wait(220), step(function():void {
+                            expectDailyIdle();
+                            if (NativeAutoMode.starts == 0) reopenDailyAndExecute();
+                        }), wait(250),
+                        step(enterFight), wait(300), step(function():void {
+                            expectDaily(2, 2, false);
+                        })];
+                case 17:
+                    return [step(function():void { DailyRegionFixture.setBR(true); }), step(start), step(enterFight),
+                        step(function():void { speedStatus(true); }),
+                        step(function():void { dispatchAutoCommand(new RequestAutoFightCommand()); }),
+                        wait(300), expect(0, 0, 0), step(function():void {
+                            dispatchAutoCommand(new NotifyAutoFightCommand(true));
+                            autoStatus(true);
+                            speedStatus(true);
+                        }), wait(300), expect(0, 0, 1)];
                 default:
                     return [step(start), step(enterFight), step(function():void {
                             AutoBattleProbe.deferAutoAck = true;
@@ -261,7 +301,8 @@ package
         private function setIdle():void { setActive(false, 0); }
         private function enterFight():void { setActive(true, FightStartType.FIGHT_START_TYPE_BEFALL_DUNGEON); }
 
-        private function startDaily(taskId:String, battleSettings:Boolean):void
+        private function startDaily(taskId:String, battleSettings:Boolean, disableAutoModeAfterDaily:Boolean = false,
+                                    brazil:Boolean = false):void
         {
             ApplicationData.singleton.pluginDomain = ApplicationDomain.currentDomain;
             ApplicationData.singleton.selfInfo = { uin: scenarioIndex + 10, svrId: 1, role: 0, level: 80 };
@@ -269,7 +310,8 @@ package
             BattleTypeGroup.autoEnabled = false;
             BattleTypeGroup.speedEnabled = false;
             QuizRun.reset();
-            DailyAssistant.install(owner, 0, 0);
+            if (brazil) DailyAssistant.installBR(owner, 0, 0);
+            else DailyAssistant.install(owner, 0, 0);
             dailyAssistant = owner.getChildByName("narutoosDailyAssistant") as Sprite;
             var controls:Sprite = dailyAssistant.getChildByName("dailyControls") as Sprite;
             controls.getChildByName("entry").dispatchEvent(new MouseEvent(MouseEvent.CLICK, true));
@@ -283,7 +325,37 @@ package
                 panel.getChildByName("battleSettings").dispatchEvent(new MouseEvent(MouseEvent.CLICK, true));
             else if (!battleSettings && settingsChoice.accessibilityProperties.description == "已勾选")
                 panel.getChildByName("battleSettings").dispatchEvent(new MouseEvent(MouseEvent.CLICK, true));
+            var autoModeChoice:Sprite = panel.getChildByName("autoModeAfterDaily") as Sprite;
+            if (disableAutoModeAfterDaily && autoModeChoice != null &&
+                autoModeChoice.accessibilityProperties.description == "已勾选")
+                autoModeChoice.dispatchEvent(new MouseEvent(MouseEvent.CLICK, true));
             panel.getChildByName("execute").dispatchEvent(new MouseEvent(MouseEvent.CLICK, true));
+        }
+
+        private function reopenDailyAndExecute():void
+        {
+            var controls:Sprite = dailyAssistant.getChildByName("dailyControls") as Sprite;
+            controls.getChildByName("entry").dispatchEvent(new MouseEvent(MouseEvent.CLICK, true));
+            var modal:Sprite = owner.stage.getChildByName("dailyAssistantModal") as Sprite;
+            var panel:Sprite = modal.getChildByName("panel") as Sprite;
+            panel.getChildByName("execute").dispatchEvent(new MouseEvent(MouseEvent.CLICK, true));
+        }
+
+        private function expectDailyIdle():void
+        {
+            var controls:Sprite = dailyAssistant.getChildByName("dailyControls") as Sprite;
+            var stop:Sprite = dailyAssistant.getChildByName("narutoosDailyRuntimeControls") as Sprite;
+            if (NativeAutoMode.starts != 0 || controls == null || !controls.visible ||
+                (stop != null && stop.visible))
+                throw new Error("quiz did not finish without auto-mode handoff: starts=" + NativeAutoMode.starts
+                    + ", entry=" + (controls != null ? controls.visible : "missing")
+                    + ", stop=" + (stop != null ? stop.visible : "missing"));
+        }
+
+        private function dispatchAutoCommand(command:Object):void
+        {
+            Facade.getInstance().commandManager.dispatchEvent(
+                new AutoBattleCommandEvent("commandExecute", command));
         }
 
         private function expectDaily(autoClicks:int, speedClicks:int, reachedAutoMode:Boolean):void
@@ -353,6 +425,7 @@ package
             AutoBattleProbe.deferAutoAck = false;
             AutoBattleProbe.deferSpeedAck = false;
             NativeAutoMode.starts = 0;
+            DailyRegionFixture.setBR(false);
             QuizRun.reset();
             completions = 0;
         }

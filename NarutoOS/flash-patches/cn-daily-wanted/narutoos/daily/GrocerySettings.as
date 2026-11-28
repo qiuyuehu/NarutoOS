@@ -137,7 +137,10 @@ package narutoos.daily
          {
             var row:Object = saved == null ? null : saved[product.id];
             if(row != null && row.enabled === true && validQuantity(String(row.quantity)))
-               result.push({id:product.id, name:product.name, price:product.price, quantity:int(row.quantity)});
+            {
+               var itemId:int = DailyRegion.isBR && product.hasOwnProperty("brId") ? product.brId : product.id;
+               result.push({id:itemId, name:product.name, price:product.price, quantity:int(row.quantity)});
+            }
          }
          return result;
       }

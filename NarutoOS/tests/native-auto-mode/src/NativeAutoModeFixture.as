@@ -18,11 +18,13 @@ package {
     import flash.utils.setTimeout;
     import narutoos.daily.DailyQueue;
     import narutoos.daily.NativeAutoMode;
+    import narutoos.daily.DailyRegionFixture;
     import ui.command.ShowTextBoxCommand;
 
     [SWF(width=400, height=240, frameRate=30)]
     public final class NativeAutoModeFixture extends Sprite {
         private static const CARD_HTML:String = "<b>您今天为首次进入托管状态，需要<br>消耗<font color='#f0d647'>托管卡x1</font>，有效期持续到<font color='#f0d647'>次日5：00</font>，<br>是否确认进入托管状态？</b>";
+        private static const CARD_HTML_PT_BR:String = "<b>Para que você entre em Modo Automático é preciso <br> gastar <font color='#f0d647'>1 Cartão Automático</font>, ele é eficaz até às <font color='#f0d647'>5:00 do próximo dia</font>. <br> Deseja entrar em Modo Automático?</b>";
         private static const CARD_FLAGS:int = BoxFlagDef.OK | BoxFlagDef.CANCEL;
 
         private var owner:Sprite = new Sprite();
@@ -56,7 +58,7 @@ package {
         }
 
         private function run():String {
-            steps = [alreadyOn, delayedPanel, confirmation, ownedCard, foreignTextBox, replacedPrompt, noCard,
+            steps = [alreadyOn, delayedPanel, confirmation, ownedCard, ownedCardPTBR, pendingOwnedPrompt, foreignTextBox, replacedPrompt, noCard,
                 missingOwnedCard, currencyPrompt, wrongButton, stopAtCardPrompt, expiredCardPrompt,
                 foreignModal, disabledStart, unknownState, stopPending, removePending, hiddenHud];
             setTimeout(next, 10);
@@ -170,14 +172,16 @@ package {
             }, 400);
         }
 
-        private function showTextPrompt(text:String, flags:int, delay:int = 0, onConfirm:Function = null):void {
+        private function showTextPrompt(text:String, flags:int, delay:int = 0, onConfirm:Function = null,
+                                        settleDelay:int = 0):void {
             var command:ShowTextBoxCommand = new ShowTextBoxCommand(text, flags, function():void {});
             var manager:Object = Facade.getInstance().commandManager;
             manager.dispatchEvent(new NativeEvent("commandRequest", command));
             var execute:Function = function():void {
                 manager.dispatchEvent(new NativeEvent("commandExecute", command));
                 latestTextBox = mountTextBox(text, flags, onConfirm);
-                command.dispatchEvent(new Event("loadingEnd"));
+                if (settleDelay > 0) setTimeout(function():void { command.dispatchEvent(new Event("loadingEnd")); }, settleDelay);
+                else command.dispatchEvent(new Event("loadingEnd"));
             };
             if (delay > 0) setTimeout(execute, delay);
             else execute();
@@ -215,6 +219,47 @@ package {
                 expect(completed("已开启") && startCount == 1 && confirmationCount == 1 &&
                     BagUtils.model.cardCount == 0 && !reportedEarly, "confirms one owned card and waits for the native model");
             }, 650);
+        }
+
+        private function ownedCardPTBR():void {
+            var reportedEarly:Boolean = false;
+            DailyRegionFixture.setBR(true);
+            readyPanel(function():void {
+                showTextPrompt(CARD_HTML_PT_BR, CARD_FLAGS, 20, function():void {
+                    BagUtils.model.cardCount--;
+                    setTimeout(function():void {
+                        reportedEarly = messages.length > 0;
+                        app.model.isTrusteeshipping = true;
+                    }, 300);
+                });
+            });
+            setTimeout(function():void {
+                var success:Boolean = completed("已开启") && startCount == 1 && confirmationCount == 1 &&
+                    BagUtils.model.cardCount == 0 && !reportedEarly;
+                expect(success, "confirms the exact Portuguese first-entry card prompt");
+                DailyRegionFixture.setBR(false);
+            }, 650);
+        }
+
+        private function pendingOwnedPrompt():void {
+            DailyRegionFixture.setBR(true);
+            readyPanel(function():void {
+                showTextPrompt(CARD_HTML, CARD_FLAGS, 0, function():void {
+                    app.model.isTrusteeshipping = true;
+                }, 800);
+            });
+            setTimeout(function():void {
+                var waitedForLoading:Boolean = task.running && messages.length == 0 && confirmationCount == 0 &&
+                    latestTextBox != null && latestTextBox.stage === owner.stage;
+                setTimeout(function():void {
+                    var finished:Boolean = completed("已开启") && confirmationCount == 1;
+                    expect(waitedForLoading && finished,
+                        "waits for its own card prompt loadingEnd before confirming (pending=" + waitedForLoading +
+                        ", finished=" + finished + ", running=" + task.running + ", confirms=" + confirmationCount +
+                        ", messages=" + messages.length + (messages.length ? ":" + messages[0].message : "") + ")");
+                    DailyRegionFixture.setBR(false);
+                }, 900);
+            }, 250);
         }
 
         private function foreignTextBox():void {

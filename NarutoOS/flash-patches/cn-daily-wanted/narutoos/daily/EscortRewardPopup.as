@@ -11,6 +11,7 @@ package narutoos.daily
         private static const ITEM_BOX:String =
             "com.tencent.morefun.naruto.plugin.RSModel.modules.popup.system::ItemIconBox";
         private static const BONUS_TITLE:String = "恭喜你获得额外物品奖励！";
+        private static const BR_BONUS_TITLE:String = "Parabéns por obter prêmios extras!";
 
         private var owner:Sprite;
         private var armed:Boolean;
@@ -68,7 +69,7 @@ package narutoos.daily
                 !(box.data is Array) || box.data.length == 0) return false;
             var content:Object = box.content;
             var title:Object = content ? content.getChildByName("txt") : null;
-            return title != null && String(title.text) == BONUS_TITLE;
+            return title != null && (String(title.text) == BONUS_TITLE || String(title.text) == BR_BONUS_TITLE);
         }
 
     }

@@ -62,6 +62,7 @@ package narutoos.daily
                 panel = new EscortNativePanel(owner, grade);
                 transit = new EscortTransit(owner);
                 rewardPopup = new EscortRewardPopup(owner);
+                receiptWait.delay = DailyRegion.networkWait(45000);
                 order = 0;
                 departed = fromAccept = false;
                 outcomes = [];
@@ -324,7 +325,7 @@ package narutoos.daily
         {
             phase = next;
             deadline.reset();
-            deadline.delay = limit;
+            deadline.delay = DailyRegion.networkWait(limit);
             deadline.start();
         }
 

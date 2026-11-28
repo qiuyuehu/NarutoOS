@@ -20,7 +20,7 @@ package {
   import flash.external.ExternalInterface;
   import flash.geom.Point;
   import flash.text.TextField;
-  import flash.utils.setTimeout;
+  import flash.utils.getTimer;
   import narutoos.daily.DailyAssistant;
   import task.commands.HrefEventCommand;
   import ui.command.ShowTextBoxCommand;
@@ -28,6 +28,7 @@ package {
   [SWF(width="500", height="320", frameRate="30", backgroundColor="#102239")]
   public class WantedFixture extends Sprite {
     private static const WANTED_TEXT:String = "你现在为单人状态，继续进行通缉任务将无法获得双倍经验奖励，是否继续本操作？";
+    private static const WANTED_TEXT_PT_BR:String = "Você está solo agora, caso realize Missões de Captura não receberá prêmios em dobro. Deseja prosseguir?";
     private var world:Sprite;
     private var owner:Sprite;
     private var overlay:Sprite;
@@ -76,7 +77,10 @@ package {
       overlay = new Sprite();
       world.addChild(overlay);
       BoxManager.owner = overlay;
-      DailyAssistant.install(owner, 70, 4);
+      mode = testMode;
+      if (testMode.indexOf("BR") >= 0 || testMode.indexOf("br") >= 0)
+        DailyAssistant.installBR(owner, 70, 4);
+      else DailyAssistant.install(owner, 70, 4);
       HrefEventCommand.onNavigate = function(data:String):void {
         if (data.indexOf("26000500") >= 0) ++quizNav;
         if (data == HrefEventCommand.DATA_WANTED_NPC) {
@@ -96,7 +100,6 @@ package {
       taskMenu = null;
       menuClicks = decoyClicks = startRequests = promptRequests = 0;
       navCount = quizNav = clicks = yesCount = unrelatedYesCount = nativeStarts = nativeTips = 0;
-      mode = testMode;
       ApplicationData.singleton.teamMember = mode == "teamMember";
       ApplicationData.singleton.teamIsJoined = mode == "teamMember" || mode == "teamCaptain";
       ApplicationData.singleton.teamMembers = mode == "teamCaptain" ? [{}, {}] :
@@ -213,7 +216,7 @@ package {
         }
         BoxManager.hide(box);
       });
-      if (controlled) promptBox = box;
+      promptBox = box;
       BoxManager.show(box, ready);
       command.dispatchEvent(new Event("loadingEnd"));
     }
@@ -231,11 +234,13 @@ package {
 
       notify("commandExecute", ai);
       if (mode == "confirm") executePrompt(requestPrompt(WANTED_TEXT), true);
+      else if (mode == "confirmBR") executePrompt(requestPrompt(WANTED_TEXT_PT_BR), true);
       else if (mode == "unrelated") executePrompt(requestPrompt("这是一个无关确认"), false);
       else if (mode == "wrongFlags") executePrompt(requestPrompt(WANTED_TEXT, 1), false);
-      else if (mode == "direct") ++nativeStarts;
+      else if (mode == "direct" || mode == "directBR" || mode == "brDelayed") ++nativeStarts;
       else if (mode == "promptQueued") prompt = requestPrompt(WANTED_TEXT);
-      else if (mode == "promptWait") executePrompt(requestPrompt(WANTED_TEXT), true, false);
+      else if (mode == "promptWait" || mode == "promptWaitBR") executePrompt(
+        requestPrompt(mode == "promptWaitBR" ? WANTED_TEXT_PT_BR : WANTED_TEXT), true, false);
       ai.dispatchEvent(new Event("loadingEnd"));
     }
 
@@ -264,6 +269,7 @@ package {
         case "openWanted": openWanted(arg == "ready"); break;
         case "ready": wanted.content["autoFinishBtn"].mouseEnabled = true; break;
         case "unowned": executePrompt(requestPrompt(WANTED_TEXT), false); break;
+        case "clickPrompt": if (promptBox != null) click(PopupContent(promptBox.content).yesBtn); break;
         case "openTaskMenu": openTaskMenu(arg); break;
         case "startLoadError": notify("commandLoadError", ai); break;
         case "startCancel": notify("commandCancel", ai); break;
@@ -274,7 +280,7 @@ package {
       }
       var current:Sprite = assistant();
       return JSON.stringify({
-        gameTime: flash.utils.getTimer(),
+        gameTime: getTimer(),
         entry: current != null,
         drawn: current != null && controls().visible && controls().parent.visible,
         parentName: current == null || controls().parent == null ? "" : controls().parent.name,

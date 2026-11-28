@@ -17,6 +17,66 @@ module.exports = async ({ call, wait, until, pass, assert }) => {
   assert.equal(state.stoppedAIType, 'wanted', JSON.stringify(state));
   pass('stopping after accepted confirmation sends native StopAI(WANTED)');
 
+  await call('reset', 'confirmBR');
+  await call('entry');
+  await call('select');
+  await call('execute');
+  await call('openWanted', 'ready');
+  state = await until(s => s.yesCount === 1, 4000);
+  await wait(250);
+  state = await call('state');
+  assert.equal(state.nativeStarts, 1, JSON.stringify(state));
+  assert.ok(!state.status.includes('Você está solo'), state.status);
+  pass('Portuguese single-player confirmation is matched and reported in Chinese');
+
+  await call('reset', 'brDelayed');
+  await call('entry');
+  await call('select');
+  await call('execute');
+  await call('openWanted', 'notReady');
+  await wait(1200);
+  await call('ready');
+  state = await until(s => s.nativeStarts === 1, 3000);
+  assert.equal(state.startRequests, 1, JSON.stringify(state));
+  pass('Brazil retries a delayed wanted control without resubmitting its command');
+
+  await call('reset', 'promptWaitBR');
+  await call('entry');
+  await call('select');
+  await call('execute');
+  await call('openWanted', 'ready');
+  state = await until(s => s.promptRequests === 1, 5000);
+  assert.equal(state.yesCount, 0, JSON.stringify(state));
+  await call('showDelayedPrompt');
+  state = await until(s => s.yesCount === 1, 3000);
+  assert.equal(state.stopAICalls, 0, JSON.stringify(state));
+  pass('Brazil waits for the already-owned native prompt to become ready');
+
+  await call('reset', 'directBR');
+  await call('entry');
+  await call('select');
+  await call('execute');
+  await call('openWanted', 'ready');
+  await call('closeWanted');
+  await wait(500);
+  await call('unowned');
+  state = await call('state');
+  assert.equal(state.yesCount, 0, JSON.stringify(state));
+  assert.equal(state.unrelatedYesCount, 0, JSON.stringify(state));
+  await call('clickPrompt');
+  state = await call('state');
+  assert.equal(state.unrelatedYesCount, 1, JSON.stringify(state));
+  await wait(800);
+  await call('left', '1');
+  await wait(1100);
+  await call('unowned');
+  state = await call('state');
+  assert.equal(state.yesCount, 0, JSON.stringify(state));
+  assert.equal(state.unrelatedYesCount, 1, JSON.stringify(state));
+  await call('clickPrompt');
+  assert.equal((await call('state')).unrelatedYesCount, 2);
+  pass('a late confirmation after wanted progress remains owned by the player');
+
   await call('reset', 'direct');
   await call('entry');
   await call('quiz');

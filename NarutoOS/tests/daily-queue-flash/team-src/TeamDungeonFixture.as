@@ -50,6 +50,7 @@ package
             else if (action == "cancel" && run != null) run.cancel();
             else if (action == "result") showResult(value != "lose");
             else if (action == "end") endBattle();
+            else if (action == "fail") failBattle();
             else if (action == "reward") showReward();
             else if (action == "rewardReadyBlocked") { readyReward(); blockReward(); }
             else if (action == "readyReward") readyReward();
@@ -135,6 +136,12 @@ package
             battle.dispatchEvent(new StrongEvent("update", null, null, "end"));
             if (TeamDungeonProgress.currentCompleted >= 0 && battle.isWin)
                 TeamDungeonProgress.currentCompleted++;
+        }
+
+        private function failBattle():void
+        {
+            battle.isFighting = false;
+            battle.dispatchEvent(new StrongEvent("update", null, null, "fail"));
         }
 
         private function reopenList():void

@@ -18,6 +18,8 @@ package narutoos.daily
         private var shop:Object;
         private var poll:Timer;
         private var deadline:Number;
+        private var networkDeadline:Timer;
+        private var brWait:Boolean;
         private var phase:String;
         private var index:int;
         private var outcomes:Array = [];
@@ -50,6 +52,8 @@ package narutoos.daily
             if (started) return;
             started = true;
             poll = new Timer(POLL_INTERVAL);
+            brWait = DailyRegion.isBR;
+            if (brWait) networkDeadline = new Timer(DailyRegion.networkWait(TIMEOUT_MS), 1);
             try
             {
                 if (owner == null || owner.stage == null)
@@ -115,7 +119,7 @@ package narutoos.daily
             if (!running || event.currentTarget !== poll) return;
             try
             {
-                if (new Date().time >= deadline)
+                if (timedOut())
                 {
                     finish(DailyQueue.ABORT, phase == "receipt" ? "等待交易回执超时。" : "等待原生杂货屋状态超时，已保留当前画面。");
                     return;
@@ -145,6 +149,8 @@ package narutoos.daily
         private function checkItem(order:Object):void
         {
             var item:Object = shop.item(order.id);
+            // null means the native list/renderer has not settled yet; the unreadable
+            // sentinel is a real mismatch and must stop before quantity entry.
             if (item == null) return;
             if (!matchesItem(item, order) || !counter(item.balance) || !counter(item.stock))
             {
@@ -163,6 +169,8 @@ package narutoos.daily
         private function prepare(order:Object):void
         {
             var prepared:Object = shop.prepare(order.id, order.quantity);
+            // A transient null waits for the native renderer; any non-null invalid
+            // payload still fails the strict item, quantity, total, balance and stock checks.
             if (!running || prepared == null) return;
             if (!matchesItem(prepared, order) || prepared.quantity !== order.quantity || prepared.total !== total(order) ||
                 !counter(prepared.balance) || !counter(prepared.stock))
@@ -195,7 +203,7 @@ package narutoos.daily
         private function checkReceipt(order:Object):void
         {
             var prompt:Object = shop.confirmation();
-            if (prompt != null && (prompt.name !== order.name || prompt.quantity !== order.quantity ||
+            if (prompt != null && (prompt.quantity !== order.quantity ||
                 prompt.currency !== GroceryCatalog.CURRENCY || prompt.total !== total(order)))
             {
                 finish(DailyQueue.ABORT, "购买确认与设置不符或出现其他弹框，已保留当前画面。");
@@ -247,7 +255,9 @@ package narutoos.daily
 
         private static function matchesItem(item:Object, order:Object):Boolean
         {
-            return item.id === order.id && item.name === order.name &&
+            // Item names are localized by CommonItemCFG (CN / pt-BR); the stable item id
+            // identifies the selected offer, while the native adapter verifies its own label.
+            return item.id === order.id &&
                 item.currency === GroceryCatalog.CURRENCY && item.price === order.price;
         }
 
@@ -269,7 +279,18 @@ package narutoos.daily
         private function enter(nextPhase:String):void
         {
             phase = nextPhase;
-            deadline = new Date().time + TIMEOUT_MS;
+            if (brWait)
+            {
+                networkDeadline.reset();
+                networkDeadline.delay = DailyRegion.networkWait(TIMEOUT_MS);
+                networkDeadline.start();
+            }
+            else deadline = new Date().time + TIMEOUT_MS;
+        }
+
+        private function timedOut():Boolean
+        {
+            return brWait ? networkDeadline == null || !networkDeadline.running : new Date().time >= deadline;
         }
 
         private function report(message:String):void
@@ -320,6 +341,7 @@ package narutoos.daily
             poll.stop();
             poll.removeEventListener(TimerEvent.TIMER, tick);
             poll = null;
+            if (networkDeadline != null) networkDeadline.stop();
             if (owner != null) owner.removeEventListener(Event.REMOVED_FROM_STAGE, removed);
             if (shop != null && pending == null) release(shop);
         }

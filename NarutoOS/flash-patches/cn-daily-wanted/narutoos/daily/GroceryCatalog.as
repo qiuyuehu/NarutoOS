@@ -5,14 +5,14 @@ package narutoos.daily
         public static const CURRENCY:String = "月之印";
         public static const CURRENCY_ID:int = 13103001;
 
-        // Item IDs from the CN CommonItemCFG. The native shop supplies the offer and current price.
+        // id is also the saved choice key. brId is the native BR item when the catalogs differ.
         public static const ITEMS:Array = [
             { id:10190675, name:"修行药水", price:200 },
             { id:10190903, name:"秘卷残页", price:300 },
             { id:10190904, name:"真言合剂", price:400 },
-            { id:10191227, name:"妙木山的收获", price:200 },
-            { id:10191229, name:"妙木山的训练", price:200 },
-            { id:10191226, name:"妙木山的灵珠", price:200 },
+            { id:10191227, brId:10198158, name:"妙木山的收获", price:200 },
+            { id:10191229, brId:10198160, name:"妙木山的训练", price:200 },
+            { id:10191226, brId:10812001, name:"妙木山的灵珠", price:200 },
             { id:10190602, name:"修炼券", price:200 },
             { id:10800057, name:"洞穴密钥", price:200 }
         ];

@@ -62,7 +62,7 @@ app.whenReady().then(async () => {
     for (const [id, label] of Object.entries({
       wanted: '通缉任务', quiz: '忍者测验', expedition: '生存演习', strong: '强者降临',
       teamDungeon: '组队副本', escort: 'SS 级押镖', escortS: 'S 级押镖（1 次）', grocery: '杂货屋兑换',
-      hidePlayers: '隐藏队友以外的玩家', battleSettings: '下场战斗开启自动＋2倍速',
+      autoModeAfterDaily: '完成后进入托管', hidePlayers: '隐藏队友以外的玩家', battleSettings: '下场战斗开启自动＋2倍速',
     })) assert.equal(await choose('label', 2, id), label, `daily choice label for ${id}`);
     await choose('close', 2);
     assert.equal(await choose('open', 1), checked);
@@ -71,6 +71,61 @@ app.whenReady().then(async () => {
     assert.equal(await choose('open', 1), unchecked);
     await choose('close', 1);
     console.log('PASS checked and unchecked choices survive a game reload and stay scoped to the role');
+
+    const regionalRole = 761;
+    const savedItemIds = [10190675, 10190903, 10190904, 10191227, 10191229, 10191226, 10190602, 10800057];
+    const savedGrocery = Object.fromEntries(savedItemIds.map((id, i) => [id, { enabled: true, quantity: i + 1 }]));
+    const checkGroceryIds = async expectedIds => {
+      const orders = JSON.parse(await choose('groceryOrders', regionalRole, JSON.stringify(savedGrocery)));
+      assert.deepEqual(orders.map(order => [order.id, order.quantity]), expectedIds.map((id, i) => [id, i + 1]));
+    };
+    await choose('open', regionalRole);
+    await checkGroceryIds(savedItemIds);
+    assert.equal(await choose('has', regionalRole, 'infiniteIllusion'), 'absent');
+    const cnChoice = await choose('snapshot', regionalRole, 'strong');
+    await reloadFixture();
+    assert.equal(await choose('openBR', regionalRole, 'infiniteIllusion'), unchecked);
+    await checkGroceryIds([10190675, 10190903, 10190904, 10198158, 10198160, 10812001, 10190602, 10800057]);
+    console.log('PASS existing grocery choices produce the eight region-specific item IDs and preserve quantities');
+    assert.equal(await choose('label', regionalRole, 'infiniteIllusion'), '无限幻象扫荡');
+    if (await choose('snapshot', regionalRole, 'strong') === cnChoice) await choose('toggle', regionalRole, 'strong');
+    assert.equal(await choose('toggle', regionalRole, 'infiniteIllusion'), checked);
+    await reloadFixture();
+    assert.equal(await choose('open', regionalRole, 'strong'), cnChoice);
+    await reloadFixture();
+    assert.equal(await choose('openBR', regionalRole, 'infiniteIllusion'), checked);
+    assert.notEqual(await choose('snapshot', regionalRole, 'strong'), cnChoice);
+    assert.equal(await choose('toggle', regionalRole, 'infiniteIllusion'), unchecked);
+    await reloadFixture();
+    console.log('PASS BR-only sweep starts unchecked, persists, and shares no role choices with CN');
+
+    const handoffServer = Math.floor(Date.now() / 1000) + 100;
+    assert.equal(await choose('open', handoffServer, 'autoModeAfterDaily'), checked,
+      'profiles without the new option retain the former auto-mode handoff behavior');
+    const cnLayout = JSON.parse(await choose('layout', handoffServer));
+    assert.equal(cnLayout.executable, false, 'the default handoff preference alone cannot start an empty run');
+    assert.ok(cnLayout.statusY > cnLayout.choiceY && cnLayout.executeY >= cnLayout.statusBottom,
+      'CN execution controls and result stay separated');
+    assert.equal(await choose('toggle', handoffServer, 'autoModeAfterDaily'), unchecked);
+    await choose('close', handoffServer);
+    await reloadFixture();
+    assert.equal(await choose('open', handoffServer, 'autoModeAfterDaily'), unchecked,
+      'the CN preference persists after reload');
+    await choose('close', handoffServer);
+    assert.equal(await choose('openBR', handoffServer, 'autoModeAfterDaily'), checked,
+      'the BR profile has an independent legacy-compatible default');
+    const brLayout = JSON.parse(await choose('layout', handoffServer));
+    assert.ok(brLayout.statusY > brLayout.choiceY && brLayout.executeY >= brLayout.statusBottom,
+      'BR execution controls and result stay separated');
+    assert.equal(await choose('toggle', handoffServer, 'autoModeAfterDaily'), unchecked);
+    await choose('close', handoffServer);
+    await reloadFixture();
+    assert.equal(await choose('open', handoffServer, 'autoModeAfterDaily'), unchecked);
+    await choose('close', handoffServer);
+    assert.equal(await choose('openBR', handoffServer, 'autoModeAfterDaily'), unchecked);
+    await choose('close', handoffServer);
+    console.log('PASS post-daily Auto Mode preference defaults on for old profiles, persists, and stays isolated by region');
+
 
     assert.equal(await choose('open', 2, 'hidePlayers'), unchecked);
     assert.equal(await choose('toggle', 2, 'escortS'), checked);
@@ -136,6 +191,21 @@ app.whenReady().then(async () => {
     assert.equal(state.running, false);
     assert.deepEqual(state.finished, ['测验完成\n演习跳过：未开放\n强者完成']);
     console.log('PASS COMPLETE/BLOCKED handoff and summary');
+
+    await call('reset');
+    state = await call('start', 'infiniteIllusion');
+    assert.deepEqual(state.started, [{ id: 'infiniteIllusion', hasNext: false }],
+      'without the optional tail task, infinite illusion remains the final daily task');
+    state = await call('complete', 'complete|无限幻象完成');
+    assert.equal(state.running, false);
+    await call('reset');
+    state = await call('start', 'infiniteIllusion,autoMode');
+    assert.deepEqual(state.started, [{ id: 'infiniteIllusion', hasNext: true }],
+      'the legacy Auto Mode tail keeps hasNext true for infinite illusion');
+    state = await call('complete', 'complete|无限幻象完成');
+    assert.deepEqual(state.started[state.started.length - 1], { id: 'autoMode', hasNext: false });
+    await call('complete', 'complete|托管完成');
+    console.log('PASS infinite illusion hasNext follows the optional Auto Mode queue tail');
 
     await call('reset');
     state = await call('start', 'wanted,strong');
@@ -244,14 +314,16 @@ app.whenReady().then(async () => {
     assert(state.eventOrder.indexOf('query.finish') < state.eventOrder.indexOf('href.loadingEnd'));
     console.log('PASS empty native activity query before href completion skips without starting');
 
-    await strongCall('begin', 'expired');
-    state = await waitStrong(current => current.finished.length > 0);
-    assert.equal(state.startClicks, 1);
-    assert.equal(state.fighting, false);
-    assert.equal(state.finished[0].status, 'blocked');
-    assert.match(state.finished[0].message, /降临副本已关闭/);
-    assert.equal(state.panel, null);
-    console.log('PASS exact native expired-activity tip closes the panel and skips');
+    for (const scenario of ['expired', 'expiredBR']) {
+      await strongCall('begin', scenario);
+      state = await waitStrong(current => current.finished.length > 0);
+      assert.equal(state.startClicks, 1);
+      assert.equal(state.fighting, false);
+      assert.equal(state.finished[0].status, 'blocked');
+      assert.match(state.finished[0].message, /降临副本已关闭/);
+      assert.equal(state.panel, null);
+    }
+    console.log('PASS native CN and BR expired-activity tips close the panel and skip');
 
     await strongCall('begin', 'last');
     await waitStrong(current => current.startClicks === 1);
@@ -401,6 +473,17 @@ app.whenReady().then(async () => {
     await teamDungeonCall('resume', '0|ready');
     state = await waitTeamDungeon(current => current.fightCommands.length === 1);
     assert.deepEqual(state.reports, ['组队副本 1/3'], 'a lagging native counter preserves the remembered round');
+    await teamDungeonCall('begin', '-1|ready');
+    await waitTeamDungeon(current => current.fightCommands.length === 1);
+    await teamDungeonCall('reward');
+    await teamDungeonCall('fail');
+    state = await waitTeamDungeon(current => current.finished.length > 0);
+    assert.equal(state.finished[0].status, 'abort', 'a reward panel before the native end event does not hide a later battle failure');
+    assert.match(state.finished[0].message, /战斗已中断/);
+    console.log('PASS an early reward panel keeps the battle phase active until native end or fail');
+
+    await teamDungeonCall('resume', '0|ready');
+    state = await waitTeamDungeon(current => current.fightCommands.length === 1);
     await teamDungeonCall('result', 'win');
     await teamDungeonCall('end');
     await teamDungeonCall('reopen');

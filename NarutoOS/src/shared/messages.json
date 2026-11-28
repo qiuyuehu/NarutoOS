@@ -2129,6 +2129,11 @@
     "en": "Daily Assistant · Wanted Missions, Ninja Quiz, Survival Trial, Strong Approaching, Team Dungeon, SS- and S-Rank Escorts, Grocery exchanges, player visibility, native auto battle and 2× battle speed, followed by Auto Mode",
     "pt-BR": "Assistente diário · Missões de captura, Quiz Ninja, Teste de Sobrevivência, Chegada dos Fortes, Masmorra em Equipe, Escoltas SS e S, trocas no Empório, visibilidade de jogadores e combate automático em 2×, com modo automático ao final"
   },
+  "ui.assist_daily_wanted_br": {
+    "zh-CN": "巴西服中文日常助手 · 日常任务与无限幻象扫荡",
+    "en": "Brazil server · Daily Assistant in Chinese, including Infinite Illusion sweeps",
+    "pt-BR": "Servidor brasileiro · Assistente diário em chinês, com raid da Ilusão Infinita"
+  },
   "ui.assist_chakra_batch": {
     "zh-CN": "查克拉修行批量修炼",
     "en": "Chakra practice batch",

@@ -87,9 +87,9 @@ package fixture
             target.stage.addChild(layer);
         }
 
-        public static function showClosedTip():void
+        public static function showClosedTip(brazil:Boolean):void
         {
-            LayerManager.singleton.findLayerByName("GameTip").addChild(new GameTipAnim("降临副本已关闭"));
+            LayerManager.singleton.findLayerByName("GameTip").addChild(new GameTipAnim(brazil ? "A Fase de Chegada encerrou-se" : "降临副本已关闭"));
         }
 
         public static function closeResultAndShowAwards():void

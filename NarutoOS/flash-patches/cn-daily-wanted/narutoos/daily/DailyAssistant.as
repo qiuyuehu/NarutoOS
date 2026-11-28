@@ -21,18 +21,15 @@ package narutoos.daily
    import flash.text.TextFormatAlign;
    import flash.ui.Keyboard;
    import flash.utils.getDefinitionByName;
-   import flash.utils.getQualifiedClassName;
 
    public final class DailyAssistant extends Sprite
    {
       private static const ENTRY_NAME:String = "narutoosDailyAssistant";
       private static const WANTED_DIALOG:String = "WantedNpcDialog";
-      private static const QUIZ_DIALOG:String = "QuizPanel";
-      private static const QUIZ_DIALOG_CLASS:String = "com.tencent.morefun.naruto.plugin.quiz.view::QuizPanel";
       private static const ENTRY_WIDTH:Number = 56;
       private static const EXPEDITION_DIALOG:String = "ExpeditionaryMainView";
       private static const PANEL_WIDTH:Number = 320;
-      private static const PANEL_HEIGHT:Number = 402;
+      private static const PANEL_HEIGHT:Number = 460;
       private static const STOP_WIDTH:Number = 160;
       private static const STOP_HEIGHT:Number = 28;
 
@@ -47,14 +44,14 @@ package narutoos.daily
       private var modalOpen:Boolean;
       private var modalStage:Stage;
       private var panel:Sprite;
-      private static const LABELS:Object = {hidePlayers:"隐藏队友以外的玩家", battleSettings:"下场战斗开启自动＋2倍速", autoMode:"游戏托管"};
+      private static const LABELS:Object = {autoModeAfterDaily:"完成后进入托管", hidePlayers:"隐藏队友以外的玩家", battleSettings:"下场战斗开启自动＋2倍速", autoMode:"游戏托管"};
       private var choices:Object = {};
-      private var selected:Object = {};
+      private var selected:Object = {autoModeAfterDaily:true};
       private var choiceStore:SharedObject;
       private var choiceRole:String;
       // Each loaded game owns its progress, including when the HUD rebuilds the entry.
-      private static var progressRole:String;
-      private static var windowProgress:Object = {strongDone:false, teamDungeonCount:0};
+      private static var progressByRole:Object = {};
+      private var windowProgress:Object = {strongDone:false, teamDungeonCount:0};
       private var background:Sprite;
       private var execute:Sprite;
       private var executeLabel:TextField;
@@ -77,6 +74,17 @@ package narutoos.daily
 
       public static function install(owner:Sprite, slotX:Number, slotY:Number):void
       {
+         installEntry(owner, slotX, slotY, false);
+      }
+
+      public static function installBR(owner:Sprite, slotX:Number, slotY:Number):void
+      {
+         installEntry(owner, slotX, slotY, true);
+      }
+
+      private static function installEntry(owner:Sprite, slotX:Number, slotY:Number, brazil:Boolean):void
+      {
+         DailyRegion.isBR = brazil;
          var assistant:DailyAssistant = owner.getChildByName(ENTRY_NAME) as DailyAssistant;
          if(assistant == null)
          {
@@ -185,7 +193,8 @@ package narutoos.daily
             }},
             {id:"expedition", label:"生存演习", battle:true, create:function(done:Function, progress:Function):IDailyTask
             {
-               return new ExpeditionRun(assistant, done, progress);
+               return new ExpeditionRun(assistant, done, progress,
+                  DailyRegion.isBR && selected.battleSettings ? prepareNextBattle : null);
             }},
             {id:"strong", label:"强者降临", battle:true, create:function(done:Function, progress:Function):IDailyTask
             {
@@ -208,6 +217,13 @@ package narutoos.daily
                return new GroceryTask(assistant, done, progress, groceryOrders, windowProgress);
             }}
          ];
+         if(DailyRegion.isBR)
+         {
+            taskDefinitions.push({id:"infiniteIllusion", label:"无限幻象扫荡", battle:false, create:function(done:Function, progress:Function):IDailyTask
+            {
+               return new InfiniteIllusionSweep(assistant, done, progress, Boolean(selected.autoModeAfterDaily));
+            }});
+         }
          var options:Array = optionIds();
          for(var index:int = 0; index < options.length; index++)
          {
@@ -294,13 +310,13 @@ package narutoos.daily
          boxEvents.addEventListener("boxHide", boxHidden);
          attachToSupportedDialog(boxManager.getBoxByName(WANTED_DIALOG));
          attachToSupportedDialog(boxManager.getBoxByName(EXPEDITION_DIALOG));
-         attachToSupportedDialog(boxManager.getBoxByName(QUIZ_DIALOG));
+         attachToSupportedDialog(QuizBox.find(boxManager, stage));
       }
 
       private function boxShowed(event:Event):void
       {
          var box:Object = Object(event).box;
-         if(isQuizBox(box) && queue.activeId == "quiz")
+         if(QuizBox.matches(box) && queue.activeId == "quiz")
          {
             trackQuiz(box as DisplayObjectContainer);
             refreshHost();
@@ -312,12 +328,12 @@ package narutoos.daily
       private function attachToSupportedDialog(candidate:Object):void
       {
          var box:DisplayObjectContainer = candidate as DisplayObjectContainer;
-         if(box == null || (box.name != WANTED_DIALOG && box.name != EXPEDITION_DIALOG && !isQuizBox(box)) || box.stage !== stage ||
+         if(box == null || (box.name != WANTED_DIALOG && box.name != EXPEDITION_DIALOG && !QuizBox.matches(box)) || box.stage !== stage ||
             !candidate.isShow || !candidate.isShowing)
          {
             return;
          }
-         if(isQuizBox(box))
+         if(QuizBox.matches(box))
          {
             trackQuiz(box);
             if(!queue.running && mapDialog == null) attachToHudDialog(box);
@@ -408,11 +424,6 @@ package narutoos.daily
          quizDialog.removeEventListener("box#hide", nativeQuizClosing);
          quizDialog = null;
          refreshHost();
-      }
-
-      private static function isQuizBox(box:Object):Boolean
-      {
-         return box != null && (box.name == QUIZ_DIALOG || getQualifiedClassName(box) == QUIZ_DIALOG_CLASS);
       }
 
       private function syncDialogControls(event:Event):void
@@ -682,7 +693,7 @@ package narutoos.daily
                if(mapObstacle != null && mapObstacle.visible) blockedBounds.push(mapObstacle.getBounds(stage));
             }
          }
-         else if(isQuizBox(runtimeHost))
+         else if(QuizBox.matches(runtimeHost))
          {
             collectQuizInteractiveBounds(runtimeHost, stage, blockedBounds);
          }
@@ -745,26 +756,29 @@ package narutoos.daily
          {
             var player:Object = getDefinitionByName("base.ApplicationData").singleton.selfInfo;
             if(player && uint(player.uin) > 0 && int(player.svrId) > 0 && player.role != null)
-               role = uint(player.uin) + "_" + int(player.svrId) + "_" + int(player.role);
+               role = (DailyRegion.isBR ? "br_" : "") + uint(player.uin) + "_" + int(player.svrId) + "_" + int(player.role);
          }
          catch(unavailable:Error) {}
          if(role == choiceRole) return;
          choiceRole = role;
          choiceStore = null;
-         selected = {};
+         selected = {autoModeAfterDaily:true};
          groceryChoices = {};
-         if(role == null) return;
-         if(progressRole != role)
+         resultText = "";
+         if(role == null)
          {
-            progressRole = role;
             windowProgress = {strongDone:false, teamDungeonCount:0};
+            return;
          }
+         if(!progressByRole.hasOwnProperty(role))
+            progressByRole[role] = {strongDone:false, teamDungeonCount:0};
+         windowProgress = progressByRole[role];
          try
          {
             choiceStore = SharedObject.getLocal("narutoos_daily_choices_" + role, "/");
             groceryChoices = choiceStore.data.groceryChoices || {};
             for each(var id:String in optionIds())
-               selected[id] = choiceStore.data[id] === true;
+               selected[id] = id == "autoModeAfterDaily" ? choiceStore.data[id] !== false : choiceStore.data[id] === true;
          }
          catch(storageError:Error) { choiceStore = null; }
       }
@@ -807,14 +821,15 @@ package narutoos.daily
          }
          if(ids.length == 0 && !selected.hidePlayers && !selected.battleSettings && !groceryEmpty) return;
          standaloneBattle = ids.length == 0 && selected.battleSettings;
-         if(standaloneBattle || (!windowProgress.battleReady && (battleTask || selected.battleSettings)))
+         if(standaloneBattle || (DailyRegion.isBR && selected.battleSettings) ||
+            (!windowProgress.battleReady && (battleTask || selected.battleSettings)))
          {
             if(standaloneBattle)
             {
                closeSelectionWindow();
                showProgress("等待下场战斗");
             }
-            autoBattle.startNext(battleConfigured);
+            prepareNextBattle();
          }
          if(ids.length == 0)
          {
@@ -827,8 +842,13 @@ package narutoos.daily
          }
          resultText = "";
          closeSelectionWindow();
-         ids.push("autoMode");
+         if(selected.autoModeAfterDaily) ids.push("autoMode");
          queue.start(ids);
+      }
+
+      private function prepareNextBattle():void
+      {
+         autoBattle.startNext(battleConfigured);
       }
 
       private function battleConfigured():void
@@ -870,7 +890,7 @@ package narutoos.daily
       {
          var ids:Array = [];
          for each(var definition:Object in taskDefinitions) ids.push(definition.id);
-         return ids.concat(["hidePlayers", "battleSettings"]);
+         return ids.concat(["autoModeAfterDaily", "hidePlayers", "battleSettings"]);
       }
 
       private function showProgress(message:String):void
@@ -950,7 +970,7 @@ package narutoos.daily
          for each(var id:String in optionIds())
          {
             updateChoice(choices[id], Boolean(selected[id]), busy);
-            if(selected[id] && !busy) canRun = true;
+            if(id != "autoModeAfterDaily" && selected[id] && !busy) canRun = true;
          }
          var action:String = busy ? "执行中…" : "执行";
          execute.accessibilityProperties.name = action;
@@ -1012,6 +1032,12 @@ package narutoos.daily
          if(checkbox != null)
          {
             checkbox.name = "checkbox";
+            if(DailyRegion.isBR && "textField" in checkbox)
+            {
+               // The Portuguese skin otherwise measures the label using its embedded Latin glyphs.
+               var caption:TextField = Object(checkbox).textField as TextField;
+               if(caption != null) caption.embedFonts = false;
+            }
             Object(checkbox).label = label;
             checkbox.tabEnabled = false;
             control.addChild(checkbox);
@@ -1022,7 +1048,9 @@ package narutoos.daily
             marker.name = "marker";
             marker.y = 5;
             control.addChild(marker);
-            control.addChild(makeLabel(label, 24, 2, 156, 24, 14));
+            var choiceLabel:TextField = makeLabel(label, 24, 2, 156, 24, 14);
+            choiceLabel.width = Math.max(choiceLabel.width, Math.ceil(choiceLabel.textWidth) + 4);
+            control.addChild(choiceLabel);
          }
          return control;
       }

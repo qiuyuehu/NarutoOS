@@ -49,6 +49,12 @@ for (const [name, localization, assists, speed, variant] of [
       const fetch = commands.filter(call => call.method === 'Fetch.enable');
       assert.equal(fetch.length, 1);
       const urls = fetch[0].params.patterns.map(pattern => pattern.urlPattern);
+      const brHud = 'https://cdnnaruto-pt.oasgames.com/PT_NarutoAlpha9.39Build301/flash/hud/HudPlugin.swf*';
+      const liveBrHud = 'https://cdnnaruto-pt.oasgames.com/PT_NarutoAlpha9.41Build300/flash/hud/HudPlugin.swf*';
+      const brMainUI = 'https://cdnnaruto-pt.oasgames.com/PT_NarutoAlpha9.19Build301/flash/hud/mainUI.swf*';
+      assert.equal(urls.includes(brHud), assists, 'the BR daily assistant follows the assist switch');
+      assert.equal(urls.includes(liveBrHud), assists, 'the HUD requested by the 9.42 client follows the assist switch');
+      assert.equal(urls.includes(brMainUI), localization, 'the translated BR HUD artwork follows the localization switch');
       for (const item of status.extraResources) {
         assert.equal(item.state, 'accepted');
         assert.ok(urls.includes(item.target + '*'));

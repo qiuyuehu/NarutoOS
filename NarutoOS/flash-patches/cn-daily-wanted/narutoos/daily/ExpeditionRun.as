@@ -23,9 +23,12 @@ package narutoos.daily
         private var view:Object;
         private var map:ExpeditionMap;
         private var battle:ExpeditionBattle;
+        private var prepareBattle:Function;
         private var phase:String;
         private var timeout:Timer;
         private var waitingFor:String;
+        private var progressStage:String = "";
+        private var scoreProgress:String = "";
         private var stageId:uint;
         private var previousScore:int;
         private var previousCount:int;
@@ -33,15 +36,18 @@ package narutoos.daily
         private var leftMap:Boolean;
         private var closed:Boolean;
         private var blockedReason:String;
+        private var resultDeadlineRefreshed:Boolean;
         // A canceled run may already have handed an action to the native client.
         // Keep the receipt on that map only, until the game acknowledges it.
         private static const pending:Dictionary = new Dictionary(true);
 
-        public function ExpeditionRun(owner:Sprite, finished:Function, progress:Function = null)
+        public function ExpeditionRun(owner:Sprite, finished:Function, progress:Function = null,
+                                      prepareBattle:Function = null)
         {
             this.owner = owner;
             this.finished = finished;
             this.progress = progress;
+            this.prepareBattle = prepareBattle;
         }
 
         public function get running():Boolean { return phase != null; }
@@ -51,7 +57,7 @@ package narutoos.daily
             if (running || !owner.stage) return;
             timeout = new Timer(30000, 1);
             timeout.addEventListener(TimerEvent.TIMER_COMPLETE, onTimeout);
-            waitFor("entry", "等待演习地图数据");
+            waitFor("entry", "等待演习地图数据", 30000, true, "进图");
             try
             {
                 boxes = getDefinitionByName("com.tencent.morefun.naruto.plugin.ui.box.BoxManager");
@@ -72,12 +78,21 @@ package narutoos.daily
             catch (error:Error) { fail(error); }
         }
 
-        private function waitFor(next:String, description:String, limit:int = 30000):void
+        private function waitFor(next:String, description:String, limit:int = 30000, network:Boolean = true,
+                                 progressLabel:String = null):void
         {
             phase = next;
             waitingFor = description;
+            if (progressLabel != null)
+            {
+                progressStage = progressLabel;
+                if (DailyRegion.isBR) publishProgress();
+            }
             timeout.reset();
-            timeout.delay = limit;
+            // Network phases can be unusually slow in the BR client. Active
+            // combat uses its own longer deadline, refreshed only on a
+            // verified native result milestone.
+            timeout.delay = network ? DailyRegion.networkWait(limit) : limit;
             timeout.start();
         }
 
@@ -104,6 +119,8 @@ package narutoos.daily
                 view = box;
                 map = new ExpeditionMap(view);
                 leftMap = false;
+                if (DailyRegion.isBR && phase == "entry") waitFor("entry", "等待演习地图数据", 30000, true, "数据");
+                else if (DailyRegion.isBR && phase == "return") waitFor("return", "等待战后地图、积分和次数更新", 30000, true, "回图");
                 return true;
             }
             finish(DailyQueue.ABORT, "遇到其他窗口，生存演习已停止。");
@@ -152,11 +169,18 @@ package narutoos.daily
                     if (currentBattle !== battle) return;
                     if (state == "returning")
                     {
-                        waitFor("return", "等待战后地图、积分和次数更新");
+                        waitFor("return", "等待战后地图、积分和次数更新", 30000, true, "回图");
                     }
                     else if (state == "fighting" && waitingFor != "等待本场战斗结算")
                     {
-                        waitFor("fight", "等待本场战斗结算", 600000);
+                        waitFor("fight", "等待本场战斗结算", DailyRegion.networkWait(600000), true, "战斗中");
+                    }
+                    else if (state == "fighting" && currentBattle.hasResult && !resultDeadlineRefreshed)
+                    {
+                        // Refresh only once on the verified native result event;
+                        // repeated frame polling must not keep a stalled battle alive.
+                        resultDeadlineRefreshed = true;
+                        if (DailyRegion.isBR) waitFor("fight", "等待本场战斗结算", DailyRegion.networkWait(600000), true, "战斗中");
                     }
                     return;
                 }
@@ -166,7 +190,8 @@ package narutoos.daily
                 if (progress != null && reportedScore != data.score)
                 {
                     reportedScore = data.score;
-                    progress("演习积分 " + reportedScore + "/" + data.maxScore);
+                    scoreProgress = reportedScore + "/" + data.maxScore;
+                    publishProgress();
                 }
 
                 var activeView:Object = view;
@@ -177,7 +202,7 @@ package narutoos.daily
                 }
                 if (phase == "entry" && data.resetCount == 1)
                 {
-                    waitFor("reset", "等待重置后的演习进度");
+                    waitFor("reset", "等待重置后的演习进度", 30000, true, "重置中");
                     if (map.reset()) pending[activeView] = {action: "reset"};
                     else finish(DailyQueue.ABORT, "演习重置按钮不可用。");
                     return;
@@ -199,11 +224,11 @@ package narutoos.daily
                     }
                     else
                     {
-                        if (phase != "reward") waitFor("reward", "等待满分奖励可领取");
+                        if (phase != "reward") waitFor("reward", "等待满分奖励可领取", 30000, true, "领奖");
                         if (data.rewardCanTake && map.claim())
                         {
                             pending[activeView] = {action: "claim"};
-                            if (phase == "reward") waitFor("claim", "等待领奖状态更新");
+                            if (phase == "reward") waitFor("claim", "等待领奖状态更新", 30000, true, "领奖");
                         }
                     }
                     return;
@@ -221,7 +246,7 @@ package narutoos.daily
         private function exitMap(reason:String = null):void
         {
             blockedReason = reason;
-            waitFor("exit", "等待退出演习地图");
+            waitFor("exit", "等待退出演习地图", 30000, false, "退出");
             if (!map.exit()) finish(DailyQueue.ABORT, "无法关闭演习地图，本轮已停止。");
         }
 
@@ -286,11 +311,22 @@ package narutoos.daily
             stageId = choice.stageId;
             previousCount = choice.remainCount;
             previousScore = data.score;
-            waitFor("fight", "等待本场演习开始");
+            resultDeadlineRefreshed = false;
+            waitFor("fight", "等待本场演习开始", 30000, true, "开战");
             battle.arm(stageId);
+            if (prepareBattle != null) prepareBattle();
             var activeView:Object = view;
             if (map.challenge(stageId)) pending[activeView] = {action: "fight", stage: stageId, count: previousCount};
             else finish(DailyQueue.ABORT, "无法使用当前阵容挑战所选关卡。");
+        }
+
+        private function publishProgress():void
+        {
+            if (progress == null) return;
+            if (DailyRegion.isBR && progressStage != "")
+                progress(progressStage + (scoreProgress == "" ? "" : " 积分 " + scoreProgress));
+            else if (scoreProgress != "")
+                progress("演习积分 " + scoreProgress);
         }
 
         private function chooseSupplementalStage(data:Object):Object
@@ -365,6 +401,9 @@ package narutoos.daily
             leftMap = closed = false;
             blockedReason = null;
             reportedScore = -1;
+            progressStage = "";
+            scoreProgress = "";
+            resultDeadlineRefreshed = false;
         }
     }
 }

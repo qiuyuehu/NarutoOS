@@ -7,6 +7,7 @@ package
     import flash.text.TextField;
     import flash.events.MouseEvent;
     import narutoos.daily.DailyAssistant;
+    import narutoos.daily.GrocerySettings;
     import flash.external.ExternalInterface;
     import narutoos.daily.DailyQueue;
     import narutoos.daily.IDailyTask;
@@ -33,11 +34,13 @@ package
 
         private function selection(action:String, server:int, option:String = "strong"):String
         {
+            if(action == "groceryOrders") return JSON.stringify(GrocerySettings.orders(JSON.parse(option)));
             var modal:DisplayObjectContainer = stage.getChildByName("dailyAssistantModal") as DisplayObjectContainer;
-            if(action == "open")
+            if(action == "open" || action == "openBR")
             {
                 ApplicationData.singleton.selfInfo = {uin:761, svrId:server, role:0};
-                DailyAssistant.install(this, 0, 0);
+                if(action == "openBR") DailyAssistant.installBR(this, 0, 0);
+                else DailyAssistant.install(this, 0, 0);
                 var assistant:DisplayObjectContainer = getChildByName("narutoosDailyAssistant") as DisplayObjectContainer;
                 var controls:DisplayObjectContainer = assistant.getChildByName("dailyControls") as DisplayObjectContainer;
                 controls.getChildByName("entry").dispatchEvent(new MouseEvent(MouseEvent.CLICK, true));
@@ -51,7 +54,16 @@ package
                 return overlay.visible ? "running" : "stopped";
             }
             var panel:DisplayObjectContainer = modal.getChildByName("panel") as DisplayObjectContainer;
+            if(action == "has") return panel.getChildByName(option) == null ? "absent" : "present";
             if(action == "label") return panel.getChildByName(option).accessibilityProperties.name;
+            if(action == "layout")
+            {
+                var execute:Sprite = panel.getChildByName("execute") as Sprite;
+                var status:TextField = panel.getChildByName("status") as TextField;
+                return JSON.stringify({choiceY:panel.getChildByName("battleSettings").y, statusY:status.y,
+                    statusBottom:status.y + status.height, executeY:execute.y, executable:execute.buttonMode,
+                    panelHeight:panel.height});
+            }
             if(action == "settings")
             {
                 panel.getChildByName("grocerySettings").dispatchEvent(new MouseEvent(MouseEvent.CLICK, true));

@@ -61,6 +61,7 @@ package narutoos.daily
         private var startExecuted:Boolean;
         private var battleStarted:Boolean;
         private var resultSeen:Boolean;
+        private var fightResultDeadlineRefreshed:Boolean;
         private var clickedAward:Boolean;
         private var clickedScore:Boolean;
         private var pendingAward:Boolean;
@@ -89,7 +90,7 @@ package narutoos.daily
 
             phase = "entry";
             timer = new Timer(POLL_INTERVAL);
-            armDeadline(NAVIGATION_TIMEOUT);
+            armDeadline(DailyRegion.networkWait(NAVIGATION_TIMEOUT));
             timer.addEventListener(TimerEvent.TIMER, onTimer);
             try
             {
@@ -163,7 +164,7 @@ package narutoos.daily
                 {
                     challengeBox = existing;
                     phase = "challenge";
-                    armDeadline(NAVIGATION_TIMEOUT);
+                    armDeadline(DailyRegion.networkWait(NAVIGATION_TIMEOUT));
                 }
                 else
                 {
@@ -211,7 +212,7 @@ package narutoos.daily
             if (phase == "entry")
             {
                 phase = "challenge";
-                armDeadline(NAVIGATION_TIMEOUT);
+                armDeadline(DailyRegion.networkWait(NAVIGATION_TIMEOUT));
             }
             var manager:Object = getDefinitionByName("com.tencent.morefun.naruto.plugin.ui.box.BoxManager");
             acceptChallengeBox(findVisibleChallenge(manager));
@@ -293,7 +294,7 @@ package narutoos.daily
             if (phase == "entry")
             {
                 phase = "challenge";
-                armDeadline(NAVIGATION_TIMEOUT);
+                armDeadline(DailyRegion.networkWait(NAVIGATION_TIMEOUT));
             }
         }
 
@@ -364,7 +365,7 @@ package narutoos.daily
             }
             startCommand = command;
             phase = "starting";
-            armDeadline(START_TIMEOUT);
+            armDeadline(DailyRegion.networkWait(START_TIMEOUT));
         }
 
         private function onBefallQueryFinished(event:Event):void
@@ -382,10 +383,13 @@ package narutoos.daily
                 finish(DailyQueue.ABORT, "强者降临状态查询失败，无法确认能否交接。");
                 return;
             }
+            // Query completion is a real response boundary. Give the following
+            // panel/navigation step its own deadline in slow BR sessions.
+            if (DailyRegion.isBR) armDeadline(DailyRegion.networkWait(NAVIGATION_TIMEOUT));
             if (query.dungeons.length == 0)
             {
                 phase = "unavailable";
-                armDeadline(NAVIGATION_TIMEOUT);
+                armDeadline(DailyRegion.networkWait(NAVIGATION_TIMEOUT));
             }
         }
 
@@ -399,7 +403,7 @@ package narutoos.daily
             if (command === startCommand)
             {
                 startExecuted = true;
-                armDeadline(START_TIMEOUT);
+                armDeadline(DailyRegion.networkWait(START_TIMEOUT));
             }
         }
 
@@ -454,14 +458,24 @@ package narutoos.daily
                     return;
                 }
                 battleStarted = true;
+                resultSeen = false;
+                fightResultDeadlineRefreshed = false;
                 phase = "fighting";
-                armDeadline(FIGHT_TIMEOUT);
+                armDeadline(DailyRegion.networkWait(FIGHT_TIMEOUT));
             }
             else if (key == "showResult" && battleStarted)
             {
                 if (int(battleInfo.type) != int(fightType.FIGHT_START_TYPE_BEFALL_DUNGEON))
                     finish(DailyQueue.ABORT, "战斗结果与强者降临不匹配。");
-                else windowProgress.strongDone = true;
+                else
+                {
+                    windowProgress.strongDone = true;
+                    if (DailyRegion.isBR && !fightResultDeadlineRefreshed)
+                    {
+                        fightResultDeadlineRefreshed = true;
+                        armDeadline(DailyRegion.networkWait(FIGHT_TIMEOUT));
+                    }
+                }
             }
         }
 
@@ -571,7 +585,7 @@ package narutoos.daily
             }
             clickedStart = true;
             phase = "starting";
-            armDeadline(START_TIMEOUT);
+            armDeadline(DailyRegion.networkWait(START_TIMEOUT));
             // A previously opened challenge can expire before its start button is clicked.
             // Only accept the game's own closure tip produced synchronously by this click.
             var layerType:Class = getDefinitionByName("com.tencent.morefun.naruto.plugin.ui.layer.LayerManager") as Class;
@@ -583,7 +597,8 @@ package narutoos.daily
                 if (!tip || getQualifiedClassName(tip) != "com.tencent.morefun.naruto.util::GameTipAnim" || !tip.numChildren) return;
                 var body:Sprite = tip.getChildAt(0) as Sprite;
                 var label:TextField = body && body.numChildren ? body.getChildAt(0) as TextField : null;
-                if (label && label.text == "降临副本已关闭") closedTip = true;
+                if (label && (label.text == "降临副本已关闭" ||
+                    (DailyRegion.isBR && label.text == "A Fase de Chegada encerrou-se"))) closedTip = true;
             };
             if (tipsLayer) tipsLayer.addEventListener(Event.ADDED, observeTip);
             try
@@ -611,7 +626,7 @@ package narutoos.daily
             {
                 battleStarted = true;
                 phase = "fighting";
-                armDeadline(FIGHT_TIMEOUT);
+                armDeadline(DailyRegion.networkWait(FIGHT_TIMEOUT));
             }
         }
 
@@ -653,7 +668,7 @@ package narutoos.daily
         private function waitForReturn():void
         {
             phase = "returning";
-            armDeadline(RETURN_TIMEOUT);
+            armDeadline(DailyRegion.networkWait(RETURN_TIMEOUT));
         }
 
         private function closeRewardPanels():void
@@ -898,7 +913,7 @@ package narutoos.daily
             blockedReason = reason;
             challengeBox = box;
             phase = "unavailable";
-            armDeadline(NAVIGATION_TIMEOUT);
+            armDeadline(DailyRegion.networkWait(NAVIGATION_TIMEOUT));
             closeButton.dispatchEvent(new MouseEvent(MouseEvent.CLICK, true, false));
             return true;
         }

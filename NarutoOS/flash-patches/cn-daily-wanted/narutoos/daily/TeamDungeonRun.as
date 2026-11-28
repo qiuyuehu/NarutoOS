@@ -45,6 +45,7 @@ package narutoos.daily
         private var lost:Boolean;
         private var lastResult:Object;
         private var startList:Object;
+        private var openingListObserved:Object;
         private var listLeft:Boolean;
         private var rewardBox:Object;
         private var rewardDismissRequested:Boolean;
@@ -67,11 +68,11 @@ package narutoos.daily
             try
             {
                 reason = null;
-                startList = closingBox = rewardBox = lastResult = navigation = null;
+                startList = openingListObserved = closingBox = rewardBox = lastResult = navigation = null;
                 rewardDismissRequested = false;
                 fixedRound = true;
                 settled = requested = confirmed = resultSeen = lost = false;
-                arm("open", 45000);
+                arm("open", DailyRegion.networkWait(45000));
                 application = getDefinitionByName("base.ApplicationData").singleton;
                 var facade:Object = getDefinitionByName("com.tencent.morefun.framework.apf.core.facade.Facade").getInstance();
                 commands = facade.commandManager as IEventDispatcher;
@@ -167,6 +168,7 @@ package narutoos.daily
         {
             if (!running) return;
             if (event.type == "faild") finish(DailyQueue.ABORT, "游戏未能打开组队副本。");
+            else if (DailyRegion.isBR && phase == "open") arm("open", DailyRegion.networkWait(45000));
         }
 
         private function commandRequested(event:Event):void
@@ -192,11 +194,25 @@ package narutoos.daily
 
         private function boxShown(event:Event):void
         {
-            if (phase != "battle" && phase != "return") return;
             var box:Object = Object(event).box;
-            if (box != null && getQualifiedClassName(box) == REWARD && box.stage === owner.stage)
+            if (event.type == "boxShowed" && box != null && box.stage === owner.stage &&
+                getQualifiedClassName(box) == LIST && box !== openingListObserved && (phase == "open" || phase == "return"))
+            {
+                openingListObserved = box;
+                // The native list arriving is a milestone. Renew once for this
+                // display instance; duplicate boxShow/boxShowed events and poll
+                // ticks must not keep a stalled list alive indefinitely.
+                if (DailyRegion.isBR)
+                    refreshDeadline(phase == "open" ? DailyRegion.networkWait(45000) : DailyRegion.networkWait(90000));
+            }
+            else if ((phase == "battle" || phase == "return") && box != null &&
+                getQualifiedClassName(box) == REWARD && box.stage === owner.stage && box !== rewardBox)
             {
                 observeReward(box);
+                // Reward can precede the native battle end. Preserve battle
+                // phase so a later failure event still aborts the run.
+                if (DailyRegion.isBR)
+                    refreshDeadline(phase == "battle" ? DailyRegion.networkWait(600000) : DailyRegion.networkWait(90000));
             }
         }
 
@@ -221,14 +237,17 @@ package narutoos.daily
                     return;
                 }
                 resultSeen = lost = false;
-                arm("battle", 600000);
+                openingListObserved = null;
+                arm("battle", DailyRegion.networkWait(600000));
             }
-            else if ((Object(event).key == "fight_over" || Object(event).key == "showResult") && phase == "battle" && "isWin" in battle)
+            else if ((Object(event).key == "fight_over" || Object(event).key == "showResult") &&
+                phase == "battle" && "isWin" in battle)
             {
+                if (DailyRegion.isBR && !resultSeen) refreshDeadline(DailyRegion.networkWait(600000));
                 resultSeen = true;
                 lost = !battle.isWin;
             }
-            else if (Object(event).key == "end" && phase == "battle") arm("return", 90000);
+            else if (Object(event).key == "end" && phase == "battle") arm("return", DailyRegion.networkWait(90000));
             else if (Object(event).key == "fail" && phase == "battle")
                 finish(DailyQueue.ABORT, "战斗已中断，未收到组队副本结算。");
         }
@@ -311,7 +330,7 @@ package narutoos.daily
                 }
                 settleReturnedRound(after);
                 if (!settled) return;
-                arm("open", 45000);
+                arm("open", DailyRegion.networkWait(45000));
                 prepare(top);
             }
             catch (error:Error) { finish(DailyQueue.ABORT, "无法确认组队副本状态。" + error.message); }
@@ -352,7 +371,7 @@ package narutoos.daily
             if (!running) return;
             if (before >= GOAL) { closeList(list); return; }
             var choice:Object = TeamDungeonPanel.choose(list);
-            if (choice.kind == "wait" || choice.kind == "selected") { if (phase != "open") arm("open", 45000); return; }
+            if (choice.kind == "wait" || choice.kind == "selected") { if (phase != "open") arm("open", DailyRegion.networkWait(45000)); return; }
             if (choice.kind == "blocked") { reason = choice.message; closeList(list); return; }
             if (choice.kind != "ready" || !(choice.button is InteractiveObject) || int(choice.dungeonId) <= 0)
             {
@@ -365,7 +384,7 @@ package narutoos.daily
             settled = confirmed = requested = lost = resultSeen = false;
             lastResult = rewardBox = null;
             rewardDismissRequested = false;
-            arm("enter", 45000);
+            arm("enter", DailyRegion.networkWait(45000));
             enterClick(choice.button);
         }
 
@@ -408,6 +427,11 @@ package narutoos.daily
         private function arm(next:String, limit:int):void
         {
             phase = next;
+            refreshDeadline(limit);
+        }
+
+        private function refreshDeadline(limit:int):void
+        {
             deadline.reset();
             deadline.delay = limit;
             deadline.start();

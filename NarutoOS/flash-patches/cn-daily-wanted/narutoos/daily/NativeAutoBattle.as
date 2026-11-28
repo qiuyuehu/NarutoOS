@@ -4,6 +4,7 @@ package narutoos.daily
     import flash.display.DisplayObjectContainer;
     import flash.display.Sprite;
     import flash.events.Event;
+    import flash.events.IEventDispatcher;
     import flash.events.MouseEvent;
     import flash.system.ApplicationDomain;
     import flash.utils.getDefinitionByName;
@@ -20,6 +21,8 @@ package narutoos.daily
         private static const BATTLE_VIEW_UI:String = "ui.battle::BattleViewUI";
         private static const BASE_BUTTON:String = "com.tencent.morefun.naruto.plugin.ui.base::BaseButton";
         private static const BATTLE_MODEL:String = "battleStart";
+        private static const REQUEST_AUTO:String = "com.tencent.morefun.naruto.plugin.battle.command::RequestAutoFightCommand";
+        private static const NOTIFY_AUTO:String = "com.tencent.morefun.naruto.plugin.battle.command::NotifyAutoFightCommand";
         private static const POLL_INTERVAL:int = 120;
 
         private var owner:Sprite;
@@ -29,6 +32,9 @@ package narutoos.daily
         private var speedClicked:Boolean;
         private var onDone:Function;
         private var pollTimer:Timer;
+        private var commandEvents:IEventDispatcher;
+        private var pendingAutoView:DisplayObjectContainer;
+        private var manualAutoView:DisplayObjectContainer;
 
         public function NativeAutoBattle(owner:Sprite)
         {
@@ -65,6 +71,13 @@ package narutoos.daily
             pollTimer.stop();
             pollTimer.removeEventListener(TimerEvent.TIMER, onPoll);
             pollTimer = null;
+            if (commandEvents != null)
+            {
+                commandEvents.removeEventListener("commandExecute", onAutoCommand);
+                commandEvents = null;
+            }
+            pendingAutoView = null;
+            manualAutoView = null;
             owner.removeEventListener(Event.REMOVED_FROM_STAGE, onOwnerRemoved);
             armed = false;
             onDone = null;
@@ -107,7 +120,17 @@ package narutoos.daily
             }
             if (!state.active)
             {
+                // Subscribe while idle so even the native opening request is visible.
+                if (DailyRegion.isBR && commandEvents == null)
+                {
+                    var facade:Object = getDefinitionByName("com.tencent.morefun.framework.apf.core.facade.Facade");
+                    commandEvents = facade.getInstance().commandManager as IEventDispatcher;
+                    if (commandEvents == null) return;
+                    commandEvents.addEventListener("commandExecute", onAutoCommand);
+                }
                 armed = true;
+                pendingAutoView = null;
+                manualAutoView = null;
                 setRound(null);
                 return;
             }
@@ -142,7 +165,9 @@ package narutoos.daily
             var speedUsable:Boolean = isUsableButton(speedButton) && groupType.isEnableSpeedType(fightType);
             var nativeAuto:Boolean = autoUsable && groupType.getAutoStatus(fightType);
             var nativeSpeed:Boolean = speedUsable && groupType.getSpeedStatus(fightType);
-            var autoReady:Boolean = data.isAutoChallenge || (nativeAuto && autoButton.selected);
+            var pendingAuto:Boolean = pendingAutoView === battleView;
+            var autoReady:Boolean = nativeAuto && autoButton.selected && !pendingAuto;
+            if (!DailyRegion.isBR && data.isAutoChallenge) autoReady = true;
             var speedReady:Boolean = nativeSpeed && speedButton.selected;
             if (autoReady && speedReady)
             {
@@ -152,9 +177,12 @@ package narutoos.daily
                 return;
             }
 
-            // Native startup and player clicks can update the button and model at
-            // different times. Wait for agreement before sending a toggle.
-            if (autoUsable && !autoClicked && !data.isAutoChallenge && !nativeAuto && !autoButton.selected)
+            // BR's status map survives the battle. Its server toggles on each
+            // request, including a second request before the first one returns.
+            var canRequestAuto:Boolean = !data.isAutoChallenge && !nativeAuto;
+            if (DailyRegion.isBR)
+                canRequestAuto = !pendingAuto && (!data.isAutoChallenge || manualAutoView === battleView);
+            if (autoUsable && !autoClicked && canRequestAuto && !autoButton.selected)
             {
                 autoClicked = true;
                 autoButton.dispatchEvent(new MouseEvent(MouseEvent.CLICK, true, false));
@@ -167,6 +195,18 @@ package narutoos.daily
                 speedClicked = true;
                 speedButton.dispatchEvent(new MouseEvent(MouseEvent.CLICK, true, false));
             }
+        }
+
+        private function onAutoCommand(event:Event):void
+        {
+            if (!armed || owner.stage == null) return;
+            var command:Object = Object(event).command;
+            var type:String = getQualifiedClassName(command);
+            if (type != REQUEST_AUTO && type != NOTIFY_AUTO) return;
+            var view:DisplayObjectContainer = findBattleView(owner.stage);
+            if (view == null) return;
+            pendingAutoView = type == REQUEST_AUTO ? view : null;
+            manualAutoView = type == NOTIFY_AUTO && command.isAutoFight === false ? view : null;
         }
 
         private function setRound(view:DisplayObjectContainer):void

@@ -4,7 +4,7 @@ runFlashResult({
   name: 'native-auto-mode',
   fixture: process.env.NATIVE_AUTO_MODE_SWF,
   resultCallback: 'nativeAutoModeResult',
-  expectedPasses: 18,
+  expectedPasses: 20,
   version: '34.0.0.384',
-  timeoutMs: 35000,
+  timeoutMs: 60000,
 });

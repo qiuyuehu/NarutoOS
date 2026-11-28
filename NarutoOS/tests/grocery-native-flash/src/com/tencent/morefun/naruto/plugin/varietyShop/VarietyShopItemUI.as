@@ -3,6 +3,7 @@ package com.tencent.morefun.naruto.plugin.varietyShop
     import fixture.Button;
     import flash.display.Sprite;
     import flash.text.TextField;
+    import narutoos.daily.DailyRegionFixture;
 
     public final class VarietyShopItemUI extends Sprite
     {
@@ -10,6 +11,7 @@ package com.tencent.morefun.naruto.plugin.varietyShop
         public const itemBg:Object = {
             currentFrame:1,
             costType:{ currentFrame:2 },
+            stepper:null,
             costTf:new TextField(),
             buyBtn:new Button()
         };
@@ -18,7 +20,7 @@ package com.tencent.morefun.naruto.plugin.varietyShop
         {
             addChild(itemBg.buyBtn);
             itemBg.costTf.text = "200";
-            itemNameTf.text = "洞穴密钥";
+            itemNameTf.text = DailyRegionFixture.isBR && !DailyRegionFixture.isChineseText ? "Chave da Caverna" : "洞穴密钥";
         }
     }
 }

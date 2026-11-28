@@ -16,17 +16,15 @@ package narutoos.daily
 
     public final class QuizRun implements IDailyTask
     {
-        private static const QUIZ_BOX:String = "QuizPanel";
         private static const QUIZ_ANSWER_COMMAND:String = "com.tencent.morefun.naruto.plugin.quiz.command::RequestAnswerQuizCommand";
         private static const QUIZ_REWARD_COMMAND:String = "com.tencent.morefun.naruto.plugin.quiz.command::RequestQuizRewardCommand";
         private static const TASK_NPC:String = "com.tencent.morefun.naruto.plugin.npc.views::TaskNpcDialog";
         private static const MENU_ROW:String = "com.tencent.morefun.naruto.plugin.npc.views::TaskNpcDialogMenuRenderer";
         private static const TASK_NPC_LIST_ID:int = 26000500;
         private static const TEST_NPC_ROUTE:String = "cgoto,2015002,26000500";
-        private static const START_MENU_TEXT:String = "开始测验";
         private static const START_MENU_PARAM:String = "openui,53,closeDialog";
-        private static const NAVIGATION_TIMEOUT:int = 45000;
-        private static const QUESTION_TIMEOUT:int = 60000;
+        private const navigationTimeout:int = DailyRegion.networkWait(45000);
+        private const questionTimeout:int = DailyRegion.networkWait(60000);
         private static const POLL_INTERVAL:int = 120;
         private static const SELECT_SETTLE_MS:int = 120;
         private static const TOTAL_QUESTIONS:int = 10;
@@ -51,8 +49,8 @@ package narutoos.daily
         private var selectedFirst:Boolean;
         private var submitted:Boolean;
         private static const ANSWER_READY_TIMEOUT:int = 1500;
-        private const panelWait:QuizWait = new QuizWait(NAVIGATION_TIMEOUT, QUESTION_TIMEOUT);
-        private const questionWait:QuizWait = new QuizWait(SELECT_SETTLE_MS, ANSWER_READY_TIMEOUT, NAVIGATION_TIMEOUT, QUESTION_TIMEOUT);
+        private const panelWait:QuizWait = new QuizWait(navigationTimeout, questionTimeout);
+        private const questionWait:QuizWait = new QuizWait(SELECT_SETTLE_MS, ANSWER_READY_TIMEOUT, navigationTimeout, questionTimeout);
         private var generation:uint;
         private var choseMenu:Boolean;
         private var claimRequested:Boolean;
@@ -108,8 +106,8 @@ package narutoos.daily
                 timer.start();
 
                 panelWait.restart();
-                var existing:Object = boxManager.getBoxByName(QUIZ_BOX);
-                if (isOpeningOnOwnerStage(existing))
+                var existing:Object = QuizBox.find(boxManager, owner.stage);
+                if (existing != null)
                 {
                     quizPanel = existing;
                     panelWait.restart();
@@ -167,8 +165,8 @@ package narutoos.daily
             if (quizPanel == null)
             {
                 var boxManager:Object = getDefinitionByName("com.tencent.morefun.naruto.plugin.ui.box.BoxManager");
-                var candidate:Object = boxManager.getBoxByName(QUIZ_BOX);
-                if (isOpeningOnOwnerStage(candidate))
+                var candidate:Object = QuizBox.find(boxManager, owner.stage);
+                if (candidate != null)
                 {
                     quizPanel = candidate;
                     panelWait.restart();
@@ -178,7 +176,12 @@ package narutoos.daily
                     }
                     return;
                 }
-                if (panelWait.expired(NAVIGATION_TIMEOUT))
+                if (DailyRegion.isBR && !choseMenu && !panelWait.expired(navigationTimeout))
+                {
+                    var npcMenu:Object = boxManager.getBoxByName("taskNpcDialog");
+                    if (isTestNpcMenu(npcMenu) && isTopModal(npcMenu)) chooseStartMenu(npcMenu);
+                }
+                if (panelWait.expired(navigationTimeout))
                 {
                     finish(DailyQueue.ABORT, "等待测验界面打开超时。");
                 }
@@ -191,13 +194,13 @@ package narutoos.daily
                 {
                     if (quizPanel.stage == null) hiddenAfterClaim = true;
                     if (hiddenAfterClaim && claimConfirmed) finish(DailyQueue.COMPLETE, "忍者测验已完成。");
-                    else if (questionWait.expired(QUESTION_TIMEOUT))
+                    else if (questionWait.expired(questionTimeout))
                         finish(DailyQueue.ABORT, "等待测验领奖或关窗确认超时。");
                     return;
                 }
-                if (isOpeningOnOwnerStage(quizPanel))
+                if (QuizBox.isOpening(quizPanel, owner.stage))
                 {
-                    if (panelWait.expired(NAVIGATION_TIMEOUT))
+                    if (panelWait.expired(navigationTimeout))
                     {
                         finish(DailyQueue.ABORT, "测验界面打开超时。");
                     }
@@ -217,14 +220,11 @@ package narutoos.daily
                 return;
             }
             var box:Object = Object(event).box;
-            if (box != null && box.name == QUIZ_BOX)
+            if (QuizBox.matches(box) && QuizBox.isOpening(box, owner.stage))
             {
-                if (isOpeningOnOwnerStage(box))
-                {
-                    quizPanel = box;
-                    panelWait.restart();
-                    if (isVisibleOnOwnerStage(box)) attachQuizPanel(box);
-                }
+                quizPanel = box;
+                panelWait.restart();
+                if (isVisibleOnOwnerStage(box)) attachQuizPanel(box);
             }
         }
 
@@ -235,7 +235,7 @@ package narutoos.daily
                 return;
             }
             var box:Object = Object(event).box;
-            if (box != null && box.name == QUIZ_BOX)
+            if (QuizBox.matches(box))
             {
                 attachQuizPanel(box);
             }
@@ -294,8 +294,9 @@ package narutoos.daily
                     var row:InteractiveObject = list.getChildAt(j) as InteractiveObject;
                     if (!clickable(row) || getQualifiedClassName(row) != MENU_ROW) continue;
                     var item:Object = Object(row).getData();
-                    if (!item || item.type != "npcMenu" || item.param != START_MENU_PARAM ||
-                        item.text != START_MENU_TEXT) continue;
+                    // The route and menu command identify the quiz action. The rendered label
+                    // comes from the game's locale and may be Portuguese on the BR server.
+                    if (!item || item.type != "npcMenu" || item.param != START_MENU_PARAM) continue;
                     if (match)
                     {
                         finish(DailyQueue.ABORT, "考官红豆的开始测验选项无法确定。");
@@ -307,11 +308,13 @@ package narutoos.daily
 
             if (!match)
             {
+                if (DailyRegion.isBR && !panelWait.expired(navigationTimeout)) return;
                 finish(DailyQueue.ABORT, "当前 NPC 菜单没有可用的开始测验选项。");
                 return;
             }
 
             choseMenu = true;
+            if (DailyRegion.isBR) panelWait.restart();
             try
             {
                 click(match);
@@ -345,13 +348,13 @@ package narutoos.daily
             if (!running || !isVisibleOnOwnerStage(quizPanel)) return;
             if (closeRequested)
             {
-                if (questionWait.expired(NAVIGATION_TIMEOUT))
+                if (questionWait.expired(navigationTimeout))
                     finish(DailyQueue.ABORT, "等待测验结算页关闭超时。");
                 return;
             }
             if (!isTopModal(quizPanel))
             {
-                if (panelWait.expired(NAVIGATION_TIMEOUT))
+                if (panelWait.expired(navigationTimeout))
                     finish(DailyQueue.ABORT, "测验结算页被其他窗口遮挡，本轮已停止。");
                 return;
             }
@@ -387,7 +390,7 @@ package narutoos.daily
             }
             if (claimRequested)
             {
-                if (questionWait.expired(QUESTION_TIMEOUT))
+                if (questionWait.expired(questionTimeout))
                     finish(DailyQueue.ABORT, "等待测验领奖结果超时。");
                 return;
             }
@@ -455,7 +458,7 @@ package narutoos.daily
 
             if (!isTopModal(quizPanel))
             {
-                if (panelWait.expired(QUESTION_TIMEOUT))
+                if (panelWait.expired(questionTimeout))
                 {
                     finish(DailyQueue.ABORT, "测验窗口被其他游戏窗口遮挡。");
                 }
@@ -465,7 +468,7 @@ package narutoos.daily
             var view:Object = quizPanel.content;
             if (view == null || view.questionArea == null || !view.questionArea.visible)
             {
-                if (panelWait.expired(QUESTION_TIMEOUT))
+                if (panelWait.expired(questionTimeout))
                 {
                     finish(DailyQueue.ABORT, "等待当前测验题目显示超时。");
                 }
@@ -475,12 +478,14 @@ package narutoos.daily
             var remaining:int = readRemaining(view.leftText as TextField);
             if (remaining < 0)
             {
+                if (DailyRegion.isBR && !panelWait.expired(questionTimeout)) return;
                 finish(DailyQueue.ABORT, "无法读取当前剩余题数。");
                 return;
             }
             var number:int = readQuestionNumber(view);
             if (number < 1 || number > TOTAL_QUESTIONS)
             {
+                if (DailyRegion.isBR && !panelWait.expired(questionTimeout)) return;
                 finish(DailyQueue.ABORT, "当前测验题号无效。");
                 return;
             }
@@ -488,7 +493,7 @@ package narutoos.daily
             var key:String = questionKey(view, number);
             if (key == "" )
             {
-                if (panelWait.expired(QUESTION_TIMEOUT))
+                if (panelWait.expired(questionTimeout))
                 {
                     finish(DailyQueue.ABORT, "等待测验题面就绪超时。");
                 }
@@ -506,7 +511,7 @@ package narutoos.daily
 
             if (submitted)
             {
-                if (questionWait.expired(QUESTION_TIMEOUT))
+                if (questionWait.expired(questionTimeout))
                 {
                     finish(DailyQueue.ABORT, "等待测验题目更新超时。");
                 }
@@ -515,7 +520,7 @@ package narutoos.daily
 
             if (!animationsReady(view))
             {
-                if (questionWait.expired(QUESTION_TIMEOUT))
+                if (questionWait.expired(questionTimeout))
                 {
                     finish(DailyQueue.ABORT, "等待测验动画结束超时。");
                 }
@@ -531,6 +536,7 @@ package narutoos.daily
                 if (tabBar == null || firstAnswer == null || Object(firstAnswer).skin !== question.answer0 ||
                     !clickable(firstAnswer) || !question.answer0.visible)
                 {
+                    if (DailyRegion.isBR && !questionWait.expired(questionTimeout)) return;
                     finish(DailyQueue.ABORT, "当前题目的第一个选项不可用。");
                     return;
                 }
@@ -556,8 +562,14 @@ package narutoos.daily
             {
                 return;
             }
-            if (questionKey(view, number) != activeKey || !running || runId != generation || tabBar == null)
+            if (questionKey(view, number) != activeKey || !running || runId != generation)
             {
+                return;
+            }
+            if (tabBar == null)
+            {
+                if (DailyRegion.isBR && questionWait.expired(questionTimeout))
+                    finish(DailyQueue.ABORT, "等待测验选项重新显示超时。");
                 return;
             }
             if (int(tabBar.selectedIndex) != 0)
@@ -647,6 +659,7 @@ package narutoos.daily
                 return -1;
             }
             var match:Object = /剩余题目\s*[:：]\s*(\d+)/.exec(text.text);
+            if (match == null) match = /Perguntas restantes\s*:\s*(\d+)/i.exec(text.text);
             return match != null ? int(match[1]) : -1;
         }
 
@@ -675,12 +688,6 @@ package narutoos.daily
         {
             return box != null && box.isShow && box.isShowing && owner != null &&
                 owner.stage != null && box.stage === owner.stage;
-        }
-
-        private function isOpeningOnOwnerStage(box:Object):Boolean
-        {
-            return box != null && box.isShow && owner != null && owner.stage != null &&
-                box.stage === owner.stage;
         }
 
         private function isTopModal(box:Object):Boolean
@@ -741,6 +748,10 @@ package narutoos.daily
             if (event.type == "faild" && running)
             {
                 finish(DailyQueue.ABORT, "无法导航到考官红豆。");
+            }
+            else if (DailyRegion.isBR && running && quizPanel == null && !choseMenu)
+            {
+                panelWait.restart();
             }
         }
 
